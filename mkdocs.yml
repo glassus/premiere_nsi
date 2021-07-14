@@ -1,0 +1,92 @@
+site_name: "c'est toi le venin"
+
+nav:
+  - 'accueil' : 'index.md'
+  - 'cryptographie' : 'crypto.md'
+
+
+theme:
+  name: material
+  site_url: ""
+  custom_dir: my_theme_customizations/
+  font: false
+  language: fr
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
+    - header.autohide
+
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Mode sombre
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/toggle-switch
+        name: Mode clair
+
+
+markdown_extensions:
+  - meta
+  - abbr
+  - admonition
+  - def_list
+  - attr_list
+  - footnotes
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.snippets
+  - pymdownx.details
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.tasklist:
+      custom_checkbox: false
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.keys
+  - pymdownx.tabbed
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+  - toc:
+      permalink: ⚓︎
+      toc_depth: 3
+
+
+plugins:
+  - search
+  - macros
+
+extra:
+  social:
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:mon_prénom.mon_nom@chez.moi
+      name: Écrire à l'auteur
+
+extra_javascript:
+  - xtra/javascripts/interpreter.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js
+
+extra_css:
+  - stylesheets/extra.css
+  - xtra/stylesheets/pyoditeur.css
