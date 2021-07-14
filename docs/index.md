@@ -1,15 +1,19 @@
- Merci Francky !
+ En route vers Mkdocs !
 
-# fdsfj
+# On teste Pyodide
 
-## Premier test
+## Une console ?
+
+{{ terminal() }}
 
 Il semblerait que ça marche...
+Bon faudra peut-être retoucher le CSS
 
+## Une IDE
 
 bien ?
 
-{{ terminal() }}
+{{ IDEv() }}
 
 $f(x)= \frac{x}{2}+5$
 

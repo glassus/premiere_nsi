@@ -1,4 +1,4 @@
-site_name: "c'est toi le venin"
+site_name: "petits tests préparatoires"
 
 nav:
   - 'accueil' : 'index.md'
