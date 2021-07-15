@@ -17,26 +17,55 @@ bien ?
 
 $f(x)= \frac{x}{2}+5$
 
+test
+
+??? Example "{{ exercice() }}"
+    === "Énoncé"
+        Calculer la somme des entiers $n$ de 0 jusqu'à 100.
+        {{ IDEv() }}
+
+    === "Solution"
+        ```python
+        somme = 0
+        for n in range(0,101):
+            somme = somme + n
+        print(somme)
+        ```
 
 
-??? tip "indices"
-    === "fidn"
-        blabla
+??? Example "{{ exercice() }}"
+    === "Énoncé"
+        Calculer la somme des entiers $n$ de 0 jusqu'à 100.
+        {{ IDEv() }}
 
-    === "fsjdlk"
-        dfks,jlkf
-    
-    === "fsdlkfl"
-        kdlfnln
+    === "Solution"
+        ```python
+        somme = 0
+        for n in range(0,101):
+            somme = somme + n
+        print(somme)
+       
+??? Example "{{ exercice() }}"
+    === "Énoncé"
+        Calculer la somme des entiers $n$ de 0 jusqu'à 100.
+        {{ IDEv() }}
+
+    === "Solution"
+        ```python
+        somme = 0
+        for n in range(0,101):
+            somme = somme + n
+        print(somme)
+       
 
 
-[Combien y a-t-il de triangles sur cette figure ?](#réponses){ .md-button }
+!!! info inline end "Remarque"
+    un truc super utile pour mettre des infos supplémentaires
 
 
-!!! Abstract "En résumé"
-    Ce problème sera ensuite résolu de manière progressive, et c'est l'occasion d'utiliser :
+La cryptographie blablabla...
 
-    - des méthodes par 
+On saute
 
 
 

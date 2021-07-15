@@ -5,67 +5,18 @@ import os
 def define_env(env):
     "Hook function"
 
-    @env.macro
-    def basthon(exo: str, hauteur: int) -> str:
-        "Renvoie du HTML pour embarquer un fichier `exo` dans Basthon"
-#        return f"""<iframe src="https://console.basthon.fr/?from={env.variables.site_url}{env.variables.page.url}../{exo}" width=100% height={hauteur}></iframe>
-        return f"""<iframe src="https://console.basthon.fr/?from=https://raw.githubusercontent.com/bouillotvincent/coursNSI/master/morpion.py" width=100% height={hauteur}></iframe>"""
-
-    @env.macro
-    def linux(height : int ) -> str:
-        "Renvoie du HTML pour embarquer un fichier `exo` dans Basthon"
-#        return f"""<iframe src="https://console.basthon.fr/?from={env.variables.site_url}{env.variables.page.url}../{exo}" width=100% height={hauteur}></iframe>
-        return f"""<iframe src="https://bellard.org/jslinux/vm.html?url=alpine-x86.cfg&mem=192" width=100% height={height}></iframe>"""
-
-    @env.macro
-    def console(height : int ) -> str:
-        "Renvoie du HTML pour embarquer un fichier `exo` dans Basthon"
-        return f"""<iframe width="100%" height={height} name="embedded_python_anywhere" src="https://pyodide.org/en/stable/console.html"></iframe>"""
-
-    @env.macro
-    def script(lang: str, nom: str) -> str:
-        "Renvoie le script dans une balise bloc avec langage spécifié"
-        return f"""```{lang}
---8<---  "docs/""" + os.path.dirname(env.variables.page.url.rstrip('/')) + f"""/{nom}"
-```"""
-    # f"docs/{os.path.dirname(env.variables.page.url.rstrip('/'))}/scripts/{nom}.py"
-
-    @env.macro
-    def py(nom: str) -> str:
-        "macro python rapide"
-        return script('python', "scripts/" + nom + ".py")
-
-    @env.macro
-    def html_fig(num: int) -> str:
-        "Renvoie le code HTML de la figure n° `num`"
-        return f'--8<-- "docs/' + os.path.dirname(env.variables.page.url.rstrip('/')) + f'/figures/fig_{num}.html"'
+#---------------- <exo perso>-------------------- 
 
     env.variables['compteur_exo'] = 0
     @env.macro
-    def exercice(var = True, prem = 1):
-        # si var == False, alors l'exercice est placé dans une superfence.
-        if prem == 0 : env.variables['compteur_exo'] = 0
+    def exercice():
         env.variables['compteur_exo'] += 1
-        root = f"Exercice { env.variables['compteur_exo']}"
-        return f"""tip \"{root}\"""" if var else '\"'+root+'\"'
-        
-    @env.macro
-    def cours():
-        return f'done "Cours"'
+        return f"Exercice  { env.variables['compteur_exo']}"
 
-    @env.macro
-    def ext():
-        return f'danger "Pour aller plus loin"'
+#---------------- </exo perso>-------------------- 
 
-    @env.macro
-    def tit(ch = "", text = ""):
-        # Tasklist In Table
-        checked = 'checked=""' if ch == 'x' else ''
-        return f"""<ul class="task-list"><li class="task-list-item">\
-            <label class="task-list-control"><input type="checkbox" {checked}>\
-            <span class="task-list-indicator"></span>\
-            </label>{text}</li></ul>"""
 
+#---------------- <PYODIDE>-------------------- 
     env.variables['term_counter'] = 0
     env.variables['IDE_counter'] = 0
 
@@ -172,3 +123,5 @@ def define_env(env):
         div_edit += f"""<span id="content_editor_{tc}" class="hide">{content}</span>"""
         div_edit += f"""<span id="corr_content_editor_{tc}" class="hide">{corr_content}</span>"""
         return div_edit
+
+#---------------- </PYODIDE>-------------------- 
