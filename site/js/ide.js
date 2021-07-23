@@ -51,7 +51,7 @@ function readFile (evt, id_editor) {
 };
 
 // turn off copy paste of code... A bit aggressive but necessary
-$(".highlight").bind('copy paste',function(e) { e.preventDefault(); return false; });
+// $(".highlight").bind('copy paste',function(e) { e.preventDefault(); return false; });
 
 
 // Following blocks paint the IDE according to the mkdocs light/dark mode 
