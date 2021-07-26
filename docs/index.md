@@ -1,9 +1,8 @@
 
-## Cahier de textes 207
+## Cahier de textes
 
 !!! note "Séance du 01/09/2021"
-    Début du thème 0 : Bases de Python
-        - document : [début](data/info.pdf)
+    Début de la Programmation Orientée Objet
 
 *Séances précédentes*
 
@@ -12,18 +11,9 @@
     - blabla
 
 
-## Cahier de textes 208
-
-!!! note "Séance du 03/09/2021"
-    Début du thème 0 : Bases de Python
-        - document : [début](data/info.pdf)
-
-    ??? note "Séances passées"
-        - blabla
-        - blabla
 
 
-## Programme Officiel 
+## Eduscol NSI 
 
-Voir le programme sur [le site Eduscol](https://eduscol.education.fr/1670/programmes-et-ressources-en-sciences-numeriques-et-technologie-voie-gt)
+Retrouvez les informations institutionnelles sur la NSI (programmes, banque d'épreuves, ...) sur [le site Eduscol](https://eduscol.education.fr/2068/programmes-et-ressources-en-numerique-et-sciences-informatiques-voie-g).
  

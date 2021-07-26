@@ -79,7 +79,8 @@ plugins:
   - search
   - git-revision-date
   - macros
-  - awesome-pages
+  - awesome-pages:
+      collapse_single_pages: true
  
  # - mkdocs-jupyter
 
@@ -106,6 +107,8 @@ extra_javascript:
 extra_css:
   - stylesheets/extra.css
   - xtra/stylesheets/pyoditeur.css
+
+
 
 
 copyright:  CC BY-SA / G.Lassus

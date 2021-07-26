@@ -1,0 +1,1105 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../xtra/fav1NSI.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.10">
+    
+    
+      
+        <title>Protocoles de communication dans un réseau - Première NSI Gr 1 - Lycée François Mauriac - Bordeaux</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1fe995fd.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+      
+    
+    
+    
+    <!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.asm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.23.0/js/jquery.terminal.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.23.0/css/jquery.terminal.min.css" rel="stylesheet">
+
+    
+      
+    
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../xtra/stylesheets/pyoditeur.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#protocoles-de-communication-dans-un-reseau" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="Première NSI Gr 1 - Lycée François Mauriac - Bordeaux" class="md-header__button md-logo" aria-label="Première NSI Gr 1 - Lycée François Mauriac - Bordeaux" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Première NSI Gr 1 - Lycée François Mauriac - Bordeaux
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Protocoles de communication dans un réseau
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Mode sombre"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Mode sombre" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Mode clair"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Mode clair" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/glassus/premiere_nsi/" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    glassus/premiere_nsi
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../index.html" class="md-tabs__link">
+      Accueil
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../T1_Demarrer_en_Python/sommaire.html" class="md-tabs__link">
+        T1 Demarrer en Python
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../T2_Representation_des_donnees/01_Listes/cours.html" class="md-tabs__link">
+        T2 Representation des donnees
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="03_Architecture_reseau.html" class="md-tabs__link md-tabs__link--active">
+        T3 Architecture materielle
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../T6_IHM_Web/01_Interactions_page_web.html" class="md-tabs__link">
+        T6 IHM Web
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Première NSI Gr 1 - Lycée François Mauriac - Bordeaux" class="md-nav__button md-logo" aria-label="Première NSI Gr 1 - Lycée François Mauriac - Bordeaux" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5z"/></svg>
+
+    </a>
+    Première NSI Gr 1 - Lycée François Mauriac - Bordeaux
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/glassus/premiere_nsi/" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    glassus/premiere_nsi
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        Accueil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        T1 Demarrer en Python
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="T1 Demarrer en Python" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          T1 Demarrer en Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T1_Demarrer_en_Python/sommaire.html" class="md-nav__link">
+        Sommaire
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T1_Demarrer_en_Python/1.1_Variables/cours.html" class="md-nav__link">
+        1.1 Variables
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T1_Demarrer_en_Python/1.2_Boucle_for/cours.html" class="md-nav__link">
+        1.2 Boucle For
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T1_Demarrer_en_Python/1.3_Boucle_while/cours.html" class="md-nav__link">
+        1.3 Boucle While
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/cours.html" class="md-nav__link">
+        1.4 Instruction conditionnelle if
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T1_Demarrer_en_Python/1.5_Fonctions/cours.html" class="md-nav__link">
+        1.5 Fonctions
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        T2 Representation des donnees
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="T2 Representation des donnees" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          T2 Representation des donnees
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T2_Representation_des_donnees/01_Listes/cours.html" class="md-nav__link">
+        2.1 Listes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T2_Representation_des_donnees/02_Tuples/cours.html" class="md-nav__link">
+        2.2 Tuples
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T2_Representation_des_donnees/03_Dictionnaires/cours.html" class="md-nav__link">
+        2.3 Dictionnaires
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T2_Representation_des_donnees/Bases/cours.html" class="md-nav__link">
+        2.4 Différentes bases
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        T3 Architecture materielle
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="T3 Architecture materielle" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          T3 Architecture materielle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03_Architecture_reseau.html" class="md-nav__link">
+        03 Architecture reseau
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Protocoles de communication dans un réseau
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="04_Protocoles_de_communication.html" class="md-nav__link md-nav__link--active">
+        Protocoles de communication dans un réseau
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#i-modele-osi-modele-internet" class="md-nav__link">
+    I. Modèle OSI, modèle Internet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-observation-des-trames-avec-filius" class="md-nav__link">
+    II. Observation des trames avec Filius
+  </a>
+  
+    <nav class="md-nav" aria-label="II. Observation des trames avec Filius">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-ping-a-travers-un-switch" class="md-nav__link">
+    1. Ping à travers un switch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ping-a-travers-un-routeur" class="md-nav__link">
+    2. Ping à travers un routeur
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iii-protocole-du-bit-alterne" class="md-nav__link">
+    III. Protocole du bit alterné
+  </a>
+  
+    <nav class="md-nav" aria-label="III. Protocole du bit alterné">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-contexte" class="md-nav__link">
+    1. Contexte
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-situation-ideale" class="md-nav__link">
+    2. Situation idéale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-situation-reelle" class="md-nav__link">
+    3. Situation réelle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-solution-naive" class="md-nav__link">
+    3. Solution naïve...
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-mais-peu-efficace" class="md-nav__link">
+    4. Mais peu efficace...
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-bob-prend-le-controle" class="md-nav__link">
+    5. Bob prend le contrôle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-conclusion" class="md-nav__link">
+    6. Conclusion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05_Decouverte_des_commandes_Linux.html" class="md-nav__link">
+        Découverte des commandes UNIX
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" data-md-state="indeterminate" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
+        T6 IHM Web
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="T6 IHM Web" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          T6 IHM Web
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T6_IHM_Web/01_Interactions_page_web.html" class="md-nav__link">
+        Pages web et interactions
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T6_IHM_Web/02_Protocole_HTTP_requetes_reponses.html" class="md-nav__link">
+        Protocole HTTP : étude du chargement d'une page web
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../T6_IHM_Web/03_Get_Post_Formulaires.html" class="md-nav__link">
+        Requêtes GET, POST et formulaires
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+    
+                
+                  <a href="https://github.com/glassus/premiere_nsi/edit/master/docs/T3_Architecture_materielle/04_Protocoles_de_communication.md" title="Editer cette page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="protocoles-de-communication-dans-un-reseau">Protocoles de communication dans un réseau<a class="headerlink" href="#protocoles-de-communication-dans-un-reseau" title="Permanent link">⚓︎</a></h1>
+<h2 id="i-modele-osi-modele-internet">I. Modèle OSI, modèle Internet<a class="headerlink" href="#i-modele-osi-modele-internet" title="Permanent link">⚓︎</a></h2>
+<p>Les bits transmis d'un ordinateur à un autre contiennent, en plus des données <em>utiles</em> (le mot «bonjour» dans un email), une multitude de données (tout aussi utiles) qui vont aider à l'acheminement de ces bits au bon endroit, puis au bon ordinateur, puis au bon logiciel. 
+Les différents protocoles qui régissent cette transmission sont regroupés dans ce qui est appelé un <strong>modèle</strong>. Deux modèles synthétisent ces protocoles :
+- le <strong>modèle Internet</strong> (ou modèle <strong>TCP/IP</strong>, 1974), organisé en <strong>4</strong> couches : liaison, réseau, transport, application.
+- le <strong>modèle OSI</strong> (Open Systems Interconnection, 1984), organisé en <strong>7</strong> couches : physique, liaison, réseau, transport, session, présentation,application.</p>
+<p>Ces deux modèles coïncident suivant le schéma ci-dessus. Ce sont des modèles théoriques et d'une certaine rigidité. Leur utilisation dans la pratique est parfois plus floue, avec des protocoles à cheval sur plusieurs couches.<br />
+Dans la suite de ce cours, nous évoquerons les couches par leur numéro dans le modèle OSI.</p>
+<p><img alt="" src="data/OSI.png" /></p>
+<p>Lors de son émission, un message va subir successivement toutes les transformations effectuées par chaque couche, depuis sa création (couche 7) jusqu'à sa transmission physique (couche 1).  </p>
+<p>Lorsque ce même message sera réceptionné, les transformations seront effectuées dans l'ordre inverse, jusqu'à la présentation du message au destinataire.</p>
+<ul>
+<li>
+<p><strong>couches 7-6-5  — couches application-présentation-session :</strong> 
+Ces couches (réunies dans le modèle Internet en une couche unique «application» ) regroupent les protocoles nécessaires à la bonne mise en forme d'un message (au sens large) avant sa transmission. Ces protocoles peuvent être de nature très différente : protocole HTTP pour la transmisson de pages web, protocole FTP pour le transfert de fichiers, protocoles POP ou IMAP pour le courrier électronique...
+</br></p>
+</li>
+<li>
+<p><strong>couche 4 — couche transport :</strong> <br />
+Le protocole majeur de cette couche est le protocole TCP :</p>
+<ul>
+<li>il s'assure par SYN-ACK que l'émetteur et le récepteur sont prêts à échanger des messages. </li>
+<li>il découpe en segments numérotés le message à transmettre (côté émetteur) ou bien recompose le message total en remettant les segments dans l'ordre (côté récepteur).  <br />
+Les éléments échangés avec la couche inférieure sont des <strong>segments</strong>.
+</br></li>
+</ul>
+</li>
+<li>
+<p><strong>couche 3 — couche réseau :</strong><br />
+C'est la couche où chaque segment numéroté est encapsulé dans un paquet qui, suivant le protocole IP, va contenir son adresse source et son adresse de destination. C'est à ce niveau que se décide si le message doit rester dans le réseau local ou être envoyé sur un autre réseau via la passerelle du routeur.<br />
+Les éléments échangés avec la couche inférieure sont des <strong>paquets</strong>.
+</br></p>
+</li>
+<li>
+<p><strong>couche 2 — couche liaison :</strong><br />
+C'est l'encapsulation finale du message. Suivant le protocole Ethernet, les informations sont transmises d'une carte réseau à une autre, grâce à leur adresse MAC (Media Access Controler).<br />
+Les éléments échangés avec la couche inférieure sont des <strong>trames</strong>.
+</br></p>
+</li>
+<li>
+<p><strong>couche 1 — couche physique :</strong><br />
+C'est la couche où le message est transmis physiquement d'un point à un autre. Par signal lumineux (fibre optique), par ondes (wifi), par courant électrique (Ethernet)... Les éléments transmis sont les <strong>bits</strong>. </p>
+</li>
+</ul>
+<p>Lors de son parcours, une trame peut être partiellement décapsulée et remonter à la couche 3, avant de redescendre et de continuer son chemin. C'est le cas notamment lors du passage dans un routeur. Mais jamais, lors de son acheminement, le contenu réel du message n'est ouvert : les paquets transmis sont acheminés de manière identique, qu'ils contiennent les éléments constitutifs d'une vidéo YouTube ou d'un email à votre cousin.<br />
+Ce principe fondateur, actuellement menacé par certains acteurs politiques et industriels, est connu sous l'expression <strong>«la neutralité du net»</strong>.</p>
+<h2 id="ii-observation-des-trames-avec-filius">II. Observation des trames avec Filius<a class="headerlink" href="#ii-observation-des-trames-avec-filius" title="Permanent link">⚓︎</a></h2>
+<h3 id="1-ping-a-travers-un-switch">1. Ping à travers un switch<a class="headerlink" href="#1-ping-a-travers-un-switch" title="Permanent link">⚓︎</a></h3>
+<p>Vous pouvez télécharger le fichier <a href="data/ping_switch.fls">ping_switch.fls</a>.</p>
+<ul>
+<li>Relions une machine <code>192.168.0.10</code> d'adresse MAC <code>BC:81:81:42:9C:31</code>  à une machine <code>192.168.0.11</code> d'adresse MAC <code>2A:AB:AC:27:D6:A7</code> à travers un switch.  </li>
+</ul>
+<p><img alt="" src="data/K1.png" /> </p>
+<ul>
+<li>Observons la table SAT de notre switch : elle est vide, car aucune machine n'a encore cherché à communiquer.  </li>
+</ul>
+<p><img alt="" src="data/K2.png" /> </p>
+<ul>
+<li>Lançons un ping depuis <code>192.168.0.10</code> vers <code>192.168.0.11</code> et observons les données échangées :   </li>
+</ul>
+<p><img alt="" src="data/K3.png" />  </p>
+<ul>
+<li>Observons de plus près la première ligne de données échangées.  </li>
+</ul>
+<p><img alt="" src="data/K4.png" />   </p>
+<p>Cette première ligne est une requête <strong>ARP</strong>. ARP est un protocole qui s'interface entre la couche 3 / réseau (appelée dans la capture d'écran <em>Internet</em>)  et la couche 2 / liaison (appelée dans la capture d'écran <em>Réseau</em>). Comme indiqué dans le commentaire, elle consiste à un appel à tout le réseau : "Est-ce que quelqu'un ici possède l'IP <code>192.168.0.11</code> ?</p>
+<p><strong>Message 1 : « Qui possède l'IP <code>192.168.0.11</code> ? »</strong></p>
+<p>Il faut comprendre à cette étape que l'adresse IP est totalement inutile pour répérer un ordinateur dans un sous-réseau. Ce sont les adresses MAC qui permettent de se repérer dans un sous-réseau. Les adresses IP, elles, permettront éventuellement d'acheminer le message jusqu'au bon sous-réseau (elles n'intéressent donc que les routeurs).</p>
+<p>Revenons à notre ping vers <code>192.168.0.11</code>.</p>
+<p>La commande <code>arp -a</code> effectuée dans un terminal de la machine <code>192.168.0.10</code> nous permet de voir qu'elle ne connaît encore personne dans son sous-réseau. La table de correspondance IP ⮀ MAC ne contient que l'adresse de broadcast <code>255.255.255.255</code>, qui permet d'envoyer un message à tout le réseau.<br />
+<img alt="" src="data/K5.png" /> </p>
+<p>Constatant qu'elle ne sait pas quelle est l'adresse MAC de <code>192.168.0.11</code>, la machine <code>192.168.0.10</code> commence donc par envoyer un message à <strong>tout</strong> le sous-réseau, par l'adresse MAC de broadcast <code>FF:FF:FF:FF:FF:FF</code>. Le switch va lui aussi lui aussi relayer ce message à tous les équipements qui lui sont connectés (dans notre cas, un seul ordinateur) </p>
+<p><strong>Message 2 : « Moi ! »</strong>  </p>
+<p>La machine <code>192.168.0.11</code> s'est reconnu dans le message de broadcast de la machine <code>192.168.0.10</code>. Elle lui répond pour lui donner son adresse MAC.  </p>
+<p><img alt="" src="data/K6.png" /> </p>
+<p>À partir de ce moment, la machine <code>192.168.0.10</code> sait comment communiquer avec <code>192.168.0.11</code>. Elle l'écrit dans sa table <code>arp</code>, afin de ne plus avoir à émettre le message n°1 :  </p>
+<p><img alt="" src="data/K7.png" /> </p>
+<p>Le switch, qui a vu passer sur ses ports 0 et 1 des messages venant des cartes MAC <code>BC:81:81:42:9C:31</code>  et <code>2A:AB:AC:27:D6:A7</code>, peut mettre à jour sa table SAT :  </p>
+<p><img alt="" src="data/K9.png" /> </p>
+<p>Par la suite, il saura sur quel port rediriger les messages destinés à ces deux adresses MAC. Un switch est un équipement de réseau de la couche 2 du modèle OSI, il ne sait pas lire les adresses IP : il ne travaille qu'avec les adresses MAC.</p>
+<p><strong>Message 3 : le ping est envoyé</strong></p>
+<p><img alt="" src="data/K8.png" /> </p>
+<p>Schématisons cette trame Ethernet (couche 2 du modèle OSI) :</p>
+<p><img alt="" src="data/trame1.png" /> </p>
+<p><strong>Message 4 : le pong est retourné</strong></p>
+<p><img alt="" src="data/K10.png" /> </p>
+<p><img alt="" src="data/trame2.png" /> </p>
+<h3 id="2-ping-a-travers-un-routeur">2. Ping à travers un routeur<a class="headerlink" href="#2-ping-a-travers-un-routeur" title="Permanent link">⚓︎</a></h3>
+<p>Vous pouvez télécharger le fichier <a href="data/ping_routeur.fls">ping_routeur.fls</a>.</p>
+<p><img alt="" src="data/schema_routeur.png" /> </p>
+<p>L'objectif est d'observer les différentes trames lors d'un ping entre :
+- la machine <code>192.168.0.1 / 24</code> (adresse MAC <code>F9:E1:D6:0B:29:03</code> ) et
+- la machine <code>192.168.1.1 / 24</code> (adresse MAC <code>D3:79:96:B8:5C:A4</code> )</p>
+<p>Le routeur est configuré ainsi :
+- interface sur le réseau A :
+    - IP : <code>192.168.0.254</code> 
+    - MAC : <code>77:C2:22:C9:5C:E7</code> 
+- interface sur le réseau B :
+    - IP : <code>192.168.1.254</code> 
+    - MAC : <code>66:E5:4E:7D:0B:B0</code> </p>
+<p><strong>Étape 0 : le routeur signale sa présence</strong></p>
+<p>Lors de l'observation des messages reçus ou émis par la machine <code>192.168.0.1</code>, on peut être intrigué par ce tout premier message reçu, émis par le routeur : </p>
+<p><img alt="" src="data/K11.png" /> </p>
+<p>On peut y distinguer les 4 couches du modèle Internet. Le routeur, par ce message distribué à tous les éléments du sous-réseau A (il envoie un message équivalent sur son sous-réseau B), déclare sa présence, et le fait qu'il possède deux interfaces, une pour chaque réseau. 
+Il se positionne ainsi comme une passerelle : «c'est par moi qu'il faudra passer si vous voulez sortir de votre sous-réseau». 
+Dans cette trame envoyée figure son adresse MAC, de sorte que tous les membres de son sous-réseau pourront donc communiquer avec lui.</p>
+<p><strong>Étape 1 : de <code>192.168.0.1</code> vers le routeur</strong></p>
+<p>La machine <code>192.168.0.1 / 24</code> calcule que la machine <code>192.168.1.1 / 24</code> avec laquelle elle veut communiquer n'est <strong>pas</strong> dans son sous-réseau (voir <a href="03_Architecture_reseau.html">ce cours)</a>.<br />
+Elle va donc envoyer son message à sa passerelle, qui est l'adresse du routeur dans son sous-réseau. </p>
+<p>Cette première trame est :</p>
+<p><img alt="" src="data/trame3.png" /> </p>
+<p><strong>Étape 2 : le routeur décapsule la trame</strong></p>
+<p>Le routeur est un équipement de réseau de couche 3 (couche réseau). Il doit observer le contenu du paquet IP (sans remonter jusqu'au contenu du message) pour savoir, suivant le procédé de <strong>routage</strong> (voir cours de Terminale), où acheminer ce paquet.</p>
+<p>Dans notre cas, l'adresse IP <code>192.168.1.1</code>de destination lui est accessible : elle fait partie de son sous-réseau B.</p>
+<p>Le routeur va modifier la valeur du TTL (Time To Live), en la décrémentant de 1. Si, après de multiples routages, cette valeur devenait égale à 0, ce paquet serait détruit. Ceci a pour but d'éviter l'encombrement des réseaux avec des paquets ne trouvant pas leur destination.</p>
+<p>Remarque : 
+    dans notre cas, le routeur va laisser intacte l'adresse IP Source. Ce n'est pas toujours le cas. Dans le cas classique de la box qui relie votre domicile à internet, le routeur contenu dans celle-ci va remplacer l'adresse locale de votre ordinateur ou smartphone (ex <code>192.168.0.26</code>) par son IP publique (celle apparaissant sur <a href="http://whatsmyip.com">whatsmyip.com</a>, par exemple). Elle effectue ce qu'on appelle une translation d'adresse (NAT). 
+    Pourquoi ? Parce que sinon la réponse du serveur distant que vous interrogez serait envoyée sur une adresse locale (votre adresse <code>192.168.0.26</code>), qui est introuvable depuis un réseau extérieur. Il faut donc remplacer toutes les adresses locales par l'IP publique de votre box.
+    Pour éviter que la réponse du serveur web que vous avez interrogé ne soit affichée sur l'ordinateur de vos parents, le routeur affecte des ports différents à chaque machine de son sous-réseau. Ce port est inclus dans le message transmis au serveur, et il l'est aussi dans sa réponse : le routeur peut donc rediriger le trafic vers la bonne machine du sous-réseau.</p>
+<p>Le routeur va ré-encapsuler le paquet IP modifié, et créer une nouvelle trame Ethernet en modifiant :
+- l'adresse MAC source : il va mettre l'adresse MAC de son interface dans le sous-réseau B.
+- l'adresse MAC de destination : il va mettre l'adresse MAC de <code>192.168.1.1</code> (qu'il aura peut-être récupérée au préalable par le protocole ARP)</p>
+<p>Cette deuxième trame est donc :</p>
+<p><img alt="" src="data/trame4.png" /> </p>
+<p>On peut observer dans Filius cette trame, en se positionnant sur l'interface <code>192.168.1.254</code> du routeur, ou sur <code>192.168.1.1</code> :</p>
+<p><img alt="" src="data/K12.png" /> </p>
+<p>En suivant le même principe, la machine <code>192.168.1.1</code> pourra envoyer son <em>pong</em>.</p>
+<h2 id="iii-protocole-du-bit-alterne">III. Protocole du bit alterné<a class="headerlink" href="#iii-protocole-du-bit-alterne" title="Permanent link">⚓︎</a></h2>
+<p>Ce protocole est un exemple simple de fiabilisation du transfert de données. </p>
+<h3 id="1-contexte">1. Contexte<a class="headerlink" href="#1-contexte" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>Alice veut envoyer à Bob un message M, qu'elle a prédécoupé en sous-messages M0, M1, M2,...</li>
+<li>Alice envoie ses sous-messages à une cadence Δt fixée (en pratique, les sous-messages partent quand leur acquittement a été reçu ou qu'on a attendu celui-ci trop longtemps : on parle alors de <em>timeout</em>)</li>
+</ul>
+<h3 id="2-situation-ideale">2. Situation idéale<a class="headerlink" href="#2-situation-ideale" title="Permanent link">⚓︎</a></h3>
+<p><img alt="" src="data/ideale.png" /> </p>
+<p>Dans cette situation, les sous-messages arrivent tous à destination dans le bon ordre. La transmission est correcte.</p>
+<h3 id="3-situation-reelle">3. Situation réelle<a class="headerlink" href="#3-situation-reelle" title="Permanent link">⚓︎</a></h3>
+<p>Mais parfois, les choses ne se passent pas toujours aussi bien. Car si on maîtrise parfaitement le timing de l'envoi des sous-messages d'Alice, on ne sait pas combien de temps vont mettre ces sous-messages pour arriver, ni même (attention je vais passer dans un tunnel) s'ils ne vont pas être détruits en route.</p>
+<p><img alt="" src="data/realite.png" /> </p>
+<p>Le sous-message M0 est arrivé après le M1, le message M2 n'est jamais arrivé...</p>
+<p>Que faire ?</p>
+<p>Écartons l'idée de numéroter les sous-messages, afin que Bob puisse remettre dans l'ordre les messages arrivés, ou même redemander spécifiquement des sous-messages perdus. C'est ce que réalise le protocole TCP (couche 4 — transport), c'est très efficace, mais cher en ressources. Essayons de trouver une solution plus basique.</p>
+<h3 id="3-solution-naive">3. Solution naïve...<a class="headerlink" href="#3-solution-naive" title="Permanent link">⚓︎</a></h3>
+<p>Pourquoi ne pas demander à Bob d'envoyer un signal pour dire à Alice qu'il vient bien de recevoir son sous-message ?
+Nous appelerons ce signal ACK (comme <em>acknowledgement</em>, traduisible par «accusé de réception»).
+Ce signal ACK permettra à Alice de renvoyer un message qu'elle considérera comme perdu :</p>
+<p><img alt="" src="data/naive.png" /> </p>
+<p>N'ayant pas reçu le ACK consécutif à son message M1, Alice suppose (avec raison) que ce message n'est pas parvenu jusqu'à Bob, et donc renvoie le message M1.</p>
+<h3 id="4-mais-peu-efficace">4. Mais peu efficace...<a class="headerlink" href="#4-mais-peu-efficace" title="Permanent link">⚓︎</a></h3>
+<p><img alt="" src="data/naivebad.png" /> </p>
+<p>Le deuxième ACK de Bob a mis trop de temps pour arriver (ou s'est perdu en route) et donc Alice a supposé que son sous-message M1 n'était pas arrivé. Elle l'a donc renvoyé, et Bob se retrouve avec deux fois le sous-message M1. La transmission est incorrecte. 
+En faisant transiter un message entre Bob et Alice, nous multiplions par 2 la probabilité que des problèmes techniques de transmission interviennent. Et pour l'instant rien ne nous permet de les détecter.</p>
+<h3 id="5-bob-prend-le-controle">5. Bob prend le contrôle<a class="headerlink" href="#5-bob-prend-le-controle" title="Permanent link">⚓︎</a></h3>
+<p>Bob va maintenant intégrer une méthode de validation du sous-message reçu. Il pourra décider de le garder ou de l'écarter. Le but est d'éviter les doublons.</p>
+<p>Pour réaliser ceci, Alice va rajouter à chacun de ses sous-messages un bit de contrôle, que nous appelerons FLAG (drapeau). Au départ, ce FLAG vaut 0. 
+Quand Bob reçoit un FLAG, il renvoie un ACK <strong>égal au FLAG reçu</strong>.</p>
+<p>Alice va attendre ce ACK contenant le même bit que son dernier FLAG envoyé :
+- tant qu'elle ne l'aura pas reçu, elle continuera à envoyer <strong>le même sous-message, avec le même FLAG</strong>.
+- dès qu'elle l'a reçu, elle peut envoyer un nouveau sous-message en <strong>inversant</strong> («alternant») <strong>le bit de son dernier FLAG</strong> (d'où le nom de ce protocole).</p>
+<p>Bob, de son côté, va contrôler la validité de ce qu'il reçoit : il ne gardera que <strong>les sous-messages dont le FLAG est égal à l'inverse de son dernier ACK</strong>. C'est cette méthode qui lui permettra d'écarter les doublons.</p>
+<p>Observons ce protocole dans plusieurs cas :</p>
+<h5 id="51-cas-ou-le-sous-message-est-perdu">5.1 Cas où le sous-message est perdu<a class="headerlink" href="#51-cas-ou-le-sous-message-est-perdu" title="Permanent link">⚓︎</a></h5>
+<p><img alt="" src="data/alt2.png" /> </p>
+<h5 id="52-cas-ou-le-ack-est-perdu">5.2 Cas où le ACK  est perdu<a class="headerlink" href="#52-cas-ou-le-ack-est-perdu" title="Permanent link">⚓︎</a></h5>
+<p><img alt="" src="data/alt1.png" /> </p>
+<p>Le protocole a bien détecté le doublon du sous-message M1.</p>
+<h5 id="53-cas-ou-un-sous-message-est-en-retard">5.3 Cas où un sous-message est en retard<a class="headerlink" href="#53-cas-ou-un-sous-message-est-en-retard" title="Permanent link">⚓︎</a></h5>
+<p><img alt="" src="data/alt3.png" /> </p>
+<p>Le protocole a bien détecté le doublon du sous-message M1... mais que se passerait-il si notre premier sous-message M1 était <em>encore plus</em> en retard ?</p>
+<h3 id="6-conclusion">6. Conclusion<a class="headerlink" href="#6-conclusion" title="Permanent link">⚓︎</a></h3>
+<p>Le protocole du bit alterné a longtemps été utilisé au sein de la couche 2 du modèle OSI (distribution des trames Ethernet). Simple et léger, il peut toutefois être facilement mis en défaut, ce qui explique qu'il ait été remplacé par des protocoles plus performants.</p>
+<p></br></p>
+<hr />
+<p><strong>Bibliographie</strong>
+- Numérique et Sciences Informatiques, 1re, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
+- Prépabac NSI 1ère, C.ADOBET, G.CONNAN, G. ROZSAVOLGYI, L.SIGNAC, éditions Hatier.</p>
+<hr />
+<p><img alt="" src="data/ccbysa.png" title="image" /></p>
+<p>G.Lassus, Lycée François Mauriac --  Bordeaux  </p>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Dernière mise à jour: 2021-07-26
+    
+  </small>
+</div>
+                  
+                
+              
+    <script src="../js/ide.js"></script> 
+
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="03_Architecture_reseau.html" class="md-footer__link md-footer__link--prev" aria-label="Précédent: 03 Architecture reseau" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              03 Architecture reseau
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="05_Decouverte_des_commandes_Linux.html" class="md-footer__link md-footer__link--next" aria-label="Suivant: Découverte des commandes UNIX" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              Découverte des commandes UNIX
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            CC BY-SA / G.Lassus
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="mailto:gilles.lassus@ac-bordeaux.fr" target="_blank" rel="noopener" title="Écrire à l&#39;auteur" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M476 3.2 12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://github.com/glassus/premiere_nsi" target="_blank" rel="noopener" title="Dépôt git" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://lyceemauriac.fr" target="_blank" rel="noopener" title="Lycée François Mauriac - Bordeaux" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M496 128v16a8 8 0 0 1-8 8h-24v12c0 6.627-5.373 12-12 12H60c-6.627 0-12-5.373-12-12v-12H24a8 8 0 0 1-8-8v-16a8 8 0 0 1 4.941-7.392l232-88a7.996 7.996 0 0 1 6.118 0l232 88A8 8 0 0 1 496 128zm-24 304H40c-13.255 0-24 10.745-24 24v16a8 8 0 0 0 8 8h464a8 8 0 0 0 8-8v-16c0-13.255-10.745-24-24-24zM96 192v192H60c-6.627 0-12 5.373-12 12v20h416v-20c0-6.627-5.373-12-12-12h-36V192h-64v192h-64V192h-64v192h-64V192H96z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+      
+        <script src="../xtra/javascripts/interpreter.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+      
+    
+  </body>
+</html>
