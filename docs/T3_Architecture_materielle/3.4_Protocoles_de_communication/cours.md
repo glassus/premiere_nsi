@@ -153,7 +153,7 @@ Dans cette trame envoyée figure son adresse MAC, de sorte que tous les membres 
 
 **Étape 1 : de ```192.168.0.1``` vers le routeur**
 
-La machine ```192.168.0.1 / 24``` calcule que la machine ```192.168.1.1 / 24``` avec laquelle elle veut communiquer n'est **pas** dans son sous-réseau (voir [ce cours)](./03_Architecture_reseau.md).  
+La machine ```192.168.0.1 / 24``` calcule que la machine ```192.168.1.1 / 24``` avec laquelle elle veut communiquer n'est **pas** dans son sous-réseau.
 Elle va donc envoyer son message à sa passerelle, qui est l'adresse du routeur dans son sous-réseau. 
 
 Cette première trame est :
@@ -277,7 +277,3 @@ Le protocole du bit alterné a longtemps été utilisé au sein de la couche 2 d
 - Numérique et Sciences Informatiques, 1re, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
 - Prépabac NSI 1ère, C.ADOBET, G.CONNAN, G. ROZSAVOLGYI, L.SIGNAC, éditions Hatier.
 
----
-![](data/ccbysa.png "image")
-
-G.Lassus, Lycée François Mauriac --  Bordeaux  

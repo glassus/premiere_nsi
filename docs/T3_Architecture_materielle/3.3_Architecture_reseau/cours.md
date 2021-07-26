@@ -1,6 +1,6 @@
 # 3.3 Architecture d'un réseau
 
-Ce cours a pour but de présenter la constitution classique d'un réseau, et les équipements associés. La partie relative aux protocoles utilisés lors des échanges entre deux machines est détaillée dans le cours [04_Protocoles_de_communication](https://github.com/glassus/nsi/blob/master/Premiere/Theme04_Architecture_materielle/04_Protocoles_de_communication.md).
+Ce cours a pour but de présenter la constitution classique d'un réseau, et les équipements associés. La partie relative aux protocoles utilisés lors des échanges entre deux machines est détaillée dans le cours sur les protocoles de communication.
 
 ### 1. Premier réseau local
 
@@ -274,6 +274,3 @@ La machine qui assure ce rôle d'annuaire entre les serveurs web et leur adresse
 
 
 ---
-![](data/ccbysa.png "image")
-
-G.Lassus, Lycée François Mauriac --  Bordeaux  
