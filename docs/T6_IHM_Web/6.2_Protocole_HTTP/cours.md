@@ -6,9 +6,9 @@
  - le client (la machine de l'utilisateur qui souhaite obtenir une page web). On dit que le client effectue une **requête**.
  - le serveur (la machine sur laquelle sont stockés les fichiers nécessaires à l'affichage de cette page web). Le serveur va renvoyer une **réponse**.
  
-<center>
-<img src="data/requete2.png">
-</center>
+
+![image](data/requete2.png){: .center}
+
 
 ### Déroulé d'une requête
 Prenons pour exemple la requête d'un navigateur vers la page ```html://glassus1.free.fr/interesting.html``` 
@@ -23,7 +23,7 @@ Prenons pour exemple la requête d'un navigateur vers la page ```html://glassus1
 
 Observons à partir de l'Inspecteur d'élément d'un navigateur (ici Firefox) les informations qui transitent lors de la requête et de la réponse.
 
-![](data/insp1.png)
+![](data/insp1.png){: .center}
 
 - Point **1** : La requête de type GET vers l'url ```http://glassus1.free.fr/interesting.html``` a généré un code de réponse **200 OK**, ce qui signifie que la requête a été traitée et que la réponse contenant la page a été envoyée.  
 Vous pouvez trouver à l'adresse https://developer.mozilla.org/fr/docs/Web/HTTP/Status la totalité des codes de réponse possibles. 
@@ -68,4 +68,4 @@ De manière générale, une requête vers un site web moins élémentaire va occ
 Par exemple, l'appel au site ```www.lyceemauriac.fr``` génère 129 requêtes/réponses différentes, composées de fichiers html, css, js, de fichiers de fontes woff2, d'images jpg, png...
 
 
-![](data/insp3.png)
+![](data/insp3.png){: .center}

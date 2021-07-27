@@ -18,7 +18,7 @@ Le mot de passe est :
 
 **Aperçu :**
 
-![](data/pass1.png)
+![](data/pass1.png){: .center}
 
 
 **Explications :**
@@ -38,7 +38,7 @@ On aurait pu aussi avoir un type :
 #### La méthode GET et la confidentialité :
 Les paramètres passés au serveur par la méthode GET sont transmis **dans l'url de la requête**. Ils sont donc lisibles **en clair** par n'importe qui.
 
-![](data/get1.png)
+![](data/get1.png){: .center}
 
 Évidemment, c'est une méthode catastrophique pour la transmission des mots de passe. Par contre, c'est une méthode efficace pour accéder directement à une page particulière : ainsi l'url https://www.google.fr/search?q=bordeaux nous amènera directement au résultat de la recherche Google sur le mot-clé «bordeaux».
 
@@ -64,7 +64,7 @@ Le mot de passe est :
 #### La méthode POST et la confidentialité :
 Les paramètres passés au serveur par la méthode POST **ne sont pas visibles** dans l'url de la requête. Ils sont contenus dans le corps de la requête, mais non affichés sur le navigateur.
 
-![](data/post1.png)
+![](data/post1.png){: .center}
 
 Donc, la transmission du mot de passe est bien sécurisée par la méthode POST ? 
 
@@ -72,7 +72,7 @@ Pas du tout ! Si le protocole de transmission est du ```http```  et non pas du `
 
 **Exemple avec [Wireshark](https://www.wireshark.org/)** :
 
-![](data/wireshark.png)
+![](data/wireshark.png){: .center}
 
 Le contenu de la variable ```"pass"``` est donc visible dans le contenu de la requête. 
 
@@ -95,7 +95,7 @@ Le passage en ```https``` chiffre le contenu de la requête et empêche donc la 
     - peuvent avoir une longueur très importante (le paramètre étant dans le corps de la requête et non plus dans l'url, sa longueur peut être arbitraire).
     - ont vocation à provoquer des changements sur le serveur. Ainsi, un ordre d'achat sur un site de commerce sera nécessairement passé par une méthode POST. Les navigateurs préviennent alors le risque de «double commande» lors d'une actualisation malencontreuse de la page par l'utilisateur par la fenêtre :
 
-    ![](data/alertepost.png) 
+    ![](data/alertepost.png){: .center}
 
     Cette fenêtre est caractéristique de l'utilisation d'une méthode POST.
 
@@ -111,7 +111,7 @@ Du côté du serveur, le langage utilisé (PHP, Java...) doit récupérer les pa
  - une page ```page1.html``` , qui contiendra un formulaire et qui renverra, par la méthode GET, un paramètre à la page ```page2.php```.
  - une page ```page2.php``` , qui génèrera un code ```html ``` personnalisé en fonction du paramètre reçu.  
 
- #### ```page1.html``` 
+#### ```page1.html``` 
 
 ```html
 <!DOCTYPE html>
@@ -136,8 +136,8 @@ Du côté du serveur, le langage utilisé (PHP, Java...) doit récupérer les pa
 </html>
 ``` 
 
- #### ```page2.php``` 
- ```php
+#### ```page2.php``` 
+```php
  <!DOCTYPE html>
 <html>
     <head>
@@ -158,11 +158,11 @@ Du côté du serveur, le langage utilisé (PHP, Java...) doit récupérer les pa
 
 </body>
 </html>
- ```
+```
 
- #### Détail du fonctionnement :
+#### Détail du fonctionnement :
  1. À l'arrivée sur la page ```page1.html```, un formulaire de type boutons radio lui propose :
- ![](data/exphp1.png)
+ ![](data/exphp1.png){: .center}
  2. Lorsque l'utilisateur clique sur «Valider», la variable nommée ```OS``` va recevoir la valeur choisie et va être transmise par une requête GET à l'url donnée par la variable ```action``` définie en début de formulaire.
  Ici, le navigateur va donc demander à accéder à la page ```page2.php?OS=MacOS``` (par exemple)
  3. Le serveur PHP qui héberge la page ```page2.php``` va recevoir la demande d'accès à la page ainsi que la valeur de la variable ```OS```.
@@ -172,7 +172,7 @@ Du côté du serveur, le langage utilisé (PHP, Java...) doit récupérer les pa
      Si la valeur avait été transmise par méthode POST (pour un mot de passe, par exemple), la variable aurait été récupérée par ```$_POST['OS']```. Elle n'aurait par contre pas été affichée dans l'url de la page.
 4. La page ```page2.php?OS=MacOS``` s'affiche sur le navigateur de l'utilisateur :
 
-![](data/exphp2.png)
+![](data/exphp2.png){: .center}
 
 #### Remarque
 L'exemple ci-dessus est un mauvais exemple : rien ne justifie l'emploi d'un serveur distant. L'affichage de ce message aurait très bien pu se faire en local sur le navigateur du client, en Javascript par exemple.

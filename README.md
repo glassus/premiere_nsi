@@ -1,4 +1,8 @@
-## SNT
-Retrouvez ici les supports de cours de SNT (lycée François Mauriac - Bordeaux, année 2020-2021).  
+Ceci est le dépôt correspondant au site [https://glassus.github.io/premiere_nsi/](https://glassus.github.io/premiere_nsi/).
 
-Cliquez ci-dessus sur le dossier du thème correspondant.
+
+gilles.lassus [at] ac-bordeaux.fr
+
+Lycée François Mauriac / Bordeaux  
+
+L'ensemble des documents disponibles est publié sous licence CC-BY-SA.

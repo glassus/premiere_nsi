@@ -1,12 +1,13 @@
 # 6.1 Pages web et interactions
 
-<p align="center">
-<img src="data/meme.jpg" , width=80%/> 
-</p>
+
+![image](data/meme.jpg){: .center}
+
+
 
 ### 1. Le cas le plus simple : la même page pour tout le monde
 
-![](data/stat.png)
+![](data/stat.png){: .center}
 
 Nous allons tout d'abord considérer le cas où le serveur renvoie une page unique, identique pour tous les utilisateurs. De plus, l'utilisateur ne pourra pas agir sur sa page : il n'y a aucune interactivité.
 
@@ -121,7 +122,7 @@ Reprenez votre page de l'exercice 1 et rajoutez une feuille de style.
 
 
 ### 2. Quand le client peut agir sur sa page : exemple avec JavaScript
-![](data/dynclient.png)
+![](data/dynclient.png){: .center}
 
 Jusqu'à présent, la page web envoyée par le serveur est :
 1. identique quel que soit le client.
@@ -203,7 +204,7 @@ La puissance du JavaScript permet de réaliser aujourd'hui des interfaces utilis
 ### 3. Quand la page est fabriquée à la demande pour le client : exemple avec PHP
 
 
-![](data/dynserveur.png)
+![](data/dynserveur.png){: .center}
 
 Rappelons que toutes les pages que nous avons créées jusqu'à présent sont uniformément envoyées par le serveur au client. Aucune «préparation» de la page en amont n'a lieu sur le serveur, aucun dialogue n'a lieu avec le serveur une fois que la page a été livrée. 
 Évidemment, si le web était comme ceci, il ne serait qu'une gigantesque bibliothèque en consultation seule (ce fut le cas pendant longtemps, et ce qui n'était déjà pas si mal).
@@ -217,7 +218,7 @@ Lors d'une requête d'un client vers un serveur, si le client demande la page ``
 
 **Exemple :** la page http://glassus1.free.fr/interesting.html que vous avez déjà consultée se trouve **telle quelle** sur le serveur mis à disposition par Free pour l'hébergement des pages personnelles :
 
-![](data/extraitfree1.png)
+![](data/extraitfree1.png){: .center}
 
 Depuis votre navigateur, l'affichage du code-source (par Ctrl-U) vous donnera le fichier html tel qu'il était stocké sur le serveur.
 
@@ -226,17 +227,17 @@ Lors d'une requête d'un client vers un serveur, si le client demande la page ``
 
 **Exemple :** la consultation de la page http://glassus1.free.fr/test.php va renvoyer la page suivante :
 
-![](data/php1.png)
+![](data/php1.png){: .center}
 
 dont le code-source est :
 
-![](data/php2.png)
+![](data/php2.png){: .center}
 
 Notez bien que ce code-source ne contient que du ```html```.
 
 Allons regarder cette page **du côté du serveur** :
 
-![](data/php3.png)
+![](data/php3.png){: .center}
  
 Le contenu de cette page est :
 
