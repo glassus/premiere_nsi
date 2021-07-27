@@ -1,4 +1,4 @@
-# Protocole HTTP : étude du chargement d'une page web
+# 6.2 Protocole HTTP : étude du chargement d'une page web
 
 
 ## Le protocole HTTP : des requêtes et des réponses

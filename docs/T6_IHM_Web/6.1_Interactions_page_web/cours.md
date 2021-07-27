@@ -1,4 +1,4 @@
-# Pages web et interactions
+# 6.1 Pages web et interactions
 
 <p align="center">
 <img src="data/meme.jpg" , width=80%/> 

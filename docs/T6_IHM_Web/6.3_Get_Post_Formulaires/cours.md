@@ -1,4 +1,4 @@
-# Requêtes GET, POST et formulaires
+# 6.3 Requêtes GET, POST et formulaires
 
 ## 1. Côté client : comment envoyer des paramètres à un serveur ?
 

@@ -2,13 +2,12 @@
 ## Cahier de textes
 
 !!! note "Séance du 01/09/2021"
-    Début de la Programmation Orientée Objet
+    Notion de variable en Python
 
 *Séances précédentes*
 
 ??? note "Archives"
-    - blabla
-    - blabla
+    *vide*
 
 
 
