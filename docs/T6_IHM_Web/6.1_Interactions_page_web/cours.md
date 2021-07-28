@@ -1,5 +1,8 @@
 # 6.1 Pages web et interactions
 
+![image](data/BO.png){: .center}
+
+
 
 ![image](data/meme.jpg){: .center}
 

@@ -1,5 +1,7 @@
 # 3.3 Architecture d'un réseau
 
+![image](data/BO.png){: .center}
+
 Ce cours a pour but de présenter la constitution classique d'un réseau, et les équipements associés. La partie relative aux protocoles utilisés lors des échanges entre deux machines est détaillée dans le cours sur les protocoles de communication.
 
 ### 1. Premier réseau local

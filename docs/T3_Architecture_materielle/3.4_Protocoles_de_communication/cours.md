@@ -1,5 +1,7 @@
 # 3.4 Protocoles de communication dans un réseau
 
+![image](data/BO.png){: .center}
+
 ## I. Modèle OSI, modèle Internet
 
 

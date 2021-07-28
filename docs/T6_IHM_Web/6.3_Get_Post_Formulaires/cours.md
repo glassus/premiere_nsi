@@ -1,5 +1,7 @@
 # 6.3 Requêtes GET, POST et formulaires
 
+![image](data/BO.png){: .center}
+
 ## 1. Côté client : comment envoyer des paramètres à un serveur ?
 
 ### 1.1. La méthode GET

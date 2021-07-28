@@ -1,5 +1,6 @@
 # 6.2 Protocole HTTP : étude du chargement d'une page web
 
+![image](data/BO.png){: .center}
 
 ## Le protocole HTTP : des requêtes et des réponses
  HTTP (HyperText Transfer Protocol) est le protocole qui régit la communication entre : 
