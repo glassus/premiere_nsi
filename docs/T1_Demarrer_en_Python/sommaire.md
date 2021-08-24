@@ -1,3 +1,5 @@
+# Thème 1 : Bases de Python
+
 1. [Variables](../1.1_Variables/cours/)
 2. [Boucle For](../1.2_Boucle_for/cours/)
 3. [Boucle While](../1.3_Boucle_while/cours/)
