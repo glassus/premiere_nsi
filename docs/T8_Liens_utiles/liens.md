@@ -30,5 +30,5 @@ Au cas où vous vous ennuieriez...
 - [CodinGame](https://www.codingame.com/start){:target="_blank"} 
 
 
-??? abstract "sources"
+??? abstract "source"
     - site de [Cédric Gouygou](https://cgouygou.github.io/1NSI/)

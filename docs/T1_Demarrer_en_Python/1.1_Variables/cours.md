@@ -138,10 +138,10 @@ L'affectation
 ```
 ne provoque pas la réservation définitive d'un espace-mémoire pour la variable ```b```, mais la création d'un lien vers un espace-mémoire qui contient la valeur 9. Ce lien consiste en l'adresse-mémoire de cette valeur 9. 
 
-Cette adresse-mémoire vaut (sur ma configuration personnelle) ```978864```.
+Cette adresse-mémoire vaut (sur ma configuration personnelle) ```9788864```.
 ```python
 >>> id(b)
-978864
+9788864
 ```
 
 ![image](data/mem1.png){: .center}
