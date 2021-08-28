@@ -1,3 +1,5 @@
+# Thème 4 :  Algorithmique
+
 1. [Extremums et moyennes](../4.1_Extremums_et_moyennes/cours/)
 2. [Complexité](../4.2_Complexite/cours/)
 3. [Tri par insertion](../4.3_Tri_par_insertion/cours/)
