@@ -8,7 +8,7 @@
 *Séances précédentes*
 
 ??? note "Archives"
-    *vide.....*
+    *vide......*
 
 
 
