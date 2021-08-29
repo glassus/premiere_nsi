@@ -27,7 +27,7 @@ size(300, 200)
 
 Chaque pixel de cette zone est repérée par des coordonnées dans le repère suivant, dont l'origine se situe en haut à gauche et l'axe des ordonnées est **orienté vers le bas**.
 
-![](../data/repere.png){: .center} 
+![](data/repere.png){: .center} 
 
 ### Tracés
 
@@ -77,7 +77,7 @@ Chaque pixel de cette zone est repérée par des coordonnées dans le repère su
 ### Exercices
 
 !!! example "{{ exercice() }}"
-    ![](../data/drapeau_fra.png){align=right width=100px}
+    ![](data/drapeau_fra.png){align=right width=100px}
 
     Écrire un programme qui affiche le drapeau français, comme ci-contre, dans une zone de 300 x 200 pixels.
 

@@ -2,6 +2,7 @@
 ![](data/logopygame.png) 
 ## 0. Preambule
 Pygame est un package de Python facilitant la création de jeux basés une interface graphique. Vous pouvez :
+
 - l'installer sur votre distribution Python, par ```pip3 install pygame```.
 - le tester directement via https://repl.it/, en choisissant ```pygame``` dans la liste des langages proposés.
 
@@ -25,10 +26,7 @@ while True :
 
 Ce code devrait vous donner ceci :
 
-<p align="center">
-  <img src="data/f1.png"
-  />
-</p>
+![image](data/f1.png){: .center}
 
 
 **Commentaires**
@@ -46,12 +44,11 @@ Ce code devrait vous donner ceci :
 ## 2. Apparition d'un personnage
 
 ### 2.1. Téléchargement de l'image
-Nous allons travailler avec le sprite ci-dessous, nommé ```perso.png```. Il est issu de https://openclassrooms.com/fr/courses/1399541-interface-graphique-pygame-pour-python/1399813-premieres-fenetres
+Nous allons travailler avec le sprite ci-dessous, nommé ```perso.png```. Il est issu de [https://openclassrooms.com/fr/courses/1399541-interface-graphique-pygame-pour-python/1399813-premieres-fenetres](https://openclassrooms.com/fr/courses/1399541-interface-graphique-pygame-pour-python/1399813-premieres-fenetres)
 
 
-<p align="center">
-<img src="data/perso.png" /> 
-</p>
+![image](data/perso.png){: .center}
+
 
 [Téléchargez-le](data/perso.png) pour le mettre dans le même dossier que votre code ```pygame```.
 
@@ -103,9 +100,7 @@ while True :
 
 **Aperçu**
 
-<p align="center">
-<img src="data/f2.png" /> 
-</p>
+![image](data/f2.png){: .center}
 
 ## 3. Gestion des évènements
 Lorsqu'un programme ```pygame``` est lancé, la variable interne ```pygame.event.get()``` reçoit en continu les évènements des périphériques gérés par le système d'exploitation.  
@@ -231,10 +226,7 @@ où ```position_perso``` est l'objet de type ```rect```  contenant les coordonn�
 
 **Exercice 2 :**  
 Réaliser un contrôle au clavier du personnage, comme dans l'animation ci-dessous.
-<p align="center">
-<img src="data/exo2.gif" /> 
-</p>
-
+![image](data/exo2.gif){: .center}
 <details><summary> Proposition de correction (cliquer pour faire apparaître)</summary>
 <p>
 
@@ -293,9 +285,7 @@ Bien d'autres aides peuvent être trouvées dans les liens citées dans la parti
 
 **Exemple** de réalisation possible : un clicker avec un temps qui diminue à progressivement, et comptage des points.
 
-<p align="center">
-<img src="data/exo3.gif" /> 
-</p>
+![image](data/exo3.gif){: .center}
 
 **Quelques aides :**
 
@@ -334,7 +324,3 @@ while sortir == False :
 - Documentation officielle de Pygame, https://www.pygame.org/docs/
 - Cours d'OpenClassrooms, https://openclassrooms.com/fr/courses/1399541-interface-graphique-pygame-pour-python/1399813-premieres-fenetres.
 
----
-![](data/ccbysa.png "image")
-
-G.Lassus, Lycée François Mauriac --  Bordeaux  
