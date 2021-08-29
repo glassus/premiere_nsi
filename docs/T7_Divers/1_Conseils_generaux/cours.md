@@ -9,9 +9,24 @@ Il est conseillé de travailler avec 3 espaces:
 
 ![image](data/cap.png){: .center}
 
+!!! danger "C'est en codant qu'on apprend à coder"
+    **Tous** les exemples de code dans le cours doivent être **retapés** (résistez à l'envie du copier-coller) dans Thonny, soit en fenêtre de script, soit en console.
+
+    Cela permet de :
+
+    - mémoriser la syntaxe ;
+    - vérifier si le code proposé ne contient pas d'erreur ;
+
+    et le plus important :
+
+    - **faire ses propres tests et modifications** pour vérifier sa bonne compréhension. 
+
 - et un troisième espace essentiel : un petit cahier à spirale et un stylo !
 
 ![image](data/cahier.jpeg){: .center width=50%}
+
+
+## Script ou console ???
 
 ## Dossiers, fichiers et versionning
 
