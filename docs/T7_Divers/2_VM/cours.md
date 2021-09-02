@@ -20,6 +20,6 @@
 
 13. Basculer l'affichage en plein écran
 ![image](data/7.png){: .center}
-14. Au premier lancement d'un navigateur, remplir ses identifiants Scribe, permettant à internet.
+14. Au premier lancement d'un navigateur, remplir ses identifiants Scribe, permettant d'accéder à internet.
 ![image](data/8.png){: .center}
 
