@@ -11,7 +11,7 @@ Afin de pouvoir travailler sous le système d'exploitation libre Linux sur les m
 - l'un d'entre eux porte votre nom : c'est votre machine virtuelle (votre VM).
 - vous vous connectez à votre VM depuis un navigateur de n'importe quel ordinateur du lycée.
 - cet ordinateur (appelé *hôte*) ne va faire que recevoir le flux vidéo venu du serveur (et lui envoyer les interactions utilisateurs : souris, clavier)
-- en mettant ce flux vidéo en plein écran, on a l'illusion d'être sous un nouveau système d'exploitation. Nous allons donc travailler sous Linux, tout en étant effectivement sous Windows.
+- en mettant ce flux vidéo en plein écran, on a l'illusion d'être sous un nouveau système d'exploitation. Nous allons donc travailler sous Linux, tout en restant en réalité sous Windows.
 
 ## Méthode
 
