@@ -22,3 +22,4 @@
 ![image](data/7.png){: .center}
 14. Au premier lancement d'un navigateur il vous sera demandé vos identifiants Scribe, vous permettant de vous identifier sur le réseau.
 ![image](data/8.png){: .center}
+
