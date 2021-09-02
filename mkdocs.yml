@@ -81,7 +81,6 @@ plugins:
   - macros
   - awesome-pages:
       collapse_single_pages: true
-  - mkdocs-video
  # - mkdocs-jupyter
 
 extra:
