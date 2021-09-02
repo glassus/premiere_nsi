@@ -16,4 +16,5 @@ jobs:
       - run: pip install mkdocs-macros-plugin
       - run: pip install mkdocs-awesome-pages-plugin
       - run: pip install mkdocs-git-revision-date-plugin
+      - run: pip install mkdocs-video
       - run: mkdocs gh-deploy --force

@@ -29,7 +29,7 @@ Les zones blanches et rouge se décomposent comme ceci :
 Un grand bravo aux brillants _redditors_ ```u/rdtwt1``` et ```u/tend0g```.
 
 
-Update : faites votre propre parachute !
+### Update : faites votre propre parachute !
 [https://sjwarner.github.io/perseverance-parachute-generator/?](https://sjwarner.github.io/perseverance-parachute-generator/?)
 
 
