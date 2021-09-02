@@ -2,13 +2,16 @@
 
 Lors de sa descente vers la planète Mars le 18/02/2021, le rover Perseverance de la Nasa a freiné sa chute grâce à un parachute qui a intrigué quelques internautes du forum Reddit.
 
-![](data/mars/real.png)
+![](data/mars/real.png){: .center}
 
-Vidéo du déploiement du parachute : https://youtu.be/N3b-1-yrQYw
+Vidéo du déploiement du parachute :
+![type:video](https://youtu.be/N3b-1-yrQYw)
+
+
 
 Les zones blanches et rouge se décomposent comme ceci :
 
-![](data/mars/modele.png)
+![](data/mars/modele.png){: .center}
 
 
 ### Indications
@@ -23,14 +26,11 @@ Les zones blanches et rouge se décomposent comme ceci :
 
 
 
-
-
-
 Un grand bravo aux brillants _redditors_ ```u/rdtwt1``` et ```u/tend0g```.
 
 
 Update : faites votre propre parachute !
-https://sjwarner.github.io/perseverance-parachute-generator/?
+[https://sjwarner.github.io/perseverance-parachute-generator/?](https://sjwarner.github.io/perseverance-parachute-generator/?)
 
 
 
