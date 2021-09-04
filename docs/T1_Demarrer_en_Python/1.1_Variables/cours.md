@@ -17,7 +17,7 @@ Il y a plusieurs commentaires à faire sur une telle annonce :
 La phrase précédente donnera donc lieu à la ligne Python suivante :
 
 ```python
-a = 32
+>>> a = 32
 ```
 !!! warning "Attention"
     Le symbole ```=``` ici utilisé n'a **rien à voir** avec le symbole = utilisé en mathématique. On dit qu'on a **affecté** à ```a``` la valeur 32, et il faut se représenter mentalement cette action par l'écriture ```a ← 32```.
@@ -87,7 +87,7 @@ En première intention, il est possible d'expliquer le fonctionnement interne de
 
 Écrire  l'instruction :
 ```python
-a = 2
+>>> a = 2
 ```
 
 va provoquer chez l'ordinateur le comportement suivant :
@@ -101,86 +101,86 @@ va provoquer chez l'ordinateur le comportement suivant :
 
 Cette explication est suffisante pour aborder la notion de variable : c'est un mot (ou une lettre) qui va désigner une valeur. 
 
-Mais cette métaphore du tiroir est malheureusement un peu trop simplificatrice.
 
-### B.2 Une réalité bien plus complexe...
-#### B.2.1 La commande ```id()``` : l'adresse du tiroir ?
-Python possède une fonction qui renvoie l'adresse mémoire de la variable donnée en argument. 
+??? warning "Partie difficile (optionnelle)"
+    *La métaphore du tiroir est malheureusement un peu trop simplificatrice.*
 
-```python
->>> b = 7
->>> id(b)
-9788800
-```
+    ### B.2 Une réalité bien plus complexe...
+    #### B.2.1 La commande ```id()``` : l'adresse du tiroir ?
+    Python possède une fonction qui renvoie l'adresse mémoire de la variable donnée en argument. 
 
-Faites le test avec votre propre IDE Python (vous n'obtiendrez pas forcément la même valeur d'adresse mémoire)
+    ```python
+    >>> b = 7
+    >>> id(b)
+    9788800
+    ```
 
-#### B.2.2 Cela se complique.
-Sans refermer notre IDE, écrasons la valeur de ```b``` avec une nouvelle valeur :
-```python
->>> b = 12
-```
-et redemandons l'adresse de ```b``` :
-```python
->>> id(b)
-9788960
-```
+    Faites le test avec votre propre IDE Python (vous n'obtiendrez pas forcément la même valeur d'adresse mémoire)
 
-Très mauvaise nouvelle : l'adresse de la variable ```b``` a changé. Ceci invalide notre métaphore du «tiroir», une place unique qui serait réservée pour y stocker les valeurs successives d'une variable. 
+    #### B.2.2 Cela se complique.
+    Sans refermer notre IDE, écrasons la valeur de ```b``` avec une nouvelle valeur :
+    ```python
+    >>> b = 12
+    ```
+    et redemandons l'adresse de ```b``` :
+    ```python
+    >>> id(b)
+    9788960
+    ```
 
-La modification de la valeur de ```b``` ne s'est pas faite «en place», la variable ```b``` s'est déplacée : que s'est-il donc passé ?
+    Très mauvaise nouvelle : l'adresse de la variable ```b``` a changé. Ceci invalide notre métaphore du «tiroir», une place unique qui serait réservée pour y stocker les valeurs successives d'une variable. 
 
-#### B.2.3 Tentative d'explication
+    La modification de la valeur de ```b``` ne s'est pas faite «en place», la variable ```b``` s'est déplacée : que s'est-il donc passé ?
 
-L'affectation 
-```python
->>> b = 9
-```
-ne provoque pas la réservation définitive d'un espace-mémoire pour la variable ```b```, mais la création d'un lien vers un espace-mémoire qui contient la valeur 9. Ce lien consiste en l'adresse-mémoire de cette valeur 9. 
+    #### B.2.3 Tentative d'explication
 
-Cette adresse-mémoire vaut (sur ma configuration personnelle) ```9788864```.
-```python
->>> id(b)
-9788864
-```
+    L'affectation 
+    ```python
+    >>> b = 9
+    ```
+    ne provoque pas la réservation définitive d'un espace-mémoire pour la variable ```b```, mais la création d'un lien vers un espace-mémoire qui contient la valeur 9. Ce lien consiste en l'adresse-mémoire de cette valeur 9. 
 
-![image](data/mem1.png){: .center}
+    Cette adresse-mémoire vaut (sur ma configuration personnelle) ```9788864```.
+    ```python
+    >>> id(b)
+    9788864
+    ```
 
-
-
-
-
-Comme le présente le ruban ci-dessus, Python pré-positionne les entiers (de -5 à 256) sur des petites adresses-mémoires, car il considère que ces entiers servent souvent, et doivent donc être rapidement accessibles.
-
-Si on créé une nouvelle variable ```tokyo``` aussi égale à 9, elle va aussi *pointer* vers la même adresse-mémoire :
+    ![image](data/mem1.png){: .center}
 
 
-```python
->>> tokyo = 9
->>> id(tokyo)
-9788864
-```
-Les variables ```tokyo``` et ```b``` renvoient vers la même adresse-mémoire.
 
-Affectons maintenant à ```tokyo``` la valeur 2020 et observons son adresse-mémoire :
 
-```python
->>> tokyo = 2020
->>> id(tokyo)
-139762979309936
-```
 
-L'adresse-mémoire est (bien) plus grande : elle a été choisie sur le moment par Python pour y stocker 2020 (car 2020 > 256). 
+    Comme le présente le ruban ci-dessus, Python pré-positionne les entiers (de -5 à 256) sur des petites adresses-mémoires, car il considère que ces entiers servent souvent, et doivent donc être rapidement accessibles.
 
-De manière plus surprenante, si on créé une nouvelle variable ```jo``` qui vaut *aussi* 2020, Python va ouvrir une *autre* adresse-mémoire pour y stocker 2020, alors qu'il l'a déjà stockée ailleurs :
+    Si on créé une nouvelle variable ```tokyo``` aussi égale à 9, elle va aussi *pointer* vers la même adresse-mémoire :
 
-```python
->>> jo = 2020
->>> id(jo)
-139762979310064
-```
-#### B.2.4 En conclusion
 
+    ```python
+    >>> tokyo = 9
+    >>> id(tokyo)
+    9788864
+    ```
+    Les variables ```tokyo``` et ```b``` renvoient vers la même adresse-mémoire.
+
+    Affectons maintenant à ```tokyo``` la valeur 2020 et observons son adresse-mémoire :
+
+    ```python
+    >>> tokyo = 2020
+    >>> id(tokyo)
+    139762979309936
+    ```
+
+    L'adresse-mémoire est (bien) plus grande : elle a été choisie sur le moment par Python pour y stocker 2020 (car 2020 > 256). 
+
+    De manière plus surprenante, si on créé une nouvelle variable ```jo``` qui vaut *aussi* 2020, Python va ouvrir une *autre* adresse-mémoire pour y stocker 2020, alors qu'il l'a déjà stockée ailleurs :
+
+    ```python
+    >>> jo = 2020
+    >>> id(jo)
+    139762979310064
+    ```
 
 
 
@@ -206,8 +206,210 @@ Comme expliqué précédemment, un «lien» est fait entre le nom de la variable
 
 #### B.3.2 L'incrémentation d'une variable.
 
+«incrémenter» une variable signifie l'augmenter. 
+Imaginons une variable appelée ```compteur```. Au démarrage de notre programme, elle est initialisée à la valeur 0. 
+```python
+>>> compteur = 0
+```
+
+Mais à un moment du programme, cette variable doit être modifiée, par exemple en lui ajoutant 1.
+
+En Python, cela s'écrira :
+
+```python
+>>> compteur = compteur + 1
+```
+
+Observée avec des yeux de mathématicien, la précédente instruction est une horreur.
+
+![image](data/memex.png){: .center width=30%}
+
+Vue avec des yeux de mathématicien, voilà comment est interprétée la commande
+```python
+>>> compteur = compteur + 1
+```
+
+1. On évalue la partie droite de l'égalité, donc l'expression ```compteur + 1```.
+2. On va donc chercher le contenu de la variable ```compteur```. Si celle-ci n'existe pas, un message d'erreur est renvoyé.
+3. On additionne 1 au contenu de la variable ```compteur```.
+4. On écrase le contenu actuel de la variable ```compteur``` avec la valeur obtenue au 3.   
+
+À la fin de ces opérations, la variable ```compteur``` a bien augmenté de 1.
+
+Cette procédure d'**incrémentation** est très très classique, il faut la maîtriser parfaitement !
+
+
+!!! info "Syntaxe classique et syntaxe Pythonesque"
+    L'incrémentation d'une variable ```compteur``` s'écrira donc en Python :
+    ```python
+    >>> compteur = compteur + 1
+    ```
+    Mais il existe aussi une syntaxe particulière, un peu plus courte :
+
+    ```python
+    >>> compteur += 1
+    ```
+    Cette syntaxe peut se ranger dans la catégorie des **sucres syntaxiques** : c'est bien de la connaître, c'est amusant de s'en servir, mais son utilisation n'est en rien obligatoire et peut avoir un effet néfaste, celui d'oublier réellement ce qu'il se passe derrière.
+
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        Écrire le code «classique» et le code «Pythonesque» pour l'instruction suivante :
+
+        On initialise une variable ```score``` à 100 et on l'augmente de 15.
+
+    === "Correction"
+        ```python
+        >>> score = 100
+        >>> score = score + 15
+        ```
+        ou bien
+        ```python
+        >>> score = 100
+        >>> score += 15
+        ```
+
+
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        Écrire le code «classique» et le code «Pythonesque» pour l'instruction suivante :
+
+        On initialise une variable ```cellule``` à 1 et on la multiplie par 2.
+
+    === "Correction"
+        ```python
+        >>> cellule = 1
+        >>> cellule = cellule * 2
+        ```
+        ou bien
+        ```python
+        >>> cellule = 1
+        >>> cellule *= 2
+        ```
+
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        Écrire le code «classique» et le code «Pythonesque» pour l'instruction suivante.
+
+        On initialise une variable ```capital``` à 1000 et on lui enlève 5%.
+
+    === "Correction"
+        ```python
+        >>> capital = 1000
+        >>> capital = capital - capital * 5/100
+        ```
+        ou bien
+        ```python
+        >>> capital = 1000
+        >>> capital *= 0.95
+        ```
+
+
 #### B.3.3 L'échange de variables
 
+Après l'incrémentation, une autre technique de base reviendra fréquemment dans nos codes : **l'échange de variables**.
+
+Imaginons les variables suivantes :
+
+```python
+>>> maisonHarry = "Serpentard"
+>>> maisonMalfoy =  "Gryffondor"
+```
+
+Remarquons que nos variables ici ne contiennent plus des nombres mais des mots. On dira qu'elles contiennent des **chaînes de caractères** et qu'elles sont de type ```String```. 
+
+Revenons à ces deux variables, car il semblerait que les maisons d'Harry et de Malfoy aient été échangées...
+Comment faire pour inverser les valeurs ?
+
+▸ **Méthode naïve**
+
+```python
+>>> maisonHarry = maisonMalfoy
+>>> maisonMalfoy = maisonHarry
+```
+
+À l'arrivée, on se retrouve avec 
+```python
+>>> maisonHarry
+'Gryffondor'
+>>> maisonMalfoy
+'Gryffondor'
+```
+
+En effet, la variable ```maisonHarry```  a été écrasée...  et on ne peut plus retrouver sa valeur pour la donner à ```maisonMalfoy```.
+
+▸ **La solution universelle**
+
+Nous allons passer par une variable temporaire qui nous permettra de stocker la valeur écrasée.
+
+```python
+maisonHarry = "Serpentard"
+maisonMalfoy =  "Gryffondor"
+
+# on procède à l'échange
+
+t = maisonHarry
+maisonHarry = maisonMalfoy
+maisonMalfoy = t
+```
+
+Ainsi, 
+```python
+>>> maisonHarry
+'Gryffondor'
+>>> maisonMalfoy
+'Serpentard'
+```
+
+
+▸ **La solution «pythonesque»**
+
+Chaque langage de programmation ayant ses particularités, Python propose une syntaxe particulièrement agréable pour pouvoir faire l'échange de deux variables sans faire intervenir une variable temporaire :
+
+```python
+a = 2
+b = 5
+
+# on procède à l'échange
+a,b = b,a
+```
+Ainsi,
+```python
+>>> a
+5
+>>> b
+2
+```
+
+Les variables ont bien été échangées. 
+
+*Remarque : Python ne fait que nous faciliter le travail. Il a dû lui-même créer une variable temporaire pour stocker la variable ```a``` avant de l'écraser : la simultanéité n'existe pas en informatique !*
+
 ## C. Différents types de variables
+
+!!! abstract "Types de base"
+    Voici les types Python les plus fréquemment utilisés cette année:
+
+    |Type Python| Traduction | Exemple|
+    |:-:|:-:|:-:|
+    |`int`|entier|`42`|
+    |`float`|flottant (décimal)|`3.1416`|
+    |`str`|chaîne de caractères (string)|`"NSI"`|
+    |`bool`|booléen (True ou False)|True|
+    |`tuple`|p-uplet| `(255, 127, 0)`|
+    |`list`|liste|`[0, 1, 2, 3, 4, 5]`|
+    |`dict`|dictionnaire|`{'Homer':43, 'Marge':41, 'Bart':12, 'Lisa':10, 'Maggie':4}`|
+    |`function`|fonction| `print`|
+
+Comment connaître le type d'une variable ?
+Il suffit dans la console d'utiliser la fonction `type`.
+
+```python
+>>> a = 1
+>>> type(a)
+<class 'int'>
+```
+
+
+
 
 ## D. Bonnes pratiques de nommage
