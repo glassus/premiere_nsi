@@ -491,3 +491,41 @@ if date == 1:
 - ```camelCase``` : les mots sont séparés par des majuscules mais la 1ère lettre est minuscule. Conseillé en Javascript.
 - ```PascalCase``` : les mots sont séparés par des majuscules et la 1ère lettre est majuscule. Conseillé en C.
 - ```kebab-case``` : les mots sont séparés par des tirets courts. Conseillé en HTML - CSS.
+
+
+
+Pour nommer correctement une variable, il existe des règles à respecter.
+
+!!! abstract "Quel nom choisir pour ma variable ?"
+    - le nom de la variable peut contenir les caractères suivants :
+        - des lettres **non accentuées** (attention, minuscule et majuscule sont des caractères différents)
+        - des chiffres (mais pas comme premier caractère)
+        - le tiret du bas _ (underscore, tiret du 8)
+    
+    - le nom de la variable **ne doit pas** commencer par un chiffre
+    - le nom de la variable **ne doit pas** contenir d'espace
+    - le nom de la variable **ne doit pas** être un mot-clé du langage.
+
+    ??? info "Liste des mots-clés réservés par Python"
+
+        <p align="center">
+        <table>
+            <tr><td>and</td><td>as </td><td>assert	</td><td>break</td><td>	class</td><td>	continue</td><td>	def</td><td>	del</td></tr> 
+            <tr><td>elif</td><td>	else</td><td>	except</td><td> False </td><td> finally	</td><td>for</td><td>	from</td><td>	global  </td></tr>
+            <tr> <td> if </td><td>	import</td><td>	in</td><td>	is	</td><td>lambda	</td><td>None </td><td>not </td><td>	or</td></tr>
+            <tr><td> pass </td><td>raise</td><td>	return</td><td>	True </td><td>try	</td><td>while</td><td>	with	</td><td>yield </td></tr>
+        </table>
+        </p>
+
+
+
+
+
+!!! abstract "Règles d'usage"
+    - S'il est composé, le nom peut être de la forme:
+        - ```snake_case``` : les mots sont séparés par des underscores. Conseillé en Python.
+        - ```camelCase``` : les mots sont séparés par des majuscules mais la 1ère lettre est minuscule. Conseillé en Javascript.
+        - ```PascalCase``` : les mots sont séparés par des majuscules et la 1ère lettre est majuscule. Conseillé en C.
+        - ```kebab-case``` : les mots sont séparés par des tirets courts. Conseillé en HTML - CSS. 
+    - le nom de la variable **doit avoir du sens**: si on doit manipuler une variable qui stocke l'âge du capitaine, il faut l'écrire non pas `a` mais plutôt soit `age_capitaine`, soit `ageCapitaine`.
+
