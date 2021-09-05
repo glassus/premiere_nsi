@@ -370,7 +370,7 @@ Vous pouvez vérifier maintenant que les valeurs de ```a``` et de ```b``` ont bi
     ```python
     >>> a, b = b, a
     ```
-    C'est de nouveau un *sucre syntaxique* ! Cette syntaxe nous dispense de créer nous-même une troisième variable. Mais pas de miracle : en interne, Python crée lui-même cette variable temporaire. La simultanéité n'existe pas en informatique !
+    C'est de nouveau un *sucre syntaxique*. Cette syntaxe nous dispense de créer nous-même une troisième variable. Mais pas de miracle : en interne, Python crée lui-même cette variable temporaire. La simultanéité n'existe pas en informatique.
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
@@ -437,7 +437,7 @@ Jusqu'à présent, nous ne nous sommes pas occupés de préciser à Python le ty
 a = 3
 ```
 
-Mais dans certains langages, c'est obligatoire ! En C par exemple, il faut écrire :
+Mais dans certains langages, c'est obligatoire. En C par exemple, il faut écrire :
 
 ```C
 int a = 3;
@@ -462,7 +462,7 @@ Et en Python ?
 <class 'str'>
 ```
 
-Python a changé tout seul le type de notre variable, sans intervention ! On parle de **typage dynamique**.
+Python a changé tout seul le type de notre variable, sans intervention. On parle de **typage dynamique**.
 
 
 
