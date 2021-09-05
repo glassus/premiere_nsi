@@ -239,7 +239,7 @@ Vue avec des yeux de mathématicien, voilà comment est interprétée la command
 Cette procédure d'**incrémentation** est très très classique, il faut la maîtriser parfaitement !
 
 
-!!! info "Syntaxe classique et syntaxe Pythonesque"
+!!! info "Syntaxe classique et syntaxe Pythonesque :heart:"
     L'incrémentation d'une variable ```compteur``` s'écrira donc en Python :
     ```python
     >>> compteur = compteur + 1
@@ -305,86 +305,104 @@ Cette procédure d'**incrémentation** est très très classique, il faut la ma�
 
 
 #### B.3.3 L'échange de variables
-
 Après l'incrémentation, une autre technique de base reviendra fréquemment dans nos codes : **l'échange de variables**.
 
 Imaginons les variables suivantes :
 
 ```python
->>> maisonHarry = "Serpentard"
->>> maisonMalfoy =  "Gryffondor"
+>>> a = 3
+>>> b = 5
 ```
-
-Remarquons que nos variables ici ne contiennent plus des nombres mais des mots. On dira qu'elles contiennent des **chaînes de caractères** et qu'elles sont de type ```String```. 
-
-Revenons à ces deux variables, car il semblerait que les maisons d'Harry et de Malfoy aient été échangées...
-Comment faire pour inverser les valeurs ?
+Le but est d'échanger les valeurs de ```a``` et de ```b```.
 
 ▸ **Méthode naïve**
 
 ```python
->>> maisonHarry = maisonMalfoy
->>> maisonMalfoy = maisonHarry
+>>> a = b
+>>> b = a
 ```
 
-À l'arrivée, on se retrouve avec 
-```python
->>> maisonHarry
-'Gryffondor'
->>> maisonMalfoy
-'Gryffondor'
-```
+Que valent ```a``` et de ```b``` maintenant ?
 
-En effet, la variable ```maisonHarry```  a été écrasée...  et on ne peut plus retrouver sa valeur pour la donner à ```maisonMalfoy```.
-
-▸ **La solution universelle**
-
-Nous allons passer par une variable temporaire qui nous permettra de stocker la valeur écrasée.
-
-```python
-maisonHarry = "Serpentard"
-maisonMalfoy =  "Gryffondor"
-
-# on procède à l'échange
-
-t = maisonHarry
-maisonHarry = maisonMalfoy
-maisonMalfoy = t
-```
-
-Ainsi, 
-```python
->>> maisonHarry
-'Gryffondor'
->>> maisonMalfoy
-'Serpentard'
-```
-
-
-▸ **La solution «pythonesque»**
-
-Chaque langage de programmation ayant ses particularités, Python propose une syntaxe particulièrement agréable pour pouvoir faire l'échange de deux variables sans faire intervenir une variable temporaire :
-
-```python
-a = 2
-b = 5
-
-# on procède à l'échange
-a,b = b,a
-```
-Ainsi,
+Malheureusement :
 ```python
 >>> a
 5
 >>> b
-2
+5
+>
 ```
 
-Les variables ont bien été échangées. 
+La variable ```a``` a été écrasée dès qu'on lui a donné la valeur de la variable ```b```.
 
-*Remarque : Python ne fait que nous faciliter le travail. Il a dû lui-même créer une variable temporaire pour stocker la variable ```a``` avant de l'écraser : la simultanéité n'existe pas en informatique !*
+Comment la préserver ?
+
+La situation est similaire au problème suivant : comment échanger le contenu de ces deux verres ?
+
+![image](data/verres.png){: .center width=20%}
+
+La méthode est évidente : il nous faut un troisième verre.
+
+Nous allons faire de même pour nos variables. Nous allons utiliser une variable **temporaire** (on parle aussi de variable **tampon**) pour conserver la mémoire de la valeur de ```a``` (par exemple) avant que celle-ci ne se fasse écraser :
+
+```python
+>>> a = 3
+>>> b = 5
+>>> temp = a
+>>> a = b
+>>> b = temp
+```
+
+Vous pouvez vérifier maintenant que les valeurs de ```a``` et de ```b``` ont bien été échangées.
+
+
+
+!!! info "Syntaxe classique et syntaxe Pythonesque :heart:"
+    L'échange de deux variables ```a``` et de ```b``` s'écrit donc :
+    ```python
+    >>> temp = a
+    >>> a = b
+    >>> b = temp
+    ```
+    Mais il existe aussi une syntaxe particulière à Python, bien plus courte :
+
+    ```python
+    >>> a, b = b, a
+    ```
+    C'est de nouveau un *sucre syntaxique* ! Cette syntaxe nous dispense de créer nous-même une troisième variable. Mais pas de miracle : en interne, Python crée lui-même cette variable temporaire. La simultanéité n'existe pas en informatique !
+
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        Une petite erreur s'est glissée à Poudlard :
+        ```python
+        >>> maisonHarry = "Serpentard"
+        >>> maisonMalfoy =  "Gryffondor"
+        ```
+        Corriger cette erreur, de deux manières différentes.
+
+    === "Correction"
+        ```python
+        >>> t = maisonHarry
+        >>> maisonHarry = maisonMalfoy
+        >>> maisonMalfoy = t
+        ```
+        ou plus rapidement :
+        ```python
+        >>> maisonHarry, maisonMalfoy = maisonMalfoy, maisonHarry
+        ```
+
+
 
 ## C. Différents types de variables
+
+Pour l'instant, les variables que nous avons manipulées contiennent toutes des nombres entiers.
+
+Sauf les maisons de Poudlard, qui sont des ~~mots~~ chaînes de caractères.
+
+Pour différencier la nature de ce que peut contenir une variable, on parle alors de **type de variable**.
+
+En voici quelques uns, que nous découvrirons au fil de l'année :
+
 
 !!! abstract "Types de base"
     Voici les types Python les plus fréquemment utilisés cette année:
@@ -400,6 +418,7 @@ Les variables ont bien été échangées.
     |`dict`|dictionnaire|`{'Homer':43, 'Marge':41, 'Bart':12, 'Lisa':10, 'Maggie':4}`|
     |`function`|fonction| `print`|
 
+
 Comment connaître le type d'une variable ?
 Il suffit dans la console d'utiliser la fonction `type`.
 
@@ -408,6 +427,42 @@ Il suffit dans la console d'utiliser la fonction `type`.
 >>> type(a)
 <class 'int'>
 ```
+
+### C.1 Python et le typage dynamique
+
+Jusqu'à présent, nous ne nous sommes pas occupés de préciser à Python le type de notre variable.
+
+```python
+a = 3
+```
+
+Mais dans certains langages, c'est obligatoire ! En C par exemple, il faut écrire :
+
+```C
+int a = 3;
+```
+Cela signifie (pour le langage C) que notre variable ```a``` n'aura pas le droit de contenir autre chose qu'un nombre entier.
+
+Si on écrit ensuite
+```C
+a = "test";
+```
+
+Le compilateur C renverra une erreur : on ne peut pas stocker une chaîne de caractères dans une variable qu'on a créée comme étant de type entier.
+
+Et en Python ?
+
+```python
+>>> a = 3
+>>> type(a)
+<class 'int'>
+>>> a = "test"
+>>> type(a)
+<class 'str'>
+```
+
+Python a changé tout seul le type de notre variable, sans intervention ! On parle de **typage dynamique**.
+
 
 
 
