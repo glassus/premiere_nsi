@@ -25,7 +25,7 @@ Afin de pouvoir travailler sous le système d'exploitation libre Linux sur les m
 7. Cliquer sur ```Start``` pour démarrer la VM.
 8. Cliquer sur le bouton ```Console``` et choisir ```Spice```.
 ![image](data/4.png){: .center}
-9. Clqiuer sur le fichier ```telechargement.vv``` apparu en bas à gauche.
+9. Cliquer sur le fichier ```telechargement.vv``` apparu en bas à gauche.
 10. Attendre (un peu).
 11. Si rien ne se passe au bout d'une dizaine de secondes, fermer la fenêtre et cliquer de nouveau sur Spice pour retélécharger un nouveau fichier.
 12. Remplir ses identifiants dans la fenêtre de connexion :
