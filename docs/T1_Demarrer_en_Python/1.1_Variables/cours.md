@@ -3,7 +3,7 @@
 ## A. Pourquoi des variables ?
 
 ### A.1 Introduction
-Imaginons à l'oral l'expression *«nous allons stocker le prix du spectacle dans une variable  ```a```, qui vaudra donc au départ 32.»*
+Considérons la phrase *«nous allons stocker le prix du spectacle dans une variable  ```a```, qui vaudra donc au départ 32.»*
 
 Il y a plusieurs commentaires à faire sur une telle annonce :
 
@@ -78,7 +78,7 @@ Traceback (most recent call last):
 NameError: name 'b' is not defined
 ```
 
-Notez l'erreur de la ligne 5 : on a fait appel à une variable ```b``` qui n'avait jamais été définie, comme le dit explicitement le message ```NameError: name 'b' is not defined``` 
+Remarquez bien l'erreur lorsqu'on a fait appel à une variable ```b``` qui n'avait jamais été définie, comme le dit explicitement le message ```NameError: name 'b' is not defined``` 
 
 ## B. Le fonctionnement interne
 ### B.1 Explication simplifiée
@@ -206,13 +206,14 @@ Comme expliqué précédemment, un «lien» est fait entre le nom de la variable
 
 #### B.3.2 L'incrémentation d'une variable.
 
-«incrémenter» une variable signifie l'augmenter. 
+*«Incrémenter»* une variable signifie l'augmenter. 
+
 Imaginons une variable appelée ```compteur```. Au démarrage de notre programme, elle est initialisée à la valeur 0. 
 ```python
 >>> compteur = 0
 ```
 
-Mais à un moment du programme, cette variable doit être modifiée, par exemple en lui ajoutant 1.
+Considérons qu'à un moment du programme, cette variable doit être modifiée, par exemple en lui ajoutant 1.
 
 En Python, cela s'écrira :
 
@@ -322,7 +323,7 @@ Le but est d'échanger les valeurs de ```a``` et de ```b```.
 >>> b = a
 ```
 
-Que valent ```a``` et de ```b``` maintenant ?
+Que valent ```a``` et ```b``` maintenant ?
 
 Malheureusement :
 ```python
@@ -468,3 +469,25 @@ Python a changé tout seul le type de notre variable, sans intervention ! On par
 
 
 ## D. Bonnes pratiques de nommage
+
+▶ Les variables à une lettre (comme ```i```, ```j```, ```k``` ) sont réservées aux indices (notamment dans les boucles).
+
+▶ Les autres variables doivent avoir des noms **explicites**, éventuellement écrits en ```snake_case``` si plusieurs mots doivent être reliés. 
+
+```python
+# PAS BIEN
+if d == 1:
+    cep += vm
+
+# BIEN
+if date == 1:
+    compte_epargne += versement_mensuel
+```
+
+
+**Différents types de casse :**
+
+- ```snake_case``` : les mots sont séparés par des underscores. Conseillé en Python.
+- ```camelCase``` : les mots sont séparés par des majuscules mais la 1ère lettre est minuscule. Conseillé en Javascript.
+- ```PascalCase``` : les mots sont séparés par des majuscules et la 1ère lettre est majuscule. Conseillé en C.
+- ```kebab-case``` : les mots sont séparés par des tirets courts. Conseillé en HTML - CSS.
