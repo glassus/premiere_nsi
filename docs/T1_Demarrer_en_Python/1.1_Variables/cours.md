@@ -470,33 +470,11 @@ Python a changé tout seul le type de notre variable, sans intervention ! On par
 
 ## D. Bonnes pratiques de nommage
 
-▶ Les variables à une lettre (comme ```i```, ```j```, ```k``` ) sont réservées aux indices (notamment dans les boucles).
-
-▶ Les autres variables doivent avoir des noms **explicites**, éventuellement écrits en ```snake_case``` si plusieurs mots doivent être reliés. 
-
-```python
-# PAS BIEN
-if d == 1:
-    cep += vm
-
-# BIEN
-if date == 1:
-    compte_epargne += versement_mensuel
-```
-
-
-**Différents types de casse :**
-
-- ```snake_case``` : les mots sont séparés par des underscores. Conseillé en Python.
-- ```camelCase``` : les mots sont séparés par des majuscules mais la 1ère lettre est minuscule. Conseillé en Javascript.
-- ```PascalCase``` : les mots sont séparés par des majuscules et la 1ère lettre est majuscule. Conseillé en C.
-- ```kebab-case``` : les mots sont séparés par des tirets courts. Conseillé en HTML - CSS.
-
-
+### D.1 Ce qui est autorisé et ce qui ne l'est pas
 
 Pour nommer correctement une variable, il existe des règles à respecter.
 
-!!! abstract "Quel nom choisir pour ma variable ?"
+!!! abstract "Les règles"
     - le nom de la variable peut contenir les caractères suivants :
         - des lettres **non accentuées** (attention, minuscule et majuscule sont des caractères différents)
         - des chiffres (mais pas comme premier caractère)
@@ -519,13 +497,41 @@ Pour nommer correctement une variable, il existe des règles à respecter.
 
 
 
+### D.2 Du sens, du sens, du sens
+
+Hormis pour les indices (de boucles, de tableaux...) un nom de variable (dans un programme destiné à être lu, par vous ou quelqu'un d'autre) doit **impérativement avoir du sens** :
+
+```python
+# PAS BIEN
+if d == 1:
+    cep += vm
+
+# BIEN
+if date == 1:
+    compte_epargne += versement_mensuel
+```
 
 
-!!! abstract "Règles d'usage"
+!!! tip "Règle d'or :heart:" 
+    On ne donne jamais un nom de variable au hasard, on le choisit pour qu'il soit **explicite**.
+
+
+![image](data/memevar1.jpg){: .center width=30%}
+
+Oui mais pour donner du sens, il faut souvent plusieurs mots...
+La longueur du nom de la variable n'est plus un problème depuis que la grande majorité des IDE proposent la complétion automatique. 
+Mais comment former ces longs mots ?
+
+
+### D.3 Syntaxe des noms à rallonge
+
+!!! abstract "Comment accoler des mots"
     - S'il est composé, le nom peut être de la forme:
         - ```snake_case``` : les mots sont séparés par des underscores. Conseillé en Python.
         - ```camelCase``` : les mots sont séparés par des majuscules mais la 1ère lettre est minuscule. Conseillé en Javascript.
         - ```PascalCase``` : les mots sont séparés par des majuscules et la 1ère lettre est majuscule. Conseillé en C.
         - ```kebab-case``` : les mots sont séparés par des tirets courts. Conseillé en HTML - CSS. 
-    - le nom de la variable **doit avoir du sens**: si on doit manipuler une variable qui stocke l'âge du capitaine, il faut l'écrire non pas `a` mais plutôt soit `age_capitaine`, soit `ageCapitaine`.
 
+Sans surprise, en Python, nous utiliserons donc le ```snake_case```.
+
+![image](data/smart.jpg){: .center width=30%}
