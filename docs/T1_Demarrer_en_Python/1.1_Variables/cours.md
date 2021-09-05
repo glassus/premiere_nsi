@@ -224,7 +224,7 @@ Observée avec des yeux de mathématicien, la précédente instruction est une h
 
 ![image](data/memex.png){: .center width=30%}
 
-Vue avec des yeux de mathématicien, voilà comment est interprétée la commande
+Vue avec des yeux d'informaticien, voilà comment est interprétée la commande
 ```python
 >>> compteur = compteur + 1
 ```
