@@ -212,25 +212,25 @@ va donner ceci :
         
         On utilisera la syntaxe ```print(k, end = ' ')``` ) pour afficher les nombres horizontalement.
 
-        1. ```0 1 2 3 4 5``` 
+        A. ```0 1 2 3 4 5``` 
         ??? note "Correction"
             ```python linenums='1'
             for k in range(6):
                 print(k, end = ' ')
             ```
-        2. ```10 11 12 13 14 15 ``` 
+        B. ```10 11 12 13 14 15 ``` 
         ??? note "Correction"
             ```python linenums='1'
             for k in range(10,16):
                 print(k, end = ' ')
             ```
-        3. ```3 6 9 12 ``` 
+        C. ```3 6 9 12 ``` 
         ??? note "Correction"
             ```python linenums='1'
             for k in range(3,13,3):
                 print(k, end = ' ')
             ```
-        4. ```10 9 8 7 6 5 4 3 2 1 0  ``` 
+        D. ```10 9 8 7 6 5 4 3 2 1 0  ``` 
         ??? note "Correction"
             ```python linenums='1'
             for k in range(10,-1,-1):
