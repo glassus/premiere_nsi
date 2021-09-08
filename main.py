@@ -15,6 +15,10 @@ def define_env(env):
 
 #---------------- </exo perso>-------------------- 
 
+    @env.macro
+    def initexo(n):
+        env.variables['compteur_exo'] = n
+        return ""
 
 #---------------- <PYODIDE>-------------------- 
     env.variables['term_counter'] = 0
