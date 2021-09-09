@@ -2,7 +2,7 @@
 ## Cahier de textes
 
 !!! note "Séance du jeudi 09/09/2021"
-    - Suite de la notion de variable en Python  
+    - Suite de la notion de variable en Python.
     Cours : [1.1 Variables](./T1_Demarrer_en_Python/1.1_Variables/cours/)
     - [Boucle For](./T1_Demarrer_en_Python/1.2_Boucle_for/cours/) 
 
