@@ -101,7 +101,7 @@ Ici, il y a simplement un ```print(k)```, donc chaque lettre de ```"NSI"``` s'af
 <iframe width="800" height="300" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=for%20jour%20in%20%5B%22lundi%22,%20%22mardi%22,%20%22mercredi%22,%20%22jeudi%22,%20%22vendredi%22%5D%3A%0A%20%20%20%20print%28%22je%20vais%20au%20lyc%C3%A9e%20le%22,%20jour%29%0A&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 
-**Attention: :warning:** très souvent, l'objet énumérable que la boucle va parcourir aura été **au préalable** stocké dans une variable :
+**:warning: Attention:** très souvent, l'objet énumérable que la boucle va parcourir aura été **au préalable** stocké dans une variable :
 
 !!! note "Exemple fondateur n°3 :heart:"
     Le programme précédent est équivalent à :
