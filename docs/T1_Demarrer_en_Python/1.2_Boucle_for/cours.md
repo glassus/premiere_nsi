@@ -32,7 +32,7 @@ La principale caractéristique d'un ordinateur est d'exceller dans les opératio
 
 Il existe donc une instruction permettant de faire une (ou plusieurs) action(s) à chaque itération sur un élément énumérable.
 
-!!! note "Un exemple fondateur :heart:"
+!!! note "Exemple fondateur n°1 :heart:"
     Le programme suivant :
     ```python linenums='1'
     for k in 'NSI':
@@ -70,7 +70,7 @@ Ici, il y a simplement un ```print(k)```, donc chaque lettre de ```"NSI"``` s'af
         bonjour
         bonjour
         ``` 
-        Dans cet exemple, la **variable de boucle** ```k``` est **muette** : on n'est pas utilisée dans le code ailleurs que dans le ```for```.
+        Dans cet exemple, la **variable de boucle** ```m``` est **muette** : on n'est pas utilisée dans le code ailleurs que dans le ```for```.
 
 
 !!! warning "Comment éviter les erreurs classiques"
@@ -82,7 +82,7 @@ Ici, il y a simplement un ```print(k)```, donc chaque lettre de ```"NSI"``` s'af
 
 ### 2.2 Itérer sur une liste
 
-!!! note "Un exemple fondateur :heart:"
+!!! note "Exemple fondateur n°2 :heart:"
     Le programme suivant :
     ```python linenums='1'
     for jour in ["lundi", "mardi", "mercredi", "jeudi", "vendredi"]:
@@ -101,7 +101,25 @@ Ici, il y a simplement un ```print(k)```, donc chaque lettre de ```"NSI"``` s'af
 <iframe width="800" height="300" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=for%20jour%20in%20%5B%22lundi%22,%20%22mardi%22,%20%22mercredi%22,%20%22jeudi%22,%20%22vendredi%22%5D%3A%0A%20%20%20%20print%28%22je%20vais%20au%20lyc%C3%A9e%20le%22,%20jour%29%0A&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 
-Dans le cours spécifique sur les listes, nous verrons une autre manière de parcourir une liste.
+**Attention: :warning:** très souvent, l'objet énumérable que la boucle va parcourir aura été **au préalable** stocké dans une variable :
+
+!!! note "Exemple fondateur n°3 :heart:"
+    Le programme précédent est équivalent à :
+    ```python linenums='1'
+    semaine = ["lundi", "mardi", "mercredi", "jeudi", "vendredi"]
+    for jour in semaine:
+        print("je vais au lycée le", jour)
+
+    ```
+  
+
+Notez l'importance d'avoir choisi des noms de variables explicites : ils aident grandement à la lisibilité du code.
+
+
+
+
+
+*Trailer : Dans le cours spécifique sur les listes, nous verrons une toute autre manière de parcourir une liste.*
 
 ## 3. Comment répéter ```n``` fois la même action ?
 
