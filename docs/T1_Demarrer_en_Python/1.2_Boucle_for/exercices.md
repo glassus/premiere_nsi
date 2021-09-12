@@ -48,7 +48,7 @@
         Dans l'extrait de code suivant:
 
         - `chaine` est une variable initialisée avec un `str` vide : `""`;
-        - on veut qu'en sortie de programme cette variable contienne la valeur `'aeiouy'`.
+        - on veut qu'en sortie de programme cette variable contienne la valeur `'bravo'`.
 
         L'idée est d'ajouter une par une les lettres à la variable `chaine`.
 

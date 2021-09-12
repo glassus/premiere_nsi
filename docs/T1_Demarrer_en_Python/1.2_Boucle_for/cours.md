@@ -117,8 +117,6 @@ Notez l'importance d'avoir choisi des noms de variables explicites : ils aident 
 
 
 
-
-
 *Trailer : Dans le cours spécifique sur les listes, nous verrons une toute autre manière de parcourir une liste.*
 
 ## 3. Comment répéter ```n``` fois la même action ?

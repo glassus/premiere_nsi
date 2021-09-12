@@ -1,17 +1,21 @@
 
 ## Cahier de textes
 
-!!! note "Séance du jeudi 09/09/2021"
-    - Suite de la notion de variable en Python.
-    Cours : [1.1 Variables](./T1_Demarrer_en_Python/1.1_Variables/cours/)
-    - [Boucle For](./T1_Demarrer_en_Python/1.2_Boucle_for/cours/) 
+!!! note "Séance du lundi 13/09/2021"
+    - Petit test sur les variables et la boucle ```for```.
+    - Suite du cours et exercices sur la boucle ```for```. 
 
 *Séances précédentes*
 
 ??? note "Archives"
-    !!! note "Séance du lundi 06/09/2021"
-    Notion de variable en Python  
+    !!! note "Séance du jeudi 09/09/2021"
+    - Suite de la notion de variable en Python.
     Cours : [1.1 Variables](./T1_Demarrer_en_Python/1.1_Variables/cours/)
+    - [Boucle For](./T1_Demarrer_en_Python/1.2_Boucle_for/cours/) 
+
+    !!! note "Séance du lundi 06/09/2021"
+    - Notion de variable en Python  
+    - Cours : [1.1 Variables](./T1_Demarrer_en_Python/1.1_Variables/cours/)
 
 
 
