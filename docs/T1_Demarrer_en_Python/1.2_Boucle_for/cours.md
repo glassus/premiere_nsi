@@ -218,7 +218,19 @@ va donner ceci :
 **Remarques** :
 
 - si le ```step``` est omis, il vaut 1 par défaut.
-- l'objet ```range(5)``` n'est pas égal à la liste ```[0, 1, 2, 3, 4]``` (car ce n'est pas un objet de type ```List``` )  
+- l'objet ```range(5)``` n'est pas «techniquement» égal à la liste ```[0, 1, 2, 3, 4]```, car ce n'est pas un objet de type ```List```:
+
+```python
+>>> type(range(5))
+<class 'range'>
+```
+Si nécessaire, on peut le convertir en liste :
+```python
+>>> list(range(5))
+[0, 1, 2, 3, 4]
+```
+
+Il faut donc garder en tête que l'objet renvoyé par ```range()``` est un **itérable** assimilable à une liste de nombres.  
 
 
 
