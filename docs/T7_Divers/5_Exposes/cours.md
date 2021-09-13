@@ -46,3 +46,6 @@
 
 ## Dennis Ritchie
 ![image](data/ritchie.jpg){: .center width=30%}
+
+## John Conway
+![image](data/conway.jpg){: .center width=30%}
