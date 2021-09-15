@@ -45,14 +45,15 @@ Il existe donc une instruction permettant de faire une (ou plusieurs) action(s) 
     I
     ```
 
-Étudions, grâce à PythonTutor, le détail de cette exécution.
+!!! aide "Analyse grâce à PythonTutor"
+    Étudions, grâce à PythonTutor, le détail de cette exécution.
 
-Cliquez sur Next et observez bien l'évolution de la variable ```k```. 
-<iframe width="800" height="300" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=for%20k%20in%20'NSI'%3A%0A%20%20%20%20print%28k%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+    Cliquez sur Next et observez bien l'évolution de la variable ```k```. 
+    <iframe width="800" height="300" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=for%20k%20in%20'NSI'%3A%0A%20%20%20%20print%28k%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
-La variable ```k``` prend donc **successivement** toutes les lettre de la chaîne de caractère ```"NSI"```. 
+    La variable ```k``` prend donc **successivement** toutes les lettre de la chaîne de caractère ```"NSI"```. 
 
-Pour chaque valeur de ```k```, la ou les instruction(s) situées **de manière indentée** sous la ligne du ```for``` seront exécutées. 
+    Pour chaque valeur de ```k```, la ou les instruction(s) situées **de manière indentée** sous la ligne du ```for``` seront exécutées. 
 
 Ici, il y a simplement un ```print(k)```, donc chaque lettre de ```"NSI"``` s'affiche l'une après l'autre.
 
@@ -98,7 +99,8 @@ Ici, il y a simplement un ```print(k)```, donc chaque lettre de ```"NSI"``` s'af
     je vais au lycée le vendredi
     ```
 
-<iframe width="800" height="300" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=for%20jour%20in%20%5B%22lundi%22,%20%22mardi%22,%20%22mercredi%22,%20%22jeudi%22,%20%22vendredi%22%5D%3A%0A%20%20%20%20print%28%22je%20vais%20au%20lyc%C3%A9e%20le%22,%20jour%29%0A&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+!!! aide "Analyse grâce à PythonTutor"
+    <iframe width="800" height="300" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=for%20jour%20in%20%5B%22lundi%22,%20%22mardi%22,%20%22mercredi%22,%20%22jeudi%22,%20%22vendredi%22%5D%3A%0A%20%20%20%20print%28%22je%20vais%20au%20lyc%C3%A9e%20le%22,%20jour%29%0A&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 
 **:warning: Attention:** très souvent, l'objet énumérable que la boucle va parcourir aura été **au préalable** stocké dans une variable :
@@ -265,9 +267,62 @@ Il faut donc garder en tête que l'objet renvoyé par ```range()``` est un **it�
                 print(k, end = ' ')
             ```
     
+## 5. Une situation classique : la double boucle
+
+Il est très souvent utile d'imbriquer une boucle dans une autre, notamment lors du parcours de tous les pixels d'une image (voir les exercices graphiques sous Processing). Prenons pour l'instant un exemple numérique.
+
+!!! note "Exemple fondateur :heart:"
+    Le programme suivant :
+    ```python linenums='1'
+    for a in range(1,5):
+        for b in range(1,4):
+            p = a * b
+            print(a, '*', b, '=', p)
+    ```
+    va donner ceci :
+    ```python
+    1 * 1 = 1
+    1 * 2 = 2
+    1 * 3 = 3
+    2 * 1 = 2
+    2 * 2 = 4
+    2 * 3 = 6
+    3 * 1 = 3
+    3 * 2 = 6
+    3 * 3 = 9
+    4 * 1 = 4
+    4 * 2 = 8
+    4 * 3 = 12
+    ```
 
 
-## 5. Pour conclure
+
+!!! aide "Analyse grâce à PythonTutor"
+    <iframe width="800" height="300" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=for%20a%20in%20range%281,5%29%3A%0A%20%20%20%20for%20b%20in%20range%281,4%29%3A%0A%20%20%20%20%20%20%20%20p%20%3D%20a%20*%20b%0A%20%20%20%20%20%20%20%20print%28a,%20'*',%20b,%20'%3D',%20p%29%0A&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+
+
+!!! example "Exercice 3"
+    === "Énoncé"
+        Écrire un programme qui affiche :
+        ```python
+        Papa dit : « et une cuillère pour Riri ! »
+        Papa dit : « et une cuillère pour Fifi ! »
+        Papa dit : « et une cuillère pour Loulou ! »
+        Maman dit : « et une cuillère pour Riri ! »
+        Maman dit : « et une cuillère pour Fifi ! »
+        Maman dit : « et une cuillère pour Loulou ! »
+        Mamie dit : « et une cuillère pour Riri ! »
+        Mamie dit : « et une cuillère pour Fifi ! »
+        Mamie dit : « et une cuillère pour Loulou ! »
+        ```
+    === "Correction"
+        ```python linenums='1'
+        for perso1 in ["Papa", "Maman", "Mamie"]:
+            for perso2 in ["Riri", "Fifi", "Loulou"]:
+                print(perso1, "dit : « et une cuillère pour", perso2, "! »")
+        ```
+
+## 6. Pour conclure
 
 !!! done "À retenir"
     - La boucle `for` s'utilise lorsque :
@@ -279,4 +334,13 @@ Il faut donc garder en tête que l'objet renvoyé par ```range()``` est un **it�
     - `range(n)` génère une séquence de `n` nombres entiers: on s'en servira dès qu'on aura besoin de répéter `n` fois des instructions.
 
 
+    ```python
+    for perso1 in ["Papa", "Maman", "Mamie"]:
+    for perso2 in ["Riri", "Fifi", "Loulou"]:
+        print(perso1, "dit : « et une cuillère pour", perso2, "! »")
+
+    ```
+
+    ```python
     
+    ```
