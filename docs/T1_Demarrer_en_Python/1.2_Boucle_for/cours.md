@@ -332,15 +332,3 @@ Il est très souvent utile d'imbriquer une boucle dans une autre, notamment lors
 
     - Ne pas oublier les `:` et l'indentation !
     - `range(n)` génère une séquence de `n` nombres entiers: on s'en servira dès qu'on aura besoin de répéter `n` fois des instructions.
-
-
-    ```python
-    for perso1 in ["Papa", "Maman", "Mamie"]:
-    for perso2 in ["Riri", "Fifi", "Loulou"]:
-        print(perso1, "dit : « et une cuillère pour", perso2, "! »")
-
-    ```
-
-    ```python
-    
-    ```
