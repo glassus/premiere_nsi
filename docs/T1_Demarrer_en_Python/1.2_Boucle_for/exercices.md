@@ -122,7 +122,7 @@
         Calculer $1\times 2 \times 3 \times \dots 99 \times 100$.
     === "Correction"
       
-!!! maison "À faire sur Capytale : activité 7eee-52815"
+!!! capytale "À faire sur Capytale : [activité 7eee-52815](https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/7eee-52815)"
     !!! example "Exercice 1"
         === "Énoncé"
             Proposer un code qui écrit la **table de multiplication** de 7, de 8 et de 9.
@@ -150,9 +150,3 @@
         === "Correction"
 
   
-     
-
-
-
-??? Abstract "Sources et bibliographie"
-    - Site de Cédric Gouygou (Angoulême).
