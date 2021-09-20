@@ -85,7 +85,7 @@ Tous les exercices sont à faire dans une fenêtre de 300 pixels sur 300 pixels.
 
     *Aide*
 
-    - la fonction ```randint(a,b)``` permet d'obtenir un entier pseudo aléatoire entre ```a``` et ```b```.
+    - la fonction ```random(a,b)``` permet d'obtenir un entier pseudo aléatoire entre ```a``` et ```b```.
 
 !!! example "{{ exercice() }}"
     Reprendre l'exercice précédent en faisant en sorte que chaque ligne commence là où une autre s'arrête (hormis la première)
