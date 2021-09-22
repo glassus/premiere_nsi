@@ -15,6 +15,10 @@ Si Processing n'existe pas dans Capytale, une solution **très similaire** est d
 
 ![image](data/leftright.png){: .center width=70%}
 
+### Les différences
+
+
+
 
 ## Passer d'un code Processing à un code p5
 

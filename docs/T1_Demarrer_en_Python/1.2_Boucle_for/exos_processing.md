@@ -87,7 +87,7 @@ Tous les exercices sont à faire dans une fenêtre de 300 pixels sur 300 pixels.
         *Aide*
 
         - la fonction ```random(a,b)``` permet d'obtenir un entier pseudo aléatoire entre ```a``` et ```b```.
-    === "Correction"
+    === "Correction en Processing"
         ```python linenums='1'
         size(300,300)
         background(0)
@@ -100,6 +100,27 @@ Tous les exercices sont à faire dans une fenêtre de 300 pixels sur 300 pixels.
             stroke(random(0,255), random(0,255), random(0,255))
             line(Ax,Ay,Bx,By)
         ```
+    === "Correction en p5"
+        ```python linenums='1'
+        from p5 import *
+
+        def setup():
+            createCanvas(300, 300)
+            noLoop()
+
+        def draw():
+            background(0)
+            for k in range(10):
+                Ax = random(0,300)
+                Ay = random(0,300)
+                Bx = random(0,300)
+                By = random(0,300)
+                strokeWeight(10)
+                stroke(random(0,255), random(0,255), random(0,255))
+                line(Ax,Ay,Bx,By)
+
+        run()
+        ```   
 
 
 
@@ -109,7 +130,7 @@ Tous les exercices sont à faire dans une fenêtre de 300 pixels sur 300 pixels.
         Reprendre l'exercice précédent en faisant en sorte que chaque ligne commence là où une autre s'arrête (hormis la première)
         ![](data/exo2.png){: .center} 
 
-    === "Correction"
+    === "Correction en Processing"
         ```python linenums='1'
         size(300,300)
         background(0)
@@ -124,7 +145,29 @@ Tous les exercices sont à faire dans une fenêtre de 300 pixels sur 300 pixels.
             Ax = Bx
             Ay = By
         ```
+    === "Correction en p5"
+        ```python linenums='1'
+        from p5 import *
 
+        def setup():
+            createCanvas(300, 300)
+            noLoop()
+
+        def draw():
+            background(0)
+            Ax = random(0,300)
+            Ay = random(0,300)
+            for k in range(10):
+                Bx = random(0,300)
+                By = random(0,300)
+                strokeWeight(10)
+                stroke(random(0,255), random(0,255), random(0,255))
+                line(Ax,Ay,Bx,By)
+                Ax = Bx
+                Ay = By
+
+        run()
+        ```
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
@@ -136,7 +179,7 @@ Tous les exercices sont à faire dans une fenêtre de 300 pixels sur 300 pixels.
         - la transparence s'obtient en rajoutant un 4ème paramètre (entre 0 et 255) à la suite de RGB. On appelle ce paramètre le canal Alpha.
         Ex : (255,0,0,200) est un rouge très transparent.
 
-    === "Correction"
+    === "Correction en Processing"
         ```python linenums='1'
         size(300,300)
         background(0)
@@ -154,11 +197,38 @@ Tous les exercices sont à faire dans une fenêtre de 300 pixels sur 300 pixels.
 
         ```
 
-!!! capytale "À faire sur Capytale : [activité ]()"
-    :warning: lire au préalable la page «Comment passer d'un code Processing à un code p5»
-    !!! example "{{ exercice() }}"
-        === "Énoncé"
-            flsdjl
+    === "Correction en p5"
+        ```python linenums='1'
+        from p5 import *
+
+        def setup():
+            createCanvas(300, 300)
+            noLoop()
+
+        def draw():
+            background(0)
+            for k in range(50):
+                Ax = random(0,300)
+                Ay = random(0,300)
+                diametre = random(0,50)
+                noStroke()
+                r = random(0,255)
+                g = random(0,255)
+                b = random(0,255)
+                a = random(0,255)
+                fill(r, g, b, a)
+                ellipse(Ax,Ay,diametre, diametre)
+
+        run()
+        ```
+
+
+!!! capytale " {{ exercice() }} à faire sur Capytale : [activité ]()"
+    :warning: Lire au préalable la page [«Comment passer d'un code Processing à un code p5»](../../../T7_Divers/4_Processing_p5/cours/)
+    === "Énoncé"
+        Proposer un code réalisant la figure suivante. Votre code devra obligatoirement comporter une boucle ```for```. 
+        ![image](data/exo_cap.png){: .center width=30%}
+        
 
 
 ## 4. Exercices sur la double boucle
