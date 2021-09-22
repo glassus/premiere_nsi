@@ -79,26 +79,87 @@ Chaque pixel de cette zone est repérée par des coordonnées dans le repère su
 Tous les exercices sont à faire dans une fenêtre de 300 pixels sur 300 pixels.
 
 !!! example "{{ exercice() }}"
-    L'objectif est d'obtenir dix lignes aléatoires, de couleur aléatoire et d'épaisseur 10.
+    === "Énoncé"
+        L'objectif est d'obtenir dix lignes aléatoires, de couleur aléatoire et d'épaisseur 10.
 
-    ![](data/exo1.png){: .center} 
+        ![](data/exo1.png){: .center} 
 
-    *Aide*
+        *Aide*
 
-    - la fonction ```random(a,b)``` permet d'obtenir un entier pseudo aléatoire entre ```a``` et ```b```.
+        - la fonction ```random(a,b)``` permet d'obtenir un entier pseudo aléatoire entre ```a``` et ```b```.
+    === "Correction"
+        ```python linenums='1'
+        size(300,300)
+        background(0)
+        for k in range(10):
+            Ax = random(0,300)
+            Ay = random(0,300)
+            Bx = random(0,300)
+            By = random(0,300)
+            strokeWeight(10)
+            stroke(random(0,255), random(0,255), random(0,255))
+            line(Ax,Ay,Bx,By)
+        ```
+
+
+
+
+!!! example "{{ exercice() }} :warning: *difficile*"
+    === "Énoncé"
+        Reprendre l'exercice précédent en faisant en sorte que chaque ligne commence là où une autre s'arrête (hormis la première)
+        ![](data/exo2.png){: .center} 
+
+    === "Correction"
+        ```python linenums='1'
+        size(300,300)
+        background(0)
+        Ax = random(0,300)
+        Ay = random(0,300)
+        for k in range(10):
+            Bx = random(0,300)
+            By = random(0,300)
+            strokeWeight(10)
+            stroke(random(0,255), random(0,255), random(0,255))
+            line(Ax,Ay,Bx,By)
+            Ax = Bx
+            Ay = By
+        ```
+
 
 !!! example "{{ exercice() }}"
-    Reprendre l'exercice précédent en faisant en sorte que chaque ligne commence là où une autre s'arrête (hormis la première)
-    ![](data/exo2.png){: .center} 
+    === "Énoncé"
+        Tracer 50 disques de position, diamètre, couleur et transparence aléatoires.
+        ![](data/exo3.png){: .center} 
 
-!!! example "{{ exercice() }}"
-    Tracer 50 disques de position, diamètre, couleur et transparence aléatoires.
-    ![](data/exo3.png){: .center} 
+        *Aide*
 
-    *Aide*
+        - la transparence s'obtient en rajoutant un 4ème paramètre (entre 0 et 255) à la suite de RGB. On appelle ce paramètre le canal Alpha.
+        Ex : (255,0,0,200) est un rouge très transparent.
 
-    - la transparence s'obtient en rajoutant un 4ème paramètre (entre 0 et 255) à la suite de RGB. On appelle ce paramètre le canal Alpha.
-    Ex : (255,0,0,200) est un rouge très transparent.
+    === "Correction"
+        ```python linenums='1'
+        size(300,300)
+        background(0)
+        for k in range(50):
+            Ax = random(0,300)
+            Ay = random(0,300)
+            diametre = random(0,50)
+            noStroke()
+            r = random(0,255)
+            g = random(0,255)
+            b = random(0,255)
+            a = random(0,255)
+            fill(r, g, b, a)
+            ellipse(Ax,Ay,diametre, diametre)
+
+        ```
+
+!!! capytale "À faire sur Capytale : [activité ]()"
+    :warning: lire au préalable la page «Comment passer d'un code Processing à un code p5»
+    !!! example "{{ exercice() }}"
+        === "Énoncé"
+            flsdjl
+
 
 ## 4. Exercices sur la double boucle
 La structure de double boucle va permettre (par exemple) de parcourir l'intégralité des pixels d'une image.
