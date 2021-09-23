@@ -25,15 +25,17 @@ Si Processing n'existe pas dans Capytale, une solution **très similaire** est d
 
 ## 3. Structure commune des codes Processing et p5
 
-Les codes Processing que nous avons écrit jusqu'à présent sont des codes statiques. Mais l'architecture naturelle d'un code Processing ou p5 est en réalité articulée autour de deux fonctions : la fonction ```setup()``` et la fonction ```draw()```.
+Les codes Processing que nous avons écrits jusqu'à présent sont des codes statiques. Mais l'architecture naturelle d'un code Processing ou p5 est en réalité articulée autour de deux fonctions : la fonction ```setup()``` et la fonction ```draw()```.
 
 ### 3.1 La fonction ```setup()```
-Comme son nom l'indique, elle va procéder à tous les réglages initiaux avant de commencer le dessin : taille de la fenêtre, (éventuellemnt couleur d'arrière-plan), 
+Comme son nom l'indique, elle va procéder à tous les réglages initiaux avant de commencer le dessin : taille de la fenêtre, (éventuellement couleur d'arrière-plan), autres réglages. 
+
+Elle n'est exécutée **qu'une seule fois**.
 
 ### 3.2 La fonction ```draw()```
 C'est dans cette fonction que toutes les instructions de dessin seront données.
 
-**Très important :** cette fonction est une boucle infinie. Elle est exécutée en boucle jusqu'à ce que (par exemple) l'utilisateur ferme la fenêtre.
+**Très important :** cette fonction est une boucle infinie. Elle est donc répétée (à une certaine cadence qui est réglable) jusqu'à ce que (par exemple) l'utilisateur ferme la fenêtre.
 
 Des instructions écrites dans la fonction ```setup()``` peuvent influer sur cette boucle infinie  ```draw()``` : notamment l'instruction ```noLoop()``` qui permet de n'exécuter la fonction ```draw()``` **qu'une seule fois**.
 
