@@ -12,7 +12,7 @@ Avec donc le risque de rester infiniment bloqué à l'intérieur !
     Le programme suivant :
     ```python linenums='1'
     a = 0
-    while a < 3 :
+    while a < 3:
         print("ok")
         a = a + 1
     print("fini")
@@ -33,7 +33,7 @@ Avec donc le risque de rester infiniment bloqué à l'intérieur !
     le code ci-dessous va-t-il donner un résultat différent ?
     ```python linenums='1'
     a = 0
-    while a < 3 :
+    while a < 3:
         a = a + 1
         print("ok")
     print("fini")
@@ -63,7 +63,7 @@ todo
     Le programme suivant :
     ```python linenums='1'
     a = 0
-    while a < 3 :
+    while a < 3:
         print("ok")
         a = a + 1
         a = a * 0
@@ -79,7 +79,7 @@ todo
     ```python
     a = 0
     b = 0
-    while a > 10 :
+    while a > 10:
         print("ce texte non plus ne s'écrira jamais")
         a = a + 1
         
@@ -95,7 +95,7 @@ todo
     === "Correction"
         ```python linenums='1'
         n = 1
-        while 2**n < 10**9 :
+        while 2**n < 10**9:
             n = n + 1
             print("trop petit")
         print("trouvé : ",n)
@@ -107,7 +107,7 @@ todo
     === "Correction"
         ```python linenums='1'
         touche = ""  #chaine de caractère vide
-        while touche != 'S' :
+        while touche != 'S':
             touche = input("appuyez sur S s'il vous plaît ")
 
         print("ouf, merci !")
