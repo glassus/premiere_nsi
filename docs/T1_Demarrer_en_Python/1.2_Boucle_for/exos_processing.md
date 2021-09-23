@@ -223,8 +223,8 @@ Tous les exercices sont à faire dans une fenêtre de 300 pixels sur 300 pixels.
         ```
 
 
-!!! capytale " {{ exercice() }} à faire sur Capytale : [activité ]()"
-    :warning: Lire au préalable la page [«Comment passer d'un code Processing à un code p5»](../../../T7_Divers/4_Processing_p5/cours/)
+!!! capytale " {{ exercice() }} à faire sur Capytale : [activité 55f1-63735](https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/55f1-63735)"
+    :warning: Lire **obligatoirement** au préalable la page [«Comment passer d'un code Processing à un code p5»](../../../T7_Divers/4_Processing_p5/cours/)
     === "Énoncé"
         Proposer un code réalisant la figure suivante. Votre code devra obligatoirement comporter une boucle ```for```. 
         ![image](data/exo_cap.png){: .center width=30%}
