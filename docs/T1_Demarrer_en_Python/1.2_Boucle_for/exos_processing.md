@@ -228,15 +228,54 @@ Tous les exercices sont à faire dans une fenêtre de 300 pixels sur 300 pixels.
     === "Énoncé"
         Proposer un code réalisant la figure suivante. Votre code devra obligatoirement comporter une boucle ```for```. 
         ![image](data/exo_cap.png){: .center width=30%}
-        
+
+<!--
+    === "Correction en Processing"
+        ```python linenums='1'
+        size(300,300)
+        background(0)
+        x = 15
+        fill(255,0,0)
+        for k in range(10):
+            ellipse(x,150,20,20)
+            x = x + 30
+        ```
+
+    === "Correction en p5"
+        ```python linenums='1'
+        from p5 import *
+
+        def setup():
+            createCanvas(300, 300)
+            noLoop()
+
+        def draw():
+            background(0)
+            x = 15
+            fill(255,0,0)
+            for k in range(10):
+                ellipse(x,150,20,20)
+                x = x + 30
+
+        run()
+        ```
+-->
 
 
 ## 4. Exercices sur la double boucle
 La structure de double boucle va permettre (par exemple) de parcourir l'intégralité des pixels d'une image.
 
-!!! example "{{ exercice() }}"
-    Construire une image où tous les points ont une couleur aléatoire.
-    ![](data/exo4.png){: .center} 
+!!! capytale " Exercices à faire sur Capytale : [activité 38d9-68425](https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/38d9-68425)"
+
+    !!! example "{{ exercice() }}"
+        Construire une image où tous les points ont une couleur aléatoire.
+        ![](data/exo4.png){: .center} 
+
+
+    !!! example "{{ exercice() }}"
+        Construire une image constituée de carrés de 20 pixels de coté, de couleur aléatoire. L'image est toujours un carré de côté 300 pixels.
+        ![](data/exo5.png){: .center} 
+
 
 <!--
 size(300,300)
@@ -252,9 +291,6 @@ for x in range(300):
         point(x,y)
 -->
 
-!!! example "{{ exercice() }}"
-    Construire une image constituée de carrés de 20 pixels de coté, de couleur aléatoire. L'image est toujours un carré de côté 300 pixels.
-    ![](data/exo5.png){: .center} 
 
 <!--
 size(300,300)
