@@ -134,17 +134,7 @@ Voir le piège n°1 ...
         print("trouvé : ",n)
         ```
 
-!!! example "{{ exercice() }}"
-    === "Énoncé"
-        Demander à l'utilisateur de taper la lettre S (puis sur la touche Entrée). Recommencer tant qu'il n'a pas obéi.
-    === "Correction"
-        ```python linenums='1'
-        touche = ""  #chaine de caractère vide
-        while touche != 'S':
-            touche = input("appuyez sur S s'il vous plaît ")
 
-        print("ouf, merci !")
-        ```
 
 
 ## 4. Quelques remarques
@@ -198,3 +188,11 @@ print("merci, j'étais bloqué dans une boucle infinie")
 
 - le début du code : ```while True``` est typique des boucles infinies volontaires. On aurait tout aussi bien pu écrire ```while 3 > 2``` (on rencontre même parfois des ```while 1```)
 - vous avez découvert l'expression ```break``` qui comme son nom l'indique permet de casser la boucle (cela marche pour ```while``` comme pour ```for```) et donc d'en sortir. Son emploi est controversé parmi les puristes de la programmation. Nous dirons juste que c'est une instruction bien pratique.
+
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        Proposer un code qui choisit un nombre aléatoire entre 1 et 10, puis qui propose en boucle à l'utilisateur de le deviner, tant que celui-ci n'a pas trouvé.
+
+        Aide : ```int()``` permet de convertir une chaîne de caractères en nombre. 
+    === "Correction"
+        
