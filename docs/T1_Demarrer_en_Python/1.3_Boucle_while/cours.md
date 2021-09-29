@@ -53,7 +53,41 @@ Avec donc le risque de rester infiniment bloqué à l'intérieur !
 
 
 ## 2. Syntaxe générale
-todo
+
+!!! abstract "Écriture d'une boucle ```while```"
+    ```python
+    while condition:
+        instruction1
+        instruction2
+            ...
+        instructionN
+    ```
+
+### 2.1 La condition
+
+La ```condition``` est un booléen, c'est-à-dire une expression que Python évaluera à ```True``` ou à ```False```.
+
+Exemple de booléens résultant d'une évaluation :
+```python
+>>> 1 < 3
+True
+>>> 5 > 7
+False
+>>> a = 10
+>>> a > 8
+True
+```
+
+Un cours sur les booléens aura lieu [ici](../../../T2_Representation_des_donnees/2.5_Booleens/cours/).
+
+### 2.2 Les instructions
+
+Les instructions ```instruction1``` jusqu'à ```instructionN``` sont exécutées dans cet ordre à chaque tour de boucle. 
+
+:warning: **Attention :** ces instructions doivent obligatoirement avoir un impact sur la ```condition``` évaluée après le ```while```(dans le cours sur la [dichotomie](../../../T4_Algorithmique/4.5_Dichotomie/cours/), nous évoquerons la notion de _variant de boucle_.
+
+Voir le piège n°1 ...
+
 ## 3. Les pièges ...
 
 ### 3.1 piège n°1 : ne JAMAIS SORTIR de la boucle
@@ -76,9 +110,8 @@ todo
 
 !!! bug "Exemple fondateur n°3 :heart:"
     Le programme suivant :
-    ```python
+    ```python linenums='1'
     a = 0
-    b = 0
     while a > 10:
         print("ce texte non plus ne s'écrira jamais")
         a = a + 1
@@ -118,7 +151,50 @@ todo
 ### 4.1 Lien entre ```while``` et ```for```
 ![image](data/scooby.png){: .center width=40%}
 
+La boucle bornée ```for``` que nous avons étudiée est très pratique.
+
+Mais nous pourrions nous en passer : toutes les boucles ```for``` peuvent en fait être ré-écrites en utilisant ```while```. (alors que la réciproque est fausse)
+
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        On considère le code ci-dessous :
+        ```python linenums='1'
+        for k in range(5):
+            print("scooby-doo")
+        ``` 
+        Ré-écrire ce code en utilisant une boucle ```while```. 
+    === "Correction"
+        ```python linenums='1'
+        k = 0
+        while k < 5:
+            print("scooby-doo")
+            k = k + 1
+        ```
+
+
+
+
+
 ### 4.2 Les boucles infinies volontaires
 ![image](data/anakin.jpg){: .center width=40%}
 
  
+La boucle infinie a été présentée comme un danger qu'il faut éviter. 
+
+Pourtant, dans quelques situations, il est d'usage d'enfermer _volontairement_ l'utilisateur dans une boucle infinie.
+
+C'est notamment le cas des codes Processing (ou p5) où la fonction ```draw()``` est une boucle infinie dont on ne sort que lorsqu'un évènement est intercepté (par exemple, le clic sur la fermeture de la fenêtre d'affichage).
+
+Observez et exécutez le code suivant :
+
+```python linenums='1'
+while True :
+    reponse = input("tapez sur la lettre S du clavier pour me sortir de cet enfer : ")
+    if reponse == 'S' or reponse == 's':
+        break
+
+print("merci, j'étais bloqué dans une boucle infinie")
+```
+
+- le début du code : ```while True``` est typique des boucles infinies volontaires. On aurait tout aussi bien pu écrire ```while 3 > 2``` (on rencontre même parfois des ```while 1```)
+- vous avez découvert l'expression ```break``` qui comme son nom l'indique permet de casser la boucle (cela marche pour ```while``` comme pour ```for```) et donc d'en sortir. Son emploi est controversé parmi les puristes de la programmation. Nous dirons juste que c'est une instruction bien pratique.
