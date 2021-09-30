@@ -5,8 +5,6 @@
     -  [la boucle ```for```](T1_Demarrer_en_Python/1.2_Boucle_for/cours/)  
     -  [les variables](T1_Demarrer_en_Python/1.1_Variables/cours/)  
 
-    - les variables
-
 
 
 
