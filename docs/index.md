@@ -1,7 +1,10 @@
 
-## Thème en cours d'étude : [la boucle ```for```](T1_Demarrer_en_Python/1.2_Boucle_for/cours/)  
+## Thème en cours d'étude : [la boucle ```while```](T1_Demarrer_en_Python/1.3_Boucle_while/cours/)  
 
 ??? note "*Anciens thèmes traités*"
+    -  [la boucle ```for```](T1_Demarrer_en_Python/1.2_Boucle_for/cours/)  
+    -  [les variables](T1_Demarrer_en_Python/1.1_Variables/cours/)  
+
     - les variables
 
 
