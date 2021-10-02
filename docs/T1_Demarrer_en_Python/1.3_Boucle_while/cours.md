@@ -193,6 +193,13 @@ print("merci, j'étais bloqué dans une boucle infinie")
     === "Énoncé"
         Proposer un code qui choisit un nombre aléatoire entre 1 et 10, puis qui propose en boucle à l'utilisateur de le deviner, tant que celui-ci n'a pas trouvé.
 
-        Aide : ```int()``` permet de convertir une chaîne de caractères en nombre. 
+        Aides :
+
+        - ```int()``` permet de convertir une chaîne de caractères en nombre. 
+        - pour avoir un nombre ```a``` pseudo-aléatoire :
+        ```python
+        from random import randint
+        a = randint(1,10)
+        ```
     === "Correction"
         

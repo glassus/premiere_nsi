@@ -13,6 +13,18 @@ def define_env(env):
         env.variables['compteur_exo'] += 1
         return f"Exercice  { env.variables['compteur_exo']}"
 
+
+    @env.macro
+    def correction(bool, texte):
+        if bool == False:
+            return ""
+        else:
+            return texte
+
+
+
+
+
 #---------------- </exo perso>-------------------- 
 
     @env.macro
