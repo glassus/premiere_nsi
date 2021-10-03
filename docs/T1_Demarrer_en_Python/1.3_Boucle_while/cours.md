@@ -202,4 +202,19 @@ print("merci, j'étais bloqué dans une boucle infinie")
         a = randint(1,10)
         ```
     === "Correction"
+        {{ correction(True,
+        "
+        ```python linenums='1'
+        from random import randint
+
+        mystere = randint(1, 10)
+
+        while True:
+            reponse = int(input('quel est le nombre mystère ? '))
+            if reponse == mystere:
+                break
+        print('bravo !')
+        ```
+        "
+        ) }}
         
