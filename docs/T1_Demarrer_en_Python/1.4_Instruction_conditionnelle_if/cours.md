@@ -21,7 +21,7 @@ Dans les exemples ci-dessous, changez la valeur affectée à la variable ```age`
 
 
 !!! note "Exemple fondateur n°2 :heart:"
-    La structure qu'on recontrera le plus souvent est néanmoins la structure ```if ... then ... else``` 
+    La structure qu'on recontrera le plus souvent est néanmoins la structure ```if ... else``` 
 
     ```python linenums="1"
     age = 20
