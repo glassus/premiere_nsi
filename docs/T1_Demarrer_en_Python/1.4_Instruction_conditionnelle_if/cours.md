@@ -1,6 +1,6 @@
 # 1.4 Instruction conditionnelle if
 
-![image](data/meme.jpg){: .center width=50%}
+![image](data/if_else_meme.jpeg){: .center width=50%}
 
 
 
