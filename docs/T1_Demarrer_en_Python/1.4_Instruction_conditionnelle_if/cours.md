@@ -113,12 +113,12 @@ True
 
 !!! example "Exercice"
     === "Énoncé"
-        Compter le nombre de voyelles de la phrase ```'cet exerice est prodigieusement ennuyeux'``` 
+        Compter le nombre de voyelles de la phrase ```'cet exercice est prodigieusement ennuyeux'``` 
     === "Correction"
         {{ correction(True,
         "
         ```python linenums='1'
-        phrase = 'cet exerice est prodigieusement ennuyeux'
+        phrase = 'cet exercice est prodigieusement ennuyeux'
 
         voyelles = 'aeiouy'
 
