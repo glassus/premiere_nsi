@@ -105,6 +105,7 @@ Les symboles de comparaison (ou d'appartenance) permettant d'écrire une conditi
 Comme nous le verrons dans le cours sur les booléens, ces conditions peuvent être combinées avec (par exemple) les mots-clés ``` and``` ou ``` or``` :
 
 ```python
+>>> b = 20
 >>> b > 15 and b < 30
 True
 >>> b > 2000 or b < 30
