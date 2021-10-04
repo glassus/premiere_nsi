@@ -25,7 +25,7 @@ Dans les exemples ci-dessous, changez la valeur affectée à la variable ```age`
 
     ```python linenums="1"
     age = 20
-    if age >= 15:
+    if age >= 18:
         print("Tu as le droit de vote")
     else:
         print("Désolé, il faudra attendre", 18 - age, "avant de pouvoir voter")
