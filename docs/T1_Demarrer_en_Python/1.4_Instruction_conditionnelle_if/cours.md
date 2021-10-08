@@ -163,7 +163,7 @@ else:
 ```
 
 
-Mais cela est vite long et peu lisible, et les différents niveaux d'indentation sont parfois piégeux.
+Mais cela est vite long et peu lisible, et les différents niveaux d'indentation peuvent devenir piégeux.
 
 Il existe alors une instruction qui contracte `else` et `if` : `elif` (sinon si).
 
