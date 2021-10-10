@@ -54,7 +54,7 @@ meoww
 meoww
 ```
 
-!!! aide "Vocabulaire :heart:"
+!!! voc "Vocabulaire :heart:"
     - La valeur `n` est appelée **paramètre** de la fonction `chat_penible`.
     - On dit qu'on **passe** le paramètre `n` à la fonction `chat_penible`.
     - Dans l'exemple ci-dessus, on dit qu'on a appelé la fonction `chat_penible` avec **l'argument** 3.
@@ -241,64 +241,3 @@ help(conversion_ascii_texte)
         en une chaîne de caractères (ex 'ENH')
     
 
-
-## Exercices
-
-### Exercice 1
-Définissez une fonction `max(n1,n2)` qui renvoie le plus grand élément entre `n1` et `n2`.
-
-
-```python
-def max(n1, n2):
-    if n1 < n2 :
-        return n2
-    else :
-        return n1
-```
-
-
-```python
-max(12,15)
-```
-
-
-
-
-    15
-
-
-
-### Exercice 2
-Définissez une **fonction** `decale(lettre)` qui décale de 3 rangs dans l'alphabet la lettre `lettre` passée en argument (après Z, on recommencera à A..)
-
-
-```python
-def decale(lettre):
-    code_ascii_ancienne_lettre = ord(lettre)
-    code_ascii_nouvelle_lettre = #à compléter ! 
-    
-    return chr(code_ascii_nouvelle_lettre)
-
-
-```
-
-
-```python
-decale("Z") # doit renvoyer "C"
-```
-
-
-
-
-    ']'
-
-
-
-### Exercice 3
-Rajoutez un paramètre `n` à la fonction précédente pour pouvoir décaler la lettre de `n` rangs.
-
-### Exercice 4
-Utilisez la fonction précédente pour créer la fonction `decale_phrase(p, n)` qui décale toutes les lettres d'une phrase `p` de `n` rangs.
-
-## Exercice 5
-Décodez la phrase `PRZRFFNTRARPBAGVRAGEVRAQVAGRERFFNAG`
