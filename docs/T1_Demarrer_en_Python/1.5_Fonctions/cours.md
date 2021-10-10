@@ -119,58 +119,61 @@ TypeError: 'str' object cannot be interpreted as an integer
 On retrouve ici la notion classique de fonction rencontrée en mathématiques : un procédé qui prend un nombre et en renvoie un autre. En informatique, l'objet renvoyé ne sera pas forcément un nombre (cela pourra être aussi une liste, un tableau, une image...).
 Le renvoi d'une valeur se fait grâce au mot-clé `return`.
 
-### Exemple
-la fonction mathématique $f : x \longmapsto 2x+3$ se codera par :
 
+
+!!! note "Exemple fondateur n°3 :heart:"
+    La fonction mathématique $f : x \longmapsto 2x+3$ se codera par :
+    ```python linenums='1'
+    def f(x):
+        return 2*x + 3
+    ```
 
 ```python
-def f(x):
-    return 2*x+3
+>>> f(10)
+23
 ```
 
+## 4. Autour du ```return``` 
 
-```python
-f(10)
-```
+### 4.1 La force du ```return``` 
 
-
-
-
+!!! danger "Différence fondamentale entre ```return``` et ```print``` :star: :star: :star:"
+    Le mot-clé ```return``` de l'exemple précédent fait que l'expression ```f(10)``` est **égale** à 23.
+    On peut d'ailleurs écrire en console :
+    ```python
+    >>> f(10) + 5
+    28
+    ```
+    Imaginons (avant de l'oublier très vite) le code **affreux** ci-dessous :
+    ```python linenums='1'
+    def g(x):
+        print(2*x + 3)
+    ```
+    On pourrait avoir *l'illusion* que la fonction ```g``` fait correctement son travail :
+    ```python
+    >>> g(10)
     23
+    ```
+    Mais ```g``` se contente **d'afficher** sa valeur calculée, et non pas de la renvoyer. En effet :
+    ```python
+    >>> g(10) + 5
+    23
+    Traceback (most recent call last):
+    File "<pyshell>", line 1, in <module>
+    TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+    ```
+    En résumé :
+    ![image](data/yoda.png){: .center width=40%}
+    
 
+### 4.2 Le ```return``` est un siège éjectable 
 
-
-### Exemple
-Dans l'exemple ci-dessous, le paramètre est une liste (de codes ASCII), et la sortie est une chaîne de caractères.
-
-
-```python
-def conversion_ascii_texte(listecodes):
-    s = ""
-    for k in listecodes :
-        s = s + chr(k)
-    return s
-```
-
-
-```python
-conversion_ascii_texte([85, 66, 66])
-```
-
-
-
-
-    'UBB'
-
-
-
-## Remarques
-
-**Remarque 1 :** Le mot-clé `return` provoque une *éjection* du code : tout ce qui est situé après le  `return` ne sera pas exécuté.  
+Le mot-clé `return` provoque une *éjection* du code : tout ce qui est situé **après** le  `return` **ne sera pas exécuté**.  
 Observez la différence entre les fonctions $g$ et $h$.
 
 
-```python
+
+```python linenums='1'
 def g(x):
     print("ce texte sera bien affiché")
     return 2*x+3
@@ -178,21 +181,14 @@ def g(x):
 
 
 ```python
-g(4)
+>>> g(4)
+ce texte sera bien affiché
+11
 ```
 
-    ce texte sera bien affiché
 
 
-
-
-
-    11
-
-
-
-
-```python
+```python linenums='1'
 def h(x):
     return 2*x+3
     print("ceci ne sera jamais affiché")
@@ -200,44 +196,25 @@ def h(x):
 
 
 ```python
-h(5)
+>>> h(4)
+11
+```
+
+### 4.3 Les fonctions sans ```return``` sont-elles des fonctions ?
+
+- Pour les puristes, une fonction sans valeur renvoyée sera plutôt appelée *procédure*. Le mot *fonction* est alors réservé aux fonctions qui ont effectivement un `return`.
+
+- On peut doter artificiellement à toutes les fonctions d'un ```return```, en renvoyant la valeur ```None``` :
+```python linenums='1'
+def chat_penible(n):
+    for k in range(n):
+        print("meoww")
+    return None
 ```
 
 
+## 5. Variables locales, variables globales
 
+## 6. Documenter une fonction
 
-    13
-
-
-
-**Remarque 2 :** Pour les puristes, une fonction sans valeur renvoyée sera plutôt appelée *procédure*. Le mot *fonction* étant réservé aux fonctions qui ont effectivement un `return`.
-
-**Remarque 3 :** Dans un code amené à être partagé ou à beaucoup évoluer, on prendra l'habitude de *documenter* la fonction grâce à une *docstring*, située en début de fonction et encadrée par des triples quotes.
-
-
-```python
-def conversion_ascii_texte(listecodes):
-    """ 
-    Cette fonction convertit une liste de codes Ascii (ex [69, 78, 72]) 
-    en une chaîne de caractères (ex 'ENH')
-    """
-    s = ""
-    for k in listecodes :
-        s = s + chr(k)
-    return s
-```
-
-Cette docstring est une sorte de manuel de la fonction, qu'on appelle avec le mot-clé `help`.
-
-
-```python
-help(conversion_ascii_texte)
-```
-
-    Help on function conversion_ascii_texte in module __main__:
-    
-    conversion_ascii_texte(listecodes)
-        Cette fonction convertit une liste de codes Ascii (ex [69, 78, 72]) 
-        en une chaîne de caractères (ex 'ENH')
-    
-
+## 7. Jeux de tests pour une fonction

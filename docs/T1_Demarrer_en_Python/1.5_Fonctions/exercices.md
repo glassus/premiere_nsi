@@ -89,11 +89,36 @@
 
 
 
-### Exercice 3
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        Utilisez la fonction précédente pour créer la fonction `decale_phrase(p, n)` qui décale toutes les lettres d'une phrase `p` de `n` rangs.
+
+    === "Tester sa fonction"
 
 
-### Exercice 4
-Utilisez la fonction précédente pour créer la fonction `decale_phrase(p, n)` qui décale toutes les lettres d'une phrase `p` de `n` rangs.
+    === "Correction"
+        {{ correction(True,
+        "
+        ```python linenums='1'
+        ```
+        "
+        ) }}
 
-## Exercice 5
-Décodez la phrase `PRZRFFNTRARPBAGVRAGEVRAQVAGRERFFNAG`
+
+
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        Décodez la phrase `PRZRFFNTRARPBAGVRAGEVRAQVAGRERFFNAG`
+
+    === "Tester sa fonction"
+
+
+    === "Correction"
+        {{ correction(True,
+        "
+        ```python linenums='1'
+        ```
+        "
+        ) }}
+
+
