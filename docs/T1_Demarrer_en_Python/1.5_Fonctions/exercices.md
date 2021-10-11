@@ -31,7 +31,15 @@
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
-        Définissez une **fonction** `decale(lettre)` qui décale de 3 rangs dans l'alphabet la lettre `lettre` passée en argument (après Z, on recommencera à A..)
+        Définissez une **fonction** `decale(lettre)` qui décale de 3 rangs dans l'alphabet la lettre majuscule `lettre` passée en argument (après Z, on recommencera à A..)
+
+        Aide : 
+        ```python
+        >>> ord('A')
+        65
+        >>> chr(65)
+        'A'
+        ```
 
 
     === "Tester sa fonction"
