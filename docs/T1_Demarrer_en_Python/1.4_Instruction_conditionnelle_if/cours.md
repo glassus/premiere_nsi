@@ -186,3 +186,10 @@ else:
     print("mention TB")
 
 ```
+
+
+## 4. Récréation : à vous d'obéir !
+
+![image](data/compute.png){: .center width=30%}
+
+Le site [https://compute-it.toxicode.fr/](https://compute-it.toxicode.fr/) vous demande d'exécuter mentalement les instructions affichées, à l'aide des touches directionnelles de votre clavier. Attention, c'est très addictif !
