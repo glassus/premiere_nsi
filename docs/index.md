@@ -1,7 +1,8 @@
 
-## Thème en cours d'étude : [l'instruction conditionnelle ```if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/cours/)  
+## Thème en cours d'étude : [les fonctions`](T1_Demarrer_en_Python/1.5_Fonctions/cours/)  
 
 ??? note "*Anciens thèmes traités*"
+    -  [l'instruction conditionnelle ```if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/cours/)  
     -  [la boucle ```while```](T1_Demarrer_en_Python/1.3_Boucle_while/cours/)
     -  [la boucle ```for```](T1_Demarrer_en_Python/1.2_Boucle_for/cours/)  
     -  [les variables](T1_Demarrer_en_Python/1.1_Variables/cours/)  
