@@ -53,7 +53,7 @@
 
 
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python linenums='1'
         def decale(lettre):
@@ -82,7 +82,7 @@
 
 
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python linenums='1'
         def decale(lettre, n):
