@@ -215,6 +215,82 @@ def chat_penible(n):
 
 ## 5. Variables locales, variables globales
 
+
+### 5.1 Notion d'espace de noms
+
+!!! note "Définitions :heart:"
+    - Les variables définies dans le corps d'une fonction sont appelées **variables locales**.
+    - Les variables définies dans le corps du programme (sous-entendu : pas à l'intérieur d'une fonction) sont appelées **variables globales**.
+
+
+On dit que les fonctions créent leur «espace de noms» (*espace* est à prendre au sens d'*univers*), un espace qui leur est propre.
+
+Quelles sont les règles régissant ces espaces de noms ? Les frontières entre ces espaces sont elles poreuses ? 
+
+### 5.2 Règles d'accès en lecture et en modification d'une variable suivant son espace d'origine
+
+!!! note "Règles d'accès aux variables locales et globales :heart:"
+    - **règle 1 :** une **variable locale** (définie au cœur d'une fonction) est **inaccessible** hors de cette fonction.
+    - **règle 2 :** une **variable globale** (définie à l'extérieur d'une fonction) est **accessible** en **lecture** à l'intérieur d'une fonction.
+    - **règle 3 :** une **variable globale** (définie à l'extérieur d'une fonction) **ne peut pas être modifiée** à l'intérieur d'une fonction.
+
+
+![image](data/global_regles.png){: .center width=80%}
+
+
+!!! example "Exercice"
+    === "Énoncé"
+        Expliquer quelle règle provoque les messages d'erreur ci-dessous
+        ```python linenums="1"
+        def aire_rectangle(longueur, largeur):
+            aire = longueur * largeur
+            return aire
+        ```
+        
+        ```python 
+        >>> aire_rectangle(6, 3)
+        18
+        >>> longueur
+        NameError: name 'longueur' is not defined
+        >>> aire
+        NameError: name 'aire' is not defined
+        ```   
+    === "Correction"
+        
+
+
+!!! danger "contournement de la règle n°3"
+    Même si c'est possible (on ne dira pas comment), il est fortement recommandé de ne pas utiliser dans le corps d'une fonction des variables définies à l'extérieur de cette fonction.
+    En effet, si plusieurs fonctions agissent sur ces variables, le programme peut aboutir à des valeurs ou des comportements non prévus. On parle alors **d'effet de bord**.
+
+    ![](../data/global_meme.jpg){: .center  width=40%} .
+
+
+
+
+    On préfèrera utiliser davantage de paramètres, et on passera ces variables en arguments lors de l'appel de la fonction.
+
+<!--  
+
+```python linenums="1"
+a = 5
+def fonction_idiote(n):
+    s = n + a
+    return s
+
+fonction_idiote(1)
+```
+
+=== "Bien"
+```python linenums="1"
+a = 5
+def fonction_idiote(n, m):
+    s = n + m
+    return s
+
+fonction_idiote(1, a)
+```
+-->
 ## 6. Documenter une fonction
 
 ## 7. Jeux de tests pour une fonction
