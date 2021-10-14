@@ -1,5 +1,5 @@
 
-## Thème en cours d'étude : [les fonctions`](T1_Demarrer_en_Python/1.5_Fonctions/cours/)  
+## Thème en cours d'étude : [les fonctions](T1_Demarrer_en_Python/1.5_Fonctions/cours/)  
 
 ??? note "*Anciens thèmes traités*"
     -  [l'instruction conditionnelle ```if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/cours/)  

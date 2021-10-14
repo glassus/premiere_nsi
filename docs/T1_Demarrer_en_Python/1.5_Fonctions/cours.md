@@ -263,7 +263,7 @@ Quelles sont les règles régissant ces espaces de noms ? Les frontières entre 
     Même si c'est possible (on ne dira pas comment), il est fortement recommandé de ne pas utiliser dans le corps d'une fonction des variables définies à l'extérieur de cette fonction.
     En effet, si plusieurs fonctions agissent sur ces variables, le programme peut aboutir à des valeurs ou des comportements non prévus. On parle alors **d'effet de bord**.
 
-    ![](../data/global_meme.jpg){: .center  width=40%} .
+    ![](data/global_meme.jpg){: .center  width=40%} .
 
 
 
