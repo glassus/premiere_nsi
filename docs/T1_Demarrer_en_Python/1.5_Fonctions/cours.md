@@ -240,27 +240,63 @@ Quelles sont les règles régissant ces espaces de noms ? Les frontières entre 
 
 !!! example "Exercice"
     === "Énoncé"
-        Expliquer quelle règle provoque les messages d'erreur ci-dessous
-        ```python linenums="1"
-        def aire_rectangle(longueur, largeur):
-            aire = longueur * largeur
-            return aire
+        On considère les 3 codes ci-dessous. Pour chacun, dire **sans l'exécuter** s'il est valide ou non. S'il ne l'est pas, identifier la règle (parmi celles énoncées ci-dessus) qui est bafouée.
+
+        **code A**
+        ```python linenums='1'
+        points = 0
+        def verdict(reponse):
+            if reponse > 10:
+                points += 3
+
+        verdict(12)
+        ```    
+
+        **code B**
+        ```python linenums='1'
+        def bouge(x, decalage):
+            x += decalage
+
+        bouge(100, 5)
+        print(x)
         ```
-        
-        ```python 
-        >>> aire_rectangle(6, 3)
-        18
-        >>> longueur
-        NameError: name 'longueur' is not defined
-        >>> aire
-        NameError: name 'aire' is not defined
-        ```   
-    === "Correction"
-        
+
+        **code C**
+        ```python linenums='1'
+        def test_bac(moyenne):
+            if moyenne >= 10:
+                print("admis !")
+
+        def coup_de_pouce(note):
+            return note + bonus
+
+        bonus = 0.6
+        ma_moyenne = 9.5
+        ma_moyenne = coup_de_pouce(ma_moyenne)
+        test_bac(ma_moyenne)
+        ```
+
+    === "Correction code A"
+        Ce code n'est pas valide, car il contrevient à la règle 3.
+
+        ```ligne 4``` : la modification de la variable globale ```points``` est interdite.
+
+    === "Correction code B"
+        Ce code n'est pas valide, car il contrevient à la règle 1.
+
+        ```ligne 5``` : l'accès à la variable locale ```x``` est interdit.
+
+    === "Correction code C"
+        Ce code est valide.
+
+        ```ligne 6``` : l'accès à la variable globale ```bonus``` est autorisé, selon la règle 2.            
 
 
-!!! danger "contournement de la règle n°3"
-    Même si c'est possible (on ne dira pas comment), il est fortement recommandé de ne pas utiliser dans le corps d'une fonction des variables définies à l'extérieur de cette fonction.
+!!! danger "À propos de la règle n°3"
+    _(toute la vérité, rien que la vérité)_
+
+    Pour certains types de variables (listes, dictionnaires...), la modification d'une variable globale à l'intérieur du corps d'une fonction est en fait possible (contrairement à ce qu'énonce la règle 3). 
+    
     En effet, si plusieurs fonctions agissent sur ces variables, le programme peut aboutir à des valeurs ou des comportements non prévus. On parle alors **d'effet de bord**.
 
     ![](data/global_meme.jpg){: .center  width=40%} .

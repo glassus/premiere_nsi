@@ -101,13 +101,16 @@
     === "Énoncé"
         Utilisez la fonction précédente pour créer la fonction `decale_phrase(p, n)` qui décale toutes les lettres d'une phrase `p` de `n` rangs.
 
-    === "Tester sa fonction"
-
-
     === "Correction"
         {{ correction(True,
         "
         ```python linenums='1'
+        def decale_phrase(p, n):
+            phrase_decalee = ""
+            for lettre in p:
+                nouvelle_lettre = decale(lettre, n)
+                phrase_decalee += nouvelle_lettre
+            return phrase_decalee
         ```
         "
         ) }}
@@ -116,10 +119,7 @@
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
-        Décodez la phrase `PRZRFFNTRARPBAGVRAGEVRAQVAGRERFFNAG`
-
-    === "Tester sa fonction"
-
+        Décodez la phrase `RT BTHHPVT CT RDCIXTCI GXTC S XCITGTHHPCI`.
 
     === "Correction"
         {{ correction(True,
