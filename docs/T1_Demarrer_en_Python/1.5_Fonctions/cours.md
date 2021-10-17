@@ -295,38 +295,148 @@ Quelles sont les règles régissant ces espaces de noms ? Les frontières entre 
 !!! danger "À propos de la règle n°3"
     _(toute la vérité, rien que la vérité)_
 
-    Pour certains types de variables (listes, dictionnaires...), la modification d'une variable globale à l'intérieur du corps d'une fonction est en fait possible (contrairement à ce qu'énonce la règle 3). 
+    Pour certains types de variables (listes, dictionnaires...), la modification d'une variable globale à l'intérieur du corps d'une fonction est en fait possible (contrairement à ce qu'énonce la règle 3). Mais cela reste très fortement déconseillé.
     
-    En effet, si plusieurs fonctions agissent sur ces variables, le programme peut aboutir à des valeurs ou des comportements non prévus. On parle alors **d'effet de bord**.
+    Une fonction ne **doit** (c'est un ordre, mais vous pouvez choisir de l'ignorer, tout comme vous pouvez choisir de passer au feu rouge) modifier que les variables qu'elle crée (ses variables locales) ou bien les variables qu'on lui a données en paramètre. 
+
+    Une fonction qui ne respecte pas cette règle présente des _effets de bord_ : on peut peut-être arriver à les gérer sur un «petit» code, mais cela devient illusoire sur un code utilisant de multiples fonctions. 
 
     ![](data/global_meme.jpg){: .center  width=40%} .
 
 
+    En résumé :
 
+    ```python linenums='1'
+    # PAS BIEN
+    score = 0
+    def ramasse_objet(objet):
+        if objet == "champignon":
+            score += 20
+        if objet == "banane":
+            score -= 300
 
-    On préfèrera utiliser davantage de paramètres, et on passera ces variables en arguments lors de l'appel de la fonction.
+    # BIEN 
+    score = 0
+    def ramasse_objet(objet, score):  # ma fonction veut modifier score ? 
+        if objet == "champignon":     # -> ok, je mets score dans ses paramètres
+            score += 20
+        if objet == "banane":
+            score -= 300
+    ```
 
-<!--  
-
-```python linenums="1"
-a = 5
-def fonction_idiote(n):
-    s = n + a
-    return s
-
-fonction_idiote(1)
-```
-
-=== "Bien"
-```python linenums="1"
-a = 5
-def fonction_idiote(n, m):
-    s = n + m
-    return s
-
-fonction_idiote(1, a)
-```
--->
 ## 6. Documenter une fonction
 
+![image](data/documentation.jpeg){: .center width=40%}
+
+
+### 6.1 Help !
+Si une fonction peut être assimilée à un outil, il est normal de se demander si cet outil possède un mode d'emploi.
+
+Observons les fonctions pré-définies par Python, et notamment une des premières que nous avons rencontrées : la fonction ```print()```. Son mode d'emploi est accessible grâce à la commande ```help(print)```.
+
+```python
+>>> help(print)
+Help on built-in function print in module builtins:
+
+print(...)
+    print(value, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
+    
+    Prints the values to a stream, or to sys.stdout by default.
+    Optional keyword arguments:
+    file:  a file-like object (stream); defaults to the current sys.stdout.
+    sep:   string inserted between values, default a space.
+    end:   string appended after the last value, default a newline.
+    flush: whether to forcibly flush the stream
+```
+
+Pensez à utiliser cette fonction ```help()``` (en d'autres termes, [RTFM](https://fr.wikipedia.org/wiki/RTFM_(expression))) 
+
+### 6.2 Créer le mode d'emploi de ses propres fonctions : les docstrings
+
+![image](data/docstring.jpg){: .center width=40%}
+
+Il est possible, voire souhaitable (dès qu'on créé un code comportant plusieurs fonctions, et/ou qui sera amené à être lu par d'autres personnes), de créer un mode d'emploi pour ses fonctions. On appelle cela écrire **la docstring** de la fonction, et c'est très simple : il suffit de l'encadrer par des triples double-quotes ```"""```.
+
+!!! note "Exemple"
+    ```python linenums='1'
+    def chat_penible(n):
+        """
+        Affiche n fois la chaine de caractères "meoww"
+        """
+        for k in range(n):
+            print("meoww")
+    ```
+
+    On peut donc maintenant demander de l'aide pour cette fonction :
+
+    ```python
+    >>> help(chat_penible)
+    Help on function chat_penible in module __main__:
+
+    chat_penible(n)
+        Affiche n fois la chaine de caractères "meoww"
+    ```
+
+Plus de renseignements sur les docstrings [ici](https://glassus.github.io/terminale_nsi/T2_Programmation/2.4_Pratiques_de_programmation/cours/#22-le-cas-particulier-des-docstrings)
+
 ## 7. Jeux de tests pour une fonction
+
+![image](data/tests.png){: .center width=40%}
+
+
+Les exercices de [cette feuille](../exercices/) sont (presque) tous livrés avec un *jeu de tests*. Il s'agit d'une fonction, souvent appelée ```test_nom_de_la fonction()```, qui va regrouper les différents tests qu'on pourrait faire en console pour vérifier que la fonction a le comportement désiré.
+
+Ces tests reposent sur le mot-clé ```assert```, qui va lever une erreur lorsqu'il est suivi d'une expression évaluée à ```False``` :
+
+```python
+>>> assert 3 > 2
+>>> assert 3 > 5
+Traceback (most recent call last):
+  File "<pyshell>", line 1, in <module>
+AssertionError
+>>> assert True
+>>> assert False
+Traceback (most recent call last):
+  File "<pyshell>", line 1, in <module>
+AssertionError
+```
+
+!!! note "Exemple d'un jeu de tests"
+    ```python linenums='1'
+    def maxi(n1, n2):
+        if n1 < n2 :
+            return n2
+        else :
+            return n1
+
+    def test_maxi():
+        assert maxi(3,4) == 4
+        assert maxi(5,2) == 5
+        assert maxi(7,7) == 7
+        print("tests ok")
+    
+    ```
+
+Il faut vérifier que les tests couvrent toutes les situations possibles, mais ce n'est pas toujours facile !
+
+!!! example "Exercice"
+    === "Énoncé"
+        On considère (à nouveau !) le jeu du FizzBuzz. 
+     
+        *Rappel des règles*
+
+        - si le nombre est divisible par 3, on ne le dit pas et on le remplace par Fizz.
+        - si le nombre est divisible par 5, on ne le dit pas et on le remplace par Buzz.
+        - si le nombre est divisible par 3 et par 5, on ne le dit pas et on le remplace par FizzBuzz.
+
+        On souhaite écrire la fonction ```fizzbuzz(n)``` qui renverra soit le nombre ```n```, soit le mot par lequel il faut le remplacer.
+        
+        1. Écrire la fonction ```test_fizzbuzz()``` qui testera la fonction ```fizzbuzz(n)```
+        2. Écrire la fonction ```fizzbuzz(n)```.
+
+    === "Correction"
+        {{ correction(True,
+        "
+        
+        "
+        ) }}
