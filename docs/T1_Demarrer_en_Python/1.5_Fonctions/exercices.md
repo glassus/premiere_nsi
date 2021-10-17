@@ -81,6 +81,8 @@
         ```
 
 
+
+
     === "Correction"
         {{ correction(True,
         "
@@ -130,3 +132,35 @@
         ) }}
 
 
+
+
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        La [conjecture de Syracuse](https://fr.wikipedia.org/wiki/Conjecture_de_Syracuse) (ou de Collatz) postule ceci :  
+
+        *Prenons un nombre $n$ : si $n$ est pair, on le divise par 2, sinon on le multiplie par 3 puis on ajoute 1. On recommence cette opération tant que possible. Au bout d'un certain temps, on finira toujours par tomber sur le nombre 1.*
+
+        1. Écrire une fonction ```suivant(n)``` qui renvoie le successeur du nombre ```n```, suivant les règles énoncées ci-dessus.
+        2. Écrire une fonction ```syracuse(n)``` qui affiche tous les termes de la suite de Syracuse jusqu'à (on l'espère !) 1.  
+
+    === "Correction"
+        {{ correction(True,
+        "
+        1.
+        ```python linenums='1'
+        def suivant(n):
+            if n % 2 == 0:
+                return n // 2
+            else:
+                return 3*n + 1
+        ```
+        2.
+        ```python linenums='1'
+        def syracuse(n):
+            print(n)
+            while n != 1:
+                n = suivant(n)
+                print(n)
+        ``` 
+        "
+        ) }}        
