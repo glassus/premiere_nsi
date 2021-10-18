@@ -169,7 +169,7 @@ Le renvoi d'une valeur se fait grâce au mot-clé `return`.
 ### 4.2 Le ```return``` est un siège éjectable 
 
 Le mot-clé `return` provoque une *éjection* du code : tout ce qui est situé **après** le  `return` **ne sera pas exécuté**.  
-Observez la différence entre les fonctions $g$ et $h$.
+Observez la différence entre les fonctions ```g```  et ```h``` .
 
 
 
@@ -431,7 +431,7 @@ Il faut vérifier que les tests couvrent toutes les situations possibles, mais c
 
         On souhaite écrire la fonction ```fizzbuzz(n)``` qui renverra soit le nombre ```n```, soit le mot par lequel il faut le remplacer.
         
-        1. Écrire la fonction ```test_fizzbuzz()``` qui testera la fonction ```fizzbuzz(n)```
+        1. Écrire la fonction ```test_fizzbuzz()``` qui testera la fonction ```fizzbuzz(n)```.
         2. Écrire la fonction ```fizzbuzz(n)```.
 
     === "Correction"
