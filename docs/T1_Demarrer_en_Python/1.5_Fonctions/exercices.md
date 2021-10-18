@@ -108,7 +108,7 @@
         "
         ```python linenums='1'
         def decale_phrase(p, n):
-            phrase_decalee = ""
+            phrase_decalee = ''
             for lettre in p:
                 if lettre == ' ':
                     phrase_decalee += ' '
