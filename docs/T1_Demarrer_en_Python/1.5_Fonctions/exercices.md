@@ -147,7 +147,7 @@
         2. Écrire une fonction ```syracuse(n)``` qui affiche tous les termes de la suite de Syracuse jusqu'à (on l'espère !) 1.  
 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         1.
         ```python linenums='1'
