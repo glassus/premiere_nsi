@@ -110,8 +110,8 @@
         def decale_phrase(p, n):
             phrase_decalee = ""
             for lettre in p:
-                if lettre == " ":
-                    phrase_decalee += " "
+                if lettre == ' ':
+                    phrase_decalee += ' '
                 else:
                     nouvelle_lettre = decale(lettre, n)
                     phrase_decalee += nouvelle_lettre
