@@ -437,6 +437,22 @@ Il faut vérifier que les tests couvrent toutes les situations possibles, mais c
     === "Correction"
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def test_fizzbuzz():
+            assert fizzbuzz(6) == 'fizz'
+            assert fizzbuzz(10) == 'buzz'
+            assert fizzbuzz(15) == 'fizzbuzz'
+            print('tests ok !')
+            
+        def fizzbuzz(n):
+            if n % 3 == 0 and n % 5 == 0:
+                return 'fizzbuzz'
+            elif n % 3 == 0:
+                return 'fizz'
+            elif n % 5 == 0:
+                return 'buzz'
+                
+        ```
+
         "
         ) }}
