@@ -151,7 +151,7 @@
             for decalage in range(25):
                     print(decale_phrase(msg_secret, decalage))
 
-            msg = 'RT BTHHPVT CT RDCIXTCI GXTC S XCITGTHHPCI'
+        msg = 'RT BTHHPVT CT RDCIXTCI GXTC S XCITGTHHPCI'
 
         decrypt(msg)
 
