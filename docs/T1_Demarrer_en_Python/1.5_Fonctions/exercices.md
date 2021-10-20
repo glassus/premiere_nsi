@@ -130,6 +130,48 @@
         {{ correction(True,
         "
         ```python linenums='1'
+        def decale(lettre, n):
+            rang_ancienne_lettre = ord(lettre) - 65
+            rang_nouvelle_lettre = (rang_ancienne_lettre + n) % 26 + 65  
+
+            return chr(rang_nouvelle_lettre)
+
+        def decale_phrase(p, n):
+            phrase_decalee = ''
+            for lettre in p:
+                if lettre == ' ':
+                    phrase_decalee += ' '
+                else:
+                    nouvelle_lettre = decale(lettre, n)
+                    phrase_decalee += nouvelle_lettre
+            return phrase_decalee
+
+
+        def decrypt(msg_secret):
+            for decalage in range(25):
+                    print(decale_phrase(msg_secret, decalage))
+
+            msg = 'RT BTHHPVT CT RDCIXTCI GXTC S XCITGTHHPCI'
+
+        decrypt(msg)
+
+        # cette méthode impose de tout lire pour y chercher une phrase ayant du sens.
+        # Si on sait que la phrase sera en français, on peut chercher des mots du
+        # dictionnaire. Si par exemple on sait que la phrase contiendra le mot 'MESSAGE',
+        # le code peut devenir :
+
+
+        def decrypt2(msg_secret):
+            for decalage in range(25):
+                phrase_clair = decale_phrase(msg_secret, decalage)
+                if 'MESSAGE' in phrase_clair:
+                    print(phrase_clair)
+
+        msg = 'RT BTHHPVT CT RDCIXTCI GXTC S XCITGTHHPCI'
+
+        decrypt2(msg)
+
+
         ```
         "
         ) }}
