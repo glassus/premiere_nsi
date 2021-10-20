@@ -209,3 +209,36 @@
         ``` 
         "
         ) }}        
+
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        1. Écrire une fonction ```temps_de_vol(n)``` qui renvoie le nombre d'étapes pour arriver à 1, en partant de ```n```
+        2. Écrire une fonction ```temps_max(nmax)``` qui renvoie le nombre entre 1 et ```nmax``` ayant le plus grand temps de vol (ainsi que son temps de vol). 
+
+    === "Correction"
+        {{ correction(False,
+        "
+        1.
+        ```python linenums='1'
+        def temps_de_vol(n):
+            c = 1
+            while n != 1:
+                c += 1
+                n = suivant(n)
+            return c
+
+        ```
+        2.
+        ```python linenums='1'
+        def temps_max(nmax):
+            maximum = 0
+            val = 0
+            for k in range(1, nmax + 1):
+                if temps_de_vol(k) > maximum:
+                    maximum = temps_de_vol(k)
+                    val = k
+            print('la valeur la plus lente est', val, 'avec un temps de vol de', maximum)
+        ``` 
+        "
+        ) }}        
+       
