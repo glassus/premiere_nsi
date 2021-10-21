@@ -451,6 +451,8 @@ Il faut vérifier que les tests couvrent toutes les situations possibles, mais c
                 return 'fizz'
             elif n % 5 == 0:
                 return 'buzz'
+            else:
+                return n
                 
         ```
 
