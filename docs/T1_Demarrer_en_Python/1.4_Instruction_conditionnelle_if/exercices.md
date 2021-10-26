@@ -8,7 +8,18 @@
     === "Correction"
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        n1 = int(input('Premier nombre ?'))
+        n2 = int(input('Deuxième nombre ?'))
+
+        if n1 > n2:
+            print('le nombre le plus grand est', n1)
+        elif n2 > n1:
+            print('le nombre le plus grand est', n2)
+        else:
+            print('les deux nombres sont égaux')
+
+        ```
         "
         ) }}
 
@@ -23,7 +34,19 @@
     === "Correction"
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        masse = float(input('Quelle est votre masse (en kg) ? '))
+        taille = float(input('Quelle est votre taille (en m) ? '))
+
+        IMC = masse / taille**2
+        print('votre IMC vaut :', IMC)
+        if IMC < 18:
+            print('vous êtes en état de maigreur')
+        elif IMC < 25:
+            print('votre corpulence est dans la normale')
+        else:
+            print('vous êtes en surpoids')
+        ```
         "
         ) }}
 
@@ -68,7 +91,24 @@
 
     === "Correction"
         {{ correction(True,
-        "
+        """
+        ```python linenums='1'
+        annee = 2021
+
+        if annee % 400 == 0:
+            print(annee, \"est bissextile\")
+        elif annee % 4 == 0 and annee % 100 != 0:
+            print(annee, \"est bissextile\")
+        else:
+            print(annee, \"n'est pas bissextile\")
+            
+
+
+
+        ```
+        """
+    
+
+
         
-        "
         ) }}
