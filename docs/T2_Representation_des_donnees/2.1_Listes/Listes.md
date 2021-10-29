@@ -1,31 +1,19 @@
-# 2.1 Listes
-
-![image](data/BO.png){: .center}
-
-
-
+# Définition
 Les listes font partie de ce qu'on appelle les *données composites* (nous verrons plus tard les *tuples* et les *dictionnaires*). Elles permettent de regrouper de manière structurée des ensembles de valeurs.
 On les appelle *listes* en Python, ou bien *tableaux* de manière plus générale.
 
-## 1. Déclaration d'une liste
-!!! note "Exemple fondateur n°1 :heart:"
-    Une variable de type liste sera délimitée par des **crochets**, et ses éléments séparés par des **virgules** :
-    ```python
-    >>> maliste = ["riri", "fifi", "loulou"]
-    ```
 
-On peut observer le type de la variable ainsi créée :
+**Notation :** dans une liste, les éléments sont séparés par des **virgules**, et l'ensemble est délimité par des **crochets**.
+
+
 ```python
->>> type(maliste)
-<class 'list'>
+ma_premiere_liste = [1, "ok", True]
 ```
 
-Même si cela n'a ici un grand intérêt, les éléments d'une liste peuvent donc être de types différents : ici, tous les éléments de ma liste sont des chaînes de caractères (`str`), mais la liste `["riri", 5, "fifi", "loulou"]` est aussi une liste valide.
+Même si cela n'a ici un grand intérêt, les éléments d'une liste peuvent donc être de types différents : ici, nous avons successivement un entier (`int`), une chaine de caractères (`str`), et un booléen (`bool`).
 
-## 2. Accès aux éléments d'une liste
-
-
-On accède à un élément d'une liste en mettant entre crochets l'indice de l'élémént (qui commence à **zéro**).
+ ## Accès aux éléments d'une liste
+ On accède à un élément d'une liste en mettant entre crochets l'indice de l'élémént (qui commence à **zéro**).
 
 
 ```python
