@@ -381,7 +381,36 @@ qui produira la liste ```[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
         ) }}
 
 
-## 7. Construction d'une liste *par compréhension* :star: :star: :star:
+## 7. Construction d'une liste *en compréhension* :star: :star: :star:
+
+C'est une grande caractéristique du langage Python (même si ce n'est pas une exclustivité) : la méthode de liste en compréhension propose une manière élégante, rapide et naturelle pour créer des listes.
+
+### 7.1 «en compréhension», pourquoi ?
+Cette expression vient des mathématiques. On dit qu'on définit un sous-ensemble *par compréhension* lorsqu'on part d'un ensemble plus grand dont on ne garde que les éléments vérifiant une certaine propriété.
+
+On pourrait par exemple définir les élèves de Première NSI de cette manière :
+
+*élèves du lycée inscrits en classe de Première ayant choisi la spécialité NSI*
+
+On part d'un ensemble large (les élèves du lycée) qu'on va ensuite réduire par des caractérisations spécifiques : être un élève de Première, puis avoir choisi la spécialité NSI.
+
+### 7.2 Premier exemple
+
+
+!!! note "Exemple fondateur n°9 :heart:"
+    Imaginons que nous possédons une liste ```data``` de températures, dont nous ne voulons garder que celles strictement supérieures à 20.
+
+    ```python
+    >>> data = [17, 22, 15, 28, 16, 13, 21, 23]
+    >>> good = [t for t in data if t > 20]
+    >>> good
+    [22, 28, 21, 23]
+    ```
+
+**Explication :**
+
+![image](data/comp.png){: .center width=50%}
+
 
 
 ```python
