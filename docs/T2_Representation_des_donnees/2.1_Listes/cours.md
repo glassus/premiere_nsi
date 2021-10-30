@@ -407,84 +407,74 @@ On part d'un ensemble large (les élèves du lycée) qu'on va ensuite réduire p
     [22, 28, 21, 23]
     ```
 
-**Explication :**
+**Explications :**
 
 ![image](data/comp.png){: .center width=50%}
 
+#### 7.2.1 le filtre éventuel
 
-
-```python
-nombres = [k for k in range(10)]
-```
-
+C'est lui qui donne tout son sens à cette méthode : il permet de ne garder que certaines valeurs. 
+Il est pourtant éventuel : que se passe-t-il s'il n'y a pas de filtre ?
 
 ```python
-nombres
+>>> data = [17, 22, 15, 28, 16, 13, 21, 23]
+>>> good = [t for t in data]
+>>> good
+[17, 22, 15, 28, 16, 13, 21, 23]
+```
+On se retrouve évidemment avec une nouvelle liste qui contient exactement les éléments de la liste de départ, ce qui n'est pas très intéressant.
+Pourtant les listes en compréhension *sans filtre* sont très fréquentes, nous le verrons plus loin.
+
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        On considère la variable ```phrase = 'Bonjour les vacances sont finies'``` et la variable ```voyelles = 'aeiouy'```.
+
+        Construire en compréhension la liste ```liste_voyelles``` qui contient toutes les voyelles présentes dans la variable ```phrase```.   
+
+    === "Correction"
+        {{ correction(True,
+        "
+        ```python
+        >>> phrase = 'Bonjour les vacances sont finies'
+        >>> voyelles = 'aeiouy'
+        >>> liste_voyelles = [lettre for lettre in phrase if lettre in voyelles]
+        >>> liste_voyelles
+        ['o', 'o', 'u', 'e', 'a', 'a', 'e', 'o', 'i', 'i', 'e']
+        ```
+        "
+        ) }}
+
+
+#### 7.2.2 l'ensemble de départ
+
+C'est à partir de lui que va se construire notre liste. Pour l'instant, cet ensemble de départ a toujours été de type ```list```.
+
+Cet ensemble peut être aussi donné à partir de l'instruction ```range()```. 
+Souvenons-nous de l'exercice 3 : «Construire une liste contenant tous les nombres inférieurs à 100 qui sont divisibles par 7.».
+
+Une solution possible était :
+
+```python linenums='1'
+lst = []
+for n in range(1, 101):
+    if n % 7 == 0:
+        lst.append(n)
 ```
 
+Ce code peut maintenant s'écrire très simplement en une seule instruction :
+
+!!! note "Exemple fondateur n°10 :heart:"
+    ```python
+    >>> lst = [n for n in range(1,101) if n % 7 == 0]
+    >>> lst
+    [7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 91, 98]
+    ```
 
 
+#### 7.2.3 la valeur à garder
 
-    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+todo
 
-
-
-Il est bien sûr possible d'agir sur le paramètre :
-
-
-```python
-carres_parfaits = [k**2 for k in range(10)]
-```
-
-
-```python
-carres_parfaits
-```
-
-
-
-
-    [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-
-
-
-Plus subtil, on peut filtrer "à la volée" les éléments pour n'en garder que certains.
-
-
-```python
-c = [n for n in carres_parfaits if n % 3 == 0]
-```
-
-
-```python
-c
-```
-
-
-
-
-    [0, 9, 36, 81]
-
-
-
-### Exercice
-En une ligne, créez la liste `p` qui contient tous les éléments positifs de `m`.
-
-
-```python
-m = [-3, -6, 4, 7, -2, 1, -3, 5]
-p = [k for k in m if k > 0]
-```
-
-
-```python
-p
-```
-
-
-
-
-    [4, 7, 1, 5]
 
 
 
