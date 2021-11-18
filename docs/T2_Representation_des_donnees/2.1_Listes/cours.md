@@ -222,8 +222,8 @@ Chaque élément étant accessible par son indice (de ```0``` à   ```len(liste)
         1. Afficher les éléments de cette liste.
         2. Afficher les éléments de cette liste **dans l'ordre inverse** (en commençant par 9)
 
-    === "Correction"
-        {{ correction(False,
+    === "Correction :heart:"
+        {{ correction(True,
         "
         ```python linenums='1'
         lst = [3, 1, 4, 1, 5, 9]
@@ -249,7 +249,7 @@ Chaque élément étant accessible par son indice (de ```0``` à   ```len(liste)
         ```
         
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python linenums='1'
         list1 = [8468, 4560, 3941, 3328, 7, 9910, 9208, 8400, 6502, 1076, 5921, 6720, 948, 9561, 7391, 7745, 9007, 9707, 4370, 9636, 5265, 2638, 8919, 7814, 5142, 1060, 6971, 4065, 4629, 4490, 2480, 9180, 5623, 6600, 1764, 9846, 7605, 8271, 4681, 2818, 832, 5280, 3170, 8965, 4332, 3198, 9454, 2025, 2373, 4067]
@@ -381,7 +381,7 @@ Il est possible de faire comme ceci :
 
 ```python linenums='1'
 lst = []
-for k in range(26):
+for _ in range(26):
     lst.append(0)
 ```
 
