@@ -155,6 +155,7 @@ En effet le nom de variable ```k``` est habituellement utilisé pour les nombres
 Chaque élément étant accessible par son indice (de ```0``` à   ```len(liste) - 1``` ), il suffit de faire parcourir à une variable ```i``` l'ensemble des entiers de ```0``` à   ```len(liste) - 1```, par l'instruction ```range(len(liste))``` :
 
 
+
 !!! note "Exemple fondateur n°5 :heart:"
     Le code :
     ```python linenums='1'
@@ -169,6 +170,9 @@ Chaque élément étant accessible par son indice (de ```0``` à   ```len(liste)
     Lisa
     Maggie
     ```
+
+:warning: **Bonne habitude à prendre** : nommer sa variable d'indice ```i```, ```j```, ```k``` ou ```indice``` mais pas autre chose !  
+
 
 ### 4.3 Avantages et inconvénients de chaque méthode
 
