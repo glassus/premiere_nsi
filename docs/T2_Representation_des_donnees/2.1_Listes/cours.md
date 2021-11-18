@@ -366,6 +366,11 @@ L'instruction `del`  (qui n'est pas une fonction) permet de supprimer un éléme
 
 
 
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        [Exercice 01.1](https://glassus.github.io/terminale_nsi/T6_6_Epreuve_pratique/cours/#exercice-011) de la BNS.
+    === "Correction"
+        
 
 
 ## 6. Construction d'une liste d'éléments identiques
