@@ -298,6 +298,7 @@ Il suffit d'écraser la valeur actuelle avec une nouvelle valeur
 **Remarques :**
 
 - La méthode `append()` rajoute donc un élément **à la fin** de la liste.
+- Dans **beaucoup** d'exercices, on part d'une liste vide ```[]``` que l'on remplit peu à peu avec des ```append()```.
 - *(HP)* Il est possible d'insérer un élément à la position ```i``` avec la méthode ```insert``` :
 ```python
 >>> famille = ["Bart", "Lisa", "Maggie"]
