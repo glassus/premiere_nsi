@@ -213,7 +213,10 @@ Chaque élément étant accessible par son indice (de ```0``` à   ```len(liste)
         ```python
         lst = [3, 1, 4, 1, 5, 9]
         ```
-        Afficher les éléments de cette liste dans l'ordre inverse (en commençant par 9)
+        En utilisant un parcours **par indice** :
+        
+        1. Afficher les éléments de cette liste.
+        2. Afficher les éléments de cette liste **dans l'ordre inverse** (en commençant par 9)
 
     === "Correction"
         {{ correction(False,
