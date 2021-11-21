@@ -455,7 +455,7 @@ Cette expression vient des mathématiques. On dit qu'on définit un sous-ensembl
 
 On pourrait par exemple définir les élèves de Première NSI de cette manière :
 
-*élèves du lycée inscrits en classe de Première ayant choisi la spécialité NSI*
+*«élèves du lycée inscrits en classe de Première ayant choisi la spécialité NSI»*
 
 On part d'un ensemble large (les élèves du lycée) qu'on va ensuite réduire par des caractérisations spécifiques : être un élève de Première, puis avoir choisi la spécialité NSI.
 
@@ -515,7 +515,7 @@ Pourtant les listes en compréhension *sans filtre* sont très fréquentes, nous
 C'est à partir de lui que va se construire notre liste. Pour l'instant, cet ensemble de départ a toujours été de type ```list```.
 
 Cet ensemble peut être aussi donné à partir de l'instruction ```range()```. 
-Souvenons-nous de l'exercice 3 : «Construire une liste contenant tous les nombres inférieurs à 100 qui sont divisibles par 7.».
+Souvenons-nous de l'exercice 4 : «Construire une liste contenant tous les nombres inférieurs à 100 qui sont divisibles par 7.».
 
 Une solution possible était :
 
@@ -538,165 +538,107 @@ Ce code peut maintenant s'écrire très simplement en une seule instruction :
 
 #### 7.2.3 la valeur à garder
 
-todo
+Pour l'instant, nous avons procédé à des filtres sur des ensembles existants, sans modifier la valeur filtrée (la valeur _à garder_).  
+Les listes en compréhension deviennent encore plus intéressantes lorsqu'on comprend qu'il est possible de modifier la valeur filtrée :
 
+!!! note "Exemple fondateur n°11 :heart:"
+    ```python
+    >>> lst_carres = [t**2 for t in range(1,10)]
+    >>> lst_carres
+    [1, 4, 9, 16, 25, 36, 49, 64, 81]
+    ```
 
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        1. On considère la fonction mathématique $f : x \mapsto 2x+3$. Coder la fonction ```f```.
+        2. Créer (en compréhension) une liste contenant l'image des entiers de 1 à 10 par la fonction $f$.
+    === "Correction"
+        {{ correction(True,
+        "
+        
+        "
+        ) }}
 
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        On considère la liste ```lst = [51, 52, 66, 91, 92, 82, 65, 53, 86, 42, 79, 95]```. Seuls les nombres inférieurs à 90 ont une signification : ce sont des codes ASCII (récupérables par la fonction ```chr``` ).  
+        Créer (en compréhension) une liste ```sol``` qui contient les lettres correspondants aux nombres ayant une signification.
+    === "Correction"
+        {{ correction(True,
+        "
+        
+        "
+        ) }}
 
 ## 8. Un phénomène inquiétant : la copie de liste
 
 
-```python
-a = 3
-b = a
-a = 5
-```
+!!! danger "une copie un peu trop parfaite"
+    Observez le code ci-dessous, réalisé sans trucage.
+    ```python
+    >>> listA = [1, 2, 3]
+    >>> listB = listA
+    >>> listA.append(7)
+    >>> listB
+    [1, 2, 3, 7]
+    >>> listB.append(8)
+    >>> listA
+    [1, 2, 3, 7, 8]
+    ```
 
 
-```python
-id(a)
-```
+Tout se passe comme si les listes  ```listA``` et```listB``` étaient devenus des clones «synchronisés» depuis l'affectation ```listB = listA```.
 
-
-
-
-    1527898960
-
-
-
-
-```python
-id(b)
-```
+!!! aide "Analyse grâce à PythonTutor"
+    <iframe width="800" height="300" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=listA%20%3D%20%5B1,%202,%203%5D%0AlistB%20%3D%20listA%0AlistA.append%287%29%0AlistB.append%288%29%0A&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 
 
+L'illustration de PythonTutor nous donne la clé de l'énigme :
+![image](data/tutor1.png){: .center width=30%}
 
-    1527898928
 
+```listA``` et```listB``` sont en fait **un seul et même objet**.
 
-
+Comment en avoir le cœur net ? En observant leur adresse-mémoire, disponible grâce à la fonction ```id``` :
 
 ```python
-b
+>>> id(listA)
+140485841327616
+>>> id(listB)
+140485841327616
 ```
 
+Ceci met en évidence que la métaphore du tiroir dont on se sert pour expliquer ce qu'est une variable est malheureusement inexacte. Une variable est une référence vers une adresse-mémoire. Si deux variables font référence à la même adresse-mémoire, alors elles sont totalement identiques:  toute modification de l'une entraîne une modification de l'autre.  
 
+Pour en savoir plus sur les variables, vous pouvez revenir sur la [partie optionnelle](../../../T1_Demarrer_en_Python/1.1_Variables/cours/#b2-une-realite-bien-plus-complexe) du cours sur les variables.
 
 
-    3
 
 
+### Mais alors, comment copier le contenu d'une liste vers une autre sans créer un clone ?
 
+!!! note "Exemple fondateur n°12 :heart:"
+    ```python
+    >>> listA = [3, 4, 5]
+    >>> listB = list(listA)
+    ```
+    D'autres possibilités existent, comme ```listA.copy()```, ou encore ```listA[::]```...  
 
-```python
-a = [4, 5, 7]
-b = a
-a[0] = 12
-```
 
-Selon toute vraisemblance, la liste `a` est maintenant égale à `[12, 5, 7]`. 
-Vérifions-le :
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        Effectuer les tests nécessaires pour prouver que l'exemple précédent a bien produit deux objets différents.
+    === "Correction"
+        {{ correction(True,
+        "
+        
+        "
+        ) }}
 
 
-```python
-id(a)
-```
 
 
-
-
-    81446152
-
-
-
-
-```python
-id(b)
-```
-
-
-
-
-    81446152
-
-
-
-
-```python
-a
-```
-
-
-
-
-    [12, 5, 7]
-
-
-
-Tout est donc normal. Mais :
-
-
-```python
-b
-```
-
-
-
-
-    [12, 5, 7]
-
-
-
-`b` est lui **aussi** devenu égal à `[12, 5, 7]`, alors que la modification sur l'élément `a[0]` n'a été faite qu'**après** l'affectation `b = a`.  
-Les listes `a` et `b` sont en fait strictement et définitivement identiques, elles sont simplement deux dénominations différentes d'un même objet. 
-On peut le vérifier en regardant l'emplacement-mémoire vers lequel pointent la variable `a` et la variable `b` :
-
-
-```python
-id(a)
-```
-
-
-```python
-id(b)
-```
-
-### Comment copier le contenu d'une liste vers une autre
-Parmi plusieurs solutions, celle-ci est simple et efficace : la méthode `copy()`
-
-
-```python
-a = [3, 4, 9]
-b = a.copy()
-a[0] = 12
-```
-
-
-```python
-a
-```
-
-
-
-
-    [12, 4, 9]
-
-
-
-
-```python
-b
-```
-
-
-
-
-    [3, 4, 9]
-
-
-
-On pourrait aussi écrire `b = list(a)` mais la méthode `copy()` a l'avantage d'exister aussi pour les *dictionnaires*, que nous verrons plus tard.
 
 ## 9. Tableaux à plusieurs dimensions : listes de listes
 
