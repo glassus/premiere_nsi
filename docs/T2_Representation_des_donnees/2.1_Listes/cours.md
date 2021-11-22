@@ -365,15 +365,15 @@ Il suffit d'écraser la valeur actuelle avec une nouvelle valeur
 
 - Attention, ```remove``` n'enlève que la *première occurrence* de l'élément désigné. S'il y en a d'autres après, elles resteront dans la liste :
 ```python
->>> lst = [3, 1, 4, 5, 1, 9]
->>> lst.remove(1)
+>>> lst = [3, 1, 4, 5, 1, 9, 4]
+>>> lst.remove(4)
 >>> lst
-[3, 4, 5, 1, 9]
+[3, 1, 5, 1, 9, 4]
 ```
 - Si l'élément à supprimer n'est pas trouvé, un message d'erreur est renvoyé :
 ```python
 >>> lst = [3, 1, 4, 5, 1, 9]
->>> lst.remove(6)
+>>> lst.remove(2)
 Traceback (most recent call last):
   File "<pyshell>", line 1, in <module>
 ValueError: list.remove(x): x not in list
