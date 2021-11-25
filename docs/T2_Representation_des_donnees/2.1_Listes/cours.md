@@ -642,49 +642,43 @@ Pour en savoir plus sur les variables, vous pouvez revenir sur la [partie option
 
 ## 9. Tableaux à plusieurs dimensions : listes de listes
 
+Nous avons vu qu'une liste pouvait contenir des éléments de tous types : des entiers, des chaines des caractères... et pourquoi pas une liste qui contient des listes ?
 
-```python
-a = [[3, 5, 2],
-     [7, 1, 4], 
-     [8, 6, 9]]
-```
+### 9.1 Syntaxe
 
+!!! note "Exemple fondateur n°12 :heart:"
+    La liste ```tab``` ci-dessous est composée de 3 listes qui elles-mêmes contient trois nombres :
+    ```python
+    tab =  [[3, 5, 2],
+            [7, 1, 4], 
+            [8, 6, 9]]
+    ```
+
+    - ```tab[0][0] = 3```
+    - ```tab[0][1] = 5```
+    - ```tab[2,1] = 6``` 
+    - ```tab[1] = [7, 1, 4]``` 
+
+    ![image](data/tab2.png){: .center width=30%}
+    
 La liste `a` est composée de 3 éléments qui sont eux-même des listes de 3 éléments.
 
+### 9.2 Parcours d'une liste de listes
 
-```python
-a[0]
-```
+!!! note "Exemple fondateur n°13 :heart:"
+    - Parcours par éléments :
+    ```python linenums='1'
+    for ligne in tab:
+        for elt in ligne:
+            print(elt)
+    ```
 
-
-
-
-    [3, 5, 2]
-
-
-
-
-```python
-a[0][1]
-```
-
-
-
-
-    5
-
-
-
-
-```python
-a[2][2]
-```
-
-
-
-
-    9
-
+    - Parcours par indice :
+    ```python linenums='1'
+    for i in range(3):
+        for j in range(3):
+            print(tab[i][j])
+    ```
 
 
 ## Exercice
