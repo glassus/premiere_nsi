@@ -677,6 +677,7 @@ La liste `a` est composée de 3 éléments qui sont eux-même des listes de 3 é
         - ```tab[0][0] = 'O'``` 
 
         Quel coup doit maintenant jouer le joueur  `'X'` pour s'assurer la victoire ?
+        
     === "Correction"
         {{ correction(True,
         "
