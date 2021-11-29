@@ -289,11 +289,14 @@ Chaque élément étant accessible par son indice (de ```0``` à   ```len(liste)
         se cachent deux nombres consécutifs. Pouvez-vous les trouver ?
 
     === "Correction"
-        {{ correction(True,
-        "
-        
-        "
-        ) }}
+        ```python linenums='1'
+        lst = [2428970, 1518306, 4971405, 1690994, 7918102, 4030834, 8830131, 7514856, 7903128, 6307569, 6624056, 5260490, 6447835, 4598783, 9108626, 5045240, 4128269, 4460134, 2497873, 5076659, 8104003, 7604887, 7451976, 4136924, 5691945, 8726293, 7855592, 3562473, 8849129, 6488474, 5303587, 2606124, 5484044, 4559758, 7592232, 2211406, 9974334, 7988936, 7582946, 7668748, 1799997, 3837917, 3196209, 7064342, 2543765, 1182013, 7253381, 1153735, 1037391, 4375946, 4445821, 5965587, 6001887, 4162629, 5235783, 8716582, 4901175, 5445422, 1120005, 8332321, 7075046, 2194175, 5557300, 2887907, 5103214, 2520744, 5104399, 2065665, 3035703, 7890213, 1758301, 3407982, 1355453, 4896338, 7979392, 9671602, 9690721, 7423779, 7423780, 3080825, 6785783, 3836837, 7310931, 1857470, 3492507, 2823231, 1492310, 1911148, 9620515, 5564910, 7009452, 7464745, 9608747, 7267383, 6939140, 6556578, 3592267, 8135497, 4881660, 5346884, 6859150]
+
+        for i in range(len(lst)-1): # Il faut s'arrêter à l'avant-dernier élément de la liste
+            if lst[i] + 1 == lst[i+1]:
+                print(lst[i], lst[i+1])
+
+        ```
 
 
 
@@ -362,7 +365,14 @@ Il suffit d'écraser la valeur actuelle avec une nouvelle valeur
     === "Correction"
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        temp = [4, -5, 8, 10, -1, -2, 7, 13]
+
+        temp_pos = []
+        for t in temp:
+            if t > 0:
+                temp_pos.append(t)
+        ```
         "
         ) }}
 
@@ -571,7 +581,12 @@ Les listes en compréhension deviennent encore plus intéressantes lorsqu'on com
     === "Correction"
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        def f(x):
+            return 2*x + 3
+
+        lst = [f(x) for x in range(1, 11)]
+        ```
         "
         ) }}
 
@@ -582,7 +597,12 @@ Les listes en compréhension deviennent encore plus intéressantes lorsqu'on com
     === "Correction"
         {{ correction(True,
         "
-        
+        ```python
+        >>> lst = [51, 52, 66, 91, 92, 82, 65, 53, 86, 42, 79, 95]
+        >>> decode = [chr(k) for k in lst if k > 60  and k < 90]
+        >>> decode
+        ['B', 'R', 'A', 'V', 'O']
+        ```
         "
         ) }}
 
@@ -648,7 +668,17 @@ Pour en savoir plus sur les variables, vous pouvez revenir sur la [partie option
     === "Correction"
         {{ correction(True,
         "
-        
+        ```python
+        >>> listA = [3, 4, 5]
+        >>> listB = list(listA)
+        >>> listA.append(9)
+        >>> listB
+        [3, 4, 5]
+        >>> id(listA)
+        140157471522368
+        >>> id(listB)
+        140157465797184
+        ```
         "
         ) }}
 
@@ -697,7 +727,11 @@ La liste `a` est composée de 3 éléments qui sont eux-même des listes de 3 é
     === "Correction"
         {{ correction(True,
         "
-        
+        ```python
+        tab[0][2] = 'X'
+        # ou
+        tab[1][2] = 'X'
+        ```
         "
         ) }}
 
@@ -731,7 +765,16 @@ La liste `a` est composée de 3 éléments qui sont eux-même des listes de 3 é
     === "Correction"
         {{ correction(True,
         "
-        
+        ```python linenums='1'
+        m = [[1, 9, 4], [4, 1, 8], [7, 10, 1]]
+
+        somme = 0
+        for ligne in m:
+            for elt in ligne:
+                somme += elt
+
+        print(somme)
+        ```
         "
         ) }}
 
