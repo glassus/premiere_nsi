@@ -647,7 +647,7 @@ Nous avons vu qu'une liste pouvait contenir des éléments de tous types : des e
 ### 9.1 Syntaxe
 
 !!! note "Exemple fondateur n°12 :heart:"
-    La liste ```tab``` ci-dessous est composée de 3 listes qui elles-mêmes contient trois nombres :
+    La liste ```tab``` ci-dessous est composée de 3 listes qui elles-mêmes contiennent trois nombres :
     ```python
     tab =  [[3, 5, 2],
             [7, 1, 4], 
