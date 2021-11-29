@@ -663,6 +663,28 @@ Nous avons vu qu'une liste pouvait contenir des éléments de tous types : des e
     
 La liste `a` est composée de 3 éléments qui sont eux-même des listes de 3 éléments.
 
+
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        On considère le jeu du Morpion (ou *Tic-Tac-Toe*) dont la surface de jeu vierge est representée par le tableau :  
+        ```tab = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]``` 
+
+        Les premiers coups joués sont ceux-ci :
+
+        - ```tab[1][1] = 'X'``` 
+        - ```tab[2][1] = 'O'``` 
+        - ```tab[2][2] = 'X'``` 
+        - ```tab[0][0] = 'O'``` 
+
+        Quel coup doit maintenant jouer le joueur  `'X'` pour s'assurer la victoire ?
+    === "Correction"
+        {{ correction(True,
+        "
+        
+        "
+        ) }}
+
+
 ### 9.2 Parcours d'une liste de listes
 
 !!! note "Exemple fondateur n°13 :heart:"
@@ -680,78 +702,25 @@ La liste `a` est composée de 3 éléments qui sont eux-même des listes de 3 é
             print(tab[i][j])
     ```
 
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        On considère la liste ```m``` ('m' comme *matrice*) suivante :  
 
-## Exercice
-Résolvez ce [pydéfi](https://callicode.fr/pydefis/AlgoMat/txt)
+        ```m = [[1, 9, 4], [4, 1, 8], [7, 10, 1]]```  
 
-Solution possible :
+        Quelle est la somme de tous les nombres de la matrice ```m``` ?
 
-
-```python
-M=[[36, 19, 27, 36, 7, 10], [2, 18, 3, 33, 2, 21], [26, 27, 4, 22, 30, 31], [29, 36, 7, 20, 6, 30], [30, 6, 14, 23, 15, 13], [22, 10, 10, 35, 15, 22]]
-
-def modif(k):
-    return ( 11*k + 4 ) % 37
-
-for k in range(23): #pour répéter 23 fois
-    for i in range(6) :
-        for j in range(6):
-            M[i][j] = modif(M[i][j]) 
-            # ou bien M[i][j] = ( 11*M[i][j] + 4 ) % 37
-
-s = 0
-for i in range(6) :
-    for j in range(6):
-        s = s + M[i][j] 
-```
-
-
-```python
-s
-```
+    === "Correction"
+        {{ correction(True,
+        "
+        
+        "
+        ) }}
 
 
 
 
-    575
 
 
-
-### Pydéfi :  Le sanglier d'Erymanthe
-https://callicode.fr/pydefis/Herculito04Sanglier/txt
-
-
-```python
-M = [0, 50, 40, 100, 70, 90, 0]
-s = 0
-for k in range(7-1):
-    if M[k] > M[k+1]:
-        pierreLancees = (M[k]-M[k+1])//10+1
-        s += pierreLancees
-print(s)
-
-# penser à faire le total des pierres lancées depuis le début
-```
-
-    16
-
-
-*En une ligne (aucun intérêt à part pour épater la galerie...) :*
-
-
-```python
-M = [0, 50, 40, 100, 70, 90, 0]
-k = sum([(M[i]-M[i+1])//10+1 for i in range(len(M)-1) if M[i]>M[i+1]])
-```
-
-
-```python
-k
-```
-
-
-
-
-    16
 
 

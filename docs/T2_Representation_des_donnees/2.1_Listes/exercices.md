@@ -30,8 +30,19 @@
         Afficher successivement chaque ligne du tableau en respectant les règles suivantes :
 
         - si le nombre est divisible par 7, afficher ```*```, sinon afficher une espace ``` ```
-        - sur une même ligne, on affichera tous les symboles côte à côte, en rajoutant le paramètre ```end = ''``` à la fonction ```print```.
+        - sur une même ligne, on affichera tous les symboles côte à côte, en rajoutant le paramètre ```end = ''``` à la fonction ```print```. (*exemple :* ```print('*', end = '')``` )
         - on ira à la ligne à la fin de chaque ligne, par l'instruction ```print()```     
+    === "Correction"
+        {{ correction(True,
+        "
+        
+        "
+        ) }}
+
+
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        Résolvez le pydéfi **Insaisissable matrice** proposé à [cette adresse](https://pydefis.callicode.fr/defis/AlgoMat/txt)        
     === "Correction"
         {{ correction(True,
         "
