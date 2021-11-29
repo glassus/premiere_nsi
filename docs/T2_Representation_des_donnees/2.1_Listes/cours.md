@@ -677,7 +677,7 @@ La liste `a` est composée de 3 éléments qui sont eux-même des listes de 3 é
         - ```tab[0][0] = 'O'``` 
 
         Quel coup doit maintenant jouer le joueur  `'X'` pour s'assurer la victoire ?
-        
+
     === "Correction"
         {{ correction(True,
         "
@@ -689,6 +689,7 @@ La liste `a` est composée de 3 éléments qui sont eux-même des listes de 3 é
 ### 9.2 Parcours d'une liste de listes
 
 !!! note "Exemple fondateur n°13 :heart:"
+
     - Parcours par éléments :
     ```python linenums='1'
     for ligne in tab:
