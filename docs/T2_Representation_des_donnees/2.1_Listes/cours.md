@@ -656,7 +656,7 @@ Nous avons vu qu'une liste pouvait contenir des éléments de tous types : des e
 
     - ```tab[0][0] = 3```
     - ```tab[0][1] = 5```
-    - ```tab[2,1] = 6``` 
+    - ```tab[2][1] = 6``` 
     - ```tab[1] = [7, 1, 4]``` 
 
     ![image](data/tab2.png){: .center width=30%}
