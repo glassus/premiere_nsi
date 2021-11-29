@@ -6,7 +6,7 @@
 
 ## 1. Les énumérables
 
-En mathématiques, on dit qu'un ensemble est *dénombrable* lorsqu'on peut associer à chaque élément de l'ensemble un nombre (traditionnellement 1, 2, 3...)
+En mathématiques, on dit qu'un ensemble est *dénombrable* lorsqu'on peut associer à chaque élément de l'ensemble un nombre (traditionnellement 1, 2, 3 ...)
 
 - les fraises Tagada d'un paquet sont dénombrables.
 - les voitures qui roulent sur l'autoroute sont dénombrables.
