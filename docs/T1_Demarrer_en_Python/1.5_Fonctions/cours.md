@@ -315,7 +315,8 @@ Quelles sont les règles régissant ces espaces de noms ? Les frontières entre 
         if objet == "banane":
             score -= 300
 
-    # BIEN 
+    # BIEN
+    # -------- Attention le code ci-dessous est faux, il sera bientôt enlevé ------------------- 
     score = 0
     def ramasse_objet(objet, score):  # ma fonction veut modifier score ? 
         if objet == "champignon":     # -> ok, je mets score dans ses paramètres
