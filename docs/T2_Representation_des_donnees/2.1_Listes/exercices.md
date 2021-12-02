@@ -130,7 +130,7 @@
             ```
             permet de récupérer dans une liste ```data_str``` toutes les lignes de l'input. Attention tous les éléments de cette liste sont des chaines de caractères (type ```String``` ).
 
-            Pour séparer une chaine de caractère en plusieurs chaines de caractères, grâce à un délimiteur : la fonction ```split``` :
+            Pour séparer une chaine de caractères en une **liste** de plusieurs chaines de caractères, grâce à un délimiteur : la fonction ```split``` :
 
             ```python
             >>> "12/02/2002".split("/")
