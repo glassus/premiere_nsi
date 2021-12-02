@@ -102,3 +102,45 @@
         ```
         "
         ) }}
+
+
+    !!! example "{{ exercice() }}"
+        === "Énoncé"
+            **Advent of code 2021, day02**
+
+            - [énoncé](https://adventofcode.com/2021/day/2)
+
+            - Input de test :
+
+            ```python
+            forward 5
+            down 5
+            forward 8
+            up 3
+            down 8
+            forward 2
+            ```
+
+            - Exemple d'input réel :
+            [input1.txt](https://raw.githubusercontent.com/glassus/aoc2021/main/day02/input1.txt)
+
+            - Aide au parsing :
+            ```python
+            data_str = open('input1.txt').read().splitlines()
+            ```
+            permet de récupérer dans une liste ```data_str``` toutes les lignes de l'input. Attention tous les éléments de cette liste sont des chaines de caractères (type ```String``` ).
+
+            Pour séparer une chaine de caractère en plusieurs chaines de caractères, grâce à un délimiteur : la fonction ```split``` :
+
+            ```python
+            >>> "12/02/2002".split("/")
+            ['12', '02', '2002']
+            ``` 
+
+
+        === "Correction"
+            {{ correction(True,
+            "
+            
+            "
+            ) }}
