@@ -1,136 +1,98 @@
-# 4.3 Tri par insertion
+# Algorithmes de tri (1) : tri par insertion
+<img src="data/color_bars.svg" width='30%' />
 
-![image](data/BO.png){: .center}
-
-![image](data/color_bars.svg){: .center width=30%}
-
-
-## 0. Préambule
+## Préambule
 Pourquoi étudier des algorithmes de tri ?  
 Autant ne pas le cacher, ces algorithmes sont déjà implémentés (quelque soit le langage) dans des fonctions très performantes.  
 
-En Python, on utilise la fonction `sort()` :
+En Python, on utilise la fonction `sort()`
 
 
 
 ```python
->>> tab = [4, 8, 1, 2, 6]
->>> tab.sort()
->>> tab
-[1, 2, 4, 6, 8]
-
+tab = [4, 8, 1, 2, 6]
+tab.sort()
 ```
 
-![image](data/meme.png){: .center width=30%}
 
+```python
+tab
+```
 
 Le meilleur de nos futurs algorithmes de tri sera moins efficace que celui de cette fonction `sort()`...  
 Malgré cela, il est essentiel de se confronter à l'élaboration manuelle d'un algorithme de tri.  
 Le tri par insertion est le premier des deux algorithmes de tri que nous allons étudier (nous étudierons aussi le tri par sélection).  
 Ces deux algorithmes ont pour particularité de :
-
 - ne pas nécessiter la création d'une nouvelle liste. Ils modifient la liste à trier sur place.
 - ne pas faire intervenir de fonctions complexes (comme la recherche d'un minimum par exemple)
 
 
-## 1. Tri par insertion (version la plus intuitive)
-
-### 1.1  Principe et algorithme
+## Tri par insertion (version la plus intuitive)
 Considérons la liste `[7, 5, 2, 8, 1, 4]`  
 Voici le fonctionnement de l'algorithme :  
-
-![image](data/insertion1.gif){: .center width=40%}
-
+![](data/insertion1.gif)
 
 **Explications :**
-
-- On traite successivement toutes les valeurs à trier, en commençant par celle en deuxième position.
+- on traite successivement toutes les valeurs à trier, en commençant par celle en deuxième position.
 - Traitement : tant que la valeur à traiter est inférieure à celle située à sa gauche, on échange ces deux valeurs.
 
-### 1.2 Codage de l'algorithme
+## Codage de l'algorithme
 
-**Algorithme :** 
+**algorithme :** 
 
 Pour toutes les valeurs, en commençant par la deuxième :
-
-- Tant qu'on trouve à gauche une valeur supérieure et qu'on n'est pas revenu à la première valeur, on échange ces deux valeurs.
-
-
-!!! note "Tri par insertion (version simple) :heart:"
-    ```python
-    def tri_insertion1(lst):
-        '''trie en place la liste lst donnée en paramètre'''
-        for i in range(1, len(lst)):                 #(1)
-            k = i                                    #(2)
-            while k > 0 and lst[k-1] > lst[k] :      #(3)
-                lst[k], lst[k-1] = lst[k-1], lst[k]  #(4)    
-                k = k - 1                            #(5)   
-    ```
-
-    1. On commence à 1 et non pas à 0.
-    2. On «duplique» la variable `i` en une variable `k`.  
-    On se positionne sur l'élément d'indice ```k```. On va faire «reculer» cet élément tant que c'est possible. On ne touche pas à ```i```. 
-    3. Tant qu'on n'est pas revenu au début de la liste et qu'il y a une valeur plus grande à gauche.
-    4. On échange de place avec l'élément précédent.
-    5. Notre élément est maintenant à l'indice ```k - 1```.  
-    La boucle peut continuer.
-
-*Application :*
+- tant qu'on trouve à gauche une valeur supérieure et qu'on n'est pas revenu à la première valeur, on échange ces deux valeurs.
 
 
 ```python
->>> maliste = [7, 5, 2, 8, 1, 4]
->>> tri_insertion1(maliste)
->>> maliste
-[1, 2, 4, 5, 7, 8]
+def tri(lst):
+    '''trie la liste lst donnée en paramètre'''
+    for i in range(1, len(lst)):
+        k = i
+        while  k > 0 and lst[k-1] > lst[k] :
+            lst[k], lst[k-1] = lst[k-1], lst[k] 
+            k = k -1
 ```
 
-## 2. Tri par insertion (version optimisée)
+*Vérification :*
 
-### 2.1 Principe et algorithme
+
+```python
+a = [7, 5, 2, 8, 1, 4]
+tri(a)
+print(a)
+```
+
+## Tri par insertion (version optimisée)
 Observez l'animation ci-dessous et comparer avec la version initiale.  
-![image](data/insertion2.gif){: .center width=40%}
+![](data/insertion2.gif)
 
-- Au lieu d'effetuer un échange avec la valeur précédente à chaque fois qu'elle est supérieure, on va décaler vers la droite toutes les valeurs situées à gauche et supérieures à notre valeur de travail.
-- On **insère** ensuite directement à sa position «la plus à gauche possible» notre valeur de travail. 
+## Codage de l'algorithme
 
-### 2.2 Codage de l'algorithme
-
-!!! note "Tri par insertion (version optimisée) :heart:"
-    ```python
-    def tri_insertion2(lst) :
-        '''trie en place la liste lst donnée en paramètre'''
-        for k in range(1, len(lst)):         # (1)
-            cle = lst[k]                     # (2)
-            i = k - 1                        # (3)
-            while i >= 0 and lst[i] > cle :  # (4)
-                lst[i + 1] = lst[i]          # (5)
-                i = i -1                     # (6)
-            lst[i + 1] = cle                 # (7)
-    ```
-
-    1. On démarre à la deuxième valeur.
-    2. On stocke dans une variable ```cle``` notre valeur de travail
-    3. On démarre l'étude des valeurs à gauche de notre valeur de travail
-    4. Tant qu'on trouve une valeur supérieure à notre valeur de travail, et qu'on n'est pas revenus au début de la liste.
-    5. On décale cette valeur de un rang vers la droite.
-    6. On se repositionne sur la valeur à gauche de notre valeur actuelle.
-    7. On s'est arrêté quand la valeur n'était pas supérieure : on met notre valeur de travail juste à droite de notre position d'arrêt.
-
-
-*Application :*
+Voici l'algorithme optimisé :
 
 
 ```python
->>> maliste = [7, 5, 2, 8, 1, 4]
->>> tri_insertion2(maliste)
->>> maliste
-[1, 2, 4, 5, 7, 8]
+def tri(lst) :
+    for k in range(1,len(lst)):
+        cle = lst[k]
+        i = k-1
+        while  i>=0 and lst[i] > cle :
+            lst[i+1] = lst[i]
+            i = i -1
+        lst[i+1] = cle
 ```
 
-## 3. Complexité de l'algorithme
+*Vérification :*
 
-### 3.1  Étude expérimentale
+
+```python
+a = [7, 5, 2, 8, 1, 4]
+tri(a)
+print(a)
+```
+
+## Complexité de l'algorithme
 
 Pour pouvoir utiliser la fonction `%timeit`, nous allons modifier légèrement notre algorithme de tri : comme la fonction `%timeit` effectue un grand nombre d'appel à la fonction `tri()`, la liste serait triée dès le premier appel et les autres appels essaieraient donc de tri une liste *déjà triée*. 
 
@@ -165,7 +127,7 @@ En comparant les temps de tri des listes `a` et `b`, que pouvez-vous supposer su
 
 Une liste à trier 2 fois plus longue prend 4 fois plus de temps : l'algorithme semble de complexité **quadratique**.
 
-### 3.2 Démonstration
+## Démonstration
 Dénombrons le nombre d'opérations dans le pire des cas, pour une liste de taille $n$.
 - boucle for : elle s'exécute $n-1$ fois.
 - boucle while : dans le pire des cas, elle exécute d'abord 1 opération, puis 2, puis 3... jusqu'à $n-1$. Or 
@@ -173,12 +135,11 @@ $$1+2+3+\dots+n-1=\dfrac{n \times (n-1)}{2}$$
 
 Si la liste est déjà triée, on ne rentre jamais dans la boucle `while` : le nombre d'opérations est dans ce cas égal à $n-1$, ce qui caractérise une complexité linéaire.
 
-### 3.3 Résumé de la complexité 
-
+## Résumé de la complexité 
 - dans le meilleur des cas (liste déjà triée) : complexité **linéaire**
 - dans le pire des cas (liste triée dans l'ordre décroissant) : complexité **quadratique**
 
-### 3.4 Preuve de la terminaison de l'algorithme
+## Preuve de la terminaison de l'algorithme
 
 
 
@@ -196,11 +157,10 @@ Nous avonc donc prouvé la **terminaison** de l'algorithme.
 On appelle la valeur `i` un **variant de boucle**. C'est une notion théorique (ici illustrée de manière simple par `i` qui permet de prouver la bonne sortie d'une boucle et donc la terminaison d'un algorithme.
 
 
-### 3.5 Preuve de la correction de l'algorithme
+## Preuve de la correction de l'algorithme
 Les preuves de correction sont des preuves théoriques. La preuve ici s'appuie sur le concept mathématique de **récurrence**. 
 Principe du raisonnement par récurrence : 
 une propriété $P(n)$ est vraie si :
-
 - $P(0)$ (par exemple) est vraie
 - Pour tout entier naturel $n$, si $P(n)$ est vraie alors $P(n+1)$ est vraie.
 
@@ -219,3 +179,11 @@ Ici, la propriété serait : « Quand $k$ varie entre 0 et `longueur(liste) -1`,
 
 
 ---
+
+![](../../../ccbysa.png "image") G.Lassus, Lycée François Mauriac --  Bordeaux  
+
+
+
+```python
+
+```
