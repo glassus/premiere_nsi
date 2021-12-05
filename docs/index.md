@@ -1,7 +1,9 @@
 
-## Thème en cours d'étude : [les listes](T2_Representation_des_donnees/2.1_Listes/cours.md)  
+## Thème en cours d'étude : [le tri par insertion](T4_Algorithmique/4.3_Tri_par_insertion/cours/)  
+
 
 ??? note "*Anciens thèmes traités*"
+    - [les listes](T2_Representation_des_donnees/2.1_Listes/cours/)
     - [les fonctions](T1_Demarrer_en_Python/1.5_Fonctions/cours/)
     -  [l'instruction conditionnelle ```if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/cours/)  
     -  [la boucle ```while```](T1_Demarrer_en_Python/1.3_Boucle_while/cours/)
