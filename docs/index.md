@@ -3,6 +3,7 @@
 
 
 ??? note "*Anciens thèmes traités*"
+    - [recherche dans un tableau](T4_Algorithmique/4.1_Extremums_et_moyennes/cours/)  
     - [les listes](T2_Representation_des_donnees/2.1_Listes/cours/)
     - [les fonctions](T1_Demarrer_en_Python/1.5_Fonctions/cours/)
     -  [l'instruction conditionnelle ```if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/cours/)  
