@@ -15,7 +15,7 @@
         return maxi
     ```
 
-    1. On initialise le maximum avec la première valeur du tableau (surtout pas avec 0 ou «moins l'infini !»)
+    1. On initialise le maximum avec la première valeur du tableau (surtout pas avec 0 ou «moins l'infini» !)
 
 **Utilisation :**
 ```python
@@ -47,7 +47,7 @@
 
 ## 3. Algorithme de recherche d'occurrence
 
-!!! note "Calcul de moyenne :heart:"
+!!! note "Recherche d'occurrence :heart:"
     ```python
     def recherche_occurence(elt, tab):
         ''' renvoie la liste (éventuellement vide)
