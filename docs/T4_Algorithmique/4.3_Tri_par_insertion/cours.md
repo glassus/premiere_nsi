@@ -115,7 +115,7 @@ Observez l'animation ci-dessous et comparer avec la version initiale.
     4. Tant qu'on trouve une valeur supérieure à notre valeur de travail, et qu'on n'est pas revenus au début de la liste.
     5. On décale cette valeur de un rang vers la droite.
     6. On se repositionne sur la valeur à gauche de notre valeur actuelle.
-    7. On s'est arrêté quand la valeur n'était pas supérieure : on met notre valeur de travail juste à droite de notre position d'arrêt.
+    7. On s'est arrêté quand la valeur n'était pas supérieure : on **insère** notre valeur de travail juste à droite de notre position d'arrêt.
 
 
 *Application :*
