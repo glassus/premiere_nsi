@@ -100,13 +100,13 @@ Observez l'animation ci-dessous et comparer avec la version initiale.
     ```python
     def tri_insertion2(lst) :
         '''trie en place la liste lst donnée en paramètre'''
-        for k in range(1, len(lst)):         # (1)
-            cle = lst[k]                     # (2)
-            i = k - 1                        # (3)
-            while i >= 0 and lst[i] > cle :  # (4)
-                lst[i + 1] = lst[i]          # (5)
-                i = i -1                     # (6)
-            lst[i + 1] = cle                 # (7)
+        for i in range(1, len(lst)):         # (1)
+            cle = lst[i]                     # (2)
+            k = i - 1                        # (3)
+            while k >= 0 and lst[k] > cle :  # (4)
+                lst[k + 1] = lst[k]          # (5)
+                k = k -1                     # (6)
+            lst[k + 1] = cle                 # (7)
     ```
 
     1. On démarre à la deuxième valeur.
