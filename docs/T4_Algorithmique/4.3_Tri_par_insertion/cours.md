@@ -167,8 +167,10 @@ Une liste à trier 2 fois plus longue prend 4 fois plus de temps : l'algorithme 
 
 ### 3.2 Démonstration
 Dénombrons le nombre d'opérations dans le pire des cas, pour une liste de taille $n$.
+
 - boucle for : elle s'exécute $n-1$ fois.
 - boucle while : dans le pire des cas, elle exécute d'abord 1 opération, puis 2, puis 3... jusqu'à $n-1$. Or 
+
 $$1+2+3+\dots+n-1=\dfrac{n \times (n-1)}{2}$$
 
 Si la liste est déjà triée, on ne rentre jamais dans la boucle `while` : le nombre d'opérations est dans ce cas égal à $n-1$, ce qui caractérise une complexité linéaire.
