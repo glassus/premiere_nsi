@@ -1,5 +1,8 @@
 
-## Thème en cours d'étude : [le tri par insertion](./T4_Algorithmique/4.3_Tri_par_insertion/cours/)  
+## Thèmes en cours d'étude :
+
+- [le tri par insertion](./T4_Algorithmique/4.3_Tri_par_insertion/cours/)  
+- [complexité](./T4_Algorithmique/4.2_Complexite/cours/)
 
 
 ??? note "*Anciens thèmes traités*"

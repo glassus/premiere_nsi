@@ -160,3 +160,20 @@ En observant l'algorithme, nous pouvons confirmer cette supposition : le nombre 
 
 
 ## 3. Complexité constante
+
+Il peut arriver (mais c'est rare) que la complexité d'un algorithme soit indépendante de la taille des données à traiter.  
+Dans ce cas, c'est souvent une très bonne nouvelle.
+
+Observons l'accès au 1er élément d'une liste :
+
+
+
+!!! note "Complexité constante :heart:"
+    Les expressions suivantes sont équivalentes :
+    
+    - L'algorithme est de **complexité constante**.
+    - L'algorithme est **d'ordre 1**.  
+    - L'algorithme est en **$O(1)$** *  
+    («grand O de 1»)*
+
+    Toutes ces formulations renvoient à la même idée : le nombre d'opérations nécessaires (et donc le temps nécessaire à la terminaison de l'algorithme) est constant quelle que soit la taille des données d'entrée de l'algorithme.

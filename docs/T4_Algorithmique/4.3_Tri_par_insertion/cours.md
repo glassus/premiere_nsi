@@ -132,6 +132,9 @@ Observez l'animation ci-dessous et comparer avec la version initiale.
 
 ### 3.1  Étude expérimentale
 
+Lire le [cours sur la complexité](./T4_Algorithmique/4.2_Complexite/cours/) et proposer des mesures expérimentales pour déterminer la complexité du tri par insertion.
+
+<!--
 Pour pouvoir utiliser la fonction `%timeit`, nous allons modifier légèrement notre algorithme de tri : comme la fonction `%timeit` effectue un grand nombre d'appel à la fonction `tri()`, la liste serait triée dès le premier appel et les autres appels essaieraient donc de tri une liste *déjà triée*. 
 
 
@@ -165,15 +168,20 @@ En comparant les temps de tri des listes `a` et `b`, que pouvez-vous supposer su
 
 Une liste à trier 2 fois plus longue prend 4 fois plus de temps : l'algorithme semble de complexité **quadratique**.
 
+-->
+
 ### 3.2 Démonstration
 Dénombrons le nombre d'opérations dans le pire des cas, pour une liste de taille $n$.
 
-- boucle for : elle s'exécute $n-1$ fois.
-- boucle while : dans le pire des cas, elle exécute d'abord 1 opération, puis 2, puis 3... jusqu'à $n-1$. Or 
+- boucle `for` : elle s'exécute $n-1$ fois.
+- boucle `while` : dans le pire des cas, elle exécute d'abord 1 opération, puis 2, puis 3... jusqu'à $n-1$. Or 
 
 $$1+2+3+\dots+n-1=\dfrac{n \times (n-1)}{2}$$
 
-Si la liste est déjà triée, on ne rentre jamais dans la boucle `while` : le nombre d'opérations est dans ce cas égal à $n-1$, ce qui caractérise une complexité linéaire.
+Le terme de plus haut degré de l'expression $\dfrac{n \times (n-1)}{2}$ est de degré 2 : le nombre d'opérations effectuées est donc proportionnel au **carré** de la taille des données d'entrée.  
+Ceci démontre que le tri par insertion est de complexité **quadratique**.
+
+Dans le cas (rare, mais il faut l'envisager) où la liste est déjà triée, on ne rentre jamais dans la boucle `while` : le nombre d'opérations est dans ce cas égal à $n-1$, ce qui caractérise une complexité linéaire.
 
 ### 3.3 Résumé de la complexité 
 
@@ -187,15 +195,19 @@ Si la liste est déjà triée, on ne rentre jamais dans la boucle `while` : le n
 Est-on sûr que notre algorithme va s'arrêter ?  
 Le programme est constitué d'une boucle `while` imbriquée dans une boucle `for`. Seule la boucle `while` peut provoquer une non-terminaison de l'algorithme. Observons donc ses conditions de sortie : 
 
-```  while  i>=0 and l[i] > cle : ```
+```python
+ while  k >= 0 and l[k] > cle :
+```
 
-La condition `l[i] > cle` ne peut pas être rendue fausse avec certitude. 
-Par contre, la condition `i>=0` sera fausse dès que la variable `i` deviendra négative. Or la ligne 
-`i = i - 1` nous assure que la variable `i` diminuera à chaque tour de boucle. La condition  `i>=0` deviendra alors forcément fausse au bout d'un certain temps.
+La condition `l[k] > cle` ne peut pas être rendue fausse avec certitude. 
+Par contre, la condition `k >= 0` sera fausse dès que la variable `k` deviendra négative. Or la ligne 
+`k = k - 1` nous assure que la variable `k` diminuera à chaque tour de boucle. La condition  `k >= 0` deviendra alors forcément fausse au bout d'un certain temps.
 
 Nous avonc donc prouvé la **terminaison** de l'algorithme.
 
-On appelle la valeur `i` un **variant de boucle**. C'est une notion théorique (ici illustrée de manière simple par `i` qui permet de prouver la bonne sortie d'une boucle et donc la terminaison d'un algorithme.
+!!! aide "Vocabulaire"
+    On dit que la valeur `k` est un **variant de boucle**.  
+    C'est une notion théorique (ici illustrée de manière simple par la valeur `k`) qui permet de prouver *la bonne sortie d'une boucle* et donc la terminaison d'un algorithme.
 
 
 ### 3.5 Preuve de la correction de l'algorithme
@@ -206,10 +218,18 @@ une propriété $P(n)$ est vraie si :
 - $P(0)$ (par exemple) est vraie
 - Pour tout entier naturel $n$, si $P(n)$ est vraie alors $P(n+1)$ est vraie.
 
-Ici, la propriété serait : « Quand $k$ varie entre 0 et `longueur(liste) -1`, la sous-liste de longueur $k$ est triée dans l'ordre croissant.» On appelle cette propriété un **invariant de boucle** (sous-entendu : elle est vraie pour chaque boucle)
+Ici, la propriété serait : « Quand $k$ varie entre 0 et `longueur(liste) -1`, la sous-liste de longueur $k$ est triée dans l'ordre croissant.»
+
+!!! aide "Vocabulaire"
+    On appelle cette propriété un **invariant de boucle**.  
+    *Invariant* siginifie qu'elle reste vraie pour chaque boucle.
 
 - quand $k$ vaut 0, on place le minimum de la liste en l[0], la sous-liste l[0] est donc triée.
 -  si la sous-liste de $k$ éléments est triée, l'algorithme rajoute en dernière position de la liste le minimum de la sous-liste restante, dont tous les éléments sont supérieurs au maximum de la sous-liste de $k$ éléments. La sous-liste de $k+1$ éléments est donc aussi triée.
+
+
+
+
 
 
 
