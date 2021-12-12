@@ -132,7 +132,7 @@ Observez l'animation ci-dessous et comparer avec la version initiale.
 
 ### 3.1  Étude expérimentale
 
-Lire le [cours sur la complexité](../../T4_Algorithmique/4.2_Complexite/cours/) et proposer des mesures expérimentales pour déterminer la complexité du tri par insertion.
+Lire le [cours sur la complexité](../../4.2_Complexite/cours/) et proposer des mesures expérimentales pour déterminer la complexité du tri par insertion.
 
 <!--
 Pour pouvoir utiliser la fonction `%timeit`, nous allons modifier légèrement notre algorithme de tri : comme la fonction `%timeit` effectue un grand nombre d'appel à la fonction `tri()`, la liste serait triée dès le premier appel et les autres appels essaieraient donc de tri une liste *déjà triée*. 
