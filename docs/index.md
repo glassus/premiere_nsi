@@ -1,6 +1,7 @@
 
 ## Thèmes en cours d'étude :
 
+- [architecture réseau](./T3_Architecture_materielle/3.3_Architecture_reseau/cours.md)  
 - [le tri par insertion](./T4_Algorithmique/4.3_Tri_par_insertion/cours/)  
 - [complexité](./T4_Algorithmique/4.2_Complexite/cours/)
 

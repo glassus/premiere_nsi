@@ -52,7 +52,8 @@ Une réponse pas si bête : avec un cable entre les deux switchs !
 Testons cette hypothèse en essayant de pinger la machine ```192.168.1.2``` depuis la machine ```192.168.0.1```.  
 ??? tip "Résultat du ping"
     ![](data/ft2.png){: .center}
-    Cela ne marche pas. Les paquets sont perdus.
+    Cela ne marche pas. L'ordinateur **refuse** d'envoyer le ping vers la machine ```192.168.1.2```.  
+    *(spoil : car elle n'est pas dans son sous-réseau)*
 
 Temporairement, renommons la machine ```192.168.1.2``` en ```192.168.0.33```. Testons à nouveau le ping depuis la machine ```192.168.0.1```.
 ??? tip "Résultat du ping"

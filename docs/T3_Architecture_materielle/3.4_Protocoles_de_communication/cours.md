@@ -8,6 +8,7 @@
 
 Les bits transmis d'un ordinateur à un autre contiennent, en plus des données _utiles_ (le mot «bonjour» dans un email), une multitude de données (tout aussi utiles) qui vont aider à l'acheminement de ces bits au bon endroit, puis au bon ordinateur, puis au bon logiciel. 
 Les différents protocoles qui régissent cette transmission sont regroupés dans ce qui est appelé un **modèle**. Deux modèles synthétisent ces protocoles :
+
 - le **modèle Internet** (ou modèle **TCP/IP**, 1974), organisé en **4** couches : liaison, réseau, transport, application.
 - le **modèle OSI** (Open Systems Interconnection, 1984), organisé en **7** couches : physique, liaison, réseau, transport, session, présentation,application.
 
@@ -15,7 +16,7 @@ Ces deux modèles coïncident suivant le schéma ci-dessus. Ce sont des modèles
 Dans la suite de ce cours, nous évoquerons les couches par leur numéro dans le modèle OSI.
 
 
-![](data/OSI.png)
+![](data/OSI.png){: .center}
 
 Lors de son émission, un message va subir successivement toutes les transformations effectuées par chaque couche, depuis sa création (couche 7) jusqu'à sa transmission physique (couche 1).  
 
@@ -60,19 +61,19 @@ Vous pouvez télécharger le fichier [ping_switch.fls](data/ping_switch.fls).
 
 - Relions une machine ```192.168.0.10``` d'adresse MAC ```BC:81:81:42:9C:31```  à une machine ```192.168.0.11``` d'adresse MAC ```2A:AB:AC:27:D6:A7``` à travers un switch.  
  
-![](data/K1.png) 
+![](data/K1.png){: .center} 
 
 - Observons la table SAT de notre switch : elle est vide, car aucune machine n'a encore cherché à communiquer.  
 
-![](data/K2.png) 
+![](data/K2.png){: .center} 
 
 - Lançons un ping depuis ```192.168.0.10``` vers ```192.168.0.11``` et observons les données échangées :   
 
-![](data/K3.png)  
+![](data/K3.png){: .center}  
 
 - Observons de plus près la première ligne de données échangées.  
 
-![](data/K4.png)   
+![](data/K4.png){: .center}   
 
 Cette première ligne est une requête **ARP**. ARP est un protocole qui s'interface entre la couche 3 / réseau (appelée dans la capture d'écran _Internet_)  et la couche 2 / liaison (appelée dans la capture d'écran _Réseau_). Comme indiqué dans le commentaire, elle consiste à un appel à tout le réseau : "Est-ce que quelqu'un ici possède l'IP ```192.168.0.11``` ?
 
@@ -84,7 +85,7 @@ Il faut comprendre à cette étape que l'adresse IP est totalement inutile pour 
 Revenons à notre ping vers ```192.168.0.11```.
 
 La commande ```arp -a``` effectuée dans un terminal de la machine ```192.168.0.10``` nous permet de voir qu'elle ne connaît encore personne dans son sous-réseau. La table de correspondance IP ⮀ MAC ne contient que l'adresse de broadcast ```255.255.255.255```, qui permet d'envoyer un message à tout le réseau.  
-![](data/K5.png) 
+![](data/K5.png){: .center} 
 
 Constatant qu'elle ne sait pas quelle est l'adresse MAC de ```192.168.0.11```, la machine ```192.168.0.10``` commence donc par envoyer un message à **tout** le sous-réseau, par l'adresse MAC de broadcast ```FF:FF:FF:FF:FF:FF```. Le switch va lui aussi lui aussi relayer ce message à tous les équipements qui lui sont connectés (dans notre cas, un seul ordinateur) 
 
@@ -93,33 +94,33 @@ Constatant qu'elle ne sait pas quelle est l'adresse MAC de ```192.168.0.11```, l
 
 La machine ```192.168.0.11``` s'est reconnu dans le message de broadcast de la machine ```192.168.0.10```. Elle lui répond pour lui donner son adresse MAC.  
 
-![](data/K6.png) 
+![](data/K6.png){: .center} 
 
 À partir de ce moment, la machine ```192.168.0.10``` sait comment communiquer avec ```192.168.0.11```. Elle l'écrit dans sa table ```arp```, afin de ne plus avoir à émettre le message n°1 :  
 
-![](data/K7.png) 
+![](data/K7.png){: .center} 
 
 
 Le switch, qui a vu passer sur ses ports 0 et 1 des messages venant des cartes MAC ```BC:81:81:42:9C:31```  et ```2A:AB:AC:27:D6:A7```, peut mettre à jour sa table SAT :  
 
-![](data/K9.png) 
+![](data/K9.png){: .center} 
 
 Par la suite, il saura sur quel port rediriger les messages destinés à ces deux adresses MAC. Un switch est un équipement de réseau de la couche 2 du modèle OSI, il ne sait pas lire les adresses IP : il ne travaille qu'avec les adresses MAC.
 
 **Message 3 : le ping est envoyé**
 
-![](data/K8.png) 
+![](data/K8.png){: .center} 
 
 Schématisons cette trame Ethernet (couche 2 du modèle OSI) :
 
-![](data/trame1.png) 
+![](data/trame1.png){: .center} 
 
 **Message 4 : le pong est retourné**
 
-![](data/K10.png) 
+![](data/K10.png){: .center} 
 
 
-![](data/trame2.png) 
+![](data/trame2.png){: .center} 
 
 
 
@@ -127,13 +128,15 @@ Schématisons cette trame Ethernet (couche 2 du modèle OSI) :
 
 Vous pouvez télécharger le fichier [ping_routeur.fls](data/ping_routeur.fls).
 
-![](data/schema_routeur.png) 
+![](data/schema_routeur.png){: .center} 
 
 L'objectif est d'observer les différentes trames lors d'un ping entre :
+
 - la machine ```192.168.0.1 / 24``` (adresse MAC ```F9:E1:D6:0B:29:03``` ) et
 - la machine ```192.168.1.1 / 24``` (adresse MAC ```D3:79:96:B8:5C:A4``` )
 
 Le routeur est configuré ainsi :
+
 - interface sur le réseau A :
     - IP : ```192.168.0.254``` 
     - MAC : ```77:C2:22:C9:5C:E7``` 
@@ -146,7 +149,7 @@ Le routeur est configuré ainsi :
 
 Lors de l'observation des messages reçus ou émis par la machine ```192.168.0.1```, on peut être intrigué par ce tout premier message reçu, émis par le routeur : 
 
-![](data/K11.png) 
+![](data/K11.png){: .center} 
 
 On peut y distinguer les 4 couches du modèle Internet. Le routeur, par ce message distribué à tous les éléments du sous-réseau A (il envoie un message équivalent sur son sous-réseau B), déclare sa présence, et le fait qu'il possède deux interfaces, une pour chaque réseau. 
 Il se positionne ainsi comme une passerelle : «c'est par moi qu'il faudra passer si vous voulez sortir de votre sous-réseau». 
@@ -160,7 +163,7 @@ Elle va donc envoyer son message à sa passerelle, qui est l'adresse du routeur 
 
 Cette première trame est :
 
-![](data/trame3.png) 
+![](data/trame3.png){: .center} 
 
 
 **Étape 2 : le routeur décapsule la trame**
@@ -171,22 +174,23 @@ Dans notre cas, l'adresse IP ```192.168.1.1```de destination lui est accessible 
 
 Le routeur va modifier la valeur du TTL (Time To Live), en la décrémentant de 1. Si, après de multiples routages, cette valeur devenait égale à 0, ce paquet serait détruit. Ceci a pour but d'éviter l'encombrement des réseaux avec des paquets ne trouvant pas leur destination.
 
-Remarque : 
-    dans notre cas, le routeur va laisser intacte l'adresse IP Source. Ce n'est pas toujours le cas. Dans le cas classique de la box qui relie votre domicile à internet, le routeur contenu dans celle-ci va remplacer l'adresse locale de votre ordinateur ou smartphone (ex ```192.168.0.26```) par son IP publique (celle apparaissant sur [whatsmyip.com](http://whatsmyip.com), par exemple). Elle effectue ce qu'on appelle une translation d'adresse (NAT). 
+??? note "NAT : translation d'adresse"
+    Dans notre cas, le routeur va laisser intacte l'adresse IP Source. Ce n'est pas toujours le cas. Dans le cas classique de la box qui relie votre domicile à internet, le routeur contenu dans celle-ci va remplacer l'adresse locale de votre ordinateur ou smartphone (ex ```192.168.0.26```) par son IP publique (celle apparaissant sur [whatsmyip.com](http://whatsmyip.com), par exemple). Elle effectue ce qu'on appelle une translation d'adresse (NAT). 
     Pourquoi ? Parce que sinon la réponse du serveur distant que vous interrogez serait envoyée sur une adresse locale (votre adresse ```192.168.0.26```), qui est introuvable depuis un réseau extérieur. Il faut donc remplacer toutes les adresses locales par l'IP publique de votre box.
     Pour éviter que la réponse du serveur web que vous avez interrogé ne soit affichée sur l'ordinateur de vos parents, le routeur affecte des ports différents à chaque machine de son sous-réseau. Ce port est inclus dans le message transmis au serveur, et il l'est aussi dans sa réponse : le routeur peut donc rediriger le trafic vers la bonne machine du sous-réseau.
 
 Le routeur va ré-encapsuler le paquet IP modifié, et créer une nouvelle trame Ethernet en modifiant :
+
 - l'adresse MAC source : il va mettre l'adresse MAC de son interface dans le sous-réseau B.
 - l'adresse MAC de destination : il va mettre l'adresse MAC de ```192.168.1.1 ``` (qu'il aura peut-être récupérée au préalable par le protocole ARP)
 
 Cette deuxième trame est donc :
 
-![](data/trame4.png) 
+![](data/trame4.png){: .center} 
 
 On peut observer dans Filius cette trame, en se positionnant sur l'interface ```192.168.1.254 ``` du routeur, ou sur ```192.168.1.1 ``` :
 
-![](data/K12.png) 
+![](data/K12.png){: .center} 
 
 
 En suivant le même principe, la machine ```192.168.1.1 ``` pourra envoyer son _pong_.
@@ -197,19 +201,20 @@ En suivant le même principe, la machine ```192.168.1.1 ``` pourra envoyer son _
 Ce protocole est un exemple simple de fiabilisation du transfert de données. 
 
 ### 1. Contexte
+
 - Alice veut envoyer à Bob un message M, qu'elle a prédécoupé en sous-messages M0, M1, M2,...
 - Alice envoie ses sous-messages à une cadence Δt fixée (en pratique, les sous-messages partent quand leur acquittement a été reçu ou qu'on a attendu celui-ci trop longtemps : on parle alors de _timeout_)
 
 ### 2. Situation idéale
 
-![](data/ideale.png) 
+![](data/ideale.png){: .center} 
 
 Dans cette situation, les sous-messages arrivent tous à destination dans le bon ordre. La transmission est correcte.
 
 ### 3. Situation réelle
 Mais parfois, les choses ne se passent pas toujours aussi bien. Car si on maîtrise parfaitement le timing de l'envoi des sous-messages d'Alice, on ne sait pas combien de temps vont mettre ces sous-messages pour arriver, ni même (attention je vais passer dans un tunnel) s'ils ne vont pas être détruits en route.
 
-![](data/realite.png) 
+![](data/realite.png){: .center} 
 
 Le sous-message M0 est arrivé après le M1, le message M2 n'est jamais arrivé...
 
@@ -223,13 +228,13 @@ Pourquoi ne pas demander à Bob d'envoyer un signal pour dire à Alice qu'il vie
 Nous appelerons ce signal ACK (comme _acknowledgement_, traduisible par «accusé de réception»).
 Ce signal ACK permettra à Alice de renvoyer un message qu'elle considérera comme perdu :
 
-![](data/naive.png) 
+![](data/naive.png){: .center} 
 
 N'ayant pas reçu le ACK consécutif à son message M1, Alice suppose (avec raison) que ce message n'est pas parvenu jusqu'à Bob, et donc renvoie le message M1.
 
 ### 4. Mais peu efficace...
 
-![](data/naivebad.png) 
+![](data/naivebad.png){: .center} 
 
 Le deuxième ACK de Bob a mis trop de temps pour arriver (ou s'est perdu en route) et donc Alice a supposé que son sous-message M1 n'était pas arrivé. Elle l'a donc renvoyé, et Bob se retrouve avec deux fois le sous-message M1. La transmission est incorrecte. 
 En faisant transiter un message entre Bob et Alice, nous multiplions par 2 la probabilité que des problèmes techniques de transmission interviennent. Et pour l'instant rien ne nous permet de les détecter.
@@ -242,6 +247,7 @@ Pour réaliser ceci, Alice va rajouter à chacun de ses sous-messages un bit de 
 Quand Bob reçoit un FLAG, il renvoie un ACK **égal au FLAG reçu**.
 
 Alice va attendre ce ACK contenant le même bit que son dernier FLAG envoyé :
+
 - tant qu'elle ne l'aura pas reçu, elle continuera à envoyer **le même sous-message, avec le même FLAG**.
 - dès qu'elle l'a reçu, elle peut envoyer un nouveau sous-message en **inversant** («alternant») **le bit de son dernier FLAG** (d'où le nom de ce protocole).
 
@@ -252,18 +258,18 @@ Observons ce protocole dans plusieurs cas :
 
 ##### 5.1 Cas où le sous-message est perdu
 
-![](data/alt2.png) 
+![](data/alt2.png){: .center} 
 
 
 
 ##### 5.2 Cas où le ACK  est perdu
-![](data/alt1.png) 
+![](data/alt1.png){: .center} 
 
 Le protocole a bien détecté le doublon du sous-message M1.
 
 ##### 5.3 Cas où un sous-message est en retard
 
-![](data/alt3.png) 
+![](data/alt3.png){: .center} 
 
 Le protocole a bien détecté le doublon du sous-message M1... mais que se passerait-il si notre premier sous-message M1 était _encore plus_ en retard ?
 
