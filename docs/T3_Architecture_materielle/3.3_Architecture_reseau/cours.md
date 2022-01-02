@@ -173,7 +173,7 @@ Dans notre exemple, l'adresse ```172.16.52.3``` n'est pas dans le sous-réseau d
 
 ??? tip " Test du ping entre ```192.168.0.1``` et ```192.168.1.2```"
     ![](data/ft2.png){: .center}
-    Cela ne marche pas. Les paquets sont perdus.
+    Cela ne marche pas. La carte réseau refuse d'envoyer les paquets car elle ne sait pas où les envoyer.
 
 
 Pourquoi cet échec ? Parce que nous devons dire à chaque machine qu'une passerelle est maintenant disponible pour pouvoir sortir de son propre sous-réseau. Il faut donc aller sur la machine ```192.168.0.1``` et lui donner l'adresse de sa passerelle, qui est ```192.168.0.254```.
@@ -193,6 +193,7 @@ On y aperçoit que la machine ```192.168.1.2``` est atteignable en deux sauts de
 **Cas d'un réseau domestique**  
 
 Chez vous, la box de votre opérateur joue simultanément le rôle de switch et de routeur :
+
 - switch car elle répartit la connexion entre les différents dispositifs (ordinateurs branchés en ethernet, smartphone en wifi, tv connectée...)
 - routeur car elle fait le lien entre ce sous-réseau domestique (les appareils de votre maison) et le réseau internet.
 
