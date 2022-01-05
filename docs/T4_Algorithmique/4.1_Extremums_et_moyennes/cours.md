@@ -49,7 +49,7 @@
 
 !!! note "Recherche d'occurrence :heart:"
     ```python
-    def recherche_occurence(elt, tab):
+    def recherche_occurrence(elt, tab):
         ''' renvoie la liste (éventuellement vide)
         des indices de elt dans tab'''
         liste_indice = []
