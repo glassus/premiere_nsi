@@ -15,14 +15,15 @@
 Nous allons tout d'abord considérer le cas où le serveur renvoie une page unique, identique pour tous les utilisateurs. De plus, l'utilisateur ne pourra pas agir sur sa page : il n'y a aucune interactivité.
 
 Exemple de page statique côté serveur et côté utilisateur :
-- cette [merveille](http://glassus1.free.fr/interesting.html) de page web.
-- plus complète, mais tout aussi statique : cette page [Wikipedia](https://fr.wikipedia.org/wiki/John_Horton_Conway) consacrée à John Conway.
+
+- cette [merveille](http://glassus1.free.fr/interesting.html){:target="_blank"} de page web.
+- plus complète, mais tout aussi statique : cette page [Wikipedia](https://fr.wikipedia.org/wiki/John_Horton_Conway){:target="_blank"} consacrée à John Conway.
 
 #### 1.1 HTML pur
 
 Lorsque le client demande au serveur le contenu d'une page web, celui-ci lui renvoie, dans le cas le plus simple, une simple page html.  
 HTML est un langage dit « à balises ».  Ce n'est pas à proprement parler un langage de programmation, mais plutôt un langage de description de contenu. 
-Il a été inventé en 1992 par [Tim Berners-Lee](https://fr.wikipedia.org/wiki/Tim_Berners-Lee). La version actuellement utilisée est le ```html5```.
+Il a été inventé en 1992 par [Tim Berners-Lee](https://fr.wikipedia.org/wiki/Tim_Berners-Lee){:target="_blank"}. La version actuellement utilisée est le ```html5```.
 
 **Exemple de page web minimale**
 
@@ -51,14 +52,17 @@ Il a été inventé en 1992 par [Tim Berners-Lee](https://fr.wikipedia.org/wiki/
 
 ```
 
-Vous pouvez contempler [ici](https://exemplehtmlpur--g-lassus.repl.co) le rendu de cette magnifique page.
+Vous pouvez contempler [ici](https://exemplehtmlpur--g-lassus.repl.co){:target="_blank"} le rendu de cette magnifique page.
 
+{{ initexo(0)}}
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+      - Créez un dossier contenant un fichier ```mapage.html```.
+      - Créez une page contenant une image et un lien vers le site du lycée.
+      - Vous pouvez utiliser le logicile Geany, installé sur notre Debian.
+      - Vous pouvez aussi utiliser un éditeur en ligne avec rendu instantané, du type [https://www.w3schools.com/tryit/](https://www.w3schools.com/tryit/)
+       
 
-
-##### Exercice 1
-- Créez un dossier contenant un fichier ```mapage.html```.
-- Créez une page contenant une image et un lien vers le site du lycée.
-- Vous pouvez aussi utiliser un éditeur en ligne avec rendu instantané, du type [https://www.w3schools.com/tryit/](https://www.w3schools.com/tryit/)
 
 
 

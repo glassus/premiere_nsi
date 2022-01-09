@@ -1,12 +1,14 @@
 
 ## Thèmes en cours d'étude :
 
-- [architecture réseau](./T3_Architecture_materielle/3.3_Architecture_reseau/cours.md)  
-- [le tri par insertion](./T4_Algorithmique/4.3_Tri_par_insertion/cours/)  
-- [complexité](./T4_Algorithmique/4.2_Complexite/cours/)
+- [protocoles réseau](./T3_Architecture_materielle/3.4_Protocoles_de_communication/cours/)  
+- [architecture réseau](./T3_Architecture_materielle/3.3_Architecture_reseau/cours/)  
+
 
 
 ??? note "*Anciens thèmes traités*"
+    - [le tri par insertion](./T4_Algorithmique/4.3_Tri_par_insertion/cours/)  
+    - [complexité](./T4_Algorithmique/4.2_Complexite/cours/)
     - [recherche dans un tableau](T4_Algorithmique/4.1_Extremums_et_moyennes/cours/)  
     - [les listes](T2_Representation_des_donnees/2.1_Listes/cours/)
     - [les fonctions](T1_Demarrer_en_Python/1.5_Fonctions/cours/)
