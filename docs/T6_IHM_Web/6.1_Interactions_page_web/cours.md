@@ -110,10 +110,11 @@ h1 {
 }
 ```
 
-Vous pouvez contempler à l'adresse [https://exemplehtmlcss--g-lassus.repl.co](https://exemplehtmlcss--g-lassus.repl.co) le nouveau rendu de cette encore plus magnifique page.
+Vous pouvez contempler à l'adresse [https://exemplehtmlcss--g-lassus.repl.co](https://exemplehtmlcss--g-lassus.repl.co){:target="_blank"} le nouveau rendu de cette encore plus magnifique page.
 
 **En savoir plus** 
-- le cours d'OpenClassrooms : https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3
+
+- le cours d'OpenClassrooms : [https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3](https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3){:target="_blank"}
 
 
 
