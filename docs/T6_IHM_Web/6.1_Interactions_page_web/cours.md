@@ -138,7 +138,7 @@ Jusqu'à présent, la page web envoyée par le serveur est :
 
 Le JavaScript va venir régler le problème n°2 : il est possible de fabriquer une page sur laquelle le client va pouvoir agir **localement**, sans avoir à redemander une nouvelle page au serveur.
 
-Inventé en 1995 par [Brendan Eich](https://fr.wikipedia.org/wiki/Brendan_Eich) pour le navigateur Netscape, le langage JavaScript s'est imposé comme la norme auprès de tous les navigateurs pour apporter de l'interactivité aux pages web.
+Inventé en 1995 par [Brendan Eich](https://fr.wikipedia.org/wiki/Brendan_Eich){:target="_blank"} pour le navigateur Netscape, le langage JavaScript s'est imposé comme la norme auprès de tous les navigateurs pour apporter de l'interactivité aux pages web.
 
 **Exemple minimal de couple html / javascript** :
 Notre fichier ```index.html``` fait référence, au sein d'une balise ```<script>```, à un fichier externe ```script.js``` qui contiendra notre code JavaScript.   
@@ -187,7 +187,7 @@ function choix(color){
 ```
 
 
-Le résultat de cette page peut être consulté à l'adresse [https://exemplejs.g-lassus.repl.co](https://exemplejs.g-lassus.repl.co).
+Le résultat de cette page peut être consulté à l'adresse [https://exemplejs.g-lassus.repl.co](https://exemplejs.g-lassus.repl.co){:target="_blank"}.
 
 **Commentaires**
 
@@ -197,9 +197,10 @@ Le résultat de cette page peut être consulté à l'adresse [https://exemplejs.
 La puissance du JavaScript permet de réaliser aujourd'hui des interfaces utilisateurs très complexes au sein d'un navigateur, équivalentes à celles produites par des logiciels externes (pensez à Discord, par ex.). Bien sûr, dans ces cas complexes, le serveur est aussi sollicité pour modifier la page, comme nous le verrons en partie 3.
 
 
-**En savoir plus** 
-- le guide JavaScript de la fondation Mozilla : https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide
-- le cours d'OpenClassrooms : https://openclassrooms.com/fr/courses/2984401-apprenez-a-coder-avec-javascript
+**En savoir plus**
+
+- le guide JavaScript de la fondation Mozilla : [https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide){:target="_blank"}
+- le cours d'OpenClassrooms : [https://openclassrooms.com/fr/courses/2984401-apprenez-a-coder-avec-javascript](https://openclassrooms.com/fr/courses/2984401-apprenez-a-coder-avec-javascript){:target="_blank"}
 
 
 ##### Exercice 4
