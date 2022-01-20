@@ -1,4 +1,8 @@
 
+### Infos orientation :
+- [Lien](https://www.geipi-polytech.org/){. target="_blank"} vers le site des 34 écoles d'ingénieurs **publiques** du groupe GEIPI
+- [Lien](data/sujet0_geipi.pdf){. target="_blank"} vers le sujet 0 de leur épreuve NSI.
+
 ## Thèmes en cours d'étude :
 - [html-css-js](./T6_IHM_Web/6.1_Interactions_page_web/cours/) 
 - [protocoles réseau](./T3_Architecture_materielle/3.4_Protocoles_de_communication/cours/)  
