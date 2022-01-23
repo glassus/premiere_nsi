@@ -122,7 +122,7 @@ Vous pouvez contempler à l'adresse [https://exemplehtmlcss--g-lassus.repl.co](h
 Reprenez votre page de l'exercice 1 et rajoutez une feuille de style.
 
 ##### Exercice 3
-- Allez sur le site http://sudouest.fr, et affichez l'inspecteur d'élement de votre navigateur (généralement accessible en appuyant sur ```F12``` )
+- Allez sur le site [http://sudouest.fr](http://sudouest.fr){:target="_blank"}, et affichez l'inspecteur d'élement de votre navigateur (généralement accessible en appuyant sur ```F12``` )
 - Modifiez le plus possible les attributs de style de la page.
 
 
@@ -225,7 +225,7 @@ Les langages serveurs, parmi lesquels PHP (présent sur environ 80% des serveurs
 #### 3.1 Page statique (côté serveur) : 
 Lors d'une requête d'un client vers un serveur, si le client demande la page ```index.html```, une **copie exacte** du fichier ```index.html``` est transmise au client sur sa machine.  
 
-**Exemple :** la page http://glassus1.free.fr/interesting.html que vous avez déjà consultée se trouve **telle quelle** sur le serveur mis à disposition par Free pour l'hébergement des pages personnelles :
+**Exemple :** la page [http://glassus1.free.fr/interesting.html](http://glassus1.free.fr/interesting.html){:target="_blank"} que vous avez déjà consultée se trouve **telle quelle** sur le serveur mis à disposition par Free pour l'hébergement des pages personnelles :
 
 ![](data/extraitfree1.png){: .center}
 
@@ -234,7 +234,7 @@ Depuis votre navigateur, l'affichage du code-source (par Ctrl-U) vous donnera le
 #### 3.2  Page dynamique (côté serveur) :
 Lors d'une requête d'un client vers un serveur, si le client demande la page ```test.php```, un code html est généré à partir  du fichier ```test.php```  puis est transmise au client sur sa machine. Le fichier transmis ne contient plus de balises ```php```, il ne comporte que des balises ```html``` classiques.  
 
-**Exemple :** la consultation de la page http://glassus1.free.fr/test.php va renvoyer la page suivante :
+**Exemple :** la consultation de la page [http://glassus1.free.fr/test.php](http://glassus1.free.fr/test.php){:target="_blank"} va renvoyer la page suivante :
 
 ![](data/php1.png){: .center}
 
@@ -283,7 +283,7 @@ Nous sommes le 13-04-2020
 
 Voilà comment un serveur peut adapter la page qu'il renvoie, suivant l'utilisateur qui la demande. Nous verrons prochainement comment par des requêtes le client peut envoyer des paramètres au serveur, et comment celui-ci modifie sa réponse en conséquence.
 
-**En savoir plus :** https://www.php.net/manual/fr/tutorial.firstpage.php
+**En savoir plus :** [https://www.php.net/manual/fr/tutorial.firstpage.php](https://www.php.net/manual/fr/tutorial.firstpage.php){:target="_blank"}
 
 ##### Exercice 5
 - Allez sur https://repl.it/ , et créez un nouveau repl.it en choisissant PHP Web Server.

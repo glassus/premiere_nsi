@@ -24,6 +24,7 @@ Le mot de passe est :
 
 
 **Explications :**
+
 - le fichier ```cible2.php``` est le fichier sur le serveur qui recevra les paramètres contenus dans le formulaire.
 - le paramètre sera nommé ```pass``` et sera de type ```password```, ce qui signifie qu'on n'affichera pas les caractères tapés par l'utilisateur.
 On aurait pu aussi avoir un type :
@@ -33,7 +34,7 @@ On aurait pu aussi avoir un type :
 - un bouton comportant le label «Valider» déclenchera l'envoi (grâce au type particulier ```submit```) des paramètres (ici un seul, la variable ```pass```) au serveur.
 
 #### Test :
-1. Rendez-vous sur la page http://glassus1.free.fr/ex_get.html et testez un mot de passe.
+1. Rendez-vous sur la page [http://glassus1.free.fr/ex_get.html](http://glassus1.free.fr/ex_get.html){:target="_blank"} et testez un mot de passe.
 2. Observez attentivement l'url de la page sur laquelle vous êtes arrivés. Que remarquez-vous ?
 
 
@@ -42,7 +43,7 @@ Les paramètres passés au serveur par la méthode GET sont transmis **dans l'ur
 
 ![](data/get1.png){: .center}
 
-Évidemment, c'est une méthode catastrophique pour la transmission des mots de passe. Par contre, c'est une méthode efficace pour accéder directement à une page particulière : ainsi l'url https://www.google.fr/search?q=bordeaux nous amènera directement au résultat de la recherche Google sur le mot-clé «bordeaux».
+Évidemment, c'est une méthode catastrophique pour la transmission des mots de passe. Par contre, c'est une méthode efficace pour accéder directement à une page particulière : ainsi l'url [https://www.google.fr/search?q=bordeaux](https://www.google.fr/search?q=bordeaux){:target="_blank"} nous amènera directement au résultat de la recherche Google sur le mot-clé «bordeaux».
 
 
 ### 1.2. La méthode POST
@@ -60,7 +61,7 @@ Le mot de passe est :
 ```
 
 #### Test :
-1. Rendez-vous sur la page http://glassus1.free.fr/ex_post.html et testez un mot de passe.
+1. Rendez-vous sur la page [http://glassus1.free.fr/ex_post.html](http://glassus1.free.fr/ex_post.html){:target="_blank"} et testez un mot de passe.
 2. Observez attentivement l'url de la page sur laquelle vous êtes arrivés. Que remarquez-vous ?
 
 #### La méthode POST et la confidentialité :
@@ -70,7 +71,7 @@ Les paramètres passés au serveur par la méthode POST **ne sont pas visibles**
 
 Donc, la transmission du mot de passe est bien sécurisée par la méthode POST ? 
 
-Pas du tout ! Si le protocole de transmission est du ```http```  et non pas du ```https```, n'importe qui interceptant le trafic peut lire le contenu de la requête et y trouver le mot de passe en clair.
+:warning: Pas du tout ! Si le protocole de transmission est du ```http```  et non pas du ```https```, n'importe qui interceptant le trafic peut lire le contenu de la requête et y trouver le mot de passe en clair.
 
 **Exemple avec [Wireshark](https://www.wireshark.org/)** :
 
@@ -90,7 +91,7 @@ Le passage en ```https``` chiffre le contenu de la requête et empêche donc la 
     - n'ont pas vocation à créer des modifications sur le serveur (ceci est plus une bonne pratique qu'une interdiction technique)
     - ne sont pas trop longs. En effet, vu qu'ils seront contenus dans l'url, il peut exister des limites de longueur spécifiques au navigateur. Une taille inférieure à 2000 caractère est conseillée.
     Si vous vous demandez à quoi peuvent servir des url si longues, songez à ce type d'url, (ici PythonTutor) où le code du programme à analyser est **contenu** dans l'url : 
-    http://pythontutor.com/visualize.html#code=L%20%3D%20%5B2,%203,%206,%207,%2011,%2014,%2018,%2019,%2024%5D%0A%0Adef%20trouve_dicho%28L,%20n%29%20%3A%0A%20%20%20%20indice_debut%20%3D%200%0A%20%20%20%20indice_fin%20%3D%20len%28L%29%20-%201%0A%20%20%20%20while%20indice_debut%20%3C%3D%20indice_fin%20%3A%0A%20%20%20%20%20%20%20%20indice_centre%20%3D%20%28indice_debut%20%2B%20indice_fin%29%20//%202%0A%20%20%20%20%20%20%20%20valeur_centrale%20%3D%20L%5Bindice_centre%5D%0A%20%20%20%20%20%20%20%20if%20valeur_centrale%20%3D%3D%20n%20%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20indice_centre%0A%20%20%20%20%20%20%20%20if%20valeur_centrale%20%3C%20n%20%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20indice_debut%20%3D%20indice_centre%20%2B%201%0A%20%20%20%20%20%20%20%20else%20%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20indice_fin%20%3D%20indice_centre%20-%201%0A%20%20%20%20return%20None%0A%0Aprint%28trouve_dicho%28L,14%29%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false
+    [http://pythontutor.com/visualize.html#code=L%20%3D%20%5B2,%203,%206,%207,%2011,%2014,%2018,%2019,%2024%5D%0A%0Adef%20trouve_dicho%28L,%20n%29%20%3A%0A%20%20%20%20indice_debut%20%3D%200%0A%20%20%20%20indice_fin%20%3D%20len%28L%29%20-%201%0A%20%20%20%20while%20indice_debut%20%3C%3D%20indice_fin%20%3A%0A%20%20%20%20%20%20%20%20indice_centre%20%3D%20%28indice_debut%20%2B%20indice_fin%29%20//%202%0A%20%20%20%20%20%20%20%20valeur_centrale%20%3D%20L%5Bindice_centre%5D%0A%20%20%20%20%20%20%20%20if%20valeur_centrale%20%3D%3D%20n%20%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20indice_centre%0A%20%20%20%20%20%20%20%20if%20valeur_centrale%20%3C%20n%20%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20indice_debut%20%3D%20indice_centre%20%2B%201%0A%20%20%20%20%20%20%20%20else%20%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20indice_fin%20%3D%20indice_centre%20-%201%0A%20%20%20%20return%20None%0A%0Aprint%28trouve_dicho%28L,14%29%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false](http://pythontutor.com/visualize.html#code=L%20%3D%20%5B2,%203,%206,%207,%2011,%2014,%2018,%2019,%2024%5D%0A%0Adef%20trouve_dicho%28L,%20n%29%20%3A%0A%20%20%20%20indice_debut%20%3D%200%0A%20%20%20%20indice_fin%20%3D%20len%28L%29%20-%201%0A%20%20%20%20while%20indice_debut%20%3C%3D%20indice_fin%20%3A%0A%20%20%20%20%20%20%20%20indice_centre%20%3D%20%28indice_debut%20%2B%20indice_fin%29%20//%202%0A%20%20%20%20%20%20%20%20valeur_centrale%20%3D%20L%5Bindice_centre%5D%0A%20%20%20%20%20%20%20%20if%20valeur_centrale%20%3D%3D%20n%20%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20indice_centre%0A%20%20%20%20%20%20%20%20if%20valeur_centrale%20%3C%20n%20%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20indice_debut%20%3D%20indice_centre%20%2B%201%0A%20%20%20%20%20%20%20%20else%20%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20indice_fin%20%3D%20indice_centre%20-%201%0A%20%20%20%20return%20None%0A%0Aprint%28trouve_dicho%28L,14%29%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false){:target="_blank"}
     <br>
 - **POST** : la méthode POST doit être utilisée quand les paramètres à envoyer :
     - ont un caractère confidentiel (attention, à coupler impérativement avec un protocole de chiffrement).
@@ -107,9 +108,10 @@ Du côté du serveur, le langage utilisé (PHP, Java...) doit récupérer les pa
 
 #### Exemple en PHP
 
- L'acronyme **PHP** signifie **P**HP : **H**ypertext **P**rocessor (c'est un [acronyme récursif](https://fr.wikipedia.org/wiki/Sigles_auto-r%C3%A9f%C3%A9rentiels)).
+ L'acronyme **PHP** signifie **P**HP : **H**ypertext **P**rocessor (c'est un [acronyme récursif](https://fr.wikipedia.org/wiki/Sigles_auto-r%C3%A9f%C3%A9rentiels){:target="_blank"}).
 
  Notre exemple va contenir deux fichiers :
+
  - une page ```page1.html``` , qui contiendra un formulaire et qui renverra, par la méthode GET, un paramètre à la page ```page2.php```.
  - une page ```page2.php``` , qui génèrera un code ```html ``` personnalisé en fonction du paramètre reçu.  
 
@@ -186,6 +188,9 @@ La vérification d'un mot de passe doit aussi se faire sur un serveur distant.
 
 ## Exercice : attaque par force brute et requête GET
 
+![image](data/hackerman.png){: .center width=50%}
+
+
 #### Pré-requis 1 : le module ```requests``` en python
 
 Le module ```requests``` permet d'aller chercher le contenu d'une page web, suivant la syntaxe ci-dessous.
@@ -216,26 +221,20 @@ Ceci est vraiment une jolie page web.
 Le code ci-dessous permet de collecter dans une liste ```mots``` l'ensemble des mots compris dans le fichier ```monfichiertexte.txt``` (si celui-ci comprend un mot par ligne) 
 
 ```python
-f = open("monfichiertexte.txt","r") # ouverture du fichier
-r = f.readlines() # r est une liste contenant toutes les lignes du fichier
-f.close()  # on ferme le fichier
-mots = [] # notre liste finale
-for k in r :
-    mots.append(k[:-1]) # permet de se débarasser du caractère de fin de ligne
-
+mots = open("monfichiertexte.txt").read().splitlines()
 ```
 
 #### Exercice :
-Votre objectif est de trouver le mot de passe demandé sur la page http://glassus1.free.fr/exoBF.html
+Votre objectif est de trouver le mot de passe demandé sur la page [http://glassus1.free.fr/exoBF.html](http://glassus1.free.fr/exoBF.html){:target="_blank"}
 
 Vous allez vous appuyer sur un leak (*fuite*) très célèbre de mots de passe , qui est le leak du site Rockyou. Dans la base de données de ce site, 32 millions de mots de passe étaient stockés en clair ```¯\_(ツ)_/¯```.
 
 Lorsque le site a été piraté (par une injection SQL, voir le cours de Terminale), ces 32 millions de mots de passe se sont retrouvés dans la nature. Ils sont aujourd'hui téléchargeables librement, et constituent un dictionnaire de 14 341 564 mots de passe différents (car parmi les 32 millions d'utilisateurs, beaucoup utilisaient des mots de passe identiques).
-Ce fichier est téléchargeable [ici](https://www.kaggle.com/wjburns/common-password-list-rockyoutxt), mais attention il pèse 134 Mo.
+Ce fichier est téléchargeable [ici](https://www.kaggle.com/wjburns/common-password-list-rockyoutxt){:target="_blank"}, mais attention il pèse 134 Mo.
 
-Nous allons utiliser un fichier beaucoup plus léger ne contenant que les 1000 premiers mots de passe : vous le trouverez à l'adresse http://glassus1.free.fr/extraitrockyou.txt .
+Nous allons utiliser un fichier beaucoup plus léger ne contenant que les 1000 premiers mots de passe : vous le trouverez à l'adresse [http://glassus1.free.fr/extraitrockyou.txt](http://glassus1.free.fr/extraitrockyou.txt){:target="_blank"} .
 
-L'un de ces mots de passe est le mot de passe demandé à la page  http://glassus1.free.fr/exoBF.html .
+L'un de ces mots de passe est le mot de passe demandé à la page  [http://glassus1.free.fr/exoBF.html](http://glassus1.free.fr/exoBF.html){:target="_blank"} .
 
 Lequel ?
 
