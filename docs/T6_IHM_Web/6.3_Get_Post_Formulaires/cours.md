@@ -181,7 +181,7 @@ Du côté du serveur, le langage utilisé (PHP, Java...) doit récupérer les pa
 #### Remarque
 L'exemple ci-dessus est un mauvais exemple : rien ne justifie l'emploi d'un serveur distant. L'affichage de ce message aurait très bien pu se faire en local sur le navigateur du client, en Javascript par exemple.
 
-L'envoi de paramètre à un serveur distant est nécessaire pour aller interroger une base de données, par exemple (lorsque vous remplissez un formulaire sur le site https://www.oui.sncf/, les bases de données des horaires de trains, des places disponibles et de leurs tarifs ne sont pas hébergées sur votre ordinateur en local...).
+L'envoi de paramètre à un serveur distant est nécessaire pour aller interroger une base de données, par exemple (lorsque vous remplissez un formulaire sur le site de la SNCF, les bases de données des horaires de trains, des places disponibles et de leurs tarifs ne sont pas hébergées sur votre ordinateur en local...).
 
 La vérification d'un mot de passe doit aussi se faire sur un serveur distant.
 
@@ -194,11 +194,17 @@ La vérification d'un mot de passe doit aussi se faire sur un serveur distant.
 #### Pré-requis 1 : le module ```requests``` en python
 
 Le module ```requests``` permet d'aller chercher le contenu d'une page web, suivant la syntaxe ci-dessous.
+Testez le code ci-dessous :
 
-```python
->>> import requests
->>> p = requests.get("http://glassus1.free.fr/interesting.html", verify = False)
->>> print(p.text)
+```python linenums='1'
+import requests
+p = requests.get("http://glassus1.free.fr/interesting.html", verify = False)
+print(p.text)
+```
+
+La sortie en console est :
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -212,9 +218,10 @@ Ceci est vraiment une jolie page web.
 </body>
 
 </html>
-
-
 ``` 
+
+Notre programme Python se comporte donc «comme un navigateur» : il se rend sur une page, effectue une requête et récupère la page renvoyée.
+
 
 #### Pré-requis 2 : l'extraction d'un fichier texte sous forme de liste
 

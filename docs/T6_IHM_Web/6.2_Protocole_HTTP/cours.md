@@ -3,9 +3,10 @@
 ![image](data/BO.png){: .center}
 
 ## Le protocole HTTP : des requêtes et des réponses
- HTTP (HyperText Transfer Protocol) est le protocole qui régit la communication entre : 
- - le client (la machine de l'utilisateur qui souhaite obtenir une page web). On dit que le client effectue une **requête**.
- - le serveur (la machine sur laquelle sont stockés les fichiers nécessaires à l'affichage de cette page web). Le serveur va renvoyer une **réponse**.
+HTTP (HyperText Transfer Protocol) est le protocole qui régit la communication entre :  
+
+- le client (la machine de l'utilisateur qui souhaite obtenir une page web). On dit que le client effectue une **requête**.  
+- le serveur (la machine sur laquelle sont stockés les fichiers nécessaires à l'affichage de cette page web). Le serveur va renvoyer une **réponse**.
  
 
 ![image](data/requete2.png){: .center}
@@ -27,7 +28,7 @@ Observons à partir de l'Inspecteur d'élément d'un navigateur (ici Firefox) le
 ![](data/insp1.png){: .center}
 
 - Point **1** : La requête de type GET vers l'url ```http://glassus1.free.fr/interesting.html``` a généré un code de réponse **200 OK**, ce qui signifie que la requête a été traitée et que la réponse contenant la page a été envoyée.  
-Vous pouvez trouver à l'adresse https://developer.mozilla.org/fr/docs/Web/HTTP/Status la totalité des codes de réponse possibles. 
+Vous pouvez trouver à l'adresse [https://developer.mozilla.org/fr/docs/Web/HTTP/Status](https://developer.mozilla.org/fr/docs/Web/HTTP/Status){. target="_blank"} la totalité des codes de réponse possibles. 
 Citons par exemple : 
     - **304 Not Modified** : la page n'a pas eu besoin d'être renvoyée, elle indique au navigateur d'aller la rechercher dans son cache. On peut obtenir ce code de réponse en actualisant la page actuelle ```http://glassus1.free.fr/interesting.fr``` (qui est une page ultra-basique, et n'évolue pas). Pour ré-obtenir un code 200, il faut faire un hard-refresh en appuyant sur Maj pendant l'actualisation.
     - **403 Forbidden** : le client n'a pas le droit d'accès à la page.

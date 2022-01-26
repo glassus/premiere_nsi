@@ -4,13 +4,16 @@
 - [Lien](data/sujet0_geipi.pdf){. target="_blank"} vers le sujet 0 de leur épreuve NSI.
 
 ## Thèmes en cours d'étude :
+- [GET / POST / Formulaires](./T6_IHM_Web/6.3_Get_Post_Formulaires/cours/) 
+- [Protocole HTTP](./T6_IHM_Web/6.2_Protocole_HTTP/cours/) 
 - [html-css-js](./T6_IHM_Web/6.1_Interactions_page_web/cours/) 
-- [protocoles réseau](./T3_Architecture_materielle/3.4_Protocoles_de_communication/cours/)  
-- [architecture réseau](./T3_Architecture_materielle/3.3_Architecture_reseau/cours/)  
+
 
 
 
 ??? note "*Anciens thèmes traités*"
+    - [protocoles réseau](./T3_Architecture_materielle/3.4_Protocoles_de_communication/cours/)  
+    - [architecture réseau](./T3_Architecture_materielle/3.3_Architecture_reseau/cours/)  
     - [le tri par insertion](./T4_Algorithmique/4.3_Tri_par_insertion/cours/)  
     - [complexité](./T4_Algorithmique/4.2_Complexite/cours/)
     - [recherche dans un tableau](T4_Algorithmique/4.1_Extremums_et_moyennes/cours/)  
