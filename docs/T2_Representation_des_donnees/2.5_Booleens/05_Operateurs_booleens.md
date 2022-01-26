@@ -1,11 +1,7 @@
 # Les opérateurs booléens
 
-![image](data/BO.png){: .center}
 
-
-
-
-## 1. Repères historiques
+### Repères historiques
 
 ![](data/portrait_boole.jpg)
 
@@ -14,13 +10,12 @@ En 1847, le  britannique  *George BOOLE*  inventa un formalisme permettant d'éc
 Bien plus tard, en  1938, les travaux de l'américain *Claude  SHANNON*  prouva  que des  circuits  électriques
 peuvent  résoudre tous  les  problèmes  que l'algèbre  de  Boole peut  elle-même résoudre.  Pendant la deuxième guerre mondiale, les travaux  d'*Alan  TURING*  puis de *John VON NEUMANN* poseront définitivement les bases de l'informatique moderne.
 
-## 2. Algèbre de Boole
+# Algèbre de Boole
 
 L'algèbre de Boole définit des opérations dans un ensemble
 qui ne contient que **deux éléments** notés **0 et 1**, ou bien **FAUX et VRAI** ,ou encore **False** et **True** (en Python)
 
 Les opérations fondamentales sont :
-
 - la *conjonction* ("ET") 
 - la *disjonction* ("OU") 
 - la *négation* ("NON").
@@ -45,6 +40,7 @@ C'est l'opération définie par:
 Puisque l'algèbre de  Boole ne contient que deux éléments,  on peut étudier tous
 les cas possibles et les regrouper dans un tableau appelé **table de vérité**:
 
+
 |`x`| `y` | `x & y`|
 |:--:|:-:|:--:|
 |F|F|F|
@@ -54,7 +50,6 @@ les cas possibles et les regrouper dans un tableau appelé **table de vérité**
 
 
 On représente souvent les opérateurs booléens à l'aide de portes logiques:
-
 ![](data/porte_et.png)
 
 Notation usuelle en électronique : $Q=A \wedge B$
