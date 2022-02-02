@@ -1,10 +1,9 @@
 # Initiation à Pygame
-![](data/logopygame.png) 
+![](data/logopygame.png){: .center width=60%}
 ## 0. Preambule
-Pygame est un package de Python facilitant la création de jeux basés une interface graphique. Vous pouvez :
+[Pygame](https://www.pygame.org/news){. target="_blank"} est un package de Python facilitant la création de jeux basés une interface graphique. Vous pouvez l'installer sur votre distribution Python, par ```pip3 install pygame```.
 
-- l'installer sur votre distribution Python, par ```pip3 install pygame```.
-- le tester directement via https://repl.it/, en choisissant ```pygame``` dans la liste des langages proposés.
+
 
 ## 1. Préparation de la scène du jeu
 
@@ -26,7 +25,7 @@ while True :
 
 Ce code devrait vous donner ceci :
 
-![image](data/f1.png){: .center}
+![image](data/f1.png){: .center width=30%}
 
 
 **Commentaires**
@@ -36,6 +35,7 @@ Ce code devrait vous donner ceci :
 - Durant tout le code, notre scène de travail sera l'objet ```fenetre```, dans lequel nous viendrons coller de nouveaux éléments. 
 
 **Éléments structurants d'un code ```pygame``` :**
+
 - ```pygame.init()```  effectue une initialisation globale de tous les modules ```pygame``` importés. À mettre au début du code.
 - ```pygame.display.flip()``` effectue un rafraîchissement total de tous les éléments graphiques de la fenêtre. À mettre donc plutôt vers la fin du code.
 - ```while True :``` comme très souvent dans les jeux, la structure essentielle est une boucle infinie dont on ne sortira que par une interruption système (```sys.exit()```) où lors de la bascule d'un booléen. Pour l'instant, cette boucle est vide (```pass``` ).
@@ -78,7 +78,7 @@ fenetre.blit(perso, position_perso)
 
 **▸ récapitulatif du code**
 
-```python
+```python linenums='1'
 import pygame, sys
 from pygame.locals import *
 
@@ -100,7 +100,7 @@ while True :
 
 **Aperçu**
 
-![image](data/f2.png){: .center}
+![image](data/f2.png){: .center width=30%}
 
 ## 3. Gestion des évènements
 Lorsqu'un programme ```pygame``` est lancé, la variable interne ```pygame.event.get()``` reçoit en continu les évènements des périphériques gérés par le système d'exploitation.  
@@ -131,6 +131,7 @@ que la variable ```K_RIGHT``` (et toutes les autres) est reconnue.
 
 Quand une touche de clavier est appuyée, elle le reste un certain temps. Parfois volontairement (sur un intervalle long) quand l'utilisateur décide de la laisser appuyée, mais aussi involontairement (sur un intervalle très court), lors d'un appui «classique».  
 Il existe donc toujours un intervalle de temps pendant lequel la touche reste appuyée. Que doit faire notre programme pendant ce temps ? Deux options sont possibles :
+
 - **option 1 :** considérer que la touche appuyée correspond à un seul et unique évènement, quelle que soit la durée de l'appui sur la touche.
 - **option 2 :** considérer qu'au bout d'un certain délai, la touche encore appuyée doit déclencher un nouvel évènement.
 
@@ -174,46 +175,42 @@ position_perso.topleft = (100,200)
 ```
 où ```position_perso``` est l'objet de type ```rect```  contenant les coordonnées.
 
-**Exercice 1 :**
-Réaliser un déplacement aléatoire, comme l'animation ci-dessous.
-<p align="center">
-<img src="data/exo1.gif" /> 
-</p>
 
-Vous pourrez utiliser les instructions :
-- ```pygame.time.delay(1000)``` afin de ne bouger le personnage que toutes les 1000 millisecondes.
-- ```randint(a,b)``` du package ```random```, qui renvoie un entier pseudo-aléatoire entre ```a```  et ```b```.
+!!! example "Exercice 1"
+    === "Énoncé"
+        Réaliser un déplacement aléatoire, comme l'animation ci-dessous.
 
-<details><summary> Proposition de correction (cliquer pour faire apparaître)</summary>
-<p>
+        ![image](data/exo1.gif){: .center width=30%}
 
-```python
-import pygame, sys
-from pygame.locals import *
-from random import randint
+        Vous pourrez utiliser les instructions :
 
-pygame.init()
+        - ```pygame.time.delay(1000)``` afin de ne bouger le personnage que toutes les 1000 millisecondes.
+        - ```randint(a,b)``` du package ```random```, qui renvoie un entier pseudo-aléatoire entre ```a```  et ```b```.
 
-fenetre = pygame.display.set_mode((640, 480))
+    === "Correction possible"
+        ```python linenums='1'
+        import pygame, sys
+        from pygame.locals import *
+        from random import randint
 
-perso = pygame.image.load("perso.png").convert_alpha()
+        pygame.init()
 
-position_perso = perso.get_rect()
+        fenetre = pygame.display.set_mode((640, 480))
 
-while True :
-    fenetre.fill([10,186,181])
-    position_perso.topleft = (randint(0,540),randint(0,380))
-    fenetre.blit(perso, position_perso)
-    pygame.display.flip()
-    pygame.time.delay(1000)
+        perso = pygame.image.load("perso.png").convert_alpha()
 
-```
+        position_perso = perso.get_rect()
+
+        while True :
+            fenetre.fill([10,186,181])
+            position_perso.topleft = (randint(0,540),randint(0,380))
+            fenetre.blit(perso, position_perso)
+            pygame.display.flip()
+            pygame.time.delay(1000)
+
+        ```
 
 
-</p>
-</details>
-
-<br>
 
 
 ### 4.2. Déplacement relatif
@@ -224,58 +221,51 @@ position_perso.move(15,-10)
 ```
 où ```position_perso``` est l'objet de type ```rect```  contenant les coordonnées.
 
-**Exercice 2 :**  
-Réaliser un contrôle au clavier du personnage, comme dans l'animation ci-dessous.
-![image](data/exo2.gif){: .center}
-<details><summary> Proposition de correction (cliquer pour faire apparaître)</summary>
-<p>
 
-```python
-import pygame, sys
-from pygame.locals import *
+!!! example "Exercice 2"
+    === "Énoncé"
+        Réaliser un contrôle au clavier du personnage, comme dans l'animation ci-dessous.
+        ![image](data/exo2.gif){: .center}
 
-pygame.init()
-pygame.key.set_repeat(50)
+    === "Correction possible"
+        ```python linenums='1'
+        import pygame, sys
+        from pygame.locals import *
 
-fenetre = pygame.display.set_mode((640, 480))
+        pygame.init()
+        pygame.key.set_repeat(50)
 
-perso = pygame.image.load("perso.png").convert_alpha()
+        fenetre = pygame.display.set_mode((640, 480))
 
-position_perso = perso.get_rect()
+        perso = pygame.image.load("perso.png").convert_alpha()
 
-pas_deplacement = 15 
+        position_perso = perso.get_rect()
 
-while True :
-    
-    for event in pygame.event.get() :    
-        if event.type == KEYDOWN:
-            
-            if event.key == K_DOWN : 
-                position_perso = position_perso.move(0,pas_deplacement)
-                
-            if event.key == K_UP :
-                position_perso = position_perso.move(0,-pas_deplacement)
-                
-            if event.key == K_RIGHT : 
-                position_perso = position_perso.move(pas_deplacement,0)
-                
-            if event.key == K_LEFT : 
-                position_perso = position_perso.move(-pas_deplacement,0)   
-    
-    fenetre.fill([10,186,181])
-    fenetre.blit(perso, position_perso)
-    pygame.display.flip()
+        pas_deplacement = 15 
 
+        while True :
 
+            for event in pygame.event.get() :    
+                if event.type == KEYDOWN:
 
+                    if event.key == K_DOWN : 
+                        position_perso = position_perso.move(0,pas_deplacement)
 
-```
+                    if event.key == K_UP :
+                        position_perso = position_perso.move(0,-pas_deplacement)
+
+                    if event.key == K_RIGHT : 
+                        position_perso = position_perso.move(pas_deplacement,0)
+
+                    if event.key == K_LEFT : 
+                        position_perso = position_perso.move(-pas_deplacement,0)   
+
+            fenetre.fill([10,186,181])
+            fenetre.blit(perso, position_perso)
+            pygame.display.flip()
 
 
-</p>
-</details>
-
-<br>
+        ```
 
 
 ## 5. À vous !
@@ -285,7 +275,9 @@ Bien d'autres aides peuvent être trouvées dans les liens citées dans la parti
 
 **Exemple** de réalisation possible : un clicker avec un temps qui diminue à progressivement, et comptage des points.
 
-![image](data/exo3.gif){: .center}
+![image](data/exo3.gif){: .center width=30%}
+
+
 
 **Quelques aides :**
 
@@ -321,6 +313,6 @@ while sortir == False :
 ---
 **Bibliographie**
 
-- Documentation officielle de Pygame, https://www.pygame.org/docs/
-- Cours d'OpenClassrooms, https://openclassrooms.com/fr/courses/1399541-interface-graphique-pygame-pour-python/1399813-premieres-fenetres.
+- Documentation officielle de Pygame, [https://www.pygame.org/docs/](https://www.pygame.org/docs/)
+- Cours d'OpenClassrooms, [https://openclassrooms.com/fr/courses/1399541-interface-graphique-pygame-pour-python/1399813-premieres-fenetres](https://openclassrooms.com/fr/courses/1399541-interface-graphique-pygame-pour-python/1399813-premieres-fenetres).
 
