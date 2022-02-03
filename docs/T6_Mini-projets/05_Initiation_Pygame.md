@@ -163,7 +163,8 @@ Le tuple ```(abscisse, ordonnée)``` des coordonnées de la souris sera récupé
 ## 4. Déplacement du personnage
 
 Le déplacement d'un personnage se fera toujours par modification de ses coordonnées (et visuellement, par effacement de la dernière position).
-Ce déplacement pourra être :
+Ce déplacement pourra être :  
+
 - absolu : on donne de nouvelles coordonnées au personnage.
 - relatif : on indique de combien le personnage doit se décaler par rapport à sa position initiale.
 
