@@ -1,7 +1,11 @@
 
-### Infos orientation :
-- [Lien](https://www.geipi-polytech.org/){. target="_blank"} vers le site des 34 écoles d'ingénieurs **publiques** du groupe GEIPI
-- [Lien](data/sujet0_geipi.pdf){. target="_blank"} vers le sujet 0 de leur épreuve NSI.
+!!! abstract ":star: Actualités :star:"
+    - [Trophées NSI](https://trophees-nsi.fr/){. target="_blank"}
+    - **Infos orientation :**
+        - [Lien](https://www.geipi-polytech.org/){. target="_blank"} vers le site des 34 écoles d'ingénieurs **publiques** du groupe GEIPI
+        - [Lien](data/sujet0_geipi.pdf){. target="_blank"} vers le sujet 0 de leur épreuve NSI.
+
+
 
 ## Thèmes en cours d'étude :
 - [GET / POST / Formulaires](./T6_IHM_Web/6.3_Get_Post_Formulaires/cours/) 
