@@ -1,17 +1,22 @@
 
-### Infos orientation :
-- [Lien](https://www.geipi-polytech.org/){. target="_blank"} vers le site des 34 écoles d'ingénieurs **publiques** du groupe GEIPI
-- [Lien](data/sujet0_geipi.pdf){. target="_blank"} vers le sujet 0 de leur épreuve NSI.
+!!! abstract ":star: Actualités :star:"
+    - [Trophées NSI](https://trophees-nsi.fr/){. target="_blank"}
+    - **Infos orientation :**
+        - [Lien](https://www.geipi-polytech.org/){. target="_blank"} vers le site des 34 écoles d'ingénieurs **publiques** du groupe GEIPI
+        - [Lien](data/sujet0_geipi.pdf){. target="_blank"} vers le sujet 0 de leur épreuve NSI.
+
+
 
 ## Thèmes en cours d'étude :
-- [GET / POST / Formulaires](./T6_IHM_Web/6.3_Get_Post_Formulaires/cours/) 
-- [Protocole HTTP](./T6_IHM_Web/6.2_Protocole_HTTP/cours/) 
-- [html-css-js](./T6_IHM_Web/6.1_Interactions_page_web/cours/) 
+- [Projet Pygame](./T6_Mini-projets/05_Initiation_Pygame/)
 
 
 
 
 ??? note "*Anciens thèmes traités*"
+    - [GET / POST / Formulaires](./T6_IHM_Web/6.3_Get_Post_Formulaires/cours/) 
+    - [Protocole HTTP](./T6_IHM_Web/6.2_Protocole_HTTP/cours/) 
+    - [html-css-js](./T6_IHM_Web/6.1_Interactions_page_web/cours/) 
     - [protocoles réseau](./T3_Architecture_materielle/3.4_Protocoles_de_communication/cours/)  
     - [architecture réseau](./T3_Architecture_materielle/3.3_Architecture_reseau/cours/)  
     - [le tri par insertion](./T4_Algorithmique/4.3_Tri_par_insertion/cours/)  

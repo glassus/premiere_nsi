@@ -1,8 +1,10 @@
 # Initiation à Pygame
 ![](data/logopygame.png){: .center width=60%}
 ## 0. Preambule
-[Pygame](https://www.pygame.org/news){. target="_blank"} est un package de Python facilitant la création de jeux basés une interface graphique. Vous pouvez l'installer sur votre distribution Python, par ```pip3 install pygame```.
 
+- [Pygame](https://www.pygame.org/news){. target="_blank"} est un package de Python facilitant la création de jeux basés une interface graphique. Vous pouvez l'installer sur votre distribution Python, par ```pip3 install pygame```.
+
+- Installation de [Github Desktop](https://github.com/shiftkey/desktop/releases/download/release-2.9.0-linux2/GitHubDesktop-linux-2.9.0-linux2.deb)
 
 
 ## 1. Préparation de la scène du jeu
