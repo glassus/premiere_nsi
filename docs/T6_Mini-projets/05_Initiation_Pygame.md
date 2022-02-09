@@ -2,9 +2,11 @@
 ![](data/logopygame.png){: .center width=60%}
 ## 0. Preambule
 
-- [Pygame](https://www.pygame.org/news){. target="_blank"} est un package de Python facilitant la création de jeux basés une interface graphique. Vous pouvez l'installer sur votre distribution Python, par ```pip3 install pygame```.
+- [Pygame](https://www.pygame.org/news){. target="_blank"} est un package de Python facilitant la création de jeux basés une interface graphique.
+- Au lycée, vous pouvez l'installer sur votre distribution Python, par ```pip3 install pygame```.
+- Sur votre pc perso, vous pouvez utiliser le gestionnaire de packages de Thonny (```Outils / Gérer les Paquets``` )
 
-- Installation de [Github Desktop](https://github.com/shiftkey/desktop/releases/download/release-2.9.0-linux2/GitHubDesktop-linux-2.9.0-linux2.deb)
+- Installation et paramétrage de [Github Desktop](../Github/)
 
 
 ## 1. Préparation de la scène du jeu
@@ -107,6 +109,17 @@ while True :
 ## 3. Gestion des évènements
 Lorsqu'un programme ```pygame``` est lancé, la variable interne ```pygame.event.get()``` reçoit en continu les évènements des périphériques gérés par le système d'exploitation.  
 Nous allons nous intéresser aux évènements de type ```KEYDOWN``` (touche de clavier appuyée) ou de type ```MOUSEBUTTONDOWN``` (boutons de souris appuyé).
+
+
+La gestion des évènements nous permettra de pouvoir enfin fermer proprement la fenêtre Pygame, grâce au code suivant :
+
+```python
+# routine pour pouvoir fermer «proprement» la fenêtre Pygame
+for event in pygame.event.get():
+    if event.type == pygame.QUIT:
+        pygame.display.quit()
+        sys.exit()
+```
 
 ### 3.1. Évènements clavier
 
@@ -262,6 +275,11 @@ où ```position_perso``` est l'objet de type ```rect```  contenant les coordonn�
 
                     if event.key == K_LEFT : 
                         position_perso = position_perso.move(-pas_deplacement,0)   
+
+                # routine pour pouvoir fermer «proprement» la fenêtre Pygame
+                if event.type == pygame.QUIT:
+                    pygame.display.quit()
+                    sys.exit()
 
             fenetre.fill([10,186,181])
             fenetre.blit(perso, position_perso)
