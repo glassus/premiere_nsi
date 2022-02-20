@@ -95,9 +95,9 @@ extra:
       link: https://github.com/glassus/premiere_nsi
       name: Dépôt git
 
-#    - icon: fontawesome/solid/university
-#      link: https://lyceemauriac.fr
-#      name: Lycée François Mauriac - Bordeaux
+    - icon: fontawesome/solid/school
+      link: https://lyceemauriac.fr
+      name: Lycée François Mauriac - Bordeaux
 
 extra_javascript:
   - xtra/javascripts/interpreter.js
