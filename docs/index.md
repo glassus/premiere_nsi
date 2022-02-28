@@ -8,7 +8,7 @@
 
 
 ## Thèmes en cours d'étude :
-- [Découverte de micro:bit](./T3_Architecture_materielle/3.1_Microbit/)
+- [Découverte de micro:bit](./T3_Architecture_materielle/3.1_Microbit/cours/)
 - [Mise en place de GitHub](./T6_Mini-projets/Github/)
 - [Projet Pygame](./T6_Mini-projets/05_Initiation_Pygame/)
 
