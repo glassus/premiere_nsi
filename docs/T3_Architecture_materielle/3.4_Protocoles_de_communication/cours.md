@@ -278,6 +278,11 @@ Le protocole a bien détecté le doublon du sous-message M1... mais que se passe
 Le protocole du bit alterné a longtemps été utilisé au sein de la couche 2 du modèle OSI (distribution des trames Ethernet). Simple et léger, il peut toutefois être facilement mis en défaut, ce qui explique qu'il ait été remplacé par des protocoles plus performants.
 
 
+
+[correction du DS](data/DS_routage_1NSI_corr.pdf)
+
+
+
 </br>
 
 ---
