@@ -11,21 +11,23 @@ Voici le fonctionnement de l'algorithme :
 ## 2. Principe
 
 !!! note "description de l'algorithme"
-    - le travail se fait essentiellement sur les **indices**.
-    - on part de l'indice du premier élément, on considère que cet élément est l'élément minimum.
-    - on parcourt les éléments suivants, et si on repère un élémént plus petit que notre mininum on garde en mémoire l'indice de ce nouvel élément minimum.
-    - une fois le parcours fini, on échange l'élément de travail avec l'élément minimum qui a été trouvé.
-    - on avance d'un élément, et on recommence, jusqu'à l'avant-dernier.
+    Le travail se fait essentiellement sur les **indices**.
+    
+    - du premier élément jusqu'à l'avant-dernier :
+        - on considère que cet élément est l'élément minimum, on stocke donc son indice dans une variable *indice du minimum*.
+        - on parcourt les éléments suivants, et si on repère un élémént plus petit que notre mininum on met à jour notre *indice du minimum*.
+        - une fois le parcours fini, on échange l'élément de travail avec l'élément minimum qui a été trouvé.
+ 
 
 
 
 
 ## 3. Implémentation de l'algorithme
 
-!!! abstract "Tri par sélection :heart: "
+??? abstract "Tri par sélection :heart: "
     ```python
     def tri_selection(lst) :
-        for k in range(0, len(lst)-1):
+        for k in range(len(lst)-1):
             indice_min = k
             for i in range(k+1, len(lst)) :
                 if lst[i] < lst[indice_min]:
