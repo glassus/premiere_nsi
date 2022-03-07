@@ -417,7 +417,19 @@ while True:
         display.show("-")
 ```
 
-**Prolongement (*secouer les dés!*):** Ecrire un programme qui simule un dé en affichant une face au hasard lorsque la micro:bit est secouée. On pourra utiliser l'instruction `accelerometer.is_gesture(shake)` qui teste si la carte est secouée. Plus d'informations sur les gestes [ici](https://microbit-micropython.readthedocs.io/fr/latest/tutorials/gestures.html).
+**Prolongement (*secouer les dés!*):**
+!!! example "Exercice 4"
+    === "Énoncé"
+        Écrire un programme qui simule un dé en affichant une face au hasard lorsque la micro:bit est secouée. On pourra utiliser l'instruction `accelerometer.is_gesture(shake)` qui teste si la carte est secouée. Plus d'informations sur les gestes [ici](https://microbit-micropython.readthedocs.io/fr/latest/tutorials/gestures.html){target = "_blank"}.
+
+    === "Correction"
+        {{ correction(True,
+        "
+        
+        "
+        ) }}
+
+
 
 ### 2.8 Boussole
 
