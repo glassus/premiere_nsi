@@ -32,7 +32,7 @@ Voici le fonctionnement de l'algorithme :
             for i in range(k+1, len(lst)) :
                 if lst[i] < lst[indice_min]:
                     indice_min = i
-            lst[stk], lst[indice_min] = lst[indice_min], lst[k]
+            lst[k], lst[indice_min] = lst[indice_min], lst[k]
     ```
 
 *Vérification :*
