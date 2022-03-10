@@ -24,7 +24,7 @@ Voici le fonctionnement de l'algorithme :
 
 ## 3. Implémentation de l'algorithme
 
-??? abstract "Tri par sélection :heart: "
+!!! abstract "Tri par sélection :heart: "
     ```python
     def tri_selection(lst) :
         for k in range(len(lst)-1):
