@@ -128,4 +128,13 @@ Ici, la propriété serait : « Quand $k$ varie entre 0 et `longueur(liste) -1`,
 - quand $k$ vaut 0, on place le minimum de la liste en l[0], la sous-liste l[0] est donc triée.
 -  si la sous-liste de $k$ éléments est triée, l'algorithme rajoute en dernière position de la liste le minimum de la sous-liste restante, dont tous les éléments sont supérieurs au maximum de la sous-liste de $k$ éléments. La sous-liste de $k+1$ éléments est donc aussi triée.
 
+## 7. Bonus : comparaison des algorithmes de tri 
+
+
+Une jolie animation permettant de comparer les tris :
+
+![image](data/comparaisons.gif){: .center}
+
+Issue de ce [site](https://www.toptal.com/developers/sorting-algorithms).
+
 
