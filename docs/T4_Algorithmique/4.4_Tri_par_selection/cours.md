@@ -138,3 +138,6 @@ Une jolie animation permettant de comparer les tris :
 Issue de ce [site](https://www.toptal.com/developers/sorting-algorithms).
 
 
+```console
+$ touch toto.txt tata.txt tutu.txt
+```
