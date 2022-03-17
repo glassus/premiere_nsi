@@ -90,6 +90,7 @@ La résolution de ce problème peut se faire de manière gloutonne : à chaque �
 !!! note "Rendu de monnaie :heart: :heart: :heart:"
     ```python linenums='1'
     def rendu(somme_a_rendre):
+        pieces = [200, 100, 50, 20, 10, 5, 2, 1]
         i =  0   # (1) 
         solution = []
         while somme_a_rendre > 0:
@@ -100,7 +101,7 @@ La résolution de ce problème peut se faire de manière gloutonne : à chaque �
                 i += 1   # (5) 
         return solution
     ```
-    
+
     1. On part du 1er indice -> la plus grande pièce
     2. Est-ce que la pièce peut être rendue ?
     3. On garde la pièce dans la liste `solution`
