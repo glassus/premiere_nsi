@@ -86,7 +86,7 @@ La résolution de ce problème peut se faire de manière gloutonne : à chaque �
 
 ### 2.1 Solution du problème
 
-
+test 
 !!! note "Rendu de monnaie :heart: :heart: :heart:"
     ```python linenums='1'
     def rendu(somme_a_rendre):
