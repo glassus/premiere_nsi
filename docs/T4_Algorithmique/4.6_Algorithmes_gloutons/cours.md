@@ -28,7 +28,7 @@ Formulé autrement :
 * Vous devez avoir atteint le plus rapidement possible tous les points A, B, C, D, E, F. 
 * L'ordre de parcours des points n'est pas important.
 
-![](http://glassus1.free.fr/dataNSI/pluscourt1.png){: .center}
+![](data/pluscourt1b.png){: .center}
 
 
 La philosophie de l'algorithme glouton implique qu'à chaque étape, vous allez vous diriger vers le point le plus proche. 
@@ -90,16 +90,22 @@ La résolution de ce problème peut se faire de manière gloutonne : à chaque �
 !!! note "Rendu de monnaie :heart: :heart: :heart:"
     ```python linenums='1'
     def rendu(somme_a_rendre):
-        i =  0   # on part du 1er indice -> la plus grande piece
+        i =  0   # (1) 
         solution = []
         while somme_a_rendre > 0:
-            if pieces[i] <= somme_a_rendre : # est-ce que la pièce peut-être rendue ?
-                solution.append(pieces[i])   # on garde la pièce dans la liste solution
-                somme_a_rendre = somme_a_rendre - pieces[i] # on met à jour la somme à rendre
+            if pieces[i] <= somme_a_rendre : # (2) 
+                solution.append(pieces[i])   # (3) 
+                somme_a_rendre = somme_a_rendre - pieces[i] # (4)
             else :
-                i += 1   # la pièce était trop grosse, on avance dans la liste
+                i += 1   # (5) 
         return solution
     ```
+1. On part du 1er indice -> la plus grande pièce
+2. Est-ce que la pièce peut être rendue ?
+3. On garde la pièce dans la liste `solution`
+4. On met à jour la somme à rendre.
+5. La pièce était trop grosse, on avance dans la liste.
+
 
 
 Utilisation : `rendu(13)` doit renvoyer `[10, 2, 1]`
