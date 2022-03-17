@@ -86,29 +86,22 @@ La résolution de ce problème peut se faire de manière gloutonne : à chaque �
 
 ### 2.1 Solution du problème
 
+
+!!! note "Rendu de monnaie :heart: :heart: :heart:"
+
 ```python linenums='1'
-# à vous !
-```
-
-
-<!-- 
-```python
-pieces  = [1, 2, 5, 10, 20, 50, 100, 200]
-
 def rendu(somme_a_rendre):
-    i =  len(pieces) - 1   # on part de l'indice de la dernière pièce, la plus grande
+    i =  0   # on part du 1er indice -> la plus grande piece
     solution = []
     while somme_a_rendre > 0:
         if pieces[i] <= somme_a_rendre : # est-ce que la pièce peut-être rendue ?
             solution.append(pieces[i])   # on garde la pièce dans la liste solution
             somme_a_rendre = somme_a_rendre - pieces[i] # on met à jour la somme à rendre
         else :
-            i -= 1   # la pièce était trop grosse, on recule dans la liste
+            i += 1   # la pièce était trop grosse, on avance dans la liste
     return solution
-
 ```
 
--->
 
 Utilisation : `rendu(13)` doit renvoyer `[10, 2, 1]`
 
