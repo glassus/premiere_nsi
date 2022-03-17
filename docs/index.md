@@ -9,15 +9,17 @@
 
 
 ## Thèmes en cours d'étude :
+- [Algorithmes gloutons](./T4_Algorithmique/4.6_Algorithmes_gloutons/cours/)
 - [Tri par sélection](./T4_Algorithmique/4.4_Tri_par_selection/cours/) 
-- [Découverte de micro:bit](./T3_Architecture_materielle/3.1_Microbit/cours/)
-- [Mise en place de GitHub](./T6_Mini-projets/Github/)
-- [Projet Pygame](./T6_Mini-projets/05_Initiation_Pygame/)
+
 
 
 
 
 !!! note "*Anciens thèmes traités*"
+    - [Découverte de micro:bit](./T3_Architecture_materielle/3.1_Microbit/cours/)
+    - [Mise en place de GitHub](./T6_Mini-projets/Github/)
+    - [Projet Pygame](./T6_Mini-projets/05_Initiation_Pygame/)
     - [GET / POST / Formulaires](./T6_IHM_Web/6.3_Get_Post_Formulaires/cours/) 
     - [Protocole HTTP](./T6_IHM_Web/6.2_Protocole_HTTP/cours/) 
     - [html-css-js](./T6_IHM_Web/6.1_Interactions_page_web/cours/) 
