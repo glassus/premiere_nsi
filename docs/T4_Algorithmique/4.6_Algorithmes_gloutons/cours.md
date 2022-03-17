@@ -100,11 +100,11 @@ La résolution de ce problème peut se faire de manière gloutonne : à chaque �
                 i += 1   # (5) 
         return solution
     ```
-1. On part du 1er indice -> la plus grande pièce
-2. Est-ce que la pièce peut être rendue ?
-3. On garde la pièce dans la liste `solution`
-4. On met à jour la somme à rendre.
-5. La pièce était trop grosse, on avance dans la liste.
+    1. On part du 1er indice -> la plus grande pièce
+    2. Est-ce que la pièce peut être rendue ?
+    3. On garde la pièce dans la liste `solution`
+    4. On met à jour la somme à rendre.
+    5. La pièce était trop grosse, on avance dans la liste.
 
 
 
