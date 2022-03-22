@@ -1,13 +1,13 @@
-# 3.2 Architecture Von Neumann
-
-![image](data/BO.png){: .center}
+# Architecture Von Neumann et langage assembleur
 
 
-![image](data/JVN.jpg){: .center}
+# Le fonctionnement d'un processeur : modèle von Neumann
+
+![image](data/JVN.jpg)
 
 *[John Von Neumann](https://fr.wikipedia.org/wiki/John_von_Neumann) (1903-1957) est un mathématicien et physicien (et bien d'autres choses) américano-hongrois. Il a le premier théorisé l'architecture des processeurs, tels qu'ils fonctionnent encore aujourd'hui.*
 
-## 1. Architecture von Neumann
+## Architecture von Neumann
 
 ![image](data/arch.png)
 
@@ -20,12 +20,12 @@ On distingue 4 zones essentielles :
 - les **Entrées/Sorties**, permettant de gérer les informations avec l'extérieur.
 
 
-## 2. Activité 1 : simulation d'un programme en assembleur
+# Activité 1 : simulation d'un programme en assembleur
 
 Cette activité est disponible [ici](https://www.youtube.com/watch?v=5xABe90yolM) en vidéo.
 [![image](data/cap_video.png)](https://www.youtube.com/watch?v=5xABe90yolM)
 
-### 2.1 Le programme que nous étudierons
+### Le programme que nous étudierons
 
 
 ```python
@@ -49,8 +49,8 @@ Par exemple : notre code ci-dessus s'écrit
 en langage-machine.  
 Comment a lieu cette transformation ?
 
-### Au plus proche de la machine mais encore humainement compréhensible : le langage assembleur
-Il existe un langage dit de "bas-niveau" (au sens qu'il est plus proche du langage machine qu'un langage de haut-niveau comme le Python) qui permet de passer des instructions directement au processeur : c'est le langage assembleur (ou ASM).
+ ### Au plus proche de la machine mais encore humainement compréhensible : le langage assembleur
+ Il existe un langage dit de "bas-niveau" (au sens qu'il est plus proche du langage machine qu'un langage de haut-niveau comme le Python) qui permet de passer des instructions directement au processeur : c'est le langage assembleur (ou ASM).
  
 En assembleur, notre programme s'écrirait (par exemple) :
 
@@ -113,7 +113,7 @@ Vous aurez pour cela besoin de l'instruction `subl rA rB` qui effectue l'opérat
 ### Conclusion
 Le simulateur Y86 nous a permis d'observer comment un processeur réalise des opérations élémentaires. Nous avons découvert le langage assembleur, qui est un langage beaucoup moins agréable qu'un langage de haut-niveau, mais qui reste néanmoins compréhensible par un être humain. Certains informaticiens codent (encore de nos jours) directement en langage assembleur, pour "coller" au mieux au processeur et optimiser les ressources.
 
-## 2. Activité 2 : modification d'un programme par désassemblage
+# Activité 2 : modification d'un programme par désassemblage
 
 On considère ci-dessous le programme `crackme.c`, rédigé en langage en C. Vous pouvez télécharger ce programme [ici](./desassemblage/crackme.c).
 
@@ -155,13 +155,12 @@ return 0;
 ### Observation du fichier binaire
 
 À l'aide du programme [GHex](https://doc.ubuntu-fr.org/ghex), il est possible d'aller observer la valeur des octets directement dans le fichier binaire `crackme`.
-![image](data/cap_crackme.png)
+![image](./desassemblage/cap_crackme)
 
 Ce fichier binaire est écrit en langage-machine. Il est donc incompréhensible pour un autre humain... même si GHex nous aide en affichant notamment (dans la partie droite) les chaînes de caractères... dont notre mot de passe ;)
 
 ### Modification du fichier binaire
 Dans notre code C l'instruction `while (strcmp(saisie,"NSIMAURIAC")!=0)` est le cœur de la vérification du mot de passe. En assembleur, elle va donner naissance à une instruction `JNE` (pour Jump if Not Equal, voir [ici](https://www.gladir.com/LEXIQUE/ASM/jumpif.htm)). Cette instruction est codée en hexadécimal par l'opcode 75 C5. Nous allons rechercher ces octets et les remplacer par 90 90, 90 étant l'opcode pour `NOP` (ne rien faire).
-
 - Recherchez dans GHex 75 C5.
 - Remplacez par 90 90.
 - Sauvegardez le fichier sous le nom `crackme2`. Vous pouvez sinon le télécharger [ici](./desassemblage/crackme2)
