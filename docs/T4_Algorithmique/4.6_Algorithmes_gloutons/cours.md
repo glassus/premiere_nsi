@@ -155,65 +155,53 @@ Damned ! Mais ce n'est pas une solution optimale !
 
 ## 3. Le problème du sac à dos _(Knapsack Problem)_
 
-![Texte alternatif…](data/kp.png){. cener}
+![](data/kp.png){: .center}
 
 
+Le problème est celui-ci : vous disposez d'un sac d'une contenance limitée (sur le dessin ci-dessus, 15kg) et vous souhaitez maximiser la valeur totale des objets que vous mettez dans votre sac. Evidemment, la somme de leur masse ne doit pas dépasser 15 kg.
 
-Le problème est celui-ci : vous diposez d'un sac d'une contenance limitée (sur le dessin ci-dessus, 15kg) et vous souhaitez maximiser la valeur totale des objets que vous mettez dans votre sac. Evidemment, la somme de leur masse ne doit pas dépasser 15 kg.
-
-Ce problème (de la catégorie des problème dits d'_analyse combinatoire_), malgré sa simplicité est un problème majeur d'optimisation. 
+Ce problème (de la catégorie des problème dits d'_analyse combinatoire_) malgré sa simplicité est **un problème majeur** d'optimisation. 
 
 Actuellement :
 
 
 *   On sait trouver LA meilleure solution, mais en explorant toutes les combinaisons une par une. Cette méthode par **force brute** est inapplicable si beaucoup d'objets sont en jeu.
 *   On sait facilement trouver une _bonne_ solution, mais pas forcément la meilleure, par exemple en adoptant une stratégie gloutonne.
-* On ne sait pas trouver facilement (en temps polynomial) la meilleure solution. Si vous y arrivez, [1 Million de $](https://www.claymath.org/millennium-problems/p-vs-np-problem) sont pour vous.
+* On ne sait pas trouver facilement (en temps polynomial) la meilleure solution. Si vous y arrivez, [1 Million de $](https://www.claymath.org/millennium-problems/p-vs-np-problem){. target="_blank"} sont pour vous.
 
 
 
-## Petite aide technique avant de commencer
+### 3.1 Petite aide technique avant de commencer
 
 Supposons qu'on dispose d'une liste  `mylist = [["A",3], ["B",2], ["C",8]]`. 
 
 Comment classer les éléments de cette liste par leur deuxième élément ???
 
 Nous allons procéder en 2 temps :
-- création d'une fonction qui renvoie le deuxième élément d'un objet liste
+
+- création d'une fonction qui renvoie le deuxième élément d'un objet `liste`
 - tri de la liste grâce à cette fonction
 
 
-```python
-mylist = [["A",3], ["B",2], ["C",8]]
-```
-
 
 ```python
-def ledeuxieme(k) :
+>>> mylist = [["A",3], ["B",2], ["C",8]]
+>>> def le_deuxieme(k) :
     return k[1]
 
-simpsons = ['Bart', 'Lisa', 'Maggie']
-ledeuxieme(simpsons)
-```
-
-
-
-
-    'Lisa'
-
-
-
-
-```python
-mynewlist = sorted(mylist, key = ledeuxieme, reverse = True)
-print(mynewlist)
+>>> simpsons = ['Bart', 'Lisa', 'Maggie']
+>>> le_deuxieme(simpsons)
+  'Lisa'
+>>> mynewlist = sorted(mylist, key = le_deuxieme, reverse = True)
+>>> mynewlist
+[['C', 8], ['A', 3], ['B', 2]]
 
 ```
 
-    [['C', 8], ['A', 3], ['B', 2]]
 
 
-## Retour sur le problème du sac à dos
+
+### 3.2 Retour sur le problème du sac à dos
 On considère un sac de 40 kg et les objets suivants :
 
 | objet  |  A  |  B  |  C  |  D  |  E  |  F  |
@@ -223,110 +211,98 @@ On considère un sac de 40 kg et les objets suivants :
 
 Quels objets faut-il prendre ?
 
-**stratégie gloutonne :**
+**Stratégie gloutonne :**
+
 - on va classer les objets dans l'ordre décroissant de leur taux de valeur (taux de valeur = valeur / masse). Ainsi le premier élément de la liste sera celui ayant le meilleur rapport valeur/masse.
 - on prend le premier élément de la liste, puis le deuxième, etc., tant que le sac peut encore les contenir.
 
 
 
 ```python
-obj =[["A",13,700], ["B",12,500], ["C",8,200], ["D",10,300],["E", 14,600],["F",18,800]]
-poids_max = 40
-```
+>>> objets = [["A", 13, 700], ["B", 12, 500], ["C", 8, 200], ["D", 10, 300], ["E", 14, 600], ["F", 18, 800]]
+>>> poids_max = 40
+>>> def ratio(objet):
+        # renvoie le rapport prix/poids d'un objet
+        return objet[2] / objet[1]
 
-
-```python
-def ratio(objet):
-    # renvoie le rapport prix/poids d'un objet
-    return objet[2] / objet[1]
-
-obj_tries = sorted(obj, key = ratio, reverse = True)
-
-```
-
-
-```python
-obj_tries
-```
-
-
-
-
-    [['A', 13, 700],
+>>> objets_tries = sorted(objets, key = ratio, reverse = True)
+>>> objets_tries
+     [['A', 13, 700],
      ['F', 18, 800],
      ['E', 14, 600],
      ['B', 12, 500],
      ['D', 10, 300],
      ['C', 8, 200]]
-
+```
 
 
 **Calcul de la solution, par méthode gloutonne**
 
 
-```python
-obj =[["A",13,700], ["B",12,500], ["C",8,200], ["D",10,300],["E", 14,600],["F",18,800]]
+```python linenums='1'
+objets  = [["A", 13, 700], ["B", 12, 500], ["C", 8, 200], ["D", 10, 300], ["E", 14, 600], ["F", 18, 800]]
 
 def ratio(objet):
     # renvoie le rapport prix/poids d'un objet
     return objet[2] / objet[1]
 
-obj_tries = sorted(obj, key = ratio, reverse = True)
+objets_tries = sorted(objets, key = ratio, reverse = True)
 
 poids_max = 40
 poids_sac = 0
 
 butin = []
 
-for i in range(len(obj_tries)):
-    poids_objet = obj_tries[i][1]
+for objet in objets:
+    poids_objet = objet[1]
     if poids_objet + poids_sac < poids_max :
-        butin.append(obj_tries[i][0])
+        butin.append(objet[0])
         poids_sac += poids_objet
 
-print(butin)
 ```
 
+```python
+>>> butin
     ['A', 'F', 'C']
+```
 
 
-Il faut donc choisi la combinaison A,F,C.
 
-### Question  (toujours la même) : 
+Il faut donc choisir la combinaison A, F, C. Elle est bien valide (poids 39) et rapporte 1700.
+
+**Question** (toujours la même) :  
+
 L'algorithme glouton nous a-t-il donné la solution **optimale** ?  
 Nous allons pour cela avoir recours à la force brute pour tester toutes les combinaisons possibles.
 
-### Force brute 
+### 3.3 Force brute 
+
 - Il faut créer une liste de mots binaires qui vont correspondre à chaque combinaison. Par exemple, '101001' signifiera qu'on prend les objets A, C et F.
-Cette liste est de taille $2^n$, où $n$ est le nombre d'objets. C'est cela qui pose problème : avec 80 objets, on obtient une liste à traiter qui contient plus de $10^{24}$ objets, soit de l'ordre de grandeur du nombre d'étoiles dans l'Univers observable, ou de gouttes d'eau dans la mer, ou du nombre de grains de sables au Sahara... https://fr.wikipedia.org/wiki/Ordres_de_grandeur_de_nombres
+Cette liste est de taille $2^n$, où $n$ est le nombre d'objets. C'est cela qui pose problème : avec 80 objets, on obtient une liste à traiter qui contient plus de $10^{24}$ objets, soit de l'ordre de grandeur du nombre d'étoiles dans l'Univers observable, ou de gouttes d'eau dans la mer, ou du nombre de grains de sables au Sahara... (voir [https://fr.wikipedia.org/wiki/Ordres_de_grandeur_de_nombres](https://fr.wikipedia.org/wiki/Ordres_de_grandeur_de_nombres) )
 - Une fois cette liste établie, il suffit de parcourir chaque élément et de calculer le poids total et la valeur totale correspondante. Si le poids total dépasse le poids autorisé, on met la valeur à 0 car cette combinaison ne nous intéresse pas.
 - Il ne reste qu'à chercher la valeur maximale et regarder la combinaison à laquelle elle correspond.
 
 
 ```python
-obj =[["A",13,700], ["B",12,500], ["C",8,200], ["D",10,300],["E", 14,600],["F",18,800]]
+objets  = [["A", 13, 700], ["B", 12, 500], ["C", 8, 200], ["D", 10, 300], ["E", 14, 600], ["F", 18, 800]]
 poids_max = 40
 ```
 
+#### 3.3.1 La liste de tous les mots possibles
 
 ```python
-comb = []
-for i in range(2**len(obj)):
+combinaisons = []
+for i in range(2**len(objets)):
     k = bin(i)[2:]
-    s = '0'*(len(obj)-len(k)) + k
-    comb.append(s)
+    s = '0'*(len(objets)-len(k)) + k
+    combinaisons.append(s)
 ```
 
-La liste `comb` contient bien toutes les mots possibles sur 6 bits.
+La liste `combinaisons` contient bien les 64 mots possibles ($2^6=64$) :
 
 
 ```python
-comb
-```
-
-
-
-
+>>> combinaisons
     ['000000',
      '000001',
      '000010',
@@ -392,71 +368,46 @@ comb
      '111110',
      '111111']
 
+```
 
 
-
-```python
-v = [] 
-p = []
-for k in comb :
+```python linenums='1'
+valeurs = [] 
+poids = []
+for comb in combinaisons :
     poids_comb = 0
     valeur = 0
-    for i in range(len(obj)): 
-        if k[i] == '1':
-            poids_comb += obj[i][1]
-            valeur += obj[i][2]
+    for i in range(len(objets)): 
+        if comb[i] == '1':
+            poids_comb += objets[i][1]
+            valeur += objets[i][2]
     if poids_comb > poids_max :
         valeur = 0
-    v.append(valeur)
-    p.append(poids_comb)
-```
+    valeurs.append(valeur)
+    poids.append(poids_comb)
 
+valeur_max = max(valeurs)
+meilleure_comb = combinaisons[valeurs.index(valeur_max)]
+poids_comb = poids[valeurs.index(valeur_max)]
 
-```python
-m = max(v)
-sol_comb = comb[v.index(m)]
-poids_comb = p[v.index(m)]
-```
-
-
-```python
-sol_comb
-```
-
-
-
-
-    '101001'
-
-
-
-
-```python
-poids_comb
-```
-
-
-
-
-    39
-
-
-
-
-```python
 mot_sol = ""
-for k in range(len(sol_comb)) :
-    if sol_comb[k] == '1' :
-        mot_sol += obj[k][0]
-print(mot_sol)     
+for k in range(len(meilleure_comb)) :
+    if meilleure_comb[k] == '1' :
+        mot_sol += objets[k][0]
+    
+```
+```python
+>>> mot_sol
+  'ABE'
 ```
 
-    ACF
+re-Damned ! La force brute a mis en évidence une combinaison **meilleure que celle donnée par l'algorithme glouton**. 
 
+En effet la combinaison A-B-E est bien valide (poids total 39) et rapporte 1800, donc 100 de mieux que la solution gloutonne.
 
-re-Damned ! La force brute a mis en évidence une combinaison **meilleure que celle donnée par l'algorithme glouton**. Par contre, la force brute est inenvisageable pour si le nombre d'objets est grand, alors que la stratégie gloutonne reste très rapide.
+Par contre, la force brute est inenvisageable pour si le nombre d'objets est grand, alors que la stratégie gloutonne reste très rapide.
 
 ## Conclusion 
 
 La stratégie gloutonne donne très rapidement des solutions **satisfaisantes** mais **pas forcément optimales**. Pour beaucoup de problèmes (dont le problème du sac à dos), la recherche d'une solution optimale sans passer par la force brute semble impossible (mais n'est pas démontrée).  
-Dans ce cas-là, la stratégie gloutonne peut être employée pour avoir vite et bien une solution convenable, même si peut-être non optimale.
+Dans ce cas-là, la stratégie gloutonne peut être employée pour avoir vite et bien une solution convenable, même si peut-être non optimale. On dit que la stratégie gloutonne est une **heuristique** de résolution. On sait que ce n'est pas forcément optimal, mais faute de mieux, on s'en contente...
