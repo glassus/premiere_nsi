@@ -7,7 +7,9 @@
 
 ## 1. Repères historiques
 
-![](data/portrait_boole.jpg)
+![](data/portrait_boole.jpg){: .center}
+
+
 
 En 1847, le  britannique  *George BOOLE*  inventa un formalisme permettant d'écrire des raisonnements logiques : l'algèbre de Boole. La notion même d'informatique n'existait pas à l'époque, même si les calculs étaient déjà automatisés (penser à la Pascaline de 1642).
 
@@ -30,7 +32,7 @@ algèbre de Boole) quelconques, `F` désignera FAUX et `V` désignera VRAI.
 
 ____________
 
-## Conjonction (AND)
+### 2.1 Conjonction (AND)
 - symbole usuel : & (appelé _esperluette_ en français et _ampersand_ en anglais)
 - français : ET
 - anglais (et Python) : `and`
@@ -45,62 +47,43 @@ C'est l'opération définie par:
 Puisque l'algèbre de  Boole ne contient que deux éléments,  on peut étudier tous
 les cas possibles et les regrouper dans un tableau appelé **table de vérité**:
 
-|`x`| `y` | `x & y`|
-|:--:|:-:|:--:|
-|F|F|F|
-|F|V|F|
-|V|F|F|
-|V|V|V|
+!!! abstract "Table de vérité de AND :heart:"
+    |`x`| `y` | `x & y`|
+    |:--:|:-:|:--:|
+    |F|F|F|
+    |F|V|F|
+    |V|F|F|
+    |V|V|V|
 
 
 On représente souvent les opérateurs booléens à l'aide de portes logiques:
 
-![](data/porte_et.png)
+![](data/porte_et.png){: .center}
+
 
 Notation usuelle en électronique : $Q=A \wedge B$
-![](data/and.png)
+
+![](data/and.png){: .center}
 
 
-### Exemples en Python
 
-
-```python
-n = 20
-```
+#### Exemples en Python
 
 
 ```python
-(n % 10 == 0) and (n % 7 == 0)
+>>> n = 20
+>>> (n % 10 == 0) and (n % 7 == 0)
+False
+>>> (n % 4 == 0) and (n % 5 == 0)
+True
 ```
-
-
-
-
-    False
-
-
-
-
-```python
-(n % 4 == 0) and (n % 5 == 0)
-```
-
-
-
-
-    True
-
-
 
 #### L'évaluation paresseuse
 Pouvez-vous prévoir le résultat du code ci-dessous ?
 
 
 ```python
-(n % 4 == 0) and (n % 0 == 0)
-```
-
-
+>>> (n % 4 == 0) and (n % 0 == 0)
     ---------------------------------------------------------------------------
 
     ZeroDivisionError                         Traceback (most recent call last)
@@ -110,28 +93,21 @@ Pouvez-vous prévoir le résultat du code ci-dessous ?
     
 
     ZeroDivisionError: integer division or modulo by zero
-
+```
 
 Évidemment, la division par 0 provoque une erreur.  
 Mais observez maintenant ce code :
 
 
 ```python
-(n % 7 == 0) and (n % 0 == 0)
+>>> (n % 7 == 0) and (n % 0 == 0)
+False
 ```
-
-
-
-
-    False
-
-
 
 On appelle **évaluation paresseuse** le fait que l'interpréteur Python s'arrête dès que sa décision est prise : comme le premier booléen vaut False et que la conjonction `and` est appelée, il n'est pas nécessaire d'évaluer le deuxième booléen. 
 
-____________
 
-## Disjonction (OR)
+### 2.2 Disjonction (OR)
 
 - symbole usuel : | appelé _pipe_ en anglais
 - français : OU
@@ -150,64 +126,35 @@ C'est l'opération définie par:
 On en déduit la table suivante:
 
 
+!!! abstract "Table de vérité de OR :heart:"
+    |`x`| `y` | `x or y`|
+    |:--:|:----:|:--:|
+    |F|F| F|
+    |F|V|V|
+    |V|F|V|
+    |V|V|V|
 
-|`x`| `y` | `x or y`|
-|:--:|:----:|:--:|
-|F|F| F|
-|F|V|V|
-|V|F|V|
-|V|V|V|
 
 
-
-![](data/porte_ou.png)
+![](data/porte_ou.png){: .center}
 
 Notation usuelle en électronique : $Q=A \vee B$
 
-![](data/or.png)
+![](data/or.png){: .center}
 
 
-### Exemples en Python
-
-
-```python
-n = 20
-```
+#### Exemples en Python
 
 
 ```python
-(n % 10 == 0) or (n % 7 == 0)
+>>> n = 20
+>>> (n % 10 == 0) or (n % 7 == 0)
+True
+>>> (n % 4 == 0) or (n % 5 == 0)
+True
+>>> (n % 7 == 0) or (n % 3 == 0)
+False
 ```
-
-
-
-
-    True
-
-
-
-
-```python
-(n % 4 == 0) or (n % 5 == 0)
-```
-
-
-
-
-    True
-
-
-
-
-```python
-(n % 7 == 0) or (n % 3 == 0)
-```
-
-
-
-
-    False
-
 
 
 #### L'évaluation paresseuse (retour)
@@ -215,10 +162,10 @@ Pouvez-vous prévoir le résultat du code ci-dessous ?
 
 
 ```python
-(n % 5 == 0) or (n % 0 == 0)
+>>> (n % 5 == 0) or (n % 0 == 0)
 ```
 
-## Négation (NOT)
+### 2.3  Négation (NOT)
 
 - symbole usuel : ~
 - français : NON
@@ -233,70 +180,63 @@ C'est l'opération définie par:
 
 On en déduit la table suivante:
 
+!!! abstract "Table de vérité de NOT :heart:"
+    |`x`| `~x` |
+    |:--:|:----:|
+    |F|V|
+    |V|F|
 
-|`x`| `~x` |
-|:--:|:----:|
-|F|V|
-|V|F|
-
-![](data/porte_non.png)
+![](data/porte_non.png){: .center}
 
 Notation usuelle en électronique : $Q=\neg A$
 
-![](data/no.png)
+![](data/no.png){: .center}
 
-### Exemples en Python
-
-
-```python
-n = 20
-```
+#### Exemples en Python
 
 
 ```python
-not(n % 10 == 0)
+>>> n = 20
+>>> not(n % 10 == 0)
+False
 ```
 
 
+### 2.4 Exercice 1
+
+Comprendre ce mème :
+![image](data/drake.webp){: .center width=50%}
 
 
-    False
 
-
-
-## Exercice 1
-
-Comprendre [ce mème](https://www.reddit.com/r/engineeringmemes/comments/897mu2/logic_gates_drake_version/).
-
-
-## Exercice 2
-1. Ouvrir le [simulateur de circuits](http://dept-info.labri.fr/ENSEIGNEMENT/archi/circuits/blank-teacher.html) et créer pour chaque opération AND, OR, NOT un circuit électrique illustrant ses propriétés.
+### 2.5 Exercice 2
+1. Ouvrir le [simulateur de circuits](http://dept-info.labri.fr/ENSEIGNEMENT/archi/circuits/blank-teacher.html){. target="_blank"} et créer pour chaque opération AND, OR, NOT un circuit électrique illustrant ses propriétés.
 
 Exemple (inintéressant) de circuit :
-![](data/ex_circuit.png)
+![](data/ex_circuit.png){: .center}
 
 2. Utiliser successivement les circuits XOR, NAND et NOR et établir pour chacun leur table de vérité.
 
-# Fonctions composées
+## 3. Fonctions composées
 
-## Disjonction exclusive XOR
+### 3.1 Disjonction exclusive XOR
 (en français OU EXCLUSIF)
 
 `x ^ y = (x & ~y) | (~x & y)`
 
+!!! abstract "Table de vérité de XOR :heart:"
+    |`x`| `y` | `x ^ y`|
+    |:--:|:----:|:--:|
+    |F|F| F|
+    |F|V|V|
+    |V|F|V|
+    |V|V|F|
 
-|`x`| `y` | `x ^ y`|
-|:--:|:----:|:--:|
-|F|F| F|
-|F|V|V|
-|V|F|V|
-|V|V|F|
 
 
+![](data/porte_xor.png){: .center}
 
-![](data/porte_xor.png)
-
-![](data/xor.png)
+![](data/xor.png){: .center}
 
 Le XOR joue un rôle fondamental en cryptographie car il possède une propriété très intéressante : 
 $(x\wedge y)\wedge y=x$
@@ -304,47 +244,47 @@ $(x\wedge y)\wedge y=x$
 Si $x$ est un message et $y$ une clé de chiffrage, alors $x\wedge y$ est le message chiffré. 
 Mais en refaisant un XOR du message chiffré avec la clé $y$, on retrouve donc le message $x$ initial.
 
-##  Fonction Non Et (NAND)
+### 3.2 Fonction Non Et (NAND)
 
 `x ↑ y = ~(x & y)`
 
+!!! abstract "Table de vérité de NAND :heart:"
+    |`x`| `y` | `x ↑ y`|
+    |:--:|:----:|:--:|
+    |F|F| V|
+    |F|V|V|
+    |V|F|V|
+    |V|V|F|
 
-|`x`| `y` | `x ↑ y`|
-|:--:|:----:|:--:|
-|F|F| V|
-|F|V|V|
-|V|F|V|
-|V|V|F|
 
 
+![](data/porte_nand.png){: .center}
 
-![](data/porte_nand.png)
-
-## Non Ou (NOR)
+### 3.3 Fonction Non Ou (NOR)
 
 
 `x ↓ y = ~(x & y)`
 
+!!! abstract "Table de vérité de NOR :heart:"
+    |`x`| `y` | `x ↓ y`|
+    |:--:|:----:|:--:|
+    |F|F| V|
+    |F|V|F|
+    |V|F|F|
+    |V|V|F|
 
-|`x`| `y` | `x ↓ y`|
-|:--:|:----:|:--:|
-|F|F| V|
-|F|V|F|
-|V|F|F|
-|V|V|F|
 
 
-
-![](data/porte_nor.png)
+![](data/porte_nor.png){: .center}
 
 Il est temps de se reposer un peu et d'admirer cette vidéo :
-![](data/watergates.gif)
+![](data/watergates.gif){: .center}
 
-## Remarque :
+### Remarque :
 Les fonctions NAND ET NOR sont dites **universelles** : chacune d'entre elles peut générer l'intégralité des autres portes logiques. Il est donc possible de coder toutes les opérations uniquement avec des NAND (ou uniquement avec des NOR).
 Voir [Wikipedia](https://fr.wikipedia.org/wiki/Fonction_NON-ET)
 
-## Exercice 4
+### 3.4 Exercice 4
 Calculer les opérations suivantes.
 
 
@@ -365,66 +305,46 @@ Calculer les opérations suivantes.
    
 ```
 
-*solution*
+??? tip "solution"
+    ```python
+     1011011
+    &1010101
+    ----------
+     1010001
+    
+     1011011
+    |1010101
+    ----------
+     1011111
+    
+     1011011
+    ^1010101
+    ----------
+     0001110
+    ```
 
-
-```python
-   1011011
-&  1010101
-----------
-   1010001
-   
-   1011011
-|  1010101
-----------
-   1011111
-   
-   1011011
-^  1010101
-----------
-   0001110
-```
-
-### Calculs en Python
+### 3.5 Calculs en Python
 les opérateurs `&`, `|` et `^` sont utilisables directement en Python
 
 
 ```python
 # calcul A
-12 & 7
+>>> 12 & 7
+4
 ```
-
-
-
-
-    4
-
-
 
 
 ```python
 # calcul B
-12 | 7
+>>> 12 | 7
+15
 ```
-
-
-
-
-    15
-
-
-
 
 ```python
 # calcul C
-12 ^ 5
+>>> 12 ^ 5
+9
 ```
-
-
-
-
-    9
-
 
 
 Pour comprendre ces résultats, il faut travailler en binaire. Voici les mêmes calculs :
@@ -432,39 +352,22 @@ Pour comprendre ces résultats, il faut travailler en binaire. Voici les mêmes 
 
 ```python
 # calcul A
-bin(0b1100 & 0b111)
-```
-
-
-
-
+>>> bin(0b1100 & 0b111)
     '0b100'
-
-
-
+```
 
 ```python
 # calcul B
-bin(0b1100 | 0b111)
+>>> bin(0b1100 | 0b111)
+   '0b1111'
 ```
-
-
-
-
-    '0b1111'
-
-
-
 
 ```python
 # calcul C
-bin(0b1100 ^ 0b111)
-```
-
-
-
-
+>>> bin(0b1100 ^ 0b111)
     '0b1011'
+
+```
 
 
 
@@ -473,9 +376,9 @@ Objectif : chiffrer (= crypter) le mot "BONJOUR" avec la clé (de même taille) 
 
 Protocole de chiffrage : XOR entre le code ASCII des lettres de même position.
 
+<!-- 
 
-
-```python
+```python 
 msg = "BONJOUR"
 cle = "MAURIAC"
 
@@ -502,27 +405,27 @@ crypte_mot(msg, cle)
 
     '\x0f\x0e\x1b\x18\x06\x14\x11'
 
-
+-->
 
 ### Exercice 6 :
 Résolvez le pydéfi [la clé endommagée](https://callicode.fr/pydefis/MasqueJetable/txt)
+
+<!-- 
 
 *solution :*
 
 [lien](https://gist.github.com/glassus/7aef2c4cbed5097e1857ecc851b7b740)
 
+-->
 
-```python
-
-```
-
-# Complément : propriétés des opérateurs logiques
+### Complément : propriétés des opérateurs logiques
 
 Les propriétés suivantes sont facilement démontrables à l'aide de tables de vérités: *(source : G.Connan)*
 
-![](data/lois.png)
+![](data/lois.png){: .center}
 
 Toutes ces lois sont aisément compréhensibles si on les transpose en mathématiques : 
+
 - & équivaut à $\times$
 - $|$ équivaut à $+$
 - $\neg$ équivaut à $-$
