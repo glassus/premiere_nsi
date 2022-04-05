@@ -32,14 +32,13 @@ En base 2, on ne dispose que des chiffres `0` et `1`. Le système binaire est un
  
  Le nombre binaire 11010010 correspond donc au nombre décimal 210.
  
- #### En python :
- En Python, on peut utiliser la fonction `int("nombre",base)`.
 
-
-```python
->>> int("11010010", 2)
-210
-```
+!!! note "Code Python"
+    En Python, on peut utiliser la fonction `int("nombre", base)`.
+    ```python
+    >>> int("11010010", 2)
+    210
+    ```
 
 
 ### 1.2 Du décimal vers le binaire : 
@@ -57,16 +56,14 @@ Donc $243_{10}=11110011_2$
 
 **Méthode des divisions successives**
 
-![image](./data/div_successives.gif)
+![image](./data/div_successives.gif){: .center}
 
- #### En python :
- En Python, on peut utiliser la fonction `bin(nombre)`. Elle renvoie une chaîne de caractère où le nombre binaire est précédé de `'0b'`.
-
-
-```python
->>> bin(243)
- '0b11110011'
-```
+!!! note "Code Python"
+    En Python, on peut utiliser la fonction `bin(nombre)`. Elle renvoie une chaîne de caractère où le nombre binaire est précédé de `'0b'`.
+    ```python
+    >>> bin(243)
+    '0b11110011'
+    ```
 
 !!! example "Exercice 1"
     === "Énoncé"
@@ -164,3 +161,7 @@ On peut utiliser la fonction `int("nombre",base)`.
  255
 ```
 
+
+## 3. Du binaire inattendu
+
+[Le message secret de Perseverance](../../../T6_Mini-projets/Exercice_Perseverance/ )
