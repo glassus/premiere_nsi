@@ -9,6 +9,7 @@
 
 
 ## Thèmes en cours d'étude :
+- [Différentes bases](./T2_Representation_des_donnees/2.4_Bases/cours/)
 - [Booléens](./T2_Representation_des_donnees/2.5_Booleens/cours/)
 - [Algorithmes gloutons](./T4_Algorithmique/4.6_Algorithmes_gloutons/cours/)
 - [Tri par sélection](./T4_Algorithmique/4.4_Tri_par_selection/cours/) 
