@@ -407,8 +407,13 @@ crypte_mot(msg, cle)
 
 -->
 
-### Exercice 6 :
-Résolvez le pydéfi [la clé endommagée](https://callicode.fr/pydefis/MasqueJetable/txt)
+### Exercice
+
+
+!!! capytale "À faire sur Capytale : [Lien](https://capytale2.ac-paris.fr/web/c/56a9-503615)"
+    Résolvez le pydéfi [la clé endommagée](https://callicode.fr/pydefis/MasqueJetable/txt){. target="_blank"}
+            
+
 
 <!-- 
 
