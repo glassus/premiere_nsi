@@ -34,14 +34,13 @@ Imaginons que je fasse l'inventaire de mon dressing :
 
 
 **Attention** :warning:  : une clé peut aussi être un nombre :
- ```python
- >>> myst = {9:4, 1:2, 6:3, 7:4} 
- ```
-Que vaudrait ```myst[2]``` ? 
-
-??? tip "réponse"
-    ```myst``` associe à chaque nombre le nombre de lettre de son écriture en français. Donc ```myst[2] = 4``` car ```deux``` s'écrit avec 4 lettres.
-
+```python
+>>> myst = {9:4, 1:2, 6:3, 7:4} 
+>>> myst[1]
+2
+>>> myst[7]
+4 
+```
 
 
 
@@ -76,7 +75,9 @@ _Rappel :_
         ```
 
 
-### 2.3 Parcours d'un dictionnaire :star:
+Ces méthodes sont importantes (elles figurent explicitement au programme de NSI) mais sont en pratique peu utilisées. On leur préfèrera très largement la méthode de parcours suivante :
+
+### 2.3 Parcours d'un dictionnaire :star: :star: :star:
 !!! note "Exemple fondateur n°3 :heart:"
     ```python
     >>> for habit in dressing:
@@ -85,6 +86,10 @@ _Rappel :_
     4
     8
     ```
+
+!!! aide "Observation grâce à PythonTutor"
+    <iframe width="800" height="300" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=dressing%20%3D%20%7B%22pantalons%22%3A3,%20%22pulls%22%3A4,%20%22tee-shirts%22%3A8%7D%0Afor%20habit%20in%20dressing%3A%0A%20%20%20%20print%28dressing%5Bhabit%5D%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+
 
 
 ### 2.4 Création d'un dictionnaire vide
@@ -177,11 +182,29 @@ Nous allons résoudre ce problème grâce à :
       False
     ```
 
-
+## 3. Exercices
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
         Améliorer la fonction `achat(habit)` en y incluant un test pour prendre en compte les nouveaux habits.
+    === "Correction"
+        {{ correction(True,
+        "
+        
+        "
+        ) }}
+
+
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        On considère la liste suivante :
+        ```python
+        lst = ['Emmy', 'Ahmed', 'Antoine', 'Emma', 'Louan', 'Louka', 'Louan', 'Elouo', 'Candice', 'Tristan', 'Alissa', 'Louka', 'Louka', 'Emma', 'Alissa', 'Antoine', 'Elouo', 'Louan', 'Mathias', 'Candice', 'Antoine', 'Tristan', 'Louka', 'Emma', 'Tristan', 'Mathias', 'Louan', 'Vincent', 'Vincent', 'Ahmed', 'Louka', 'Elouo', 'Ahmed', 'Elouo', 'Candice', 'Louka', 'Mathias', 'Mathias', 'Emmy', 'Candice', 'Tristan', 'Antoine', 'Mathias', 'Ahmed', 'Candice', 'Louka', 'Alissa', 'Vincent', 'Elouo', 'Vincent', 'Antoine', 'Elouo', 'Emmy', 'Hugo', 'Vincent', 'Louan', 'Emmy', 'Emma', 'Vincent', 'Louan', 'Elouo', 'Emmy', 'Emmy', 'Emma', 'Mathias', 'Elouo', 'Louka', 'Hugo', 'Emma', 'Vincent', 'Candice', 'Ahmed', 'Hugo', 'Emma', 'Candice', 'Louan', 'Louka', 'Candice', 'Emma', 'Hugo', 'Mathias', 'Tristan', 'Mathias', 'Tristan', 'Antoine', 'Antoine', 'Hugo', 'Louka', 'Mathias', 'Hugo', 'Alissa', 'Elouo', 'Louka', 'Louka', 'Alissa', 'Vincent', 'Ahmed', 'Emma', 'Hugo', 'Mathias', 'Hugo', 'Mathias', 'Antoine', 'Ahmed', 'Antoine', 'Antoine', 'Vincent', 'Ahmed', 'Candice', 'Mathias', 'Emmy', 'Mathias', 'Emma', 'Antoine', 'Tristan', 'Antoine', 'Tristan', 'Candice', 'Louka', 'Louka', 'Tristan', 'Ahmed', 'Elouo', 'Emmy', 'Antoine', 'Alissa', 'Ahmed', 'Antoine', 'Alissa', 'Louan', 'Emma', 'Elouo', 'Tristan', 'Emmy', 'Elouo', 'Louka', 'Emmy', 'Ahmed', 'Louka', 'Vincent', 'Vincent', 'Antoine', 'Ahmed', 'Ahmed', 'Vincent', 'Tristan', 'Louan', 'Emmy', 'Elouo', 'Louka', 'Emmy', 'Hugo', 'Emmy', 'Emma', 'Emma', 'Hugo', 'Louan', 'Hugo', 'Antoine', 'Ahmed', 'Emmy', 'Vincent', 'Emma', 'Candice', 'Candice', 'Louka', 'Louan', 'Alissa', 'Vincent', 'Vincent', 'Tristan', 'Louka', 'Louan', 'Louka', 'Antoine', 'Tristan', 'Alissa', 'Ahmed', 'Vincent', 'Louka', 'Alissa', 'Mathias', 'Elouo', 'Emmy', 'Ahmed', 'Emmy', 'Vincent', 'Elouo', 'Emma', 'Mathias', 'Ahmed', 'Vincent', 'Mathias', 'Candice', 'Elouo', 'Louan', 'Elouo', 'Vincent', 'Emmy', 'Emma']
+        ```
+        
+
+        Créer un dictionnaire qui associera à chaque prénom son nombre d'occurrences dans la liste.
+        
     === "Correction"
         {{ correction(True,
         "
