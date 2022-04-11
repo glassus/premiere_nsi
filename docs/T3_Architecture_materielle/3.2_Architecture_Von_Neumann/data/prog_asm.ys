@@ -8,5 +8,5 @@
 .align 4
 a:  .long 3
 b:  .long 5
-c:  .long
+c:  .long 0
     

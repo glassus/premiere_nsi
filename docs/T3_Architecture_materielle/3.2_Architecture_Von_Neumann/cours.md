@@ -14,7 +14,7 @@
 On distingue 4 zones essentielles :
 
 - le **CPU** (Central Processing Unit) qui contient lui-même :  
-    - l'**Unité Arithmétique et Logique** (UAL) dans laquelle sont effectuées les opérations de base (addition, multiplication...) Cette zone comporte notamment les **registres** (peu nombreux, de l'ordre de la dixaine) qui sont les espaces de travail ultra-rapides dans lesquels l'UAL va effectuer ses calculs. Une fois ceux-ci effectués, les valeurs des registres repartent dans la mémoire.  
+    - l'**Unité Arithmétique et Logique** (UAL) dans laquelle sont effectuées les opérations de base (addition, multiplication...) Cette zone comporte notamment les **registres** (peu nombreux, de l'ordre de la dizaine) qui sont les espaces de travail ultra-rapides dans lesquels l'UAL va effectuer ses calculs. Une fois ceux-ci effectués, les valeurs des registres repartent dans la mémoire.  
     - l'**Unité de contrôle**, qui va séquencer les opérations. Lorsqu'on parle d'un processeur à 3 GHz, cela signifie (approximativement) que Unité de Contrôle va envoyer l'ordre d'une nouvelle opération à l'UAL 3 milliards de fois par seconde.
 - la **mémoire**, qui contient **à la fois** les données à traiter **et** les instructions du programme. Cette idée de stocker **au même endroit données et programme** est l'idée centrale de l'architecture von Neumann.
 - les **bus** de communication (des fils électriques permettant de transporter les données entre les différents composants).
@@ -41,7 +41,7 @@ Ce programme est ici écrit en langage Python. Le processeur ne comprend pas ce 
 
 Par exemple, notre code ci-dessus s'écrit  
 
-```python
+```
 01010000 00001111 00011000 00000000
 00000000 00000000 01010000 00111111
 00011100 00000000 00000000 00000000
@@ -63,7 +63,7 @@ Il existe un langage dit de "bas-niveau" (au sens qu'il est plus proche du langa
 En assembleur, notre programme s'écrirait (par exemple) :
 
 
-```python
+```
 .pos 0
     mrmovl a, %eax
     mrmovl b, %ebx
@@ -74,22 +74,18 @@ En assembleur, notre programme s'écrirait (par exemple) :
 .align 4
 a:  .long 3
 b:  .long 5
-c:  .long
-
-    
+c:  .long 0    
 ```
 
-Le [simulateur Y86](http://dept-info.labri.fr/ENSEIGNEMENT/archi/js-y86/){. target="_blank"} permet de simuler la manière dont le processeur va exécuter ce programme. 
-Vous pouvez retrouver le programme à charger [ici](data/prog_asm.ys){. target="_blank"}.
+- Le [simulateur Y86](https://dept-info.labri.fr/ENSEIGNEMENT/archi/y86js_v2/index.html){. target="_blank"} permet de simuler la manière dont le processeur va exécuter ce programme. 
 
-![image](data/cap_Y86.png){: .center}
+- Vous pouvez retrouver le programme à charger [ici](data/prog_asm.ys){. target="_blank"}.
 
-*rappel : la totalité des lignes est commentée dans la vidéo disponible [ici](https://www.youtube.com/watch?v=5xABe90yolM){. target="_blank"}*
-
+![image](data/cap_Y86_2.png){: .center}
 
 #### 2.3.1 Code en langage-machine :
 Sur la partie droite du simulateur, la zone Mémoire contient, après assemblage, la traduction de notre code en langage-machine  :
-```python
+```
 500f1800
 0000503f
 1c000000
@@ -101,6 +97,14 @@ Sur la partie droite du simulateur, la zone Mémoire contient, après assemblage
 ```
 
 Une fois transformé en binaire, on retrouve le code donné au début du paragraphe précédent.
+
+??? note "Ressources sur les instructions Y86"
+    ![image](data/instrY86.png){: .center width=30%}
+    ![image](data/encodage.png){: .center width=60%}
+    
+
+
+
 
 !!! abstract "Exercice"
     === "Énoncé"
@@ -116,6 +120,22 @@ Une fois transformé en binaire, on retrouve le code donné au début du paragra
 
         Vous aurez pour cela besoin de l'instruction `subl rA rB` qui effectue l'opération `rB-rA` et la stocke dans `rB`. (`rA` et `rB` sont les noms des registres).
     === "Correction"
+        ```
+        .pos 0
+        mrmovl x, %eax
+        mrmovl y, %ebx
+        mrmovl w, %ecx
+        addl %eax, %ebx
+        subl %ebx, %ecx
+        rmmovl %ecx, z
+        halt
+
+        .align 4
+        w:  .long 10
+        x:  .long 3
+        y:  .long 5
+        z:  .long 0
+        ``` 
          
 
 
@@ -162,7 +182,7 @@ return 0;
 
 ### 3.1 Compilation et exécution du programme
 
-- Dans un terminal, tapez l'instruction `gcc crackme.c -o crackme`.
+- Dans un terminal, tapez l'instruction `gcc crackme.c -o crackme`
 - Tapez `./crackme` et jouez avec le programme.
 
 
@@ -175,14 +195,21 @@ return 0;
 Ce fichier binaire est écrit en langage-machine. Il est donc incompréhensible pour un autre humain... même si GHex nous aide en affichant notamment (dans la partie droite) les chaînes de caractères... dont notre mot de passe ;)
 
 ### 3.3 Modification du fichier binaire
-Dans notre code C l'instruction `while (strcmp(saisie,"NSIMAURIAC")!=0)` est le cœur de la vérification du mot de passe. En assembleur, elle va donner naissance à une instruction `JNE` (pour Jump if Not Equal, voir [ici](https://www.gladir.com/LEXIQUE/ASM/jumpif.htm){. target="_blank"} ). Cette instruction est codée en hexadécimal par l'opcode 75 C5. Nous allons rechercher ces octets et les remplacer par 90 90, 90 étant l'opcode pour `NOP` (ne rien faire).
+Dans notre code C l'instruction `while (strcmp(saisie,"NSIMAURIAC")!=0)` est le cœur de la vérification du mot de passe. En assembleur, elle va donner naissance à une instruction `JNE` (pour Jump if Not Equal, voir [ici](https://www.gladir.com/LEXIQUE/ASM/jumpif.htm){. target="_blank"} ). Cette instruction est codée en hexadécimal par l'opcode `75 C5`. Nous allons rechercher ces octets et les remplacer par `90 90`, `90` étant l'opcode pour `NOP` (ne rien faire).
 
-- Recherchez dans GHex 75 C5.
-- Remplacez par 90 90.
+- Recherchez dans GHex `75 C5`.
+- Remplacez par `90 90`.
 - Sauvegardez le fichier sous le nom `crackme2`. Vous pouvez sinon le télécharger [ici](data/desassemblage/crackme2){. target="_blank"} 
 - Rendez ce fichier exécutable par `sudo chmod 777 crackme2`
 - Exécutez ce code et constatez les changements !
 
 ### 3.4 Conclusion
-Le désassemblage d'un programme est une opération très complexe et les opérations et chaînes de caractères qui apparaissent sont souvent incompréhensibles (parfois volontairement, dans le cas d'[obfuscation](https://www.supinfo.com/articles/single/602-qu-est-ce-que-obfuscation-code){. target="_blank"}  de code).  
+Le désassemblage d'un programme est une opération très complexe et les opérations et chaînes de caractères qui apparaissent sont souvent incompréhensibles (parfois volontairement, dans le cas d'[obfuscation](https://connect.ed-diamond.com/MISC/mischs-007/obfuscation-de-langage-interprete-cachez-ce-code-que-je-ne-saurais-voir){. target="_blank"}  de code).  
 Néanmoins, il est parfois possible d'agir au niveau le plus bas (le langage-machine) pour modifier un code, comme nous venons de le faire.
+
+
+??? quote "Bibliographie "
+    - Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
+    - Prépabac NSI, Terminale, G.CONNAN, V.PETROV, G.ROZSAVOLGYI, L.SIGNAC, éditions HATIER.
+    - Cours du DIU-EIL, Architecture matérielle, Raymond Namyst, Université de Bordeaux. 
+
