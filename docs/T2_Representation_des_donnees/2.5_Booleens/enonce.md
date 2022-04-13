@@ -61,5 +61,5 @@ Le pixel de coordonnées (30, 70) est maintenant un pixel rouge.
 
 #### 2.2.4 Sauvegarder une image
 ```python
-img_new.save("solution.png")
+>>> img_new.save("solution.png")
 ```
