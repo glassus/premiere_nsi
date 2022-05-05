@@ -4,7 +4,12 @@
 
 ![image](data/BO.png){: .center}
 
+![image](data/meme.jpg){: .center}
 
+«dichotomie» se dit en anglais *binary search*.
+
+
+<!--
 ## Jeu du *"devine un nombre entre 1 et 100"*
 Si je choisis un nombre entre 1 et 100, quelle est la stratégie optimale pour deviner ce nombre le plus vite possible ?  
 (à chaque étape, une indication (trop grand, trop petit) permet d'affiner la proposition suivante)
@@ -38,9 +43,10 @@ Extrait de [Wikipedia](https://fr.wikipedia.org/wiki/Diviser_pour_r%C3%A9gner_(i
 
 ![](data/diviser_pour_regner.png)
 
-# Algorithmes de recherche d'une valeur dans une liste triée
+-->
+##  1. Algorithmes de recherche d'une valeur dans une liste triée
 
-**Préambule** : la méthode que nous allons utiliser implique que les valeurs ont été triées  auparavant.
+**Préambule** : la méthode que nous allons utiliser implique que les valeurs ont été **triées** auparavant.
 
 Si les valeurs ne sont pas triées (ou pas triables), cela peut vite être problématique.
 
@@ -53,9 +59,11 @@ coul = ["bleu", "jaune", "rouge", "vert", "violet", "marron"]
 
 *hormis le test de toutes les valeurs, aucune méthode efficace n'est possible.*
 
-Dans toute la suite, nous rechercherons un élément dans une liste d'entiers **triée** dans l'ordre croissant.  
+Dans toute la suite, nous rechercherons un élément dans une liste d'entiers **triée** dans l'ordre croissant. 
+
 Considérons donc la liste L suivante : 
-![image](data/fig0.png)
+
+![image](data/fig0.png){: .center}
 
 
 ```python
@@ -64,98 +72,67 @@ L = [2, 3, 6, 7, 11, 14, 18, 19, 24]
 
 L'objectif est de définir un algorithme de recherche efficace d'une valeur arbitraire présente dans cette liste.
 
-## Méthode 1 : recherche par balayage
+### 1.1 Méthode naïve : recherche par balayage
 C'est la méthode la plus intuitive : on essaie toutes les valeurs (par exemple, dans l'ordre croissant) jusqu'à trouver la bonne.
 
 ### Exercice 1  
-Écrire un code permettant d'afficher l'indice de la valeur `14` dans la liste `L = [2, 3, 6, 7, 11, 14, 18, 19, 24]`.
 
-
-
-
-```python
-L = [2, 3, 6, 7, 11, 14, 18, 19, 24]
-
-```
-
-*Correction :*
-
-
-```python
-for k in range(len(L)):
-    if L[k] ==  14 :
+!!! abstract "Exercice 1"
+    === "Énoncé"
+        Écrire un code permettant d'afficher l'indice de la valeur `14` dans la liste `lst = [2, 3, 6, 7, 11, 14, 18, 19, 24]`.
+    === "Correction"
+        ```python linenums='1'
+        lst = [2, 3, 6, 7, 11, 14, 18, 19, 24]
+        for k in range(len(L)):
+            if L[k] ==  14 :
         return k
-```
-
-### Exercice 2  
-Écrire une fonction `trouve(L, p)` qui renvoie l'indice d'une valeur `p` dans une liste `L `. Si la valeur `p` n'est pas trouvée, on renverra `"non trouvé"`.
+        ```
 
 
+!!! abstract "Exercice 1"
+    === "Énoncé"
+        Écrire une fonction `trouve(lst, val)` qui renvoie l'indice d'une valeur `val` dans une liste `lst `. Si la valeur `val` n'est pas trouvée, on renverra `"non trouvé"`.
+    === "Correction"
+        ```python linenums='1'
+        def trouve(val, lst) :
+            for k in range(len(L)) :
+                if L[k] == val:
+                    return k
+            return "non trouvé"
 
-
-```python
-def trouve(L, p) :
-    for k in range(len(L)) :
-        if L[k] :
-            return k
-    return "non trouvé"
-```
-
-
-```python
-L = ["lundi", "mardi", "mercredi", "jeudi"]
-```
-
-
-```python
-trouve(L,"mardi")
-```
+        ```
 
 
 
-
-    1
-
-
-
-
-```python
-trouve(L,"samedi")
-```
-
-
-
-
-    'non trouvé'
-
-
-
-### Complexité de la méthode
+### 1.2 Complexité de la méthode
 
 Le nombre (maximal) d'opérations nécessaires est proportionnel à la taille de la liste à étudier. Si on appelle $n$ la longueur de la liste, on dit que cet algorithme est **d'ordre $n$**, ou **linéaire**, ou en $O(n)$.
 
 **Questions :** 
+
 - La méthode utilisée nécessitait-elle que la liste soit triée ?
 - Est-on sûr que cet algorithme s'arrête ? 
 
 
-## Méthode 2 : recherche dichotomique
+## 2. Méthode 2 : recherche dichotomique
 Comment appliquer la méthode vue dans l'activité d'introduction ? 
 
 
 
 
-Exemple d'algorithme:
+Exemple d'algorithme :
+
 - on se place *au milieu* de la liste.
 - on regarde si on est inférieur ou supérieur à la valeur cherchée.
 - on ne garde que la bonne moitié de la liste qui nous intéresse, et on recommence jusqu'à trouver la bonne valeur.
 
 
-## Illustration
+### 2.1 Illustration
 
 Recherchons la valeur 14 dans notre liste `L`.
 
-![image](data/fig3.png)
+![image](data/fig3.png){: .center}
+
 
 
 
@@ -165,10 +142,11 @@ Recherchons la valeur 14 dans notre liste `L`.
 - étape 4 : on compare la valeur 18 à la valeur cherchée : 14. Elle est supérieure, donc on garde ce qui est à gauche. Il n'y a plus qu'une valeur.
 - étape 5 : on se place sur la valeur 14 et on compare avec 14. La valeur est trouvée.
 
-## Programmation de la méthode de dichotomie
+### 2.2 Programmation de la méthode de dichotomie
 
 Nous allons travailler avec deux variables `indice_debut` et `indice_fin` qui vont délimiter la liste à étudier. Ces indices sont représentés en bleu sur la figure ci-dessous. La valeur de l'`indice_central` (représenté en rouge) sera égale à `(indice_debut + indice_fin) // 2`
-![image](data/fig4.png)
+![image](data/fig4.png){: .center}
+
 Le programme s'arrête lorsque la valeur cherchée a été trouvée, ou lorsque `indice_fin` devint inférieur à `indice_debut`.
 
 
@@ -206,16 +184,18 @@ print(trouve_dicho(L,1976))
 
 Une visualisation de l'évolution des variables `indice_debut` et `indice_fin` est disponible sur le site pythontutor via [ce lien](http://pythontutor.com/visualize.html#code=L%20%3D%20%5B2,%203,%206,%207,%2011,%2014,%2018,%2019,%2024%5D%0A%0Adef%20trouve_dicho%28L,%20n%29%20%3A%0A%20%20%20%20indice_debut%20%3D%200%0A%20%20%20%20indice_fin%20%3D%20len%28L%29%20-%201%0A%20%20%20%20while%20indice_debut%20%3C%3D%20indice_fin%20%3A%0A%20%20%20%20%20%20%20%20indice_centre%20%3D%20%28indice_debut%20%2B%20indice_fin%29%20//%202%0A%20%20%20%20%20%20%20%20valeur_centrale%20%3D%20L%5Bindice_centre%5D%0A%20%20%20%20%20%20%20%20if%20valeur_centrale%20%3D%3D%20n%20%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20indice_centre%0A%20%20%20%20%20%20%20%20if%20valeur_centrale%20%3C%20n%20%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20indice_debut%20%3D%20indice_centre%20%2B%201%0A%20%20%20%20%20%20%20%20else%20%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20indice_fin%20%3D%20indice_centre%20-%201%0A%20%20%20%20return%20None%0A%0Aprint%28trouve_dicho%28L,14%29%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false).
 
-![image](data/fig5.png)
+![image](data/fig5.png){: .center}
 
-## Terminaison de l'algorithme
+
+### 2.3 Terminaison de l'algorithme
 Est-on sûr que l'algorithme va se terminer ?  
 La boucle `while` qui est utilisée doit nous inciter à la prudence (voir [cours](https://github.com/glassus/nsi/blob/master/Premiere/Theme01_Bases_de_Python/02_Boucle_while/boucles_while.ipynb) sur la boucle While).  
 Il y a en effet le risque de rentrer dans une boucle infinie.  
 Pourquoi n'est-ce pas le cas ?
 
 **Aide :** observer la position des deux flèches bleues lors de l'exécution de l'algorithme 
-![image](data/fig4.png)
+![image](data/fig4.png){: .center}
+
 
 
 La condition de la boucle `while` est `indice_debut <= indice_fin `, qui pourrait aussi s'écrire `indice_fin >= indice_debut `.  
@@ -237,7 +217,7 @@ Ceci nous assure donc que le programme va bien se terminer.
 On dit que la valeur `indice_fin - indice_debut ` représente le **variant de boucle** de cet algorithme. 
 Ce variant est un nombre entier, d'abord strictement positif, puis qui va décroître jusqu'à la valeur 0.
 
-## Complexité de l'algorithme
+### 2.4 Complexité de l'algorithme
 
 Combien d'étapes (au maximum) sont-elles nécessaires pour arriver à la fin de l'algorithme ?  
 Imaginons que la liste initiale possède 8 valeurs. 
@@ -258,7 +238,7 @@ Il y a donc 3 étapes avant de trouver la valeur cherchée.
 
 **Conclusion :** C'est le nombre de puissances de 2 que contient le nombre $N$ de termes de la liste qui est déterminant dans la complexité de l'algorithme. Ce nombre s'appelle le *logarithme de base 2* et se note $\log_2(N)$. On dit que l'algorithme de dichotomie a une **vitesse logarithmique**. On rencontrera parfois la notation $O(\log_2(n))$.
 
-## Expériences et comparaison des vitesses d'exécution
+## 3. Expériences et comparaison des vitesses d'exécution
 
 #### Avec une liste contenant 100 000 valeurs 
 
