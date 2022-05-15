@@ -274,23 +274,32 @@ Puis 2 valeurs.
 Puis une seule valeur.  
 Il y a donc 3 étapes avant de trouver la valeur cherchée.
 
-**Exercice :**  
-1. Remplissez le tableau ci-dessous :
+!!! abstract "Exercice"
+    === "Énoncé"
+        1. Remplissez le tableau ci-dessous :
 
-| taille de la liste | 1 | 2 | 4 | 8 | 16 | 32 | 64 | 128 | 256 |
-| :----------------- |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| nombre d'étapes    | _ | _ |  _  |   3 |  _ | _   | _   | _   | _   |  _  |
+        | taille de la liste | 1 | 2 | 4 | 8 | 16 | 32 | 64 | 128 | 256 |
+        | :----------------- |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+        | nombre d'étapes    | _ | _ |  _  |   3 |  _ | _   | _   | _   | _   |  _  |
 
-2. Pouvez-vous deviner le nombre d'étapes nécessaires pour une liste de 4096 termes ?
-3. Pour une liste de $2^n$ termes, quel est le nombre d'étapes ?
+        2. Pouvez-vous deviner le nombre d'étapes nécessaires pour une liste de 4096 termes ?
+        3. Pour une liste de $2^n$ termes, quel est le nombre d'étapes ?
+    === "Correction"
+         
 
-**Conclusion :** C'est le nombre de puissances de 2 que contient le nombre $N$ de termes de la liste qui est déterminant dans la complexité de l'algorithme. Ce nombre s'appelle le *logarithme de base 2* et se note $\log_2(N)$. On dit que l'algorithme de dichotomie a une **vitesse logarithmique**. On rencontrera parfois la notation $O(\log_2(n))$.
+**Conclusion :** 
+
+C'est le nombre de puissances de 2 que contient le nombre $N$ de termes de la liste qui est déterminant dans la complexité de l'algorithme. 
+
+Ce nombre s'appelle le *logarithme de base 2* et se note $\log_2(N)$.
+
+ On dit que l'algorithme de dichotomie a une **vitesse logarithmique**. On rencontrera parfois la notation $O(\log_2(n))$.
 
 !!! note "Complexité de la dichotomie :heart: :heart: :heart:"
     La recherche dichotomique se fait avec une **complexité logarithmique**.
 
 
-Cette complexité est très largement meilleure qu'une complexité linéaire. Le nombre d'opérations à effectuer est très peu sensible à la taille des données d'entrée, ce qui en fait un algorithme très efficace.
+Cette complexité est bien meilleure qu'une complexité linéaire. Le nombre d'opérations à effectuer est très peu sensible à la taille des données d'entrée, ce qui en fait un algorithme très efficace.
 
 
 ## 3. Expériences et comparaison des vitesses d'exécution
