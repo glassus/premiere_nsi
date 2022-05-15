@@ -44,11 +44,9 @@ Extrait de [Wikipedia](https://fr.wikipedia.org/wiki/Diviser_pour_r%C3%A9gner_(i
 ![](data/diviser_pour_regner.png)
 
 -->
-##  1. Algorithmes de recherche d'une valeur dans une liste triée
+##  1. Introduction : recherche d'une valeur dans une liste
 
-**Préambule** : la méthode que nous allons utiliser implique que les valeurs ont été **triées** auparavant.
-
-Si les valeurs ne sont pas triées (ou pas triables), cela peut vite être problématique.
+### 1.1 Préambule : liste non triée
 
 **Exemple :** pouvez-vous deviner la couleur à laquelle je pense ?
 
@@ -57,25 +55,27 @@ Si les valeurs ne sont pas triées (ou pas triables), cela peut vite être probl
 coul = ["bleu", "jaune", "rouge", "vert", "violet", "marron"]
 ```
 
-*hormis le test de toutes les valeurs, aucune méthode efficace n'est possible.*
+Toutes les méthodes (proposition des valeurs dans l'ordre, au hasard, dans l'ordre inverse...) sont équivalentes car la liste n'est pas triée.
 
-Dans toute la suite, nous rechercherons un élément dans une liste d'entiers **triée** dans l'ordre croissant. 
 
-Considérons donc la liste L suivante : 
+:star: :star: :star: Dans toute la suite, nous rechercherons un élément dans une liste d'entiers **triée** dans l'ordre croissant. :star: :star: :star: 
+
+### 1.2 Contexte de recherche
+
+Considérons donc la liste ```lst```  suivante : 
 
 ![image](data/fig0.png){: .center}
 
 
 ```python
-L = [2, 3, 6, 7, 11, 14, 18, 19, 24]
+lst = [2, 3, 6, 7, 11, 14, 18, 19, 24]
 ```
 
 L'objectif est de définir un algorithme de recherche efficace d'une valeur arbitraire présente dans cette liste.
 
-### 1.1 Méthode naïve : recherche par balayage
+### 1.3 Méthode naïve : recherche par balayage
 C'est la méthode la plus intuitive : on essaie toutes les valeurs (par exemple, dans l'ordre croissant) jusqu'à trouver la bonne.
 
-### Exercice 1  
 
 !!! abstract "Exercice 1"
     === "Énoncé"
@@ -83,53 +83,85 @@ C'est la méthode la plus intuitive : on essaie toutes les valeurs (par exemple,
     === "Correction"
         ```python linenums='1'
         lst = [2, 3, 6, 7, 11, 14, 18, 19, 24]
-        for k in range(len(L)):
-            if L[k] ==  14 :
-        return k
+        for k in range(len(lst)):
+            if lst[k] ==  14 :
+                return k
+        return "non trouvé"
         ```
 
 
-!!! abstract "Exercice 1"
+!!! abstract "Exercice 2"
     === "Énoncé"
         Écrire une fonction `trouve(lst, val)` qui renvoie l'indice d'une valeur `val` dans une liste `lst `. Si la valeur `val` n'est pas trouvée, on renverra `"non trouvé"`.
     === "Correction"
         ```python linenums='1'
         def trouve(val, lst) :
-            for k in range(len(L)) :
-                if L[k] == val:
+            for k in range(len(lst)) :
+                if lst[k] == val:
                     return k
             return "non trouvé"
 
         ```
 
 
+### 1.3 Complexité de la méthode naïve
 
-### 1.2 Complexité de la méthode
+!!! note "Complexité de la méthode naïve :heart:"
+    Dans le cas d'une recherche naïve, le nombre (maximal) d'opérations nécessaires est proportionnel à la taille de la liste à étudier. Si on appelle $n$ la longueur de la liste, on dit que cet algorithme est **d'ordre $n$**, ou **linéaire**, ou en $O(n)$.
 
-Le nombre (maximal) d'opérations nécessaires est proportionnel à la taille de la liste à étudier. Si on appelle $n$ la longueur de la liste, on dit que cet algorithme est **d'ordre $n$**, ou **linéaire**, ou en $O(n)$.
-
-**Questions :** 
-
-- La méthode utilisée nécessitait-elle que la liste soit triée ?
-- Est-on sûr que cet algorithme s'arrête ? 
+**Remarque :** 
+La méthode naïve n'utilise pas le fait que la liste est triée, on aurait pu aussi bien l'utiliser sur une liste non triée.
 
 
-## 2. Méthode 2 : recherche dichotomique
-Comment appliquer la méthode vue dans l'activité d'introduction ? 
+## 2. Recherche dichotomique
+
+### 2.1 Introduction : le jeu du *«devine un nombre entre 1 et 100»*
+
+!!! abstract "Règles du jeu"
+    Si je choisis un nombre entre 1 et 100, quelle est la stratégie optimale pour deviner ce nombre le plus vite possible ?  
+    (à chaque étape, une indication (trop grand, trop petit) permet d'affiner la proposition suivante)
+
+**Réponse attendue :** la meilleure stratégie est de *couper en deux* à chaque fois l'intervalle d'étude. On démarre de 50, puis 75 ou 25, etc.
+
+
+:star: :star: Il convient toute fois de remettre en question cette méthode qui paraît *naturellement* optimale : si je propose 90 comme nombre de départ, j'ai certes moins de chance que le nombre soit entre 90 et 100, mais s'il l'est, j'ai gagné un gros avantage car mon nouvel intervalle est très réduit.
+
+??? tip "Notion d'espérance probabiliste"
+    Déterminer si un un risque vaut la peine d'être pris passe par la compréhension de la notion d'**espérance probabiliste**.
+    Exemple : "On lance un dé, s'il tombe sur le 6 vous recevez 8 euros, sinon vous me donnez 1 euro. Voulez-vous jouer ?"
+
+    $E(X) = 8 \times \frac{1}{6} + (-1) \times \frac{5}{6} = \frac{8}{6}-\frac{5}{6}=\frac12$
+
+    *En moyenne*, on gagnera 50 centimes par partie, il faut donc jouer.
+
+
+Le graphique ci-dessous représente le nombre de coups moyens (sur 10 000 parties simulées)
+
+![image](data/fig1.png){: .center width=40%}
+
+**Interprétations et remarques** 
+
+- si le choix se porte *toujours* sur le nombre situé à la moitié de l'intervalle (0.5), le nombre de coups moyen avant la victoire (sur 10 000 parties) est environ 6.
+- si le choix se porte *toujours* sur le nombre situé à 90 % de l'intervalle (0.9), le nombre de coups moyen avant la victoire (sur 10 000 parties) est environ 11.
+- l'asymétrie de la courbe (qui devrait être symétrique) est due aux arrondis par défaut dans le cas de nombres non entiers.
+
+#### Conclusion générale de l'activité d'introduction
+La stratégie optimale est de diviser en deux à chaque étape l'intervalle d'étude. On appelle cela une méthode par **dichotomie**, du grec ancien διχοτομία, dikhotomia (« division en deux parties »).
 
 
 
+### 2.2 Algorithme de recherche dichotomique
 
-Exemple d'algorithme :
+!!! note "Dichotomie, déroulement intuitif"
+    - on se place *au milieu* de la liste.
+    - on regarde si la valeur sur laquelle on est placée est inférieure ou supérieure à la valeur cherchée.
+    - on ne considère maintenant que la bonne moitié de la liste qui nous intéresse.
+    - on continue jusqu'à trouver la valeur cherchée (ou pas)
 
-- on se place *au milieu* de la liste.
-- on regarde si on est inférieur ou supérieur à la valeur cherchée.
-- on ne garde que la bonne moitié de la liste qui nous intéresse, et on recommence jusqu'à trouver la bonne valeur.
+<!--
+### 2.3 Illustration
 
-
-### 2.1 Illustration
-
-Recherchons la valeur 14 dans notre liste `L`.
+Recherchons la valeur 14 dans notre liste `lst`.
 
 ![image](data/fig3.png){: .center}
 
@@ -142,52 +174,68 @@ Recherchons la valeur 14 dans notre liste `L`.
 - étape 4 : on compare la valeur 18 à la valeur cherchée : 14. Elle est supérieure, donc on garde ce qui est à gauche. Il n'y a plus qu'une valeur.
 - étape 5 : on se place sur la valeur 14 et on compare avec 14. La valeur est trouvée.
 
-### 2.2 Programmation de la méthode de dichotomie
+-->
 
-Nous allons travailler avec deux variables `indice_debut` et `indice_fin` qui vont délimiter la liste à étudier. Ces indices sont représentés en bleu sur la figure ci-dessous. La valeur de l'`indice_central` (représenté en rouge) sera égale à `(indice_debut + indice_fin) // 2`
+### 2.3 Programmation de la méthode de dichotomie
+
+Comprendre la méthode de dichotomie est relativement simple, mais savoir la programmer est plus difficile.
+
+Pour des raisons d'efficacité, nous allons garder *intacte* notre liste de travail et simplement faire évoluer les indices qui déterminent le début et la fin de notre liste.
+
+Une autre méthode pourrait être d'extraire à chaque étape une nouvelle liste (dont on espère qu'elle contient la valeur cherchée), mais la technique utilisée (le *slicing* de liste) consomme beaucoup trop de ressources.
+
+Nous allons donc travailler avec trois variables :
+
+- `indice_debut` (en bleu sur le schéma)
+- `indice_fin` (en bleu sur le schéma)
+- `indice_central`, qui est égale à `(indice_debut + indice_fin) // 2` (en rouge sur le schéma)
 ![image](data/fig4.png){: .center}
 
-Le programme s'arrête lorsque la valeur cherchée a été trouvée, ou lorsque `indice_fin` devint inférieur à `indice_debut`.
+Nous allons faire *se rapprocher* les indices `indice_debut` et `indice_fin` **tant que** `indice_debut <= indice_fin`
 
+
+!!! note "Recherche dichotomique dans une liste triée :heart: :heart: :heart:"
+    ```python
+    def recherche_dichotomique(lst, val) :
+        indice_debut = 0
+        indice_fin = len(lst) - 1
+        while indice_debut <= indice_fin :
+            indice_centre = (indice_debut + indice_fin) // 2     
+            valeur_centrale = lst[indice_centre]            
+            if valeur_centrale == val :          
+                return indice_centre
+            if valeur_centrale < val :             
+                indice_debut = indice_centre + 1
+            else :
+                indice_fin = indice_centre - 1
+        return None
+            
+    ```
+
+**Utilisation**
 
 ```python
-def trouve_dicho(L, n) :
-    indice_debut = ...
-    indice_fin = ...
-    while indice_debut <= indice_fin :
-        indice_centre = (... + ...) // 2     # on prend l'indice central
-        valeur_centrale = L[...]             # on prend la valeur centrale 
-        if valeur_centrale == ... :          # si la valeur centrale est la valeur cherchée...
-            return indice_centre
-        if valeur_centrale < ... :             # si la valeur centrale est trop petite...
-            indice_debut = indice_centre + 1
-        else :
-            indice_fin = indice_centre - 1
-    return None
-        
+>>> mylist = [2, 3, 6, 7, 11, 14, 18, 19, 24]
+>>> recherche_dichotomique(mylist, 14)
+5
+>>> recherche_dichotomique(mylist, 2)
+0
+>>> recherche_dichotomique(mylist, 24)
+8
+>>> recherche_dichotomique(mylist, 2022)
+>>> 
 ```
 
+### 2.4 Visualisations avec PythonTutor
 
-```python
-L = [2, 3, 6, 7, 11, 14, 18, 19, 24]
-print(trouve_dicho(L,14))
-print(trouve_dicho(L,2))
-print(trouve_dicho(L,24))
-print(trouve_dicho(L,1976))
-```
-
-    5
-    0
-    8
-    None
+!!! aide "Cas où la valeur est trouvée"
+    <iframe width="1000" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20recherche_dichotomique%28lst,%20val%29%20%3A%0A%20%20%20%20indice_debut%20%3D%200%0A%20%20%20%20indice_fin%20%3D%20len%28lst%29%20-%201%0A%20%20%20%20while%20indice_debut%20%3C%3D%20indice_fin%20%3A%0A%20%20%20%20%20%20%20%20indice_centre%20%3D%20%28indice_debut%20%2B%20indice_fin%29%20//%202%20%20%20%20%20%0A%20%20%20%20%20%20%20%20valeur_centrale%20%3D%20lst%5Bindice_centre%5D%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20if%20valeur_centrale%20%3D%3D%20val%20%3A%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20indice_centre%0A%20%20%20%20%20%20%20%20if%20valeur_centrale%20%3C%20val%20%3A%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20indice_debut%20%3D%20indice_centre%20%2B%201%0A%20%20%20%20%20%20%20%20else%20%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20indice_fin%20%3D%20indice_centre%20-%201%0A%20%20%20%20return%20None%0A%0Amylist%20%3D%20%5B2,%203,%206,%207,%2011,%2014,%2018,%2019,%2024%5D%0Aprint%28recherche_dichotomique%28mylist,%2014%29%29%0A&codeDivHeight=400&codeDivWidth=600&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 
-Une visualisation de l'évolution des variables `indice_debut` et `indice_fin` est disponible sur le site pythontutor via [ce lien](http://pythontutor.com/visualize.html#code=L%20%3D%20%5B2,%203,%206,%207,%2011,%2014,%2018,%2019,%2024%5D%0A%0Adef%20trouve_dicho%28L,%20n%29%20%3A%0A%20%20%20%20indice_debut%20%3D%200%0A%20%20%20%20indice_fin%20%3D%20len%28L%29%20-%201%0A%20%20%20%20while%20indice_debut%20%3C%3D%20indice_fin%20%3A%0A%20%20%20%20%20%20%20%20indice_centre%20%3D%20%28indice_debut%20%2B%20indice_fin%29%20//%202%0A%20%20%20%20%20%20%20%20valeur_centrale%20%3D%20L%5Bindice_centre%5D%0A%20%20%20%20%20%20%20%20if%20valeur_centrale%20%3D%3D%20n%20%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20indice_centre%0A%20%20%20%20%20%20%20%20if%20valeur_centrale%20%3C%20n%20%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20indice_debut%20%3D%20indice_centre%20%2B%201%0A%20%20%20%20%20%20%20%20else%20%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20indice_fin%20%3D%20indice_centre%20-%201%0A%20%20%20%20return%20None%0A%0Aprint%28trouve_dicho%28L,14%29%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false).
+!!! aide "Cas où la valeur N'est PAS trouvée"
+    <iframe width="1000" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20recherche_dichotomique%28lst,%20val%29%20%3A%0A%20%20%20%20indice_debut%20%3D%200%0A%20%20%20%20indice_fin%20%3D%20len%28lst%29%20-%201%0A%20%20%20%20while%20indice_debut%20%3C%3D%20indice_fin%20%3A%0A%20%20%20%20%20%20%20%20indice_centre%20%3D%20%28indice_debut%20%2B%20indice_fin%29%20//%202%20%20%20%20%20%0A%20%20%20%20%20%20%20%20valeur_centrale%20%3D%20lst%5Bindice_centre%5D%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20if%20valeur_centrale%20%3D%3D%20val%20%3A%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20indice_centre%0A%20%20%20%20%20%20%20%20if%20valeur_centrale%20%3C%20val%20%3A%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20indice_debut%20%3D%20indice_centre%20%2B%201%0A%20%20%20%20%20%20%20%20else%20%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20indice_fin%20%3D%20indice_centre%20-%201%0A%20%20%20%20return%20None%0A%0Amylist%20%3D%20%5B2,%203,%206,%207,%2011,%2014,%2018,%2019,%2024%5D%0Aprint%28recherche_dichotomique%28mylist,%205%29%29%0A&codeDivHeight=400&codeDivWidth=600&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
-![image](data/fig5.png){: .center}
-
-
-### 2.3 Terminaison de l'algorithme
+### 2.5 Terminaison de l'algorithme
 Est-on sûr que l'algorithme va se terminer ?  
 La boucle `while` qui est utilisée doit nous inciter à la prudence (voir [cours](https://github.com/glassus/nsi/blob/master/Premiere/Theme01_Bases_de_Python/02_Boucle_while/boucles_while.ipynb) sur la boucle While).  
 Il y a en effet le risque de rentrer dans une boucle infinie.  
@@ -217,7 +265,7 @@ Ceci nous assure donc que le programme va bien se terminer.
 On dit que la valeur `indice_fin - indice_debut ` représente le **variant de boucle** de cet algorithme. 
 Ce variant est un nombre entier, d'abord strictement positif, puis qui va décroître jusqu'à la valeur 0.
 
-### 2.4 Complexité de l'algorithme
+### 2.6 Complexité de l'algorithme
 
 Combien d'étapes (au maximum) sont-elles nécessaires pour arriver à la fin de l'algorithme ?  
 Imaginons que la liste initiale possède 8 valeurs. 
@@ -237,6 +285,13 @@ Il y a donc 3 étapes avant de trouver la valeur cherchée.
 3. Pour une liste de $2^n$ termes, quel est le nombre d'étapes ?
 
 **Conclusion :** C'est le nombre de puissances de 2 que contient le nombre $N$ de termes de la liste qui est déterminant dans la complexité de l'algorithme. Ce nombre s'appelle le *logarithme de base 2* et se note $\log_2(N)$. On dit que l'algorithme de dichotomie a une **vitesse logarithmique**. On rencontrera parfois la notation $O(\log_2(n))$.
+
+!!! note "Complexité de la dichotomie :heart: :heart: :heart:"
+    La recherche dichotomique se fait avec une **complexité logarithmique**.
+
+
+Cette complexité est très largement meilleure qu'une complexité linéaire. Le nombre d'opérations à effectuer est très peu sensible à la taille des données d'entrée, ce qui en fait un algorithme très efficace.
+
 
 ## 3. Expériences et comparaison des vitesses d'exécution
 
