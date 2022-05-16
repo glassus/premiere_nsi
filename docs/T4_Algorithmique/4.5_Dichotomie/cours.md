@@ -127,7 +127,7 @@ La méthode naïve n'utilise pas le fait que la liste est triée, on aurait pu a
 :star: :star: Il convient toute fois de remettre en question cette méthode qui paraît *naturellement* optimale : si je propose 90 comme nombre de départ, j'ai certes moins de chance que le nombre soit entre 90 et 100, mais s'il l'est, j'ai gagné un gros avantage car mon nouvel intervalle est très réduit.
 
 ??? tip "Notion d'espérance probabiliste"
-    Déterminer si un un risque vaut la peine d'être pris passe par la compréhension de la notion d'**espérance probabiliste**.
+    Déterminer si un risque vaut la peine d'être pris passe par la compréhension de la notion d'**espérance probabiliste**.
     Exemple : "On lance un dé, s'il tombe sur le 6 vous recevez 8 euros, sinon vous me donnez 1 euro. Voulez-vous jouer ?"
 
     $E(X) = 8 \times \frac{1}{6} + (-1) \times \frac{5}{6} = \frac{8}{6}-\frac{5}{6}=\frac12$

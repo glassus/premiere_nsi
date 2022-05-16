@@ -9,17 +9,14 @@
 
 
 ## Thèmes en cours d'étude :
-- [Dictionnaires](./T2_Representation_des_donnees/2.3_Dictionnaires/cours/)
-- [Différentes bases](./T2_Representation_des_donnees/2.4_Bases/cours/)
-- [Booléens](./T2_Representation_des_donnees/2.5_Booleens/cours/)
-- [Algorithmes gloutons](./T4_Algorithmique/4.6_Algorithmes_gloutons/cours/)
-- [Tri par sélection](./T4_Algorithmique/4.4_Tri_par_selection/cours/) 
-
-
-
-
+- [Dichotomie](./T4_Algorithmique/4.5_Dichotomie/cours/)
 
 !!! note "*Anciens thèmes traités*"
+    - [Dictionnaires](./T2_Representation_des_donnees/2.3_Dictionnaires/cours/)
+    - [Différentes bases](./T2_Representation_des_donnees/2.4_Bases/cours/)
+    - [Booléens](./T2_Representation_des_donnees/2.5_Booleens/cours/)
+    - [Algorithmes gloutons](./T4_Algorithmique/4.6_Algorithmes_gloutons/cours/)
+    - [Tri par sélection](./T4_Algorithmique/4.4_Tri_par_selection/cours/) 
     - [Découverte de micro:bit](./T3_Architecture_materielle/3.1_Microbit/cours/)
     - [Mise en place de GitHub](./T6_Mini-projets/Github/)
     - [Projet Pygame](./T6_Mini-projets/05_Initiation_Pygame/)
