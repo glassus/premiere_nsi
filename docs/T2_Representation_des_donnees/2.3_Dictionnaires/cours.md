@@ -141,11 +141,12 @@ Ces méthodes sont importantes (elles figurent explicitement au programme de NSI
         ```
         Créer une fonction `achat(habit)` qui augmente de 1 le nombre d'habits (pantalon, pull ou tee-shirt) de mon dressing.
     === "Correction"
-        {{ correction(True,
-        "
-        
-        "
-        ) }}
+        ```python linenums='1'
+        dressing = {"pantalons":3, "pulls":4, "tee-shirts":8}
+
+        def achat(habit):
+            dressing[habit] += 1
+        ```
 
 
 **Remarque :**
@@ -188,11 +189,13 @@ Nous allons résoudre ce problème grâce à :
     === "Énoncé"
         Améliorer la fonction `achat(habit)` en y incluant un test pour prendre en compte les nouveaux habits.
     === "Correction"
-        {{ correction(True,
-        "
-        
-        "
-        ) }}
+        ```python linenums='1'
+        def achat(habit):
+            if habit in dressing:
+                dressing[habit] += 1
+            else:
+                dressing[habit] = 1
+        ```
 
 
 !!! example "{{ exercice() }}"
@@ -206,11 +209,15 @@ Nous allons résoudre ce problème grâce à :
         Créer un dictionnaire qui associera à chaque prénom son nombre d'occurrences dans la liste.
         
     === "Correction"
-        {{ correction(True,
-        "
-        
-        "
-        ) }}
+        ```python linenums='1'
+        occurrence = {}
+
+        for prenom in lst:
+            if prenom in occurrence:
+                occurrence[prenom] += 1
+            else:
+                occurrence[prenom] = 1
+        ``` 
 
 
 !!! example "{{ exercice() }}"
@@ -221,8 +228,27 @@ Nous allons résoudre ce problème grâce à :
         Quel est le **chiffre** qui revient le plus fréquemment dans cette liste ?
         
     === "Correction"
-        {{ correction(True,
-        "
-        
-        "
-        ) }}
+        ```python linenums='1'
+        lst = ['5717', '1133', '5545', '4031', '6398', '2734', '3070', '1346', '7849', '7288', '7587', '6217', '8240', '5733', '6466', '7972', '7341', '6616', '5061', '2441', '2571', '4496', '4831', '5395', '8584', '3033', '6266', '2452', '6909', '3021', '5404', '3799', '5053', '8096', '2488', '8519', '6896', '7300', '5914', '7464', '5068', '1386', '9898', '8313', '1072', '1441', '7333', '5691', '6987', '5255']
+
+        occ = {}
+
+        for nombre in lst:
+            for chiffre in nombre:
+                if chiffre in occ:
+                    occ[chiffre] += 1
+                else:
+                    occ[chiffre] = 1
+
+        # détermination du max:
+        occ_max = 0
+
+        for chiffre in occ:
+            if occ[chiffre] > occ_max:
+                occ_max = occ[chiffre]
+                chiffre_max = chiffre
+
+        print(chiffre_max, 'est le chiffre le plus fréquent')
+        print('il apparait', occ_max, 'fois')
+
+        ```
