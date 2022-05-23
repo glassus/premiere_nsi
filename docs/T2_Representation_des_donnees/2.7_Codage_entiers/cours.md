@@ -2,7 +2,13 @@
 
 ![image](data/BO.png){: .center}
 
-*dans toute la suite, sauf mention contraire, les nombres seront codés sur 1 octet.*
+![image](data/meme.webp){: .center width=40%}
+
+
+!!! abstract ":warning: Attention :warning:"
+    La manière dont les nombres (entiers, non-entiers, positifs, négatifs...) sont traités par un langage de programmation est **spécifique** à ce langage.
+
+    Dans toute la suite de ce cours, pour simplifier, nous considérerons que les nombres sont codés sur **1 octet** seulement. Ce qui ne correspond pas à la réalité, mais permet de comprendre les notions essentielles.
 
 ## 1. Les nombres entiers en binaire non signé
  L'expression "non signé" signifie que la contrainte du signe n'existe pas : tous les nombres sont considérés comme étant positifs.
@@ -23,6 +29,12 @@ Le nombre maximal qu'on puisse coder est `11111111`. C'est l'entier naturel 255.
         3. Pour tout $n \in \mathbb{N}$, $1+2+2^2+2^3+\dots+2^{n}=2^{n+1}-1$ (formule de la somme des termes d'une suite géométrique de raison 2).
 
 
+!!! note "Python et les entiers :heart:"
+    Depuis la version 3 du langage Python, il n'y a plus de taille maximale pour les entiers en Python.
+
+    Ceci implique que la taille nécessaire au codage de l'entier est allouée dynamiquement par Python (avec pour seule limite celle de la mémoire disponible). 
+
+
 !!! abstract "Exercice"
     === "Énoncé"
         1. Effectuer la somme des deux nombres binaires `00001101` et `00001011`.
@@ -30,6 +42,8 @@ Le nombre maximal qu'on puisse coder est `11111111`. C'est l'entier naturel 255.
     === "Correction"
         1. ![](data/add1.png)
         2. Cette addition correspond à $13+11=24$
+
+
 
 
 

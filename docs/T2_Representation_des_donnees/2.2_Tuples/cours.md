@@ -2,6 +2,9 @@
 
 ![image](data/BO.png){: .center}
 
+![image](data/meme.jpg){: .center width=30%}
+
+
 ## 1.Définition des tuples
 Les tuples (appelés *p-uplets* dans le programme officiel de NSI) sont une collection d'objets **ordonnée** mais **NON MODIFIABLE**.  
 Pour rappel :
