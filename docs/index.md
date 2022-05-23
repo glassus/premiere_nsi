@@ -9,6 +9,8 @@
 
 
 ## Thèmes en cours d'étude :
+- [Codage des entiers](./T2_Representation_des_donnees/2.7_Codage_entiers/cours/)
+- [Tuples](./T2_Representation_des_donnees/2.2_Tuples/cours/)
 - [Dichotomie](./T4_Algorithmique/4.5_Dichotomie/cours/)
 
 !!! note "*Anciens thèmes traités*"
