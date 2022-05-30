@@ -80,6 +80,7 @@ Certains nombres n'admettent pas une écriture binaire **finie**. Or la mémoire
 0.30000000000000004
 ```
 
+**Remarque :** parmi les nombres décimaux à un chiffre après la virgule (0,1  0,2  0,3 ...) seul 0,5 admet une écriture binaire finie ! Tous les autres ont une représentation en machine qui n'en donne qu'une valeur approchée.
 
 
 ## 2. Conséquences : la difficile manipulation des flottants 
