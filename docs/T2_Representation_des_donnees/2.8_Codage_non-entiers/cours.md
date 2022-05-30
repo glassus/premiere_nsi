@@ -29,7 +29,7 @@ Tout commence bien, avec un résultat mathématique rassurant : **tous** les nom
 Considérons le nombre $3,6875$. Il se décompose en une partie entière (3) et une partie décimale ($0,6875$).
 
 - **partie entière :** $3=11_2$ 
-- **partie entière :** la conversion de $0,6875$ se fait en plusieurs étapes.  
+- **partie décimale :** la conversion de $0,6875$ se fait en plusieurs étapes.  
 $0,6875 \times 2 = \textbf{1},375$  
 $0,375 \times 2   = \textbf{0},75$   
 $0,75 \times 2 = \textbf{1},5$  

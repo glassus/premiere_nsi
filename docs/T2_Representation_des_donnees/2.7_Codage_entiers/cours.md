@@ -148,7 +148,7 @@ Considérons le nombre `11101101`, codé en binaire signé. À quel nombre relat
         4. Il y a 128 nombres négatifs (de $-128$ à $-1$), le nombre 0, puis 127 nombres positifs (de 1 à 127). Il y a donc 256 nombres au total, comme en binaire non signé. 
 
 
-## 4. Le codage des entiers, une source instarissable d'erreurs...
+## 4. Le codage des entiers, une source intarissable d'erreurs...
 
 ### 4.1 Le vol 501 d'Ariane 5
 
