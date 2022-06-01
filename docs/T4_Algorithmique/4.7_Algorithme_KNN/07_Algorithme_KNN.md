@@ -1,10 +1,5 @@
-# 4.7 Algorithme des KNN
-
-![image](data/BO.png){: .center}
-
 # Méthode du K-Nearest-Neighbours (KNN), aka les k-plus-proches-voisins
 La méthode KNN est une méthode simple et efficace de classification. La classification est un enjeu majeur de l'Intelligence Artificielle :
-
 - la caméra d'une voiture autonome perçoit un panneau, mais quel est ce panneau ?
 - un grain de beauté est pris en photo par un dermatologue, ce grain de beauté est-il cancéreux ?
 - ...

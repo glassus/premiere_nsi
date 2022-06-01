@@ -9,6 +9,8 @@
 
 
 ## Thèmes en cours d'étude :
+- [Manipulation csv](./T5_Traitement_de_donnees/5.1_Manipulation_csv/cours/)
+- [Codage des caractères](./T2_Representation_des_donnees/2.6_Codage_caracteres/cours/)
 - [Codage des non-entiers](./T2_Representation_des_donnees/2.8_Codage_non-entiers/cours/)
 - [Codage des entiers](./T2_Representation_des_donnees/2.7_Codage_entiers/cours/)
 - [Tuples](./T2_Representation_des_donnees/2.2_Tuples/cours/)
