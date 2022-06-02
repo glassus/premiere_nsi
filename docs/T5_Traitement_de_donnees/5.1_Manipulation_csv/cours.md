@@ -279,7 +279,6 @@ plt.show()
     plt.plot(X,Y,'go')
 
 
-
     plt.show()
     ```
 
