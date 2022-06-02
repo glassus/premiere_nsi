@@ -231,7 +231,6 @@ Nous allons utiliser le module Matplotlib pour illustrer les données de notre f
 
 
 ```python linenums='1'
-%matplotlib inline
 import matplotlib.pyplot as plt
 X = [0,1,3,6]
 Y = [12,10,7,15]
