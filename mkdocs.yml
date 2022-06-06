@@ -13,7 +13,10 @@ theme:
   icon:
     logo: material/code-greater-than
     repo : fontawesome/brands/github
+    admonition:
+      note: fontawesome/solid/pen-to-square
   favicon: xtra/fav1NSI.png
+
 
   features:
     - navigation.instant
