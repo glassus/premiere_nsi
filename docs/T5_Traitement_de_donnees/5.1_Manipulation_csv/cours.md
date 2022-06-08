@@ -16,11 +16,13 @@ Les fichiers CSV (pour Comma Separated Values) sont des fichiers-texte (ils ne c
 L'utilisation d'un tableur peut être délicate lorsque le fichier CSV comporte un très grand nombre de lignes. 
 Python permet de lire et d'extraire des informations d'un fichier CSV même très volumineux, grâce à des modules dédiés, comme le bien-nommé `csv` (utilisé ici) ou bien `pandas` (qui sera vu plus tard).
 
+Le logiciel ```Jupyter Notebook``` se prête parfaitement à la consultation et l'exploitation de données structurées, nous l'utiliserons préféremment à ```Thonny```. 
+
 ### 2.1 Première méthode
 Le script suivant :
 ```python linenums='1'
 import csv                          
-f = open('data/exemple.csv', "r", encoding = 'utf-8') # le "r" signifie "read", le fichier est ouvert en lecture seule
+f = open('exemple.csv', "r", encoding = 'utf-8') # le "r" signifie "read", le fichier est ouvert en lecture seule
 donnees = csv.reader(f)  # donnees est un objet (spécifique au module csv) qui contient des lignes
 
 for ligne in donnees:               
@@ -53,7 +55,7 @@ Au lieu d'utiliser la fonction `csv.reader()`, utilisons `csv.DictReader()`. Com
 Le script suivant :
 ```python linenums='1'
 import csv
-f = open('data/exemple.csv', "r", encoding = 'utf-8')
+f = open('exemple.csv', "r", encoding = 'utf-8')
 donnees = csv.DictReader(f)
 
 for ligne in donnees:
@@ -98,7 +100,7 @@ Nous allons donc créer une liste de dictionnaires.
 Le script suivant :
 ```python linenums='1'
 import csv
-f = open('data/exemple.csv', "r", encoding = 'utf-8')
+f = open('exemple.csv', "r", encoding = 'utf-8')
 donnees = csv.DictReader(f)
 amis = []
 for ligne in donnees:
@@ -231,6 +233,7 @@ Nous allons utiliser le module Matplotlib pour illustrer les données de notre f
 
 
 ```python linenums='1'
+%matplotlib inline
 import matplotlib.pyplot as plt
 X = [0,1,3,6]
 Y = [12,10,7,15]
@@ -247,7 +250,9 @@ plt.show()
 **Q1.** Afficher sur un graphique tous les joueurs de rugby du top14, en mettant le poids en abscisse et la taille en ordonnée.
 
 ??? tip "réponse"
+
     ```python linenums='1'
+    %matplotlib inline
     X = [int(joueur['Poids']) for joueur in joueurs]
     Y = [int(joueur['Taille']) for joueur in joueurs]
     plt.plot(X,Y,'ro') # r pour red, o pour un cercle. voir https://matplotlib.org/api/markers_api.html
@@ -262,7 +267,7 @@ plt.show()
 
 ??? tip "réponse"
     ```python linenums='1'
-
+    %matplotlib inline
     #tous les joueurs
     X = [int(joueur['Poids']) for joueur in joueurs]
     Y = [int(joueur['Taille']) for joueur in joueurs]
