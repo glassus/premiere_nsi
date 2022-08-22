@@ -1,0 +1,898 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "emk6sw0OaVxc"
+   },
+   "source": [
+    "# Utilisation du module Pandas\n",
+    "Le module `csv` utilisé précédemment se contente de lire les données structurées. Il ne fait aucun effort particulier pour analyser les données. Nous nous en sommes aperçus lorsqu'il a fallu convertir par `int()` toutes les valeurs numériques, qui étaient interprétées comme des chaînes de caractères.  \n",
+    "La bibliothèque `pandas` est par contre spécialement conçue pour l'analyse des données (*data analysis*) : elle est donc naturellement bien plus performante."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {},
+    "colab_type": "code",
+    "id": "L9Yp-3USaVyY"
+   },
+   "outputs": [],
+   "source": [
+    "import pandas as pd #import du module pandas, abrégé classiquement par \"pd\""
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {},
+    "colab_type": "code",
+    "id": "W9JdmXZiaVzo"
+   },
+   "outputs": [],
+   "source": [
+    "df = pd.read_csv('http://glassus1.free.fr/top14.csv', encoding = 'utf-8')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "hLY3q0vEaVz4"
+   },
+   "source": [
+    "La variable est nommée classiquement `df` pour *dataframe* (que l'on peut traduire par *table de données*)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 35
+    },
+    "colab_type": "code",
+    "id": "h310TURAaVz7",
+    "outputId": "bd0f51db-0f55-43aa-b0c6-439232f3bb62"
+   },
+   "outputs": [],
+   "source": [
+    "type(df)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "lTTRshytaV0P"
+   },
+   "source": [
+    "## Premiers renseignements sur les fichiers de données"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "G7BhHDnvaV0S"
+   },
+   "source": [
+    "Que contient la variable `df`?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 424
+    },
+    "colab_type": "code",
+    "id": "9l4V561kaV0W",
+    "outputId": "ad37fa3f-b8d6-419a-8a93-8cf9d52ff65c",
+    "scrolled": true
+   },
+   "outputs": [],
+   "source": [
+    "df"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "vHakvyjsaV0j"
+   },
+   "source": [
+    "Les données sont présentées dans l'ordre originel du fichier. \n",
+    "Il est possible d'avoir uniquement les premières lignes du fichier avec la commande `head()` et les dernières du fichier avec la commande `tail()`. Ces commandes peuvent recevoir en paramètre un nombre entier."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 206
+    },
+    "colab_type": "code",
+    "id": "ffxCWRv-aV0m",
+    "outputId": "09c59d55-73f2-4ddf-ed05-b2a0813cba8a"
+   },
+   "outputs": [],
+   "source": [
+    "df.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 206
+    },
+    "colab_type": "code",
+    "id": "cnX7EHQxaV0w",
+    "outputId": "57d91e89-eb49-4443-9d0c-5201f242831f"
+   },
+   "outputs": [],
+   "source": [
+    "df.tail()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 143
+    },
+    "colab_type": "code",
+    "id": "LcibjQkVaV07",
+    "outputId": "ccff9aac-34c5-458e-c4e2-e0a3a2dd92f5"
+   },
+   "outputs": [],
+   "source": [
+    "df.head(3)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "evMRdFilaV1G"
+   },
+   "source": [
+    "Pour avoir des renseignements globaux sur la structure de notre fichier, on peut utiliser la commande `df.info()`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 213
+    },
+    "colab_type": "code",
+    "id": "7Vbi029jaV1J",
+    "outputId": "4c5114d1-8d11-4208-f317-bdae5f96e79b"
+   },
+   "outputs": [],
+   "source": [
+    "df.info()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "N2K-Pd-MaV1Z"
+   },
+   "source": [
+    "Pour accéder à une fiche particulière de joueur, on peut utiliser la fonction `loc()` :"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 141
+    },
+    "colab_type": "code",
+    "id": "Ud31B7YsaV1c",
+    "outputId": "381be15b-cc3d-4355-8dee-e0f69aad2fd2"
+   },
+   "outputs": [],
+   "source": [
+    "df.loc[45]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "7mAB7-ofaV1z"
+   },
+   "source": [
+    "## Extraction de colonnes, création de graphiques \n",
+    "Pour créer une liste contenant uniquement les données numériques de la colonne poids, il suffit d'écrire :"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {},
+    "colab_type": "code",
+    "id": "zd3nVgSRaV12"
+   },
+   "outputs": [],
+   "source": [
+    "poids = df['Poids']"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "G7B9_CdxaV2D"
+   },
+   "source": [
+    "Attention, la variable `poids` n'est pas une liste qui contiendrait `[122,116,112,...]` mais un type particulier à `pandas`, appelé \"Series\"."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 230
+    },
+    "colab_type": "code",
+    "id": "yIrGAyBcaV2F",
+    "outputId": "88c26953-30fb-46a0-977f-539b99f62f34"
+   },
+   "outputs": [],
+   "source": [
+    "print(poids)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 35
+    },
+    "colab_type": "code",
+    "id": "gdNVPJkyaV2O",
+    "outputId": "59c2b9d0-c059-4f43-93b8-45eb6208f75d"
+   },
+   "outputs": [],
+   "source": [
+    "type(poids)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "XU5OJi-MaV2Y"
+   },
+   "source": [
+    "On peut néanmoins s'en servir comme d'une liste classique."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 35
+    },
+    "colab_type": "code",
+    "id": "vwXS6I84aV2a",
+    "outputId": "b3b7391f-68ea-49c9-de82-c9bf54917dc3"
+   },
+   "outputs": [],
+   "source": [
+    "poids[0]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "Pj5eT9KFaV2i"
+   },
+   "source": [
+    "On voit donc que les données sont automatiquement traitées comme des nombres. Pas besoin de conversion comme avec le module `csv` !\n",
+    "\n",
+    "Pour tracer notre nuage de points poids-taille, le code sera donc simplement :"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 265
+    },
+    "colab_type": "code",
+    "id": "K0yhJ-15aV2l",
+    "outputId": "2f24da3a-db9b-49ab-82da-f81454ce1ca0"
+   },
+   "outputs": [],
+   "source": [
+    "%matplotlib inline\n",
+    "import matplotlib.pyplot as plt\n",
+    "X = df['Poids']\n",
+    "Y = df['Taille']\n",
+    "\n",
+    "plt.plot(X,Y,'ro') # r pour red, o pour un cercle. voir https://matplotlib.org/api/markers_api.html\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "fzl7pMgMaV2t"
+   },
+   "source": [
+    "L'interprétation numérique permet à `pandas` d'analyser automatiquement les données, avec notamment la fonction `describe()`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 177
+    },
+    "colab_type": "code",
+    "id": "E9IwMet9aV2w",
+    "outputId": "be9163f0-3461-440d-ea8c-fa38cf38a16f"
+   },
+   "outputs": [],
+   "source": [
+    "df['Taille'].describe()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "S5kGQ0peaV27"
+   },
+   "source": [
+    "On voit donc que les indicateurs statistiques sont proposés automatiquent. \n",
+    "D'ailleurs, on peut très facilement tracer des boites à moustaches avec `boxplot()`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 283
+    },
+    "colab_type": "code",
+    "id": "CIs7_4Z9aV28",
+    "outputId": "6ca6ca6c-2146-4084-98c8-84a45e01298a"
+   },
+   "outputs": [],
+   "source": [
+    "df.boxplot(\"Taille\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "UPK6FbVxaV3G"
+   },
+   "source": [
+    "Pour les données non-numériques, la commande `describe()` n'est que peu d'utilité. Elle renseigne toutefois la valeur la plus fréquente (en statistiques, le *mode* ou *valeur modale*)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 35
+    },
+    "colab_type": "code",
+    "id": "J2VdkaI5aV3J",
+    "outputId": "fd1f3385-e9ee-4cae-a720-3ad43b81c24c"
+   },
+   "outputs": [],
+   "source": [
+    "df['Poste'].describe().top"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {},
+    "colab_type": "code",
+    "id": "V3e_FSFQcDwK"
+   },
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "1yGECzxmaV3V"
+   },
+   "source": [
+    "Pour connaître par exemple la date de naissance la plus fréquente chez les joueurs du top14, on utilisera simplement :"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 35
+    },
+    "colab_type": "code",
+    "id": "cizeAeudaV3Y",
+    "outputId": "1e1e2254-ffe3-457e-e7f8-ee9f27fa758f"
+   },
+   "outputs": [],
+   "source": [
+    "df['Date de naissance'].describe().top"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "tuuqyF5GaV3d"
+   },
+   "source": [
+    "Qui sont les joueurs nés à cette date ?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 88
+    },
+    "colab_type": "code",
+    "id": "RSp3VnloaV3h",
+    "outputId": "4ba24701-e07a-4876-9eff-c70c8e7d35c6"
+   },
+   "outputs": [],
+   "source": [
+    "print(df['Nom'][df['Date de naissance'] == '23/04/1993'])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "h5cEi0kcaV3m"
+   },
+   "source": [
+    "Beaucoup plus de renseignements sont donnés par la commande `value_counts()`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 728
+    },
+    "colab_type": "code",
+    "id": "M8DhHZG-aV3n",
+    "outputId": "85768f49-f611-4551-e913-23f7a4445f4e"
+   },
+   "outputs": [],
+   "source": [
+    "df['Taille'].value_counts()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "RPrflhgCaV3s"
+   },
+   "source": [
+    "## Filtres et recherches\n",
+    "Comment créer une *dataframe* ne contenant que les joueurs de l'UBB ?  \n",
+    "\n",
+    "L'idée syntaxique est d'écrire à l'intérieur de `df[]` le test qui permettra le filtrage."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {},
+    "colab_type": "code",
+    "id": "GQ6t5M6SaV3u"
+   },
+   "outputs": [],
+   "source": [
+    "UBB = df[df['Equipe'] == 'Bordeaux']"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 1000
+    },
+    "colab_type": "code",
+    "id": "KUOO86j6aV30",
+    "outputId": "61ca1c80-8e32-43e6-c303-8087d5928e9e"
+   },
+   "outputs": [],
+   "source": [
+    "UBB"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "jflqx-tlaV36"
+   },
+   "source": [
+    "### Exercice  1\n",
+    "\n",
+    "Créer une dataframe `gros` qui contient les joueurs de plus de 135 kg."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 300
+    },
+    "colab_type": "code",
+    "id": "JHQooyUSWlf4",
+    "outputId": "b71ef8c1-9e2a-495a-fafb-033e3d05b95a"
+   },
+   "outputs": [],
+   "source": [
+    "gros = df[df['Poids'] > 135] ; gros"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "Gd9gCUTkaV4U"
+   },
+   "source": [
+    "### Exercice  2\n",
+    "\n",
+    "Créer une dataframe `grand_gros` qui contient les joueurs de plus de 2m et plus de 120 kg."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 424
+    },
+    "colab_type": "code",
+    "id": "X3UY2qC-aV4Z",
+    "outputId": "3a361346-179d-4e0e-94fd-223f5546b0f5"
+   },
+   "outputs": [],
+   "source": [
+    "grand_gros = df[(df['Poids'] > 120) & (df['Taille'] > 200)]\n",
+    "grand_gros"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "cHgScf-caV4h"
+   },
+   "source": [
+    "### Exercice  3\n",
+    "\n",
+    "Trouver en une seule ligne le joueur le plus léger du Top14."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 35
+    },
+    "colab_type": "code",
+    "id": "-qxr-kP7Sad-",
+    "outputId": "627f91eb-8cd8-44b6-89d5-a2551752c0fc"
+   },
+   "outputs": [],
+   "source": [
+    "df['Nom'][df['Poids'] == min(df['Poids'])]\n",
+    "print(df['Nom'][df['Poids'].idxmin])\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "BdC4T8JeaV4p"
+   },
+   "source": [
+    "## Tris de données\n",
+    "Le tri se fait par la fonction `sort_values()` :"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {},
+    "colab_type": "code",
+    "id": "v7zDG9l8aV4q"
+   },
+   "outputs": [],
+   "source": [
+    "newdf = df.sort_values(by=['Poids'], ascending = True)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 363
+    },
+    "colab_type": "code",
+    "id": "icXyy5ERaV4w",
+    "outputId": "bbc85c5b-7194-4ff1-9fe0-d3d7f763346e"
+   },
+   "outputs": [],
+   "source": [
+    "newdf.head(10)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {},
+    "colab_type": "code",
+    "id": "JVGM5VO5aV42"
+   },
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "Uc7hwYlPaV47"
+   },
+   "source": [
+    "## Rajout d'une colonne\n",
+    "Afin de pouvoir trier les joueurs suivant de nouveaux critères, nous allons rajouter un champ pour chaque joueur.\n",
+    "Prenons un exemple stupide : fabriquons un nouveau champ `'Poids après les vacances'` qui contiendra le poids des joueurs augmenté de 8 kg. \n",
+    "Ceci se fera simplement par :\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {},
+    "colab_type": "code",
+    "id": "J85gFmzDaV48"
+   },
+   "outputs": [],
+   "source": [
+    "df['Poids après les vacances'] = df['Poids'] + 8"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 206
+    },
+    "colab_type": "code",
+    "id": "mwiLaa19aV5B",
+    "outputId": "1902af3d-7f82-4cb3-adbb-58462c37f874"
+   },
+   "outputs": [],
+   "source": [
+    "df.head()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "TgLXLWeYaV5G"
+   },
+   "source": [
+    "Pour supprimer cette colonne sans intérêt, faisons :"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {},
+    "colab_type": "code",
+    "id": "hvhUwpp2aV5I"
+   },
+   "outputs": [],
+   "source": [
+    "del df['Poids après les vacances'] "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 206
+    },
+    "colab_type": "code",
+    "id": "4BTXaPtEaV5N",
+    "outputId": "2dea73f7-2d2f-4138-cad1-631eaa54f5b3"
+   },
+   "outputs": [],
+   "source": [
+    "df.head()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "DNYbEtZZaV5R"
+   },
+   "source": [
+    "### Exercice  4\n",
+    "\n",
+    "1. Créer une colonne contenant l'IMC de chaque joueur\n",
+    "2. Créer une nouvelle dataframe contenant tous les joueurs du top14 classés par ordre d'IMC croissant."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 206
+    },
+    "colab_type": "code",
+    "id": "0gNbLPmiMaro",
+    "outputId": "734131f2-86f8-46ac-83af-4d35309fe6f3"
+   },
+   "outputs": [],
+   "source": [
+    "df['IMC'] = df['Poids'] / (df['Taille']/100)**2\n",
+    "df.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 424
+    },
+    "colab_type": "code",
+    "id": "nUuXBvIWXsFD",
+    "outputId": "b782ddf9-620b-4f8e-f402-008479e3e37d"
+   },
+   "outputs": [],
+   "source": [
+    "imcdf = df.sort_values(by=['IMC'], ascending = True)\n",
+    "imcdf"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "colab": {},
+    "colab_type": "code",
+    "id": "W3LBRsDGYAqD"
+   },
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "colab": {
+   "collapsed_sections": [
+    "jflqx-tlaV36",
+    "Gd9gCUTkaV4U",
+    "cHgScf-caV4h",
+    "DNYbEtZZaV5R"
+   ],
+   "name": "PROF_03_Pandas_eleves.ipynb",
+   "provenance": []
+  },
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.9"
+  },
+  "toc": {
+   "base_numbering": 1,
+   "nav_menu": {},
+   "number_sections": false,
+   "sideBar": true,
+   "skip_h1_title": false,
+   "title_cell": "Table of Contents",
+   "title_sidebar": "Contents",
+   "toc_cell": false,
+   "toc_position": {},
+   "toc_section_display": true,
+   "toc_window_display": false
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 1
+}

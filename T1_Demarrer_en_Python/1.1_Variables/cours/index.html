@@ -1,0 +1,3610 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://glassus.github.io/premiere_nsi/T1_Demarrer_en_Python/1.1_Variables/cours/">
+      
+      <link rel="icon" href="../../../xtra/fav1NSI.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.1">
+    
+    
+      
+        <title>Cours - Première NSI Gr 2 - Lycée François Mauriac - Bordeaux</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+  
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M490.3 40.4c21.9 21.87 21.9 57.33 0 79.2l-30 30.1-98-97.98 30.1-30.06c21.9-21.873 57.3-21.873 79.2 0l18.7 18.74zM172.4 241.7 339.7 74.34l98 97.96-167.4 167.3c-6.1 6.2-13.6 10.8-21.9 13.6l-88.8 29.6c-9.5 2.8-18.1.6-24.6-6.7-6.4-5.6-8.6-15.1-5.8-23.7l29.6-88.8c2.8-8.3 7.4-15.8 13.6-21.9zM192 63.1c17.7 0 32 15.23 32 32 0 18.6-14.3 32-32 32H96c-17.67 0-32 15.2-32 32V416c0 17.7 14.33 32 32 32h256c17.7 0 32-14.3 32-32v-96.9c0-16.8 14.3-32 32-32s32 15.2 32 32V416c0 53-43 96-96 96H96c-53.02 0-96-43-96-96V159.1c0-53 42.98-96 96-96h96z"/></svg>');}</style>
+
+    
+    
+    
+    <!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.asm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.23.0/js/jquery.terminal.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.23.0/css/jquery.terminal.min.css" rel="stylesheet">
+
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../xtra/stylesheets/pyoditeur.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#11-variables" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../.." title="Première NSI Gr 2 - Lycée François Mauriac - Bordeaux" class="md-header__button md-logo" aria-label="Première NSI Gr 2 - Lycée François Mauriac - Bordeaux" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Première NSI Gr 2 - Lycée François Mauriac - Bordeaux
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cours
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Mode sombre"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Mode sombre" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Mode clair"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Mode clair" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Effacer" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/glassus/premiere_nsi" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    glassus/premiere_nsi
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Accueil
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../sommaire/" class="md-tabs__link md-tabs__link--active">
+        T1 Bases de Python
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../T2_Representation_des_donnees/sommaire/" class="md-tabs__link">
+        T2 Rep. des données
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../T3_Architecture_materielle/sommaire/" class="md-tabs__link">
+        T3 Arch. matérielle
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../T4_Algorithmique/sommaire/" class="md-tabs__link">
+        T4 Algorithmique
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../T5_Traitement_de_donnees/sommaire/" class="md-tabs__link">
+        T5 Trait. des données
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../T6_IHM_Web/sommaire/" class="md-tabs__link">
+        T6 IHM sur le web
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../T6_Mini-projets/05_Initiation_Pygame/" class="md-tabs__link">
+        Mini-projets
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../T7_Divers/1_Conseils_generaux/cours/" class="md-tabs__link">
+        Divers
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../T8_Liens_utiles/liens/" class="md-tabs__link">
+        Liens utiles
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Première NSI Gr 2 - Lycée François Mauriac - Bordeaux" class="md-nav__button md-logo" aria-label="Première NSI Gr 2 - Lycée François Mauriac - Bordeaux" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Z"/></svg>
+
+    </a>
+    Première NSI Gr 2 - Lycée François Mauriac - Bordeaux
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/glassus/premiere_nsi" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    glassus/premiere_nsi
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Accueil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          T1 Bases de Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="T1 Bases de Python" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          T1 Bases de Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sommaire/" class="md-nav__link">
+        Thème 1 : Bases de Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          1.1 Variables
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1.1 Variables" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          1.1 Variables
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Cours
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Cours
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-pourquoi-des-variables" class="md-nav__link">
+    A. Pourquoi des variables ?
+  </a>
+  
+    <nav class="md-nav" aria-label="A. Pourquoi des variables ?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a1-introduction" class="md-nav__link">
+    A.1 Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a2-on-code" class="md-nav__link">
+    A.2 On code !
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b-le-fonctionnement-interne" class="md-nav__link">
+    B. Le fonctionnement interne
+  </a>
+  
+    <nav class="md-nav" aria-label="B. Le fonctionnement interne">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#b1-explication-simplifiee" class="md-nav__link">
+    B.1 Explication simplifiée
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b2-une-realite-bien-plus-complexe" class="md-nav__link">
+    B.2 Une réalité bien plus complexe...
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b3-une-histoire-en-2-temps-evaluation-affectation" class="md-nav__link">
+    B.3 Une histoire en 2 temps : évaluation, affectation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-differents-types-de-variables" class="md-nav__link">
+    C. Différents types de variables
+  </a>
+  
+    <nav class="md-nav" aria-label="C. Différents types de variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c1-python-et-le-typage-dynamique" class="md-nav__link">
+    C.1 Python et le typage dynamique
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d-bonnes-pratiques-de-nommage" class="md-nav__link">
+    D. Bonnes pratiques de nommage
+  </a>
+  
+    <nav class="md-nav" aria-label="D. Bonnes pratiques de nommage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#d1-ce-qui-est-autorise-et-ce-qui-ne-lest-pas" class="md-nav__link">
+    D.1 Ce qui est autorisé et ce qui ne l'est pas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d2-du-sens-du-sens-du-sens" class="md-nav__link">
+    D.2 Du sens, du sens, du sens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d3-syntaxe-des-noms-a-rallonge" class="md-nav__link">
+    D.3 Syntaxe des noms à rallonge
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          1.2 Boucle for
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1.2 Boucle for" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          1.2 Boucle for
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.2_Boucle_for/cours/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.2_Boucle_for/exercices/" class="md-nav__link">
+        Exercices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.2_Boucle_for/exos_processing/" class="md-nav__link">
+        Exercices sous Processing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DS01.md" class="md-nav__link">
+        Évaluation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4">
+          1.3 Boucle while
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1.3 Boucle while" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          1.3 Boucle while
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.3_Boucle_while/cours/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5">
+          1.4 Instruction conditionnelle if
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1.4 Instruction conditionnelle if" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          1.4 Instruction conditionnelle if
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.4_Instruction_conditionnelle_if/cours/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.4_Instruction_conditionnelle_if/exercices/" class="md-nav__link">
+        Exercices
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_6">
+          1.5 Fonctions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1.5 Fonctions" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          1.5 Fonctions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.5_Fonctions/cours/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.5_Fonctions/exercices/" class="md-nav__link">
+        Exercices
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          T2 Rep. des données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="T2 Rep. des données" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          T2 Rep. des données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T2_Representation_des_donnees/sommaire/" class="md-nav__link">
+        Thème 2 : Représentation des données
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          2.1 Listes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2.1 Listes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          2.1 Listes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T2_Representation_des_donnees/2.1_Listes/cours/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T2_Representation_des_donnees/2.1_Listes/exercices/" class="md-nav__link">
+        Exercices
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          2.2 Tuples
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2.2 Tuples" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          2.2 Tuples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T2_Representation_des_donnees/2.2_Tuples/cours/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4">
+          2.3 Dictionnaires
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2.3 Dictionnaires" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          2.3 Dictionnaires
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T2_Representation_des_donnees/2.3_Dictionnaires/cours/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_5">
+          2.4 Bases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2.4 Bases" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          2.4 Bases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T2_Representation_des_donnees/2.4_Bases/cours/" class="md-nav__link">
+        2.4 Représentation d'un entier positif dans différentes bases
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6">
+          2.5 Booleens
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2.5 Booleens" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          2.5 Booleens
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T2_Representation_des_donnees/2.5_Booleens/cours/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T2_Representation_des_donnees/2.5_Booleens/enonce/" class="md-nav__link">
+        Énigme
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_7" type="checkbox" id="__nav_3_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7">
+          2.6 Codage caracteres
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2.6 Codage caracteres" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          2.6 Codage caracteres
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T2_Representation_des_donnees/2.6_Codage_caracteres/cours/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_8" type="checkbox" id="__nav_3_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_8">
+          2.7 Codage entiers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2.7 Codage entiers" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_8">
+          <span class="md-nav__icon md-icon"></span>
+          2.7 Codage entiers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T2_Representation_des_donnees/2.7_Codage_entiers/cours/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_9" type="checkbox" id="__nav_3_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_9">
+          2.8 Codage non entiers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2.8 Codage non entiers" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_9">
+          <span class="md-nav__icon md-icon"></span>
+          2.8 Codage non entiers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T2_Representation_des_donnees/2.8_Codage_non-entiers/cours/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_10" type="checkbox" id="__nav_3_10" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_10">
+          2.9 Chaines caracteres
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2.9 Chaines caracteres" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_10">
+          <span class="md-nav__icon md-icon"></span>
+          2.9 Chaines caracteres
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T2_Representation_des_donnees/2.9_Chaines_caracteres/cours/" class="md-nav__link">
+        2.9 Chaînes de caractères
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          T3 Arch. matérielle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="T3 Arch. matérielle" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          T3 Arch. matérielle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T3_Architecture_materielle/sommaire/" class="md-nav__link">
+        Thème 3 : Architecture matérielle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          3.1 Microbit
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3.1 Microbit" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          3.1 Microbit
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T3_Architecture_materielle/3.1_Microbit/cours/" class="md-nav__link">
+        3.1 Microbit
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          3.2 Architecture Von Neumann
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3.2 Architecture Von Neumann" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          3.2 Architecture Von Neumann
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T3_Architecture_materielle/3.2_Architecture_Von_Neumann/cours/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          3.3 Architecture reseau
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3.3 Architecture reseau" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          3.3 Architecture reseau
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T3_Architecture_materielle/3.3_Architecture_reseau/cours/" class="md-nav__link">
+        3.3 Architecture d'un réseau
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5">
+          3.4 Protocoles de communication
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3.4 Protocoles de communication" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          3.4 Protocoles de communication
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T3_Architecture_materielle/3.4_Protocoles_de_communication/cours/" class="md-nav__link">
+        3.4 Protocoles de communication dans un réseau
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_6">
+          3.5 Decouverte des commandes Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3.5 Decouverte des commandes Linux" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          3.5 Decouverte des commandes Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T3_Architecture_materielle/3.5_Decouverte_des_commandes_Linux/cours/" class="md-nav__link">
+        3.5 Découverte des commandes UNIX
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          T4 Algorithmique
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="T4 Algorithmique" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          T4 Algorithmique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T4_Algorithmique/sommaire/" class="md-nav__link">
+        Thème 4 :  Algorithmique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          4.1 Extremums et moyennes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="4.1 Extremums et moyennes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          4.1 Extremums et moyennes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T4_Algorithmique/4.1_Extremums_et_moyennes/cours/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          4.2 Complexite
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="4.2 Complexite" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          4.2 Complexite
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T4_Algorithmique/4.2_Complexite/cours/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4">
+          4.3 Tri par insertion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="4.3 Tri par insertion" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          4.3 Tri par insertion
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T4_Algorithmique/4.3_Tri_par_insertion/cours/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_5">
+          4.4 Tri par selection
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="4.4 Tri par selection" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          4.4 Tri par selection
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T4_Algorithmique/4.4_Tri_par_selection/cours/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_6" type="checkbox" id="__nav_5_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_6">
+          4.5 Dichotomie
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="4.5 Dichotomie" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_6">
+          <span class="md-nav__icon md-icon"></span>
+          4.5 Dichotomie
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T4_Algorithmique/4.5_Dichotomie/cours/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_7" type="checkbox" id="__nav_5_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_7">
+          4.6 Algorithmes gloutons
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="4.6 Algorithmes gloutons" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_7">
+          <span class="md-nav__icon md-icon"></span>
+          4.6 Algorithmes gloutons
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T4_Algorithmique/4.6_Algorithmes_gloutons/cours/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_8" type="checkbox" id="__nav_5_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_8">
+          4.7 Algorithme KNN
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="4.7 Algorithme KNN" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_8">
+          <span class="md-nav__icon md-icon"></span>
+          4.7 Algorithme KNN
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T4_Algorithmique/4.7_Algorithme_KNN/07_Algorithme_KNN/" class="md-nav__link">
+        Méthode du K-Nearest-Neighbours (KNN), aka les k-plus-proches-voisins
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T4_Algorithmique/4.7_Algorithme_KNN/cours/" class="md-nav__link">
+        4.7 Algorithme des KNN
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          T5 Trait. des données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="T5 Trait. des données" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          T5 Trait. des données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T5_Traitement_de_donnees/sommaire/" class="md-nav__link">
+        Thème 5 :  Traitement de données
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6_2" type="checkbox" id="__nav_6_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_2">
+          5.1 Manipulation csv
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="5.1 Manipulation csv" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          5.1 Manipulation csv
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T5_Traitement_de_donnees/5.1_Manipulation_csv/cours/" class="md-nav__link">
+        5.1 Manipulation de fichiers csv
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6_3" type="checkbox" id="__nav_6_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_3">
+          5.2 Trier des donnees
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="5.2 Trier des donnees" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_3">
+          <span class="md-nav__icon md-icon"></span>
+          5.2 Trier des donnees
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T5_Traitement_de_donnees/5.2_Trier_des_donnees/02_Trier_des_donnees/" class="md-nav__link">
+        Trier des données
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T5_Traitement_de_donnees/5.2_Trier_des_donnees/cours/" class="md-nav__link">
+        5.2 Trier des données
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_4">
+          5.3 Pandas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="5.3 Pandas" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          5.3 Pandas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T5_Traitement_de_donnees/5.3_Pandas/cours/" class="md-nav__link">
+        5.3 Utilisation du module Pandas
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          T6 IHM sur le web
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="T6 IHM sur le web" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          T6 IHM sur le web
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T6_IHM_Web/sommaire/" class="md-nav__link">
+        Thème 6 : IHM sur le web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7_2" type="checkbox" id="__nav_7_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_2">
+          6.1 Interactions page web
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="6.1 Interactions page web" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          6.1 Interactions page web
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T6_IHM_Web/6.1_Interactions_page_web/cours/" class="md-nav__link">
+        6.1 Pages web et interactions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7_3" type="checkbox" id="__nav_7_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_3">
+          6.2 Protocole HTTP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="6.2 Protocole HTTP" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_3">
+          <span class="md-nav__icon md-icon"></span>
+          6.2 Protocole HTTP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T6_IHM_Web/6.2_Protocole_HTTP/cours/" class="md-nav__link">
+        6.2 Protocole HTTP : étude du chargement d'une page web
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7_4" type="checkbox" id="__nav_7_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_4">
+          6.3 Get Post Formulaires
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="6.3 Get Post Formulaires" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_4">
+          <span class="md-nav__icon md-icon"></span>
+          6.3 Get Post Formulaires
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T6_IHM_Web/6.3_Get_Post_Formulaires/cours/" class="md-nav__link">
+        6.3 Requêtes GET, POST et formulaires
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Mini-projets
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mini-projets" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Mini-projets
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T6_Mini-projets/05_Initiation_Pygame/" class="md-nav__link">
+        Initiation à Pygame
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T6_Mini-projets/D%C3%A9codeuses/" class="md-nav__link">
+        Décodeuses du numérique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T6_Mini-projets/Exercice_Perseverance/" class="md-nav__link">
+        Le message secret de Perseverance
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T6_Mini-projets/Github/" class="md-nav__link">
+        Mise en place de GitHub
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Divers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Divers" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Divers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_9_1" type="checkbox" id="__nav_9_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_1">
+          Conseils généraux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Conseils généraux" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_1">
+          <span class="md-nav__icon md-icon"></span>
+          Conseils généraux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T7_Divers/1_Conseils_generaux/cours/" class="md-nav__link">
+        Conseils de travail
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_9_2" type="checkbox" id="__nav_9_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_2">
+          2 VM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2 VM" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_2">
+          <span class="md-nav__icon md-icon"></span>
+          2 VM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T7_Divers/2_VM/cours/" class="md-nav__link">
+        Utilisation des VMs au lycée
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_9_3" type="checkbox" id="__nav_9_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_3">
+          3 Thonny
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3 Thonny" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_3">
+          <span class="md-nav__icon md-icon"></span>
+          3 Thonny
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T7_Divers/3_Thonny/cours/" class="md-nav__link">
+        Thonny
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_9_4" type="checkbox" id="__nav_9_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_4">
+          4 Processing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="4 Processing" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_4">
+          <span class="md-nav__icon md-icon"></span>
+          4 Processing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T7_Divers/4_Processing/cours/" class="md-nav__link">
+        Processing
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_9_5" type="checkbox" id="__nav_9_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_5">
+          Processing ⇔ p5
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Processing ⇔ p5" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_5">
+          <span class="md-nav__icon md-icon"></span>
+          Processing ⇔ p5
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T7_Divers/4_Processing_p5/cours/" class="md-nav__link">
+        Processing au lycée ⇔ p5 sur Capytale
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_9_6" type="checkbox" id="__nav_9_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_6">
+          Capytale
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Capytale" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_6">
+          <span class="md-nav__icon md-icon"></span>
+          Capytale
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T7_Divers/5_Capytale/cours/" class="md-nav__link">
+        Utilisation du service Capytale
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_9_7" type="checkbox" id="__nav_9_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_7">
+          Exposés
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Exposés" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_7">
+          <span class="md-nav__icon md-icon"></span>
+          Exposés
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T7_Divers/5_Exposes/cours/" class="md-nav__link">
+        Figures de l'informatique
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          Liens utiles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Liens utiles" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Liens utiles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T8_Liens_utiles/liens/" class="md-nav__link">
+        Liens utiles
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+    
+                
+  <a href="https://github.com/glassus/premiere_nsi/edit/master/docs/T1_Demarrer_en_Python/1.1_Variables/cours.md" title="Editer cette page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="11-variables">1.1 Variables<a class="headerlink" href="#11-variables" title="Permanent link">⚓︎</a></h1>
+<h2 id="a-pourquoi-des-variables">A. Pourquoi des variables ?<a class="headerlink" href="#a-pourquoi-des-variables" title="Permanent link">⚓︎</a></h2>
+<h3 id="a1-introduction">A.1 Introduction<a class="headerlink" href="#a1-introduction" title="Permanent link">⚓︎</a></h3>
+<p>Considérons la phrase <em>«nous allons stocker le prix du spectacle dans une variable  <code>a</code>, qui vaudra donc au départ 32.»</em></p>
+<p>Il y a plusieurs commentaires à faire sur une telle annonce :</p>
+<ul>
+<li>Dans le problème que l'on cherche à modéliser, le prix du spectacle est une donnée importante, qui va peut-être évoluer (ou pas !).</li>
+<li>Pour la manipuler plus simplement, on va la désigner par un nom, le <strong>nom de la variable</strong> (ici, le nom <code>a</code> est particulièrement mal choisi, voir D. Bonnes pratiques de nommage)</li>
+<li>Comme en mathématiques, le nom de cette variable va désigner une valeur qui peut changer (<em>varier</em>) au cours du temps (encore une fois : ou pas).</li>
+<li>Cette valeur est fixée <em>au départ</em> à 32. On dira en informatique qu'elle est <em>initialisée</em> à 32.</li>
+<li>Si cette valeur ne change pas, on dira qu'elle est constante. Cela peut paraître inutile de donner un nom à quelque chose qui ne change pas, mais cela est très utile de définir les constantes au début d'un programme. </li>
+</ul>
+<h3 id="a2-on-code">A.2 On code !<a class="headerlink" href="#a2-on-code" title="Permanent link">⚓︎</a></h3>
+<p>La phrase précédente donnera donc lieu à la ligne Python suivante :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">32</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>Le symbole <code>=</code> ici utilisé n'a <strong>rien à voir</strong> avec le symbole = utilisé en mathématique. On dit qu'on a <strong>affecté</strong> à <code>a</code> la valeur 32, et il faut se représenter mentalement cette action par l'écriture <code>a ← 32</code>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Comparaison de la syntaxe dans différents langages</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:7"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><input id="__tabbed_1_7" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Python</label><label for="__tabbed_1_2">C</label><label for="__tabbed_1_3">PHP</label><label for="__tabbed_1_4">Java</label><label for="__tabbed_1_5">Javascript</label><label for="__tabbed_1_6">Rust</label><label for="__tabbed_1_7">Go</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">32</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">32</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="x">$a = 32;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">32</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">32</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">32</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nx">a</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">32</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<p>Une fois la valeur 32 stockée dans la variable <code>a</code>, on peut alors utiliser cette variable :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+<span class="mi">32</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">5</span>
+<span class="mi">37</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;pyshell&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">NameError</span><span class="p">:</span> <span class="n">name</span> <span class="s1">&#39;b&#39;</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">defined</span>
+</code></pre></div>
+<p>Remarquez bien l'erreur lorsqu'on a fait appel à une variable <code>b</code> qui n'avait jamais été définie, comme le dit explicitement le message <code>NameError: name 'b' is not defined</code> </p>
+<h2 id="b-le-fonctionnement-interne">B. Le fonctionnement interne<a class="headerlink" href="#b-le-fonctionnement-interne" title="Permanent link">⚓︎</a></h2>
+<h3 id="b1-explication-simplifiee">B.1 Explication simplifiée<a class="headerlink" href="#b1-explication-simplifiee" title="Permanent link">⚓︎</a></h3>
+<p>En première intention, il est possible d'expliquer le fonctionnement interne de l'affectation des variables par la <em>métaphore des tiroirs</em> :</p>
+<p>Écrire  l'instruction :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
+</code></pre></div></p>
+<p>va provoquer chez l'ordinateur le comportement suivant :</p>
+<ul>
+<li>Est-ce que je possède <strong>déjà</strong> un tiroir appelé <code>a</code> ? <ul>
+<li>si oui, je me positionne devant.</li>
+<li>si non, je crée un tiroir appelé <code>a</code>.</li>
+<li>J'ouvre le tiroir et j'y dépose la valeur numérique 2. Si le tiroir contenait déjà une valeur, celle-ci disparaît (on dit qu'elle est <strong>écrasée</strong>).</li>
+</ul>
+</li>
+</ul>
+<p><img alt="image" class="center" src="../data/tiroirs.png" /></p>
+<p>Cette explication est suffisante pour aborder la notion de variable : c'est un mot (ou une lettre) qui va désigner une valeur. </p>
+<details class="warning">
+<summary>Partie difficile (optionnelle)</summary>
+<p><em>La métaphore du tiroir est malheureusement un peu trop simplificatrice.</em></p>
+<h3 id="b2-une-realite-bien-plus-complexe">B.2 Une réalité bien plus complexe...<a class="headerlink" href="#b2-une-realite-bien-plus-complexe" title="Permanent link">⚓︎</a></h3>
+<h4 id="b21-la-commande-id-ladresse-du-tiroir">B.2.1 La commande <code>id()</code> : l'adresse du tiroir ?<a class="headerlink" href="#b21-la-commande-id-ladresse-du-tiroir" title="Permanent link">⚓︎</a></h4>
+<p>Python possède une fonction qui renvoie l'adresse mémoire de la variable donnée en argument. </p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="mi">9788800</span>
+</code></pre></div>
+<p>Faites le test avec votre propre IDE Python (vous n'obtiendrez pas forcément la même valeur d'adresse mémoire)</p>
+<h4 id="b22-cela-se-complique">B.2.2 Cela se complique.<a class="headerlink" href="#b22-cela-se-complique" title="Permanent link">⚓︎</a></h4>
+<p>Sans refermer notre IDE, écrasons la valeur de <code>b</code> avec une nouvelle valeur :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">12</span>
+</code></pre></div>
+et redemandons l'adresse de <code>b</code> :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="mi">9788960</span>
+</code></pre></div></p>
+<p>Très mauvaise nouvelle : l'adresse de la variable <code>b</code> a changé. Ceci invalide notre métaphore du «tiroir», une place unique qui serait réservée pour y stocker les valeurs successives d'une variable. </p>
+<p>La modification de la valeur de <code>b</code> ne s'est pas faite «en place», la variable <code>b</code> s'est déplacée : que s'est-il donc passé ?</p>
+<h4 id="b23-tentative-dexplication">B.2.3 Tentative d'explication<a class="headerlink" href="#b23-tentative-dexplication" title="Permanent link">⚓︎</a></h4>
+<p>L'affectation 
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">9</span>
+</code></pre></div>
+ne provoque pas la réservation définitive d'un espace-mémoire pour la variable <code>b</code>, mais la création d'un lien vers un espace-mémoire qui contient la valeur 9. Ce lien consiste en l'adresse-mémoire de cette valeur 9. </p>
+<p>Cette adresse-mémoire vaut (sur ma configuration personnelle) <code>9788864</code>.
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="mi">9788864</span>
+</code></pre></div></p>
+<p><img alt="image" class="center" src="../data/mem1.png" /></p>
+<p>Comme le présente le ruban ci-dessus, Python pré-positionne les entiers (de -5 à 256) sur des petites adresses-mémoires, car il considère que ces entiers servent souvent, et doivent donc être rapidement accessibles.</p>
+<p>Si on créé une nouvelle variable <code>tokyo</code> aussi égale à 9, elle va aussi <em>pointer</em> vers la même adresse-mémoire :</p>
+<p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tokyo</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">tokyo</span><span class="p">)</span>
+<span class="mi">9788864</span>
+</code></pre></div>
+Les variables <code>tokyo</code> et <code>b</code> renvoient vers la même adresse-mémoire.</p>
+<p>Affectons maintenant à <code>tokyo</code> la valeur 2020 et observons son adresse-mémoire :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tokyo</span> <span class="o">=</span> <span class="mi">2020</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">tokyo</span><span class="p">)</span>
+<span class="mi">139762979309936</span>
+</code></pre></div>
+<p>L'adresse-mémoire est (bien) plus grande : elle a été choisie sur le moment par Python pour y stocker 2020 (car 2020 &gt; 256). </p>
+<p>De manière plus surprenante, si on créé une nouvelle variable <code>jo</code> qui vaut <em>aussi</em> 2020, Python va ouvrir une <em>autre</em> adresse-mémoire pour y stocker 2020, alors qu'il l'a déjà stockée ailleurs :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">jo</span> <span class="o">=</span> <span class="mi">2020</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">jo</span><span class="p">)</span>
+<span class="mi">139762979310064</span>
+</code></pre></div>
+</details>
+<h3 id="b3-une-histoire-en-2-temps-evaluation-affectation">B.3 Une histoire en 2 temps : évaluation, affectation<a class="headerlink" href="#b3-une-histoire-en-2-temps-evaluation-affectation" title="Permanent link">⚓︎</a></h3>
+<p>Observons l'instruction
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span>
+</code></pre></div></p>
+<h4 id="b31-etape-1-levaluation">B.3.1 Étape 1 : <strong>l'évaluation</strong><a class="headerlink" href="#b31-etape-1-levaluation" title="Permanent link">⚓︎</a></h4>
+<p>Python va prendre la partie à droite du signe égal et va l'évaluer, ce qui signifie qu'il va essayer de lui donner une valeur. Dans nos exemples, cette valeur sera numérique, mais elle peut être d'un autre type (voir plus loin)</p>
+<p>Ici, Python effectue le calcul 2 + 3 et l'évalue à la valeur 5.</p>
+<h4 id="b32-etape-2-laffectation">B.3.2 Étape 2 : <strong>l'affectation</strong><a class="headerlink" href="#b32-etape-2-laffectation" title="Permanent link">⚓︎</a></h4>
+<p>Une fois évaluée l'expression à droite du signe =, il ne reste plus qu'à l'affecter à la variable (déjà existante ou pas) située à gauche du signe =.</p>
+<p>Comme expliqué précédemment, un «lien» est fait entre le nom de la variable et l'adresse-mémoire qui contient la valeur évaluée.
+<code>a</code> sera donc lié à la valeur 5. Plus simplement, on dira que «<code>a</code> vaut 5» </p>
+<h4 id="b32-lincrementation-dune-variable">B.3.2 L'incrémentation d'une variable.<a class="headerlink" href="#b32-lincrementation-dune-variable" title="Permanent link">⚓︎</a></h4>
+<p><em>«Incrémenter»</em> une variable signifie l'augmenter. </p>
+<p>Imaginons une variable appelée <code>compteur</code>. Au démarrage de notre programme, elle est initialisée à la valeur 0. 
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">compteur</span> <span class="o">=</span> <span class="mi">0</span>
+</code></pre></div></p>
+<p>Considérons qu'à un moment du programme, cette variable doit être modifiée, par exemple en lui ajoutant 1.</p>
+<p>En Python, cela s'écrira :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">compteur</span> <span class="o">=</span> <span class="n">compteur</span> <span class="o">+</span> <span class="mi">1</span>
+</code></pre></div>
+<p>Observée avec des yeux de mathématicien, la précédente instruction est une horreur.</p>
+<p><img alt="image" class="center" src="../data/memex.png" width="30%" /></p>
+<p>Vue avec des yeux d'informaticien, voilà comment est interprétée la commande
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">compteur</span> <span class="o">=</span> <span class="n">compteur</span> <span class="o">+</span> <span class="mi">1</span>
+</code></pre></div></p>
+<ol>
+<li>On évalue la partie droite de l'égalité, donc l'expression <code>compteur + 1</code>.</li>
+<li>On va donc chercher le contenu de la variable <code>compteur</code>. Si celle-ci n'existe pas, un message d'erreur est renvoyé.</li>
+<li>On additionne 1 au contenu de la variable <code>compteur</code>.</li>
+<li>On écrase le contenu actuel de la variable <code>compteur</code> avec la valeur obtenue au 3.   </li>
+</ol>
+<p>À la fin de ces opérations, la variable <code>compteur</code> a bien augmenté de 1.</p>
+<p>Cette procédure d'<strong>incrémentation</strong> est très très classique, il faut la maîtriser parfaitement !</p>
+<div class="admonition info">
+<p class="admonition-title">Syntaxe classique et syntaxe Pythonesque <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
+<p>L'incrémentation d'une variable <code>compteur</code> s'écrira donc en Python :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">compteur</span> <span class="o">=</span> <span class="n">compteur</span> <span class="o">+</span> <span class="mi">1</span>
+</code></pre></div>
+Mais il existe aussi une syntaxe particulière, un peu plus courte :</p>
+<p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">compteur</span> <span class="o">+=</span> <span class="mi">1</span>
+</code></pre></div>
+Cette syntaxe peut se ranger dans la catégorie des <strong>sucres syntaxiques</strong> : c'est bien de la connaître, c'est amusant de s'en servir, mais son utilisation n'est en rien obligatoire et peut avoir un effet néfaste, celui d'oublier réellement ce qu'il se passe derrière.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  1</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Écrire le code «classique» et le code «Pythonesque» pour l'instruction suivante :</p>
+<p>On initialise une variable <code>score</code> à 100 et on l'augmente de 15.</p>
+</div>
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">score</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">score</span> <span class="o">=</span> <span class="n">score</span> <span class="o">+</span> <span class="mi">15</span>
+</code></pre></div>
+ou bien
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">score</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">score</span> <span class="o">+=</span> <span class="mi">15</span>
+</code></pre></div></p>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  2</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Énoncé</label><label for="__tabbed_3_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Écrire le code «classique» et le code «Pythonesque» pour l'instruction suivante :</p>
+<p>On initialise une variable <code>cellule</code> à 1 et on la multiplie par 2.</p>
+</div>
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">cellule</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">cellule</span> <span class="o">=</span> <span class="n">cellule</span> <span class="o">*</span> <span class="mi">2</span>
+</code></pre></div>
+ou bien
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">cellule</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">cellule</span> <span class="o">*=</span> <span class="mi">2</span>
+</code></pre></div></p>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  3</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Énoncé</label><label for="__tabbed_4_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Écrire le code «classique» et le code «Pythonesque» pour l'instruction suivante.</p>
+<p>On initialise une variable <code>capital</code> à 1000 et on lui enlève 5%.</p>
+</div>
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">capital</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">capital</span> <span class="o">=</span> <span class="n">capital</span> <span class="o">-</span> <span class="n">capital</span> <span class="o">*</span> <span class="mi">5</span><span class="o">/</span><span class="mi">100</span>
+</code></pre></div>
+ou bien
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">capital</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">capital</span> <span class="o">*=</span> <span class="mf">0.95</span>
+</code></pre></div></p>
+</div>
+</div>
+</div>
+</div>
+<h4 id="b33-lechange-de-variables">B.3.3 L'échange de variables<a class="headerlink" href="#b33-lechange-de-variables" title="Permanent link">⚓︎</a></h4>
+<p>Après l'incrémentation, une autre technique de base reviendra fréquemment dans nos codes : <strong>l'échange de variables</strong>.</p>
+<p>Imaginons les variables suivantes :</p>
+<p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">5</span>
+</code></pre></div>
+Le but est d'échanger les valeurs de <code>a</code> et de <code>b</code>.</p>
+<p>▸ <strong>Méthode naïve</strong></p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">b</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+</code></pre></div>
+<p>Que valent <code>a</code> et <code>b</code> maintenant ?</p>
+<p>Malheureusement :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+<span class="mi">5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span>
+<span class="mi">5</span>
+<span class="o">&gt;</span>
+</code></pre></div></p>
+<p>La variable <code>a</code> a été écrasée dès qu'on lui a donné la valeur de la variable <code>b</code>.</p>
+<p>Comment la préserver ?</p>
+<p>La situation est similaire au problème suivant : comment échanger le contenu de ces deux verres ?</p>
+<p><img alt="image" class="center" src="../data/verres.png" width="20%" /></p>
+<p>La méthode est évidente : il nous faut un troisième verre.</p>
+<p>Nous allons faire de même pour nos variables. Nous allons utiliser une variable <strong>temporaire</strong> (on parle aussi de variable <strong>tampon</strong>) pour conserver la mémoire de la valeur de <code>a</code> (par exemple) avant que celle-ci ne se fasse écraser :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">a</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">b</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">temp</span>
+</code></pre></div>
+<p>Vous pouvez vérifier maintenant que les valeurs de <code>a</code> et de <code>b</code> ont bien été échangées.</p>
+<div class="admonition info">
+<p class="admonition-title">Syntaxe classique et syntaxe Pythonesque <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
+<p>L'échange de deux variables <code>a</code> et de <code>b</code> s'écrit donc :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">a</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">b</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">temp</span>
+</code></pre></div>
+Mais il existe aussi une syntaxe particulière à Python, bien plus courte :</p>
+<p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span>
+</code></pre></div>
+C'est de nouveau un <em>sucre syntaxique</em>. Cette syntaxe nous dispense de créer nous-même une troisième variable. Mais pas de miracle : en interne, Python crée lui-même cette variable temporaire. La simultanéité n'existe pas en informatique.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  4</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Énoncé</label><label for="__tabbed_5_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Une petite erreur s'est glissée à Poudlard :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">maisonHarry</span> <span class="o">=</span> <span class="s2">&quot;Serpentard&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">maisonMalfoy</span> <span class="o">=</span>  <span class="s2">&quot;Gryffondor&quot;</span>
+</code></pre></div>
+Corriger cette erreur, de deux manières différentes.</p>
+</div>
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">maisonHarry</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">maisonHarry</span> <span class="o">=</span> <span class="n">maisonMalfoy</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">maisonMalfoy</span> <span class="o">=</span> <span class="n">t</span>
+</code></pre></div>
+ou plus rapidement :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">maisonHarry</span><span class="p">,</span> <span class="n">maisonMalfoy</span> <span class="o">=</span> <span class="n">maisonMalfoy</span><span class="p">,</span> <span class="n">maisonHarry</span>
+</code></pre></div></p>
+</div>
+</div>
+</div>
+</div>
+<h2 id="c-differents-types-de-variables">C. Différents types de variables<a class="headerlink" href="#c-differents-types-de-variables" title="Permanent link">⚓︎</a></h2>
+<p>Pour l'instant, les variables que nous avons manipulées contiennent toutes des nombres entiers.</p>
+<p>Sauf les maisons de Poudlard, qui sont des <del>mots</del> chaînes de caractères.</p>
+<p>Pour différencier la nature de ce que peut contenir une variable, on parle alors de <strong>type de variable</strong>.</p>
+<p>En voici quelques uns, que nous découvrirons au fil de l'année :</p>
+<div class="admonition abstract">
+<p class="admonition-title">Types de base</p>
+<p>Voici les types Python les plus fréquemment utilisés cette année:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Type Python</th>
+<th align="center">Traduction</th>
+<th align="center">Exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>int</code></td>
+<td align="center">entier</td>
+<td align="center"><code>42</code></td>
+</tr>
+<tr>
+<td align="center"><code>float</code></td>
+<td align="center">flottant (décimal)</td>
+<td align="center"><code>3.1416</code></td>
+</tr>
+<tr>
+<td align="center"><code>str</code></td>
+<td align="center">chaîne de caractères (string)</td>
+<td align="center"><code>"NSI"</code></td>
+</tr>
+<tr>
+<td align="center"><code>bool</code></td>
+<td align="center">booléen (True ou False)</td>
+<td align="center">True</td>
+</tr>
+<tr>
+<td align="center"><code>tuple</code></td>
+<td align="center">p-uplet</td>
+<td align="center"><code>(255, 127, 0)</code></td>
+</tr>
+<tr>
+<td align="center"><code>list</code></td>
+<td align="center">liste</td>
+<td align="center"><code>[0, 1, 2, 3, 4, 5]</code></td>
+</tr>
+<tr>
+<td align="center"><code>dict</code></td>
+<td align="center">dictionnaire</td>
+<td align="center"><code>{'Homer':43, 'Marge':41, 'Bart':12, 'Lisa':10, 'Maggie':4}</code></td>
+</tr>
+<tr>
+<td align="center"><code>function</code></td>
+<td align="center">fonction</td>
+<td align="center"><code>print</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Comment connaître le type d'une variable ?
+Il suffit dans la console d'utiliser la fonction <code>type</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">int</span><span class="s1">&#39;&gt;</span>
+</code></pre></div>
+<h3 id="c1-python-et-le-typage-dynamique">C.1 Python et le typage dynamique<a class="headerlink" href="#c1-python-et-le-typage-dynamique" title="Permanent link">⚓︎</a></h3>
+<p>Jusqu'à présent, nous ne nous sommes pas occupés de préciser à Python le type de notre variable.</p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+</code></pre></div>
+<p>Mais dans certains langages, c'est obligatoire. En C par exemple, il faut écrire :</p>
+<p><div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+Cela signifie (pour le langage C) que notre variable <code>a</code> n'aura pas le droit de contenir autre chose qu'un nombre entier.</p>
+<p>Si on écrit ensuite
+<div class="highlight"><pre><span></span><code><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;test&quot;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div></p>
+<p>Le compilateur C renverra une erreur : on ne peut pas stocker une chaîne de caractères dans une variable qu'on a créée comme étant de type entier.</p>
+<p>Et en Python ?</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">int</span><span class="s1">&#39;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;test&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">str</span><span class="s1">&#39;&gt;</span>
+</code></pre></div>
+<p>Python a changé tout seul le type de notre variable, sans intervention. On parle de <strong>typage dynamique</strong>.</p>
+<h2 id="d-bonnes-pratiques-de-nommage">D. Bonnes pratiques de nommage<a class="headerlink" href="#d-bonnes-pratiques-de-nommage" title="Permanent link">⚓︎</a></h2>
+<h3 id="d1-ce-qui-est-autorise-et-ce-qui-ne-lest-pas">D.1 Ce qui est autorisé et ce qui ne l'est pas<a class="headerlink" href="#d1-ce-qui-est-autorise-et-ce-qui-ne-lest-pas" title="Permanent link">⚓︎</a></h3>
+<p>Pour nommer correctement une variable, il existe des règles à respecter.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Les règles</p>
+<ul>
+<li>
+<p>le nom de la variable peut contenir les caractères suivants :</p>
+<ul>
+<li>des lettres <strong>non accentuées</strong> (attention, minuscule et majuscule sont des caractères différents)</li>
+<li>des chiffres (mais pas comme premier caractère)</li>
+<li>le tiret du bas _ (underscore, tiret du 8)</li>
+</ul>
+</li>
+<li>
+<p>le nom de la variable <strong>ne doit pas</strong> commencer par un chiffre</p>
+</li>
+<li>le nom de la variable <strong>ne doit pas</strong> contenir d'espace</li>
+<li>le nom de la variable <strong>ne doit pas</strong> être un mot-clé du langage.</li>
+</ul>
+<details class="info">
+<summary>Liste des mots-clés réservés par Python</summary>
+<p><p align="center">
+<table>
+    <tr><td>and</td><td>as </td><td>assert  </td><td>break</td><td> class</td><td>  continue</td><td>   def</td><td>    del</td></tr> 
+    <tr><td>elif</td><td>   else</td><td>   except</td><td> False </td><td> finally </td><td>for</td><td>   from</td><td>   global  </td></tr>
+    <tr> <td> if </td><td>  import</td><td> in</td><td> is  </td><td>lambda </td><td>None </td><td>not </td><td>    or</td></tr>
+    <tr><td> pass </td><td>raise</td><td>   return</td><td> True </td><td>try   </td><td>while</td><td> with    </td><td>yield </td></tr>
+</table>
+</p></p>
+</details>
+</div>
+<h3 id="d2-du-sens-du-sens-du-sens">D.2 Du sens, du sens, du sens<a class="headerlink" href="#d2-du-sens-du-sens-du-sens" title="Permanent link">⚓︎</a></h3>
+<p>Hormis pour les indices (de boucles, de tableaux...) un nom de variable (dans un programme destiné à être lu, par vous ou quelqu'un d'autre) doit <strong>impérativement avoir du sens</strong> :</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># PAS BIEN</span>
+<span class="k">if</span> <span class="n">d</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">cep</span> <span class="o">+=</span> <span class="n">vm</span>
+
+<span class="c1"># BIEN</span>
+<span class="k">if</span> <span class="n">date</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">compte_epargne</span> <span class="o">+=</span> <span class="n">versement_mensuel</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Règle d'or <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
+<p>On ne donne jamais un nom de variable au hasard, on le choisit pour qu'il soit <strong>explicite</strong>.</p>
+</div>
+<p><img alt="image" class="center" src="../data/memevar1.jpg" width="30%" /></p>
+<p>Oui mais pour donner du sens, il faut souvent plusieurs mots...
+La longueur du nom de la variable n'est plus un problème depuis que la grande majorité des IDE proposent la complétion automatique. 
+Mais comment former ces longs mots ?</p>
+<h3 id="d3-syntaxe-des-noms-a-rallonge">D.3 Syntaxe des noms à rallonge<a class="headerlink" href="#d3-syntaxe-des-noms-a-rallonge" title="Permanent link">⚓︎</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Comment accoler des mots</p>
+<ul>
+<li>S'il est composé, le nom peut être de la forme:<ul>
+<li><code>snake_case</code> : les mots sont séparés par des underscores. Conseillé en Python.</li>
+<li><code>camelCase</code> : les mots sont séparés par des majuscules mais la 1ère lettre est minuscule. Conseillé en Javascript.</li>
+<li><code>PascalCase</code> : les mots sont séparés par des majuscules et la 1ère lettre est majuscule. Conseillé en C.</li>
+<li><code>kebab-case</code> : les mots sont séparés par des tirets courts. Conseillé en HTML - CSS. </li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Sans surprise, en Python, nous utiliserons donc le <code>snake_case</code>.</p>
+<p><img alt="image" class="center" src="../data/smart.jpg" width="30%" /></p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Dernière mise à jour:
+      2022-08-22
+    
+  </small>
+</div>
+
+
+
+
+              
+    <script src="../../../js/ide.js"></script> 
+
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Retour en haut de la page
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+      
+        
+        <a href="../../sommaire/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Thème 1 : Bases de Python" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              Thème 1 : Bases de Python
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../1.2_Boucle_for/cours/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Cours" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              Cours
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      CC BY-SA / G.Lassus
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="mailto:gilles.lassus@ac-bordeaux.fr" target="_blank" rel="noopener" title="Écrire à l&#39;auteur" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="m511.6 36.86-64 415.1a32.008 32.008 0 0 1-31.65 27.147c-4.188 0-8.319-.815-12.29-2.472l-122.6-51.1-50.86 76.29C226.3 508.5 219.8 512 212.8 512c-11.5 0-20.8-9.3-20.8-20.8v-96.18c0-7.115 2.372-14.03 6.742-19.64L416 96 122.3 360.3 19.69 317.5C8.438 312.8.812 302.2.062 289.1s5.47-23.72 16.06-29.77l448-255.1c10.69-6.109 23.88-5.547 34 1.406S513.5 24.72 511.6 36.86z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://github.com/glassus/premiere_nsi" target="_blank" rel="noopener" title="Dépôt git" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://lyceemauriac.fr" target="_blank" rel="noopener" title="Lycée François Mauriac - Bordeaux" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M320 128c8.8 0 16 7.2 16 16v16h16c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16v-32c0-8.8 7.2-16 16-16zm156.8-29.94 125.6 27.04c22 5.8 37.6 25.2 37.6 47.7V464c0 26.5-21.5 48-48 48H48c-26.51 0-48-21.5-48-48V172.8c0-22.5 15.63-41.9 37.59-47.7L163.2 98.06l139-92.686c9.9-7.165 24.8-7.165 35.6 0l139 92.686zM256 512h128v-96c0-35.3-28.7-64-64-64s-64 28.7-64 64v96zM96 192c-8.84 0-16 7.2-16 16v64c0 8.8 7.16 16 16 16h32c8.8 0 16-7.2 16-16v-64c0-8.8-7.2-16-16-16H96zm400 80c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-64c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v64zM96 320c-8.84 0-16 7.2-16 16v64c0 8.8 7.16 16 16 16h32c8.8 0 16-7.2 16-16v-64c0-8.8-7.2-16-16-16H96zm400 80c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-64c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v64zM320 88c-48.6 0-88 39.4-88 88s39.4 88 88 88 88-39.4 88-88-39.4-88-88-88z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+        <script src="../../../xtra/javascripts/interpreter.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+      
+    
+  </body>
+</html>
