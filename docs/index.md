@@ -1,46 +1,11 @@
 
 !!! abstract ":star: Actualités :star:"
-    - Les Décodeuses du Numériques : [liste des présentations](./T6_Mini-projets/Décodeuses/){. target="_blank"}
-    - [Trophées NSI](https://trophees-nsi.fr/){. target="_blank"}
-    - **Infos orientation :**
-        - [Lien](https://www.geipi-polytech.org/){. target="_blank"} vers le site des 34 écoles d'ingénieurs **publiques** du groupe GEIPI
-        - [Lien](data/sujet0_geipi.pdf){. target="_blank"} vers le sujet 0 de leur épreuve NSI.
-
-
+    - Bonne rentrée à toutes et à tous !
+  
 
 ## Thèmes en cours d'étude :
-- [Manipulation csv](./T5_Traitement_de_donnees/5.1_Manipulation_csv/cours/)
-- [Codage des caractères](./T2_Representation_des_donnees/2.6_Codage_caracteres/cours/)
-- [Codage des non-entiers](./T2_Representation_des_donnees/2.8_Codage_non-entiers/cours/)
-- [Codage des entiers](./T2_Representation_des_donnees/2.7_Codage_entiers/cours/)
-- [Tuples](./T2_Representation_des_donnees/2.2_Tuples/cours/)
-- [Dichotomie](./T4_Algorithmique/4.5_Dichotomie/cours/)
-
-!!! note "*Anciens thèmes traités*"
-    - [Dictionnaires](./T2_Representation_des_donnees/2.3_Dictionnaires/cours/)
-    - [Différentes bases](./T2_Representation_des_donnees/2.4_Bases/cours/)
-    - [Booléens](./T2_Representation_des_donnees/2.5_Booleens/cours/)
-    - [Algorithmes gloutons](./T4_Algorithmique/4.6_Algorithmes_gloutons/cours/)
-    - [Tri par sélection](./T4_Algorithmique/4.4_Tri_par_selection/cours/) 
-    - [Découverte de micro:bit](./T3_Architecture_materielle/3.1_Microbit/cours/)
-    - [Mise en place de GitHub](./T6_Mini-projets/Github/)
-    - [Projet Pygame](./T6_Mini-projets/05_Initiation_Pygame/)
-    - [GET / POST / Formulaires](./T6_IHM_Web/6.3_Get_Post_Formulaires/cours/) 
-    - [Protocole HTTP](./T6_IHM_Web/6.2_Protocole_HTTP/cours/) 
-    - [html-css-js](./T6_IHM_Web/6.1_Interactions_page_web/cours/) 
-    - [Protocoles réseau](./T3_Architecture_materielle/3.4_Protocoles_de_communication/cours/)  
-    - [Architecture réseau](./T3_Architecture_materielle/3.3_Architecture_reseau/cours/)  
-    - [Tri par insertion](./T4_Algorithmique/4.3_Tri_par_insertion/cours/)  
-    - [Complexité](./T4_Algorithmique/4.2_Complexite/cours/)
-    - [Recherche dans un tableau](T4_Algorithmique/4.1_Extremums_et_moyennes/cours/)  
-    - [Listes](T2_Representation_des_donnees/2.1_Listes/cours/)
-    - [Fonctions](T1_Demarrer_en_Python/1.5_Fonctions/cours/)
-    -  [Instruction conditionnelle ```if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/cours/)  
-    -  [Boucle ```while```](T1_Demarrer_en_Python/1.3_Boucle_while/cours/)
-    -  [Boucle ```for```](T1_Demarrer_en_Python/1.2_Boucle_for/cours/)  
-    -  [Variables](T1_Demarrer_en_Python/1.1_Variables/cours/)  
-
-
+- [Conditions matérielles de travail](T7_Divers/1_Conseils_generaux/cours/)
+- [Variables](T1_Demarrer_en_Python/1.1_Variables/cours/)  
 
 
 ## Programme
@@ -105,3 +70,49 @@
         - 6.3 [Requêtes GET, POST et formulaires](./T6_IHM_Web/6.3_Get_Post_Formulaires/cours/)
 
 
+<!-- 
+
+---------------------------STOCK--------------------------------
+
+## Thèmes en cours d'étude :
+- [Manipulation csv](./T5_Traitement_de_donnees/5.1_Manipulation_csv/cours/)
+- [Codage des caractères](./T2_Representation_des_donnees/2.6_Codage_caracteres/cours/)
+- [Codage des non-entiers](./T2_Representation_des_donnees/2.8_Codage_non-entiers/cours/)
+- [Codage des entiers](./T2_Representation_des_donnees/2.7_Codage_entiers/cours/)
+- [Tuples](./T2_Representation_des_donnees/2.2_Tuples/cours/)
+- [Dichotomie](./T4_Algorithmique/4.5_Dichotomie/cours/)
+
+!!! note "*Anciens thèmes traités*"
+    - [Dictionnaires](./T2_Representation_des_donnees/2.3_Dictionnaires/cours/)
+    - [Différentes bases](./T2_Representation_des_donnees/2.4_Bases/cours/)
+    - [Booléens](./T2_Representation_des_donnees/2.5_Booleens/cours/)
+    - [Algorithmes gloutons](./T4_Algorithmique/4.6_Algorithmes_gloutons/cours/)
+    - [Tri par sélection](./T4_Algorithmique/4.4_Tri_par_selection/cours/) 
+    - [Découverte de micro:bit](./T3_Architecture_materielle/3.1_Microbit/cours/)
+    - [Mise en place de GitHub](./T6_Mini-projets/Github/)
+    - [Projet Pygame](./T6_Mini-projets/05_Initiation_Pygame/)
+    - [GET / POST / Formulaires](./T6_IHM_Web/6.3_Get_Post_Formulaires/cours/) 
+    - [Protocole HTTP](./T6_IHM_Web/6.2_Protocole_HTTP/cours/) 
+    - [html-css-js](./T6_IHM_Web/6.1_Interactions_page_web/cours/) 
+    - [Protocoles réseau](./T3_Architecture_materielle/3.4_Protocoles_de_communication/cours/)  
+    - [Architecture réseau](./T3_Architecture_materielle/3.3_Architecture_reseau/cours/)  
+    - [Tri par insertion](./T4_Algorithmique/4.3_Tri_par_insertion/cours/)  
+    - [Complexité](./T4_Algorithmique/4.2_Complexite/cours/)
+    - [Recherche dans un tableau](T4_Algorithmique/4.1_Extremums_et_moyennes/cours/)  
+    - [Listes](T2_Representation_des_donnees/2.1_Listes/cours/)
+    - [Fonctions](T1_Demarrer_en_Python/1.5_Fonctions/cours/)
+    -  [Instruction conditionnelle ```if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/cours/)  
+    -  [Boucle ```while```](T1_Demarrer_en_Python/1.3_Boucle_while/cours/)
+    -  [Boucle ```for```](T1_Demarrer_en_Python/1.2_Boucle_for/cours/)  
+    -  [Variables](T1_Demarrer_en_Python/1.1_Variables/cours/)  
+
+
+  - Les Décodeuses du Numériques : [liste des présentations](./T6_Mini-projets/Décodeuses/){. target="_blank"}
+    - [Trophées NSI](https://trophees-nsi.fr/){. target="_blank"}
+    - **Infos orientation :**
+        - [Lien](https://www.geipi-polytech.org/){. target="_blank"} vers le site des 34 écoles d'ingénieurs **publiques** du groupe GEIPI
+        - [Lien](data/sujet0_geipi.pdf){. target="_blank"} vers le sujet 0 de leur épreuve NSI.
+
+
+
+-->

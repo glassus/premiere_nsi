@@ -102,7 +102,7 @@ va provoquer chez l'ordinateur le comportement suivant :
 Cette explication est suffisante pour aborder la notion de variable : c'est un mot (ou une lettre) qui va désigner une valeur. 
 
 
-??? warning "Partie difficile (optionnelle)"
+!!! warning "Partie difficile (optionnelle)"
     *La métaphore du tiroir est malheureusement un peu trop simplificatrice.*
 
     ### B.2 Une réalité bien plus complexe...
@@ -182,6 +182,9 @@ Cette explication est suffisante pour aborder la notion de variable : c'est un m
     139762979310064
     ```
 
+    En résumé, une variable n'est pas le nom d'un tiroir mais plutôt le nom d'une flèche qui pointe vers un espace-mémoire de l'ordinateur. 
+    - La flèche peut pointer vers un nouvel espace-mémoire sans que le nom de la variable change.
+    - Deux variables peuvent pointer vers le même espace-mémoire.
 
 
 ### B.3 Une histoire en 2 temps : évaluation, affectation
@@ -516,10 +519,10 @@ if date == 1:
     On ne donne jamais un nom de variable au hasard, on le choisit pour qu'il soit **explicite**.
 
 
-![image](data/memevar1.jpg){: .center width=30%}
+![image](data/memevar1.jpg){: .center width=40%}
 
 Oui mais pour donner du sens, il faut souvent plusieurs mots...
-La longueur du nom de la variable n'est plus un problème depuis que la grande majorité des IDE proposent la complétion automatique. 
+La longueur du nom de la variable (*«c'est trop long à taper»*) n'est plus un problème depuis que la grande majorité des IDE propose la complétion automatique.  
 Mais comment former ces longs mots ?
 
 
@@ -534,4 +537,4 @@ Mais comment former ces longs mots ?
 
 Sans surprise, en Python, nous utiliserons donc le ```snake_case```.
 
-![image](data/smart.jpg){: .center width=30%}
+![image](data/smart.jpg){: .center width=40%}

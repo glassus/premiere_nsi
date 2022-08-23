@@ -85,7 +85,7 @@ Utiliser le clavier est souvent bien plus pratique et surtout plus rapide qu'uti
 
     - à la touche `CTRL` : elles permettent de se déplacer de mot en mot;
     - à la touche `MAJ` : elles permettent de sélectionner un caractère;
-    - aux touches `MAJ` **et** `CTRL`: elles permettent de sélectionner une mot.
+    - aux touches `MAJ` **et** `CTRL`: elles permettent de sélectionner un mot.
 
     De même, en se plaçant en début d'une ligne et en combinant la touche `MAJ` et `FIN`, on sélectionne la ligne entière.
 
