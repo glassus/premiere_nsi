@@ -1,4 +1,4 @@
-# Exercices sur la boucle `for`
+# Exercices sur la boucle `for ... in`
 
 {{ initexo(0) }}
 
