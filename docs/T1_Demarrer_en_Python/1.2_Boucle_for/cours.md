@@ -1,4 +1,4 @@
-# 1.2 Boucle For
+# 1.2 Boucle `#!python for ... in ...`
 
 ![image](data/meme.png){: .center width=30%}
 
@@ -22,13 +22,13 @@ En informatique, il existe un concept similaire qui va désigner les objets que 
 
 
 
-## 2. Itérer sur les itérables : la boucle `for`
+## 2. Itérer sur les itérables : la boucle `#!python for ... in ...`
 
 ### 2.1 Itérer sur une chaîne de caractères
 
 La principale caractéristique d'un ordinateur est d'exceller dans les opérations répétitives.
 
-(Je vous laisse faire la recherche Google «Gérard Berry l'ordinateur est...»)
+(je vous laisse retrouver la citation de Gérard Berry, professeur au Collège de France, commençant par *«l'ordinateur est...»*)
 
 Il existe donc une instruction permettant de faire une (ou plusieurs) action(s) à chaque itération sur un élément énumérable.
 
@@ -82,10 +82,10 @@ La variable ```m``` prend successivement les valeurs ```'N```, ```'A'```, ```'S'
 
 
 !!! warning "Comment éviter les erreurs classiques"
-    Quand vous écrivez une boucle ```for```, veillez bien à :
+    Quand vous écrivez une boucle `#!python for ... in ...`, veillez bien à :
 
     - finir la ligne du ```for``` par les deux points ```:```
-    - indenter sous le ```for``` les instructions qui doivent être répétées. 
+    - indenter sous le ```for``` les instructions qui doivent être répétées. Si l'indentation ne s'est pas faite automatiquement après appui sur la touche ```Entrée```, c'est que vous avez oublié les ```:```.  
 
 
 ### 2.2 Itérer sur une liste
@@ -139,9 +139,12 @@ Comment répéter 10 fois la phrase ```"We're up all night to get lucky"``` ?
 
 Nous pourrions nous en sortir par 
 ```python linenums='1'
-for k in "blablablab":
+for k in "blablablab": #(1) 
     print("We're up all night to get lucky")
 ```
+
+1. n'importe quel mot de 10 caractères ferait l'affaire...
+
 
 mais il doit clairement y avoir mieux...
 
@@ -154,13 +157,13 @@ Il y a mieux !
         print("We're up all night to get lucky")
     ```
     va donner ceci :
-    ```python
-    We're up all night to get lucky
-    We're up all night to get lucky
-    We're up all night to get lucky
-    We're up all night to get lucky
-    We're up all night to get lucky
-    ```
+   
+        We're up all night to get lucky
+        We're up all night to get lucky
+        We're up all night to get lucky
+        We're up all night to get lucky
+        We're up all night to get lucky
+    
 Là encore, le ```i``` est une variable muette.
 
 ## 4. Tout sur le ```range```. 
@@ -219,9 +222,8 @@ va donner ceci :
     ```    
     **Interprétation :** faire parcourir à ```k``` l'ensemble `range(start, stop, step)` fait :
 
-    - démarrer ```k``` à la valeur ```start``` 
-    - progresser ```k```  de ```step``` en ```step``` 
-    - tant que ```k``` est strictement inférieur à ```stop``` 
+    - démarrer ```k``` à la valeur ```start``` ,
+    - progresser ```k```  de ```step``` en ```step``` tant que ```k``` est strictement inférieur à ```stop``` .
 
 
 **Remarques** :
@@ -331,9 +333,9 @@ Il est très souvent utile d'imbriquer une boucle dans une autre, notamment lors
 
 ## 6. Pour conclure
 
-!!! done "À retenir"
-    - La boucle `for` s'utilise lorsque :
-        - on veut parcourir un à un les éléments d'un objet itérable (une chaîne de caractère, une liste...)
+!!! done "À retenir :heart: :heart: :heart:"
+    - La boucle `#!python for ... in ...` s'utilise lorsque :
+        - on veut parcourir un à un les éléments d'un objet itérable (une chaîne de caractère, une liste, un tuple, un dictionnaire...)
         - on veut répéter une action un nombre de fois **connu à l'avance**. On parle de boucle **bornée**.
     - Les instructions répétées peuvent - mais ce n'est pas obligatoire - faire appel à la variable de boucle, mais il ne faut pas que ces instructions la modifient.
 

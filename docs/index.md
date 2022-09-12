@@ -1,12 +1,11 @@
 
-!!! abstract ":star: Actualités :star:"
-    - Bonne rentrée à toutes et à tous !
+<!-- !!! abstract ":star: Actualités :star:"
+    - Bonne rentrée à toutes et à tous ! -->
   
 
 ## Thèmes en cours d'étude :
-- [Conditions matérielles de travail](T7_Divers/1_Conseils_generaux/cours/)
 - [Variables](T1_Demarrer_en_Python/1.1_Variables/cours/)  
-
+- [Boucle ```#!python for ... in ...``` ](T1_Demarrer_en_Python/1.2_Boucle_for/cours/)
 
 ## Programme
 !!! abstract "Programme"
@@ -16,7 +15,7 @@
         **Thème 1 : Démarrer en Python**
 
         - 1.1 [Variables](./T1_Demarrer_en_Python/1.1_Variables/cours/)
-        - 1.2 [Boucle For](./T1_Demarrer_en_Python/1.2_Boucle_for/cours/)
+        - 1.2 [Boucle ```#!python for ... in ...```](./T1_Demarrer_en_Python/1.2_Boucle_for/cours/)
         - 1.3 [Boucle While](./T1_Demarrer_en_Python/1.3_Boucle_while/cours/)
         - 1.4 [Instruction conditionnelle If](./T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/cours/)
         - 1.5 [Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/cours)

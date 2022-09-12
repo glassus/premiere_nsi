@@ -379,20 +379,20 @@ Vous pouvez vérifier maintenant que les valeurs de ```a``` et de ```b``` ont bi
     === "Énoncé"
         Une petite erreur s'est glissée à Poudlard :
         ```python
-        >>> maisonHarry = "Serpentard"
-        >>> maisonMalfoy =  "Gryffondor"
+        >>> maison_Harry = "Serpentard"
+        >>> maison_Malfoy =  "Gryffondor"
         ```
         Corriger cette erreur, de deux manières différentes.
 
     === "Correction"
         ```python
-        >>> t = maisonHarry
-        >>> maisonHarry = maisonMalfoy
-        >>> maisonMalfoy = t
+        >>> t = maison_Harry
+        >>> maison_Harry = maison_Malfoy
+        >>> maison_Malfoy = t
         ```
         ou plus rapidement :
         ```python
-        >>> maisonHarry, maisonMalfoy = maisonMalfoy, maisonHarry
+        >>> maison_Harry, maison_Malfoy = maison_Malfoy, maison_Harry
         ```
 
 
@@ -413,14 +413,14 @@ En voici quelques uns, que nous découvrirons au fil de l'année :
 
     |Type Python| Traduction | Exemple|
     |:-:|:-:|:-:|
-    |`int`|entier|`42`|
-    |`float`|flottant (décimal)|`3.1416`|
-    |`str`|chaîne de caractères (string)|`"NSI"`|
-    |`bool`|booléen (True ou False)|True|
-    |`tuple`|p-uplet| `(255, 127, 0)`|
-    |`list`|liste|`[0, 1, 2, 3, 4, 5]`|
-    |`dict`|dictionnaire|`{'Homer':43, 'Marge':41, 'Bart':12, 'Lisa':10, 'Maggie':4}`|
-    |`function`|fonction| `print`|
+    |`int`|entier|`#!python 42`|
+    |`float`|flottant (décimal)|`#!python 3.1416`|
+    |`str`|chaîne de caractères (string)|`#!python "NSI"`|
+    |`bool`|booléen (True ou False)|```#!python True```|
+    |`tuple`|p-uplet| `#!python (255, 127, 0)`|
+    |`list`|liste|`#!python [0, 1, 2, 3, 4, 5]`|
+    |`dict`|dictionnaire|`#!python {'Homer':43, 'Marge':41, 'Bart':12, 'Lisa':10, 'Maggie':4}`|
+    |`function`|fonction| `#!python print`|
 
 
 Comment connaître le type d'une variable ?

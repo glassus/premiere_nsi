@@ -19,44 +19,23 @@
         Roschdy a eu le César du meilleur acteur
         ```
     === "Correction"
-        ```python linenums='1'
+<!--         ```python linenums='1'
         liste_acteurs = ['Tahar', 'Omar', 'Guillaume', 'Swann', 'Alex', 'Roschdy']
 
         for acteur in liste_acteurs:
             print(acteur, "a eu le César du meilleur acteur")
-        ```
+        ``` -->
 
 
-!!! example "{{ exercice() }}"
-    === "Énoncé"
-        1. Fabriquer la chaîne de caractères suivante (qui comporte 80 caractères) :
-        ```python
-        IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
-        ```
-        2. Fabriquer la chaîne de caractères suivante :
-        ```python
-        IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
-        NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
-        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-        OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
-        ```
-    === "Correction"
-        1.
-        ```python linenums='1'
-        sol = ""
-        for k in range(80):
-            sol = sol + 'I'
+!!! note "Concaténation de caractères :heart:"
+    Il est possible de *coller* (le vrai mot est *concaténer*) deux chaînes de caractères par l'opérateur ```+``` :
+    ```python
+    >>> "a" + "b"
+    'ab'
+    ``` 
+         
 
-        print(sol)
-        ``` 
-        2.
-        ```python linenums='1'
-        for lettre in 'INFO':
-            sol = ""
-            for k in range(80):
-                sol = sol + lettre
-            print(sol)
-        ```
+
 !!! example "{{ exercice() }}"
     === "Énoncé"
         Dans l'extrait de code suivant:
@@ -76,14 +55,49 @@
         ```
 
         Cette variable `chaine` est appelée un **accumulateur**.
-    === "Correction"
+<!--     === "Correction"
         ```python linenums='1'
         chaine = ""
         for lettre in ['b', 'r', 'a', 'v', 'o']:
             chaine = chaine + lettre
 
         print(chaine)
+        ``` -->
+
+
+
+
+
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        1. Fabriquer la chaîne de caractères suivante (qui comporte 80 caractères) :
+        ```python
+        IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
         ```
+        2. Fabriquer la chaîne de caractères suivante :
+        ```python
+        IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+        NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+        ```
+<!--     === "Correction"
+        1.
+        ```python linenums='1'
+        sol = ""
+        for k in range(80):
+            sol = sol + 'I'
+
+        print(sol)
+        ``` 
+        2.
+        ```python linenums='1'
+        for lettre in 'INFO':
+            sol = ""
+            for k in range(80):
+                sol = sol + lettre
+            print(sol)
+        ``` -->
 
 
 
@@ -108,7 +122,7 @@
         mot_secret = ""
         ```
 
-    === "Correction"
+<!--     === "Correction"
         ```python linenums='1'
         mystere = [111, 107, 44, 32, 98, 105, 101, 110, 32, 106, 111, 117, 233]
         mot_secret = ""
@@ -118,7 +132,7 @@
             mot_secret = mot_secret + lettre
 
         print(mot_secret)
-        ```
+        ``` -->
       
 !!! example "{{ exercice() }}"
     === "Énoncé"
@@ -148,7 +162,7 @@
         ```
 
       
-!!! capytale "À faire sur Capytale : [activité 7eee-52815](https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/7eee-52815)"
+!!! capytale "À faire sur Capytale : [activité 7eee-52815](https://capytale2.ac-paris.fr/web/c/7eee-52815/mlc)"
     !!! example "Exercice 1"
         === "Énoncé"
             Proposer un code qui écrit la **table de multiplication** de 7, de 8 et de 9.
