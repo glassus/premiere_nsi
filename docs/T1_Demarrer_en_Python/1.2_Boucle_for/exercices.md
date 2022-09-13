@@ -19,12 +19,12 @@
         Roschdy a eu le César du meilleur acteur
         ```
     === "Correction"
-<!--         ```python linenums='1'
+        ```python linenums='1'
         liste_acteurs = ['Tahar', 'Omar', 'Guillaume', 'Swann', 'Alex', 'Roschdy']
 
         for acteur in liste_acteurs:
             print(acteur, "a eu le César du meilleur acteur")
-        ``` -->
+        ```
 
 
 !!! note "Concaténation de caractères :heart:"
