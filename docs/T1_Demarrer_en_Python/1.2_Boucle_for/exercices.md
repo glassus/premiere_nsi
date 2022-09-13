@@ -55,14 +55,14 @@
         ```
 
         Cette variable `chaine` est appelée un **accumulateur**.
-<!--     === "Correction"
+    === "Correction"
         ```python linenums='1'
         chaine = ""
         for lettre in ['b', 'r', 'a', 'v', 'o']:
-            chaine = chaine + lettre
+            chaine += lettre
 
         print(chaine)
-        ``` -->
+        ```
 
 
 
