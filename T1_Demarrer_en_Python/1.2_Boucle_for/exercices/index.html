@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://glassus.github.io/premiere_nsi/T1_Demarrer_en_Python/1.2_Boucle_for/exercices/">
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.4">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.2">
     
     
       
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.6b80c2a2.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.9f9400aa.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
@@ -33,6 +33,7 @@
   
   
   <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0l-30.1 30 97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2l-18.7-18.6zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.8 15.7-7.4 21.9-13.5l167.3-167.4-98-98-167.3 167.4zM96 64c-53 0-96 43-96 96v256c0 53 43 96 96 96h256c53 0 96-43 96-96v-96c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H96z"/></svg>');}</style>
+
 
     
     
@@ -58,6 +59,7 @@
     
       
 
+    
     
     
   </head>
@@ -160,7 +162,7 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Effacer" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -2845,11 +2847,12 @@
             
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
-    
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+    
+                  
 
   <a href="https://github.com/glassus/premiere_nsi/edit/master/docs/T1_Demarrer_en_Python/1.2_Boucle_for/exercices.md" title="Editer cette page" class="md-content__button md-icon">
     
@@ -2973,7 +2976,7 @@
 
 <div class="admonition example">
 <p class="admonition-title">Exercice  4</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Énoncé</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Énoncé</label><label for="__tabbed_4_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>En Python, la fonction <code>ord</code> renvoie le code Unicode d'un caractère et la fonction <code>chr</code> le contraire: elle renvoie le caractère correspondant à un code Unicode.</p>
@@ -2990,21 +2993,27 @@
 <span class="n">mot_secret</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 </code></pre></div></td></tr></table></div>
 </div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">mystere</span> <span class="o">=</span> <span class="p">[</span><span class="mi">111</span><span class="p">,</span> <span class="mi">107</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">106</span><span class="p">,</span> <span class="mi">111</span><span class="p">,</span> <span class="mi">117</span><span class="p">,</span> <span class="mi">233</span><span class="p">]</span>
+<span class="n">mot_secret</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+<span class="k">for</span> <span class="n">nombre</span> <span class="ow">in</span> <span class="n">mystere</span><span class="p">:</span>
+    <span class="n">lettre</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
+    <span class="n">mot_secret</span> <span class="o">=</span> <span class="n">mot_secret</span> <span class="o">+</span> <span class="n">lettre</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">mot_secret</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
-<!--     === "Correction"
-        ```python linenums='1'
-        mystere = [111, 107, 44, 32, 98, 105, 101, 110, 32, 106, 111, 117, 233]
-        mot_secret = ""
-
-        for nombre in mystere:
-            lettre = chr(nombre)
-            mot_secret = mot_secret + lettre
-
-        print(mot_secret)
-        ``` -->
-
+</div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  5</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Énoncé</label></div>
@@ -3043,10 +3052,8 @@
         print(produit)  
         ``` -->
 
-<div class="admonition capytale">
-<p class="admonition-title">À faire sur Capytale : <a href="https://capytale2.ac-paris.fr/web/c/7eee-52815/mlc">activité 7eee-52815</a></p>
 <div class="admonition example">
-<p class="admonition-title">Exercice 1</p>
+<p class="admonition-title">Exercice 7</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Énoncé</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3065,35 +3072,39 @@
 </div>
 </div>
 </div>
+<!--     === "Correction"
+    ```python linenums='1'
+    for a in range(7, 10):
+        for b in range(1, 10):
+            print(a, '*', b, '=', a*b)
+    ``` -->
+
+<div class="admonition example">
+<p class="admonition-title">Exercice 8</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Énoncé</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Sur un jeu d'échecs, les cases sont repérées par une lettre (de A jusqu'à H) et par un chiffre (de 1 jusqu'à 8).</p>
+<p>Les cases sont donc A1, A2, A3, ..., H7, H8.</p>
+<p>Proposer un code qui écrit <strong>toutes</strong> les cases possibles.</p>
+</div>
+</div>
+</div>
 </div>
 <!--         === "Correction"
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span> <span class="o">--&gt;</span>
-</code></pre></div></td></tr></table></div>
-    !!! example "Exercice 2"
-        === "Énoncé"
-            Sur un jeu d'échecs, les cases sont repérées par une lettre (de A jusqu'à H) et par un chiffre (de 1 jusqu'à 8).
-
-            Les cases sont donc A1, A2, A3, ..., H7, H8.
-
-            Proposer un code qui écrit **toutes** les cases possibles.
-<!--         === "Correction"
-            ```python linenums='1'
-            for lettre in "ABCDEFGH":
-                for chiffre in range(1, 9):
-                    case = lettre + str(chiffre)
-                    print(case)
-            ``` -->
+        ```python linenums='1'
+        for lettre in "ABCDEFGH":
+            for chiffre in range(1, 9):
+                case = lettre + str(chiffre)
+                print(case)
+        ``` -->
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">13 septembre 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">19 septembre 2022</span>
       
     
   </small>
@@ -3103,12 +3114,13 @@
 
 
 
-              
+                
     <script src="../../../js/ide.js"></script> 
 
-            </article>
-            
-          </div>
+              </article>
+            </div>
+          
+          
         </div>
         
           <a href="#" class="md-top md-icon" data-md-component="top" hidden>
@@ -3206,7 +3218,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.2ab50757.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.39f04ddb.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       
