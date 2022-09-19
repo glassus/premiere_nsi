@@ -122,7 +122,7 @@
         mot_secret = ""
         ```
 
-<!--     === "Correction"
+    === "Correction"
         ```python linenums='1'
         mystere = [111, 107, 44, 32, 98, 105, 101, 110, 32, 106, 111, 117, 233]
         mot_secret = ""
@@ -132,7 +132,7 @@
             mot_secret = mot_secret + lettre
 
         print(mot_secret)
-        ``` -->
+        ```
       
 !!! example "{{ exercice() }}"
     === "Énoncé"
@@ -162,40 +162,41 @@
         ``` -->
 
       
-!!! capytale "À faire sur Capytale : [activité 7eee-52815](https://capytale2.ac-paris.fr/web/c/7eee-52815/mlc)"
-    !!! example "Exercice 1"
-        === "Énoncé"
-            Proposer un code qui écrit la **table de multiplication** de 7, de 8 et de 9.
-    
-            La sortie doit ressembler à :
-            ```
-            7*1 = 7
 
-            7*2 = 14
+!!! example "Exercice 7"
+    === "Énoncé"
+        Proposer un code qui écrit la **table de multiplication** de 7, de 8 et de 9.
 
-            ...    
-            ...
+        La sortie doit ressembler à :
+        ```
+        7*1 = 7
 
-            9*9 = 81    
-            ```
+        7*2 = 14
+
+        ...    
+        ...
+
+        9*9 = 81    
+        ```
+<!--     === "Correction"
+    ```python linenums='1'
+    for a in range(7, 10):
+        for b in range(1, 10):
+            print(a, '*', b, '=', a*b)
+    ``` -->
+
+!!! example "Exercice 8"
+    === "Énoncé"
+        Sur un jeu d'échecs, les cases sont repérées par une lettre (de A jusqu'à H) et par un chiffre (de 1 jusqu'à 8).
+
+        Les cases sont donc A1, A2, A3, ..., H7, H8.
+
+        Proposer un code qui écrit **toutes** les cases possibles.
 <!--         === "Correction"
-            ```python linenums='1'
-            for a in range(7, 10):
-                for b in range(1, 10):
-                    print(a, '*', b, '=', a*b) -->
-            ```
-    !!! example "Exercice 2"
-        === "Énoncé"
-            Sur un jeu d'échecs, les cases sont repérées par une lettre (de A jusqu'à H) et par un chiffre (de 1 jusqu'à 8).
-
-            Les cases sont donc A1, A2, A3, ..., H7, H8.
-
-            Proposer un code qui écrit **toutes** les cases possibles.
-<!--         === "Correction"
-            ```python linenums='1'
-            for lettre in "ABCDEFGH":
-                for chiffre in range(1, 9):
-                    case = lettre + str(chiffre)
-                    print(case)
-            ``` -->
+        ```python linenums='1'
+        for lettre in "ABCDEFGH":
+            for chiffre in range(1, 9):
+                case = lettre + str(chiffre)
+                print(case)
+        ``` -->
   

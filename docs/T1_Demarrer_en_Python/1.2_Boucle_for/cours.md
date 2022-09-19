@@ -326,10 +326,37 @@ Il est très souvent utile d'imbriquer une boucle dans une autre, notamment lors
         ```
     === "Correction"
         ```python linenums='1'
-        for perso1 in ["Papa", "Maman", "Mamie"]:
-            for perso2 in ["Riri", "Fifi", "Loulou"]:
-                print(perso1, "dit : « et une cuillère pour", perso2, "! »")
+        for parent in ["Papa", "Maman", "Mamie"]:
+            for enfant in ["Riri", "Fifi", "Loulou"]:
+                print(parent, "dit : « et une cuillère pour", enfant, "! »")
         ```
+
+!!! example "Exercice 4"
+    === "Énoncé"
+        Rajouter à la phrase précédente le contenu de la cuillère (purée puis compote). 
+        
+        Exemple :
+        ```
+        Papa dit : « et une cuillère de purée pour Riri ! »
+        Papa dit : « et une cuillère de compote pour Riri ! »
+        Papa dit : « et une cuillère de purée pour Fifi ! »
+        Papa dit : « et une cuillère de compote pour Fifi ! »
+        Papa dit : « et une cuillère de purée pour Loulou ! »
+        Papa dit : « et une cuillère de compote pour Loulou ! »
+        Maman dit : « et une cuillère de purée pour Riri ! »
+        Maman dit : « et une cuillère de compote pour Riri ! »
+        ...
+        ``` 
+
+    === "Correction"
+        ```python linenums='1'
+        for parent in ["Papa", "Maman", "Mamie"]:
+            for enfant in ["Riri", "Fifi", "Loulou"]:
+                for nourriture in ["purée", "compote"]:
+                    print(parent, "dit : « et une cuillère de", nourriture, "pour", enfant, "! »")
+        ```
+
+
 
 ## 6. Pour conclure
 
