@@ -142,24 +142,24 @@
 
         Écrire un programme avec une variable `somme` **accumulateur** (comme à l'exercice 3) qui contiendra la valeur souhaitée en fin de programme.
 
-<!--     === "Correction"
+    === "Correction"
         ```python linenums='1'
         somme = 0
         for k in range(1,1001):
             somme += k
         print(somme)  
-        ``` -->
+        ```
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
         Calculer $1\times 2 \times 3 \times \dots 99 \times 100$.
-<!--     === "Correction"
+    === "Correction"
         ```python linenums='1'
         produit = 1
         for k in range(1,100):
             produit = produit * k
         print(produit)  
-        ``` -->
+        ```
 
       
 
@@ -178,12 +178,12 @@
 
         9*9 = 81    
         ```
-<!--     === "Correction"
+    === "Correction"
     ```python linenums='1'
     for a in range(7, 10):
         for b in range(1, 10):
             print(a, '*', b, '=', a*b)
-    ``` -->
+    ```
 
 !!! example "Exercice 8"
     === "Énoncé"
@@ -192,11 +192,11 @@
         Les cases sont donc A1, A2, A3, ..., H7, H8.
 
         Proposer un code qui écrit **toutes** les cases possibles.
-<!--         === "Correction"
+        === "Correction"
         ```python linenums='1'
         for lettre in "ABCDEFGH":
             for chiffre in range(1, 9):
                 case = lettre + str(chiffre)
                 print(case)
-        ``` -->
+        ```
   
