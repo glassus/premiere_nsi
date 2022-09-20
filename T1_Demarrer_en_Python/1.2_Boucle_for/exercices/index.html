@@ -3100,6 +3100,15 @@
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="s2">&quot;ABCDEFGH&quot;</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">chiffre</span> <span class="ow">in</span> <span class="s2">&quot;12345678&quot;</span><span class="p">:</span>
+        <span class="n">case</span> <span class="o">=</span> <span class="n">lettre</span> <span class="o">+</span> <span class="n">chiffre</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">case</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Autre solution utilisant la conversion d'un entier en chaine de caractères, grâce à la fonction <code>str</code> : </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="s2">&quot;ABCDEFGH&quot;</span><span class="p">:</span>
     <span class="k">for</span> <span class="n">chiffre</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">):</span>
         <span class="n">case</span> <span class="o">=</span> <span class="n">lettre</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">chiffre</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">case</span><span class="p">)</span>
