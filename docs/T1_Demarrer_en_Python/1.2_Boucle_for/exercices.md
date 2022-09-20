@@ -192,7 +192,18 @@
         Les cases sont donc A1, A2, A3, ..., H7, H8.
 
         Proposer un code qui écrit **toutes** les cases possibles.
+
         === "Correction"
+        ```python linenums='1'
+        for lettre in "ABCDEFGH":
+            for chiffre in "12345678":
+                case = lettre + chiffre
+                print(case)
+        ```
+
+        Autre solution utilisant la conversion d'un entier en chaine de caractères, grâce à la fonction ```str``` : 
+
+
         ```python linenums='1'
         for lettre in "ABCDEFGH":
             for chiffre in range(1, 9):
