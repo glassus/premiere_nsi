@@ -7,8 +7,9 @@
 L'instruction conditionnelle `if` permet de soumettre l'exécution d'instructions à une condition donnée.
 Cette condition sera une expression booléenne, comme pour la boucle `while`.
 
+
 ## 1. Exemples fondateurs
-Dans les exemples ci-dessous, changez la valeur affectée à la variable ```age``` et observer les modifications de comportement du programme.
+Dans les exemples ci-dessous, changez la valeur affectée à la variable ```age``` afin d'observer les modifications de comportement du programme.
 
 
 !!! note "Exemple fondateur n°1 :heart:"
@@ -21,7 +22,7 @@ Dans les exemples ci-dessous, changez la valeur affectée à la variable ```age`
 
 
 !!! note "Exemple fondateur n°2 :heart:"
-    La structure qu'on rencontrera le plus souvent est néanmoins la structure ```if ... else``` 
+    La structure qu'on rencontrera le plus souvent est la structure ```if ... else ...``` 
 
     ```python linenums="1"
     age = 20
@@ -32,11 +33,11 @@ Dans les exemples ci-dessous, changez la valeur affectée à la variable ```age`
     ```
 
 !!! abstract "**Syntaxe générale**"
-    ```python linenums="1"
-    if expression:
-        *instructions à effectuer si expression est vraie*
+    ```
+    if expression booléenne:
+        *instructions à effectuer si l'expression est vraie*
     else:
-        *instructions à effectuer sinon, c'est-à-dire si expression est fausse*
+        *instructions à effectuer si l'expression est fausse*
     ```
 
 ## 2. L'évaluation de la condition
@@ -135,7 +136,40 @@ True
         ) }}
 
 
-## 3. Les cas multiples : utilisation de `elif` 
+## 3. Un test très fréquent : le test de divisibilité
+
+
+!!! note "Exemple fondateur n°3 :heart:"
+    Pour tester si un nombre ```n``` est divisible par un nombre ```d```, on teste si le reste de la division euclidienne de ```n``` par ```d``` est égal à 0 :
+
+    ```python
+    n = 17
+    if n % 2 == 0:
+        print(n, "est un nombre pair")
+    else:
+        print(n, "est un nombre impair")
+    ```     
+
+
+!!! example "Exercice"
+    === "Énoncé"
+        Afficher la liste de tous les nombres entre 1 et 100 qui sont divisibles à la fois par 2 et par 7. 
+    === "Correction"
+        {{ correction(True,
+        "
+        ```python linenums='1'
+        for n in range(1,101):
+            if n % 2 == 0 and n % 7 == 0:
+                print(n)
+        ```
+        "
+        ) }}
+
+
+
+
+
+## 4. Les cas multiples : utilisation de `elif` 
 
 Dans les situations où l'on veut effectuer des instructions différentes selon les différentes valeurs prises par une variable, on peut imbriquer les instructions `if` ... `else`.
 

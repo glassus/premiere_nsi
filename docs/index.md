@@ -3,9 +3,13 @@
     - Bonne rentrée à toutes et à tous ! -->
   
 
-## Thèmes en cours d'étude :
-- [Variables](T1_Demarrer_en_Python/1.1_Variables/cours/)  
-- [Boucle ```#!python for ... in ...``` ](T1_Demarrer_en_Python/1.2_Boucle_for/cours/)
+## Thème(s) en cours d'étude 
+-  [Instruction conditionnelle ```#!python if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/cours/)
+
+
+!!! note "*Anciens thèmes traités*"
+    - [Variables](T1_Demarrer_en_Python/1.1_Variables/cours/)  
+    - [Boucle ```#!python for ... in ...``` ](T1_Demarrer_en_Python/1.2_Boucle_for/cours/)
 
 ## Programme
 !!! abstract "Programme"
