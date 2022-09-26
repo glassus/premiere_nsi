@@ -171,6 +171,9 @@ True
 
 ## 4. Les cas multiples : utilisation de `elif` 
 
+![image](data/cascade.webp){: .center width=30%}
+
+
 Dans les situations où l'on veut effectuer des instructions différentes selon les différentes valeurs prises par une variable, on peut imbriquer les instructions `if` ... `else`.
 
 Observer par exemple le code ci-dessous :
