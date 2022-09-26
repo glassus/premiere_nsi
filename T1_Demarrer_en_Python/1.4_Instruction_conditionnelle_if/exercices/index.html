@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://glassus.github.io/premiere_nsi/T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/exercices/">
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.2">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.3">
     
     
       
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.9f9400aa.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7a952b86.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
@@ -2867,66 +2867,24 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Écrire un programme qui demande deux nombres et qui affiche le plus grand des deux.</p>
+<p>Aide :
+pour stocker dans une variable <code>n</code> un nombre tapé au clavier par l'utilisateur, on utilise le code suivant :</p>
+<div class="highlight"><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Entrez un nombre&#39;</span><span class="p">))</span>
+</code></pre></div>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">n1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Premier nombre ?&#39;</span><span class="p">))</span>
-<span class="n">n2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Deuxième nombre ?&#39;</span><span class="p">))</span>
-
-<span class="k">if</span> <span class="n">n1</span> <span class="o">&gt;</span> <span class="n">n2</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;le nombre le plus grand est&#39;</span><span class="p">,</span> <span class="n">n1</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">n2</span> <span class="o">&gt;</span> <span class="n">n1</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;le nombre le plus grand est&#39;</span><span class="p">,</span> <span class="n">n2</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;les deux nombres sont égaux&#39;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</div>
+<div class="tabbed-block"></div>
 </div>
 </div>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  2</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Correction</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Corrections</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>On calcule l'IMC (Indice de Masse Corporelle) par la formule <span class="arithmatex">\(I = M / T^2\)</span> où M est la masse (en kg) d'une personne et T sa taille (en m).
-Selon la classification de l'OMS, une personne est en état de maigreur si son IMC est inférieur à 18 et en surpoids si son IMC est supérieur à 25. </p>
-<ol>
-<li>Écrire un programme qui demande la masse et la taille d'une personne, calcule son IMC et annonce si la personne est en état de maigreur.</li>
-<li>Modifier ensuite le programme pour qu'il annonce si la personne est en état de maigreur, en surpoids ou bien si son IMC est normal.</li>
-</ol>
+<p>Exercices à réaliser sur Capytale à partir de ce <a class="" href="https://capytale2.ac-paris.fr/web/c/dc75-658380/mlc" target="_blank">lien</a>.
+<img alt="image" class="center" src="../data/damier.png" /></p>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">masse</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Quelle est votre masse (en kg) ? &#39;</span><span class="p">))</span>
-<span class="n">taille</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Quelle est votre taille (en m) ? &#39;</span><span class="p">))</span>
-
-<span class="n">IMC</span> <span class="o">=</span> <span class="n">masse</span> <span class="o">/</span> <span class="n">taille</span><span class="o">**</span><span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;votre IMC vaut :&#39;</span><span class="p">,</span> <span class="n">IMC</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">IMC</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;vous êtes en état de maigreur&#39;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">IMC</span> <span class="o">&lt;</span> <span class="mi">25</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;votre corpulence est dans la normale&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;vous êtes en surpoids&#39;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</div>
+<div class="tabbed-block"></div>
 </div>
 </div>
 </div>
@@ -2943,26 +2901,7 @@ Selon la classification de l'OMS, une personne est en état de maigreur si son I
 </ul>
 <p>Écrire un code qui joue au FizzBuzz jusqu'à 50.</p>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">k</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">k</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;fizzbuzz&#39;</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">k</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;fizz&#39;</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">k</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;buzz&#39;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</div>
+<div class="tabbed-block"></div>
 </div>
 </div>
 </div>
@@ -2979,24 +2918,7 @@ Selon la classification de l'OMS, une personne est en état de maigreur si son I
 <p>Écrire un code qui détermine si une année est bissextile ou non.</p>
 <p><em>Explication : la Terre faisant le tour du Soleil en <a href="https://fr.vikidia.org/wiki/R%C3%A9volution_de_la_Terre_autour_du_Soleil">un peu plus que 365 jours</a>, on s'est dit qu'on allait rajouter un jour tous les 4 ans, mais c'était trop, alors on a enlevé un jour tous les 100 ans, mais c'était plus assez, alors on a rajouté un jour tous les 400 ans, ce qui donne une approximation convenable.</em></p>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">annee</span> <span class="o">=</span> <span class="mi">2021</span>
-
-<span class="k">if</span> <span class="n">annee</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">annee</span><span class="p">,</span> <span class="s2">&quot;est bissextile&quot;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">annee</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">annee</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">annee</span><span class="p">,</span> <span class="s2">&quot;est bissextile&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">annee</span><span class="p">,</span> <span class="s2">&quot;n&#39;est pas bissextile&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</div>
+<div class="tabbed-block"></div>
 </div>
 </div>
 </div>
@@ -3006,7 +2928,7 @@ Selon la classification de l'OMS, une personne est en état de maigreur si son I
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">26 octobre 2021</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">26 septembre 2022</span>
       
     
   </small>
@@ -3117,10 +3039,10 @@ Selon la classification de l'OMS, une personne est en état de maigreur si son I
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.39f04ddb.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.37e9125f.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       

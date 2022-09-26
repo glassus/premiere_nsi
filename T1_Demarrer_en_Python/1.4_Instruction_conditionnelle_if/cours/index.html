@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://glassus.github.io/premiere_nsi/T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/cours/">
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.2">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.3">
     
     
       
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.9f9400aa.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7a952b86.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
@@ -715,8 +715,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-les-cas-multiples-utilisation-de-elif" class="md-nav__link">
-    3. Les cas multiples : utilisation de elif
+  <a href="#3-un-test-tres-frequent-le-test-de-divisibilite" class="md-nav__link">
+    3. Un test très fréquent : le test de divisibilité
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-les-cas-multiples-utilisation-de-elif" class="md-nav__link">
+    4. Les cas multiples : utilisation de elif
   </a>
   
 </li>
@@ -2917,7 +2924,7 @@
 <p>L'instruction conditionnelle <code>if</code> permet de soumettre l'exécution d'instructions à une condition donnée.
 Cette condition sera une expression booléenne, comme pour la boucle <code>while</code>.</p>
 <h2 id="1-exemples-fondateurs">1. Exemples fondateurs<a class="headerlink" href="#1-exemples-fondateurs" title="Permanent link">⚓︎</a></h2>
-<p>Dans les exemples ci-dessous, changez la valeur affectée à la variable <code>age</code> et observer les modifications de comportement du programme.</p>
+<p>Dans les exemples ci-dessous, changez la valeur affectée à la variable <code>age</code> afin d'observer les modifications de comportement du programme.</p>
 <div class="admonition note">
 <p class="admonition-title">Exemple fondateur n°1 <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
 <p>L'exemple minimal ci-dessous ne contient que le mot-clé <code>if</code>. 
@@ -2930,7 +2937,7 @@ Cette condition sera une expression booléenne, comme pour la boucle <code>while
 </div>
 <div class="admonition note">
 <p class="admonition-title">Exemple fondateur n°2 <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
-<p>La structure qu'on rencontrera le plus souvent est néanmoins la structure <code>if ... else</code> </p>
+<p>La structure qu'on rencontrera le plus souvent est la structure <code>if ... else ...</code> </p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2944,14 +2951,11 @@ Cette condition sera une expression booléenne, comme pour la boucle <code>while
 </div>
 <div class="admonition abstract">
 <p class="admonition-title"><strong>Syntaxe générale</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">if</span> <span class="n">expression</span><span class="p">:</span>
-    <span class="o">*</span><span class="n">instructions</span> <span class="n">à</span> <span class="n">effectuer</span> <span class="n">si</span> <span class="n">expression</span> <span class="n">est</span> <span class="n">vraie</span><span class="o">*</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="o">*</span><span class="n">instructions</span> <span class="n">à</span> <span class="n">effectuer</span> <span class="n">sinon</span><span class="p">,</span> <span class="n">c</span><span class="s1">&#39;est-à-dire si expression est fausse*</span>
-</code></pre></div></td></tr></table></div>
+<div class="highlight"><pre><span></span><code>if expression booléenne:
+    *instructions à effectuer si l&#39;expression est vraie*
+else:
+    *instructions à effectuer si l&#39;expression est fausse*
+</code></pre></div>
 </div>
 <h2 id="2-levaluation-de-la-condition">2. L'évaluation de la condition<a class="headerlink" href="#2-levaluation-de-la-condition" title="Permanent link">⚓︎</a></h2>
 <p>Comme pour la boucle <code>while</code>, on dit que l'expression qui suit le <code>if</code> est <strong>évaluée</strong> par Python lors de l'exécution du programme.</p>
@@ -3081,7 +3085,36 @@ Cette condition sera une expression booléenne, comme pour la boucle <code>while
 </div>
 </div>
 </div>
-<h2 id="3-les-cas-multiples-utilisation-de-elif">3. Les cas multiples : utilisation de <code>elif</code><a class="headerlink" href="#3-les-cas-multiples-utilisation-de-elif" title="Permanent link">⚓︎</a></h2>
+<h2 id="3-un-test-tres-frequent-le-test-de-divisibilite">3. Un test très fréquent : le test de divisibilité<a class="headerlink" href="#3-un-test-tres-frequent-le-test-de-divisibilite" title="Permanent link">⚓︎</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Exemple fondateur n°3 <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
+<p>Pour tester si un nombre <code>n</code> est divisible par un nombre <code>d</code>, on teste si le reste de la division euclidienne de <code>n</code> par <code>d</code> est égal à 0 :</p>
+<div class="highlight"><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="mi">17</span>
+<span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="s2">&quot;est un nombre pair&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="s2">&quot;est un nombre impair&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Afficher la liste de tous les nombres entre 1 et 100 qui sont divisibles à la fois par 2 et par 7. </p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">101</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">7</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</div>
+<h2 id="4-les-cas-multiples-utilisation-de-elif">4. Les cas multiples : utilisation de <code>elif</code><a class="headerlink" href="#4-les-cas-multiples-utilisation-de-elif" title="Permanent link">⚓︎</a></h2>
 <p>Dans les situations où l'on veut effectuer des instructions différentes selon les différentes valeurs prises par une variable, on peut imbriquer les instructions <code>if</code> ... <code>else</code>.</p>
 <p>Observer par exemple le code ci-dessous :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -3160,7 +3193,7 @@ Cette condition sera une expression booléenne, comme pour la boucle <code>while
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">13 octobre 2021</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">26 septembre 2022</span>
       
     
   </small>
@@ -3271,10 +3304,10 @@ Cette condition sera une expression booléenne, comme pour la boucle <code>while
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.39f04ddb.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.37e9125f.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       
