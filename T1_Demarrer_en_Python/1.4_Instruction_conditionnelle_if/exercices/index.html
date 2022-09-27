@@ -2872,7 +2872,26 @@ pour stocker dans une variable <code>n</code> un nombre tapé au clavier par l'u
 <div class="highlight"><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Entrez un nombre&#39;</span><span class="p">))</span>
 </code></pre></div>
 </div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">n1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Premier nombre ?&#39;</span><span class="p">))</span>
+<span class="n">n2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Deuxième nombre ?&#39;</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="n">n1</span> <span class="o">&gt;</span> <span class="n">n2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;le nombre le plus grand est&#39;</span><span class="p">,</span> <span class="n">n1</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">n2</span> <span class="o">&gt;</span> <span class="n">n1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;le nombre le plus grand est&#39;</span><span class="p">,</span> <span class="n">n2</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;les deux nombres sont égaux&#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
 </div>
 </div>
 </div>
@@ -2884,7 +2903,49 @@ pour stocker dans une variable <code>n</code> un nombre tapé au clavier par l'u
 <p>Exercices à réaliser sur Capytale à partir de ce <a class="" href="https://capytale2.ac-paris.fr/web/c/dc75-658380/mlc" target="_blank">lien</a>.
 <img alt="image" class="center" src="../data/damier.png" /></p>
 </div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>Q2 : une colonne sur 2 noire
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">grid</span> <span class="o">=</span> <span class="n">BlockGrid</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="p">(</span><span class="mi">125</span><span class="p">,</span><span class="mi">234</span><span class="p">,</span><span class="mi">231</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">colonne</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">):</span>
+        <span class="n">grid</span><span class="p">[</span><span class="n">ligne</span><span class="p">,</span><span class="n">colonne</span><span class="p">]</span><span class="o">.</span><span class="n">set_colors</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div></p>
+<p>Q3 : un damier
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">BlockGrid</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="p">(</span><span class="mi">125</span><span class="p">,</span><span class="mi">234</span><span class="p">,</span><span class="mi">231</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">colonne</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">ligne</span> <span class="o">+</span> <span class="n">colonne</span><span class="p">)</span> <span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">grid</span><span class="p">[</span><span class="n">ligne</span><span class="p">,</span><span class="n">colonne</span><span class="p">]</span><span class="o">.</span><span class="n">set_colors</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div></p>
+<p>Q4 : un escalier
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">BlockGrid</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="p">(</span><span class="mi">125</span><span class="p">,</span><span class="mi">234</span><span class="p">,</span><span class="mi">231</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">colonne</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">ligne</span> <span class="o">+</span> <span class="n">colonne</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">9</span> <span class="p">:</span>
+            <span class="n">grid</span><span class="p">[</span><span class="n">ligne</span><span class="p">,</span><span class="n">colonne</span><span class="p">]</span><span class="o">.</span><span class="n">set_colors</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div></p>
+</div>
 </div>
 </div>
 </div>
@@ -2928,7 +2989,7 @@ pour stocker dans une variable <code>n</code> un nombre tapé au clavier par l'u
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">26 septembre 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">27 septembre 2022</span>
       
     
   </small>
