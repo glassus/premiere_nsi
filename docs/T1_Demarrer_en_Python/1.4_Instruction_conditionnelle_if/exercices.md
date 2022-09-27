@@ -14,7 +14,7 @@
         ``` 
 
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python linenums='1'
         n1 = int(input('Premier nombre ?'))
@@ -39,6 +39,36 @@
         
 
     === "Corrections"
+        Q2 : une colonne sur 2 noire
+        ```python linenums='1'
+        grid = BlockGrid(10, 10, fill=(125,234,231))
+        for ligne in range(10):
+            for colonne in range(1,10,2):
+                grid[ligne,colonne].set_colors(0,0,0)
+        grid.show()
+        ```
+
+        Q3 : un damier
+        ```python linenums='1'
+        n = 10
+        grid = BlockGrid(n, n, fill=(125,234,231))
+        for colonne in range(n):
+            for ligne in range(n):
+                if (ligne + colonne) %2 == 0:
+                    grid[ligne,colonne].set_colors(0,0,0)
+        grid.show()
+        ```
+
+        Q4 : un escalier
+        ```python linenums='1'
+        n = 10
+        grid = BlockGrid(n, n, fill=(125,234,231))
+        for colonne in range(n):
+            for ligne in range(n):
+                if (ligne + colonne) > 9 :
+                    grid[ligne,colonne].set_colors(0,0,0)
+        grid.show()
+        ```
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
