@@ -3,7 +3,7 @@
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
-        Définissez une fonction `maxi(n1,n2)` qui renvoie le plus grand élément entre `n1` et `n2`.
+        Définissez une fonction `maxi(n1, n2)` qui renvoie le plus grand élément entre `n1` et `n2`.
 
     === "Tester sa fonction"
         Vous pouvez utiliser la fonction de tests ci-dessous :
@@ -16,7 +16,7 @@
         ```
 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         def maxi(n1, n2):
@@ -27,6 +27,40 @@
         ```
         "
         ) }}
+
+
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        Définissez une fonction `nb_voyelles(mot)` qui renvoie le nombre de voyelles de `mot`.
+
+    === "Tester sa fonction"
+        Vous pouvez utiliser la fonction de tests ci-dessous :
+        ```python linenums='1'
+        def test_nb_voyelles():
+            assert nb_voyelles("bonjour") == 3
+            assert nb_voyelles("fdjgdhk") == 0
+            assert nb_voyelles("au") == 2
+            print("tests ok")
+        ```
+
+    === "Correction"
+        {{ correction(False,
+        "
+        ```python linenums='1'
+        def nb_voyelles(mot):
+            voyelles = 'aeiouy'
+            nb = 0
+            for lettre in mot:
+                if lettre in voyelles:
+                    nb += 1
+            return nb
+        ```
+        "
+        ) }}
+
+
+
+
 
 
 !!! example "{{ exercice() }}"
@@ -53,7 +87,7 @@
 
 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         def decale(lettre):
@@ -84,7 +118,7 @@
 
 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         def decale(lettre, n):
@@ -104,7 +138,7 @@
         Utilisez la fonction précédente pour créer la fonction `decale_phrase(p, n)` qui décale toutes les lettres d'une phrase `p` de `n` rangs.
 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         def decale_phrase(p, n):
@@ -127,7 +161,7 @@
         Décodez la phrase `RT BTHHPVT CT RDCIXTCI GXTC S XCITGTHHPCI`.
 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         def decale(lettre, n):

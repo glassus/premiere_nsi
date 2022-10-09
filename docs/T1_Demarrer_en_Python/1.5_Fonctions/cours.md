@@ -296,35 +296,52 @@ Quelles sont les règles régissant ces espaces de noms ? Les frontières entre 
     _(toute la vérité, rien que la vérité)_
 
     Pour certains types de variables (listes, dictionnaires...), la modification d'une variable globale à l'intérieur du corps d'une fonction est en fait possible (contrairement à ce qu'énonce la règle 3). Mais cela reste très fortement déconseillé.
+
+    Pour les autres types de variables,  on peut même *forcer* pour avoir cette possibilité en utilisant le mot ```global``` à l'intérieur de la fonction. 
     
-    Une fonction ne **doit** (c'est un ordre, mais vous pouvez choisir de l'ignorer, tout comme vous pouvez choisir de passer au feu rouge) modifier que les variables qu'elle crée (ses variables locales) ou bien les variables qu'on lui a données en paramètre. 
+    Mais il faut essayer d'éviter ceci. Une fonction ne **doit** (c'est un ordre, mais vous pouvez choisir de l'ignorer, tout comme vous pouvez choisir de passer au feu rouge) modifier que les variables qu'elle crée (ses variables locales) ou bien les variables qu'on lui a données en paramètre. 
 
     Une fonction qui ne respecte pas cette règle présente des _effets de bord_ : on peut peut-être arriver à les gérer sur un «petit» code, mais cela devient illusoire sur un code utilisant de multiples fonctions. 
 
     ![](data/global_meme.jpg){: .center  width=40%} .
 
 
-    En résumé :
+    **En résumé**
 
+    Ne pas faire cela :
     ```python linenums='1'
     # PAS BIEN
     score = 0
     def ramasse_objet(objet):
+        global score
         if objet == "champignon":
             score += 20
         if objet == "banane":
             score -= 300
+    ```
+    ```python
+    >>> ramasse_objet("champignon")
+    >>> score
+    20
+    ```
 
+    Faire plutôt ceci :
+
+    ```python linenums='1'
     # BIEN
-    # -------- Attention le code ci-dessous est faux, il sera bientôt enlevé ------------------- 
     score = 0
     def ramasse_objet(objet, score):  # ma fonction veut modifier score ? 
         if objet == "champignon":     # -> ok, je mets score dans ses paramètres
             score += 20
         if objet == "banane":
             score -= 300
+        return score # je renvoie le nouveau score
     ```
-
+    ```python
+    >>> score = ramasse_objet("champignon", score)
+    >>> score
+    20
+    ```
 ## 6. Documenter une fonction
 
 ![image](data/documentation.jpeg){: .center width=40%}
