@@ -3285,42 +3285,53 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
 <p class="admonition-title">À propos de la règle n°3</p>
 <p><em>(toute la vérité, rien que la vérité)</em></p>
 <p>Pour certains types de variables (listes, dictionnaires...), la modification d'une variable globale à l'intérieur du corps d'une fonction est en fait possible (contrairement à ce qu'énonce la règle 3). Mais cela reste très fortement déconseillé.</p>
-<p>Une fonction ne <strong>doit</strong> (c'est un ordre, mais vous pouvez choisir de l'ignorer, tout comme vous pouvez choisir de passer au feu rouge) modifier que les variables qu'elle crée (ses variables locales) ou bien les variables qu'on lui a données en paramètre. </p>
+<p>Pour les autres types de variables,  on peut même <em>forcer</em> pour avoir cette possibilité en utilisant le mot <code>global</code> à l'intérieur de la fonction. </p>
+<p>Mais il faut essayer d'éviter ceci. Une fonction ne <strong>doit</strong> (c'est un ordre, mais vous pouvez choisir de l'ignorer, tout comme vous pouvez choisir de passer au feu rouge) modifier que les variables qu'elle crée (ses variables locales) ou bien les variables qu'on lui a données en paramètre. </p>
 <p>Une fonction qui ne respecte pas cette règle présente des <em>effets de bord</em> : on peut peut-être arriver à les gérer sur un «petit» code, mais cela devient illusoire sur un code utilisant de multiples fonctions. </p>
 <p><img alt="" class="center" src="../data/global_meme.jpg" width="40%" /> .</p>
-<p>En résumé :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># PAS BIEN</span>
+<p><strong>En résumé</strong></p>
+<p>Ne pas faire cela :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># PAS BIEN</span>
 <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">def</span> <span class="nf">ramasse_objet</span><span class="p">(</span><span class="n">objet</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">score</span>
     <span class="k">if</span> <span class="n">objet</span> <span class="o">==</span> <span class="s2">&quot;champignon&quot;</span><span class="p">:</span>
         <span class="n">score</span> <span class="o">+=</span> <span class="mi">20</span>
     <span class="k">if</span> <span class="n">objet</span> <span class="o">==</span> <span class="s2">&quot;banane&quot;</span><span class="p">:</span>
         <span class="n">score</span> <span class="o">-=</span> <span class="mi">300</span>
-
-<span class="c1"># BIEN</span>
-<span class="c1"># -------- Attention le code ci-dessous est faux, il sera bientôt enlevé ------------------- </span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">ramasse_objet</span><span class="p">(</span><span class="s2">&quot;champignon&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">score</span>
+<span class="mi">20</span>
+</code></pre></div></p>
+<p>Faire plutôt ceci :</p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># BIEN</span>
 <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">def</span> <span class="nf">ramasse_objet</span><span class="p">(</span><span class="n">objet</span><span class="p">,</span> <span class="n">score</span><span class="p">):</span>  <span class="c1"># ma fonction veut modifier score ? </span>
     <span class="k">if</span> <span class="n">objet</span> <span class="o">==</span> <span class="s2">&quot;champignon&quot;</span><span class="p">:</span>     <span class="c1"># -&gt; ok, je mets score dans ses paramètres</span>
         <span class="n">score</span> <span class="o">+=</span> <span class="mi">20</span>
     <span class="k">if</span> <span class="n">objet</span> <span class="o">==</span> <span class="s2">&quot;banane&quot;</span><span class="p">:</span>
         <span class="n">score</span> <span class="o">-=</span> <span class="mi">300</span>
+    <span class="k">return</span> <span class="n">score</span> <span class="c1"># je renvoie le nouveau score</span>
 </code></pre></div></td></tr></table></div>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">score</span> <span class="o">=</span> <span class="n">ramasse_objet</span><span class="p">(</span><span class="s2">&quot;champignon&quot;</span><span class="p">,</span> <span class="n">score</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">score</span>
+<span class="mi">20</span>
+</code></pre></div></p>
 </div>
 <h2 id="6-documenter-une-fonction">6. Documenter une fonction<a class="headerlink" href="#6-documenter-une-fonction" title="Permanent link">⚓︎</a></h2>
 <p><img alt="image" class="center" src="../data/documentation.jpeg" width="40%" /></p>
@@ -3467,7 +3478,7 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">30 novembre 2021</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">9 octobre 2022</span>
       
     
   </small>
