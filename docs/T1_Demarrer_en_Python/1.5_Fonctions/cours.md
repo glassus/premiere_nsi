@@ -71,7 +71,7 @@ Une fonction peut avoir de multiples paramètres :
 
 !!! note "Exemple fondateur n°2 :heart:"
     ```python linenums='1'
-    def repete(mot, k) :
+    def repete(mot, k):
         for i in range(k):
             print(mot)
     ```
