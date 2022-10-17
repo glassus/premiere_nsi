@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://glassus.github.io/premiere_nsi/T1_Demarrer_en_Python/1.5_Fonctions/exercices/">
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
     
     
       
@@ -3015,30 +3015,7 @@
 <li>Écrire une fonction <code>syracuse(n)</code> qui affiche tous les termes de la suite de Syracuse jusqu'à (on l'espère !) 1.  </li>
 </ol>
 </div>
-<div class="tabbed-block">
-<p>1.
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">suivant</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">n</span> <span class="o">//</span> <span class="mi">2</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">3</span><span class="o">*</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
-</code></pre></div></td></tr></table></div>
-2.
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">syracuse</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-    <span class="k">while</span> <span class="n">n</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="n">n</span> <span class="o">=</span> <span class="n">suivant</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div></p>
-</div>
+<div class="tabbed-block"></div>
 </div>
 </div>
 </div>
@@ -3053,36 +3030,7 @@
 <li>Modifier cette fonction pour afficher aussi le nombre de départ donnant ce plus grand temps de vol.</li>
 </ol>
 </div>
-<div class="tabbed-block">
-<p>1.
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">temps_de_vol</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="n">compteur</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">while</span> <span class="n">n</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="n">compteur</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="n">n</span> <span class="o">=</span> <span class="n">suivant</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">compteur</span>
-</code></pre></div></td></tr></table></div>
-2.
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">temps_max</span><span class="p">(</span><span class="n">nmax</span><span class="p">):</span>
-    <span class="n">maximum</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">nmax</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
-        <span class="n">duree</span> <span class="o">=</span> <span class="n">temps_de_vol</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">duree</span> <span class="o">&gt;</span> <span class="n">maximum</span><span class="p">:</span>
-            <span class="n">maximum</span> <span class="o">=</span> <span class="n">duree</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;le plus grand temps de vol vaut :&#39;</span><span class="p">,</span> <span class="n">maximum</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div></p>
-</div>
+<div class="tabbed-block"></div>
 </div>
 </div>
 </div>
@@ -3092,7 +3040,7 @@
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">11 octobre 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">17 octobre 2022</span>
       
     
   </small>
