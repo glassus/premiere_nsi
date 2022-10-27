@@ -138,7 +138,7 @@
         Utilisez la fonction précédente pour créer la fonction `decale_phrase(p, n)` qui décale toutes les lettres d'une phrase `p` de `n` rangs.
 
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python linenums='1'
         def decale_phrase(p, n):
@@ -161,7 +161,7 @@
         Décodez la phrase `RT BTHHPVT CT RDCIXTCI GXTC S XCITGTHHPCI`.
 
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python linenums='1'
         def decale(lettre, n):
@@ -223,7 +223,7 @@
         2. Écrire une fonction ```syracuse(n)``` qui affiche tous les termes de la suite de Syracuse jusqu'à (on l'espère !) 1.  
 
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         1.
         ```python linenums='1'
@@ -251,7 +251,7 @@
         3. Modifier cette fonction pour afficher aussi le nombre de départ donnant ce plus grand temps de vol.
 
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         1.
         ```python linenums='1'
