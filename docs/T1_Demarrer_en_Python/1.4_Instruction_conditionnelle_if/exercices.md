@@ -81,7 +81,7 @@
         Écrire un code qui joue au FizzBuzz jusqu'à 50.
 
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python linenums='1'
         for k in range(1,20):
@@ -110,10 +110,10 @@
         *Explication : la Terre faisant le tour du Soleil en [un peu plus que 365 jours](https://fr.vikidia.org/wiki/R%C3%A9volution_de_la_Terre_autour_du_Soleil), on s'est dit qu'on allait rajouter un jour tous les 4 ans, mais c'était trop, alors on a enlevé un jour tous les 100 ans, mais c'était plus assez, alors on a rajouté un jour tous les 400 ans, ce qui donne une approximation convenable.*
 
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         """
         ```python linenums='1'
-        annee = 2021
+        annee = 2022
 
         if annee % 400 == 0:
             print(annee, \"est bissextile\")
