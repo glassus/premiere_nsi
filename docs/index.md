@@ -4,11 +4,12 @@
   
 
 ## Thème(s) en cours d'étude 
-- [Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/cours)
+:arrow_right: [Listes](./T2_Representation_des_donnees/2.1_Listes/cours/)
 
 
 
 !!! note "*Anciens thèmes traités*"
+    - [Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/cours)
     - [Boucle ```#!python while```](./T1_Demarrer_en_Python/1.3_Boucle_while/cours/)
     -  [Instruction conditionnelle ```#!python if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/cours/)
     - [Boucle ```#!python for ... in ...``` ](T1_Demarrer_en_Python/1.2_Boucle_for/cours/)

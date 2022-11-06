@@ -421,8 +421,8 @@ L'instruction `del`  (qui n'est pas une fonction) permet de supprimer un éléme
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
-        [Exercice 01.1](https://glassus.github.io/terminale_nsi/T6_6_Epreuve_pratique/cours/#exercice-011) de la BNS.
-    === "Correction"
+        [Exercice](https://glassus.github.io/terminale_nsi/T6_6_Epreuve_pratique/BNS_2022/#exercice-361) de la BNS.
+    
         
 
 
@@ -474,7 +474,7 @@ qui produira la liste ```[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 
 ## 7. Construction d'une liste *en compréhension* :star: :star: :star:
 
-C'est une grande caractéristique du langage Python (même si ce n'est pas une exclustivité) : la méthode de liste en compréhension propose une manière élégante, rapide et naturelle pour créer des listes.
+C'est une grande caractéristique du langage Python (même si ce n'est pas une exclusivité) : la méthode de liste en compréhension propose une manière élégante, rapide et naturelle pour créer des listes.
 
 ### 7.1 «en compréhension», pourquoi ?
 Cette expression vient des mathématiques. On dit qu'on définit un sous-ensemble *par compréhension* lorsqu'on part d'un ensemble plus grand dont on ne garde que les éléments vérifiant une certaine propriété.
