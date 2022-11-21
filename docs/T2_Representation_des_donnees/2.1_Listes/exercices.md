@@ -21,7 +21,28 @@
 
         print(total)
         ```
-        
+
+!!! example "{{ exercice() }}"
+
+    === "Énoncé"
+        On donne la liste ```jours``` suivante :
+        ```python
+        jours = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
+        ```  
+
+        On rappelle que la fonction ```len``` permet d'obtenir le nombre de caractères d'une chaine de caractères :
+
+        ```python
+        >>> len("test")
+        4
+        ```
+
+        1. Créer **en compréhension** une liste ```lst1``` contenant uniquement les jours comportant 5 lettres.
+        2. Créer **en compréhension** une liste ```lst2``` contenant uniquement les jours comportant la lettre ```a``` dans leur nom.
+        3. Créer une fonction ```compte_e``` qui prend en paramètre une chaine de caractères et qui renvoie le nombre de ```e``` que contient cette chaine de caractères.
+        4.  Créer **en compréhension** une liste ```lst4``` contenant uniquement les jours comportant deux fois la lettre ```e``` dans leur nom.
+
+    
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
@@ -106,41 +127,78 @@
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
-        **Advent of code 2021, day02**
+        **D'après Advent Of Code 2021, day02**
 
-        - [énoncé](https://adventofcode.com/2021/day/2)
+        ![image](data/aoc.png){: .center}
+        
 
-        - Input de test :
+        Un sous-marin peut se déplacer horizontalement (toujours vers la droite) grâce à l'instruction ```forward``` suivie d'un nombre.
 
-        ```python
+        Il peut aussi monter ou descendre, grâce aux instructions ```up``` ou ```down```, elles aussi suivies d'un nombre.
+
+        Un grand nombre d'instructions successives sont données. Le but de l'exercice est de trouver le produit final de l'abscisse du sous-marin et de sa profondeur.
+
+        Exemple :
+
+        ```
         forward 5
         down 5
         forward 8
         up 3
         down 8
         forward 2
-        ```
+        ``` 
 
-        - Exemple d'input réel :
-        [input1.txt](https://raw.githubusercontent.com/glassus/aoc2021/main/day02/input1.txt)
+        Après ces déplacements, le sous-marin se trouve à l'abscisse 15 et à la profondeur 10. La réponse à l'énigme serait donc 150.
 
-        - Aide au parsing :
+        - [énoncé orginal](https://adventofcode.com/2021/day/2){. target="_blank"}
+
+       
+        - Téléchargez le fichier [input1.txt](https://raw.githubusercontent.com/glassus/aoc2021/main/day02/input1.txt). Votre fichier ```.py``` de travail doit se situer dans le même répertoire que le fichier ```input1.txt```.
+
+        **Q1.** Nous allons récupérer toutes les données (on dit *parser les données*) dans une liste, grâce à l'instruction :
         ```python
         data_str = open('input1.txt').read().splitlines()
         ```
-        permet de récupérer dans une liste ```data_str``` toutes les lignes de l'input. Attention tous les éléments de cette liste sont des chaines de caractères (type ```String``` ).
+        Combien cette liste comporte-t-elle d'éléments ?
 
-        Pour séparer une chaine de caractères en une **liste** de plusieurs chaines de caractères, grâce à un délimiteur : la fonction ```split``` :
+        **Q2.** Afficher successivement tous les éléments de cette liste.
+
+        **Q3.**  Pour séparer une chaine de caractères en une **liste** de plusieurs chaines de caractères, nous pouvons utiliser la fonction ```split``` :
 
         ```python
-        >>> "12/02/2002".split("/")
-        ['12', '02', '2002']
+        >>> "hello world".split(" ")
+        ['hello', 'world']
         ``` 
+        Grâce à cette fonction ```split```,  affichez successivement uniquement les instructions ```forward```, ```up``` ou ```down```. 
+
+        **Q4**. Appelons ```x``` et ```y``` l'abscisse et l'ordonnée (initialisées à 0) du sous-marin. 
+        Que valent ```x``` et ```y``` à la fin des instructions ?
+
+        On rappelle que la fonction ```int``` permet de convertir une chaine de caractères en nombre :
+
+        ```python
+        >>> int('4')
+        4
+        ```   
 
 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
-        
+        ```python
+        data_str = open('input1.txt').read().splitlines()
+
+        for ligne in data_str:
+            lst = ligne.split(' ')
+            if lst[0] == 'forward':
+                x += int(lst[1])
+            elif lst[0] == 'down':
+                y += int(lst[1])
+            else:
+                y -= int(lst[1])
+
+        print(x*y)
+        ```
         "
         ) }}
