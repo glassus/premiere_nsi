@@ -42,7 +42,37 @@
         3. Créer une fonction ```compte_e``` qui prend en paramètre une chaine de caractères et qui renvoie le nombre de ```e``` que contient cette chaine de caractères.
         4.  Créer **en compréhension** une liste ```lst4``` contenant uniquement les jours comportant deux fois la lettre ```e``` dans leur nom.
 
-    
+    === "Correction"    
+        1.
+        ```python
+        lst1 = [day for day in jours if len(day) == 5]
+        ```
+        2.  
+        ```python
+        lst2 = [day for day in jours if 'a' in day]
+        ```
+
+        3. 
+        ```python linenums='1'
+        def compte_e(mot):
+            compteur = 0
+            for lettre in mot:
+            if lettre == 'e':
+                compteur += 1
+            return compteur
+        ```
+
+        4. 
+        ```python
+        lst4 = [day for day in jours if compte_e(day) == 2]
+        ```
+
+
+
+
+
+
+
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
