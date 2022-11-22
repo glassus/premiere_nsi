@@ -2892,7 +2892,7 @@ Résolvez le <strong>Pydéfi</strong> proposé à <a href="https://pydefis.calli
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  2</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>On donne la liste <code>jours</code> suivante :
@@ -2907,6 +2907,34 @@ Résolvez le <strong>Pydéfi</strong> proposé à <a href="https://pydefis.calli
 <li>Créer <strong>en compréhension</strong> une liste <code>lst2</code> contenant uniquement les jours comportant la lettre <code>a</code> dans leur nom.</li>
 <li>Créer une fonction <code>compte_e</code> qui prend en paramètre une chaine de caractères et qui renvoie le nombre de <code>e</code> que contient cette chaine de caractères.</li>
 <li>Créer <strong>en compréhension</strong> une liste <code>lst4</code> contenant uniquement les jours comportant deux fois la lettre <code>e</code> dans leur nom.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>1.
+<div class="highlight"><pre><span></span><code><span class="n">lst1</span> <span class="o">=</span> <span class="p">[</span><span class="n">day</span> <span class="k">for</span> <span class="n">day</span> <span class="ow">in</span> <span class="n">jours</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">day</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span><span class="p">]</span>
+</code></pre></div>
+2.<br />
+<div class="highlight"><pre><span></span><code><span class="n">lst2</span> <span class="o">=</span> <span class="p">[</span><span class="n">day</span> <span class="k">for</span> <span class="n">day</span> <span class="ow">in</span> <span class="n">jours</span> <span class="k">if</span> <span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="n">day</span><span class="p">]</span>
+</code></pre></div></p>
+<ol>
+<li>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">compte_e</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
+    <span class="n">compteur</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">mot</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">lettre</span> <span class="o">==</span> <span class="s1">&#39;e&#39;</span><span class="p">:</span>
+        <span class="n">compteur</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">compteur</span>
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<div class="highlight"><pre><span></span><code><span class="n">lst4</span> <span class="o">=</span> <span class="p">[</span><span class="n">day</span> <span class="k">for</span> <span class="n">day</span> <span class="ow">in</span> <span class="n">jours</span> <span class="k">if</span> <span class="n">compte_e</span><span class="p">(</span><span class="n">day</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">]</span>
+</code></pre></div>
+</li>
 </ol>
 </div>
 </div>
@@ -3092,7 +3120,7 @@ Que valent <code>x</code> et <code>y</code> à la fin des instructions ?</p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">21 novembre 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">22 novembre 2022</span>
       
     
   </small>
