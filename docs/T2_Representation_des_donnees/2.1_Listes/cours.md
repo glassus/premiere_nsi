@@ -735,7 +735,7 @@ La liste `a` est composée de 3 éléments qui sont eux-même des listes de 3 é
         Quel coup doit maintenant jouer le joueur  `'X'` pour s'assurer la victoire ?
 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python
         tab[0][2] = 'X'
@@ -773,7 +773,7 @@ La liste `a` est composée de 3 éléments qui sont eux-même des listes de 3 é
         Quelle est la somme de tous les nombres de la matrice ```m``` ?
 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         m = [[1, 9, 4], [4, 1, 8], [7, 10, 1]]
