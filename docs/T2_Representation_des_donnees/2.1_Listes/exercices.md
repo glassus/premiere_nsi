@@ -214,7 +214,7 @@
 
 
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python
         data_str = open('input1.txt').read().splitlines()

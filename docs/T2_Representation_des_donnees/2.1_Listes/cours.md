@@ -773,7 +773,7 @@ La liste `a` est composée de 3 éléments qui sont eux-même des listes de 3 é
         Quelle est la somme de tous les nombres de la matrice ```m``` ?
 
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python linenums='1'
         m = [[1, 9, 4], [4, 1, 8], [7, 10, 1]]
@@ -785,6 +785,19 @@ La liste `a` est composée de 3 éléments qui sont eux-même des listes de 3 é
 
         print(somme)
         ```
+
+        ou bien
+        ```python linenums='1'
+        m = [[1, 9, 4], [4, 1, 8], [7, 10, 1]]
+
+        somme = 0
+        for i in range(3):
+            for j in range(3):
+                somme += m[i][j]
+
+        print(somme)
+        ```
+
         "
         ) }}
 
