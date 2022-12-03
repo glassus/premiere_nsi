@@ -1,8 +1,12 @@
 
-<!-- !!! abstract ":star: Actualités :star:"
-    - Bonne rentrée à toutes et à tous ! -->
-  
-
+!!! abstract "Actualités"
+    ![image](https://glassus.github.io/terminale_nsi/T7_Divers/9_AOC/data/ban.png){: .center width=40%}
+    
+    - :star: :star: :star: [Advent of code 2022](https://adventofcode.com/2022){. target="_blank"} :star: :star: :star: a démarré !
+        - vous pouvez joindre le leaderboard NSI-Mauriac avec le code 476812-30106a90.
+        - vous pouvez voir mes solutions (ou pas) sur [ce dépôt](https://github.com/glassus/aoc2022/){. target="_blank"}.
+        - quelques conseils [ici](https://glassus.github.io/terminale_nsi/T7_Divers/9_AOC/cours/){. target="_blank"}
+        - le fil [reddit](https://www.reddit.com/r/adventofcode/){. target="_blank"} consacré à Advent Of Code, avec des solutions dans une multitude de langages, et surtout des visualisations souvent impressionnantes.
 ## Thème(s) en cours d'étude 
 :arrow_right: [Listes](./T2_Representation_des_donnees/2.1_Listes/cours/)
 
