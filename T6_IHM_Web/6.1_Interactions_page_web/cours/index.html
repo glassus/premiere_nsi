@@ -2253,6 +2253,26 @@
     1. Le cas le plus simple : la même page pour tout le monde
   </a>
   
+    <nav class="md-nav" aria-label="1. Le cas le plus simple : la même page pour tout le monde">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-html-pur" class="md-nav__link">
+    1.1 html  pur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-html-css" class="md-nav__link">
+    1.2 html + css
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2266,6 +2286,26 @@
   <a href="#3-quand-la-page-est-fabriquee-a-la-demande-pour-le-client-exemple-avec-php" class="md-nav__link">
     3. Quand la page est fabriquée à la demande pour le client : exemple avec PHP
   </a>
+  
+    <nav class="md-nav" aria-label="3. Quand la page est fabriquée à la demande pour le client : exemple avec PHP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-page-statique-cote-serveur" class="md-nav__link">
+    3.1 Page statique (côté serveur) :
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-page-dynamique-cote-serveur" class="md-nav__link">
+    3.2  Page dynamique (côté serveur) :
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2910,7 +2950,7 @@
 <h1 id="61-pages-web-et-interactions">6.1 Pages web et interactions<a class="headerlink" href="#61-pages-web-et-interactions" title="Permanent link">⚓︎</a></h1>
 <p><img alt="image" class="center" src="../data/BO.png" /></p>
 <p><img alt="image" class="center" src="../data/meme.jpg" /></p>
-<h3 id="1-le-cas-le-plus-simple-la-meme-page-pour-tout-le-monde">1. Le cas le plus simple : la même page pour tout le monde<a class="headerlink" href="#1-le-cas-le-plus-simple-la-meme-page-pour-tout-le-monde" title="Permanent link">⚓︎</a></h3>
+<h2 id="1-le-cas-le-plus-simple-la-meme-page-pour-tout-le-monde">1. Le cas le plus simple : la même page pour tout le monde<a class="headerlink" href="#1-le-cas-le-plus-simple-la-meme-page-pour-tout-le-monde" title="Permanent link">⚓︎</a></h2>
 <p><img alt="" class="center" src="../data/stat.png" /></p>
 <p>Nous allons tout d'abord considérer le cas où le serveur renvoie une page unique, identique pour tous les utilisateurs. De plus, l'utilisateur ne pourra pas agir sur sa page : il n'y a aucune interactivité.</p>
 <p>Exemple de page statique côté serveur et côté utilisateur :</p>
@@ -2918,11 +2958,12 @@
 <li>cette <a href="http://glassus1.free.fr/interesting.html" target="_blank">merveille</a> de page web.</li>
 <li>plus complète, mais tout aussi statique : cette page <a href="https://fr.wikipedia.org/wiki/John_Horton_Conway" target="_blank">Wikipedia</a> consacrée à John Conway.</li>
 </ul>
-<h4 id="11-html-pur">1.1 HTML pur<a class="headerlink" href="#11-html-pur" title="Permanent link">⚓︎</a></h4>
-<p>Lorsque le client demande au serveur le contenu d'une page web, celui-ci lui renvoie, dans le cas le plus simple, une simple page html.<br />
-HTML est un langage dit « à balises ».  Ce n'est pas à proprement parler un langage de programmation, mais plutôt un langage de description de contenu. 
+<h3 id="11-html-pur">1.1 <code>html</code>  pur<a class="headerlink" href="#11-html-pur" title="Permanent link">⚓︎</a></h3>
+<p>Lorsque le client demande au serveur le contenu d'une page web, celui-ci lui renvoie, dans le cas le plus simple, une simple page <code>html</code>.<br />
+<code>html</code> est un langage dit « à balises ».  Ce n'est pas à proprement parler un langage de programmation, mais plutôt un langage de description de contenu. 
 Il a été inventé en 1992 par <a href="https://fr.wikipedia.org/wiki/Tim_Berners-Lee" target="_blank">Tim Berners-Lee</a>. La version actuellement utilisée est le <code>html5</code>.</p>
-<p><strong>Exemple de page web minimale</strong></p>
+<div class="admonition abstract">
+<p class="admonition-title">Exemple de page web minimale</p>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#39;fr&#39;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -2933,9 +2974,9 @@ Il a été inventé en 1992 par <a href="https://fr.wikipedia.org/wiki/Tim_Berne
     <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ceci est le texte introductif de ma page.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
-           <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>  Ceci est un titre de niveau 1 <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-           Mais sans rien d&#39;intéressant.
-           <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>  Ceci est un titre de niveau 2 <span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>  Ceci est un titre de niveau 1 <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+          Mais sans rien d&#39;intéressant.
+          <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>  Ceci est un titre de niveau 2 <span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
               <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
                   <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span> le début d&#39;une liste indentée <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
                   <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span> la suite ... <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
@@ -2945,6 +2986,7 @@ Il a été inventé en 1992 par <a href="https://fr.wikipedia.org/wiki/Tim_Berne
     <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
+</div>
 <p>Vous pouvez contempler <a href="https://exemplehtmlpur--g-lassus.repl.co" target="_blank">ici</a> le rendu de cette magnifique page.</p>
 <div class="admonition example">
 <p class="admonition-title">Exercice  1</p>
@@ -2956,15 +2998,16 @@ Il a été inventé en 1992 par <a href="https://fr.wikipedia.org/wiki/Tim_Berne
 <ul>
 <li>Créez un dossier contenant un fichier <code>mapage.html</code>.</li>
 <li>Créez une page contenant une image et un lien vers le site du lycée.</li>
-<li>Vous pouvez utiliser le logicile Geany, installé sur notre Debian.</li>
-<li>Vous pouvez aussi utiliser un éditeur en ligne avec rendu instantané, du type <a href="https://www.w3schools.com/tryit/">https://www.w3schools.com/tryit/</a></li>
+<li>Vous pouvez utiliser le logiciel Geany, installé sur notre Debian.</li>
+<li>Vous pouvez aussi utiliser un éditeur en ligne avec rendu instantané, du type <a href="https://www.w3schools.com/tryit/" target="_blank">https://www.w3schools.com/tryit/</a></li>
 </ul>
 </div>
-<h4 id="12-html-css">1.2 HTML + CSS<a class="headerlink" href="#12-html-css" title="Permanent link">⚓︎</a></h4>
-<p>L'acronyme CSS signifie <em>Cascading Style Sheets</em>. L'idée est de regrouper dans un seul fichier toutes les informations relatives à la mise en forme des éléments de la page html. 
+<h3 id="12-html-css">1.2 <code>html</code> + <code>css</code><a class="headerlink" href="#12-html-css" title="Permanent link">⚓︎</a></h3>
+<p>L'acronyme <code>css</code>  signifie <em>Cascading Style Sheets</em>. L'idée est de regrouper dans un seul fichier toutes les informations relatives à la mise en forme des éléments de la page html. 
 De manière très simplifiée, on peut dire que le fichier <code>html</code> s'occupe <em>du fond</em> tandis que le fichier <code>css</code> s'occupe de la <em>forme</em>.</p>
-<p>Le fichier CSS (souvent nommé <code>style.css</code>) doit être référencé au début du fichier <code>html</code> , au sein de la balise <code>&lt;head&gt;</code>.</p>
-<p><strong>Exemple minimal de couple html / css</strong> :</p>
+<p>Le fichier <code>css</code> (souvent nommé <code>style.css</code>) doit être référencé au début du fichier <code>html</code> , au sein de la balise <code>&lt;head&gt;</code>.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Exemple de couple <code>html</code> / <code>css</code> minimal</p>
 <ul>
 <li>
 <p>fichier <code>index.html</code> : 
@@ -2976,10 +3019,10 @@ De manière très simplifiée, on peut dire que le fichier <code>html</code> s'o
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;style.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span> <span class="p">/&gt;</span>
   <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-         <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
-           <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>  Ceci est un titre de niveau 1 <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-           Mais sans rien d&#39;intéressant.
-           <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>  Ceci est un titre de niveau 2 <span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>  Ceci est un titre de niveau 1 <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+          Mais sans rien d&#39;intéressant.
+          <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>  Ceci est un titre de niveau 2 <span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
         <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
@@ -2996,30 +3039,38 @@ De manière très simplifiée, on peut dire que le fichier <code>html</code> s'o
 <span class="w">  </span><span class="p">}</span><span class="w"></span>
 
 <span class="nt">h1</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<p>Vous pouvez contempler à l'adresse <a href="https://exemplehtmlcss--g-lassus.repl.co" target="_blank">https://exemplehtmlcss--g-lassus.repl.co</a> le nouveau rendu de cette encore plus magnifique page.</p>
+</div>
+<p>Vous pouvez contempler <a href="https://exemplehtmlcss--g-lassus.repl.co" target="_blank">ici</a> le nouveau rendu de cette encore plus magnifique page.</p>
 <p><strong>En savoir plus</strong> </p>
 <ul>
 <li>le cours d'OpenClassrooms : <a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3" target="_blank">https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3</a></li>
 </ul>
-<h5 id="exercice-2">Exercice 2<a class="headerlink" href="#exercice-2" title="Permanent link">⚓︎</a></h5>
+<div class="admonition note">
+<p class="admonition-title">Exercice 2</p>
 <p>Reprenez votre page de l'exercice 1 et rajoutez une feuille de style.</p>
-<h5 id="exercice-3">Exercice 3<a class="headerlink" href="#exercice-3" title="Permanent link">⚓︎</a></h5>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Exercice 3</p>
 <ul>
 <li>Allez sur le site <a href="http://sudouest.fr" target="_blank">http://sudouest.fr</a>, et affichez l'inspecteur d'élement de votre navigateur (généralement accessible en appuyant sur <code>F12</code> )</li>
 <li>Modifiez le plus possible les attributs de style de la page.</li>
 </ul>
-<h3 id="2-quand-le-client-peut-agir-sur-sa-page-exemple-avec-javascript">2. Quand le client peut agir sur sa page : exemple avec JavaScript<a class="headerlink" href="#2-quand-le-client-peut-agir-sur-sa-page-exemple-avec-javascript" title="Permanent link">⚓︎</a></h3>
+</div>
+<h2 id="2-quand-le-client-peut-agir-sur-sa-page-exemple-avec-javascript">2. Quand le client peut agir sur sa page : exemple avec JavaScript<a class="headerlink" href="#2-quand-le-client-peut-agir-sur-sa-page-exemple-avec-javascript" title="Permanent link">⚓︎</a></h2>
 <p><img alt="" class="center" src="../data/dynclient.png" /></p>
-<p>Jusqu'à présent, la page web envoyée par le serveur est :
-1. identique quel que soit le client.
-2. statique après réception sur l'ordinateur du client.</p>
+<p>Jusqu'à présent, la page web envoyée par le serveur est :</p>
+<ol>
+<li>identique quel que soit le client.</li>
+<li>statique après réception sur l'ordinateur du client.</li>
+</ol>
 <p>Le JavaScript va venir régler le problème n°2 : il est possible de fabriquer une page sur laquelle le client va pouvoir agir <strong>localement</strong>, sans avoir à redemander une nouvelle page au serveur.</p>
 <p>Inventé en 1995 par <a href="https://fr.wikipedia.org/wiki/Brendan_Eich" target="_blank">Brendan Eich</a> pour le navigateur Netscape, le langage JavaScript s'est imposé comme la norme auprès de tous les navigateurs pour apporter de l'interactivité aux pages web.</p>
-<p><strong>Exemple minimal de couple html / javascript</strong> :
-Notre fichier <code>index.html</code> fait référence, au sein d'une balise <code>&lt;script&gt;</code>, à un fichier externe <code>script.js</code> qui contiendra notre code JavaScript.   </p>
+<div class="admonition abstract">
+<p class="admonition-title">Exemple de couple <code>html</code> / <code>javascript</code> minimal</p>
+<p>Notre fichier <code>index.html</code> fait référence, au sein d'une balise <code>&lt;script&gt;</code>, à un fichier externe <code>script.js</code> qui contiendra notre code JavaScript.   </p>
 <ul>
 <li>
 <p>fichier <code>index.html</code> : 
@@ -3064,7 +3115,8 @@ Notre fichier <code>index.html</code> fait référence, au sein d'une balise <co
 </code></pre></div></p>
 </li>
 </ul>
-<p>Le résultat de cette page peut être consulté à l'adresse <a href="https://exemplejs.g-lassus.repl.co" target="_blank">https://exemplejs.g-lassus.repl.co</a>.</p>
+</div>
+<p>Le résultat de cette page peut être consulté <a href="https://exemplejs.g-lassus.repl.co" target="_blank">ici</a>.</p>
 <p><strong>Commentaires</strong></p>
 <ul>
 <li>Au sein du bouton déclaré par la balise <code>button</code>, l'attribut  <code>onclick</code> reçoit le nom d'une fonction déclarée à l'intérieur du fichier <code>script.js</code>, ici la fonction <code>choix()</code>.</li>
@@ -3076,22 +3128,24 @@ Notre fichier <code>index.html</code> fait référence, au sein d'une balise <co
 <li>le guide JavaScript de la fondation Mozilla : <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide" target="_blank">https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide</a></li>
 <li>le cours d'OpenClassrooms : <a href="https://openclassrooms.com/fr/courses/2984401-apprenez-a-coder-avec-javascript" target="_blank">https://openclassrooms.com/fr/courses/2984401-apprenez-a-coder-avec-javascript</a></li>
 </ul>
-<h5 id="exercice-4">Exercice 4<a class="headerlink" href="#exercice-4" title="Permanent link">⚓︎</a></h5>
+<div class="admonition note">
+<p class="admonition-title">Exercice 4</p>
 <ul>
-<li>Reprenez votre page créée sur repl<i></i>.it aux exercices précédents et rajoutez du JavaScript pour la rendre dynamique. Faites ce que vous voulez !</li>
+<li>Reprenez votre page créée aux exercices précédents et rajoutez du JavaScript pour la rendre dynamique. Vous êtes libres !</li>
 </ul>
-<h3 id="3-quand-la-page-est-fabriquee-a-la-demande-pour-le-client-exemple-avec-php">3. Quand la page est fabriquée à la demande pour le client : exemple avec PHP<a class="headerlink" href="#3-quand-la-page-est-fabriquee-a-la-demande-pour-le-client-exemple-avec-php" title="Permanent link">⚓︎</a></h3>
+</div>
+<h2 id="3-quand-la-page-est-fabriquee-a-la-demande-pour-le-client-exemple-avec-php">3. Quand la page est fabriquée à la demande pour le client : exemple avec PHP<a class="headerlink" href="#3-quand-la-page-est-fabriquee-a-la-demande-pour-le-client-exemple-avec-php" title="Permanent link">⚓︎</a></h2>
 <p><img alt="" class="center" src="../data/dynserveur.png" /></p>
 <p>Rappelons que toutes les pages que nous avons créées jusqu'à présent sont uniformément envoyées par le serveur au client. Aucune «préparation» de la page en amont n'a lieu sur le serveur, aucun dialogue n'a lieu avec le serveur une fois que la page a été livrée. 
 Évidemment, si le web était comme ceci, il ne serait qu'une gigantesque bibliothèque en consultation seule (ce fut le cas pendant longtemps, et ce qui n'était déjà pas si mal).</p>
 <p>Les langages serveurs, parmi lesquels PHP (présent sur environ 80% des serveurs), Python (via le framework Django), Java, Ruby, C#, permettent de rajouter de l'interactivité côté serveur.</p>
 <p><strong>Il convient de rappeler la différence fondamentale entre une page statique (côté serveur) et une page dynamique (côté serveur) :</strong></p>
-<h4 id="31-page-statique-cote-serveur">3.1 Page statique (côté serveur) :<a class="headerlink" href="#31-page-statique-cote-serveur" title="Permanent link">⚓︎</a></h4>
+<h3 id="31-page-statique-cote-serveur">3.1 Page statique (côté serveur) :<a class="headerlink" href="#31-page-statique-cote-serveur" title="Permanent link">⚓︎</a></h3>
 <p>Lors d'une requête d'un client vers un serveur, si le client demande la page <code>index.html</code>, une <strong>copie exacte</strong> du fichier <code>index.html</code> est transmise au client sur sa machine.  </p>
 <p><strong>Exemple :</strong> la page <a href="http://glassus1.free.fr/interesting.html" target="_blank">http://glassus1.free.fr/interesting.html</a> que vous avez déjà consultée se trouve <strong>telle quelle</strong> sur le serveur mis à disposition par Free pour l'hébergement des pages personnelles :</p>
 <p><img alt="" class="center" src="../data/extraitfree1.png" /></p>
 <p>Depuis votre navigateur, l'affichage du code-source (par Ctrl-U) vous donnera le fichier html tel qu'il était stocké sur le serveur.</p>
-<h4 id="32-page-dynamique-cote-serveur">3.2  Page dynamique (côté serveur) :<a class="headerlink" href="#32-page-dynamique-cote-serveur" title="Permanent link">⚓︎</a></h4>
+<h3 id="32-page-dynamique-cote-serveur">3.2  Page dynamique (côté serveur) :<a class="headerlink" href="#32-page-dynamique-cote-serveur" title="Permanent link">⚓︎</a></h3>
 <p>Lors d'une requête d'un client vers un serveur, si le client demande la page <code>test.php</code>, un code html est généré à partir  du fichier <code>test.php</code>  puis est transmise au client sur sa machine. Le fichier transmis ne contient plus de balises <code>php</code>, il ne comporte que des balises <code>html</code> classiques.  </p>
 <p><strong>Exemple :</strong> la consultation de la page <a href="http://glassus1.free.fr/test.php" target="_blank">http://glassus1.free.fr/test.php</a> va renvoyer la page suivante :</p>
 <p><img alt="" class="center" src="../data/php1.png" /></p>
@@ -3128,18 +3182,13 @@ Ce code <code>php</code> a donc généré, lors de l'appel au serveur, le code <
 </code></pre></div>
 <p>Voilà comment un serveur peut adapter la page qu'il renvoie, suivant l'utilisateur qui la demande. Nous verrons prochainement comment par des requêtes le client peut envoyer des paramètres au serveur, et comment celui-ci modifie sa réponse en conséquence.</p>
 <p><strong>En savoir plus :</strong> <a href="https://www.php.net/manual/fr/tutorial.firstpage.php" target="_blank">https://www.php.net/manual/fr/tutorial.firstpage.php</a></p>
-<h5 id="exercice-5">Exercice 5<a class="headerlink" href="#exercice-5" title="Permanent link">⚓︎</a></h5>
-<ul>
-<li>Allez sur https://repl.it/ , et créez un nouveau repl.it en choisissant PHP Web Server.</li>
-<li>Créez une page renvoyant le système d'exploitation de l'utilisateur.</li>
-</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">23 janvier 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">4 décembre 2022</span>
       
     
   </small>
