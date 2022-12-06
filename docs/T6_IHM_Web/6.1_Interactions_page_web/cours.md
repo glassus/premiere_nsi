@@ -73,7 +73,7 @@ Vous pouvez contempler [ici](https://exemplehtmlpur--g-lassus.repl.co){:target="
 L'acronyme ```css```  signifie _Cascading Style Sheets_. L'idée est de regrouper dans un seul fichier toutes les informations relatives à la mise en forme des éléments de la page html. 
 De manière très simplifiée, on peut dire que le fichier ```html``` s'occupe _du fond_ tandis que le fichier ```css``` s'occupe de la _forme_.
 
-Le fichier ```css``` (souvent nommé ```style.css```) doit être référencé au début du fichier ```html``` , au sein de la balise ```<head>```.
+Le fichier ```css``` (souvent nommé ```style.css``` et appelé **feuille de style**) doit être référencé au début du fichier ```html``` , au sein de la balise ```<head>```.
 
 
 !!! abstract "Exemple de couple ```html``` / ```css``` minimal"
