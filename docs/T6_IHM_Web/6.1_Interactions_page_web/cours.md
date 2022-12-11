@@ -282,6 +282,8 @@ Ce code ```php``` a donc généré, lors de l'appel au serveur, le code ```html`
 Nous sommes le 13-04-2020
 ```
 
+Vous pouvez tester du code PHP et la page générée par exemple sur [ce site](https://www.w3schools.com/php/phptryit.asp?filename=tryphp_compiler){. target="_blank"}.
+
 Voilà comment un serveur peut adapter la page qu'il renvoie, suivant l'utilisateur qui la demande. Nous verrons prochainement comment par des requêtes le client peut envoyer des paramètres au serveur, et comment celui-ci modifie sa réponse en conséquence.
 
 **En savoir plus :** [https://www.php.net/manual/fr/tutorial.firstpage.php](https://www.php.net/manual/fr/tutorial.firstpage.php){:target="_blank"}
