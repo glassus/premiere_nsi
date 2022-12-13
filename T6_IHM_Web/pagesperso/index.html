@@ -2207,8 +2207,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-demarrer-son-serveur" class="md-nav__link">
-    1. Démarrer son serveur
+  <a href="#1-demarrage" class="md-nav__link">
+    1. Démarrage
   </a>
   
 </li>
@@ -2920,9 +2920,17 @@
 
 
 <h1 id="pages-personnelles">Pages personnelles<a class="headerlink" href="#pages-personnelles" title="Permanent link">⚓︎</a></h1>
-<h3 id="1-demarrer-son-serveur">1. Démarrer son serveur<a class="headerlink" href="#1-demarrer-son-serveur" title="Permanent link">⚓︎</a></h3>
+<h3 id="1-demarrage">1. Démarrage<a class="headerlink" href="#1-demarrage" title="Permanent link">⚓︎</a></h3>
+<h4 id="11-serveur-demarre-ou-pas">1.1 Serveur démarré ou pas ?<a class="headerlink" href="#11-serveur-demarre-ou-pas" title="Permanent link">⚓︎</a></h4>
+<p>Dans la barre d'adresse de son navigateur, taper <code>localhost</code> ou bien <code>127.0.0.1</code>.</p>
+<p>Si aucune page n'apparaît, c'est que le serveur n'est pas démarré.</p>
+<h4 id="12-demarrer-le-serveur">1.2 Démarrer le serveur<a class="headerlink" href="#12-demarrer-le-serveur" title="Permanent link">⚓︎</a></h4>
 <p>Dans un terminal, taper</p>
 <p><code>sudo /opt/lampp/lampp start</code> </p>
+<h4 id="13-connaitre-son-adresse-ip">1.3 Connaître son adresse IP<a class="headerlink" href="#13-connaitre-son-adresse-ip" title="Permanent link">⚓︎</a></h4>
+<p>Dans un terminal,</p>
+<p><code>ip addr</code> </p>
+<p>regarder 4 lignes avant la fin, chercher une adresse IP commençant par <code>192.168.1.XXX</code>.</p>
 <h3 id="2-mettre-en-production-son-site">2. Mettre en production son site<a class="headerlink" href="#2-mettre-en-production-son-site" title="Permanent link">⚓︎</a></h3>
 <p>Dans un terminal <strong>ouvert depuis le dossier contenant ses pages</strong> :</p>
 <p><code>sudo cp mapage.html /opt/lampp/htdocs/</code></p>
