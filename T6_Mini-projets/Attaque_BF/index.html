@@ -2455,15 +2455,15 @@
     2. Utilisation du module requests
   </a>
   
-    <nav class="md-nav" aria-label="2. Utilisation du module requests">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#3-proposer-un-mot-de-passe" class="md-nav__link">
     3. Proposer un mot de passe
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="3. Proposer un mot de passe">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#31-observation-a-la-main" class="md-nav__link">
@@ -3007,6 +3007,7 @@
 <p>L'activité ci-dessous n'est pas réalisable sous Capytale, qui n'autorise pas l'utilisation du module <code>requests</code>.
 Vous devez donc la réaliser sur (par exemple) Thonny.<br />
 Si vous n'avez pas (encore) Thonny sur votre ordinateur personnel, téléchargez-le <a class="" href="https://thonny.org/" target="_blank">ici</a></p>
+<p>Par contre, les réponses aux questions posées doivent être données sur l'activité Capytale <a class="" href="https://capytale2.ac-paris.fr/web/c/7371-1140429" target="_blank">https://capytale2.ac-paris.fr/web/c/7371-1140429</a></p>
 </div>
 <p>Votre objectif est de trouver le mot de passe demandé sur la page <a class="" href="http://glassus1.free.fr/exoBF.html" target="_blank">http://glassus1.free.fr/exoBF.html</a></p>
 <p>Vous allez vous appuyer sur un leak (fuite) très célèbre de mots de passe , qui est le leak du site Rockyou. Dans la base de données de ce site, 32 millions de mots de passe étaient stockés en clair.</p>
@@ -3029,6 +3030,7 @@ Attention, ce fichier doit être impérativement situé dans le même répertoir
 <p class="admonition-title">Question 1</p>
 <p>Écrire un code qui affiche les 1000 mots de passe contenus dans <code>liste_mdp</code>.</p>
 </div>
+<p>(rappel : vous devez aller écrire vos réponses sur l'activité Capytale <a class="" href="https://capytale2.ac-paris.fr/web/c/7371-1140429" target="_blank">https://capytale2.ac-paris.fr/web/c/7371-1140429</a>)</p>
 <h2 id="2-utilisation-du-module-requests">2. Utilisation du module <code>requests</code><a class="headerlink" href="#2-utilisation-du-module-requests" title="Permanent link">⚓︎</a></h2>
 <p>Le module <code>requests</code> de Python permet de récupérer le contenu d'une page web dont on aura donné l'adresse en paramètre.</p>
 <p>Souvenez-vous par exemple de cette superbe page : <a class="" href="http://glassus1.free.fr/interesting.html" target="_blank">http://glassus1.free.fr/interesting.html</a></p>
@@ -3053,11 +3055,9 @@ Attention, ce fichier doit être impérativement situé dans le même répertoir
 <div class="highlight"><pre><span></span><code><span class="ne">ModuleNotFoundError</span><span class="p">:</span> <span class="n">No</span> <span class="n">module</span> <span class="n">named</span> <span class="s1">&#39;requests&#39;</span>
 </code></pre></div></p>
 <p>c'est que le module <code>requests</code> n'est pas installé. Dans Thonny, aller dans Outils / Gérer les paquets et installer <code>requests</code>.</p>
-<h3 id="3-proposer-un-mot-de-passe">3. Proposer un mot de passe<a class="headerlink" href="#3-proposer-un-mot-de-passe" title="Permanent link">⚓︎</a></h3>
+<h2 id="3-proposer-un-mot-de-passe">3. Proposer un mot de passe<a class="headerlink" href="#3-proposer-un-mot-de-passe" title="Permanent link">⚓︎</a></h2>
 <p>Un des 1000 mots de passe du fichier <code>extraitrockyou.txt</code> est le bon. Mais comment savoir lequel ?</p>
 <h3 id="31-observation-a-la-main">3.1 Observation «à la main»<a class="headerlink" href="#31-observation-a-la-main" title="Permanent link">⚓︎</a></h3>
-<p>Rendez-vous sur la page <a class="" href="http://glassus1.free.fr/exoBF.html" target="_blank">http://glassus1.free.fr/exoBF.html</a> et proposer le mot de passe <code>mauriac</code>.</p>
-<p>Quelle url s'affiche alors dans la barre d'adresse ?</p>
 <div class="admonition abstract">
 <p class="admonition-title">Question 3</p>
 <p>Rendez-vous sur la page <a class="" href="http://glassus1.free.fr/exoBF.html" target="_blank">http://glassus1.free.fr/exoBF.html</a> et proposer le mot de passe <code>mauriac</code>.<br />
