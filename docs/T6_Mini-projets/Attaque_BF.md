@@ -9,6 +9,8 @@
     Vous devez donc la réaliser sur (par exemple) Thonny.  
     Si vous n'avez pas (encore) Thonny sur votre ordinateur personnel, téléchargez-le [ici](https://thonny.org/){. target="_blank"}
 
+    Par contre, les réponses aux questions posées doivent être données sur l'activité Capytale [https://capytale2.ac-paris.fr/web/c/7371-1140429](https://capytale2.ac-paris.fr/web/c/7371-1140429){. target="_blank"}
+
 
 Votre objectif est de trouver le mot de passe demandé sur la page [http://glassus1.free.fr/exoBF.html](http://glassus1.free.fr/exoBF.html){. target="_blank"}
 
@@ -49,6 +51,8 @@ c'est que votre code et le fichier `extraitrockyou.txt` ne sont pas dans le mêm
     Écrire un code qui affiche les 1000 mots de passe contenus dans ```liste_mdp```.
 
 
+(rappel : vous devez aller écrire vos réponses sur l'activité Capytale [https://capytale2.ac-paris.fr/web/c/7371-1140429](https://capytale2.ac-paris.fr/web/c/7371-1140429){. target="_blank"})
+
 ## 2. Utilisation du module `requests`
 Le module `requests` de Python permet de récupérer le contenu d'une page web dont on aura donné l'adresse en paramètre.
 
@@ -78,15 +82,11 @@ ModuleNotFoundError: No module named 'requests'
 c'est que le module ```requests``` n'est pas installé. Dans Thonny, aller dans Outils / Gérer les paquets et installer ```requests```.
 
 
-### 3. Proposer un mot de passe
+## 3. Proposer un mot de passe
 
 Un des 1000 mots de passe du fichier `extraitrockyou.txt` est le bon. Mais comment savoir lequel ?
 
 ### 3.1 Observation «à la main»
-
-Rendez-vous sur la page [http://glassus1.free.fr/exoBF.html](http://glassus1.free.fr/exoBF.html){. target="_blank"} et proposer le mot de passe ```mauriac```.
-
-Quelle url s'affiche alors dans la barre d'adresse ?
 
 !!! abstract "Question 3"
     Rendez-vous sur la page [http://glassus1.free.fr/exoBF.html](http://glassus1.free.fr/exoBF.html){. target="_blank"} et proposer le mot de passe ```mauriac```.  
