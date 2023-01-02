@@ -188,7 +188,7 @@ Inventé en 1995 par [Brendan Eich](https://fr.wikipedia.org/wiki/Brendan_Eich){
     ```
 
 
-Le résultat de cette page peut être consulté [ici](https://exemplejs.g-lassus.repl.co){:target="_blank"}.
+Le résultat de cette page peut être consulté [ici](https://exemplejs.g-lassus.repl.co){:target="_blank"}. *(oui, j'ai confondu le jaune et le rose)*
 
 **Commentaires**
 
