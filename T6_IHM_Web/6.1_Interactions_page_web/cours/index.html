@@ -10,8 +10,14 @@
       
         <link rel="canonical" href="https://glassus.github.io/premiere_nsi/T6_IHM_Web/6.1_Interactions_page_web/cours/">
       
+      
+        <link rel="prev" href="../../sommaire/">
+      
+      
+        <link rel="next" href="../../6.2_Protocole_HTTP/cours/">
+      
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.0">
     
     
       
@@ -19,11 +25,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f79797b0.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
   
@@ -127,8 +132,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Mode sombre"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Mode sombre" for="__palette_2" hidden>
@@ -136,8 +139,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Mode clair"  type="radio" name="__palette" id="__palette_2">
           
@@ -2969,10 +2970,9 @@
     
                   
 
-  <a href="https://github.com/glassus/premiere_nsi/edit/master/docs/T6_IHM_Web/6.1_Interactions_page_web/cours.md" title="Editer cette page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="61-pages-web-et-interactions">6.1 Pages web et interactions<a class="headerlink" href="#61-pages-web-et-interactions" title="Permanent link">⚓︎</a></h1>
@@ -3060,15 +3060,15 @@ De manière très simplifiée, on peut dire que le fichier <code>html</code> s'o
 <p>fichier <code>style.css</code> :</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="nt">html</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">font-family</span><span class="p">:</span><span class="w">  </span><span class="kc">sans-serif</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">html</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">font-family</span><span class="p">:</span><span class="w">  </span><span class="kc">sans-serif</span><span class="p">;</span>
 <span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">lightgray</span><span class="p">;</span><span class="w"> </span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span>
 
-<span class="nt">h1</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div>
 </div>
 <p>Vous pouvez contempler <a href="https://exemplehtmlcss--g-lassus.repl.co" target="_blank">ici</a> le nouveau rendu de cette encore plus magnifique page.</p>
@@ -3136,15 +3136,15 @@ De manière très simplifiée, on peut dire que le fichier <code>html</code> s'o
 </li>
 <li>
 <p>fichier <code>script.js</code> :
-<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">choix</span><span class="p">(</span><span class="nx">color</span><span class="p">){</span><span class="w"></span>
-<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">background</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">color</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;resultat&quot;</span><span class="p">).</span><span class="nx">innerHTML</span><span class="o">=</span><span class="nx">color</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">choix</span><span class="p">(</span><span class="nx">color</span><span class="p">){</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">background</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">color</span><span class="p">;</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;resultat&quot;</span><span class="p">).</span><span class="nx">innerHTML</span><span class="o">=</span><span class="nx">color</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div></p>
 </li>
 </ul>
 </div>
-<p>Le résultat de cette page peut être consulté <a href="https://exemplejs.g-lassus.repl.co" target="_blank">ici</a>.</p>
+<p>Le résultat de cette page peut être consulté <a href="https://exemplejs.g-lassus.repl.co" target="_blank">ici</a>. <em>(oui, j'ai confondu le jaune et le rose)</em></p>
 <p><strong>Commentaires</strong></p>
 <ul>
 <li>Au sein du bouton déclaré par la balise <code>button</code>, l'attribut  <code>onclick</code> reçoit le nom d'une fonction déclarée à l'intérieur du fichier <code>script.js</code>, ici la fonction <code>choix()</code>.</li>
@@ -3194,7 +3194,7 @@ De manière très simplifiée, on peut dire que le fichier <code>html</code> s'o
 <span class="x">    </span><span class="cp">&lt;?php</span>
     <span class="nv">$date</span> <span class="o">=</span> <span class="nb">date</span><span class="p">(</span><span class="s2">&quot;d-m-Y&quot;</span><span class="p">);</span>
     <span class="k">Print</span><span class="p">(</span><span class="s2">&quot;Nous sommes le </span><span class="si">$date</span><span class="s2">&quot;</span><span class="p">);</span>
-    <span class="cp">?&gt;</span><span class="x"></span>
+    <span class="cp">?&gt;</span>
 <span class="x">    &lt;/p&gt;</span>
 <span class="x">&lt;/body&gt;</span>
 <span class="x">&lt;/html&gt;</span>
@@ -3203,7 +3203,7 @@ De manière très simplifiée, on peut dire que le fichier <code>html</code> s'o
 <div class="highlight"><pre><span></span><code><span class="x">    </span><span class="cp">&lt;?php</span>
     <span class="nv">$date</span> <span class="o">=</span> <span class="nb">date</span><span class="p">(</span><span class="s2">&quot;d-m-Y&quot;</span><span class="p">);</span>
     <span class="k">Print</span><span class="p">(</span><span class="s2">&quot;Nous sommes le </span><span class="si">$date</span><span class="s2">&quot;</span><span class="p">);</span>
-    <span class="cp">?&gt;</span><span class="x"></span>
+    <span class="cp">?&gt;</span>
 </code></pre></div>
 Ce code <code>php</code> a donc généré, lors de l'appel au serveur, le code <code>html</code> :</p>
 <div class="highlight"><pre><span></span><code>Nous sommes le 13-04-2020
@@ -3217,7 +3217,7 @@ Ce code <code>php</code> a donc généré, lors de l'appel au serveur, le code <
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">11 décembre 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2 janvier 2023</span>
       
     
   </small>
@@ -3244,42 +3244,6 @@ Ce code <code>php</code> a donc généré, lors de l'appel au serveur, le code <
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
-      
-        
-        <a href="../../sommaire/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Thème 6 : IHM sur le web" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Précédent
-              </span>
-              Thème 6 : IHM sur le web
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../../6.2_Protocole_HTTP/cours/" class="md-footer__link md-footer__link--next" aria-label="Suivant: 6.2 Protocole HTTP : étude du chargement d&#39;une page web" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Suivant
-              </span>
-              6.2 Protocole HTTP : étude du chargement d'une page web
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -3328,10 +3292,10 @@ Ce code <code>php</code> a donc généré, lors de l'appel au serveur, le code <
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       
@@ -3343,7 +3307,6 @@ Ce code <code>php</code> a donc généré, lors de l'appel au serveur, le code <
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
       
-    
     
   </body>
 </html>
