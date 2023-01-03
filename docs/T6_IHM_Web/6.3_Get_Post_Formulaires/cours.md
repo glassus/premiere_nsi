@@ -245,7 +245,7 @@ L'un de ces mots de passe est le mot de passe demandé à la page  [http://glass
 
 Lequel ?
 
-<!-- ??? note "Correction"
+??? note "Correction"
     ```python linenums='1'
     import requests
 
@@ -262,7 +262,7 @@ Lequel ?
         if page_tentative.text != page_error.text:
             print("Le mot de passe est le suivant :", mdp)
             break
-    ``` -->
+    ```
 
 
 
