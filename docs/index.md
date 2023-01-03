@@ -7,8 +7,12 @@
         - vous pouvez voir mes solutions (ou pas) sur [ce dépôt](https://github.com/glassus/aoc2022/){. target="_blank"}.
         - quelques conseils [ici](https://glassus.github.io/terminale_nsi/T7_Divers/9_AOC/cours/){. target="_blank"}
         - le fil [reddit](https://www.reddit.com/r/adventofcode/){. target="_blank"} consacré à Advent Of Code, avec des solutions dans une multitude de langages, et surtout des visualisations souvent impressionnantes. -->
+
+premiere_nsi/docs/T3_Architecture_materielle/3.3_Architecture_reseau/cours.md
         
 ## Thème(s) en cours d'étude 
+:arrow_right: [Architecture réseau](./T3_Architecture_materielle/3.3_Architecture_reseau/cours/)
+
 :arrow_right: [Attaque par brute-force](./T6_Mini-projets/Attaque_BF/)
 
 :arrow_right: [Protocole ```http``` ](./T6_IHM_Web/6.2_Protocole_HTTP/cours/)
