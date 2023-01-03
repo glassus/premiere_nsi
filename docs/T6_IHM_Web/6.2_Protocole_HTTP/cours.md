@@ -13,7 +13,7 @@ HTTP (HyperText Transfer Protocol) est le protocole qui régit la communication 
 
 
 ### Déroulé d'une requête
-Prenons pour exemple la requête d'un navigateur vers la page ```html://glassus1.free.fr/interesting.html``` 
+Prenons pour exemple la requête d'un navigateur vers la page [http://glassus1.free.fr/interesting.html](http://glassus1.free.fr/interesting.html){. target="_blank"} 
 
 - le navigateur analyse l'url : la demande concerne la page ```interesting.html```, stockée sur le serveur ```glassus1.free.fr```.  
 - une demande est préalablement effectuée auprès pour obtenir l'adresse IP du serveur ```glassus1.free.fr``` (qui est en fait un sous-domaine du serveur des pages personnelles de l'opérateur Free). Ici, l'adresse IP sera ```212.27.63.111``` (on la retrouvera dans la capture de la fenêtre d'Outils de devéloppement).
