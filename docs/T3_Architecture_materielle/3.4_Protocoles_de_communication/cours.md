@@ -279,8 +279,8 @@ Le protocole du bit alterné a longtemps été utilisé au sein de la couche 2 d
 
 
 
-[correction du DS](data/DS_routage_1NSI_corr.pdf)
-
+<!-- [correction du DS](data/DS_routage_1NSI_corr.pdf)
+ -->
 
 
 </br>
