@@ -137,10 +137,10 @@ On a donc la correspondance :
         1. Donner la valeur des octets `FF`, `3A`, `B2`.
         2. Expliquer pourquoi la couleur RGB (138,255,51) a pour code html `#8AFF33`.
         3. Quelle est la couleur `html` du blanc ?
-    === "Correction"
+<!--     === "Correction"
         1. FF = 255 ; 3A = 58 ; B2 = 178
         2. 138 a pour code hexa 8A, 255 a pour code hexa 255, 51 a pour code hexa 33.
-        3. \#FFFFFF
+        3. \#FFFFFF -->
 
 ###  2.2 En python :
  
