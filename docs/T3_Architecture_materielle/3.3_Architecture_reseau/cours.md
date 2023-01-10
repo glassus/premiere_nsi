@@ -25,7 +25,7 @@ Chaque ordinateur sur le réseau dispose d'une adresse MAC, qui une valeur **uni
 Cette adresse est codée sur 48 bits, présentés sous la forme de 6 octets en hexadécimal. Exemple : ```fc:aa:14:75:45:a5```
 
 Les trois premiers octets correspondent au code du fabricant.
-Un site comme https://www.macvendorlookup.com/ vous permet de retrouver le fabricant d'une adresse MAC quelconque.
+Un site comme [https://www.macvendorlookup.com/](https://www.macvendorlookup.com/){. target="_blank"} vous permet de retrouver le fabricant d'une adresse MAC quelconque.
 
 #### 1.2. Switch, hub, quelle différence ?
 
