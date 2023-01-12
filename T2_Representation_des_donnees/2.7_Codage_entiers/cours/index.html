@@ -17,7 +17,7 @@
         <link rel="next" href="../../2.8_Codage_non-entiers/cours/">
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.4">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.6b71719e.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.9c788c91.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
@@ -3133,7 +3133,7 @@
 <p><img alt="image" class="center" src="../data/BO.png" /></p>
 <p><img alt="image" class="center" src="../data/meme.webp" width="40%" /></p>
 <div class="admonition abstract">
-<p class="admonition-title"><img alt="⚠" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26a0.svg" title=":warning:" /> Attention <img alt="⚠" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26a0.svg" title=":warning:" /></p>
+<p class="admonition-title"><img alt="⚠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/26a0.svg" title=":warning:" /> Attention <img alt="⚠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/26a0.svg" title=":warning:" /></p>
 <p>La manière dont les nombres (entiers, non-entiers, positifs, négatifs...) sont traités par un langage de programmation est <strong>spécifique</strong> à ce langage.</p>
 <p>Dans toute la suite de ce cours, pour simplifier, nous considérerons que les nombres sont codés sur <strong>1 octet</strong> seulement. Ce qui ne correspond pas à la réalité, mais permet de comprendre les notions essentielles.</p>
 </div>
@@ -3164,7 +3164,7 @@ Le nombre maximal qu'on puisse coder est <code>11111111</code>. C'est l'entier n
 </div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Python et les entiers <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Python et les entiers <img alt="❤" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764.svg" title=":heart:" /></p>
 <p>Depuis la version 3 du langage Python, il n'y a plus de taille maximale pour les entiers en Python.</p>
 <p>Ceci implique que la taille nécessaire au codage de l'entier est allouée dynamiquement par Python (avec pour seule limite celle de la mémoire disponible). </p>
 </div>
@@ -3219,10 +3219,10 @@ L'idée naturelle est de réserver 1 bit pour le signe.</p>
 <p>Comment, à partir du nombre <code>00000011</code>, aurait-on pu le trouver directement (sans raisonner de proche en proche) ?</p>
 <p>On peut remarquer qu'en inversant chaque bit du nombre de départ <code>00000011</code>, on obtient <code>11111100</code>, qui appelé le <strong>complément à 2</strong> du nombre <code>00000011</code>.</p>
 <p>Il ne reste donc plus qu'à ajouter <code>1</code> à ce nombre <code>11111100</code> pour obtenir le nombre cherché, <code>11111101</code></p>
-<p><img alt="⚠" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26a0.svg" title=":warning:" />  ce nombre <code>11111101</code> représente 253 en codage non signé. Il est donc nécessaire, lorsqu'on représente un nombre, de savoir si les nombres manipulés seront des entiers naturels (<em>non signés</em>) ou bien relatifs (<em>signés</em>).</p>
+<p><img alt="⚠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/26a0.svg" title=":warning:" />  ce nombre <code>11111101</code> représente 253 en codage non signé. Il est donc nécessaire, lorsqu'on représente un nombre, de savoir si les nombres manipulés seront des entiers naturels (<em>non signés</em>) ou bien relatifs (<em>signés</em>).</p>
 <h3 id="23-conclusion-ecriture-loppose-dun-nombre-positif">2.3 Conclusion : écriture l'opposé d'un nombre positif<a class="headerlink" href="#23-conclusion-ecriture-loppose-dun-nombre-positif" title="Permanent link">⚓︎</a></h3>
 <div class="admonition note">
-<p class="admonition-title">Écriture de l'opposé d'un nombre positif <img alt="❤" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Écriture de l'opposé d'un nombre positif <img alt="❤" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764.svg" title=":heart:" /></p>
 <ul>
 <li>On prend le complément à 2 de chaque bit du nombre de départ</li>
 <li>On ajoute 1 au nombre obtenu.</li>
