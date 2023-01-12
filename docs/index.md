@@ -6,22 +6,21 @@
         - vous pouvez joindre le leaderboard NSI-Mauriac avec le code 476812-30106a90.
         - vous pouvez voir mes solutions (ou pas) sur [ce dépôt](https://github.com/glassus/aoc2022/){. target="_blank"}.
         - quelques conseils [ici](https://glassus.github.io/terminale_nsi/T7_Divers/9_AOC/cours/){. target="_blank"}
-        - le fil [reddit](https://www.reddit.com/r/adventofcode/){. target="_blank"} consacré à Advent Of Code, avec des solutions dans une multitude de langages, et surtout des visualisations souvent impressionnantes. -->
+        - le fil [reddit](https://www.reddit.com/r/adventofcode/){. target="_blank"} consacré à Advent Of Code, avec des solutions dans une multitude de langages, et surtout des visualisations souvent impressionnantes. -->  
 
         
 ## Thème(s) en cours d'étude 
 :arrow_right: [Architecture réseau](./T3_Architecture_materielle/3.3_Architecture_reseau/cours/)
 
-:arrow_right: [Attaque par brute-force](./T6_Mini-projets/Attaque_BF/)
 
-:arrow_right: [Protocole ```http``` ](./T6_IHM_Web/6.2_Protocole_HTTP/cours/)
-
-:arrow_right: [Interactions sur une page web](./T6_IHM_Web/6.1_Interactions_page_web/cours/)
 
 
 
 
 !!! note "*Anciens thèmes traités*"
+    - [Attaque par brute-force](./T6_Mini-projets/Attaque_BF/) 
+    - [Protocole ```http``` ](./T6_IHM_Web/6.2_Protocole_HTTP/cours/)
+    - [Interactions sur une page web](./T6_IHM_Web/6.1_Interactions_page_web/cours/)
     - [Listes](./T2_Representation_des_donnees/2.1_Listes/cours/)
     - [Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/cours)
     - [Boucle ```#!python while```](./T1_Demarrer_en_Python/1.3_Boucle_while/cours/)
