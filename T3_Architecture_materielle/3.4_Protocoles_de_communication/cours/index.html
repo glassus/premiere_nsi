@@ -1573,30 +1573,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#i-modele-osi-modele-internet" class="md-nav__link">
-    I. Modèle OSI, modèle Internet
+  <a href="#1-modele-osi-modele-internet" class="md-nav__link">
+    1. Modèle OSI, modèle Internet
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ii-observation-des-trames-avec-filius" class="md-nav__link">
-    II. Observation des trames avec Filius
+  <a href="#2-observation-des-trames-avec-filius" class="md-nav__link">
+    2. Observation des trames avec Filius
   </a>
   
-    <nav class="md-nav" aria-label="II. Observation des trames avec Filius">
+    <nav class="md-nav" aria-label="2. Observation des trames avec Filius">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-ping-a-travers-un-switch" class="md-nav__link">
-    1. Ping à travers un switch
+  <a href="#21-ping-a-travers-un-switch" class="md-nav__link">
+    2.1. Ping à travers un switch
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-ping-a-travers-un-routeur" class="md-nav__link">
-    2. Ping à travers un routeur
+  <a href="#22-ping-a-travers-un-routeur" class="md-nav__link">
+    2.2. Ping à travers un routeur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-exercice" class="md-nav__link">
+    2.3. Exercice
   </a>
   
 </li>
@@ -1607,11 +1614,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iii-protocole-du-bit-alterne" class="md-nav__link">
-    III. Protocole du bit alterné
+  <a href="#3-protocole-du-bit-alterne" class="md-nav__link">
+    3. Protocole du bit alterné
   </a>
   
-    <nav class="md-nav" aria-label="III. Protocole du bit alterné">
+    <nav class="md-nav" aria-label="3. Protocole du bit alterné">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3152,7 +3159,7 @@
 
 <h1 id="34-protocoles-de-communication-dans-un-reseau">3.4 Protocoles de communication dans un réseau<a class="headerlink" href="#34-protocoles-de-communication-dans-un-reseau" title="Permanent link">⚓︎</a></h1>
 <p><img alt="image" class="center" src="../data/BO.png" /></p>
-<h2 id="i-modele-osi-modele-internet">I. Modèle OSI, modèle Internet<a class="headerlink" href="#i-modele-osi-modele-internet" title="Permanent link">⚓︎</a></h2>
+<h2 id="1-modele-osi-modele-internet">1. Modèle OSI, modèle Internet<a class="headerlink" href="#1-modele-osi-modele-internet" title="Permanent link">⚓︎</a></h2>
 <p>Les bits transmis d'un ordinateur à un autre contiennent, en plus des données <em>utiles</em> (le mot «bonjour» dans un email), une multitude de données (tout aussi utiles) qui vont aider à l'acheminement de ces bits au bon endroit, puis au bon ordinateur, puis au bon logiciel. 
 Les différents protocoles qui régissent cette transmission sont regroupés dans ce qui est appelé un <strong>modèle</strong>. Deux modèles synthétisent ces protocoles :</p>
 <ul>
@@ -3200,8 +3207,8 @@ C'est la couche où le message est transmis physiquement d'un point à un autre.
 </ul>
 <p>Lors de son parcours, une trame peut être partiellement décapsulée et remonter à la couche 3, avant de redescendre et de continuer son chemin. C'est le cas notamment lors du passage dans un routeur. Mais jamais, lors de son acheminement, le contenu réel du message n'est ouvert : les paquets transmis sont acheminés de manière identique, qu'ils contiennent les éléments constitutifs d'une vidéo YouTube ou d'un email à votre cousin.  </p>
 <p>Ce principe fondateur, actuellement menacé par certains acteurs politiques et industriels, est connu sous l'expression <strong>«la neutralité du net»</strong>.</p>
-<h2 id="ii-observation-des-trames-avec-filius">II. Observation des trames avec Filius<a class="headerlink" href="#ii-observation-des-trames-avec-filius" title="Permanent link">⚓︎</a></h2>
-<h3 id="1-ping-a-travers-un-switch">1. Ping à travers un switch<a class="headerlink" href="#1-ping-a-travers-un-switch" title="Permanent link">⚓︎</a></h3>
+<h2 id="2-observation-des-trames-avec-filius">2. Observation des trames avec Filius<a class="headerlink" href="#2-observation-des-trames-avec-filius" title="Permanent link">⚓︎</a></h2>
+<h3 id="21-ping-a-travers-un-switch">2.1. Ping à travers un switch<a class="headerlink" href="#21-ping-a-travers-un-switch" title="Permanent link">⚓︎</a></h3>
 <p>Vous pouvez télécharger le fichier <a href="../data/ping_switch.fls">ping_switch.fls</a>.</p>
 <ul>
 <li>Relions une machine <code>192.168.0.10</code> d'adresse MAC <code>BC:81:81:42:9C:31</code>  à une machine <code>192.168.0.11</code> d'adresse MAC <code>2A:AB:AC:27:D6:A7</code> à travers un switch.  </li>
@@ -3241,7 +3248,7 @@ C'est la couche où le message est transmis physiquement d'un point à un autre.
 <p><strong>Message 4 : le pong est retourné</strong></p>
 <p><img alt="" class="center" src="../data/K10.png" /> </p>
 <p><img alt="" class="center" src="../data/trame2.png" /> </p>
-<h3 id="2-ping-a-travers-un-routeur">2. Ping à travers un routeur<a class="headerlink" href="#2-ping-a-travers-un-routeur" title="Permanent link">⚓︎</a></h3>
+<h3 id="22-ping-a-travers-un-routeur">2.2. Ping à travers un routeur<a class="headerlink" href="#22-ping-a-travers-un-routeur" title="Permanent link">⚓︎</a></h3>
 <p>Vous pouvez télécharger le fichier <a href="../data/ping_routeur.fls">ping_routeur.fls</a>.</p>
 <p><img alt="" class="center" src="../data/schema_routeur.png" /> </p>
 <p>L'objectif est d'observer les différentes trames lors d'un ping entre :</p>
@@ -3293,7 +3300,46 @@ Pour éviter que la réponse du serveur web que vous avez interrogé ne soit aff
 <p>On peut observer dans Filius cette trame, en se positionnant sur l'interface <code>192.168.1.254</code> du routeur, ou sur <code>192.168.1.1</code> :</p>
 <p><img alt="" class="center" src="../data/K12.png" /> </p>
 <p>En suivant le même principe, la machine <code>192.168.1.1</code> pourra envoyer son <em>pong</em>.</p>
-<h2 id="iii-protocole-du-bit-alterne">III. Protocole du bit alterné<a class="headerlink" href="#iii-protocole-du-bit-alterne" title="Permanent link">⚓︎</a></h2>
+<h3 id="23-exercice">2.3. Exercice<a class="headerlink" href="#23-exercice" title="Permanent link">⚓︎</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Exercice de bac</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Parties 2 et 3 de l'exercice 2 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Nouvelle-Caledonie_J1.pdf" target="_blank">Nouvelle-Calédonie J1 2022</a>.</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Partie 2</strong></p>
+<details class="tip">
+<summary>Correction Q1.</summary>
+<p>Le réseau services a pour adresse IP <code>195.168.254.0</code>.</p>
+</details>
+<details class="tip">
+<summary>Correction Q2.</summary>
+<p>Le réseau services a pour adresse <code>195.168.254.0</code>. Comme le masque de sous-réseau utilisé est <code>255.255.255.0</code>, 254 adresses sont initialement disponibles (<code>195.168.254.1</code>  à <code>195.168.254.254</code>, puisque l'adresse <code>195.168.254.255</code> est réservée pour le <em>broadcast</em> sur le réseau). Comme deux adresses sont déjà prises par le routeur 1 et le routeur 2, il en reste 252.</p>
+</details>
+<details class="tip">
+<summary>Correction Q3.</summary>
+<p>Le serveur web accède à internet via le routeur 2, dont l'adresse sur le réseau services est <code>192.168.254.2</code>. C'est donc cette adresse qui joue est l'adresse de passerelle pour le serveur web.</p>
+</details>
+<p><strong>Partie 3</strong></p>
+<details class="tip">
+<summary>Correction Q1.</summary>
+<p>La ligne 2 montre que l'adresse MAC du serveur DNS est <code>8A:FD:54:49:D0:CC</code>. </p>
+</details>
+<details class="tip">
+<summary>Correction Q2.</summary>
+<p>La couche Transport montre que le protocole utilisé est le protocole UDP.</p>
+</details>
+<details class="tip">
+<summary>Correction Q3.</summary>
+<p>Le commentaire de la couche Application indique que l'adresse IP du serveur web est <code>192.168.254.201</code>. </p>
+</details>
+</div>
+</div>
+</div>
+</div>
+<h2 id="3-protocole-du-bit-alterne">3. Protocole du bit alterné<a class="headerlink" href="#3-protocole-du-bit-alterne" title="Permanent link">⚓︎</a></h2>
 <p>Ce protocole est un exemple simple de fiabilisation du transfert de données. </p>
 <h3 id="1-contexte">1. Contexte<a class="headerlink" href="#1-contexte" title="Permanent link">⚓︎</a></h3>
 <ul>
