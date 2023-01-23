@@ -2,7 +2,7 @@
 
 ![image](data/BO.png){: .center}
 
-## I. Modèle OSI, modèle Internet
+## 1. Modèle OSI, modèle Internet
 
 
 
@@ -63,9 +63,9 @@ Ce principe fondateur, actuellement menacé par certains acteurs politiques et i
 
 
 
-## II. Observation des trames avec Filius
+## 2. Observation des trames avec Filius
 
-### 1. Ping à travers un switch
+### 2.1. Ping à travers un switch
 Vous pouvez télécharger le fichier [ping_switch.fls](data/ping_switch.fls).
 
 - Relions une machine ```192.168.0.10``` d'adresse MAC ```BC:81:81:42:9C:31```  à une machine ```192.168.0.11``` d'adresse MAC ```2A:AB:AC:27:D6:A7``` à travers un switch.  
@@ -133,7 +133,7 @@ Schématisons cette trame Ethernet (couche 2 du modèle OSI) :
 
 
 
-### 2. Ping à travers un routeur
+### 2.2. Ping à travers un routeur
 
 Vous pouvez télécharger le fichier [ping_routeur.fls](data/ping_routeur.fls).
 
@@ -205,10 +205,36 @@ On peut observer dans Filius cette trame, en se positionnant sur l'interface ```
 En suivant le même principe, la machine ```192.168.1.1 ``` pourra envoyer son _pong_.
 
 
+### 2.3. Exercice
+
+!!! note "Exercice de bac"
+    === "Énoncé"
+        Parties 2 et 3 de l'exercice 2 du sujet [Nouvelle-Calédonie J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Nouvelle-Caledonie_J1.pdf){. target="_blank"}.
+    
+    === "Correction"
+        **Partie 2**
+        ??? tip "Correction Q1."
+            Le réseau services a pour adresse IP ```195.168.254.0```.
+
+        ??? tip "Correction Q2."
+            Le réseau services a pour adresse ```195.168.254.0```. Comme le masque de sous-réseau utilisé est ```255.255.255.0```, 254 adresses sont initialement disponibles (```195.168.254.1```  à ```195.168.254.254```, puisque l'adresse ```195.168.254.255``` est réservée pour le *broadcast* sur le réseau). Comme deux adresses sont déjà prises par le routeur 1 et le routeur 2, il en reste 252.
+
+        ??? tip "Correction Q3."
+            Le serveur web accède à internet via le routeur 2, dont l'adresse sur le réseau services est ```192.168.254.2```. C'est donc cette adresse qui joue est l'adresse de passerelle pour le serveur web.
+
+        **Partie 3**
+        ??? tip "Correction Q1."
+            La ligne 2 montre que l'adresse MAC du serveur DNS est ```8A:FD:54:49:D0:CC```. 
+
+        ??? tip "Correction Q2."
+            La couche Transport montre que le protocole utilisé est le protocole UDP.
+
+        ??? tip "Correction Q3."
+            Le commentaire de la couche Application indique que l'adresse IP du serveur web est ```192.168.254.201```. 
 
 
 
-## III. Protocole du bit alterné
+## 3. Protocole du bit alterné
 
 Ce protocole est un exemple simple de fiabilisation du transfert de données. 
 
