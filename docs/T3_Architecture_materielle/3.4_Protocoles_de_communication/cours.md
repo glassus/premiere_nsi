@@ -22,6 +22,11 @@ Lors de son émission, un message va subir successivement toutes les transformat
 
 Lorsque ce même message sera réceptionné, les transformations seront effectuées dans l'ordre inverse, jusqu'à la présentation du message au destinataire.
 
+
+
+[![image](data/memeOSI.jpeg){: .center width=5%}](data/memeOSI.jpeg){. target="_blank"}
+
+
 - **couches 7-6-5  — couches application-présentation-session :** 
 Ces couches (réunies dans le modèle Internet en une couche unique «application» ) regroupent les protocoles nécessaires à la bonne mise en forme d'un message (au sens large) avant sa transmission. Ces protocoles peuvent être de nature très différente : protocole HTTP pour la transmisson de pages web, protocole FTP pour le transfert de fichiers, protocoles POP ou IMAP pour le courrier électronique...
 </br>
@@ -50,6 +55,10 @@ C'est la couche où le message est transmis physiquement d'un point à un autre.
 
 
 Lors de son parcours, une trame peut être partiellement décapsulée et remonter à la couche 3, avant de redescendre et de continuer son chemin. C'est le cas notamment lors du passage dans un routeur. Mais jamais, lors de son acheminement, le contenu réel du message n'est ouvert : les paquets transmis sont acheminés de manière identique, qu'ils contiennent les éléments constitutifs d'une vidéo YouTube ou d'un email à votre cousin.  
+
+
+
+
 Ce principe fondateur, actuellement menacé par certains acteurs politiques et industriels, est connu sous l'expression **«la neutralité du net»**.
 
 
@@ -194,6 +203,9 @@ On peut observer dans Filius cette trame, en se positionnant sur l'interface ```
 
 
 En suivant le même principe, la machine ```192.168.1.1 ``` pourra envoyer son _pong_.
+
+
+
 
 
 ## III. Protocole du bit alterné
