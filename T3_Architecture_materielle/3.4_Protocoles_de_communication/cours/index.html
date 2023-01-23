@@ -17,7 +17,7 @@
         <link rel="next" href="../../3.5_Decouverte_des_commandes_Linux/cours/">
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.5">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
     
     
       
@@ -3164,6 +3164,7 @@ Dans la suite de ce cours, nous évoquerons les couches par leur numéro dans le
 <p><img alt="" class="center" src="../data/OSI.png" /></p>
 <p>Lors de son émission, un message va subir successivement toutes les transformations effectuées par chaque couche, depuis sa création (couche 7) jusqu'à sa transmission physique (couche 1).  </p>
 <p>Lorsque ce même message sera réceptionné, les transformations seront effectuées dans l'ordre inverse, jusqu'à la présentation du message au destinataire.</p>
+<p><a class="" href="../data/memeOSI.jpeg" target="_blank"><img alt="image" class="center" src="../data/memeOSI.jpeg" width="5%" /></a></p>
 <ul>
 <li>
 <p><strong>couches 7-6-5  — couches application-présentation-session :</strong> 
@@ -3197,8 +3198,8 @@ Les éléments échangés avec la couche inférieure sont des <strong>trames</st
 C'est la couche où le message est transmis physiquement d'un point à un autre. Par signal lumineux (fibre optique), par ondes (wifi), par courant électrique (Ethernet)... Les éléments transmis sont les <strong>bits</strong>. </p>
 </li>
 </ul>
-<p>Lors de son parcours, une trame peut être partiellement décapsulée et remonter à la couche 3, avant de redescendre et de continuer son chemin. C'est le cas notamment lors du passage dans un routeur. Mais jamais, lors de son acheminement, le contenu réel du message n'est ouvert : les paquets transmis sont acheminés de manière identique, qu'ils contiennent les éléments constitutifs d'une vidéo YouTube ou d'un email à votre cousin.<br />
-Ce principe fondateur, actuellement menacé par certains acteurs politiques et industriels, est connu sous l'expression <strong>«la neutralité du net»</strong>.</p>
+<p>Lors de son parcours, une trame peut être partiellement décapsulée et remonter à la couche 3, avant de redescendre et de continuer son chemin. C'est le cas notamment lors du passage dans un routeur. Mais jamais, lors de son acheminement, le contenu réel du message n'est ouvert : les paquets transmis sont acheminés de manière identique, qu'ils contiennent les éléments constitutifs d'une vidéo YouTube ou d'un email à votre cousin.  </p>
+<p>Ce principe fondateur, actuellement menacé par certains acteurs politiques et industriels, est connu sous l'expression <strong>«la neutralité du net»</strong>.</p>
 <h2 id="ii-observation-des-trames-avec-filius">II. Observation des trames avec Filius<a class="headerlink" href="#ii-observation-des-trames-avec-filius" title="Permanent link">⚓︎</a></h2>
 <h3 id="1-ping-a-travers-un-switch">1. Ping à travers un switch<a class="headerlink" href="#1-ping-a-travers-un-switch" title="Permanent link">⚓︎</a></h3>
 <p>Vous pouvez télécharger le fichier <a href="../data/ping_switch.fls">ping_switch.fls</a>.</p>
@@ -3353,7 +3354,7 @@ Quand Bob reçoit un FLAG, il renvoie un ACK <strong>égal au FLAG reçu</strong
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">8 janvier 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">23 janvier 2023</span>
       
     
   </small>
