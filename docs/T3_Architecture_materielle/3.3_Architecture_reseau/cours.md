@@ -4,7 +4,15 @@
 
 Ce cours a pour but de présenter la constitution classique d'un réseau, et les équipements associés. La partie relative aux protocoles utilisés lors des échanges entre deux machines est détaillée dans le cours sur les protocoles de communication.
 
-### 1. Premier réseau local
+## 0. Adresses IP
+
+Les ordinateurs s'identifient sur les réseaux à l'aide d'une adresse IP (Internet Protocol). 
+
+Nous allons manipuler des adresses IP encodées sur 4 octets : on parle d'**IPv4**. Comme nous verrons, cette norme est en train d'être progressivement remplacée par un encodage sur 6 octets (**IPv6**).
+
+Chaque 
+
+## 1. Premier réseau local
 
 > [lien](https://www.lernsoftware-filius.de/downloads/Setup/filius_1.9.0_all.deb) de téléchargement de Filius sous Linux
 
@@ -19,7 +27,7 @@ Testons le ```ping``` de la machine ```192.168.0.1```  vers la machine ```192.16
 
 
 
-#### 1.1. La carte réseau et son adresse MAC
+### 1.1. La carte réseau et son adresse MAC
 Chaque ordinateur sur le réseau dispose d'une adresse MAC, qui une valeur **unique** attribuée à sa carte réseau (Ethernet, Wifi, 4G, 5G, ...) lors de sa fabrication en usine.
 
 Cette adresse est codée sur 48 bits, présentés sous la forme de 6 octets en hexadécimal. Exemple : ```fc:aa:14:75:45:a5```
@@ -27,7 +35,7 @@ Cette adresse est codée sur 48 bits, présentés sous la forme de 6 octets en h
 Les trois premiers octets correspondent au code du fabricant.
 Un site comme [https://www.macvendorlookup.com/](https://www.macvendorlookup.com/){. target="_blank"} vous permet de retrouver le fabricant d'une adresse MAC quelconque.
 
-#### 1.2. Switch, hub, quelle différence ?
+### 1.2. Switch, hub, quelle différence ?
 
 - Au sein d'un **hub Ethernet** (de moins en moins vendus), il n'y a **aucune analyse** des données qui transitent : il s'agit simplement d'un dédoublement des fils de cuivre (tout comme une multiprise électrique). L'intégralité des messages est donc envoyée à l'intégralité des ordinateurs du réseau, même s'ils ne sont pas concernés.
 
@@ -37,7 +45,7 @@ Un site comme [https://www.macvendorlookup.com/](https://www.macvendorlookup.com
 
 ![](data/switch.png){: .center}
 
-### 2. Un deuxième sous-réseau
+## 2. Un deuxième sous-réseau
 
 Rajoutons un deuxième sous-réseau de la manière suivante (penser à bien renommer les switchs).
 
@@ -64,13 +72,13 @@ Temporairement, renommons la machine ```192.168.1.2``` en ```192.168.0.33```. Te
 
 **Intuition** : la notion de sous-réseau n'est pas *topologique* («il suffit de relier les ordinateurs entre eux») mais obéit à des règles numériques.
 
-#### 2.1. Notion de masque de sous-réseau
+### 2.1. Notion de masque de sous-réseau
 
 Dans Filius, lors de l'attribution de l'adresse IP à une machine, une ligne nous permet de spécifier le **masque de sous-réseau** (appelé simplement « Masque » dans Filius). C'est ce masque qui va permettre de déterminer si une machine appartient à un sous-réseau ou non, en fonction de son adresse IP.
 
 ![](data/f4.png){: .center}
 
-##### 2.1.1 Explication basique
+#### 2.1.1 Explication basique
 - Si le masque est ```255.255.255.0```, toutes les machines partageant les mêmes **trois** premiers nombres de leur adresse IP appartiendront au même sous-réseau. Comme ceci est le réglage par défaut de Filius, cela explique pourquoi  ```192.168.0.33``` et ```192.168.0.1``` sont sur le même sous-réseau, et pourquoi  ```192.168.1.2``` et ```192.168.0.1``` ne sont pas sur le même sous-réseau.
 
 Dans cette configuration, 256 machines peuvent donc appartenir au même sous-réseau (ce n'est pas tout à fait le cas car des adresses finissant par 0 ou par 255 sont réservées).
@@ -90,7 +98,7 @@ Dans cette configuration, 65536 machines peuvent être dans le même sous-résea
     Cela marche. Les deux machines appartiennent maintenant au même sous-réseau.
 
 
-##### 2.1.2 Explication avancée
+#### 2.1.2 Explication avancée
 
 Lorsqu'une machine A veut envoyer un message à une machine B, elle doit déterminer si cette machine :
 
@@ -120,10 +128,10 @@ rappel des règles de calcul :
 
 Conclusion : les machines A et B sont sous le même sous-réseau, mais pas la machine C.
 
-##### 2.1.3 Cohérence entre les deux explications
+#### 2.1.3 Cohérence entre les deux explications
 Lorsqu'un masque de sous-réseau est égal à ```255.255.255.0```, l'opération de conjonction ```&``` avec chaque IP ne laissera intacts que les 3 premiers octets, le dernier sera égal à 0. Donc si deux adresses s'écrivent ```A.B.C.X``` et   ```A.B.C.Y```, elles appartiendront forcément au même sous-réseau (typiquement, c'est le cas de ```192.168.0.33``` et ```192.168.0.1```).
 
-#### 2.2 Écriture des masques de sous-réseau : notation CIDR
+### 2.2 Écriture des masques de sous-réseau : notation CIDR
 
 D'après ce qui précède, 2 informations sont nécessaires pour déterminer le sous-réseau auquel appartient une machine : son IP et le masque de sous-réseau. 
 Une convention de notation permet d'écrire simplement ces deux renseignements : la notation CIDR.
@@ -136,9 +144,20 @@ De la même manière, le suffixe ```/ 16``` donnera un masque de ```11111111.111
 Ou encore, un suffixe ```/ 21``` donnera un masque de ```11111111.11111111.11111000.00000000``` , soit ```255.255.248.0```. 
 
 
+### 2.3 Adresses IP et masques : ce qu'il faut retenir
+
+!!! note ":heart: Définition :heart:"
+    - Les ordinateurs s'identifient sur les réseaux à l'aide d'une adresse IP (Internet Protocol). 
+    - Suivant la norme **IPv4**, les adresses IP sont encodées sur 4 octets : on parle d'**IPv4**.
+    - Chaque octet pouvant varier de la valeur (décimale) 0 à 255, cela signifie que les adresses IP théoriquement possibles vont de ```0.0.0.0``` à ```255.255.255.255```.
+    - Il y a donc $256^4=4 294 967 296$ adresses possibles.  On a longtemps cru que ce nombre serait suffisant. Ce n'est plus le cas, on est donc en train de passer sur des adresses à 6 octets (en hexadécimal) : voir la [norme IPv6](https://fr.wikipedia.org/wiki/Adresse_IPv6){. target="_blank"}.
 
 
-### 3. Un vrai réseau contenant deux sous-réseaux distincts : la nécessité d'un routeur
+!!! aide "Exemple"
+    ![image](data/ex_reseau.png){: .center}
+    
+
+## 3. Un vrai réseau contenant deux sous-réseaux distincts : la nécessité d'un routeur
 
 Notre solution initiale (relier les deux switchs par un cable pour unifier les deux sous-réseaux) n'est pas viable à l'échelle d'un réseau planétaire.
 
@@ -146,7 +165,7 @@ Pour que les machines de deux réseaux différents puissent être connectées, o
 
 ![](data/routeur.png){: .center}
 
-#### 3.1 Principe de fonctionnement
+### 3.1 Principe de fonctionnement
 Imaginons que la machine ```192.168.0.1 / 24``` veuille communiquer avec la machine  ```172.16.52.3 / 24```.  
 L'observation du masque de sous-réseau de la machine ```192.168.0.1 / 24``` nous apprend qu'elle ne peut communiquer qu'avec les adresses de la forme ```192.168.0.X / 24```, où ```X``` est un nombre entre 0 et 255. 
 
@@ -159,7 +178,7 @@ Les 3 étapes du **routage** :
 Dans notre exemple, l'adresse ```172.16.52.3``` n'est pas dans le sous-réseau de ```192.168.0.1```. Le message va donc transiter par le routeur.  
 ![](data/routeur2.png){: .center} 
 
-#### 3.2 Illustration avec Filius
+### 3.2 Illustration avec Filius
 
 - Rajoutons un routeur entre le SwitchA et le SwitchB.
 ![](data/f5.png){: .center}
@@ -202,9 +221,9 @@ Chez vous, la box de votre opérateur joue simultanément le rôle de switch et 
 L'image ci-dessous présente le résultat de la commande ```ipconfig``` sous Windows. On y retrouve l'adresse IP locale ```192.168.9.103```, le masque de sous-réseau ```255.255.255.0``` et l'adresse de la passerelle ```192.168.9.1```.  
 ![](data/imgpasserelle.jpg){: .center}
 
-#### 3.3 Annexe : rajout d'un serveur DNS
+### 3.3 Annexe : rajout d'un serveur DNS
 
-##### 3.3.1 Rajout d'un serveur web
+#### 3.3.1 Rajout d'un serveur web
 - Connectons un ordinateur au SwitchB, sur l'adresse ```192.168.1.30``` et installons dessus un Serveur web et démarrons-le. 
 ![](data/serveurweb.png){: .center}
 
@@ -214,7 +233,7 @@ L'image ci-dessous présente le résultat de la commande ```ipconfig``` sous Win
 Lors d'une utilisation classique d'un navigateur web, c'est une url mémorisable qui s'affiche, et non une adresse IP : on retient en effet plus facilement `https://www.google.com/` que `http://216.58.213.131`, qui renvoient pourtant à la même adresse. 
 La machine qui assure ce rôle d'annuaire entre les serveurs web et leur adresse IP s'appelle un **serveur DNS**. Pour pouvoir indexer la totalité des sites internet, son rôle est structuré de manière hiérarchique. Vous trouverez des détails [ici](https://openclassrooms.com/fr/courses/857447-apprenez-le-fonctionnement-des-reseaux-tcp-ip/857163-le-service-dns)
 
-##### 3.3.1 Rajout d'un serveur DNS
+#### 3.3.1 Rajout d'un serveur DNS
 
 - Rajoutons un serveur DNS minimal, qui n'aura dans son annuaire d'un seul site. Il faut pour cela raccorder une nouvelle machine (mais une machine déjà sur le réseau aurait très bien pu jouer ce rôle), et installer dessus un serveur DNS.  
 ![](data/dns.png){: .center} 
