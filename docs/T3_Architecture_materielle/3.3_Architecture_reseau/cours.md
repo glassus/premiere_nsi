@@ -4,13 +4,6 @@
 
 Ce cours a pour but de présenter la constitution classique d'un réseau, et les équipements associés. La partie relative aux protocoles utilisés lors des échanges entre deux machines est détaillée dans le cours sur les protocoles de communication.
 
-## 0. Adresses IP
-
-Les ordinateurs s'identifient sur les réseaux à l'aide d'une adresse IP (Internet Protocol). 
-
-Nous allons manipuler des adresses IP encodées sur 4 octets : on parle d'**IPv4**. Comme nous verrons, cette norme est en train d'être progressivement remplacée par un encodage sur 6 octets (**IPv6**).
-
-Chaque 
 
 ## 1. Premier réseau local
 
