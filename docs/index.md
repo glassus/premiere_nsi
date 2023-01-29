@@ -10,11 +10,14 @@
 
         
 ## Thème(s) en cours d'étude 
-:arrow_right: [Protocoles de communication](./T3_Architecture_materielle/3.4_Protocoles_de_communication/cours/)
+:arrow_right: [Introduction aux algorithmes de recherche](./T4_Algorithmique/4.1_Extremums_et_moyennes/intro_cours/)
 
-:arrow_right: [Architecture réseau](./T3_Architecture_materielle/3.3_Architecture_reseau/cours/)
+:arrow_right: [Extremums et moyennes](./T4_Algorithmique/4.1_Extremums_et_moyennes/cours/)
+
 
 !!! note "*Anciens thèmes traités*"
+    - [Protocoles de communication](./T3_Architecture_materielle/3.4_Protocoles_de_communication/cours/)
+    - [Architecture réseau](./T3_Architecture_materielle/3.3_Architecture_reseau/cours/)
     - [Attaque par brute-force](./T6_Mini-projets/Attaque_BF/) 
     - [Protocole ```http``` ](./T6_IHM_Web/6.2_Protocole_HTTP/cours/)
     - [Interactions sur une page web](./T6_IHM_Web/6.1_Interactions_page_web/cours/)

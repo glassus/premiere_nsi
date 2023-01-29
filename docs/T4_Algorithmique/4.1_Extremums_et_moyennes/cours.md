@@ -52,11 +52,11 @@
     def recherche_occurrence(elt, tab):
         ''' renvoie la liste (éventuellement vide)
         des indices de elt dans tab'''
-        liste_indice = []
+        liste_indices = []
         for i in range(len(tab)):
             if tab[i] == elt:
-                liste_indice.append(i)
-        return liste_indice
+                liste_indices.append(i)
+        return liste_indices
     ```
 
    
