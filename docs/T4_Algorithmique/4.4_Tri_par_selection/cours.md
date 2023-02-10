@@ -6,7 +6,11 @@
 ## 1. Animation
 Considérons la liste `[5, 4, 2, 1]`  
 Voici le fonctionnement de l'algorithme :  
-![](data/selection.gif){: .center}
+
+<center>
+<gif-player src="https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.4_Tri_par_selection/data/selection.gif" speed="1" play></gif-player>
+</center>
+
 
 ## 2. Principe
 
