@@ -3127,6 +3127,7 @@
 
 <h1 id="44-tri-par-selection">4.4 Tri par sélection<a class="headerlink" href="#44-tri-par-selection" title="Permanent link">⚓︎</a></h1>
 <p><img alt="image" class="center" src="../data/BO.png" /></p>
+<p><img alt="➡" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/27a1.svg" title=":arrow_right:" /> <a class="" href="../intro_cours/" target="_blank">Activité d'introduction</a></p>
 <h2 id="1-animation">1. Animation<a class="headerlink" href="#1-animation" title="Permanent link">⚓︎</a></h2>
 <p>Considérons la liste <code>[5, 4, 2, 1]</code><br />
 Voici le fonctionnement de l'algorithme :  </p>
@@ -3150,12 +3151,12 @@ Voici le fonctionnement de l'algorithme :  </p>
 <div class="admonition abstract">
 <p class="admonition-title">Tri par sélection <img alt="❤" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764.svg" title=":heart:" /> </p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">tri_selection</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="p">:</span>
-    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-        <span class="n">indice_min</span> <span class="o">=</span> <span class="n">k</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">))</span> <span class="p">:</span>
-            <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">lst</span><span class="p">[</span><span class="n">indice_min</span><span class="p">]:</span>
-                <span class="n">indice_min</span> <span class="o">=</span> <span class="n">i</span>
-        <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="n">indice_min</span><span class="p">]</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">indice_min</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">indice_min</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">))</span> <span class="p">:</span>
+            <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">lst</span><span class="p">[</span><span class="n">indice_min</span><span class="p">]:</span>
+                <span class="n">indice_min</span> <span class="o">=</span> <span class="n">k</span>
+        <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="n">indice_min</span><span class="p">]</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">indice_min</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
 </code></pre></div>
 </div>
 <p><em>Vérification :</em></p>
@@ -3225,7 +3226,7 @@ une propriété <span class="arithmatex">\(P(n)\)</span> est vraie si :</p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">10 février 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">12 février 2023</span>
       
     
   </small>
