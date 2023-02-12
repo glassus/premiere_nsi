@@ -2,6 +2,9 @@
 
 ![image](data/BO.png){: .center}
 
+
+:arrow_right: [Activité d'introduction](../intro_cours/){. target="_blank"}
+
 ## 1. Algorithme de recherche de maximum
 
 !!! note "Recherche de maximum :heart:"

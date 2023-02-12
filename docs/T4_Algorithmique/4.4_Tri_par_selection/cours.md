@@ -2,6 +2,8 @@
 
 ![image](data/BO.png){: .center}
 
+:arrow_right: [Activité d'introduction](../intro_cours/){. target="_blank"}
+
 
 ## 1. Animation
 Considérons la liste `[5, 4, 2, 1]`  
@@ -31,12 +33,12 @@ Voici le fonctionnement de l'algorithme :
 !!! abstract "Tri par sélection :heart: "
     ```python
     def tri_selection(lst) :
-        for k in range(len(lst)-1):
-            indice_min = k
-            for i in range(k+1, len(lst)) :
-                if lst[i] < lst[indice_min]:
-                    indice_min = i
-            lst[k], lst[indice_min] = lst[indice_min], lst[k]
+        for i in range(len(lst)-1):
+            indice_min = i
+            for k in range(i+1, len(lst)) :
+                if lst[k] < lst[indice_min]:
+                    indice_min = k
+            lst[i], lst[indice_min] = lst[indice_min], lst[i]
     ```
 
 *Vérification :*

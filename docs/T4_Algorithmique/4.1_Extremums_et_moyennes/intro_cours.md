@@ -11,14 +11,14 @@ Utilisation :
   8
 ```
 
-??? note "Code à trous, God version" 
+??? note "Code à trous :star: :star: :star: :star:" 
     !!! note "Recherche de maximum "
         ```python
         def recherche_max(tab):
             '''renvoie le maximum de la liste tab'''
         ```
 
-??? note "Code à trous, expert version " 
+??? note "Code à trous :star: :star: :star: :octicons-star-24: " 
     !!! note "Recherche de maximum "
         ```python
         def recherche_max(tab):
@@ -30,7 +30,7 @@ Utilisation :
             return ...
         ```
 
-??? note "Code à trous, standard version"
+??? note "Code à trous :star: :star: :octicons-star-24: :octicons-star-24:"
     !!! note "Recherche de maximum "
         ```python
         def recherche_max(tab):
@@ -44,7 +44,7 @@ Utilisation :
 
 
 
-??? note "Code à trous, newbie version"
+??? note "Code à trous :star: :octicons-star-24: :octicons-star-24: :octicons-star-24:"
     !!! note "Recherche de maximum "
         ```python
         def recherche_max(tab):
@@ -69,14 +69,14 @@ Utilisation :
   4.0
 ```
 
-??? note "Code à trous, God version" 
+??? note "Code à trous :star: :star: :star: :star:" 
     !!! note "Recherche de maximum "
         ```python
         def moyenne(tab):
             ''' renvoie la moyenne de tab'''
         ```
 
-??? note "Code à trous, expert version " 
+??? note "Code à trous :star: :star: :star: :octicons-star-24: " 
     !!! note "Recherche de maximum "
         ```python
         def moyenne(tab):
@@ -87,7 +87,7 @@ Utilisation :
             return ... / ...
         ```
 
-??? note "Code à trous, standard version"
+??? note "Code à trous :star: :star: :octicons-star-24: :octicons-star-24:"
     !!! note "Recherche de maximum "
         ```python
         def moyenne(tab):
@@ -99,7 +99,7 @@ Utilisation :
         ```
 
 
-??? note "Code à trous, newbie version"
+??? note "Code à trous :star: :octicons-star-24: :octicons-star-24: :octicons-star-24:"
     !!! note "Recherche de maximum "
         ```python
         def moyenne(tab):
@@ -125,7 +125,7 @@ Utilisation :
 
 ```
 
-??? note "Code à trous, God version" 
+??? note "Code à trous :star: :star: :star: :star:" 
     !!! note "Recherche d'occurrence "
         ```python
         def recherche_occurrence(elt, tab):
@@ -134,7 +134,7 @@ Utilisation :
         ```
 
 
-??? note "Code à trous, expert version" 
+??? note "Code à trous :star: :star: :star: :octicons-star-24: " 
     !!! note "Recherche d'occurrence "
         ```python
         def recherche_occurrence(elt, tab):
@@ -149,7 +149,7 @@ Utilisation :
 
 
 
-??? note "Code à trous, standard version" 
+??? note "Code à trous :star: :star: :octicons-star-24: :octicons-star-24:"
     !!! note "Recherche d'occurrence "
         ```python
         def recherche_occurrence(elt, tab):
@@ -163,7 +163,7 @@ Utilisation :
         ```
 
 
-??? note "Code à trous, newbie version" 
+??? note "Code à trous :star: :octicons-star-24: :octicons-star-24: :octicons-star-24:"
     !!! note "Recherche d'occurrence "
         ```python
         def recherche_occurrence(elt, tab):
