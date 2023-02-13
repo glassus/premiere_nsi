@@ -16,7 +16,18 @@ Voici le fonctionnement de l'algorithme :
 
 ## 2. Principe
 
-!!! note "description de l'algorithme"
+Comme dans tous les autres algorithmes de tri que nous allons étudier, nous allons travailler **en place**. Cela signifie que nous ne travaillons que sur la liste initiale, sans en créer de nouvelles. Le tri sera fait en permutant des éléments.
+
+Très très grossièrement, l'idée de l'algorithme est la suivante :
+
+- on cherche le minimum de toute la liste, et on le place au tout début de la liste.
+- on cherche maintenant le minimum de toute la liste SAUF le 1er terme, et on le place en 2ème position
+- on continue jusqu'à la fin.
+
+
+Pour réaliser ceci, le travail va se faire en manipulant les indices des éléments de la liste.
+
+!!! note "Description de l'algorithme"
     Le travail se fait essentiellement sur les **indices**.
     
     - du premier élément jusqu'à l'avant-dernier :
@@ -54,57 +65,100 @@ Voici le fonctionnement de l'algorithme :
 
 
 ## 4. Complexité de l'algorithme
-
-
-### 4.1 Mesure du temps d'exécution
-
-Nous allons fabriquer deux listes de taille 100 et 200 :
-
-
-
-```python
-lst_a = [k for k in range(100,0,-1)] #on se place dans le pire des cas : une liste triée dans l'ordre décroissant
-
-lst_b = [k for k in range(200,0,-1)] #on se place dans le pire des cas : une liste triée dans l'ordre décroissant
-```
-
-
-La mesure du temps moyen de tri pour ces deux listes donne le résultat ci-dessous (avec le module ```timeit``` sous Jupyter Notebook)
-
-```python
-%timeit tri_selection(lst_a)
-
-    632 µs ± 14.3 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
-```
-
-
-```python
-%timeit tri_selection(lst_b)
-
-    2.35 ms ± 35.9 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
-```
-
-En comparant les temps de tri des listes `lst_a` et `lst_b`, que pouvez-vous supposer sur la complexité du tri par sélection ?
-
-<!--
-Une liste à trier 2 fois plus longue prend 4 fois plus de temps : l'algorithme semble de complexité **quadratique**.
--->
-
-
-### 4.2. Calcul du nombre d'opérations
+  
+### 4.1. Calcul du nombre d'opérations
 Dénombrons le nombre d'opérations, pour une liste de taille $n$.
 
 - boucle `for` : elle s'exécute $n-1$ fois.
 - deuxième boucle `for` imbriquée : elle exécute d'abord 1 opération, puis 2, puis 3... jusqu'à $n-1$. 
 
 Or 
-$1+2+3+\dots+n-1=\dfrac{n \times (n-1)}{2}$
+$1+2+3+\dots+n-1=\dfrac{n \times (n-1)}{2}= \dfrac{1}{2}n^2 - \dfrac{1}{2}n$
 
-Ceci est bien un polynôme du second degré, ce qui confirme que la complexité de ce tri est quadratique.
+Dans cette expression, un terme joue un rôle fondamental : $n^2$. 
+C'est le terme prépondérant (le terme de plus haut degré), qui va à lui seul caractériser la manière dont le nombre d'opérations évolue en fonction de $n$.
 
-**Vérification expérimentale**
 
-Insérez un compteur `c` dans votre algorithme pour vérifier le calcul précédent. On pourra renvoyer cette valeur en fin d'algorithme par un `return c`.
+Ici, $n$ est élevé au carré, ce qui signifie que le nombre d'opérations va évoluer avec le carré du nombre de termes de la liste à trier.
+
+## 4.2 Influence sur le temps d'exécution
+
+Considérons qu'une liste de taille $n$ est triée par l'algorithme de tri par sélection en un temps $T$.
+Le temps d'exécution dépendant du nombre d'opérations à traiter, il va évoluer avec le carré de la taille de la liste.
+
+
+Voici donc un ordre de grandeur de ce que *devraient* être les temps nécessaires pour trier une liste de taille $2n$ ou $10n$.
+
+| Taille de la liste| Temps|
+|:---:|:---:|
+|$n$|$T$|
+|$2n$|$4T$|
+|$10n$|$100T$|
+
+
+## 4.3 Vérification expérimentale
+
+!!! example "Exercice"
+    === "Énoncé"
+        Analyser le code suivant :
+        ```python linenums='1'
+        import time
+
+        def tri_selection(lst):
+            for i in range(len(lst)-1):
+                i_min = i
+                for k in range(i, len(lst)):
+                    if lst[k] < lst[i_min]:
+                        i_min = k
+                lst[i_min], lst[i] = lst[i], lst[i_min]
+            
+
+        def mesures(n):
+            total_temps = 0
+            for _ in range(5):
+                lst = list(range(n, 0, -1)) # (1)
+                t0 = time.time()
+                tri_selection(lst)
+                delta_t = time.time() - t0
+                total_temps += delta_t
+                tps_moy = total_temps / 5
+            print(f"temps moyen pour trier une liste de taille {n} : {tps_moy}")
+
+        ```
+
+        1. on se place ici dans le pire des cas : une liste initialement triée dans l'ordre décroissant. Attention, pour le tri par sélection, ces conditions initiales n'ont AUCUNE influence sur le nombre d'opérations : le temps mis sera toujours le même, quelque soit l'état initial de la liste.
+
+        **Q1.** Essayer de confirmer les résultats théoriques du tableau précédent. On pourra travailler par exemple avec une liste initiale de taille 1000.
+
+        **Q2.** Recommencer avec une liste déjà triée. Que constate-t-on ?
+
+
+    === "Correction"
+
+        **Q1.**
+        ```python
+        >>> mesures(10**3)
+        temps moyen pour trier une liste de taille 1000 : 0.03579235076904297
+        >>> mesures(2*10**3)
+        temps moyen pour trier une liste de taille 2000 : 0.13821134567260743
+        >>> mesures(10**4)
+        temps moyen pour trier une liste de taille 10000 : 3.3528685569763184
+        ```
+
+        On retrouve (à peu près, mais plutôt bien) le facteur 4 quand la taille de la liste double, et le facteur 100 quand la taille de la liste est multipliée par 10.
+
+        **Q2.** Changeons la ligne `lst = list(range(n, 0, -1))` en `lst = list(range(n))` :
+
+        ```python
+        >>> mesures(10**3)
+        temps moyen pour trier une liste de taille 1000 : 0.038380765914916994
+        >>> mesures(2*10**3)
+        temps moyen pour trier une liste de taille 2000 : 0.13413033485412598
+        >>> mesures(10**4)
+        temps moyen pour trier une liste de taille 10000 : 3.213682508468628
+        ```
+
+        Les mesures sont identiques : l'état initial de la liste n'a pas d'influence.
 
 
 
@@ -137,9 +191,10 @@ Ici, la propriété serait : « Quand $k$ varie entre 0 et `longueur(liste) -1`,
 ## 7. Bonus : comparaison des algorithmes de tri 
 
 
-Une jolie animation permettant de comparer les tris :
+Une jolie animation permettant de comparer les tris :  
+*(on peut y constater que le tri par sélection met toujours autant de temps pour trier la liste, quelque soit son état initial)*
 
 ![image](data/comparaisons.gif){: .center}
 
-Issue de ce [site](https://www.toptal.com/developers/sorting-algorithms).
+Issue de ce [site](https://www.toptal.com/developers/sorting-algorithms){. target="_blank"}.
 
