@@ -21,8 +21,8 @@ Comme dans tous les autres algorithmes de tri que nous allons étudier, nous all
 Très très grossièrement, l'idée de l'algorithme est la suivante :
 
 - on cherche le minimum de toute la liste, et on le place au tout début de la liste.
-- on cherche maintenant le minimum de toute la liste SAUF le 1er terme, et on le place en 2ème position
-- on continue jusqu'à la fin.
+- on cherche maintenant le minimum de toute la liste SAUF le 1er terme, et on le place en 2ème position.
+- on continue ainsi jusqu'à la fin.
 
 
 Pour réaliser ceci, le travail va se faire en manipulant les indices des éléments de la liste.
@@ -185,8 +185,8 @@ une propriété $P(n)$ est vraie si :
 
 Ici, la propriété serait : « Quand $k$ varie entre 0 et `longueur(liste) -1`, la sous-liste de longueur $k$ est triée dans l'ordre croissant.» On appelle cette propriété un **invariant de boucle** (sous-entendu : elle est vraie pour chaque boucle)
 
-- quand $k$ vaut 0, on place le minimum de la liste en l[0], la sous-liste l[0] est donc triée.
--  si la sous-liste de $k$ éléments est triée, l'algorithme rajoute en dernière position de la liste le minimum de la sous-liste restante, dont tous les éléments sont supérieurs au maximum de la sous-liste de $k$ éléments. La sous-liste de $k+1$ éléments est donc aussi triée.
+- quand $k$ vaut 0, on place le minimum $m_0$ de la liste en position 0, la sous-liste [$m_0$] est donc triée.
+-  si la sous-liste de $k$ éléments [$m_0, m_1, ..., m_{k-1}$] est triée, l'algorithme rajoute en dernière position de la liste le minimum de la sous-liste restante, dont tous les éléments sont supérieurs au maximum de la sous-liste de $k$ éléments. La sous-liste de $k+1$ éléments [$m_0, m_1, ..., m_{k-1}, m_k$] est donc elle aussi triée.
 
 ## 7. Bonus : comparaison des algorithmes de tri 
 
