@@ -3146,8 +3146,8 @@ Voici le fonctionnement de l'algorithme :  </p>
 <p>Très très grossièrement, l'idée de l'algorithme est la suivante :</p>
 <ul>
 <li>on cherche le minimum de toute la liste, et on le place au tout début de la liste.</li>
-<li>on cherche maintenant le minimum de toute la liste SAUF le 1er terme, et on le place en 2ème position</li>
-<li>on continue jusqu'à la fin.</li>
+<li>on cherche maintenant le minimum de toute la liste SAUF le 1er terme, et on le place en 2ème position.</li>
+<li>on continue ainsi jusqu'à la fin.</li>
 </ul>
 <p>Pour réaliser ceci, le travail va se faire en manipulant les indices des éléments de la liste.</p>
 <div class="admonition note">
@@ -3312,8 +3312,8 @@ une propriété <span class="arithmatex">\(P(n)\)</span> est vraie si :</p>
 </ul>
 <p>Ici, la propriété serait : « Quand <span class="arithmatex">\(k\)</span> varie entre 0 et <code>longueur(liste) -1</code>, la sous-liste de longueur <span class="arithmatex">\(k\)</span> est triée dans l'ordre croissant.» On appelle cette propriété un <strong>invariant de boucle</strong> (sous-entendu : elle est vraie pour chaque boucle)</p>
 <ul>
-<li>quand <span class="arithmatex">\(k\)</span> vaut 0, on place le minimum de la liste en l[0], la sous-liste l[0] est donc triée.</li>
-<li>si la sous-liste de <span class="arithmatex">\(k\)</span> éléments est triée, l'algorithme rajoute en dernière position de la liste le minimum de la sous-liste restante, dont tous les éléments sont supérieurs au maximum de la sous-liste de <span class="arithmatex">\(k\)</span> éléments. La sous-liste de <span class="arithmatex">\(k+1\)</span> éléments est donc aussi triée.</li>
+<li>quand <span class="arithmatex">\(k\)</span> vaut 0, on place le minimum <span class="arithmatex">\(m_0\)</span> de la liste en position 0, la sous-liste [<span class="arithmatex">\(m_0\)</span>] est donc triée.</li>
+<li>si la sous-liste de <span class="arithmatex">\(k\)</span> éléments [<span class="arithmatex">\(m_0, m_1, ..., m_{k-1}\)</span>] est triée, l'algorithme rajoute en dernière position de la liste le minimum de la sous-liste restante, dont tous les éléments sont supérieurs au maximum de la sous-liste de <span class="arithmatex">\(k\)</span> éléments. La sous-liste de <span class="arithmatex">\(k+1\)</span> éléments [<span class="arithmatex">\(m_0, m_1, ..., m_{k-1}, m_k\)</span>] est donc elle aussi triée.</li>
 </ul>
 <h2 id="7-bonus-comparaison-des-algorithmes-de-tri">7. Bonus : comparaison des algorithmes de tri<a class="headerlink" href="#7-bonus-comparaison-des-algorithmes-de-tri" title="Permanent link">⚓︎</a></h2>
 <p>Une jolie animation permettant de comparer les tris :<br />
