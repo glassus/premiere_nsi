@@ -73,7 +73,7 @@ Pour réaliser ceci, le travail va se faire en manipulant les indices des élém
 
 ## 3. Implémentation de l'algorithme
 
-!!! abstract "Tri par sélection :heart: "
+!!! abstract "Tri par sélection :heart: :heart: :heart:"
     ```python
     def tri_selection(lst) :
         for i in range(len(lst)-1):
@@ -119,7 +119,7 @@ Ici, $n$ est élevé au carré, ce qui signifie que le nombre d'opérations va �
 !!! abstract "Complexité du tri par sélection :heart: :heart: :heart:"
     Le tri par sélection a une complexité **quadratique**.
 
-## 4.2 Influence sur le temps d'exécution
+## 4.2 Influence de la taille de la liste sur le temps d'exécution
 
 Considérons qu'une liste de taille $n$ est triée par l'algorithme de tri par sélection en un temps $T$.
 Le temps d'exécution dépendant du nombre d'opérations à traiter, il va évoluer avec le carré de la taille de la liste.
@@ -132,6 +132,11 @@ Voici donc un ordre de grandeur de ce que *devraient* être les temps nécessair
 |$n$|$T$|
 |$2n$|$4T$|
 |$10n$|$100T$|
+
+
+
+
+
 
 
 ## 4.3 Vérification expérimentale
