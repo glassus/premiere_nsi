@@ -10,9 +10,9 @@
 
         
 ## Thème(s) en cours d'étude 
-:arrow_right: [Introduction aux algorithmes de recherche](./T4_Algorithmique/4.4_Tri_par_selection/intro_cours/)
+:arrow_right: [Introduction au tri par sélection](./T4_Algorithmique/4.4_Tri_par_selection/intro_cours/)
 
-:arrow_right: [Introduction aux algorithmes de recherche](./T4_Algorithmique/4.4_Tri_par_selection/cours/)
+:arrow_right: [Tri par sélection](./T4_Algorithmique/4.4_Tri_par_selection/cours/)
 
 
 !!! note "*Anciens thèmes traités*"
