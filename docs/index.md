@@ -10,12 +10,13 @@
 
         
 ## Thème(s) en cours d'étude 
-:arrow_right: [Introduction aux algorithmes de recherche](./T4_Algorithmique/4.1_Extremums_et_moyennes/intro_cours/)
+:arrow_right: [Introduction aux algorithmes de recherche](./T4_Algorithmique/4.4_Tri_par_selection/intro_cours/)
 
-:arrow_right: [Extremums et moyennes](./T4_Algorithmique/4.1_Extremums_et_moyennes/cours/)
+:arrow_right: [Introduction aux algorithmes de recherche](./T4_Algorithmique/4.4_Tri_par_selection/cours/)
 
 
 !!! note "*Anciens thèmes traités*"
+    - [Extremums et moyennes](./T4_Algorithmique/4.1_Extremums_et_moyennes/cours/)
     - [Protocoles de communication](./T3_Architecture_materielle/3.4_Protocoles_de_communication/cours/)
     - [Architecture réseau](./T3_Architecture_materielle/3.3_Architecture_reseau/cours/)
     - [Attaque par brute-force](./T6_Mini-projets/Attaque_BF/) 

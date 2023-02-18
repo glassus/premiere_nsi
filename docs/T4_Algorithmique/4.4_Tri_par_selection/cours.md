@@ -2,6 +2,38 @@
 
 ![image](data/BO.png){: .center}
 
+![image](data/color_bars.svg){: .center width=30%}
+
+
+## 0. Préambule
+Pourquoi étudier des algorithmes de tri ?  
+Autant ne pas le cacher, ces algorithmes sont déjà implémentés (quelque soit le langage) dans des fonctions très performantes.  
+
+En Python, on utilise la fonction `sort()` :
+
+
+
+```python
+>>> tab = [4, 8, 1, 2, 6]
+>>> tab.sort()
+>>> tab
+[1, 2, 4, 6, 8]
+
+```
+
+![image](data/meme.png){: .center width=30%}
+
+
+Le meilleur de nos futurs algorithmes de tri sera moins efficace que celui de cette fonction `sort()`...  
+Malgré cela, il est essentiel de se confronter à l'élaboration manuelle d'un algorithme de tri.  
+Le tri par sélection est le premier des deux algorithmes de tri que nous allons étudier (nous étudierons aussi le tri par insertion).  
+Ces deux algorithmes ont pour particularité de :
+
+- ne pas nécessiter la création d'une nouvelle liste. Ils modifient la liste à trier **en place**.
+- ne pas faire intervenir de fonctions complexes (comme la recherche d'un minimum par exemple)
+
+
+## 0. Introduction
 :arrow_right: [Activité d'introduction](../intro_cours/){. target="_blank"}
 
 
@@ -65,6 +97,9 @@ Pour réaliser ceci, le travail va se faire en manipulant les indices des élém
 
 
 ## 4. Complexité de l'algorithme
+
+### 4.0. De quoi parle-t-on ?
+:arrow_right: [Cours sur la complexité](https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.2_Complexite/cours/){. target="_blank"}
   
 ### 4.1. Calcul du nombre d'opérations
 Dénombrons le nombre d'opérations, pour une liste de taille $n$.
@@ -80,6 +115,9 @@ C'est le terme prépondérant (le terme de plus haut degré), qui va à lui seul
 
 
 Ici, $n$ est élevé au carré, ce qui signifie que le nombre d'opérations va évoluer avec le carré du nombre de termes de la liste à trier.
+
+!!! abstract "Complexité du tri par sélection :heart: :heart: :heart:"
+    Le tri par sélection a une complexité **quadratique**.
 
 ## 4.2 Influence sur le temps d'exécution
 
