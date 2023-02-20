@@ -74,7 +74,8 @@ Pour réaliser ceci, le travail va se faire en manipulant les indices des élém
 ## 3. Implémentation de l'algorithme
 
 !!! abstract "Tri par sélection :heart: :heart: :heart:"
-    ```python
+
+    ```python linenums='1'
     def tri_selection(lst) :
         for i in range(len(lst)-1):
             indice_min = i
@@ -102,10 +103,15 @@ Pour réaliser ceci, le travail va se faire en manipulant les indices des élém
 :arrow_right: [Cours sur la complexité](https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.2_Complexite/cours/){. target="_blank"}
   
 ### 4.1. Calcul du nombre d'opérations
-Dénombrons le nombre d'opérations, pour une liste de taille $n$.
 
-- boucle `for` : elle s'exécute $n-1$ fois.
-- deuxième boucle `for` imbriquée : elle exécute d'abord 1 opération, puis 2, puis 3... jusqu'à $n-1$. 
+La ligne 3 `indice_min = i` va s'exécuter $n$ fois.  
+Mais intéressons-nous à la ligne 5 (le test) : combien de fois va-t-elle s'exécuter ?
+À chaque tour de la première boucle (qui en comporte $n$), le nombre d'opérations de la 2ème boucle va varier :
+
+- La 1ère fois, de 1 à $n-1$, provoquera $n-1$ opérations.
+- La 2ème fois, de 2 à $n-1$, provoquera $n-2$ opérations.
+- ...
+- La $n$-ième fois, $n-1$ à $n-1$, provoquera 1 opération.
 
 Or 
 $1+2+3+\dots+n-1=\dfrac{n \times (n-1)}{2}= \dfrac{1}{2}n^2 - \dfrac{1}{2}n$

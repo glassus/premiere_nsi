@@ -11,6 +11,7 @@
         
 ## Thème en cours d'étude 
 
+:arrow_right: [Tri par insertion](./T4_Algorithmique/4.3_Tri_par_insertion/cours/)
 :arrow_right: [Tri par sélection](./T4_Algorithmique/4.4_Tri_par_selection/cours/)
 
 

@@ -2,6 +2,8 @@
 
 ![image](data/BO.png){: .center}
 
+## 0. Introduction
+:arrow_right: [Activité d'introduction](../intro_cours/){. target="_blank"}
 
 
 
@@ -29,8 +31,8 @@ Pour toutes les valeurs, en commençant par la deuxième :
 
 
 !!! note "Tri par insertion (version simple) :heart:"
-    ```python
-    def tri_insertion1(lst):
+    ```python linenums='1'
+    def tri_insertion(lst):
         '''trie en place la liste lst donnée en paramètre'''
         for i in range(1, len(lst)):                 #(1)
             k = i                                    #(2)
@@ -52,7 +54,7 @@ Pour toutes les valeurs, en commençant par la deuxième :
 
 ```python
 >>> maliste = [7, 5, 2, 8, 1, 4]
->>> tri_insertion1(maliste)
+>>> tri_insertion(maliste)
 >>> maliste
 [1, 2, 4, 5, 7, 8]
 ```
@@ -69,8 +71,8 @@ Observez l'animation ci-dessous et comparer avec la version initiale.
 ### 2.2 Codage de l'algorithme
 
 !!! note "Tri par insertion (version optimisée) :heart:"
-    ```python
-    def tri_insertion2(lst) :
+    ```python linenums='1'
+    def tri_insertion_v2(lst) :
         '''trie en place la liste lst donnée en paramètre'''
         for i in range(1, len(lst)):         # (1)
             cle = lst[i]                     # (2)
@@ -95,7 +97,7 @@ Observez l'animation ci-dessous et comparer avec la version initiale.
 
 ```python
 >>> maliste = [7, 5, 2, 8, 1, 4]
->>> tri_insertion2(maliste)
+>>> tri_insertion_v2(maliste)
 >>> maliste
 [1, 2, 4, 5, 7, 8]
 ```
@@ -196,8 +198,8 @@ Ici, la propriété serait : « Quand $k$ varie entre 0 et `longueur(liste) -1`,
     On appelle cette propriété un **invariant de boucle**.  
     *Invariant* siginifie qu'elle reste vraie pour chaque boucle.
 
-- quand $k$ vaut 0, on place le minimum de la liste en l[0], la sous-liste l[0] est donc triée.
--  si la sous-liste de $k$ éléments est triée, l'algorithme rajoute en dernière position de la liste le minimum de la sous-liste restante, dont tous les éléments sont supérieurs au maximum de la sous-liste de $k$ éléments. La sous-liste de $k+1$ éléments est donc aussi triée.
+- quand $k$ vaut 0, on place le minimum $m_0$ de la liste en position 0, la sous-liste [$m_0$] est donc triée.
+-  si la sous-liste de $k$ éléments [$m_0, m_1, ..., m_{k-1}$] est triée, l'algorithme rajoute en dernière position de la liste le minimum de la sous-liste restante, dont tous les éléments sont supérieurs au maximum de la sous-liste de $k$ éléments. La sous-liste de $k+1$ éléments [$m_0, m_1, ..., m_{k-1}, m_k$] est donc elle aussi triée.
 
 
 
@@ -208,7 +210,7 @@ Ici, la propriété serait : « Quand $k$ varie entre 0 et `longueur(liste) -1`,
 
 ---
 ## Bibliographie
-- Wikipedia, https://en.wikipedia.org/wiki/Sorting_algorithm
+- Wikipedia, [https://en.wikipedia.org/wiki/Sorting_algorithm](https://en.wikipedia.org/wiki/Sorting_algorithm){. target="_blank"} 
 
 
 
