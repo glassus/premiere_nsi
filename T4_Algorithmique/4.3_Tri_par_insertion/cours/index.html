@@ -1826,6 +1826,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#0-introduction" class="md-nav__link">
+    0. Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#1-tri-par-insertion-version-la-plus-intuitive" class="md-nav__link">
     1. Tri par insertion (version la plus intuitive)
   </a>
@@ -3166,6 +3173,8 @@
 
 <h1 id="43-tri-par-insertion">4.3 Tri par insertion<a class="headerlink" href="#43-tri-par-insertion" title="Permanent link">⚓︎</a></h1>
 <p><img alt="image" class="center" src="../data/BO.png" /></p>
+<h2 id="0-introduction">0. Introduction<a class="headerlink" href="#0-introduction" title="Permanent link">⚓︎</a></h2>
+<p><img alt="➡" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/27a1.svg" title=":arrow_right:" /> <a class="" href="../intro_cours/" target="_blank">Activité d'introduction</a></p>
 <h2 id="1-tri-par-insertion-version-la-plus-intuitive">1. Tri par insertion (version la plus intuitive)<a class="headerlink" href="#1-tri-par-insertion-version-la-plus-intuitive" title="Permanent link">⚓︎</a></h2>
 <h3 id="11-principe-et-algorithme">1.1  Principe et algorithme<a class="headerlink" href="#11-principe-et-algorithme" title="Permanent link">⚓︎</a></h3>
 <p>Considérons la liste <code>[7, 5, 2, 8, 1, 4]</code><br />
@@ -3184,14 +3193,20 @@ Voici le fonctionnement de l'algorithme :  </p>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Tri par insertion (version simple) <img alt="❤" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">tri_insertion1</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">tri_insertion</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;trie en place la liste lst donnée en paramètre&#39;&#39;&#39;</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)):</span>                 <span class="c1">#(1)</span>
         <span class="n">k</span> <span class="o">=</span> <span class="n">i</span>                                    <span class="c1">#(2)</span>
         <span class="k">while</span> <span class="n">k</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="p">:</span>      <span class="c1">#(3)</span>
             <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>  <span class="c1">#(4)    </span>
             <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">-</span> <span class="mi">1</span>                            <span class="c1">#(5)   </span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 <ol>
 <li>On commence à 1 et non pas à 0.</li>
 <li>On «duplique» la variable <code>i</code> en une variable <code>k</code>.<br />
@@ -3204,7 +3219,7 @@ La boucle peut continuer.</li>
 </div>
 <p><em>Application :</em></p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">maliste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">tri_insertion1</span><span class="p">(</span><span class="n">maliste</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tri_insertion</span><span class="p">(</span><span class="n">maliste</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">maliste</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
 </code></pre></div>
@@ -3219,7 +3234,15 @@ La boucle peut continuer.</li>
 <h3 id="22-codage-de-lalgorithme">2.2 Codage de l'algorithme<a class="headerlink" href="#22-codage-de-lalgorithme" title="Permanent link">⚓︎</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Tri par insertion (version optimisée) <img alt="❤" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">tri_insertion2</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="p">:</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">tri_insertion_v2</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="p">:</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;trie en place la liste lst donnée en paramètre&#39;&#39;&#39;</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)):</span>         <span class="c1"># (1)</span>
         <span class="n">cle</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>                     <span class="c1"># (2)</span>
@@ -3228,7 +3251,7 @@ La boucle peut continuer.</li>
             <span class="n">lst</span><span class="p">[</span><span class="n">k</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>          <span class="c1"># (5)</span>
             <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">-</span><span class="mi">1</span>                     <span class="c1"># (6)</span>
         <span class="n">lst</span><span class="p">[</span><span class="n">k</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">cle</span>                 <span class="c1"># (7)</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 <ol>
 <li>On démarre à la deuxième valeur.</li>
 <li>On stocke dans une variable <code>cle</code> notre valeur de travail</li>
@@ -3241,7 +3264,7 @@ La boucle peut continuer.</li>
 </div>
 <p><em>Application :</em></p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">maliste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">tri_insertion2</span><span class="p">(</span><span class="n">maliste</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tri_insertion_v2</span><span class="p">(</span><span class="n">maliste</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">maliste</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
 </code></pre></div>
@@ -3323,13 +3346,13 @@ une propriété <span class="arithmatex">\(P(n)\)</span> est vraie si :</p>
 <em>Invariant</em> siginifie qu'elle reste vraie pour chaque boucle.</p>
 </div>
 <ul>
-<li>quand <span class="arithmatex">\(k\)</span> vaut 0, on place le minimum de la liste en l[0], la sous-liste l[0] est donc triée.</li>
-<li>si la sous-liste de <span class="arithmatex">\(k\)</span> éléments est triée, l'algorithme rajoute en dernière position de la liste le minimum de la sous-liste restante, dont tous les éléments sont supérieurs au maximum de la sous-liste de <span class="arithmatex">\(k\)</span> éléments. La sous-liste de <span class="arithmatex">\(k+1\)</span> éléments est donc aussi triée.</li>
+<li>quand <span class="arithmatex">\(k\)</span> vaut 0, on place le minimum <span class="arithmatex">\(m_0\)</span> de la liste en position 0, la sous-liste [<span class="arithmatex">\(m_0\)</span>] est donc triée.</li>
+<li>si la sous-liste de <span class="arithmatex">\(k\)</span> éléments [<span class="arithmatex">\(m_0, m_1, ..., m_{k-1}\)</span>] est triée, l'algorithme rajoute en dernière position de la liste le minimum de la sous-liste restante, dont tous les éléments sont supérieurs au maximum de la sous-liste de <span class="arithmatex">\(k\)</span> éléments. La sous-liste de <span class="arithmatex">\(k+1\)</span> éléments [<span class="arithmatex">\(m_0, m_1, ..., m_{k-1}, m_k\)</span>] est donc elle aussi triée.</li>
 </ul>
 <hr />
 <h2 id="bibliographie">Bibliographie<a class="headerlink" href="#bibliographie" title="Permanent link">⚓︎</a></h2>
 <ul>
-<li>Wikipedia, https://en.wikipedia.org/wiki/Sorting_algorithm</li>
+<li>Wikipedia, <a class="" href="https://en.wikipedia.org/wiki/Sorting_algorithm" target="_blank">https://en.wikipedia.org/wiki/Sorting_algorithm</a> </li>
 </ul>
 <hr />
 
@@ -3338,7 +3361,7 @@ une propriété <span class="arithmatex">\(P(n)\)</span> est vraie si :</p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">18 février 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">20 février 2023</span>
       
     
   </small>
