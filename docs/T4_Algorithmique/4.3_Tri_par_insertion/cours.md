@@ -13,7 +13,9 @@
 Considérons la liste `[7, 5, 2, 8, 1, 4]`  
 Voici le fonctionnement de l'algorithme :  
 
-![image](data/insertion1.gif){: .center width=40%}
+<center>
+<gif-player src="https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.3_Tri_par_insertion/data/insertion1.gif" speed="1" play></gif-player>
+</center>
 
 
 **Explications :**
@@ -63,7 +65,10 @@ Pour toutes les valeurs, en commençant par la deuxième :
 
 ### 2.1 Principe et algorithme
 Observez l'animation ci-dessous et comparer avec la version initiale.  
-![image](data/insertion2.gif){: .center width=40%}
+
+<center>
+<gif-player src="https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.3_Tri_par_insertion/data/insertion2.gif" speed="1" play></gif-player>
+</center>
 
 - Au lieu d'effetuer un échange avec la valeur précédente à chaque fois qu'elle est supérieure, on va décaler vers la droite toutes les valeurs situées à gauche et supérieures à notre valeur de travail.
 - On **insère** ensuite directement à sa position «la plus à gauche possible» notre valeur de travail. 
