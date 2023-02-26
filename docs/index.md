@@ -11,12 +11,11 @@
         
 ## Thème en cours d'étude 
 
-:arrow_right: [Tri par insertion](./T4_Algorithmique/4.3_Tri_par_insertion/cours/)  
-
-:arrow_right: [Tri par sélection](./T4_Algorithmique/4.4_Tri_par_selection/cours/)
-
+:arrow_right: [Booléens](./T2_Representation_des_donnees/2.5_Booleens/cours/)  
 
 !!! note "*Anciens thèmes traités*"
+    - [Tri par insertion](./T4_Algorithmique/4.3_Tri_par_insertion/cours/)  
+    - [Tri par sélection](./T4_Algorithmique/4.4_Tri_par_selection/cours/)
     - [Extremums et moyennes](./T4_Algorithmique/4.1_Extremums_et_moyennes/cours/)
     - [Protocoles de communication](./T3_Architecture_materielle/3.4_Protocoles_de_communication/cours/)
     - [Architecture réseau](./T3_Architecture_materielle/3.3_Architecture_reseau/cours/)
