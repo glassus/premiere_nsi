@@ -397,7 +397,7 @@ Pour comprendre ces résultats, il faut travailler en binaire. Voici les mêmes 
     Le premier caractère du mot chiffré sera donc ```'\x0f'```
 
 
-    **Q1.** Écrire une fonction ```chiffre``` qui prendra en paramètre un mot ```mot_clair``` et un mot de passe ```cle``` **de même taille** que ```mot_clair``` et qui renvoie la chaîne de caractères obtenue en XORant ``mot_clair``` avec ```cle```.
+    **Q1.** Écrire une fonction ```chiffre``` qui prendra en paramètre un mot ```mot_clair``` et un mot de passe ```cle``` **de même taille** que ```mot_clair``` et qui renvoie la chaîne de caractères obtenue en XORant ```mot_clair``` avec ```cle```.
 
     {#
     ??? tip "correction"
@@ -411,7 +411,7 @@ Pour comprendre ces résultats, il faut travailler en binaire. Voici les mêmes 
     
         ```
     #}
-    
+
     **Q2.** Chiffrer le mot `"BONJOUR"` avec la clé `"MAURIAC"`.
 
     {#
