@@ -1,5 +1,8 @@
 # Énigme
 
+Vous pouvez faire cette énigme sur Capytale 
+[https://capytale2.ac-paris.fr/web/c/5912-1397991](https://capytale2.ac-paris.fr/web/c/5912-1397991){. target="_blank"}
+
 ## 1. À la recherche du personnage mystère
 
 Vous avez trouvé une image bien étrange :
