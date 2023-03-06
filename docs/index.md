@@ -11,9 +11,11 @@
         
 ## Thème en cours d'étude 
 
-:arrow_right: [Booléens](./T2_Representation_des_donnees/2.5_Booleens/cours/)  
+:arrow_right: [Codage des caractères](./T2_Representation_des_donnees/2.6_Codage_caracteres/cours/)  
+:arrow_right: [Algorithmes gloutons](./T4_Algorithmique/4.6_Algorithmes_gloutons/cours/)
 
 !!! note "*Anciens thèmes traités*"
+    - [Booléens](./T2_Representation_des_donnees/2.5_Booleens/cours/)
     - [Tri par insertion](./T4_Algorithmique/4.3_Tri_par_insertion/cours/)  
     - [Tri par sélection](./T4_Algorithmique/4.4_Tri_par_selection/cours/)
     - [Extremums et moyennes](./T4_Algorithmique/4.1_Extremums_et_moyennes/cours/)
