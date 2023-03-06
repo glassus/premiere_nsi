@@ -121,6 +121,56 @@ Arrêtons-nous sur l'UTF-8 :
 
 Le principe fondateur de l'UTF-8 est qu'il est **adaptatif** : les caracères les plus fréquents sont codés sur un octet, qui est la taille minimale (et qui donne le 8 de "UTF-8"). Les autres caractères peuvent être codés sur 2, 3 ou 4 octets au maximum.
 
+## 5. Exercice-bilan
+
+!!! abstract "Pourquoi le caractère `é` en UTF-8 devient-il `Ã©` en ISO 8859-15 ? "
+    
+        
+    **Q1.** Grâce à la fonction ```ord``` puis à la fonction ```bin```, écrire en binaire le nombre associé au caractère ```é``` en UTF-8.
+
+    ??? tip "Correction"
+        ```python
+        >>> ord('é')
+        233
+        >>> bin(233)
+        '0b11101001'
+        ```
+        Donc en UTF-8, ```é``` est associé au nombre ```11101001```.
+
+    **Q2.** D'après l'explication de fonctionnement de l'encodage adaptatif de l'UTF-8 (voir ci-dessus), les 8 bits nécessaires à l'encodage de ```é``` en UTF-8 vont être «encapsulés» dans 2 octets de la forme ```110XXXXX 10XXXXXX```, où les 11 ```X``` représentent les 11 bits d'information disponibles. Écrire ces 2 octets en complétant si nécessaire avec des ```0``` à gauche.
+
+    ??? tip "Correction"
+        Sur 11 bits, le nombre ```11101001``` va s'écrire ```00011101001```. En séparant ces 11 bits en deux groupes de 5 bits et 6 bits (```00011```et ```101001```), et en les encapsulant, on obtient les deux octets ```11000011 10101001```.
+
+    **Q3.** Convertir les deux octets obtenus en notation décimale (grâce à ```int```) puis en hexadécimal (grâce à ```hex```).
+    
+    ??? tip "Correction"
+        ```python
+        >>> int('11000011', 2)
+        195
+        >>> hex(195)
+        '0xc3'
+        >>> int('10101001', 2)
+        169
+        >>> hex(169)
+        '0xa9'
+        ```
+
+    **Q4.** Si un logiciel considère **à tort** que les deux octets servant à encoder le ```é``` en UTF-8 servent à encoder deux caractères en ISO 8859-15, quels sont ces deux caractères ?
+
+    ??? tip "Correction"
+        Le premier octet, ```c3``` en hexadécimal, sera perçu en ISO 8859-15 comme le caractère ```Ã```.  
+        Le deuxième octet, ```a9``` en hexadécimal, sera perçu en ISO 8859-15 comme la lettre ```©```.  
+        
+        Finalement, ce qui aurait dû être un ```é``` en UTF-8 se retrouve être un ```Ã©``` en ISO 8859-15. 
+
+        ![image](data/iso-latin.png){: .center}
+        
+         
+          
+         
+
+
 ## Utilisation grandissante de l'encodage UTF-8 
 La majorité des sites internet utilisent maintenant l'UTF-8, tout comme les systèmes d'exploitation récents.
 ![](data/graph_comparaison.png){: .center}
