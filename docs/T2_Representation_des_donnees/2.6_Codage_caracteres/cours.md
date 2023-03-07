@@ -121,7 +121,7 @@ Arrêtons-nous sur l'UTF-8 :
 
 Le principe fondateur de l'UTF-8 est qu'il est **adaptatif** : les caracères les plus fréquents sont codés sur un octet, qui est la taille minimale (et qui donne le 8 de "UTF-8"). Les autres caractères peuvent être codés sur 2, 3 ou 4 octets au maximum.
 
-## 5. Exercice-bilan
+## 5. La réponse à une question existentielle
 
 !!! abstract "Pourquoi le caractère `é` en UTF-8 devient-il `Ã©` en ISO 8859-15 ? "
     
@@ -156,13 +156,13 @@ Le principe fondateur de l'UTF-8 est qu'il est **adaptatif** : les caracères le
         '0xa9'
         ```
 
-    **Q4.** Si un logiciel considère **à tort** que les deux octets servant à encoder le ```é``` en UTF-8 servent à encoder deux caractères en ISO 8859-15, quels sont ces deux caractères ?
+    **Q4.** Si un logiciel considère **à tort** que les deux octets servant à encoder le ```é``` en UTF-8 servent à encoder deux caractères en ISO 8859-15, quels seront ces deux caractères ?
 
     ??? tip "Correction"
         Le premier octet, ```c3``` en hexadécimal, sera perçu en ISO 8859-15 comme le caractère ```Ã```.  
         Le deuxième octet, ```a9``` en hexadécimal, sera perçu en ISO 8859-15 comme la lettre ```©```.  
         
-        Finalement, ce qui aurait dû être un ```é``` en UTF-8 se retrouve être un ```Ã©``` en ISO 8859-15. 
+        Finalement, ce qui aurait dû être un ```é``` en UTF-8 se retrouvera être un ```Ã©``` en ISO 8859-15. 
 
         ![image](data/iso-latin.png){: .center}
         
