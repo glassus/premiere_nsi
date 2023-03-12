@@ -67,12 +67,13 @@ Non ! Il arrive *aussi* qu'il donne la solution optimale. Changeons le rectangle
 
 Dans cette situation, l'algorithme glouton nous amène à la solution optimale.
 
-## Conclusion :
-
+## Conclusion 
 
 Un algorithme glouton est une méthode rapide et souvent efficace, mais qui ne garantit pas l'optimalité de la solution trouvée.
 
-**La succession de meilleurs choix LOCAUX va nous amener à une *bonne* solution GLOBALE, mais ne nous garantit pas d'arriver à la solution optimale.**
+:star: :star: :star: **La succession de meilleurs choix LOCAUX va nous amener à une *bonne* solution GLOBALE, mais ne nous garantit pas d'arriver à la solution optimale.**
+:star: :star: :star:
+
 
 ##  2. Le problème du rendu de monnaie
 
@@ -80,18 +81,23 @@ Nous allons travailler avec des pièces (ou billets) de 1, 2, 5, 10, 20, 50, 100
 
 L'objectif est de créer un programme renvoyant, pour une somme ```somme_a_rendre``` entrée en paramètre, la combinaison utilisant un **minimum** de pièces ou de billets pour fabriquer la somme ```somme_a_rendre```. 
 
-Par exemple, lorsque vous payez avec 20 € un objet coûtant 11 €, vous préférez qu'on vous rende vos 9 € de monnaie par $$ 9 = 5 + 2+2$$ plutôt que par $$ 9=2+2+2+1+1+1$$
+Par exemple, lorsque vous payez avec 20 € un objet coûtant 11 €, vous préférez qu'on vous rende vos 9 € de monnaie par $9 = 5 + 2 + 2$ plutôt que par $9=2+2+2+1+1+1$
 
 La résolution de ce problème peut se faire de manière gloutonne : à chaque étape, vous allez essayer de rendre la plus grosse pièce (ou billet) possible.
 
+
+[Activité de découverte de l'algorithme](../intro_rendu/){. target="_blank"}
+
+
+{#
 ### 2.1 Solution du problème
 
 !!! note "Rendu de monnaie :heart: :heart: :heart:"
     ```python linenums='1'
     def rendu(somme_a_rendre):
         pieces = [200, 100, 50, 20, 10, 5, 2, 1]
-        i =  0   # (1) 
         solution = []
+        i =  0   # (1)
         while somme_a_rendre > 0:
             if pieces[i] <= somme_a_rendre : # (2) 
                 solution.append(pieces[i])   # (3) 
@@ -119,6 +125,7 @@ Utilisation : `rendu(13)` doit renvoyer `[10, 2, 1]`
     [50, 5, 2, 1]
 ```
 
+#}
 
 
 ### 2.2 Une solution optimale ?
