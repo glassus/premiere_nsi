@@ -17,7 +17,7 @@
         <link rel="next" href="../../4.7_Algorithme_KNN/07_Algorithme_KNN/">
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.1">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.2">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.402914a4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7bf56d0a.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
@@ -2004,7 +2004,7 @@
       
         <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
-    Conclusion :
+    Conclusion
   </a>
   
 </li>
@@ -2016,13 +2016,6 @@
   
     <nav class="md-nav" aria-label="2. Le problème du rendu de monnaie">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-solution-du-probleme" class="md-nav__link">
-    2.1 Solution du problème
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#22-une-solution-optimale" class="md-nav__link">
@@ -3202,53 +3195,16 @@
 Non ! Il arrive <em>aussi</em> qu'il donne la solution optimale. Changeons le rectangle initial en un rectangle de 10 sur 15 :</p>
 <p><img alt="" class="center" src="../data/remplissage_carres3.png" /></p>
 <p>Dans cette situation, l'algorithme glouton nous amène à la solution optimale.</p>
-<h2 id="conclusion">Conclusion :<a class="headerlink" href="#conclusion" title="Permanent link">⚓︎</a></h2>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">⚓︎</a></h2>
 <p>Un algorithme glouton est une méthode rapide et souvent efficace, mais qui ne garantit pas l'optimalité de la solution trouvée.</p>
-<p><strong>La succession de meilleurs choix LOCAUX va nous amener à une <em>bonne</em> solution GLOBALE, mais ne nous garantit pas d'arriver à la solution optimale.</strong></p>
+<p><img alt="⭐" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2b50.svg" title=":star:" /> <strong>La succession de meilleurs choix LOCAUX va nous amener à une <em>bonne</em> solution GLOBALE, mais ne nous garantit pas d'arriver à la solution optimale.</strong>
+<img alt="⭐" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2b50.svg" title=":star:" /></p>
 <h2 id="2-le-probleme-du-rendu-de-monnaie">2. Le problème du rendu de monnaie<a class="headerlink" href="#2-le-probleme-du-rendu-de-monnaie" title="Permanent link">⚓︎</a></h2>
 <p>Nous allons travailler avec des pièces (ou billets) de 1, 2, 5, 10, 20, 50, 100, 200 euros.</p>
 <p>L'objectif est de créer un programme renvoyant, pour une somme <code>somme_a_rendre</code> entrée en paramètre, la combinaison utilisant un <strong>minimum</strong> de pièces ou de billets pour fabriquer la somme <code>somme_a_rendre</code>. </p>
-<p>Par exemple, lorsque vous payez avec 20 € un objet coûtant 11 €, vous préférez qu'on vous rende vos 9 € de monnaie par $$ 9 = 5 + 2+2$$ plutôt que par $$ 9=2+2+2+1+1+1$$</p>
+<p>Par exemple, lorsque vous payez avec 20 € un objet coûtant 11 €, vous préférez qu'on vous rende vos 9 € de monnaie par <span class="arithmatex">\(9 = 5 + 2 + 2\)</span> plutôt que par <span class="arithmatex">\(9=2+2+2+1+1+1\)</span></p>
 <p>La résolution de ce problème peut se faire de manière gloutonne : à chaque étape, vous allez essayer de rendre la plus grosse pièce (ou billet) possible.</p>
-<h3 id="21-solution-du-probleme">2.1 Solution du problème<a class="headerlink" href="#21-solution-du-probleme" title="Permanent link">⚓︎</a></h3>
-<div class="admonition note">
-<p class="admonition-title">Rendu de monnaie <img alt="❤" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">rendu</span><span class="p">(</span><span class="n">somme_a_rendre</span><span class="p">):</span>
-    <span class="n">pieces</span> <span class="o">=</span> <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-    <span class="n">i</span> <span class="o">=</span>  <span class="mi">0</span>   <span class="c1"># (1) </span>
-    <span class="n">solution</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">while</span> <span class="n">somme_a_rendre</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">pieces</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">somme_a_rendre</span> <span class="p">:</span> <span class="c1"># (2) </span>
-            <span class="n">solution</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pieces</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>   <span class="c1"># (3) </span>
-            <span class="n">somme_a_rendre</span> <span class="o">=</span> <span class="n">somme_a_rendre</span> <span class="o">-</span> <span class="n">pieces</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="c1"># (4)</span>
-        <span class="k">else</span> <span class="p">:</span>
-            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>   <span class="c1"># (5) </span>
-    <span class="k">return</span> <span class="n">solution</span>
-</code></pre></div></td></tr></table></div>
-<ol>
-<li>On part du 1er indice -&gt; la plus grande pièce</li>
-<li>Est-ce que la pièce peut être rendue ?</li>
-<li>On garde la pièce dans la liste <code>solution</code></li>
-<li>On met à jour la somme à rendre.</li>
-<li>La pièce était trop grosse, on avance dans la liste.</li>
-</ol>
-</div>
-<p>Utilisation : <code>rendu(13)</code> doit renvoyer <code>[10, 2, 1]</code></p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">rendu</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span>
-    <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">rendu</span><span class="p">(</span><span class="mi">58</span><span class="p">)</span>
-    <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-</code></pre></div>
+<p><a class="" href="../intro_rendu/" target="_blank">Activité de découverte de l'algorithme</a></p>
 <h3 id="22-une-solution-optimale">2.2 Une solution optimale ?<a class="headerlink" href="#22-une-solution-optimale" title="Permanent link">⚓︎</a></h3>
 <p>Imaginons qu'il n'y ait plus de pièces de 10 et 5 euros. 
 Faites fonctionner votre algorithme pour la somme de 63 euros.</p>
@@ -3546,7 +3502,7 @@ Dans ce cas-là, la stratégie gloutonne peut être employée pour avoir vite et
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">28 juin 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">12 mars 2023</span>
       
     
   </small>
@@ -3630,7 +3586,7 @@ Dans ce cas-là, la stratégie gloutonne peut être employée pour avoir vite et
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.b78d2936.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.fc8c2696.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       
