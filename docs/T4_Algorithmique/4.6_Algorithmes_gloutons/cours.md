@@ -89,7 +89,7 @@ La résolution de ce problème peut se faire de manière gloutonne : à chaque �
 [Activité de découverte de l'algorithme](../intro_rendu/){. target="_blank"}
 
 
-{#
+
 ### 2.1 Solution du problème
 
 !!! note "Rendu de monnaie :heart: :heart: :heart:"
@@ -125,7 +125,7 @@ Utilisation : `rendu(13)` doit renvoyer `[10, 2, 1]`
     [50, 5, 2, 1]
 ```
 
-#}
+
 
 
 ### 2.2 Une solution optimale ?
