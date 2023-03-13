@@ -165,16 +165,18 @@ Damned ! Mais ce n'est pas une solution optimale !
 ![](data/kp.png){: .center}
 
 
-Le problème est celui-ci : vous disposez d'un sac d'une contenance limitée (sur le dessin ci-dessus, 15kg) et vous souhaitez maximiser la valeur totale des objets que vous mettez dans votre sac. Evidemment, la somme de leur masse ne doit pas dépasser 15 kg.
+Le problème est celui-ci : vous disposez d'un sac d'une contenance limitée (sur le dessin ci-dessus, 15kg) dans lequel vous allez mettre des objets qui ont un certain poids et une certaine valeur.  
+**Vous souhaitez maximiser la valeur totale des objets que vous mettez dans votre sac.**  
+Evidemment, la somme de leur masse ne doit pas dépasser 15 kg.
 
-Ce problème (de la catégorie des problème dits d'_analyse combinatoire_) malgré sa simplicité est **un problème majeur** d'optimisation. 
+Ce problème (de la catégorie des problème dits d'_analyse combinatoire_) malgré sa simplicité est **un problème majeur** d'optimisation.
 
-Actuellement :
+!!! abstract "Où en est-on de la recherche académique sur le problème du sac à dos ?"
+    Actuellement :  
 
-
-*   On sait trouver LA meilleure solution, mais en explorant toutes les combinaisons une par une. Cette méthode par **force brute** est inapplicable si beaucoup d'objets sont en jeu.
-*   On sait facilement trouver une _bonne_ solution, mais pas forcément la meilleure, par exemple en adoptant une stratégie gloutonne.
-* On ne sait pas trouver facilement (en temps polynomial) la meilleure solution. Si vous y arrivez, [1 Million de $](https://www.claymath.org/millennium-problems/p-vs-np-problem){. target="_blank"} sont pour vous.
+    * On sait trouver LA meilleure solution, mais en explorant toutes les combinaisons une par une. Cette méthode par **force brute** est inapplicable si beaucoup d'objets sont en jeu.
+    * On sait facilement trouver une _bonne_ solution, mais pas forcément la meilleure, par exemple en adoptant une stratégie gloutonne.
+    * On ne sait pas trouver facilement (en temps polynomial) la meilleure solution. Si vous y arrivez, [1 Million de $](https://www.claymath.org/millennium-problems/p-vs-np-problem){. target="_blank"} sont pour vous.
 
 
 
@@ -182,30 +184,38 @@ Actuellement :
 
 Supposons qu'on dispose d'une liste  `mylist = [["A",3], ["B",2], ["C",8]]`. 
 
-Comment classer les éléments de cette liste par leur deuxième élément ???
+Comment classer les éléments de cette liste par leur **deuxième** élément ???
 
-Nous allons procéder en 2 temps :
+Nous allons procéder en 2 temps.
 
-- création d'une fonction qui renvoie le deuxième élément d'un objet `liste`
-- tri de la liste grâce à cette fonction
-
-
+#### 3.1.1 Une fonction qui renvoie le deuxième élément
+Créons une fonction qui renvoie le deuxième élément d'un objet `liste` :
 
 ```python
->>> mylist = [["A",3], ["B",2], ["C",8]]
->>> def le_deuxieme(k) :
-    return k[1]
+def deuxieme(lst) :
+        return lst[1]
+```
 
+Utilisation :
+```python
 >>> simpsons = ['Bart', 'Lisa', 'Maggie']
->>> le_deuxieme(simpsons)
+>>> deuxieme(simpsons)
   'Lisa'
->>> mynewlist = sorted(mylist, key = le_deuxieme, reverse = True)
->>> mynewlist
-[['C', 8], ['A', 3], ['B', 2]]
-
 ```
 
 
+#### 3.1.2 Tri de la liste grâce à cette fonction ```deuxieme```
+
+Nous allons utiliser la fonction ```sorted```, qui prend en paramètre une liste à trier et une fonction de tri.
+
+```python
+>>> mylist = [["A", 3], ["B", 2], ["C", 8]]
+>>> mynewlist = sorted(mylist, key = deuxieme, reverse = True)
+>>> mynewlist
+[['C', 8], ['A', 3], ['B', 2]]
+```
+
+Cette méthode de tri va nous être très utile.
 
 
 ### 3.2 Retour sur le problème du sac à dos
@@ -213,8 +223,8 @@ On considère un sac de 40 kg et les objets suivants :
 
 | objet  |  A  |  B  |  C  |  D  |  E  |  F  |
 |:------:|:---:|:---:|:---:|:---:|:---:|:---:|
-|  masse |  13 |  12 |  8  |  10 |  14 |  18 |
-| valeur | 700 | 500 | 200 | 300 | 600 | 800 |
+|  masse (en kg) |  13 |  12 |  8  |  10 |  14 |  18 |
+| valeur (en €)| 700 | 500 | 200 | 300 | 600 | 800 |
 
 Quels objets faut-il prendre ?
 
@@ -223,29 +233,43 @@ Quels objets faut-il prendre ?
 - on va classer les objets dans l'ordre décroissant de leur taux de valeur (taux de valeur = valeur / masse). Ainsi le premier élément de la liste sera celui ayant le meilleur rapport valeur/masse.
 - on prend le premier élément de la liste, puis le deuxième, etc., tant que le sac peut encore les contenir.
 
+#### 3.2.1 Classement des objets
 
 
+On considère la liste 
 ```python
->>> objets = [["A", 13, 700], ["B", 12, 500], ["C", 8, 200], ["D", 10, 300], ["E", 14, 600], ["F", 18, 800]]
->>> poids_max = 40
->>> def ratio(objet):
-        # renvoie le rapport prix/poids d'un objet
-        return objet[2] / objet[1]
-
->>> objets_tries = sorted(objets, key = ratio, reverse = True)
->>> objets_tries
-     [['A', 13, 700],
-     ['F', 18, 800],
-     ['E', 14, 600],
-     ['B', 12, 500],
-     ['D', 10, 300],
-     ['C', 8, 200]]
+objets = [["A", 13, 700], ["B", 12, 500], ["C", 8, 200], ["D", 10, 300], ["E", 14, 600], ["F", 18, 800]]
 ```
 
 
-**Calcul de la solution, par méthode gloutonne**
+En vous inspirant du 3.1.2, classer ces objets suivant leur taux de valeur.
+
+{#
+```python linenums='1'
+objets = [["A", 13, 700], ["B", 12, 500], ["C", 8, 200], ["D", 10, 300], ["E", 14, 600], ["F", 18, 800]]
+
+def ratio(objet):
+    # renvoie le rapport prix/poids d'un objet
+    return objet[2] / objet[1]
+
+objets_tries = sorted(objets, key = ratio, reverse = True)
+```
+
+```python
+>>> objets_tries
+ [['A', 13, 700],
+ ['F', 18, 800],
+ ['E', 14, 600],
+ ['B', 12, 500],
+ ['D', 10, 300],
+ ['C', 8, 200]]
+```
+#}
 
 
+#### 3.2.2 Calcul de la solution, par méthode gloutonne
+
+{#
 ```python linenums='1'
 objets  = [["A", 13, 700], ["B", 12, 500], ["C", 8, 200], ["D", 10, 300], ["E", 14, 600], ["F", 18, 800]]
 
@@ -276,6 +300,8 @@ for objet in objets_tries:
 
 
 Il faut donc choisir la combinaison A, F, C. Elle est bien valide (poids 39) et rapporte 1700.
+#}
+
 
 **Question** (toujours la même) :  
 
