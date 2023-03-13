@@ -191,10 +191,13 @@ Nous allons procéder en 2 temps.
 #### 3.1.1 Une fonction qui renvoie le deuxième élément
 Créons une fonction qui renvoie le deuxième élément d'un objet `liste` :
 
+{#
 ```python
 def deuxieme(lst) :
         return lst[1]
 ```
+#}
+
 
 Utilisation :
 ```python
