@@ -3278,33 +3278,41 @@ Faites fonctionner votre algorithme pour la somme de 63 euros.</p>
 <p><strong>Moralité</strong> : Lors d'un rendu de monnaie, l'algorithme glouton n'est optimal que <em>sous certaines conditions</em>, ce qui est un peu décevant. Un système de monnaie qui rend l'algorithme glouton est dit <strong>canonique</strong>. Il est difficile de caractériser mathématiquement si un système de monnaie est canonique ou pas.</p>
 <h2 id="3-le-probleme-du-sac-a-dos-knapsack-problem">3. Le problème du sac à dos <em>(Knapsack Problem)</em><a class="headerlink" href="#3-le-probleme-du-sac-a-dos-knapsack-problem" title="Permanent link">⚓︎</a></h2>
 <p><img alt="" class="center" src="../data/kp.png" /></p>
-<p>Le problème est celui-ci : vous disposez d'un sac d'une contenance limitée (sur le dessin ci-dessus, 15kg) et vous souhaitez maximiser la valeur totale des objets que vous mettez dans votre sac. Evidemment, la somme de leur masse ne doit pas dépasser 15 kg.</p>
-<p>Ce problème (de la catégorie des problème dits d'<em>analyse combinatoire</em>) malgré sa simplicité est <strong>un problème majeur</strong> d'optimisation. </p>
-<p>Actuellement :</p>
+<p>Le problème est celui-ci : vous disposez d'un sac d'une contenance limitée (sur le dessin ci-dessus, 15kg) dans lequel vous allez mettre des objets qui ont un certain poids et une certaine valeur.<br />
+<strong>Vous souhaitez maximiser la valeur totale des objets que vous mettez dans votre sac.</strong><br />
+Evidemment, la somme de leur masse ne doit pas dépasser 15 kg.</p>
+<p>Ce problème (de la catégorie des problème dits d'<em>analyse combinatoire</em>) malgré sa simplicité est <strong>un problème majeur</strong> d'optimisation.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Où en est-on de la recherche académique sur le problème du sac à dos ?</p>
+<p>Actuellement :  </p>
 <ul>
 <li>On sait trouver LA meilleure solution, mais en explorant toutes les combinaisons une par une. Cette méthode par <strong>force brute</strong> est inapplicable si beaucoup d'objets sont en jeu.</li>
 <li>On sait facilement trouver une <em>bonne</em> solution, mais pas forcément la meilleure, par exemple en adoptant une stratégie gloutonne.</li>
 <li>On ne sait pas trouver facilement (en temps polynomial) la meilleure solution. Si vous y arrivez, <a class="" href="https://www.claymath.org/millennium-problems/p-vs-np-problem" target="_blank">1 Million de $</a> sont pour vous.</li>
 </ul>
+</div>
 <h3 id="31-petite-aide-technique-avant-de-commencer">3.1 Petite aide technique avant de commencer<a class="headerlink" href="#31-petite-aide-technique-avant-de-commencer" title="Permanent link">⚓︎</a></h3>
 <p>Supposons qu'on dispose d'une liste  <code>mylist = [["A",3], ["B",2], ["C",8]]</code>. </p>
-<p>Comment classer les éléments de cette liste par leur deuxième élément ???</p>
-<p>Nous allons procéder en 2 temps :</p>
-<ul>
-<li>création d'une fonction qui renvoie le deuxième élément d'un objet <code>liste</code></li>
-<li>tri de la liste grâce à cette fonction</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">mylist</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">,</span><span class="mi">8</span><span class="p">]]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">le_deuxieme</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="p">:</span>
-    <span class="k">return</span> <span class="n">k</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-
-<span class="o">&gt;&gt;&gt;</span> <span class="n">simpsons</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Bart&#39;</span><span class="p">,</span> <span class="s1">&#39;Lisa&#39;</span><span class="p">,</span> <span class="s1">&#39;Maggie&#39;</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">le_deuxieme</span><span class="p">(</span><span class="n">simpsons</span><span class="p">)</span>
+<p>Comment classer les éléments de cette liste par leur <strong>deuxième</strong> élément ???</p>
+<p>Nous allons procéder en 2 temps.</p>
+<h4 id="311-une-fonction-qui-renvoie-le-deuxieme-element">3.1.1 Une fonction qui renvoie le deuxième élément<a class="headerlink" href="#311-une-fonction-qui-renvoie-le-deuxieme-element" title="Permanent link">⚓︎</a></h4>
+<p>Créons une fonction qui renvoie le deuxième élément d'un objet <code>liste</code> :</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">deuxieme</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="n">lst</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</code></pre></div>
+<p>Utilisation :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">simpsons</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Bart&#39;</span><span class="p">,</span> <span class="s1">&#39;Lisa&#39;</span><span class="p">,</span> <span class="s1">&#39;Maggie&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">deuxieme</span><span class="p">(</span><span class="n">simpsons</span><span class="p">)</span>
   <span class="s1">&#39;Lisa&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">mynewlist</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">mylist</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">le_deuxieme</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</code></pre></div></p>
+<h4 id="312-tri-de-la-liste-grace-a-cette-fonction-deuxieme">3.1.2 Tri de la liste grâce à cette fonction <code>deuxieme</code><a class="headerlink" href="#312-tri-de-la-liste-grace-a-cette-fonction-deuxieme" title="Permanent link">⚓︎</a></h4>
+<p>Nous allons utiliser la fonction <code>sorted</code>, qui prend en paramètre une liste à trier et une fonction de tri.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">mylist</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">]]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">mynewlist</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">mylist</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">deuxieme</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">mynewlist</span>
 <span class="p">[[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
 </code></pre></div>
+<p>Cette méthode de tri va nous être très utile.</p>
 <h3 id="32-retour-sur-le-probleme-du-sac-a-dos">3.2 Retour sur le problème du sac à dos<a class="headerlink" href="#32-retour-sur-le-probleme-du-sac-a-dos" title="Permanent link">⚓︎</a></h3>
 <p>On considère un sac de 40 kg et les objets suivants :</p>
 <table>
@@ -3321,7 +3329,7 @@ Faites fonctionner votre algorithme pour la somme de 63 euros.</p>
 </thead>
 <tbody>
 <tr>
-<td align="center">masse</td>
+<td align="center">masse (en kg)</td>
 <td align="center">13</td>
 <td align="center">12</td>
 <td align="center">8</td>
@@ -3330,7 +3338,7 @@ Faites fonctionner votre algorithme pour la somme de 63 euros.</p>
 <td align="center">18</td>
 </tr>
 <tr>
-<td align="center">valeur</td>
+<td align="center">valeur (en €)</td>
 <td align="center">700</td>
 <td align="center">500</td>
 <td align="center">200</td>
@@ -3346,62 +3354,12 @@ Faites fonctionner votre algorithme pour la somme de 63 euros.</p>
 <li>on va classer les objets dans l'ordre décroissant de leur taux de valeur (taux de valeur = valeur / masse). Ainsi le premier élément de la liste sera celui ayant le meilleur rapport valeur/masse.</li>
 <li>on prend le premier élément de la liste, puis le deuxième, etc., tant que le sac peut encore les contenir.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">objets</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">700</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">500</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">300</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">600</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;F&quot;</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">800</span><span class="p">]]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">poids_max</span> <span class="o">=</span> <span class="mi">40</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">ratio</span><span class="p">(</span><span class="n">objet</span><span class="p">):</span>
-        <span class="c1"># renvoie le rapport prix/poids d&#39;un objet</span>
-        <span class="k">return</span> <span class="n">objet</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">/</span> <span class="n">objet</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-
-<span class="o">&gt;&gt;&gt;</span> <span class="n">objets_tries</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">objets</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">ratio</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">objets_tries</span>
-     <span class="p">[[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">700</span><span class="p">],</span>
-     <span class="p">[</span><span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">800</span><span class="p">],</span>
-     <span class="p">[</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">600</span><span class="p">],</span>
-     <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">500</span><span class="p">],</span>
-     <span class="p">[</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">300</span><span class="p">],</span>
-     <span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">200</span><span class="p">]]</span>
-</code></pre></div>
-<p><strong>Calcul de la solution, par méthode gloutonne</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">objets</span>  <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">700</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">500</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">300</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">600</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;F&quot;</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">800</span><span class="p">]]</span>
-
-<span class="k">def</span> <span class="nf">ratio</span><span class="p">(</span><span class="n">objet</span><span class="p">):</span>
-    <span class="c1"># renvoie le rapport prix/poids d&#39;un objet</span>
-    <span class="k">return</span> <span class="n">objet</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">/</span> <span class="n">objet</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-
-<span class="n">objets_tries</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">objets</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">ratio</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-
-<span class="n">poids_max</span> <span class="o">=</span> <span class="mi">40</span>
-<span class="n">poids_sac</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="n">butin</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="k">for</span> <span class="n">objet</span> <span class="ow">in</span> <span class="n">objets_tries</span><span class="p">:</span>
-    <span class="n">poids_objet</span> <span class="o">=</span> <span class="n">objet</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-    <span class="k">if</span> <span class="n">poids_objet</span> <span class="o">+</span> <span class="n">poids_sac</span> <span class="o">&lt;</span> <span class="n">poids_max</span> <span class="p">:</span>
-        <span class="n">butin</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">objet</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-        <span class="n">poids_sac</span> <span class="o">+=</span> <span class="n">poids_objet</span>
-</code></pre></div></td></tr></table></div>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">butin</span>
-    <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">]</span>
-</code></pre></div>
-<p>Il faut donc choisir la combinaison A, F, C. Elle est bien valide (poids 39) et rapporte 1700.</p>
+<h4 id="321-classement-des-objets">3.2.1 Classement des objets<a class="headerlink" href="#321-classement-des-objets" title="Permanent link">⚓︎</a></h4>
+<p>On considère la liste 
+<div class="highlight"><pre><span></span><code><span class="n">objets</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">700</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">500</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">300</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">600</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;F&quot;</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">800</span><span class="p">]]</span>
+</code></pre></div></p>
+<p>En vous inspirant du 3.1.2, classer ces objets suivant leur taux de valeur.</p>
+<h4 id="322-calcul-de-la-solution-par-methode-gloutonne">3.2.2 Calcul de la solution, par méthode gloutonne<a class="headerlink" href="#322-calcul-de-la-solution-par-methode-gloutonne" title="Permanent link">⚓︎</a></h4>
 <p><strong>Question</strong> (toujours la même) :  </p>
 <p>L'algorithme glouton nous a-t-il donné la solution <strong>optimale</strong> ?<br />
 Nous allons pour cela avoir recours à la force brute pour tester toutes les combinaisons possibles.</p>
