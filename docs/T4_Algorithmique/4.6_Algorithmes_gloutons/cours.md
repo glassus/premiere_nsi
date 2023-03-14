@@ -293,7 +293,7 @@ butin = []
 
 for objet in objets_tries:
     poids_objet = objet[1]
-    if poids_objet + poids_sac < poids_max :
+    if poids_objet + poids_sac <= poids_max :
         butin.append(objet[0])
         poids_sac += poids_objet
 
