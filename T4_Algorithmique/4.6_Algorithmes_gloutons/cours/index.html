@@ -3297,6 +3297,7 @@ Evidemment, la somme de leur masse ne doit pas dépasser 15 kg.</p>
 <p>Nous allons procéder en 2 temps.</p>
 <h4 id="311-une-fonction-qui-renvoie-le-deuxieme-element">3.1.1 Une fonction qui renvoie le deuxième élément<a class="headerlink" href="#311-une-fonction-qui-renvoie-le-deuxieme-element" title="Permanent link">⚓︎</a></h4>
 <p>Créons une fonction qui renvoie le deuxième élément d'un objet <code>liste</code> :</p>
+<p><img alt="➡" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/27a1.svg" title=":arrow_right:" /> <strong>à vous</strong> <img alt="⬅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2b05.svg" title=":arrow_left:" /></p>
 <p>Utilisation :
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">simpsons</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Bart&#39;</span><span class="p">,</span> <span class="s1">&#39;Lisa&#39;</span><span class="p">,</span> <span class="s1">&#39;Maggie&#39;</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">deuxieme</span><span class="p">(</span><span class="n">simpsons</span><span class="p">)</span>
@@ -3355,15 +3356,17 @@ Evidemment, la somme de leur masse ne doit pas dépasser 15 kg.</p>
 <p>On considère la liste 
 <div class="highlight"><pre><span></span><code><span class="n">objets</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">700</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">500</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">300</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">600</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;F&quot;</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">800</span><span class="p">]]</span>
 </code></pre></div></p>
-<p>En vous inspirant du 3.1.2, classer ces objets suivant leur taux de valeur.</p>
+<p>En s'inspirant du 3.1.2, on classe ces objets suivant leur taux de valeur.</p>
+<p><img alt="➡" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/27a1.svg" title=":arrow_right:" /> <strong>à vous</strong> <img alt="⬅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2b05.svg" title=":arrow_left:" /></p>
 <h4 id="322-calcul-de-la-solution-par-methode-gloutonne">3.2.2 Calcul de la solution, par méthode gloutonne<a class="headerlink" href="#322-calcul-de-la-solution-par-methode-gloutonne" title="Permanent link">⚓︎</a></h4>
+<p><img alt="➡" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/27a1.svg" title=":arrow_right:" /> <strong>à vous</strong> <img alt="⬅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2b05.svg" title=":arrow_left:" /></p>
 <p><strong>Question</strong> (toujours la même) :  </p>
 <p>L'algorithme glouton nous a-t-il donné la solution <strong>optimale</strong> ?<br />
 Nous allons pour cela avoir recours à la force brute pour tester toutes les combinaisons possibles.</p>
 <h3 id="33-force-brute">3.3 Force brute<a class="headerlink" href="#33-force-brute" title="Permanent link">⚓︎</a></h3>
 <ul>
 <li>Il faut créer une liste de mots binaires qui vont correspondre à chaque combinaison. Par exemple, '101001' signifiera qu'on prend les objets A, C et F.
-Cette liste est de taille <span class="arithmatex">\(2^n\)</span>, où <span class="arithmatex">\(n\)</span> est le nombre d'objets. C'est cela qui pose problème : avec 80 objets, on obtient une liste à traiter qui contient plus de <span class="arithmatex">\(10^{24}\)</span> objets, soit de l'ordre de grandeur du nombre d'étoiles dans l'Univers observable, ou de gouttes d'eau dans la mer, ou du nombre de grains de sables au Sahara... (voir <a href="https://fr.wikipedia.org/wiki/Ordres_de_grandeur_de_nombres">https://fr.wikipedia.org/wiki/Ordres_de_grandeur_de_nombres</a> )</li>
+Cette liste est de taille <span class="arithmatex">\(2^n\)</span>, où <span class="arithmatex">\(n\)</span> est le nombre d'objets. C'est cela qui pose problème : avec 80 objets, on obtient une liste à traiter qui contient plus de <span class="arithmatex">\(10^{24}\)</span> objets, soit de l'ordre de grandeur du nombre d'étoiles dans l'Univers observable, ou de gouttes d'eau dans la mer, ou du nombre de grains de sables au Sahara... (voir <a class="" href="https://fr.wikipedia.org/wiki/Ordres_de_grandeur_de_nombres" target="_blank">https://fr.wikipedia.org/wiki/Ordres_de_grandeur_de_nombres</a> )</li>
 <li>Une fois cette liste établie, il suffit de parcourir chaque élément et de calculer le poids total et la valeur totale correspondante. Si le poids total dépasse le poids autorisé, on met la valeur à 0 car cette combinaison ne nous intéresse pas.</li>
 <li>Il ne reste qu'à chercher la valeur maximale et regarder la combinaison à laquelle elle correspond.</li>
 </ul>
@@ -3503,7 +3506,7 @@ Dans ce cas-là, la stratégie gloutonne peut être employée pour avoir vite et
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">13 mars 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">14 mars 2023</span>
       
     
   </small>
