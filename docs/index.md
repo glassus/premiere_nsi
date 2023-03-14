@@ -9,10 +9,11 @@
         - le fil [reddit](https://www.reddit.com/r/adventofcode/){. target="_blank"} consacré à Advent Of Code, avec des solutions dans une multitude de langages, et surtout des visualisations souvent impressionnantes. -->  
 
         
-## Thème en cours d'étude 
+## Thèmes en cours d'étude 
 
 
-:arrow_right: [Algorithmes gloutons](./T4_Algorithmique/4.6_Algorithmes_gloutons/cours/)
+:arrow_right: [Algorithmes gloutons](./T4_Algorithmique/4.6_Algorithmes_gloutons/cours/)  
+:arrow_right: [Codage des entiers](./T2_Representation_des_donnees/2.7_Codage_entiers/cours/)
 
 !!! note "*Anciens thèmes traités*"
     - [Codage des caractères](./T2_Representation_des_donnees/2.6_Codage_caracteres/cours/)  

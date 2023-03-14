@@ -191,6 +191,8 @@ Nous allons procéder en 2 temps.
 #### 3.1.1 Une fonction qui renvoie le deuxième élément
 Créons une fonction qui renvoie le deuxième élément d'un objet `liste` :
 
+:arrow_right: **à vous** :arrow_left:
+
 {#
 ```python
 def deuxieme(lst) :
@@ -245,7 +247,9 @@ objets = [["A", 13, 700], ["B", 12, 500], ["C", 8, 200], ["D", 10, 300], ["E", 1
 ```
 
 
-En vous inspirant du 3.1.2, classer ces objets suivant leur taux de valeur.
+En s'inspirant du 3.1.2, on classe ces objets suivant leur taux de valeur.
+
+:arrow_right: **à vous** :arrow_left:
 
 {#
 ```python linenums='1'
@@ -271,6 +275,8 @@ objets_tries = sorted(objets, key = ratio, reverse = True)
 
 
 #### 3.2.2 Calcul de la solution, par méthode gloutonne
+
+:arrow_right: **à vous** :arrow_left:
 
 {#
 ```python linenums='1'
@@ -314,7 +320,7 @@ Nous allons pour cela avoir recours à la force brute pour tester toutes les com
 ### 3.3 Force brute 
 
 - Il faut créer une liste de mots binaires qui vont correspondre à chaque combinaison. Par exemple, '101001' signifiera qu'on prend les objets A, C et F.
-Cette liste est de taille $2^n$, où $n$ est le nombre d'objets. C'est cela qui pose problème : avec 80 objets, on obtient une liste à traiter qui contient plus de $10^{24}$ objets, soit de l'ordre de grandeur du nombre d'étoiles dans l'Univers observable, ou de gouttes d'eau dans la mer, ou du nombre de grains de sables au Sahara... (voir [https://fr.wikipedia.org/wiki/Ordres_de_grandeur_de_nombres](https://fr.wikipedia.org/wiki/Ordres_de_grandeur_de_nombres) )
+Cette liste est de taille $2^n$, où $n$ est le nombre d'objets. C'est cela qui pose problème : avec 80 objets, on obtient une liste à traiter qui contient plus de $10^{24}$ objets, soit de l'ordre de grandeur du nombre d'étoiles dans l'Univers observable, ou de gouttes d'eau dans la mer, ou du nombre de grains de sables au Sahara... (voir [https://fr.wikipedia.org/wiki/Ordres_de_grandeur_de_nombres](https://fr.wikipedia.org/wiki/Ordres_de_grandeur_de_nombres){. target="_blank"} )
 - Une fois cette liste établie, il suffit de parcourir chaque élément et de calculer le poids total et la valeur totale correspondante. Si le poids total dépasse le poids autorisé, on met la valeur à 0 car cette combinaison ne nous intéresse pas.
 - Il ne reste qu'à chercher la valeur maximale et regarder la combinaison à laquelle elle correspond.
 
