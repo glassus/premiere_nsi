@@ -191,14 +191,12 @@ Nous allons procéder en 2 temps.
 #### 3.1.1 Une fonction qui renvoie le deuxième élément
 Créons une fonction qui renvoie le deuxième élément d'un objet `liste` :
 
-:arrow_right: **à vous** :arrow_left:
 
-{#
 ```python
 def deuxieme(lst) :
         return lst[1]
 ```
-#}
+
 
 
 Utilisation :
@@ -251,7 +249,7 @@ En s'inspirant du 3.1.2, on classe ces objets suivant leur taux de valeur.
 
 :arrow_right: **à vous** :arrow_left:
 
-{#
+
 ```python linenums='1'
 objets = [["A", 13, 700], ["B", 12, 500], ["C", 8, 200], ["D", 10, 300], ["E", 14, 600], ["F", 18, 800]]
 
@@ -271,7 +269,7 @@ objets_tries = sorted(objets, key = ratio, reverse = True)
  ['D', 10, 300],
  ['C', 8, 200]]
 ```
-#}
+
 
 
 #### 3.2.2 Calcul de la solution, par méthode gloutonne
