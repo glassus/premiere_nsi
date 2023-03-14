@@ -276,7 +276,7 @@ objets_tries = sorted(objets, key = ratio, reverse = True)
 
 :arrow_right: **à vous** :arrow_left:
 
-{#
+
 ```python linenums='1'
 objets  = [["A", 13, 700], ["B", 12, 500], ["C", 8, 200], ["D", 10, 300], ["E", 14, 600], ["F", 18, 800]]
 
@@ -307,7 +307,7 @@ for objet in objets_tries:
 
 
 Il faut donc choisir la combinaison A, F, C. Elle est bien valide (poids 39) et rapporte 1700.
-#}
+
 
 
 **Question** (toujours la même) :  
