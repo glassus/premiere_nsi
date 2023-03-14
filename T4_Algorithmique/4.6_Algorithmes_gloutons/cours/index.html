@@ -3297,7 +3297,9 @@ Evidemment, la somme de leur masse ne doit pas dépasser 15 kg.</p>
 <p>Nous allons procéder en 2 temps.</p>
 <h4 id="311-une-fonction-qui-renvoie-le-deuxieme-element">3.1.1 Une fonction qui renvoie le deuxième élément<a class="headerlink" href="#311-une-fonction-qui-renvoie-le-deuxieme-element" title="Permanent link">⚓︎</a></h4>
 <p>Créons une fonction qui renvoie le deuxième élément d'un objet <code>liste</code> :</p>
-<p><img alt="➡" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/27a1.svg" title=":arrow_right:" /> <strong>à vous</strong> <img alt="⬅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2b05.svg" title=":arrow_left:" /></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">deuxieme</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="n">lst</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</code></pre></div>
 <p>Utilisation :
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">simpsons</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Bart&#39;</span><span class="p">,</span> <span class="s1">&#39;Lisa&#39;</span><span class="p">,</span> <span class="s1">&#39;Maggie&#39;</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">deuxieme</span><span class="p">(</span><span class="n">simpsons</span><span class="p">)</span>
@@ -3358,6 +3360,28 @@ Evidemment, la somme de leur masse ne doit pas dépasser 15 kg.</p>
 </code></pre></div></p>
 <p>En s'inspirant du 3.1.2, on classe ces objets suivant leur taux de valeur.</p>
 <p><img alt="➡" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/27a1.svg" title=":arrow_right:" /> <strong>à vous</strong> <img alt="⬅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2b05.svg" title=":arrow_left:" /></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">objets</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">700</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">500</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">300</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">600</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;F&quot;</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">800</span><span class="p">]]</span>
+
+<span class="k">def</span> <span class="nf">ratio</span><span class="p">(</span><span class="n">objet</span><span class="p">):</span>
+    <span class="c1"># renvoie le rapport prix/poids d&#39;un objet</span>
+    <span class="k">return</span> <span class="n">objet</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">/</span> <span class="n">objet</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">objets_tries</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">objets</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">ratio</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">objets_tries</span>
+ <span class="p">[[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">700</span><span class="p">],</span>
+ <span class="p">[</span><span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">800</span><span class="p">],</span>
+ <span class="p">[</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">600</span><span class="p">],</span>
+ <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">500</span><span class="p">],</span>
+ <span class="p">[</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">300</span><span class="p">],</span>
+ <span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">200</span><span class="p">]]</span>
+</code></pre></div>
 <h4 id="322-calcul-de-la-solution-par-methode-gloutonne">3.2.2 Calcul de la solution, par méthode gloutonne<a class="headerlink" href="#322-calcul-de-la-solution-par-methode-gloutonne" title="Permanent link">⚓︎</a></h4>
 <p><img alt="➡" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/27a1.svg" title=":arrow_right:" /> <strong>à vous</strong> <img alt="⬅" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2b05.svg" title=":arrow_left:" /></p>
 <p><strong>Question</strong> (toujours la même) :  </p>
