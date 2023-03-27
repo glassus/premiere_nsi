@@ -17,7 +17,7 @@
         <link rel="next" href="../../2.8_Codage_non-entiers/cours/">
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.2">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.4">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.7bf56d0a.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.240905d7.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
@@ -1239,8 +1239,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-la-fausse-bonne-idee" class="md-nav__link">
-    2.1 La fausse bonne idée
+  <a href="#21-la-partiellement-fausse-bonne-idee" class="md-nav__link">
+    2.1 La (partiellement) fausse bonne idée
   </a>
   
 </li>
@@ -1253,8 +1253,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#23-conclusion-ecriture-loppose-dun-nombre-positif" class="md-nav__link">
-    2.3 Conclusion : écriture l'opposé d'un nombre positif
+  <a href="#23-tableau-des-entiers-en-binaire-signe" class="md-nav__link">
+    2.3 Tableau des entiers en binaire signé
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-conclusion-ecriture-loppose-dun-nombre-positif" class="md-nav__link">
+    2.4 Conclusion : écriture l'opposé d'un nombre positif
   </a>
   
 </li>
@@ -3145,20 +3152,13 @@
 Le nombre maximal qu'on puisse coder est <code>11111111</code>. C'est l'entier naturel 255.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Correction</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ol>
 <li>Quel est le plus grand entier non signé codable sur 16 bits ?</li>
 <li>... sur 32 bits ?</li>
 <li>... <span class="arithmatex">\(n\)</span> bits ?</li>
-</ol>
-</div>
-<div class="tabbed-block">
-<ol>
-<li><span class="arithmatex">\(N=1+2+2^2+2^3+\dots+2^{15}= 65535\)</span></li>
-<li><span class="arithmatex">\(N=1+2+2^2+2^3+\dots+2^{31}= 4294967295\)</span></li>
-<li>Pour tout <span class="arithmatex">\(n \in \mathbb{N}\)</span>, <span class="arithmatex">\(1+2+2^2+2^3+\dots+2^{n-1}=2^{n}-1\)</span> (formule de la somme des termes d'une suite géométrique de raison 2).</li>
 </ol>
 </div>
 </div>
@@ -3189,9 +3189,9 @@ Le nombre maximal qu'on puisse coder est <code>11111111</code>. C'est l'entier n
 </div>
 </div>
 <h2 id="2-les-nombres-entiers-en-binaire-signe">2. Les nombres entiers en binaire signé<a class="headerlink" href="#2-les-nombres-entiers-en-binaire-signe" title="Permanent link">⚓︎</a></h2>
-<h3 id="21-la-fausse-bonne-idee">2.1 La fausse bonne idée<a class="headerlink" href="#21-la-fausse-bonne-idee" title="Permanent link">⚓︎</a></h3>
-<p>Comment différencier les nombres positifs des nombres négatifs ?<br />
-L'idée naturelle est de réserver 1 bit pour le signe.</p>
+<h3 id="21-la-partiellement-fausse-bonne-idee">2.1 La (partiellement) fausse bonne idée<a class="headerlink" href="#21-la-partiellement-fausse-bonne-idee" title="Permanent link">⚓︎</a></h3>
+<p>Comment différencier les nombres positifs des nombres négatifs ? <br />
+L'idée naturelle est de réserver 1 bit pour le signe, et de coder le reste du nombre «naturellement».</p>
 <p>Par exemple, on peut décréter que le premier bit (appelé <strong>bit de poids fort</strong>) sera le bit de signe :</p>
 <ul>
 <li>0 pour un nombre positif</li>
@@ -3205,7 +3205,7 @@ L'idée naturelle est de réserver 1 bit pour le signe.</p>
 <img alt="" class="center" src="../data/add2.png" /></li>
 </ul>
 <p><strong>Moralité :</strong></p>
-<p>Indiquer le signe d'un nombre par son premier bit est une fausse bonne idée, il faut trouver autre chose.</p>
+<p>Ce système d'écriture ne marche pas bien.</p>
 <h3 id="22-a-la-recherche-de-loppose-dun-nombre">2.2 À la recherche de l'opposé d'un nombre<a class="headerlink" href="#22-a-la-recherche-de-loppose-dun-nombre" title="Permanent link">⚓︎</a></h3>
 <p><strong>Idée :</strong></p>
 <p>Plutôt que de chercher à écrire directement le nombre <span class="arithmatex">\(-3\)</span>, nous allons chercher à déterminer ce qu'il faut ajouter à <span class="arithmatex">\((+3)\)</span> pour obtenir 0.</p>
@@ -3221,11 +3221,107 @@ L'idée naturelle est de réserver 1 bit pour le signe.</p>
 <p>On peut remarquer qu'en inversant chaque bit du nombre de départ <code>00000011</code>, on obtient <code>11111100</code>, qui appelé le <strong>complément à 2</strong> du nombre <code>00000011</code>.</p>
 <p>Il ne reste donc plus qu'à ajouter <code>1</code> à ce nombre <code>11111100</code> pour obtenir le nombre cherché, <code>11111101</code></p>
 <p><img alt="⚠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/26a0.svg" title=":warning:" />  ce nombre <code>11111101</code> représente 253 en codage non signé. Il est donc nécessaire, lorsqu'on représente un nombre, de savoir si les nombres manipulés seront des entiers naturels (<em>non signés</em>) ou bien relatifs (<em>signés</em>).</p>
-<h3 id="23-conclusion-ecriture-loppose-dun-nombre-positif">2.3 Conclusion : écriture l'opposé d'un nombre positif<a class="headerlink" href="#23-conclusion-ecriture-loppose-dun-nombre-positif" title="Permanent link">⚓︎</a></h3>
+<h3 id="23-tableau-des-entiers-en-binaire-signe">2.3 Tableau des entiers en binaire <strong>signé</strong><a class="headerlink" href="#23-tableau-des-entiers-en-binaire-signe" title="Permanent link">⚓︎</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">binaire</th>
+<th align="center">base 10</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">10000000</td>
+<td align="center">-128</td>
+</tr>
+<tr>
+<td align="center">10000001</td>
+<td align="center">-127</td>
+</tr>
+<tr>
+<td align="center">10000010</td>
+<td align="center">-126</td>
+</tr>
+<tr>
+<td align="center">10000011</td>
+<td align="center">-125</td>
+</tr>
+<tr>
+<td align="center">10000100</td>
+<td align="center">-124</td>
+</tr>
+<tr>
+<td align="center">10001001</td>
+<td align="center">-123</td>
+</tr>
+<tr>
+<td align="center">...</td>
+<td align="center">...</td>
+</tr>
+<tr>
+<td align="center">11111100</td>
+<td align="center">-4</td>
+</tr>
+<tr>
+<td align="center">11111101</td>
+<td align="center">-3</td>
+</tr>
+<tr>
+<td align="center">11111110</td>
+<td align="center">-2</td>
+</tr>
+<tr>
+<td align="center">11111111</td>
+<td align="center">-1</td>
+</tr>
+<tr>
+<td align="center">00000000</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">00000001</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">00000010</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">00000011</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">00000100</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="center">...</td>
+<td align="center">...</td>
+</tr>
+<tr>
+<td align="center">11111100</td>
+<td align="center">124</td>
+</tr>
+<tr>
+<td align="center">11111101</td>
+<td align="center">125</td>
+</tr>
+<tr>
+<td align="center">11111110</td>
+<td align="center">126</td>
+</tr>
+<tr>
+<td align="center">11111111</td>
+<td align="center">127</td>
+</tr>
+</tbody>
+</table>
+<h3 id="24-conclusion-ecriture-loppose-dun-nombre-positif">2.4 Conclusion : écriture l'opposé d'un nombre positif<a class="headerlink" href="#24-conclusion-ecriture-loppose-dun-nombre-positif" title="Permanent link">⚓︎</a></h3>
+<p>Considérons que ce nombre positif s'écrit sur 7 bits, donc qu'il est de la forme <code>0XXXXXXX</code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Écriture de l'opposé d'un nombre positif <img alt="❤" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764.svg" title=":heart:" /></p>
 <ul>
-<li>On prend le complément à 2 de chaque bit du nombre de départ</li>
+<li>On prend le complément à 2 de chacun des 8 bits du nombre de départ</li>
 <li>On ajoute 1 au nombre obtenu.</li>
 </ul>
 </div>
@@ -3247,6 +3343,9 @@ L'idée naturelle est de réserver 1 bit pour le signe.</p>
 </div>
 </div>
 </div>
+<p><img alt="➡" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/27a1.svg" title=":arrow_right:" /> <strong>Remarque</strong><br />
+Les nombres négatifs commenceront donc toujours par le bit 1, et les nombres positifs par le bit 0. Cela revient à suivre partiellement notre fausse bonne idée du 2.1.<br />
+Et cela donne surtout une méthode très pratique pour savoir qui est positif et qui est négatif !</p>
 <h2 id="3-travail-inverse-passage-du-binaire-signe-au-nombre-relatif">3. Travail inverse : passage du binaire signé au nombre relatif<a class="headerlink" href="#3-travail-inverse-passage-du-binaire-signe-au-nombre-relatif" title="Permanent link">⚓︎</a></h2>
 <p>Considérons le nombre <code>11101101</code>, codé en binaire signé. À quel nombre relatif correspond-il ?</p>
 <ol>
@@ -3311,7 +3410,7 @@ Le nombre maximum de secondes qui peut être représenté est donc <code>0111111
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">14 mars 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">27 mars 2023</span>
       
     
   </small>
@@ -3330,10 +3429,10 @@ Le nombre maximum de secondes qui peut être représenté est donc <code>0111111
           
         </div>
         
-          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
             Retour en haut de la page
-          </a>
+          </button>
         
       </main>
       
@@ -3395,7 +3494,7 @@ Le nombre maximum de secondes qui peut être représenté est donc <code>0111111
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.fc8c2696.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.19047be9.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       
