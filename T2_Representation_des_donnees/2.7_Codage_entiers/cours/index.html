@@ -3152,13 +3152,20 @@
 Le nombre maximal qu'on puisse coder est <code>11111111</code>. C'est l'entier naturel 255.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ol>
 <li>Quel est le plus grand entier non signé codable sur 16 bits ?</li>
 <li>... sur 32 bits ?</li>
 <li>... <span class="arithmatex">\(n\)</span> bits ?</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><span class="arithmatex">\(N=1+2+2^2+2^3+\dots+2^{15}= 65535\)</span></li>
+<li><span class="arithmatex">\(N=1+2+2^2+2^3+\dots+2^{31}= 4294967295\)</span></li>
+<li>Pour tout <span class="arithmatex">\(n \in \mathbb{N}\)</span>, <span class="arithmatex">\(1+2+2^2+2^3+\dots+2^{n-1}=2^{n}-1\)</span> (formule de la somme des termes d'une suite géométrique de raison 2).</li>
 </ol>
 </div>
 </div>
