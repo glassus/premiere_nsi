@@ -23,11 +23,13 @@ Le nombre maximal qu'on puisse coder est `11111111`. C'est l'entier naturel 255.
         1. Quel est le plus grand entier non signé codable sur 16 bits ?
         2. ... sur 32 bits ?
         3. ... $n$ bits ?
+
+    {#    
     === "Correction"
         1. $N=1+2+2^2+2^3+\dots+2^{15}= 65535$
         2. $N=1+2+2^2+2^3+\dots+2^{31}= 4294967295$
         3. Pour tout $n \in \mathbb{N}$, $1+2+2^2+2^3+\dots+2^{n-1}=2^{n}-1$ (formule de la somme des termes d'une suite géométrique de raison 2).
-
+    #}
 
 !!! note "Python et les entiers :heart:"
     Depuis la version 3 du langage Python, il n'y a plus de taille maximale pour les entiers en Python.
@@ -49,9 +51,9 @@ Le nombre maximal qu'on puisse coder est `11111111`. C'est l'entier naturel 255.
 
 ## 2. Les nombres entiers en binaire signé 
 
-### 2.1 La fausse bonne idée
-Comment différencier les nombres positifs des nombres négatifs ?  
-L'idée naturelle est de réserver 1 bit pour le signe.
+### 2.1 La (partiellement) fausse bonne idée
+Comment différencier les nombres positifs des nombres négatifs ?   
+L'idée naturelle est de réserver 1 bit pour le signe, et de coder le reste du nombre «naturellement».
 
 Par exemple, on peut décréter que le premier bit (appelé **bit de poids fort**) sera le bit de signe :
 
@@ -66,9 +68,10 @@ Dans ce cas, `00000011` serait le nombre $+3$ et `10000011` serait le nombre $-3
 - plus grave : l'addition $(+3)+(-3)$ serait égale à $-6$ !
 ![](data/add2.png){: .center}
 
+
 **Moralité :**
 
-Indiquer le signe d'un nombre par son premier bit est une fausse bonne idée, il faut trouver autre chose.
+Ce système d'écriture ne marche pas bien.
 
 ### 2.2 À la recherche de l'opposé d'un nombre
 
@@ -102,12 +105,44 @@ Il ne reste donc plus qu'à ajouter `1` à ce nombre `11111100` pour obtenir le 
 
 
 
+### 2.3 Tableau des entiers en binaire **signé**
+
+|binaire | base 10|
+|:--:|:--:|
+|10000000|-128|
+|10000001|-127|
+|10000010|-126|
+|10000011|-125|
+|10000100|-124|
+|10001001|-123|
+|...|...|
+|11111100|-4|
+|11111101|-3|
+|11111110|-2|
+|11111111|-1|
+|00000000|0|
+|00000001|1|
+|00000010|2|
+|00000011|3|
+|00000100|4|
+|...|...|
+|11111100|124|
+|11111101|125|
+|11111110|126|
+|11111111|127|
 
 
-### 2.3 Conclusion : écriture l'opposé d'un nombre positif
+
+
+
+
+
+### 2.4 Conclusion : écriture l'opposé d'un nombre positif
+
+Considérons que ce nombre positif s'écrit sur 7 bits, donc qu'il est de la forme ```0XXXXXXX```.
 
 !!! note "Écriture de l'opposé d'un nombre positif :heart:"
-    - On prend le complément à 2 de chaque bit du nombre de départ
+    - On prend le complément à 2 de chacun des 8 bits du nombre de départ
     - On ajoute 1 au nombre obtenu.
 
 !!! abstract "Exercice"
@@ -122,7 +157,9 @@ Il ne reste donc plus qu'à ajouter `1` à ce nombre `11111100` pour obtenir le 
         Le nombre $-13$ s'écrit donc `11110011`.
 
 
-
+:arrow_right: **Remarque**  
+Les nombres négatifs commenceront donc toujours par le bit 1, et les nombres positifs par le bit 0. Cela revient à suivre partiellement notre fausse bonne idée du 2.1.  
+Et cela donne surtout une méthode très pratique pour savoir qui est positif et qui est négatif !
 
 
 ## 3. Travail inverse : passage du binaire signé au nombre relatif
