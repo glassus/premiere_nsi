@@ -12,9 +12,10 @@
 ## Thèmes en cours d'étude 
 
 
-:arrow_right: [Architecture Von Neumann](./T3_Architecture_materielle/3.2_Architecture_Von_Neumann/cours/)
+:arrow_right: [Dictionnaires](./T2_Representation_des_donnees/2.3_Dictionnaires/cours/)
 
 !!! note "*Anciens thèmes traités*"
+    - [Architecture Von Neumann](./T3_Architecture_materielle/3.2_Architecture_Von_Neumann/cours/)
     - [Codage des non-entiers](./T2_Representation_des_donnees/2.8_Codage_non-entiers/cours/)
     - [Codage des entiers](./T2_Representation_des_donnees/2.7_Codage_entiers/cours/)
     - [Algorithmes gloutons](./T4_Algorithmique/4.6_Algorithmes_gloutons/cours/) 

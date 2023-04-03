@@ -140,6 +140,7 @@ Ces méthodes sont importantes (elles figurent explicitement au programme de NSI
         dressing = {"pantalons":3, "pulls":4, "tee-shirts":8}
         ```
         Créer une fonction `achat(habit)` qui augmente de 1 le nombre d'habits (pantalon, pull ou tee-shirt) de mon dressing.
+    {#
     === "Correction"
         ```python linenums='1'
         dressing = {"pantalons":3, "pulls":4, "tee-shirts":8}
@@ -147,6 +148,7 @@ Ces méthodes sont importantes (elles figurent explicitement au programme de NSI
         def achat(habit):
             dressing[habit] += 1
         ```
+    #}
 
 
 **Remarque :**
@@ -188,6 +190,8 @@ Nous allons résoudre ce problème grâce à :
 !!! example "{{ exercice() }}"
     === "Énoncé"
         Améliorer la fonction `achat(habit)` en y incluant un test pour prendre en compte les nouveaux habits.
+    
+    {#
     === "Correction"
         ```python linenums='1'
         def achat(habit):
@@ -196,18 +200,19 @@ Nous allons résoudre ce problème grâce à :
             else:
                 dressing[habit] = 1
         ```
-
+    #}
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
         On considère la liste suivante :
         ```python
-        lst = ['Emmy', 'Ahmed', 'Antoine', 'Emma', 'Louan', 'Louka', 'Louan', 'Elouo', 'Candice', 'Tristan', 'Alissa', 'Louka', 'Louka', 'Emma', 'Alissa', 'Antoine', 'Elouo', 'Louan', 'Mathias', 'Candice', 'Antoine', 'Tristan', 'Louka', 'Emma', 'Tristan', 'Mathias', 'Louan', 'Vincent', 'Vincent', 'Ahmed', 'Louka', 'Elouo', 'Ahmed', 'Elouo', 'Candice', 'Louka', 'Mathias', 'Mathias', 'Emmy', 'Candice', 'Tristan', 'Antoine', 'Mathias', 'Ahmed', 'Candice', 'Louka', 'Alissa', 'Vincent', 'Elouo', 'Vincent', 'Antoine', 'Elouo', 'Emmy', 'Hugo', 'Vincent', 'Louan', 'Emmy', 'Emma', 'Vincent', 'Louan', 'Elouo', 'Emmy', 'Emmy', 'Emma', 'Mathias', 'Elouo', 'Louka', 'Hugo', 'Emma', 'Vincent', 'Candice', 'Ahmed', 'Hugo', 'Emma', 'Candice', 'Louan', 'Louka', 'Candice', 'Emma', 'Hugo', 'Mathias', 'Tristan', 'Mathias', 'Tristan', 'Antoine', 'Antoine', 'Hugo', 'Louka', 'Mathias', 'Hugo', 'Alissa', 'Elouo', 'Louka', 'Louka', 'Alissa', 'Vincent', 'Ahmed', 'Emma', 'Hugo', 'Mathias', 'Hugo', 'Mathias', 'Antoine', 'Ahmed', 'Antoine', 'Antoine', 'Vincent', 'Ahmed', 'Candice', 'Mathias', 'Emmy', 'Mathias', 'Emma', 'Antoine', 'Tristan', 'Antoine', 'Tristan', 'Candice', 'Louka', 'Louka', 'Tristan', 'Ahmed', 'Elouo', 'Emmy', 'Antoine', 'Alissa', 'Ahmed', 'Antoine', 'Alissa', 'Louan', 'Emma', 'Elouo', 'Tristan', 'Emmy', 'Elouo', 'Louka', 'Emmy', 'Ahmed', 'Louka', 'Vincent', 'Vincent', 'Antoine', 'Ahmed', 'Ahmed', 'Vincent', 'Tristan', 'Louan', 'Emmy', 'Elouo', 'Louka', 'Emmy', 'Hugo', 'Emmy', 'Emma', 'Emma', 'Hugo', 'Louan', 'Hugo', 'Antoine', 'Ahmed', 'Emmy', 'Vincent', 'Emma', 'Candice', 'Candice', 'Louka', 'Louan', 'Alissa', 'Vincent', 'Vincent', 'Tristan', 'Louka', 'Louan', 'Louka', 'Antoine', 'Tristan', 'Alissa', 'Ahmed', 'Vincent', 'Louka', 'Alissa', 'Mathias', 'Elouo', 'Emmy', 'Ahmed', 'Emmy', 'Vincent', 'Elouo', 'Emma', 'Mathias', 'Ahmed', 'Vincent', 'Mathias', 'Candice', 'Elouo', 'Louan', 'Elouo', 'Vincent', 'Emmy', 'Emma']
+        lst = ['Samuel', 'Pauline', 'Lina', 'Lina', 'Louis', 'Waëll', 'Clément', 'Khaled', 'Alexandre', 'Elie', 'Khaled', 'Khaled', 'Armand', 'Lina', 'Louis', 'Lina', 'Lina', 'Elie', 'Jules', 'Louis', 'Clément', 'Khaled', 'Jules-Evan', 'Lina', 'Jules', 'Hadzo', 'Zoran', 'Clément', 'Armand', 'Louis', 'Elie', 'Lina', 'Alexandre', 'Khaled', 'Iris', 'Gianni', 'Gianni', 'Pauline', 'Gianni', 'Elie', 'Iris', 'Armand', 'Louis', 'Clément', 'Pauline', 'Zoran', 'Khaled', 'Zoran', 'Elie', 'Waëll', 'Pauline', 'Lina', 'Alexandre', 'Khaled', 'Mehmet', 'Khaled', 'Hadzo', 'Zoran', 'Gianni', 'Jules', 'Paul', 'Pauline', 'Clément', 'Alexandre', 'Iris', 'Khaled', 'Gianni', 'Elie', 'Jules', 'Khaled', 'Louis', 'Jules-Evan', 'Jules-Evan', 'Louis', 'Gianni', 'Elie', 'Clément', 'Khaled', 'Louis', 'Louis', 'Emrys', 'Jules', 'Pauline', 'Armand', 'Elie', 'Jules', 'Elie', 'Khaled', 'Clément', 'Louis', 'Khaled', 'Emrys', 'Samuel', 'Hadzo', 'Elie', 'Clément', 'Alexandre', 'Hadzo', 'Lina', 'Iris', 'Alexandre', 'Mehmet', 'Elie', 'Jules', 'Khaled', 'Pauline', 'Samuel', 'Armand', 'Mehmet', 'Clément', 'Jules', 'Armand', 'Mehmet', 'Lina', 'Armand', 'Clément', 'Hadzo', 'Clément', 'Emrys', 'Samuel', 'Zoran', 'Zoran', 'Zoran', 'Mehmet', 'Jules', 'Khaled', 'Khaled', 'Elie', 'Armand', 'Jules', 'Alexandre', 'Alexandre', 'Louis', 'Armand', 'Zoran', 'Iris', 'Clément', 'Mehmet', 'Armand', 'Armand', 'Khaled', 'Lina', 'Lina', 'Jules', 'Louis', 'Paul', 'Pauline', 'Pauline', 'Pauline', 'Khaled', 'Lina', 'Waëll', 'Zoran', 'Hadzo', 'Emrys', 'Gianni', 'Jules', 'Samuel', 'Gianni', 'Pauline', 'Waëll', 'Clément', 'Khaled', 'Jules', 'Jules', 'Louis', 'Zoran', 'Alexandre', 'Iris', 'Paul', 'Emrys', 'Armand', 'Waëll', 'Zoran', 'Jules', 'Lina', 'Elie', 'Paul', 'Elie', 'Armand', 'Jules-Evan', 'Zoran', 'Alexandre', 'Zoran', 'Elie', 'Elie', 'Elie', 'Lina', 'Armand', 'Louis', 'Zoran', 'Lina', 'Armand', 'Alexandre', 'Samuel', 'Iris', 'Zoran', 'Paul', 'Pauline', 'Jules', 'Armand', 'Jules', 'Iris', 'Iris', 'Jules', 'Alexandre', 'Jules-Evan', 'Jules', 'Iris', 'Iris', 'Armand', 'Lina', 'Pauline', 'Zoran', 'Zoran', 'Pauline', 'Mehmet']
         ```
         
 
         Créer un dictionnaire qui associera à chaque prénom son nombre d'occurrences dans la liste.
-        
+
+    {#    
     === "Correction"
         ```python linenums='1'
         occurrence = {}
@@ -218,7 +223,7 @@ Nous allons résoudre ce problème grâce à :
             else:
                 occurrence[prenom] = 1
         ``` 
-
+    #}
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
@@ -226,7 +231,8 @@ Nous allons résoudre ce problème grâce à :
         ```lst = ['5717', '1133', '5545', '4031', '6398', '2734', '3070', '1346', '7849', '7288', '7587', '6217', '8240', '5733', '6466', '7972', '7341', '6616', '5061', '2441', '2571', '4496', '4831', '5395', '8584', '3033', '6266', '2452', '6909', '3021', '5404', '3799', '5053', '8096', '2488', '8519', '6896', '7300', '5914', '7464', '5068', '1386', '9898', '8313', '1072', '1441', '7333', '5691', '6987', '5255']``` 
 
         Quel est le **chiffre** qui revient le plus fréquemment dans cette liste ?
-        
+
+    {#  
     === "Correction"
         ```python linenums='1'
         lst = ['5717', '1133', '5545', '4031', '6398', '2734', '3070', '1346', '7849', '7288', '7587', '6217', '8240', '5733', '6466', '7972', '7341', '6616', '5061', '2441', '2571', '4496', '4831', '5395', '8584', '3033', '6266', '2452', '6909', '3021', '5404', '3799', '5053', '8096', '2488', '8519', '6896', '7300', '5914', '7464', '5068', '1386', '9898', '8313', '1072', '1441', '7333', '5691', '6987', '5255']
@@ -252,3 +258,4 @@ Nous allons résoudre ce problème grâce à :
         print('il apparait', occ_max, 'fois')
 
         ```
+    #}
