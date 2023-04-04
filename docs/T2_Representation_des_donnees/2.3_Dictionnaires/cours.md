@@ -140,7 +140,7 @@ Ces méthodes sont importantes (elles figurent explicitement au programme de NSI
         dressing = {"pantalons":3, "pulls":4, "tee-shirts":8}
         ```
         Créer une fonction `achat(habit)` qui augmente de 1 le nombre d'habits (pantalon, pull ou tee-shirt) de mon dressing.
-    {#
+    
     === "Correction"
         ```python linenums='1'
         dressing = {"pantalons":3, "pulls":4, "tee-shirts":8}
@@ -148,7 +148,7 @@ Ces méthodes sont importantes (elles figurent explicitement au programme de NSI
         def achat(habit):
             dressing[habit] += 1
         ```
-    #}
+    
 
 
 **Remarque :**
@@ -191,7 +191,7 @@ Nous allons résoudre ce problème grâce à :
     === "Énoncé"
         Améliorer la fonction `achat(habit)` en y incluant un test pour prendre en compte les nouveaux habits.
     
-    {#
+    
     === "Correction"
         ```python linenums='1'
         def achat(habit):
@@ -200,7 +200,7 @@ Nous allons résoudre ce problème grâce à :
             else:
                 dressing[habit] = 1
         ```
-    #}
+    
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
@@ -212,7 +212,7 @@ Nous allons résoudre ce problème grâce à :
 
         Créer un dictionnaire qui associera à chaque prénom son nombre d'occurrences dans la liste.
 
-    {#    
+       
     === "Correction"
         ```python linenums='1'
         occurrence = {}
@@ -223,7 +223,7 @@ Nous allons résoudre ce problème grâce à :
             else:
                 occurrence[prenom] = 1
         ``` 
-    #}
+    
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
