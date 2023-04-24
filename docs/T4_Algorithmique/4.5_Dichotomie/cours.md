@@ -46,7 +46,18 @@ Extrait de [Wikipedia](https://fr.wikipedia.org/wiki/Diviser_pour_r%C3%A9gner_(i
 -->
 ##  1. Introduction : recherche d'une valeur dans une liste
 
-### 1.1 Préambule : liste non triée
+### 1.1 Préambule
+
+!!! note "De l'importance de bien ranger ses affaires"
+    Les premiers algorithmes «célèbres» que nous avons découverts étaient des [algorithmes de tri](https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.3_Tri_par_insertion/cours/){. target="_blank"}. 
+
+    Quel est l'intérêt de trier ses données ?
+    
+    - l'intérêt immédiat est d'en tirer un classement : quelle est la plus grande (ou plus petite) valeur, la deuxième, la troisième... On s'en sert donc évidemment pour déterminer une valeur optimale, un gagnant dans une compétition, etc. Mais il y a une autre raison plus importante.
+
+    - **Trier ses données permet de rechercher plus rapidement une valeur précise parmi celles-ci.**
+
+
 
 **Exemple :** pouvez-vous deviner la couleur à laquelle je pense ?
 
@@ -55,7 +66,9 @@ Extrait de [Wikipedia](https://fr.wikipedia.org/wiki/Diviser_pour_r%C3%A9gner_(i
 coul = ["bleu", "jaune", "rouge", "vert", "violet", "marron"]
 ```
 
-Toutes les méthodes (proposition des valeurs dans l'ordre, au hasard, dans l'ordre inverse...) sont équivalentes car la liste n'est pas triée.
+Toutes les méthodes (proposition des valeurs dans l'ordre, au hasard, dans l'ordre inverse...) sont équivalentes : elles sont toutes aussi mauvaises, aucune stratégie n'est possible car les données ne sont pas triées. Si je suis à la recherche de la valeur "vert", le fait de piocher "rouge" ne me donnera aucune indication sur le fait que je devrais chercher plus à gauche à plus à droite que l'endroit où j'ai pioché.
+
+Il faudrait pour cela que la liste soit triée (et donc qu'elle soit «triable», ce qui n'est pas toujours le cas !). C'est donc le cas dans lequel nous allons nous placer dans toute la suite de ce cours :
 
 
 :star: :star: :star: Dans toute la suite, nous rechercherons un élément dans une liste d'entiers **triée** dans l'ordre croissant. :star: :star: :star: 
@@ -194,7 +207,11 @@ Nous allons donc travailler avec trois variables :
 Nous allons faire *se rapprocher* les indices `indice_debut` et `indice_fin` **tant que** `indice_debut <= indice_fin`
 
 
-!!! note "Recherche dichotomique dans une liste triée :heart: :heart: :heart:"
+:arrow_right: [Codes à trous](../intro_cours/){. target="_blank"}
+
+
+
+??? note "Recherche dichotomique dans une liste triée :heart: :heart: :heart:"
     ```python
     def recherche_dichotomique(lst, val) :
         indice_debut = 0

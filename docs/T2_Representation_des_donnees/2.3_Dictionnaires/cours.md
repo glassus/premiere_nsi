@@ -259,3 +259,8 @@ Nous allons résoudre ce problème grâce à :
 
         ```
     #}
+
+
+!!! example "{{ exercice() }}"
+    [Exercice de bac](https://glassus.github.io/terminale_nsi/T1_Structures_de_donnees/1.2_Dictionnaires/exercices/#exercice-2){. target="_blank"}
+    
