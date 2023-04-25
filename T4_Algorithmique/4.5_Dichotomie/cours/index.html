@@ -3414,8 +3414,12 @@ Au démarrage de la boucle, on a :</p>
     <span class="n">indice_fin</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
 </code></pre></div>
 <p>Ceci qui nous assure donc de bien rentrer dans la boucle. </p>
-<p>Ensuite, à chaque étape, les deux variables <code>indice_debut</code> et <code>indice_fin</code> vont se <strong>rapprocher</strong> jusqu'à ce que le programme rencontre un <code>return</code> ou bien jusqu'à ce que <code>indice_fin</code> devienne inférieur à <code>indice_debut</code>.  </p>
-<p>Ceci nous assure donc que le programme va bien se terminer.</p>
+<p>Ensuite, à chaque étape :</p>
+<ul>
+<li>soit <code>indice_debut</code> augmente strictement (grâce à <code class="highlight"><span class="n">indice_debut</span> <span class="o">=</span> <span class="n">indice_centre</span> <span class="o">+</span> <span class="mi">1</span></code>)</li>
+<li>soit  <code>indice_fin</code> diminue strictement (grâce à <code class="highlight"><span class="n">indice_fin</span> <span class="o">=</span> <span class="n">indice_centre</span> <span class="o">-</span> <span class="mi">1</span></code>)</li>
+</ul>
+<p>Il va donc forcément arriver un moment où <code>indice_fin</code> sera inférieur à <code>indice_debut</code> : on sortira alors de la boucle et le programme va bien se terminer.</p>
 <p><strong>Variant de boucle</strong><br />
 On dit que la valeur <code>indice_fin - indice_debut</code> représente le <strong>variant de boucle</strong> de cet algorithme. 
 Ce variant est un nombre entier, d'abord strictement positif, puis qui va décroître jusqu'à la valeur 0.</p>
@@ -3532,7 +3536,7 @@ Il y a donc 3 étapes avant de trouver la valeur cherchée.</p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">24 avril 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">25 avril 2023</span>
       
     
   </small>
