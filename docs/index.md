@@ -12,6 +12,7 @@
 ## Thèmes en cours d'étude 
 
 :arrow_right: [Dichotomie](./T4_Algorithmique/4.5_Dichotomie/cours/)
+
 :arrow_right: [Dictionnaires](./T2_Representation_des_donnees/2.3_Dictionnaires/cours/)
 
 !!! note "*Anciens thèmes traités*"
