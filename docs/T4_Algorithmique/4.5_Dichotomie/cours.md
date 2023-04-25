@@ -98,8 +98,7 @@ C'est la méthode la plus intuitive : on essaie toutes les valeurs (par exemple,
         lst = [2, 3, 6, 7, 11, 14, 18, 19, 24]
         for k in range(len(lst)):
             if lst[k] ==  14 :
-                return k
-        return "non trouvé"
+                print(k)
         ```
 
 
