@@ -274,9 +274,12 @@ Au démarrage de la boucle, on a :
 
 Ceci qui nous assure donc de bien rentrer dans la boucle. 
 
-Ensuite, à chaque étape, les deux variables `indice_debut` et `indice_fin` vont se **rapprocher** jusqu'à ce que le programme rencontre un `return` ou bien jusqu'à ce que `indice_fin` devienne inférieur à `indice_debut`.  
+Ensuite, à chaque étape :
 
-Ceci nous assure donc que le programme va bien se terminer.
+- soit `indice_debut` augmente strictement (grâce à ```#!python indice_debut = indice_centre + 1```)
+- soit  `indice_fin` diminue strictement (grâce à ```#!python indice_fin = indice_centre - 1```)
+
+Il va donc forcément arriver un moment où `indice_fin` sera inférieur à `indice_debut` : on sortira alors de la boucle et le programme va bien se terminer.
 
 **Variant de boucle**  
 On dit que la valeur `indice_fin - indice_debut ` représente le **variant de boucle** de cet algorithme. 
