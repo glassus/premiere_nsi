@@ -1,5 +1,9 @@
 # 5.1 Manipulation de fichiers csv
 
+![image](data/meme.png){: .center}
+
+
+
 ![image](data/BO.png){: .center}
 
 
@@ -16,7 +20,6 @@ Les fichiers CSV (pour Comma Separated Values) sont des fichiers-texte (ils ne c
 L'utilisation d'un tableur peut être délicate lorsque le fichier CSV comporte un très grand nombre de lignes. 
 Python permet de lire et d'extraire des informations d'un fichier CSV même très volumineux, grâce à des modules dédiés, comme le bien-nommé `csv` (utilisé ici) ou bien `pandas` (qui sera vu plus tard).
 
-Le logiciel ```Jupyter Notebook``` se prête parfaitement à la consultation et l'exploitation de données structurées, nous l'utiliserons préféremment à ```Thonny```. 
 
 ### 2.1 Première méthode
 Le script suivant :
@@ -149,7 +152,7 @@ _Ce fichier a été généré par Rémi Deniaud, de l'académie de Bordeaux._
 
 **Q1.** Stocker dans  une variable `joueurs`  les renseignements de tous les joueurs présents dans ce fichier csv.
 
-
+{#
 ??? tip "réponse"
     ```python linenums='1'
     import csv
@@ -161,27 +164,30 @@ _Ce fichier a été généré par Rémi Deniaud, de l'académie de Bordeaux._
         
     f.close()
     ```
+#}
 
 ### 3.1 Première analyse
 
 **Q2.** Combien de joueurs sont présents dans ce fichier ?
 
+{#
 ??? tip "réponse"
     ```python
     >>> len(joueurs)
      595
     ```
-
+#}
 
 
 **Q3.** Quel est le prénom du joueur n°486 ?
 
+{#
 ??? tip "réponse"
     ```python
     >>> joueurs[486]['Nom']
       'Wenceslas LAURET'
     ```
-
+#}
 
 
 
@@ -196,35 +202,37 @@ _Ce fichier a été généré par Rémi Deniaud, de l'académie de Bordeaux._
 
 La méthode la plus naturelle est de parcourir toute la liste jusqu'à trouver le bon joueur, puis d'afficher son équipe.
 
-
+{#
 ??? tip "réponse"
     ```python
     >>> for joueur in joueurs :
             if joueur['Nom'] == 'Baptiste SERIN' :
                 print(joueur['Equipe'])
     ```
-
+#}
 
 Une méthode plus efficace est d'utiliser une liste par compréhension incluant un test. 
 
+{#
 ??? tip "réponse"
     ```python
     >>> clubSerin = [joueur['Equipe'] for joueur in joueurs if joueur['Nom'] == 'Baptiste SERIN']
     >>> clubSerin
     ```
-
+#}
 
 
 **Q5.**  Qui sont les joueurs de plus de 140 kg ?
 
 Attention à bien convertir en entier la chaine de caractère renvoyée par la clé ```Poids``` 
 
+{#
 ??? tip "réponse"
     ```python
     >>> lourds = [(joueur['Nom'], joueur['Poids']) for joueur in joueurs if int(joueur['Poids']) > 140]
     >>> lourds
     ```
-
+#}
 
 ### 4. Exploitation graphique
 Nous allons utiliser le module Matplotlib pour illustrer les données de notre fichier csv.
@@ -233,7 +241,6 @@ Nous allons utiliser le module Matplotlib pour illustrer les données de notre f
 
 
 ```python linenums='1'
-%matplotlib inline
 import matplotlib.pyplot as plt
 X = [0,1,3,6]
 Y = [12,10,7,15]
@@ -249,10 +256,10 @@ plt.show()
 
 **Q1.** Afficher sur un graphique tous les joueurs de rugby du top14, en mettant le poids en abscisse et la taille en ordonnée.
 
+{#
 ??? tip "réponse"
 
     ```python linenums='1'
-    %matplotlib inline
     X = [int(joueur['Poids']) for joueur in joueurs]
     Y = [int(joueur['Taille']) for joueur in joueurs]
     plt.plot(X,Y,'ro') # r pour red, o pour un cercle. voir https://matplotlib.org/api/markers_api.html
@@ -261,13 +268,13 @@ plt.show()
 
 
     ![png](01_Manipulation_csv_files/01_Manipulation_csv_37_0.png){: .center}
-
+#}
 
 **Q2.** Faire apparaître ensuite les joueurs évoluant au poste de Centre en bleu, et les 2ème lignes en vert.
 
+{#
 ??? tip "réponse"
     ```python linenums='1'
-    %matplotlib inline
     #tous les joueurs
     X = [int(joueur['Poids']) for joueur in joueurs]
     Y = [int(joueur['Taille']) for joueur in joueurs]
@@ -290,4 +297,4 @@ plt.show()
 
     ![png](01_Manipulation_csv_files/01_Manipulation_csv_38_0.png){: .center}
 
-
+#}
