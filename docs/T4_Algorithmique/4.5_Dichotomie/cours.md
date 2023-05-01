@@ -210,7 +210,7 @@ Nous allons faire *se rapprocher* les indices `indice_debut` et `indice_fin` **t
 
 
 
-??? note "Recherche dichotomique dans une liste triée :heart: :heart: :heart:"
+!!! note "Recherche dichotomique dans une liste triée :heart: :heart: :heart:"
     ```python
     def recherche_dichotomique(lst, val) :
         indice_debut = 0
