@@ -11,11 +11,11 @@
         
 ## Thèmes en cours d'étude 
 
-:arrow_right: [Dichotomie](./T4_Algorithmique/4.5_Dichotomie/cours/)
-
-:arrow_right: [Dictionnaires](./T2_Representation_des_donnees/2.3_Dictionnaires/cours/)
+:arrow_right: [Manipulation de fichiers csv](./T5_Traitement_de_donnees/5.1_Manipulation_csv/cours/)
 
 !!! note "*Anciens thèmes traités*"
+    - [Dictionnaires](./T2_Representation_des_donnees/2.3_Dictionnaires/cours/)
+    - [Dichotomie](./T4_Algorithmique/4.5_Dichotomie/cours/)
     - [Architecture Von Neumann](./T3_Architecture_materielle/3.2_Architecture_Von_Neumann/cours/)
     - [Codage des non-entiers](./T2_Representation_des_donnees/2.8_Codage_non-entiers/cours/)
     - [Codage des entiers](./T2_Representation_des_donnees/2.7_Codage_entiers/cours/)
