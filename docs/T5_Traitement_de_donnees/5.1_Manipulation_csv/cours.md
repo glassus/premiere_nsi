@@ -224,7 +224,7 @@ Une méthode plus efficace est d'utiliser une liste par compréhension incluant 
 
 **Q5.**  Qui sont les joueurs de plus de 140 kg ?
 
-Attention à bien convertir en entier la chaine de caractère renvoyée par la clé ```Poids``` 
+Attention à bien convertir en entier la chaine de caractère renvoyée par la clé ```Poids```, à l'aide de la fonction ```int()```. 
 
 {#
 ??? tip "réponse"
@@ -254,7 +254,7 @@ plt.show()
 
 ### 4.2 Application
 
-**Q1.** Afficher sur un graphique tous les joueurs de rugby du top14, en mettant le poids en abscisse et la taille en ordonnée.
+**Q1.** Afficher sur un graphique tous les joueurs de rugby du Top14, en mettant le poids en abscisse et la taille en ordonnée.
 
 {#
 ??? tip "réponse"
