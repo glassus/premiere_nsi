@@ -225,13 +225,13 @@ Une méthode plus efficace est d'utiliser une liste par compréhension incluant 
 
 Attention à bien convertir en entier la chaine de caractère renvoyée par la clé ```Poids```, à l'aide de la fonction ```int()```. 
 
-{#
+
 ??? tip "réponse"
     ```python
     >>> lourds = [(joueur['Nom'], joueur['Poids']) for joueur in joueurs if int(joueur['Poids']) > 140]
     >>> lourds
     ```
-#}
+
 
 ### 4. Exploitation graphique
 Nous allons utiliser le module Matplotlib pour illustrer les données de notre fichier csv.
