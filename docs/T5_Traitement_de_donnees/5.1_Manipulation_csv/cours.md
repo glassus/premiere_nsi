@@ -201,24 +201,24 @@ _Ce fichier a été généré par Rémi Deniaud, de l'académie de Bordeaux._
 
 La méthode la plus naturelle est de parcourir toute la liste jusqu'à trouver le bon joueur, puis d'afficher son équipe.
 
-{#
+
 ??? tip "réponse"
     ```python
     >>> for joueur in joueurs :
             if joueur['Nom'] == 'Baptiste SERIN' :
                 print(joueur['Equipe'])
     ```
-#}
+
 
 Une méthode plus efficace est d'utiliser une liste par compréhension incluant un test. 
 
-{#
+
 ??? tip "réponse"
     ```python
     >>> clubSerin = [joueur['Equipe'] for joueur in joueurs if joueur['Nom'] == 'Baptiste SERIN']
     >>> clubSerin
     ```
-#}
+
 
 
 **Q5.**  Qui sont les joueurs de plus de 140 kg ?
