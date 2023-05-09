@@ -3321,6 +3321,12 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 </details>
 <p><strong>Q5.</strong>  Qui sont les joueurs de plus de 140 kg ?</p>
 <p>Attention à bien convertir en entier la chaine de caractère renvoyée par la clé <code>Poids</code>, à l'aide de la fonction <code>int()</code>. </p>
+<details class="tip">
+<summary>réponse</summary>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">lourds</span> <span class="o">=</span> <span class="p">[(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Nom&#39;</span><span class="p">],</span> <span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">140</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lourds</span>
+</code></pre></div>
+</details>
 <h3 id="4-exploitation-graphique">4. Exploitation graphique<a class="headerlink" href="#4-exploitation-graphique" title="Permanent link">⚓︎</a></h3>
 <p>Nous allons utiliser le module Matplotlib pour illustrer les données de notre fichier csv.</p>
 <h3 id="41-exemple">4.1 Exemple<a class="headerlink" href="#41-exemple" title="Permanent link">⚓︎</a></h3>
