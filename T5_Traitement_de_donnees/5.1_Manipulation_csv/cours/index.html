@@ -17,7 +17,7 @@
         <link rel="next" href="../../5.2_Trier_des_donnees/cours/">
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.10">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
     
     
       
@@ -3261,9 +3261,47 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 <p>Le fichier <a href="../../data/top14.csv"><code>top14.csv</code></a>  contient tous les joueurs du Top14 de rugby, saison 2019-2020, avec leur date de naissance, leur poste, et leurs mensurations. </p>
 <p><em>Ce fichier a été généré par Rémi Deniaud, de l'académie de Bordeaux.</em></p>
 <p><strong>Q1.</strong> Stocker dans  une variable <code>joueurs</code>  les renseignements de tous les joueurs présents dans ce fichier csv.</p>
+<details class="tip">
+<summary>réponse</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">csv</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data/top14.csv&#39;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">donnees</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">joueurs</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="n">donnees</span><span class="p">:</span>
+    <span class="n">joueurs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">ligne</span><span class="p">))</span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+</details>
 <h3 id="31-premiere-analyse">3.1 Première analyse<a class="headerlink" href="#31-premiere-analyse" title="Permanent link">⚓︎</a></h3>
 <p><strong>Q2.</strong> Combien de joueurs sont présents dans ce fichier ?</p>
-<p><strong>Q3.</strong> Quel est le prénom du joueur n°486 ?</p>
+<details class="tip">
+<summary>réponse</summary>
+<p>```python</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>len(joueurs)
+ 595
+```}</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</details>
+<p><strong>Q3.</strong> Quel est le nom du joueur n°486 ?</p>
+<details class="tip">
+<summary>réponse</summary>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">joueurs</span><span class="p">[</span><span class="mi">486</span><span class="p">][</span><span class="s1">&#39;Nom&#39;</span><span class="p">]</span>
+  <span class="s1">&#39;Wenceslas LAURET&#39;</span>
+</code></pre></div>
+</details>
 <h3 id="32-extraction-de-donnees-particulieres">3.2 Extraction de données particulières<a class="headerlink" href="#32-extraction-de-donnees-particulieres" title="Permanent link">⚓︎</a></h3>
 <p><strong>Q4.</strong>  Où joue Baptiste SERIN ?  </p>
 <p>La méthode la plus naturelle est de parcourir toute la liste jusqu'à trouver le bon joueur, puis d'afficher son équipe.</p>
@@ -3293,7 +3331,7 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">8 mai 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">9 mai 2023</span>
       
     
   </small>
