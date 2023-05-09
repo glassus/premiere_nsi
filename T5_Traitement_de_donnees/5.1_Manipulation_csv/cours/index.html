@@ -3305,7 +3305,20 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 <h3 id="32-extraction-de-donnees-particulieres">3.2 Extraction de données particulières<a class="headerlink" href="#32-extraction-de-donnees-particulieres" title="Permanent link">⚓︎</a></h3>
 <p><strong>Q4.</strong>  Où joue Baptiste SERIN ?  </p>
 <p>La méthode la plus naturelle est de parcourir toute la liste jusqu'à trouver le bon joueur, puis d'afficher son équipe.</p>
+<details class="tip">
+<summary>réponse</summary>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Nom&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Baptiste SERIN&#39;</span> <span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Equipe&#39;</span><span class="p">])</span>
+</code></pre></div>
+</details>
 <p>Une méthode plus efficace est d'utiliser une liste par compréhension incluant un test. </p>
+<details class="tip">
+<summary>réponse</summary>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">clubSerin</span> <span class="o">=</span> <span class="p">[</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Equipe&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="k">if</span> <span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Nom&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Baptiste SERIN&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">clubSerin</span>
+</code></pre></div>
+</details>
 <p><strong>Q5.</strong>  Qui sont les joueurs de plus de 140 kg ?</p>
 <p>Attention à bien convertir en entier la chaine de caractère renvoyée par la clé <code>Poids</code>, à l'aide de la fonction <code>int()</code>. </p>
 <h3 id="4-exploitation-graphique">4. Exploitation graphique<a class="headerlink" href="#4-exploitation-graphique" title="Permanent link">⚓︎</a></h3>
