@@ -152,7 +152,7 @@ _Ce fichier a été généré par Rémi Deniaud, de l'académie de Bordeaux._
 
 **Q1.** Stocker dans  une variable `joueurs`  les renseignements de tous les joueurs présents dans ce fichier csv.
 
-{#
+
 ??? tip "réponse"
     ```python linenums='1'
     import csv
@@ -164,30 +164,29 @@ _Ce fichier a été généré par Rémi Deniaud, de l'académie de Bordeaux._
         
     f.close()
     ```
-#}
+
 
 ### 3.1 Première analyse
 
 **Q2.** Combien de joueurs sont présents dans ce fichier ?
 
-{#
+
 ??? tip "réponse"
     ```python
     >>> len(joueurs)
      595
-    ```
-#}
+    ```}
 
 
-**Q3.** Quel est le prénom du joueur n°486 ?
+**Q3.** Quel est le nom du joueur n°486 ?
 
-{#
+
 ??? tip "réponse"
     ```python
     >>> joueurs[486]['Nom']
       'Wenceslas LAURET'
     ```
-#}
+
 
 
 
