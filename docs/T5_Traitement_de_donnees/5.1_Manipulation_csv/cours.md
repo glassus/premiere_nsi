@@ -255,7 +255,7 @@ plt.show()
 
 **Q1.** Afficher sur un graphique tous les joueurs de rugby du Top14, en mettant le poids en abscisse et la taille en ordonnée.
 
-{#
+
 ??? tip "réponse"
 
     ```python linenums='1'
@@ -267,11 +267,11 @@ plt.show()
 
 
     ![png](01_Manipulation_csv_files/01_Manipulation_csv_37_0.png){: .center}
-#}
+
 
 **Q2.** Faire apparaître ensuite les joueurs évoluant au poste de Centre en bleu, et les 2ème lignes en vert.
 
-{#
+
 ??? tip "réponse"
     ```python linenums='1'
     #tous les joueurs
@@ -296,4 +296,4 @@ plt.show()
 
     ![png](01_Manipulation_csv_files/01_Manipulation_csv_38_0.png){: .center}
 
-#}
+
