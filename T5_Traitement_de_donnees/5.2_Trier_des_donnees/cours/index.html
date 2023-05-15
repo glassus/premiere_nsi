@@ -3271,6 +3271,16 @@ Ici, plusieurs clés peuvent être des critères de tri : la taille, le poids.</
 <span class="p">{</span><span class="s1">&#39;Equipe&#39;</span><span class="p">:</span> <span class="s1">&#39;Agen&#39;</span><span class="p">,</span> <span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;JJ TAULAGI&#39;</span><span class="p">,</span> <span class="s1">&#39;Poste&#39;</span><span class="p">:</span> <span class="s1">&#39;Arrière&#39;</span><span class="p">,</span> <span class="s1">&#39;Date de naissance&#39;</span><span class="p">:</span> <span class="s1">&#39;18/06/1993&#39;</span><span class="p">,</span> <span class="s1">&#39;Taille&#39;</span><span class="p">:</span> <span class="s1">&#39;180&#39;</span><span class="p">,</span> <span class="s1">&#39;Poids&#39;</span><span class="p">:</span> <span class="s1">&#39;90&#39;</span><span class="p">}</span>
 </code></pre></div></p>
 <p><span class="arithmatex">\((102-90)^2+(190-180)^2=244\)</span></p>
+<details class="tip">
+<summary>réponse</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="n">joueur1</span><span class="p">,</span><span class="n">joueur2</span><span class="p">):</span>
+    <span class="n">p1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">joueur1</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span>
+    <span class="n">p2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">joueur2</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span>
+    <span class="n">t1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">joueur1</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">])</span>
+    <span class="n">t2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">joueur2</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">p1</span><span class="o">-</span><span class="n">p2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span><span class="n">t1</span><span class="o">-</span><span class="n">t2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+</code></pre></div>
+</details>
 <h3 id="32-distance-des-joueurs-avec-baptiste-serin">3.2 Distance des joueurs avec Baptiste Serin<a class="headerlink" href="#32-distance-des-joueurs-avec-baptiste-serin" title="Permanent link">⚓︎</a></h3>
 <p>Retrouvons d'abord le numéro de Baptiste Serin dans notre classement de joueurs :</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span>  <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">joueurs</span><span class="p">))</span> <span class="p">:</span>
