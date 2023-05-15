@@ -3206,20 +3206,32 @@ Ici, plusieurs clés peuvent être des critères de tri : la taille, le poids.</
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Exercice 1</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Trier les joueurs du Top14 par taille.</p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">taillePlayer</span><span class="p">(</span><span class="n">player</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">player</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">joueurs_taille_croissant</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">joueurs</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">taillePlayer</span><span class="p">)</span>
+</code></pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice 2</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Trier les joueurs du Top14 par poids.</p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">poidsPlayer</span><span class="p">(</span><span class="n">player</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">player</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">joueurs_poids_croissant</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">joueurs</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">poidsPlayer</span><span class="p">)</span>
+</code></pre></div>
 </div>
 </div>
 </div>
