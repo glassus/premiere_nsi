@@ -4,13 +4,13 @@
 
 
 
-Nous reprenons notre fichier de joueurs de rugby du Top14. 
+Nous reprenons notre fichier de joueurs de rugby du Top14. : [`Top14.csv `](../data/top14.csv)
 
 
 
 ```python
 import csv
-f = open('top14.csv', "r", encoding = 'utf-8')
+f = open('Top14.csv', "r", encoding = 'utf-8')
 donnees = csv.DictReader(f)
 joueurs = []
 for ligne in donnees:
@@ -24,21 +24,46 @@ L'objectif est de créer une fonction `joueursEquipe(equipe)` qui renvoie une li
 Le paramètre `equipe` sera donnée sous forme de chaîne de caractères. 
 La valeur renvoyée sera de type liste.
 
+**Utilisation :**
+
+```python
+>>> joueursEquipe('Bordeaux')
+[{'Equipe': 'Bordeaux', 'Nom': 'Jefferson POIROT', 'Poste': 'Pilier', 'Date de naissance': '01/11/1992', 'Taille': '181', 'Poids': '117'}, {'Equipe': 'Bordeaux', 'Nom': 'Lasha TABIDZE', 'Poste': 'Pilier', 'Date de naissance': '04/07/1997', 'Taille': '185', 'Poids': '117'}, {'Equipe': 'Bordeaux', 'Nom': 'Laurent DEL.....
+```
+
+
+{#
 ??? tip "réponse"
     ```python
     def joueursEquipe(equipe):
         lst_joueurs = []
         for j in joueurs :
             if j['Equipe'] == equipe :
-                lst_joueurs.append(j)
-        
+                lst_joueurs.append(j)        
         return lst_joueurs
-
     ```
-
+#}
 
 Définir de la même manière une fonction `joueursPoste(poste)`.
 
+**Utilisation :**
+```python
+>>> joueursPoste("Talonneur")
+[{'Equipe': 'Agen', 'Nom': 'Clément MARTINEZ', 'Poste': 'Talonneur', 'Date de naissance': '14/03/1996', 'Taille': '181', 'Poids': '105'}, {'Equipe': 'Agen', 'Nom': 'Marc BARTHOMEUF', 'Poste': 'T...
+```
+
+{#
+??? tip "réponse"
+    ```python
+    def joueursPoste(poste):
+        lst_joueurs = []
+        for j in joueurs :
+            if j['Poste'] == poste :
+                lst_joueurs.append(j)
+        return lst_joueurs
+    ```
+
+#}
 
 ## 2. Utilisation d'une fonction de tri
 
@@ -142,48 +167,74 @@ On peut aussi inverser l'ordre de tri :
 
 
 
-!!! abstract "Exercice 1"
+!!! example "Exercice 1"
     === "Énoncé"
-        Trier les joueurs du top14 par taille.
+        Trier les joueurs du Top14 par taille.
+    {#
     === "Correction"
         ```python
         >>> def taillePlayer(player) :
                 return int(player['Taille'])
         >>> joueurs_taille_croissant = sorted(joueurs, key = taillePlayer)
         ```
+    #}
 
-!!! abstract "Exercice 2"
+!!! example "Exercice 2"
     === "Énoncé"
-        Trier les joueurs du top14 par poids.
+        Trier les joueurs du Top14 par poids.
+    {#
     === "Correction"
         ```python
         >>> def poidsPlayer(player) :
                 return int(player['Poids'])
         >>> joueurs_poids_croissant = sorted(joueurs, key = poidsPlayer)
         ```
-!!! abstract "Exercice 3"
+    #}
+
+!!! example "Exercice 3"
     === "Énoncé"
         Trier les joueurs de Bordeaux suivant leur Indice de Masse Corporelle ([IMC](https://fr.wikipedia.org/wiki/Indice_de_masse_corporelle) )
+    
+    {#
     === "Correction"
         ```python
         >>> def IMC(player):
                 masse = int(player['Poids'])
                 taille_m = int(player['Taille']) / 100
                 return masse / taille_m**2
-        >>> joueursUBB = [k for k in joueurs if k['Equipe'] == 'Bordeaux']
+        >>> joueursUBB = [player for player in joueurs if player['Equipe'] == 'Bordeaux']
         >>> joueursUBB_tri = sorted(joueursUBB, key = IMC)
         ```
-
+    #}
 
 
 
 ## 3. Recherche des joueurs de profil physique similaire
 
 ### 3.1 Distance entre deux joueurs
-Construire une fonction `distance(joueur1,joueur2)` qui renvoie la somme des carrés des différences de tailles et de poids entre les joueurs `joueur1` et `joueur2` : 
-$$ d = (p_1-p_2)^2 + (t_1-t_2)^2$$
+Construire une fonction `distance(joueur1, joueur2)` qui renvoie la somme des carrés des différences de tailles et de poids entre les joueurs `joueur1` et `joueur2` : 
 
+$$d = (p_1-p_2)^2 + (t_1-t_2)^2$$
 
+Cette fonction nous permettra d'estimer la différence morphologique entre deux joueurs.
+
+**Utilisation :**
+```python
+>>> distance(joueurs[23], joueurs[31])
+244
+```
+
+*Vérification :*
+```python
+>>> joueurs[23]
+{'Equipe': 'Agen', 'Nom': 'Alban CONDUCHÉ', 'Poste': 'Centre', 'Date de naissance': '29/10/1996', 'Taille': '190', 'Poids': '102'}
+>>> joueurs[31]
+{'Equipe': 'Agen', 'Nom': 'JJ TAULAGI', 'Poste': 'Arrière', 'Date de naissance': '18/06/1993', 'Taille': '180', 'Poids': '90'}
+```
+
+$(102-90)^2+(190-180)^2=244$
+
+{#
 ??? tip "réponse"
     ```python
     def distance(joueur1,joueur2):
@@ -193,6 +244,7 @@ $$ d = (p_1-p_2)^2 + (t_1-t_2)^2$$
         t2 = int(joueur2['Taille'])
         return (p1-p2)**2+(t1-t2)**2
     ```
+#}
 
 ### 3.2 Distance des joueurs avec Baptiste Serin
 
@@ -221,29 +273,34 @@ Retrouvons d'abord le numéro de Baptiste Serin dans notre classement de joueurs
 ```
 
 
+Baptiste SERIN est donc le joueur numéro 530.
 
 
-Nous pouvons maintenant classer les joueurs suivant leur distance morphologique à Baptiste  SERIN :
+Créer une fonction ```distanceSerin``` qui prend en paramètre un joueur et qui renvoie sa différence avec Baptiste Serin.
 
-
-```python
->>> def distanceSerin(joueur2):
-        return distance(joueurs[530],joueur2)
-```
-
+**Utilisation :**
 
 ```python
->>> distanceSerin(joueurs[530])
- 0
+>>> distanceSerin(joueurs[18])
+745
 ```
 
+{#
+??? tip "réponse"
+    ```python
+    def distanceSerin(joueur):
+        return distance(joueurs[530], joueur)
+    ```
+#}
 
-```python
->>> joueurs_VS_Serin = sorted(joueurs, key = distanceSerin)
-```
+Classer l'ensemble des joueurs du Top14 suivant leur différence morphologique avec Baptiste Serin (du plus proche au plus éloigné).
 
+{#
+??? tip "réponse"
+    ```python
+    >>> joueurs_VS_Serin = sorted(joueurs, key = distanceSerin)
+    >>> joueurs_VS_Serin
 
-```python
->>> joueurs_VS_Serin
-```
+    ```
+#}
 

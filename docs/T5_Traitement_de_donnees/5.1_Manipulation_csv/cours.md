@@ -261,7 +261,7 @@ plt.show()
     ```python linenums='1'
     X = [int(joueur['Poids']) for joueur in joueurs]
     Y = [int(joueur['Taille']) for joueur in joueurs]
-    plt.plot(X,Y,'ro') # r pour red, o pour un cercle. voir https://matplotlib.org/api/markers_api.html
+    plt.plot(X, Y, 'ro') # r pour red, o pour un cercle. voir https://matplotlib.org/api/markers_api.html
     plt.show()
     ```
 
@@ -277,17 +277,17 @@ plt.show()
     #tous les joueurs
     X = [int(joueur['Poids']) for joueur in joueurs]
     Y = [int(joueur['Taille']) for joueur in joueurs]
-    plt.plot(X,Y,'ro') 
+    plt.plot(X, Y, 'ro') 
 
     #on recolorie les Centres en bleu
     X = [int(joueur['Poids']) for joueur in joueurs if joueur['Poste'] == 'Centre']
     Y = [int(joueur['Taille']) for joueur in joueurs if joueur['Poste'] == 'Centre']
-    plt.plot(X,Y,'bo')
+    plt.plot(X, Y, 'bo')
 
     #on recolorie les 2ème ligne en vert
     X = [int(joueur['Poids']) for joueur in joueurs if joueur['Poste'] == '2ème ligne']
     Y = [int(joueur['Taille']) for joueur in joueurs if joueur['Poste'] == '2ème ligne']
-    plt.plot(X,Y,'go')
+    plt.plot(X, Y, 'go')
 
 
     plt.show()
