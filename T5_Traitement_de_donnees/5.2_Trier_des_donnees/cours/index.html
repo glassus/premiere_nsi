@@ -3238,10 +3238,19 @@ Ici, plusieurs clés peuvent être des critères de tri : la taille, le poids.</
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice 3</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Énoncé</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Énoncé</label><label for="__tabbed_3_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Trier les joueurs de Bordeaux suivant leur Indice de Masse Corporelle (<a href="https://fr.wikipedia.org/wiki/Indice_de_masse_corporelle">IMC</a> )</p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">IMC</span><span class="p">(</span><span class="n">player</span><span class="p">):</span>
+        <span class="n">masse</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">player</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span>
+        <span class="n">taille_m</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">player</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">])</span> <span class="o">/</span> <span class="mi">100</span>
+        <span class="k">return</span> <span class="n">masse</span> <span class="o">/</span> <span class="n">taille_m</span><span class="o">**</span><span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">joueursUBB</span> <span class="o">=</span> <span class="p">[</span><span class="n">player</span> <span class="k">for</span> <span class="n">player</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="k">if</span> <span class="n">player</span><span class="p">[</span><span class="s1">&#39;Equipe&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Bordeaux&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">joueursUBB_tri</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">joueursUBB</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">IMC</span><span class="p">)</span>
+</code></pre></div>
 </div>
 </div>
 </div>
