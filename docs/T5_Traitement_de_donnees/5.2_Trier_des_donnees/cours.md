@@ -162,26 +162,26 @@ On peut aussi inverser l'ordre de tri :
 !!! example "Exercice 1"
     === "Énoncé"
         Trier les joueurs du Top14 par taille.
-    {#
+    
     === "Correction"
         ```python
         >>> def taillePlayer(player) :
                 return int(player['Taille'])
         >>> joueurs_taille_croissant = sorted(joueurs, key = taillePlayer)
         ```
-    #}
+    
 
 !!! example "Exercice 2"
     === "Énoncé"
         Trier les joueurs du Top14 par poids.
-    {#
+    
     === "Correction"
         ```python
         >>> def poidsPlayer(player) :
                 return int(player['Poids'])
         >>> joueurs_poids_croissant = sorted(joueurs, key = poidsPlayer)
         ```
-    #}
+    
 
 !!! example "Exercice 3"
     === "Énoncé"
