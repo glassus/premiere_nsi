@@ -187,7 +187,7 @@ On peut aussi inverser l'ordre de tri :
     === "Énoncé"
         Trier les joueurs de Bordeaux suivant leur Indice de Masse Corporelle ([IMC](https://fr.wikipedia.org/wiki/Indice_de_masse_corporelle) )
     
-    {#
+    
     === "Correction"
         ```python
         >>> def IMC(player):
@@ -197,7 +197,7 @@ On peut aussi inverser l'ordre de tri :
         >>> joueursUBB = [player for player in joueurs if player['Equipe'] == 'Bordeaux']
         >>> joueursUBB_tri = sorted(joueursUBB, key = IMC)
         ```
-    #}
+    
 
 
 
