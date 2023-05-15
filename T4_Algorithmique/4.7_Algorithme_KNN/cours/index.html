@@ -2050,6 +2050,60 @@
     3. Classement des joueurs suivant leur proximité morphologique
   </a>
   
+    <nav class="md-nav" aria-label="3. Classement des joueurs suivant leur proximité morphologique">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-fonction-second" class="md-nav__link">
+    3.1 Fonction second
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-classement-des-k-plus-proches-joueurs" class="md-nav__link">
+    3.2 Classement des k plus proches joueurs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-recherche-du-poste-le-plus-represente" class="md-nav__link">
+    4. Recherche du poste le plus représenté
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Recherche du poste le plus représenté">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-dictionnaire-doccurence-des-postes" class="md-nav__link">
+    4.1 Dictionnaire d'occurence des postes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-tri-dun-dictionnaire" class="md-nav__link">
+    4.2 Tri d'un dictionnaire
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-fonction-conseil_poste" class="md-nav__link">
+    4.3 Fonction conseil_poste
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -3070,23 +3124,192 @@
 <h2 id="1-objectif">1. Objectif<a class="headerlink" href="#1-objectif" title="Permanent link">⚓︎</a></h2>
 <p>Nous allons reprendre le jeu de données sur les joueurs du Top14 utilisé <a class="" href="https://glassus.github.io/premiere_nsi/T5_Traitement_de_donnees/5.2_Trier_des_donnees/cours/" target="_blank">dans le cours «Trier des données»</a></p>
 <p>Nous souhaitons pouvoir répondre à cette question :</p>
-<p><strong>Question :</strong> si on croise une personne (qu'on appelera joueur X) nous disant qu'elle veut jouer en Top14, et qu'elle nous donne son poids et sa taille, peut-on lui prédire à quel poste elle devrait jouer ?</p>
-<p>Nous devons créer une fonction <code>conseil_poste</code> qui prend en argument <code>poids</code> et <code>taille</code> , sont les caractéristiques du joueur X. La fonction doit renvoyer une chaîne de caractère correspondant au poste auquel on lui conseille de jouer.</p>
+<div class="admonition note">
+<p class="admonition-title">Question</p>
+<p>Si on croise une personne (qu'on appelera joueur X) nous disant qu'elle veut jouer en Top14, et qu'elle nous donne son poids et sa taille, peut-on lui prédire à quel poste elle devrait jouer ?</p>
+</div>
+<p>Nous devons donc créer une fonction <code>conseil_poste</code> qui prend en argument <code>poids</code> et <code>taille</code> , qui sont les caractéristiques du joueur X. Cette fonction prendra aussi en paramètre un nombre <code>k</code> qui sera le nombre de voisins utilisés pour déterminer le poste conseillé.</p>
+<p>La fonction doit renvoyer une chaîne de caractère correspondant au poste auquel on lui conseille de jouer.</p>
 <p>Il va falloir pour cela classer tous les joueurs du Top14 suivant leur proximité morphologique avec notre joueur X, et prendre parmi les <code>k</code> premiers joueurs le poste majoritaire.</p>
 <h2 id="2-fonction-distance-morphologique">2. Fonction <code>distance</code> morphologique<a class="headerlink" href="#2-fonction-distance-morphologique" title="Permanent link">⚓︎</a></h2>
 <p>Dans toute idée de classification il y a l'idée de <strong>distance</strong>. Il faut comprendre la distance comme une <em>mesure de la différence</em>. </p>
 <p>Comment mesurer la différence physique entre deux joueurs de rugby ? </p>
 <p><img alt="" class="center" src="../data/distAB.png" /></p>
+<div class="admonition example">
+<p class="admonition-title">Fonction <code>distance</code></p>
+<p>Écrire une fonction <code>distance</code> qui reçoit en paramètres :</p>
+<ul>
+<li><code>poids</code>  : le poids du joueur X</li>
+<li><code>taille</code> : la taille du joueur X</li>
+<li><code>player</code>  : un joueur de la liste <code>joueurs</code></li>
+</ul>
+<p>et qui renvoie la distance morphologique du joueur X avec <code>player</code>.</p>
+<p><strong>Exemple d'utilisation :</strong>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">distance</span><span class="p">(</span><span class="mi">93</span><span class="p">,</span> <span class="mi">190</span><span class="p">,</span> <span class="n">joueurs</span><span class="p">[</span><span class="mi">34</span><span class="p">])</span>
+<span class="mi">445</span>
+</code></pre></div></p>
+<details class="tip">
+<summary>Correction</summary>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="n">poids</span><span class="p">,</span> <span class="n">taille</span><span class="p">,</span> <span class="n">player</span><span class="p">):</span>
     <span class="n">p</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">player</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span>
     <span class="n">t</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">player</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">])</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">poids</span><span class="o">-</span><span class="n">p</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span><span class="n">taille</span><span class="o">-</span><span class="n">t</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">poids</span><span class="o">-</span><span class="n">p</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">taille</span><span class="o">-</span><span class="n">t</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
 </code></pre></div></td></tr></table></div>
+</details>
+</div>
 <h2 id="3-classement-des-joueurs-suivant-leur-proximite-morphologique">3. Classement des joueurs suivant leur proximité morphologique<a class="headerlink" href="#3-classement-des-joueurs-suivant-leur-proximite-morphologique" title="Permanent link">⚓︎</a></h2>
 <p>De la même manière qu'on avait <a class="" href="https://glassus.github.io/premiere_nsi/T5_Traitement_de_donnees/5.2_Trier_des_donnees/cours/#22-un-exemple-de-tri-de-dictionnaire" target="_blank">classé les joueurs suivant leur IMC</a>, on peut les classer suivant leur proximité morphologique avec le joueur X.</p>
+<h3 id="31-fonction-second">3.1 Fonction <code>second</code><a class="headerlink" href="#31-fonction-second" title="Permanent link">⚓︎</a></h3>
+<div class="admonition example">
+<p class="admonition-title">Fonction <code>second</code></p>
+<p>Écrire une fonction <code>second</code> qui reçoit en paramètres :</p>
+<ul>
+<li><code>couple</code>  : un couple de valeurs</li>
+</ul>
+<p>et qui renvoie le deuxième élément du couple.</p>
+<p><strong>Exemple d'utilisation :</strong>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">cpl</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;vendredi&quot;</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">second</span><span class="p">(</span><span class="n">cpl</span><span class="p">)</span>
+<span class="mi">13</span>
+</code></pre></div></p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">second</span><span class="p">(</span><span class="n">cpl</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">cpl</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<h3 id="32-classement-des-k-plus-proches-joueurs">3.2 Classement des k plus proches joueurs<a class="headerlink" href="#32-classement-des-k-plus-proches-joueurs" title="Permanent link">⚓︎</a></h3>
+<div class="admonition example">
+<p class="admonition-title">Fonction <code>classement</code></p>
+<p>Écrire une fonction <code>classement</code> qui reçoit en paramètres :</p>
+<ul>
+<li><code>poids</code>  : le poids du joueur X</li>
+<li><code>taille</code> : la taille du joueur X</li>
+<li><code>k</code> : le nombre de joueurs les plus proches que l'on veut garder</li>
+</ul>
+<p>et qui renvoie une liste contenant les k joueurs classés suivant leur proximité morphologique avec le joueur X.</p>
+<p><strong>Exemple d'utilisation :</strong>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">classement_k_joueurs</span><span class="p">(</span><span class="mi">85</span><span class="p">,</span> <span class="mi">186</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="p">[{</span><span class="s1">&#39;Equipe&#39;</span><span class="p">:</span> <span class="s1">&#39;Bordeaux&#39;</span><span class="p">,</span> <span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Geoffrey CROS&#39;</span><span class="p">,</span> <span class="s1">&#39;Poste&#39;</span><span class="p">:</span> <span class="s1">&#39;Arrière&#39;</span><span class="p">,</span> <span class="s1">&#39;Date de naissance&#39;</span><span class="p">:</span> <span class="s1">&#39;08/03/1997&#39;</span><span class="p">,</span> <span class="s1">&#39;Taille&#39;</span><span class="p">:</span> <span class="s1">&#39;185&#39;</span><span class="p">,</span> <span class="s1">&#39;Poids&#39;</span><span class="p">:</span> <span class="s1">&#39;85&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;Equipe&#39;</span><span class="p">:</span> <span class="s1">&#39;Toulouse&#39;</span><span class="p">,</span> <span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Romain NTAMACK&#39;</span><span class="p">,</span> <span class="s1">&#39;Poste&#39;</span><span class="p">:</span> <span class="s1">&#39;Ouverture&#39;</span><span class="p">,</span> <span class="s1">&#39;Date de naissance&#39;</span><span class="p">:</span> <span class="s1">&#39;01/05/1999&#39;</span><span class="p">,</span> <span class="s1">&#39;Taille&#39;</span><span class="p">:</span> <span class="s1">&#39;186&#39;</span><span class="p">,</span> <span class="s1">&#39;Poids&#39;</span><span class="p">:</span> <span class="s1">&#39;84&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;Equipe&#39;</span><span class="p">:</span> <span class="s1">&#39;Bayonne&#39;</span><span class="p">,</span> <span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Manuel ORDAS&#39;</span><span class="p">,</span> <span class="s1">&#39;Poste&#39;</span><span class="p">:</span> <span class="s1">&#39;Ouverture&#39;</span><span class="p">,</span> <span class="s1">&#39;Date de naissance&#39;</span><span class="p">:</span> <span class="s1">&#39;21/02/1998&#39;</span><span class="p">,</span> <span class="s1">&#39;Taille&#39;</span><span class="p">:</span> <span class="s1">&#39;186&#39;</span><span class="p">,</span> <span class="s1">&#39;Poids&#39;</span><span class="p">:</span> <span class="s1">&#39;83&#39;</span><span class="p">}]</span>
+</code></pre></div></p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">classement_k_joueurs</span><span class="p">(</span><span class="n">poids</span><span class="p">,</span> <span class="n">taille</span><span class="p">):</span>
+    <span class="n">couples</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">player</span> <span class="ow">in</span> <span class="n">joueurs</span><span class="p">:</span>
+        <span class="n">couples</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">player</span><span class="p">,</span> <span class="n">distance</span><span class="p">(</span><span class="n">poids</span><span class="p">,</span> <span class="n">taille</span><span class="p">,</span> <span class="n">player</span><span class="p">)))</span>
+    <span class="n">couples_tries</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">couples</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">second</span><span class="p">)</span>
+    <span class="n">joueurs_classes</span> <span class="o">=</span> <span class="p">[</span><span class="n">couple</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">couple</span> <span class="ow">in</span> <span class="n">couples_tries</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">joueurs_classes</span><span class="p">[:</span><span class="n">k</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<h2 id="4-recherche-du-poste-le-plus-represente">4. Recherche du poste le plus représenté<a class="headerlink" href="#4-recherche-du-poste-le-plus-represente" title="Permanent link">⚓︎</a></h2>
+<h3 id="41-dictionnaire-doccurence-des-postes">4.1 Dictionnaire d'occurence des postes<a class="headerlink" href="#41-dictionnaire-doccurence-des-postes" title="Permanent link">⚓︎</a></h3>
+<div class="admonition example">
+<p class="admonition-title">Fonction <code>occurence</code></p>
+<p>Écrire une fonction <code>occurence</code> qui reçoit en paramètres :</p>
+<ul>
+<li><code>joueurs</code>  : une liste de joueurs</li>
+</ul>
+<p>et qui renvoie le dictionnaire composé différents postes de ces joueurs, et du nombre de fois où ils apparaissent dans la liste <code>joueurs</code>.</p>
+<p><strong>Exemple d'utilisation :</strong>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">occurence</span><span class="p">(</span><span class="n">joueurs</span><span class="p">)</span>
+<span class="p">{</span><span class="s1">&#39;Pilier&#39;</span><span class="p">:</span> <span class="mi">110</span><span class="p">,</span> <span class="s1">&#39;Talonneur&#39;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="s1">&#39;2ème ligne&#39;</span><span class="p">:</span> <span class="mi">74</span><span class="p">,</span> <span class="s1">&#39;3ème ligne&#39;</span><span class="p">:</span> <span class="mi">111</span><span class="p">,</span> <span class="s1">&#39;Mêlée&#39;</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span> <span class="s1">&#39;Ouverture&#39;</span><span class="p">:</span> <span class="mi">38</span><span class="p">,</span> <span class="s1">&#39;Centre&#39;</span><span class="p">:</span> <span class="mi">71</span><span class="p">,</span> <span class="s1">&#39;Ailier&#39;</span><span class="p">:</span> <span class="mi">64</span><span class="p">,</span> <span class="s1">&#39;Arrière&#39;</span><span class="p">:</span> <span class="mi">35</span><span class="p">}</span>
+</code></pre></div></p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">occurence</span><span class="p">(</span><span class="n">joueurs</span><span class="p">):</span>
+    <span class="n">occ</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">player</span> <span class="ow">in</span> <span class="n">joueurs</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">player</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="n">occ</span><span class="p">:</span>
+            <span class="n">occ</span><span class="p">[</span><span class="n">player</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">occ</span><span class="p">[</span><span class="n">player</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">occ</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<h3 id="42-tri-dun-dictionnaire">4.2 Tri d'un dictionnaire<a class="headerlink" href="#42-tri-dun-dictionnaire" title="Permanent link">⚓︎</a></h3>
+<div class="admonition example">
+<p class="admonition-title">Fonction <code>cle_max</code></p>
+<p>Écrire une fonction <code>cle_max</code> qui reçoit en paramètre :</p>
+<ul>
+<li><code>d</code>  : un dictionnaire dont les clés sont des chaines de caractère et les valeurs sont des nombres.</li>
+</ul>
+<p>et qui renvoie la clé associée à la valeur maximale.</p>
+<p><strong>Exemple d'utilisation :</strong>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;lundi&quot;</span><span class="p">:</span><span class="mi">13</span><span class="p">,</span> <span class="s2">&quot;mardi&quot;</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;mercredi&quot;</span><span class="p">:</span><span class="mi">18</span><span class="p">,</span> <span class="s2">&quot;jeudi&quot;</span><span class="p">:</span><span class="mi">4</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">cle_max</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="s1">&#39;mercredi&#39;</span>
+</code></pre></div></p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">cle_max</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
+    <span class="n">maxi</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">d</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">maxi</span><span class="p">:</span>
+            <span class="n">maxi</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+            <span class="n">key_max</span> <span class="o">=</span> <span class="n">key</span>
+    <span class="k">return</span> <span class="n">key_max</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<h3 id="43-fonction-conseil_poste">4.3 Fonction <code>conseil_poste</code><a class="headerlink" href="#43-fonction-conseil_poste" title="Permanent link">⚓︎</a></h3>
+<div class="admonition example">
+<p class="admonition-title">Fonction <code>conseil_poste</code></p>
+<p>Écrire une fonction <code>conseil_poste</code> qui reçoit en paramètres :</p>
+<ul>
+<li><code>poids</code>  : le poids du joueur X</li>
+<li><code>taille</code> : la taille du joueur X</li>
+<li><code>k</code> : le nombre de joueurs les plus proches sur lequel on se base pour faire la prédiction</li>
+</ul>
+<p>et qui renvoie le poste le plus compatible avec la morphologie de X.</p>
+<p><strong>Exemple d'utilisation :</strong>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">conseil_poste</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="mi">170</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="s1">&#39;Mêlée&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">conseil_poste</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">210</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="s1">&#39;2ème ligne&#39;</span>
+</code></pre></div></p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">conseil_poste</span><span class="p">(</span><span class="n">poids</span><span class="p">,</span> <span class="n">taille</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+    <span class="n">joueurs_classes</span> <span class="o">=</span> <span class="n">classement_k_joueurs</span><span class="p">(</span><span class="n">poids</span><span class="p">,</span> <span class="n">taille</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+    <span class="n">dico</span> <span class="o">=</span> <span class="n">occurence</span><span class="p">(</span><span class="n">joueurs_classes</span><span class="p">)</span>
+    <span class="n">poste_conseille</span> <span class="o">=</span> <span class="n">cle_max</span><span class="p">(</span><span class="n">dico</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">poste_conseille</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<p>Faire varier les différents paramètres pour observer leur rôle respectif.</p>
 
   <hr>
 <div class="md-source-file">
