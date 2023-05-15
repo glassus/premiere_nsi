@@ -6,12 +6,11 @@ La méthode KNN est une méthode simple et efficace de classification. La classi
 
 La méthode du KNN va trouver quels sont, dans une base de données déjà bien remplie et labellée, les k-objets (les 6 objets si $k=6$ par exemple) qui se rapprochent le plus de l'objet à classifier. En prenant ensuite la caractéristique la plus fréquente parmi ces 6 objets, on devine alors dans quelle catégorie notre objet doit se classer.
 
+![image](data/picKNN.png){: .center}
 
-![](data/picKNN.png)
 
 **Notre objectif :** 
-Nous allons reprendre le jeu de données sur les joueurs du top14 utilisé ici https://github.com/glassus/nsi/blob/master/Premiere/Theme06_Traitement_de_donnees/03_Pandas_eleves.ipynb
-
+Nous allons reprendre le jeu de données sur les joueurs du top14 utilisé ici [dans le cours «Trier des données»](https://glassus.github.io/premiere_nsi/T5_Traitement_de_donnees/5.2_Trier_des_donnees/cours/){. target="_blank"}
 
 **Question :** si on croise une personne nous disant qu'elle veut jouer en top14, et qu'elle nous donne son poids et sa taille, peut-on lui prédire à quel poste elle devrait jouer ?
 
@@ -19,7 +18,7 @@ Dans toute idée de classification il y a l'idée de **distance**. Il faut compr
 
 Comment mesurer la différence physique entre deux joueurs de rugby ? 
 
-![](data/distAB.png)
+![](data/distAB.png){: .center}
 
 
 ```python
@@ -37,7 +36,7 @@ Il faut créer une fonction `knn()` qui prend en argument `poids` et `taille` , 
 
 Exemple : 
 
-![](data/knn2.png)
+![](data/knn2.png){: .center}
 
 
 
