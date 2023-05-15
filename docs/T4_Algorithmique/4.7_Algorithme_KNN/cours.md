@@ -54,6 +54,7 @@ Comment mesurer la différence physique entre deux joueurs de rugby ?
     445
     ```
 
+    {#
     ??? tip "Correction"
         ```python linenums='1'
         def distance(poids, taille, player):
@@ -61,7 +62,7 @@ Comment mesurer la différence physique entre deux joueurs de rugby ?
             t = int(player['Taille'])
             return (poids-p)**2 + (taille-t)**2
         ```      
-         
+    #}   
 
 
 ## 3. Classement des joueurs suivant leur proximité morphologique
@@ -84,12 +85,15 @@ De la même manière qu'on avait [classé les joueurs suivant leur IMC](https://
     13
     ```
 
+    {#
     ??? tip "Correction"
         ```python linenums='1'
         def second(cpl):
             return cpl[1]
         ```      
-         
+    #}
+
+
 ### 3.2 Classement des k plus proches joueurs
 
 !!! example "Fonction `classement`"
@@ -107,6 +111,7 @@ De la même manière qu'on avait [classé les joueurs suivant leur IMC](https://
     [{'Equipe': 'Bordeaux', 'Nom': 'Geoffrey CROS', 'Poste': 'Arrière', 'Date de naissance': '08/03/1997', 'Taille': '185', 'Poids': '85'}, {'Equipe': 'Toulouse', 'Nom': 'Romain NTAMACK', 'Poste': 'Ouverture', 'Date de naissance': '01/05/1999', 'Taille': '186', 'Poids': '84'}, {'Equipe': 'Bayonne', 'Nom': 'Manuel ORDAS', 'Poste': 'Ouverture', 'Date de naissance': '21/02/1998', 'Taille': '186', 'Poids': '83'}]
     ```
 
+    {#
     ??? tip "Correction"
         ```python linenums='1'
         def classement_k_joueurs(poids, taille):
@@ -117,6 +122,7 @@ De la même manière qu'on avait [classé les joueurs suivant leur IMC](https://
             joueurs_classes = [couple[0] for couple in couples_tries]
             return joueurs_classes[:k]
         ```         
+    #}
 
 ## 4. Recherche du poste le plus représenté
 
@@ -135,6 +141,7 @@ De la même manière qu'on avait [classé les joueurs suivant leur IMC](https://
     {'Pilier': 110, 'Talonneur': 50, '2ème ligne': 74, '3ème ligne': 111, 'Mêlée': 42, 'Ouverture': 38, 'Centre': 71, 'Ailier': 64, 'Arrière': 35}
     ```
 
+    {#
     ??? tip "Correction"
         ```python linenums='1'
         def occurence(joueurs):
@@ -146,7 +153,7 @@ De la même manière qu'on avait [classé les joueurs suivant leur IMC](https://
                     occ[player['Poste']] = 1
             return occ
         ```      
-
+    #}
 
 ### 4.2 Tri d'un dictionnaire
 
@@ -164,6 +171,7 @@ De la même manière qu'on avait [classé les joueurs suivant leur IMC](https://
     'mercredi'
     ```
 
+    {#
     ??? tip "Correction"
         ```python linenums='1'
         def cle_max(d):
@@ -174,6 +182,7 @@ De la même manière qu'on avait [classé les joueurs suivant leur IMC](https://
                     key_max = key
             return key_max
         ```      
+    #}
 
 ### 4.3 Fonction ```conseil_poste```
 
@@ -195,6 +204,7 @@ De la même manière qu'on avait [classé les joueurs suivant leur IMC](https://
     '2ème ligne'
     ```
 
+    {#
     ??? tip "Correction"
         ```python linenums='1'
         def conseil_poste(poids, taille, k):
@@ -203,6 +213,6 @@ De la même manière qu'on avait [classé les joueurs suivant leur IMC](https://
             poste_conseille = cle_max(dico)
             return poste_conseille
         ```  
-
+    #}
 
 Faire varier les différents paramètres pour observer leur rôle respectif.
