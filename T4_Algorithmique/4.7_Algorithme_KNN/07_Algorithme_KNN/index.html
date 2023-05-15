@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.7_Algorithme_KNN/07_Algorithme_KNN/">
       
       
-        <link rel="prev" href="../../4.6_Algorithmes_gloutons/cours/">
+        <link rel="prev" href="../../4.6_Algorithmes_gloutons/intro_rendu/">
       
       
         <link rel="next" href="../cours/">
@@ -1996,72 +1996,10 @@
               
   
   
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Méthode du K-Nearest-Neighbours (KNN), aka les k-plus-proches-voisins
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Méthode du K-Nearest-Neighbours (KNN), aka les k-plus-proches-voisins
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#resultat-attendu" class="md-nav__link">
-    Résultat attendu :
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#influence-du-parametre-k" class="md-nav__link">
-    Influence du paramètre \(k\)
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
   
     <li class="md-nav__item">
       <a href="../cours/" class="md-nav__link">
-        4.7 Algorithme des KNN
+        Cours
       </a>
     </li>
   
@@ -3067,13 +3005,13 @@
 - un grain de beauté est pris en photo par un dermatologue, ce grain de beauté est-il cancéreux ?
 - ...</p>
 <p>La méthode du KNN va trouver quels sont, dans une base de données déjà bien remplie et labellée, les k-objets (les 6 objets si <span class="arithmatex">\(k=6\)</span> par exemple) qui se rapprochent le plus de l'objet à classifier. En prenant ensuite la caractéristique la plus fréquente parmi ces 6 objets, on devine alors dans quelle catégorie notre objet doit se classer.</p>
-<p><img alt="" src="../data/picKNN.png" /></p>
+<p><img alt="image" class="center" src="../data/picKNN.png" /></p>
 <p><strong>Notre objectif :</strong> 
-Nous allons reprendre le jeu de données sur les joueurs du top14 utilisé ici https://github.com/glassus/nsi/blob/master/Premiere/Theme06_Traitement_de_donnees/03_Pandas_eleves.ipynb</p>
+Nous allons reprendre le jeu de données sur les joueurs du top14 utilisé ici <a class="" href="https://glassus.github.io/premiere_nsi/T5_Traitement_de_donnees/5.2_Trier_des_donnees/cours/" target="_blank">dans le cours «Trier des données»</a></p>
 <p><strong>Question :</strong> si on croise une personne nous disant qu'elle veut jouer en top14, et qu'elle nous donne son poids et sa taille, peut-on lui prédire à quel poste elle devrait jouer ?</p>
 <p>Dans toute idée de classification il y a l'idée de <strong>distance</strong>. Il faut comprendre la distance comme une <em>mesure de la différence</em>. </p>
 <p>Comment mesurer la différence physique entre deux joueurs de rugby ? </p>
-<p><img alt="" src="../data/distAB.png" /></p>
+<p><img alt="" class="center" src="../data/distAB.png" /></p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> <span class="c1">#import du module pandas, abrégé classiquement par &quot;pd&quot;</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/top14.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
@@ -3081,7 +3019,7 @@ Nous allons reprendre le jeu de données sur les joueurs du top14 utilisé ici h
 <h3 id="resultat-attendu">Résultat attendu :<a class="headerlink" href="#resultat-attendu" title="Permanent link">⚓︎</a></h3>
 <p>Il faut créer une fonction <code>knn()</code> qui prend en argument <code>poids</code> et <code>taille</code> , sont les caractéristiques du nouveau joueur. La fonction doit renvoyer une chaîne de caractère correspondant au poste auquel elle est susceptible de jouer.</p>
 <p>Exemple : </p>
-<p><img alt="" src="../data/knn2.png" /></p>
+<p><img alt="" class="center" src="../data/knn2.png" /></p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">knn</span><span class="p">(</span><span class="n">poids</span><span class="p">,</span> <span class="n">taille</span><span class="p">):</span>
   <span class="n">df</span><span class="p">[</span><span class="s1">&#39;distance&#39;</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">taille</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">poids</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
   <span class="n">newdf</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;distance&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -3273,7 +3211,7 @@ Il se trouve qu'un joueur possède <strong>exactement</strong> ces caractéristi
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">1 juin 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">15 mai 2023</span>
       
     
   </small>
