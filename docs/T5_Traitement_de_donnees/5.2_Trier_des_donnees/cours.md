@@ -226,7 +226,7 @@ Cette fonction nous permettra d'estimer la différence morphologique entre deux 
 
 $(102-90)^2+(190-180)^2=244$
 
-{#
+
 ??? tip "réponse"
     ```python
     def distance(joueur1,joueur2):
@@ -236,7 +236,7 @@ $(102-90)^2+(190-180)^2=244$
         t2 = int(joueur2['Taille'])
         return (p1-p2)**2+(t1-t2)**2
     ```
-#}
+
 
 ### 3.2 Distance des joueurs avec Baptiste Serin
 
