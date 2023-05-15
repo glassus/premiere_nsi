@@ -4,13 +4,13 @@
 
 
 
-Nous reprenons notre fichier de joueurs de rugby du Top14. : [`Top14.csv `](../data/top14.csv)
+Nous reprenons notre fichier de joueurs de rugby du Top14. : [`top14.csv `](../data/top14.csv)
 
 
 
 ```python
 import csv
-f = open('Top14.csv', "r", encoding = 'utf-8')
+f = open('top14.csv', "r", encoding = 'utf-8')
 donnees = csv.DictReader(f)
 joueurs = []
 for ligne in donnees:
@@ -32,17 +32,13 @@ La valeur renvoyée sera de type liste.
 ```
 
 
-{#
+
 ??? tip "réponse"
     ```python
-    def joueursEquipe(equipe):
-        lst_joueurs = []
-        for j in joueurs :
-            if j['Equipe'] == equipe :
-                lst_joueurs.append(j)        
-        return lst_joueurs
+    def joueursEquipe(equipe):      
+        return [player for player in joueurs if player["Equipe"] == equipe]
     ```
-#}
+
 
 Définir de la même manière une fonction `joueursPoste(poste)`.
 
@@ -52,18 +48,14 @@ Définir de la même manière une fonction `joueursPoste(poste)`.
 [{'Equipe': 'Agen', 'Nom': 'Clément MARTINEZ', 'Poste': 'Talonneur', 'Date de naissance': '14/03/1996', 'Taille': '181', 'Poids': '105'}, {'Equipe': 'Agen', 'Nom': 'Marc BARTHOMEUF', 'Poste': 'T...
 ```
 
-{#
+
 ??? tip "réponse"
     ```python
-    def joueursPoste(poste):
-        lst_joueurs = []
-        for j in joueurs :
-            if j['Poste'] == poste :
-                lst_joueurs.append(j)
-        return lst_joueurs
+    def joueursPoste(poste):      
+        return [player for player in joueurs if player["Poste"] == poste]
     ```
 
-#}
+
 
 ## 2. Utilisation d'une fonction de tri
 
