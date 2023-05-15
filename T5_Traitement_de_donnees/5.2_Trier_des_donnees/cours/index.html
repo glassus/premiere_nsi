@@ -17,7 +17,7 @@
         <link rel="next" href="../../5.3_Pandas/cours/">
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
     
     
       
@@ -3110,9 +3110,9 @@
 
 <h1 id="52-trier-des-donnees">5.2 Trier des données<a class="headerlink" href="#52-trier-des-donnees" title="Permanent link">⚓︎</a></h1>
 <p><img alt="image" class="center" src="../data/BO.png" /></p>
-<p>Nous reprenons notre fichier de joueurs de rugby du Top14. </p>
+<p>Nous reprenons notre fichier de joueurs de rugby du Top14. : <a href="../../data/top14.csv"><code>Top14.csv</code></a></p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">csv</span>
-<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;top14.csv&#39;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;Top14.csv&#39;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
 <span class="n">donnees</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 <span class="n">joueurs</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="n">donnees</span><span class="p">:</span>
@@ -3124,18 +3124,15 @@
 <p>L'objectif est de créer une fonction <code>joueursEquipe(equipe)</code> qui renvoie une liste contentant tous les joueurs de l'équipe <code>equipe</code>. 
 Le paramètre <code>equipe</code> sera donnée sous forme de chaîne de caractères. 
 La valeur renvoyée sera de type liste.</p>
-<details class="tip">
-<summary>réponse</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">joueursEquipe</span><span class="p">(</span><span class="n">equipe</span><span class="p">):</span>
-    <span class="n">lst_joueurs</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="p">:</span>
-        <span class="k">if</span> <span class="n">j</span><span class="p">[</span><span class="s1">&#39;Equipe&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">equipe</span> <span class="p">:</span>
-            <span class="n">lst_joueurs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="n">lst_joueurs</span>
+<p><strong>Utilisation :</strong></p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">joueursEquipe</span><span class="p">(</span><span class="s1">&#39;Bordeaux&#39;</span><span class="p">)</span>
+<span class="p">[{</span><span class="s1">&#39;Equipe&#39;</span><span class="p">:</span> <span class="s1">&#39;Bordeaux&#39;</span><span class="p">,</span> <span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Jefferson POIROT&#39;</span><span class="p">,</span> <span class="s1">&#39;Poste&#39;</span><span class="p">:</span> <span class="s1">&#39;Pilier&#39;</span><span class="p">,</span> <span class="s1">&#39;Date de naissance&#39;</span><span class="p">:</span> <span class="s1">&#39;01/11/1992&#39;</span><span class="p">,</span> <span class="s1">&#39;Taille&#39;</span><span class="p">:</span> <span class="s1">&#39;181&#39;</span><span class="p">,</span> <span class="s1">&#39;Poids&#39;</span><span class="p">:</span> <span class="s1">&#39;117&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;Equipe&#39;</span><span class="p">:</span> <span class="s1">&#39;Bordeaux&#39;</span><span class="p">,</span> <span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Lasha TABIDZE&#39;</span><span class="p">,</span> <span class="s1">&#39;Poste&#39;</span><span class="p">:</span> <span class="s1">&#39;Pilier&#39;</span><span class="p">,</span> <span class="s1">&#39;Date de naissance&#39;</span><span class="p">:</span> <span class="s1">&#39;04/07/1997&#39;</span><span class="p">,</span> <span class="s1">&#39;Taille&#39;</span><span class="p">:</span> <span class="s1">&#39;185&#39;</span><span class="p">,</span> <span class="s1">&#39;Poids&#39;</span><span class="p">:</span> <span class="s1">&#39;117&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;Equipe&#39;</span><span class="p">:</span> <span class="s1">&#39;Bordeaux&#39;</span><span class="p">,</span> <span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Laurent DEL.....</span>
 </code></pre></div>
-</details>
 <p>Définir de la même manière une fonction <code>joueursPoste(poste)</code>.</p>
+<p><strong>Utilisation :</strong>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">joueursPoste</span><span class="p">(</span><span class="s2">&quot;Talonneur&quot;</span><span class="p">)</span>
+<span class="p">[{</span><span class="s1">&#39;Equipe&#39;</span><span class="p">:</span> <span class="s1">&#39;Agen&#39;</span><span class="p">,</span> <span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Clément MARTINEZ&#39;</span><span class="p">,</span> <span class="s1">&#39;Poste&#39;</span><span class="p">:</span> <span class="s1">&#39;Talonneur&#39;</span><span class="p">,</span> <span class="s1">&#39;Date de naissance&#39;</span><span class="p">:</span> <span class="s1">&#39;14/03/1996&#39;</span><span class="p">,</span> <span class="s1">&#39;Taille&#39;</span><span class="p">:</span> <span class="s1">&#39;181&#39;</span><span class="p">,</span> <span class="s1">&#39;Poids&#39;</span><span class="p">:</span> <span class="s1">&#39;105&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;Equipe&#39;</span><span class="p">:</span> <span class="s1">&#39;Agen&#39;</span><span class="p">,</span> <span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Marc BARTHOMEUF&#39;</span><span class="p">,</span> <span class="s1">&#39;Poste&#39;</span><span class="p">:</span> <span class="s1">&#39;T...</span>
+</code></pre></div></p>
 <h2 id="2-utilisation-dune-fonction-de-tri">2. Utilisation d'une fonction de tri<a class="headerlink" href="#2-utilisation-dune-fonction-de-tri" title="Permanent link">⚓︎</a></h2>
 <h3 id="21-le-probleme">2.1 Le problème<a class="headerlink" href="#21-le-probleme" title="Permanent link">⚓︎</a></h3>
 <p>Comment classer les joueurs suivant leur taille ?
@@ -3195,71 +3192,52 @@ Ici, plusieurs clés peuvent être des critères de tri : la taille, le poids.</
      <span class="p">{</span><span class="s1">&#39;Prenom&#39;</span><span class="p">:</span> <span class="s1">&#39;Lisa&#39;</span><span class="p">,</span> <span class="s1">&#39;age estimé&#39;</span><span class="p">:</span> <span class="s1">&#39;8&#39;</span><span class="p">},</span>
      <span class="p">{</span><span class="s1">&#39;Prenom&#39;</span><span class="p">:</span> <span class="s1">&#39;Maggie&#39;</span><span class="p">,</span> <span class="s1">&#39;age estimé&#39;</span><span class="p">:</span> <span class="s1">&#39;1&#39;</span><span class="p">}]</span>
 </code></pre></div>
-<div class="admonition abstract">
+<div class="admonition example">
 <p class="admonition-title">Exercice 1</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Correction</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Trier les joueurs du top14 par taille.</p>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">taillePlayer</span><span class="p">(</span><span class="n">player</span><span class="p">)</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">player</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">])</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">joueurs_taille_croissant</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">joueurs</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">taillePlayer</span><span class="p">)</span>
-</code></pre></div>
+<p>Trier les joueurs du Top14 par taille.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="admonition abstract">
+<div class="admonition example">
 <p class="admonition-title">Exercice 2</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Correction</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Trier les joueurs du top14 par poids.</p>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">poidsPlayer</span><span class="p">(</span><span class="n">player</span><span class="p">)</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">player</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">joueurs_poids_croissant</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">joueurs</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">poidsPlayer</span><span class="p">)</span>
-</code></pre></div>
+<p>Trier les joueurs du Top14 par poids.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="admonition abstract">
+<div class="admonition example">
 <p class="admonition-title">Exercice 3</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Énoncé</label><label for="__tabbed_3_2">Correction</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Énoncé</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Trier les joueurs de Bordeaux suivant leur Indice de Masse Corporelle (<a href="https://fr.wikipedia.org/wiki/Indice_de_masse_corporelle">IMC</a> )</p>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">IMC</span><span class="p">(</span><span class="n">player</span><span class="p">):</span>
-        <span class="n">masse</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">player</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span>
-        <span class="n">taille_m</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">player</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">])</span> <span class="o">/</span> <span class="mi">100</span>
-        <span class="k">return</span> <span class="n">masse</span> <span class="o">/</span> <span class="n">taille_m</span><span class="o">**</span><span class="mi">2</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">joueursUBB</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="k">if</span> <span class="n">k</span><span class="p">[</span><span class="s1">&#39;Equipe&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Bordeaux&#39;</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">joueursUBB_tri</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">joueursUBB</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">IMC</span><span class="p">)</span>
-</code></pre></div>
 </div>
 </div>
 </div>
 </div>
 <h2 id="3-recherche-des-joueurs-de-profil-physique-similaire">3. Recherche des joueurs de profil physique similaire<a class="headerlink" href="#3-recherche-des-joueurs-de-profil-physique-similaire" title="Permanent link">⚓︎</a></h2>
 <h3 id="31-distance-entre-deux-joueurs">3.1 Distance entre deux joueurs<a class="headerlink" href="#31-distance-entre-deux-joueurs" title="Permanent link">⚓︎</a></h3>
-<p>Construire une fonction <code>distance(joueur1,joueur2)</code> qui renvoie la somme des carrés des différences de tailles et de poids entre les joueurs <code>joueur1</code> et <code>joueur2</code> : 
-$$ d = (p_1-p_2)^2 + (t_1-t_2)^2$$</p>
-<details class="tip">
-<summary>réponse</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="n">joueur1</span><span class="p">,</span><span class="n">joueur2</span><span class="p">):</span>
-    <span class="n">p1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">joueur1</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span>
-    <span class="n">p2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">joueur2</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span>
-    <span class="n">t1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">joueur1</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">])</span>
-    <span class="n">t2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">joueur2</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">])</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">p1</span><span class="o">-</span><span class="n">p2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span><span class="n">t1</span><span class="o">-</span><span class="n">t2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
-</code></pre></div>
-</details>
+<p>Construire une fonction <code>distance(joueur1, joueur2)</code> qui renvoie la somme des carrés des différences de tailles et de poids entre les joueurs <code>joueur1</code> et <code>joueur2</code> : </p>
+<div class="arithmatex">\[d = (p_1-p_2)^2 + (t_1-t_2)^2\]</div>
+<p>Cette fonction nous permettra d'estimer la différence morphologique entre deux joueurs.</p>
+<p><strong>Utilisation :</strong>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">distance</span><span class="p">(</span><span class="n">joueurs</span><span class="p">[</span><span class="mi">23</span><span class="p">],</span> <span class="n">joueurs</span><span class="p">[</span><span class="mi">31</span><span class="p">])</span>
+<span class="mi">244</span>
+</code></pre></div></p>
+<p><em>Vérification :</em>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">joueurs</span><span class="p">[</span><span class="mi">23</span><span class="p">]</span>
+<span class="p">{</span><span class="s1">&#39;Equipe&#39;</span><span class="p">:</span> <span class="s1">&#39;Agen&#39;</span><span class="p">,</span> <span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Alban CONDUCHÉ&#39;</span><span class="p">,</span> <span class="s1">&#39;Poste&#39;</span><span class="p">:</span> <span class="s1">&#39;Centre&#39;</span><span class="p">,</span> <span class="s1">&#39;Date de naissance&#39;</span><span class="p">:</span> <span class="s1">&#39;29/10/1996&#39;</span><span class="p">,</span> <span class="s1">&#39;Taille&#39;</span><span class="p">:</span> <span class="s1">&#39;190&#39;</span><span class="p">,</span> <span class="s1">&#39;Poids&#39;</span><span class="p">:</span> <span class="s1">&#39;102&#39;</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">joueurs</span><span class="p">[</span><span class="mi">31</span><span class="p">]</span>
+<span class="p">{</span><span class="s1">&#39;Equipe&#39;</span><span class="p">:</span> <span class="s1">&#39;Agen&#39;</span><span class="p">,</span> <span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;JJ TAULAGI&#39;</span><span class="p">,</span> <span class="s1">&#39;Poste&#39;</span><span class="p">:</span> <span class="s1">&#39;Arrière&#39;</span><span class="p">,</span> <span class="s1">&#39;Date de naissance&#39;</span><span class="p">:</span> <span class="s1">&#39;18/06/1993&#39;</span><span class="p">,</span> <span class="s1">&#39;Taille&#39;</span><span class="p">:</span> <span class="s1">&#39;180&#39;</span><span class="p">,</span> <span class="s1">&#39;Poids&#39;</span><span class="p">:</span> <span class="s1">&#39;90&#39;</span><span class="p">}</span>
+</code></pre></div></p>
+<p><span class="arithmatex">\((102-90)^2+(190-180)^2=244\)</span></p>
 <h3 id="32-distance-des-joueurs-avec-baptiste-serin">3.2 Distance des joueurs avec Baptiste Serin<a class="headerlink" href="#32-distance-des-joueurs-avec-baptiste-serin" title="Permanent link">⚓︎</a></h3>
 <p>Retrouvons d'abord le numéro de Baptiste Serin dans notre classement de joueurs :</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span>  <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">joueurs</span><span class="p">))</span> <span class="p">:</span>
@@ -3275,24 +3253,20 @@ $$ d = (p_1-p_2)^2 + (t_1-t_2)^2$$</p>
      <span class="s1">&#39;Taille&#39;</span><span class="p">:</span> <span class="s1">&#39;180&#39;</span><span class="p">,</span>
      <span class="s1">&#39;Poids&#39;</span><span class="p">:</span> <span class="s1">&#39;79&#39;</span><span class="p">}</span>
 </code></pre></div>
-<p>Nous pouvons maintenant classer les joueurs suivant leur distance morphologique à Baptiste  SERIN :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">distanceSerin</span><span class="p">(</span><span class="n">joueur2</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">distance</span><span class="p">(</span><span class="n">joueurs</span><span class="p">[</span><span class="mi">530</span><span class="p">],</span><span class="n">joueur2</span><span class="p">)</span>
+<p>Baptiste SERIN est donc le joueur numéro 530.</p>
+<p>Créer une fonction <code>distanceSerin</code> qui prend en paramètre un joueur et qui renvoie sa différence avec Baptiste Serin.</p>
+<p><strong>Utilisation :</strong></p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">distanceSerin</span><span class="p">(</span><span class="n">joueurs</span><span class="p">[</span><span class="mi">18</span><span class="p">])</span>
+<span class="mi">745</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">distanceSerin</span><span class="p">(</span><span class="n">joueurs</span><span class="p">[</span><span class="mi">530</span><span class="p">])</span>
- <span class="mi">0</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">joueurs_VS_Serin</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">joueurs</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">distanceSerin</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">joueurs_VS_Serin</span>
-</code></pre></div>
+<p>Classer l'ensemble des joueurs du Top14 suivant leur différence morphologique avec Baptiste Serin (du plus proche au plus éloigné).</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">8 juin 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">15 mai 2023</span>
       
     
   </small>
@@ -3376,7 +3350,7 @@ $$ d = (p_1-p_2)^2 + (t_1-t_2)^2$$</p>
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c2be25ad.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       
