@@ -11,6 +11,8 @@
         
 ## Thèmes en cours d'étude 
 
+:arrow_right: [Algorithme KNN](./T4_Algorithmique/4.7_Algorithme_KNN/cours/)
+
 :arrow_right: [Trier des données](./T5_Traitement_de_donnees/5.2_Trier_des_donnees/cours/)
 
 :arrow_right: [Manipulation de fichiers csv](./T5_Traitement_de_donnees/5.1_Manipulation_csv/cours/)
