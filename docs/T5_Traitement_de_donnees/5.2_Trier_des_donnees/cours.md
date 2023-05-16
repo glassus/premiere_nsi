@@ -277,22 +277,22 @@ Créer une fonction ```distanceSerin``` qui prend en paramètre un joueur et qui
 745
 ```
 
-{#
+
 ??? tip "réponse"
     ```python
     def distanceSerin(joueur):
         return distance(joueurs[530], joueur)
     ```
-#}
+
 
 Classer l'ensemble des joueurs du Top14 suivant leur différence morphologique avec Baptiste Serin (du plus proche au plus éloigné).
 
-{#
+
 ??? tip "réponse"
     ```python
     >>> joueurs_VS_Serin = sorted(joueurs, key = distanceSerin)
     >>> joueurs_VS_Serin
 
     ```
-#}
+
 
