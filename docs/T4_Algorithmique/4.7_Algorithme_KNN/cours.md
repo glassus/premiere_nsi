@@ -85,13 +85,13 @@ De la même manière qu'on avait [classé les joueurs suivant leur IMC](https://
     13
     ```
 
-    {#
+    
     ??? tip "Correction"
         ```python linenums='1'
         def second(cpl):
             return cpl[1]
         ```      
-    #}
+    
 
 
 ### 3.2 Classement des k plus proches joueurs
