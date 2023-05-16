@@ -141,7 +141,7 @@ De la même manière qu'on avait [classé les joueurs suivant leur IMC](https://
     {'Pilier': 110, 'Talonneur': 50, '2ème ligne': 74, '3ème ligne': 111, 'Mêlée': 42, 'Ouverture': 38, 'Centre': 71, 'Ailier': 64, 'Arrière': 35}
     ```
 
-    {#
+    
     ??? tip "Correction"
         ```python linenums='1'
         def occurence(joueurs):
@@ -153,7 +153,7 @@ De la même manière qu'on avait [classé les joueurs suivant leur IMC](https://
                     occ[player['Poste']] = 1
             return occ
         ```      
-    #}
+    
 
 ### 4.2 Tri d'un dictionnaire
 
