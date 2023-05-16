@@ -111,7 +111,7 @@ De la même manière qu'on avait [classé les joueurs suivant leur IMC](https://
     [{'Equipe': 'Bordeaux', 'Nom': 'Geoffrey CROS', 'Poste': 'Arrière', 'Date de naissance': '08/03/1997', 'Taille': '185', 'Poids': '85'}, {'Equipe': 'Toulouse', 'Nom': 'Romain NTAMACK', 'Poste': 'Ouverture', 'Date de naissance': '01/05/1999', 'Taille': '186', 'Poids': '84'}, {'Equipe': 'Bayonne', 'Nom': 'Manuel ORDAS', 'Poste': 'Ouverture', 'Date de naissance': '21/02/1998', 'Taille': '186', 'Poids': '83'}]
     ```
 
-    {#
+    
     ??? tip "Correction"
         ```python linenums='1'
         def classement_k_joueurs(poids, taille):
@@ -122,7 +122,7 @@ De la même manière qu'on avait [classé les joueurs suivant leur IMC](https://
             joueurs_classes = [couple[0] for couple in couples_tries]
             return joueurs_classes[:k]
         ```         
-    #}
+    
 
 ## 4. Recherche du poste le plus représenté
 
