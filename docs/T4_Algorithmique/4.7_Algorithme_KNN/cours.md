@@ -96,8 +96,8 @@ De la même manière qu'on avait [classé les joueurs suivant leur IMC](https://
 
 ### 3.2 Classement des k plus proches joueurs
 
-!!! example "Fonction `classement`"
-    Écrire une fonction ```classement``` qui reçoit en paramètres :
+!!! example "Fonction `classement_k_joueurs`"
+    Écrire une fonction ```classement_k_joueurs``` qui reçoit en paramètres :
 
     - ```poids```  : le poids du joueur X
     - ```taille``` : la taille du joueur X
