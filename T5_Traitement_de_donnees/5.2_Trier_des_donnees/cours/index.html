@@ -3288,14 +3288,26 @@ Ici, plusieurs clés peuvent être des critères de tri : la taille, le poids.</
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">distanceSerin</span><span class="p">(</span><span class="n">joueurs</span><span class="p">[</span><span class="mi">18</span><span class="p">])</span>
 <span class="mi">745</span>
 </code></pre></div>
+<details class="tip">
+<summary>réponse</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">distanceSerin</span><span class="p">(</span><span class="n">joueur</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">distance</span><span class="p">(</span><span class="n">joueurs</span><span class="p">[</span><span class="mi">530</span><span class="p">],</span> <span class="n">joueur</span><span class="p">)</span>
+</code></pre></div>
+</details>
 <p>Classer l'ensemble des joueurs du Top14 suivant leur différence morphologique avec Baptiste Serin (du plus proche au plus éloigné).</p>
+<details class="tip">
+<summary>réponse</summary>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">joueurs_VS_Serin</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">joueurs</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">distanceSerin</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">joueurs_VS_Serin</span>
+</code></pre></div>
+</details>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">15 mai 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">16 mai 2023</span>
       
     
   </small>
