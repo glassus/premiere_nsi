@@ -3148,6 +3148,17 @@
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">distance</span><span class="p">(</span><span class="mi">93</span><span class="p">,</span> <span class="mi">190</span><span class="p">,</span> <span class="n">joueurs</span><span class="p">[</span><span class="mi">34</span><span class="p">])</span>
 <span class="mi">445</span>
 </code></pre></div></p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="n">poids</span><span class="p">,</span> <span class="n">taille</span><span class="p">,</span> <span class="n">player</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">player</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">player</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">poids</span><span class="o">-</span><span class="n">p</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">taille</span><span class="o">-</span><span class="n">t</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <h2 id="3-classement-des-joueurs-suivant-leur-proximite-morphologique">3. Classement des joueurs suivant leur proximité morphologique<a class="headerlink" href="#3-classement-des-joueurs-suivant-leur-proximite-morphologique" title="Permanent link">⚓︎</a></h2>
 <p>De la même manière qu'on avait <a class="" href="https://glassus.github.io/premiere_nsi/T5_Traitement_de_donnees/5.2_Trier_des_donnees/cours/#22-un-exemple-de-tri-de-dictionnaire" target="_blank">classé les joueurs suivant leur IMC</a>, on peut les classer suivant leur proximité morphologique avec le joueur X.</p>
@@ -3232,7 +3243,7 @@
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">15 mai 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">16 mai 2023</span>
       
     
   </small>
