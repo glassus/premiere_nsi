@@ -54,7 +54,7 @@ Comment mesurer la différence physique entre deux joueurs de rugby ?
     445
     ```
 
-    {#
+    
     ??? tip "Correction"
         ```python linenums='1'
         def distance(poids, taille, player):
@@ -62,7 +62,7 @@ Comment mesurer la différence physique entre deux joueurs de rugby ?
             t = int(player['Taille'])
             return (poids-p)**2 + (taille-t)**2
         ```      
-    #}   
+    
 
 
 ## 3. Classement des joueurs suivant leur proximité morphologique
