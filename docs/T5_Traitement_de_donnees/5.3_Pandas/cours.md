@@ -424,16 +424,16 @@ Comme dans [ce cours](https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.
 - ```taille``` : la taille du joueur X
 - ```k``` : le nombre de joueurs les plus proches sur lequel on se base pour faire la prédiction
 
-et qui renvoyait le poste le plus compatible avec la morphologie de X.
+qui renvoie le poste le plus compatible avec la morphologie de X.
 
-Il est maintenant possible de recoder cette fonction beaucoup plus simplement (mais alors VRAIMENT beaucoup).
+Il est maintenant possible de coder cette fonction beaucoup plus simplement (mais alors VRAIMENT beaucoup) qu'avec le module ```csv```. 
 
 Il va nous suffir de :
 
 - créer une nouvelle colonne contenant la [distance](https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.7_Algorithme_KNN/cours/#2-fonction-distance-morphologique){. target="_blank"}  de chaque joueur avec le joueur X.
 - classer la dataframe suivant cette nouvelle colonne.
 - ne garder que les ```k``` premiers éléments.
-- renvoyer le poste le plus fréquent parmi ces ```k``` premiers élements
+- renvoyer le poste le plus fréquent parmi ces ```k``` premiers élements.
 
 
 !!! abstract "Algorithme KNN  :heart: "
