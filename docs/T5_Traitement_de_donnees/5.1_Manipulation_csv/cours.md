@@ -248,7 +248,7 @@ plt.show()
 ```
 
 
-![png](01_Manipulation_csv_files/01_Manipulation_csv_34_0.png){: .center}
+![png](data/01_Manipulation_csv_34_0.png){: .center}
 
 
 ### 4.2 Application
@@ -266,7 +266,7 @@ plt.show()
     ```
 
 
-    ![png](01_Manipulation_csv_files/01_Manipulation_csv_37_0.png){: .center}
+    ![png](data/01_Manipulation_csv_37_0.png){: .center}
 
 
 **Q2.** Faire apparaître ensuite les joueurs évoluant au poste de Centre en bleu, et les 2ème lignes en vert.
@@ -294,6 +294,6 @@ plt.show()
     ```
 
 
-    ![png](01_Manipulation_csv_files/01_Manipulation_csv_38_0.png){: .center}
+    ![png](data/01_Manipulation_csv_38_0.png){: .center}
 
 
