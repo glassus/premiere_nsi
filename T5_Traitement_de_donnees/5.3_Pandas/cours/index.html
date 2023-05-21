@@ -17,7 +17,7 @@
         <link rel="next" href="../../../T6_IHM_Web/pagesperso/">
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
     
     
       
@@ -2208,9 +2208,122 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Cours
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Cours
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduction-et-premiere-dataframe" class="md-nav__link">
+    1. Introduction et première dataframe
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-observation-des-donnees" class="md-nav__link">
+    2. Observation des données
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Observation des données">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-structure-globale-des-donnees" class="md-nav__link">
+    2.1 Structure globale des données
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-acces-a-une-fiche-particuliere" class="md-nav__link">
+    2.2 Accès à une fiche particulière
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-premieres-et-dernieres-lignes" class="md-nav__link">
+    2.3 Premières et dernières lignes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-analyse-automatique-et-filtrage" class="md-nav__link">
+    3. Analyse automatique et filtrage
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Analyse automatique et filtrage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-extraction-dune-colonne" class="md-nav__link">
+    3.1 Extraction d'une colonne
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-tri-et-analyse-automatique-des-donnees" class="md-nav__link">
+    3.2 Tri et Analyse automatique des données
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-filtres-et-recherches" class="md-nav__link">
+    4. Filtres et recherches
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-modification-de-la-structure-rajout-dune-colonne" class="md-nav__link">
+    5. Modification de la structure : rajout d'une colonne
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-retour-sur-le-knn" class="md-nav__link">
+    6. Retour sur le KNN
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3010,13 +3123,378 @@
 
 
 <h1 id="53-utilisation-du-module-pandas">5.3 Utilisation du module Pandas<a class="headerlink" href="#53-utilisation-du-module-pandas" title="Permanent link">⚓︎</a></h1>
+<h2 id="1-introduction-et-premiere-dataframe">1. Introduction et première dataframe<a class="headerlink" href="#1-introduction-et-premiere-dataframe" title="Permanent link">⚓︎</a></h2>
+<p>Le module <code>csv</code> utilisé précédemment se contente de lire les données structurées. Il ne fait aucun effort particulier pour analyser les données. Nous nous en sommes aperçus lorsqu'il a fallu convertir par <code>int()</code> toutes les valeurs numériques, qui étaient interprétées comme des chaînes de caractères.<br />
+La bibliothèque <a class="" href="https://pandas.pydata.org/" target="_blank">pandas</a>  est par contre spécialement conçue pour l'analyse des données (<em>data analysis</em>) : elle est donc naturellement bien plus performante.</p>
+<div class="admonition note">
+<p class="admonition-title">Importation du module <code>pandas</code> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<p>L'import se fait classiquement par :
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+</code></pre></div></p>
+</div>
+<p>Le type de variable dans lequel <code>pandas</code> va stocker les données s'appelle une <strong>dataframe</strong>, qui sera souvent abrégée par <code>df</code>.</p>
+<p>Nous allons retravailler avec le fichier <a href="../../data/top14.csv"><code>top14.csv</code></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Première dataframe <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<p>Nos données seront ensuite importées dans la dataframe <code>df</code> par l'instruction :
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;top14.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> 
+</code></pre></div></p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">pandas</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">DataFrame</span><span class="s1">&#39;&gt;</span>
+</code></pre></div>
+<h2 id="2-observation-des-donnees">2. Observation des données<a class="headerlink" href="#2-observation-des-donnees" title="Permanent link">⚓︎</a></h2>
+<p>Que contient la variable <code>df</code> ?</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span>
+       <span class="n">Equipe</span>                 <span class="n">Nom</span>    <span class="n">Poste</span> <span class="n">Date</span> <span class="n">de</span> <span class="n">naissance</span>  <span class="n">Taille</span>  <span class="n">Poids</span>
+<span class="mi">0</span>        <span class="n">Agen</span>  <span class="n">Anton</span> <span class="n">PEIKRISHVILI</span>   <span class="n">Pilier</span>        <span class="mi">18</span><span class="o">/</span><span class="mi">09</span><span class="o">/</span><span class="mi">1987</span>     <span class="mi">183</span>    <span class="mi">122</span>
+<span class="mi">1</span>        <span class="n">Agen</span>           <span class="n">Dave</span> <span class="n">RYAN</span>   <span class="n">Pilier</span>        <span class="mi">21</span><span class="o">/</span><span class="mi">04</span><span class="o">/</span><span class="mi">1986</span>     <span class="mi">183</span>    <span class="mi">116</span>
+<span class="mi">2</span>        <span class="n">Agen</span>  <span class="n">Giorgi</span> <span class="n">TETRASHVILI</span>   <span class="n">Pilier</span>        <span class="mi">31</span><span class="o">/</span><span class="mi">08</span><span class="o">/</span><span class="mi">1993</span>     <span class="mi">177</span>    <span class="mi">112</span>
+<span class="mi">3</span>        <span class="n">Agen</span>    <span class="n">Kamaliele</span> <span class="n">TUFELE</span>   <span class="n">Pilier</span>        <span class="mi">11</span><span class="o">/</span><span class="mi">10</span><span class="o">/</span><span class="mi">1995</span>     <span class="mi">182</span>    <span class="mi">123</span>
+<span class="mi">4</span>        <span class="n">Agen</span>        <span class="n">Malino</span> <span class="n">VANAÏ</span>   <span class="n">Pilier</span>        <span class="mi">04</span><span class="o">/</span><span class="mi">05</span><span class="o">/</span><span class="mi">1993</span>     <span class="mi">183</span>    <span class="mi">119</span>
+<span class="o">..</span>        <span class="o">...</span>                 <span class="o">...</span>      <span class="o">...</span>               <span class="o">...</span>     <span class="o">...</span>    <span class="o">...</span>
+<span class="mi">590</span>  <span class="n">Toulouse</span>          <span class="n">Werner</span> <span class="n">KOK</span>   <span class="n">Ailier</span>        <span class="mi">27</span><span class="o">/</span><span class="mi">01</span><span class="o">/</span><span class="mi">1993</span>     <span class="mi">177</span>     <span class="mi">78</span>
+<span class="mi">591</span>  <span class="n">Toulouse</span>         <span class="n">Yoann</span> <span class="n">HUGET</span>   <span class="n">Ailier</span>        <span class="mi">02</span><span class="o">/</span><span class="mi">06</span><span class="o">/</span><span class="mi">1987</span>     <span class="mi">190</span>     <span class="mi">97</span>
+<span class="mi">592</span>  <span class="n">Toulouse</span>       <span class="n">Matthis</span> <span class="n">LEBEL</span>  <span class="n">Arrière</span>        <span class="mi">25</span><span class="o">/</span><span class="mi">03</span><span class="o">/</span><span class="mi">1999</span>     <span class="mi">185</span>     <span class="mi">91</span>
+<span class="mi">593</span>  <span class="n">Toulouse</span>       <span class="n">Maxime</span> <span class="n">MÉDARD</span>  <span class="n">Arrière</span>        <span class="mi">16</span><span class="o">/</span><span class="mi">11</span><span class="o">/</span><span class="mi">1986</span>     <span class="mi">180</span>     <span class="mi">85</span>
+<span class="mi">594</span>  <span class="n">Toulouse</span>        <span class="n">Thomas</span> <span class="n">RAMOS</span>  <span class="n">Arrière</span>        <span class="mi">23</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="mi">1995</span>     <span class="mi">178</span>     <span class="mi">86</span>
+
+<span class="p">[</span><span class="mi">595</span> <span class="n">rows</span> <span class="n">x</span> <span class="mi">6</span> <span class="n">columns</span><span class="p">]</span>
+</code></pre></div>
+<p>Les données sont présentées dans l'ordre originel du fichier. </p>
+<h3 id="21-structure-globale-des-donnees">2.1 Structure globale des données<a class="headerlink" href="#21-structure-globale-des-donnees" title="Permanent link">⚓︎</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">La structure des données : <code>info</code> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">pandas</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">DataFrame</span><span class="s1">&#39;&gt;</span>
+<span class="n">RangeIndex</span><span class="p">:</span> <span class="mi">595</span> <span class="n">entries</span><span class="p">,</span> <span class="mi">0</span> <span class="n">to</span> <span class="mi">594</span>
+<span class="n">Data</span> <span class="n">columns</span> <span class="p">(</span><span class="n">total</span> <span class="mi">6</span> <span class="n">columns</span><span class="p">):</span>
+ <span class="c1">#   Column             Non-Null Count  Dtype </span>
+<span class="o">---</span>  <span class="o">------</span>             <span class="o">--------------</span>  <span class="o">-----</span> 
+ <span class="mi">0</span>   <span class="n">Equipe</span>             <span class="mi">595</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="nb">object</span>
+ <span class="mi">1</span>   <span class="n">Nom</span>                <span class="mi">595</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="nb">object</span>
+ <span class="mi">2</span>   <span class="n">Poste</span>              <span class="mi">595</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="nb">object</span>
+ <span class="mi">3</span>   <span class="n">Date</span> <span class="n">de</span> <span class="n">naissance</span>  <span class="mi">595</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="nb">object</span>
+ <span class="mi">4</span>   <span class="n">Taille</span>             <span class="mi">595</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">int64</span> 
+ <span class="mi">5</span>   <span class="n">Poids</span>              <span class="mi">595</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">int64</span> 
+<span class="n">dtypes</span><span class="p">:</span> <span class="n">int64</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="nb">object</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">memory</span> <span class="n">usage</span><span class="p">:</span> <span class="mf">28.0</span><span class="o">+</span> <span class="n">KB</span>
+</code></pre></div>
+</div>
+<p>On peut y constater une très bonne nouvelle : les données numériques sont reconnues comme telles (type <code>int64</code> ).</p>
+<h3 id="22-acces-a-une-fiche-particuliere">2.2 Accès à une fiche particulière<a class="headerlink" href="#22-acces-a-une-fiche-particuliere" title="Permanent link">⚓︎</a></h3>
+<p>D'après la commande précédente, il y a 595 entrées dans notre fichier de données. L'accès à une fiche particulière se fera avec la commande <code>loc</code>.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Accès à une fiche : <code>loc</code> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">312</span><span class="p">]</span>
+<span class="n">Equipe</span>                         <span class="n">Lyon</span>
+<span class="n">Nom</span>                  <span class="n">Charlie</span> <span class="n">NGATAI</span>
+<span class="n">Poste</span>                        <span class="n">Centre</span>
+<span class="n">Date</span> <span class="n">de</span> <span class="n">naissance</span>        <span class="mi">17</span><span class="o">/</span><span class="mi">08</span><span class="o">/</span><span class="mi">1990</span>
+<span class="n">Taille</span>                          <span class="mi">188</span>
+<span class="n">Poids</span>                           <span class="mi">103</span>
+<span class="n">Name</span><span class="p">:</span> <span class="mi">312</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="nb">object</span>
+</code></pre></div>
+</div>
+<h3 id="23-premieres-et-dernieres-lignes">2.3 Premières et dernières lignes<a class="headerlink" href="#23-premieres-et-dernieres-lignes" title="Permanent link">⚓︎</a></h3>
+<p>Il est toutefois possible d'avoir uniquement les premières lignes du fichier avec la commande <code>head()</code> et les dernières du fichier avec la commande <code>tail()</code>. Ces commandes peuvent recevoir en paramètre un nombre entier :</p>
+<div class="admonition abstract">
+<p class="admonition-title">Les premières lignes du fichier : <code>head</code> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+  <span class="n">Equipe</span>                 <span class="n">Nom</span>   <span class="n">Poste</span> <span class="n">Date</span> <span class="n">de</span> <span class="n">naissance</span>  <span class="n">Taille</span>  <span class="n">Poids</span>
+<span class="mi">0</span>   <span class="n">Agen</span>  <span class="n">Anton</span> <span class="n">PEIKRISHVILI</span>  <span class="n">Pilier</span>        <span class="mi">18</span><span class="o">/</span><span class="mi">09</span><span class="o">/</span><span class="mi">1987</span>     <span class="mi">183</span>    <span class="mi">122</span>
+<span class="mi">1</span>   <span class="n">Agen</span>           <span class="n">Dave</span> <span class="n">RYAN</span>  <span class="n">Pilier</span>        <span class="mi">21</span><span class="o">/</span><span class="mi">04</span><span class="o">/</span><span class="mi">1986</span>     <span class="mi">183</span>    <span class="mi">116</span>
+<span class="mi">2</span>   <span class="n">Agen</span>  <span class="n">Giorgi</span> <span class="n">TETRASHVILI</span>  <span class="n">Pilier</span>        <span class="mi">31</span><span class="o">/</span><span class="mi">08</span><span class="o">/</span><span class="mi">1993</span>     <span class="mi">177</span>    <span class="mi">112</span>
+<span class="mi">3</span>   <span class="n">Agen</span>    <span class="n">Kamaliele</span> <span class="n">TUFELE</span>  <span class="n">Pilier</span>        <span class="mi">11</span><span class="o">/</span><span class="mi">10</span><span class="o">/</span><span class="mi">1995</span>     <span class="mi">182</span>    <span class="mi">123</span>
+<span class="mi">4</span>   <span class="n">Agen</span>        <span class="n">Malino</span> <span class="n">VANAÏ</span>  <span class="n">Pilier</span>        <span class="mi">04</span><span class="o">/</span><span class="mi">05</span><span class="o">/</span><span class="mi">1993</span>     <span class="mi">183</span>    <span class="mi">119</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+  <span class="n">Equipe</span>                 <span class="n">Nom</span>   <span class="n">Poste</span> <span class="n">Date</span> <span class="n">de</span> <span class="n">naissance</span>  <span class="n">Taille</span>  <span class="n">Poids</span>
+<span class="mi">0</span>   <span class="n">Agen</span>  <span class="n">Anton</span> <span class="n">PEIKRISHVILI</span>  <span class="n">Pilier</span>        <span class="mi">18</span><span class="o">/</span><span class="mi">09</span><span class="o">/</span><span class="mi">1987</span>     <span class="mi">183</span>    <span class="mi">122</span>
+<span class="mi">1</span>   <span class="n">Agen</span>           <span class="n">Dave</span> <span class="n">RYAN</span>  <span class="n">Pilier</span>        <span class="mi">21</span><span class="o">/</span><span class="mi">04</span><span class="o">/</span><span class="mi">1986</span>     <span class="mi">183</span>    <span class="mi">116</span>
+</code></pre></div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Les dernières lignes du fichier : <code>tail</code> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+       <span class="n">Equipe</span>            <span class="n">Nom</span>    <span class="n">Poste</span> <span class="n">Date</span> <span class="n">de</span> <span class="n">naissance</span>  <span class="n">Taille</span>  <span class="n">Poids</span>
+<span class="mi">590</span>  <span class="n">Toulouse</span>     <span class="n">Werner</span> <span class="n">KOK</span>   <span class="n">Ailier</span>        <span class="mi">27</span><span class="o">/</span><span class="mi">01</span><span class="o">/</span><span class="mi">1993</span>     <span class="mi">177</span>     <span class="mi">78</span>
+<span class="mi">591</span>  <span class="n">Toulouse</span>    <span class="n">Yoann</span> <span class="n">HUGET</span>   <span class="n">Ailier</span>        <span class="mi">02</span><span class="o">/</span><span class="mi">06</span><span class="o">/</span><span class="mi">1987</span>     <span class="mi">190</span>     <span class="mi">97</span>
+<span class="mi">592</span>  <span class="n">Toulouse</span>  <span class="n">Matthis</span> <span class="n">LEBEL</span>  <span class="n">Arrière</span>        <span class="mi">25</span><span class="o">/</span><span class="mi">03</span><span class="o">/</span><span class="mi">1999</span>     <span class="mi">185</span>     <span class="mi">91</span>
+<span class="mi">593</span>  <span class="n">Toulouse</span>  <span class="n">Maxime</span> <span class="n">MÉDARD</span>  <span class="n">Arrière</span>        <span class="mi">16</span><span class="o">/</span><span class="mi">11</span><span class="o">/</span><span class="mi">1986</span>     <span class="mi">180</span>     <span class="mi">85</span>
+<span class="mi">594</span>  <span class="n">Toulouse</span>   <span class="n">Thomas</span> <span class="n">RAMOS</span>  <span class="n">Arrière</span>        <span class="mi">23</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="mi">1995</span>     <span class="mi">178</span>     <span class="mi">86</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+       <span class="n">Equipe</span>            <span class="n">Nom</span>    <span class="n">Poste</span> <span class="n">Date</span> <span class="n">de</span> <span class="n">naissance</span>  <span class="n">Taille</span>  <span class="n">Poids</span>
+<span class="mi">592</span>  <span class="n">Toulouse</span>  <span class="n">Matthis</span> <span class="n">LEBEL</span>  <span class="n">Arrière</span>        <span class="mi">25</span><span class="o">/</span><span class="mi">03</span><span class="o">/</span><span class="mi">1999</span>     <span class="mi">185</span>     <span class="mi">91</span>
+<span class="mi">593</span>  <span class="n">Toulouse</span>  <span class="n">Maxime</span> <span class="n">MÉDARD</span>  <span class="n">Arrière</span>        <span class="mi">16</span><span class="o">/</span><span class="mi">11</span><span class="o">/</span><span class="mi">1986</span>     <span class="mi">180</span>     <span class="mi">85</span>
+<span class="mi">594</span>  <span class="n">Toulouse</span>   <span class="n">Thomas</span> <span class="n">RAMOS</span>  <span class="n">Arrière</span>        <span class="mi">23</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="mi">1995</span>     <span class="mi">178</span>     <span class="mi">86</span>
+</code></pre></div>
+</div>
+<h2 id="3-analyse-automatique-et-filtrage">3. Analyse automatique et filtrage<a class="headerlink" href="#3-analyse-automatique-et-filtrage" title="Permanent link">⚓︎</a></h2>
+<h3 id="31-extraction-dune-colonne">3.1 Extraction d'une colonne<a class="headerlink" href="#31-extraction-dune-colonne" title="Permanent link">⚓︎</a></h3>
+<p>L'idée générale est que l'on va créer de nouveaux objets contenant uniquement les renseignements qui nous intéressent.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Extraction d'une colonne : <code>df[colonne]</code>  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<p>Pour créer une liste contenant uniquement les données numériques de la colonne <code>poids</code>, il suffit d'écrire :
+<div class="highlight"><pre><span></span><code><span class="n">poids</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span>
+</code></pre></div></p>
+</div>
+<p>La variable <code>poids</code> est un objet de type <code>Series</code> (assimilable à une liste)  qui va pouvoir être exploitée très facilement.</p>
+<p>On peut d'ailleurs accéder à un élément particulier de cette variable :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">poids</span><span class="p">[</span><span class="mi">15</span><span class="p">]</span>
+<span class="mi">114</span>
+</code></pre></div>
+<p>On confirme donc une excellente nouvelle : les poids sont bien considérés nativement comme des nombres. On peut donc se servir de manière très intuitive de cette fonctionnalité pour faire des graphiques très facilement, sans conversion comme dans le module <code>csv</code> ! </p>
+<p>Pour trouver le poids minimal de cette série, on utilisera naturellement la fonction <code>min</code> :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">min</span><span class="p">(</span><span class="n">poids</span><span class="p">)</span>
+<span class="mi">70</span>
+</code></pre></div>
+<p>Pour tracer notre nuage de points poids-taille, le code sera donc simplement :</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="png" class="center" src="../data/01_Manipulation_csv_37_0.png" /></p>
+<h3 id="32-tri-et-analyse-automatique-des-donnees">3.2 Tri et Analyse automatique des données<a class="headerlink" href="#32-tri-et-analyse-automatique-des-donnees" title="Permanent link">⚓︎</a></h3>
+<p>L'interprétation numérique permet à <code>pandas</code> d'analyser automatiquement les données, avec notamment la fonction <code>describe()</code>.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Résumé des données numériques : <code>describe</code>  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> </p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<span class="n">count</span>    <span class="mf">595.000000</span>
+<span class="n">mean</span>     <span class="mf">186.559664</span>
+<span class="n">std</span>        <span class="mf">7.572615</span>
+<span class="nb">min</span>      <span class="mf">169.000000</span>
+<span class="mi">25</span><span class="o">%</span>      <span class="mf">181.000000</span>
+<span class="mi">50</span><span class="o">%</span>      <span class="mf">186.000000</span>
+<span class="mi">75</span><span class="o">%</span>      <span class="mf">192.000000</span>
+<span class="nb">max</span>      <span class="mf">208.000000</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">Taille</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="n">float64</span>
+</code></pre></div>
+</div>
+<p>On voit donc que les principaux indicateurs statistiques sont proposés. </p>
+<p>D'ailleurs, on peut très facilement tracer des boites à moustaches avec la fonction <code>boxplot()</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">graph_taille</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="s2">&quot;Taille&quot;</span><span class="p">)</span>
+<span class="n">graph_taille</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="image" class="center" src="../data/bam.png" /></p>
+<p>Pour les données non-numériques, la commande <code>describe()</code> n'est que peu d'utilité. Elle renseigne toutefois la valeur la plus fréquente (en statistiques, le <em>mode</em> ou <em>valeur modale</em>) grâce à <code>describe().top</code>.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Valeur modale de données non-numériques : <code>describe().top</code>  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> </p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">top</span>
+<span class="s1">&#39;3ème ligne&#39;</span>
+</code></pre></div>
+</div>
+<p><img alt="image" class="center" src="../data/mickey.jpg" width="40%" /></p>
+<p>Pour avoir un détail plus précis de la répartition des données, on peut utiliser <code>value_counts</code> :</p>
+<div class="admonition abstract">
+<p class="admonition-title">Répartition des valeurs : <code>value_counts</code>  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> </p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<span class="mi">3</span><span class="n">ème</span> <span class="n">ligne</span>    <span class="mi">111</span>
+<span class="n">Pilier</span>        <span class="mi">110</span>
+<span class="mi">2</span><span class="n">ème</span> <span class="n">ligne</span>     <span class="mi">74</span>
+<span class="n">Centre</span>         <span class="mi">71</span>
+<span class="n">Ailier</span>         <span class="mi">64</span>
+<span class="n">Talonneur</span>      <span class="mi">50</span>
+<span class="n">Mêlée</span>          <span class="mi">42</span>
+<span class="n">Ouverture</span>      <span class="mi">38</span>
+<span class="n">Arrière</span>        <span class="mi">35</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">Poste</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="n">int64</span>
+</code></pre></div>
+</div>
+<p>Il est possible aussi de trier la dataframe en lui indiquant la colonne de tri :</p>
+<div class="admonition abstract">
+<p class="admonition-title">Trier les données : <code>sort_values</code>  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> </p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">classement_par_taille</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Taille&#39;</span><span class="p">,</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<h2 id="4-filtres-et-recherches">4. Filtres et recherches<a class="headerlink" href="#4-filtres-et-recherches" title="Permanent link">⚓︎</a></h2>
+<p>Le principe du filtrage va être de créer une nouvelle <em>dataframe</em> ne contenant que des lignes correspondant à un certain critère.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Filtrage des lignes : <code>df[booléen]</code>  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> </p>
+<p>Comment créer une <em>dataframe</em> ne contenant que les joueurs de l'UBB ?<br />
+L'idée syntaxique est d'écrire à l'intérieur de <code>df[]</code> le <strong>test</strong> qui permettra le filtrage.
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">UBB</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Equipe&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Bordeaux&#39;</span><span class="p">]</span>
+</code></pre></div>
+Le booléen <code>df['Equipe'] == 'Bordeaux'</code> doit se comprendre ainsi : on ne veut garder que les joueurs dont le champ <code>Equipe</code> est égal à <code>'Bordeaux'</code>.</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">UBB</span>
+     <span class="n">Equipe</span>                  <span class="n">Nom</span>       <span class="n">Poste</span> <span class="n">Date</span> <span class="n">de</span> <span class="n">naissance</span>  <span class="n">Taille</span>  <span class="n">Poids</span>
+<span class="mi">80</span>   <span class="n">Bordeaux</span>     <span class="n">Jefferson</span> <span class="n">POIROT</span>      <span class="n">Pilier</span>        <span class="mi">01</span><span class="o">/</span><span class="mi">11</span><span class="o">/</span><span class="mi">1992</span>     <span class="mi">181</span>    <span class="mi">117</span>
+<span class="mi">81</span>   <span class="n">Bordeaux</span>        <span class="n">Lasha</span> <span class="n">TABIDZE</span>      <span class="n">Pilier</span>        <span class="mi">04</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="mi">1997</span>     <span class="mi">185</span>    <span class="mi">117</span>
+<span class="mi">82</span>   <span class="n">Bordeaux</span>   <span class="n">Laurent</span> <span class="n">DELBOULBÈS</span>      <span class="n">Pilier</span>        <span class="mi">17</span><span class="o">/</span><span class="mi">11</span><span class="o">/</span><span class="mi">1986</span>     <span class="mi">181</span>    <span class="mi">106</span>
+<span class="mi">83</span>   <span class="n">Bordeaux</span>    <span class="n">Lekso</span> <span class="n">KAULASHVILI</span>      <span class="n">Pilier</span>        <span class="mi">27</span><span class="o">/</span><span class="mi">08</span><span class="o">/</span><span class="mi">1992</span>     <span class="mi">187</span>    <span class="mi">120</span>
+<span class="mi">84</span>   <span class="n">Bordeaux</span>           <span class="n">Peni</span> <span class="n">RAVAI</span>      <span class="n">Pilier</span>        <span class="mi">16</span><span class="o">/</span><span class="mi">06</span><span class="o">/</span><span class="mi">1990</span>     <span class="mi">185</span>    <span class="mi">119</span>
+<span class="o">...</span>
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  1</p>
+<p>Créer une dataframe <code>grands</code> qui contient tous les joueurs mesurant plus de 2 mètres (inclus).</p>
+<details class="tip">
+<summary>Correction </summary>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">grands</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">200</span><span class="p">]</span>
+</code></pre></div>
+</details>
+</div>
+<p>Pour effectuer des opérations sur les booléens, on utilisera le symbole <code>&amp;</code> pour le ET et <code>|</code> pour le OU.</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice  2</p>
+<p>Créer une dataframe <code>grands_et_gros</code> qui contient tous les joueurs mesurant plus de 2 mètres (inclus) et pesant plus de 120 kg (inclus).</p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">grands_gros</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">200</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">120</span><span class="p">)]</span>
+</code></pre></div>
+<p>Autre solution, en utilisant la datadframe <code>grands</code> de l'exercice 1 :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">grands_gros</span> <span class="o">=</span> <span class="n">grands</span><span class="p">[</span><span class="n">grands</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">120</span><span class="p">]</span>
+</code></pre></div></p>
+</details>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  3</p>
+<p>Trouver en une seule ligne le joueur le plus léger du Top14.</p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="nb">min</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])]</span>
+       <span class="n">Equipe</span>             <span class="n">Nom</span>  <span class="n">Poste</span> <span class="n">Date</span> <span class="n">de</span> <span class="n">naissance</span>  <span class="n">Taille</span>  <span class="n">Poids</span>
+<span class="mi">491</span>  <span class="n">Racing92</span>  <span class="n">Teddy</span> <span class="n">IRIBAREN</span>  <span class="n">Mêlée</span>        <span class="mi">25</span><span class="o">/</span><span class="mi">09</span><span class="o">/</span><span class="mi">1990</span>     <span class="mi">170</span>     <span class="mi">70</span>
+</code></pre></div>
+</details>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  4</p>
+<p>Tracer le nuage de point poids-taille comme précédemment, mais en marquant d'un point bleu les 2èmes ligne et d'un point rouge les piliers.</p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;top14.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> 
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">)</span>
+
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;2ème ligne&#39;</span><span class="p">][</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;2ème ligne&#39;</span><span class="p">][</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="s1">&#39;bo&#39;</span><span class="p">)</span>
+
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Pilier&#39;</span><span class="p">][</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Pilier&#39;</span><span class="p">][</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="s1">&#39;go&#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p><img alt="image" class="center" src="../data/ex4.png" /></p>
+</details>
+</div>
+<h2 id="5-modification-de-la-structure-rajout-dune-colonne">5. Modification de la structure : rajout d'une colonne<a class="headerlink" href="#5-modification-de-la-structure-rajout-dune-colonne" title="Permanent link">⚓︎</a></h2>
+<p>Afin de pouvoir trier les joueurs suivant de nouveaux critères, nous allons rajouter un champ pour chaque joueur.
+Prenons un exemple stupide : fabriquons un nouveau champ <code>'Poids après les vacances'</code> qui contiendra le poids des joueurs augmenté de 8 kg. 
+Ceci se fera simplement par :</p>
+<div class="admonition abstract">
+<p class="admonition-title">Rajout d'une colonne  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> </p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids après les vacances&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">8</span>
+</code></pre></div>
+</div>
+<p>On voit apparaitre dans la dataframe <code>df</code> une nouvelle colonne
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+  <span class="n">Equipe</span>                 <span class="n">Nom</span>   <span class="n">Poste</span>  <span class="o">...</span> <span class="n">Taille</span>  <span class="n">Poids</span>  <span class="n">Poids</span> <span class="n">après</span> <span class="n">les</span> <span class="n">vacances</span>
+<span class="mi">0</span>   <span class="n">Agen</span>  <span class="n">Anton</span> <span class="n">PEIKRISHVILI</span>  <span class="n">Pilier</span>  <span class="o">...</span>    <span class="mi">183</span>    <span class="mi">122</span>                       <span class="mi">130</span>
+<span class="mi">1</span>   <span class="n">Agen</span>           <span class="n">Dave</span> <span class="n">RYAN</span>  <span class="n">Pilier</span>  <span class="o">...</span>    <span class="mi">183</span>    <span class="mi">116</span>                       <span class="mi">124</span>
+<span class="mi">2</span>   <span class="n">Agen</span>  <span class="n">Giorgi</span> <span class="n">TETRASHVILI</span>  <span class="n">Pilier</span>  <span class="o">...</span>    <span class="mi">177</span>    <span class="mi">112</span>                       <span class="mi">120</span>
+<span class="mi">3</span>   <span class="n">Agen</span>    <span class="n">Kamaliele</span> <span class="n">TUFELE</span>  <span class="n">Pilier</span>  <span class="o">...</span>    <span class="mi">182</span>    <span class="mi">123</span>                       <span class="mi">131</span>
+<span class="mi">4</span>   <span class="n">Agen</span>        <span class="n">Malino</span> <span class="n">VANAÏ</span>  <span class="n">Pilier</span>  <span class="o">...</span>    <span class="mi">183</span>    <span class="mi">119</span>                       <span class="mi">127</span>
+
+<span class="p">[</span><span class="mi">5</span> <span class="n">rows</span> <span class="n">x</span> <span class="mi">7</span> <span class="n">columns</span><span class="p">]</span>
+</code></pre></div></p>
+<p>Pour supprimer cette colonne sans intérêt, il suffit de faire :
+<div class="highlight"><pre><span></span><code><span class="k">del</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids après les vacances&#39;</span><span class="p">]</span> 
+</code></pre></div></p>
+<div class="admonition example">
+<p class="admonition-title">Exercice  5</p>
+<p><strong>Q1.</strong> Créer une colonne contenant l'IMC de chaque joueur.</p>
+<details class="tip">
+<summary>Correction Q1</summary>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;IMC&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+</code></pre></div>
+</details>
+<p><strong>Q2.</strong> Créer une nouvelle dataframe contenant tous les joueurs du Top14 classés par ordre d'IMC croissant.</p>
+<details class="tip">
+<summary>Correction Q2</summary>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df_imc</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;IMC&#39;</span><span class="p">,</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+</details>
+</div>
+<h2 id="6-retour-sur-le-knn">6. Retour sur le KNN<a class="headerlink" href="#6-retour-sur-le-knn" title="Permanent link">⚓︎</a></h2>
+<p>Comme dans <a class="" href="https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.7_Algorithme_KNN/cours/" target="_blank">ce cours</a>, nous allons construire une fonction  <code>conseil_poste</code> recevant en paramètres :</p>
+<ul>
+<li><code>df</code> : la dataframe contenant nos données</li>
+<li><code>poids</code>  : le poids du joueur X</li>
+<li><code>taille</code> : la taille du joueur X</li>
+<li><code>k</code> : le nombre de joueurs les plus proches sur lequel on se base pour faire la prédiction</li>
+</ul>
+<p>qui renvoie le poste le plus compatible avec la morphologie de X.</p>
+<p>Il est maintenant possible de coder cette fonction beaucoup plus simplement (mais alors VRAIMENT beaucoup) qu'avec le module <code>csv</code>. </p>
+<p>Il va nous suffir de :</p>
+<ul>
+<li>créer une nouvelle colonne contenant la <a class="" href="https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.7_Algorithme_KNN/cours/#2-fonction-distance-morphologique" target="_blank">distance</a>  de chaque joueur avec le joueur X.</li>
+<li>classer la dataframe suivant cette nouvelle colonne.</li>
+<li>ne garder que les <code>k</code> premiers éléments.</li>
+<li>renvoyer le poste le plus fréquent parmi ces <code>k</code> premiers élements.</li>
+</ul>
+<div class="admonition abstract">
+<p class="admonition-title">Algorithme KNN  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;top14.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> 
+
+<span class="k">def</span> <span class="nf">conseil_poste</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">poids</span><span class="p">,</span> <span class="n">taille</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;distance&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">poids</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">taille</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="s1">&#39;distance&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">top</span> 
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">conseil_poste</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">160</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="s1">&#39;Mêlée&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">conseil_poste</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="mi">130</span><span class="p">,</span> <span class="mi">160</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="s1">&#39;Pilier&#39;</span>
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">26 juillet 2021</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">21 mai 2023</span>
       
     
   </small>
@@ -3100,7 +3578,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c2be25ad.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b4d07000.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       
