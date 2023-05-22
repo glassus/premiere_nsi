@@ -342,6 +342,11 @@ Pour effectuer des opérations sur les booléens, on utilisera le symbole ```&``
                Equipe             Nom  Poste Date de naissance  Taille  Poids
         491  Racing92  Teddy IRIBAREN  Mêlée        25/09/1990     170     70
         ```
+
+        ou bien
+        ```python
+        >>> df.sort_values(by='Poids', ascending=True).head(1)
+        ```
     
 
 !!! example "{{ exercice() }}"
