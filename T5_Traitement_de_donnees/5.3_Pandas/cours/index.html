@@ -3347,19 +3347,79 @@ Le booléen <code>df['Equipe'] == 'Bordeaux'</code> doit se comprendre ainsi : o
 <div class="admonition example">
 <p class="admonition-title">Exercice  1</p>
 <p>Créer une dataframe <code>grands</code> qui contient tous les joueurs mesurant plus de 2 mètres (inclus).</p>
+<details class="tip">
+<summary>Correction </summary>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">grands</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">200</span><span class="p">]</span>
+</code></pre></div>
+</details>
 </div>
 <p>Pour effectuer des opérations sur les booléens, on utilisera le symbole <code>&amp;</code> pour le ET et <code>|</code> pour le OU.</p>
 <div class="admonition example">
 <p class="admonition-title">Exercice  2</p>
 <p>Créer une dataframe <code>grands_et_gros</code> qui contient tous les joueurs mesurant plus de 2 mètres (inclus) et pesant plus de 120 kg (inclus).</p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">grands_gros</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">200</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">120</span><span class="p">)]</span>
+</code></pre></div>
+<p>Autre solution, en utilisant la datadframe <code>grands</code> de l'exercice 1 :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">grands_gros</span> <span class="o">=</span> <span class="n">grands</span><span class="p">[</span><span class="n">grands</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">120</span><span class="p">]</span>
+</code></pre></div></p>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  3</p>
 <p>Trouver en une seule ligne le joueur le plus léger du Top14.</p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="nb">min</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])]</span>
+       <span class="n">Equipe</span>             <span class="n">Nom</span>  <span class="n">Poste</span> <span class="n">Date</span> <span class="n">de</span> <span class="n">naissance</span>  <span class="n">Taille</span>  <span class="n">Poids</span>
+<span class="mi">491</span>  <span class="n">Racing92</span>  <span class="n">Teddy</span> <span class="n">IRIBAREN</span>  <span class="n">Mêlée</span>        <span class="mi">25</span><span class="o">/</span><span class="mi">09</span><span class="o">/</span><span class="mi">1990</span>     <span class="mi">170</span>     <span class="mi">70</span>
+</code></pre></div>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  4</p>
 <p>Tracer le nuage de point poids-taille comme précédemment, mais en marquant d'un point bleu les 2èmes ligne et d'un point rouge les piliers.</p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;top14.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> 
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">)</span>
+
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;2ème ligne&#39;</span><span class="p">][</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;2ème ligne&#39;</span><span class="p">][</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="s1">&#39;bo&#39;</span><span class="p">)</span>
+
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Pilier&#39;</span><span class="p">][</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Pilier&#39;</span><span class="p">][</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="s1">&#39;go&#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p><img alt="image" class="center" src="../data/ex4.png" /></p>
+</details>
 </div>
 <h2 id="5-modification-de-la-structure-rajout-dune-colonne">5. Modification de la structure : rajout d'une colonne<a class="headerlink" href="#5-modification-de-la-structure-rajout-dune-colonne" title="Permanent link">⚓︎</a></h2>
 <p>Afin de pouvoir trier les joueurs suivant de nouveaux critères, nous allons rajouter un champ pour chaque joueur.
