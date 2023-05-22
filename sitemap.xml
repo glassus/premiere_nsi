@@ -241,6 +241,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://glassus.github.io/premiere_nsi/T5_Traitement_de_donnees/5.3_Pandas/exercices/</loc>
+         <lastmod>2023-05-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://glassus.github.io/premiere_nsi/T6_IHM_Web/pagesperso/</loc>
          <lastmod>2023-05-22</lastmod>
          <changefreq>daily</changefreq>
