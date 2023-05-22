@@ -306,18 +306,21 @@ Le principe du filtrage va être de créer une nouvelle *dataframe* ne contenant
 
 !!! example "{{ exercice() }}"
     Créer une dataframe ```grands``` qui contient tous les joueurs mesurant plus de 2 mètres (inclus).
-        
+
+    {#    
     ??? tip "Correction "
         ```python
         >>> grands = df[df['Taille'] >= 200]
         ```
+    #}
 
 Pour effectuer des opérations sur les booléens, on utilisera le symbole ```&``` pour le ET et ```|``` pour le OU.
 
 
 !!! example "{{ exercice() }}"
      Créer une dataframe ```grands_et_gros``` qui contient tous les joueurs mesurant plus de 2 mètres (inclus) et pesant plus de 120 kg (inclus).
-        
+
+    {#    
     ??? tip "Correction"
         ```python
         >>> grands_gros = df[(df['Taille'] >= 200) & (df['Poids'] >= 120)]
@@ -327,21 +330,24 @@ Pour effectuer des opérations sur les booléens, on utilisera le symbole ```&``
         ```python
         >>> grands_gros = grands[grands['Poids'] >= 120]
         ```
-
+    #}
 
 !!! example "{{ exercice() }}"
     Trouver en une seule ligne le joueur le plus léger du Top14.
-        
+
+    {#  
     ??? tip "Correction"
         ```python
         >>> df[df['Poids'] == min(df['Poids'])]
                Equipe             Nom  Poste Date de naissance  Taille  Poids
         491  Racing92  Teddy IRIBAREN  Mêlée        25/09/1990     170     70
         ```
+    #}
 
 !!! example "{{ exercice() }}"
     Tracer le nuage de point poids-taille comme précédemment, mais en marquant d'un point bleu les 2èmes ligne et d'un point rouge les piliers.
-        
+
+    {#    
     ??? tip "Correction"
         ```python linenums='1'
         import pandas as pd
@@ -365,7 +371,7 @@ Pour effectuer des opérations sur les booléens, on utilisera le symbole ```&``
         ```
 
         ![image](data/ex4.png){: .center}
-        
+    #}  
 
 
 
@@ -401,19 +407,23 @@ del df['Poids après les vacances']
 
 !!! example "{{ exercice() }}"
     **Q1.** Créer une colonne contenant l'IMC de chaque joueur.
-         
+
+    {# 
     ??? tip "Correction Q1"
         ```python
         >>> df['IMC'] = df['Poids'] / (df['Taille']/100)**2
         ```
+    #}
+
 
     **Q2.** Créer une nouvelle dataframe contenant tous les joueurs du Top14 classés par ordre d'IMC croissant.
     
+    {#
     ??? tip "Correction Q2"
         ```python
         >>> df_imc = df.sort_values(by='IMC', ascending = True)
         ```
-
+    #}
 
 ## 6. Retour sur le KNN
 
@@ -437,6 +447,20 @@ Il va nous suffir de :
 
 
 !!! abstract "Algorithme KNN  :heart: "
+
+    ```python linenums='1'
+    import pandas as pd
+
+    df = pd.read_csv('top14.csv', encoding = 'utf-8') 
+
+    def conseil_poste(df, poids, taille, k):
+        ...
+        ...
+        ...
+        ...
+    ```
+
+    {#
     ```python linenums='1'
     import pandas as pd
 
@@ -448,7 +472,7 @@ Il va nous suffir de :
         df = df.head(k)
         return df['Poste'].describe().top 
     ```
-
+    #}
 
 
 ```python
