@@ -3275,6 +3275,23 @@
 <span class="o">&gt;&gt;&gt;</span> <span class="n">cle_max</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
 <span class="s1">&#39;mercredi&#39;</span>
 </code></pre></div></p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">cle_max</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
+    <span class="n">maxi</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">d</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">maxi</span><span class="p">:</span>
+            <span class="n">maxi</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+            <span class="n">key_max</span> <span class="o">=</span> <span class="n">key</span>
+    <span class="k">return</span> <span class="n">key_max</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <h3 id="43-fonction-conseil_poste">4.3 Fonction <code>conseil_poste</code><a class="headerlink" href="#43-fonction-conseil_poste" title="Permanent link">⚓︎</a></h3>
 <div class="admonition example">
@@ -3292,6 +3309,19 @@
 <span class="o">&gt;&gt;&gt;</span> <span class="n">conseil_poste</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">210</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
 <span class="s1">&#39;2ème ligne&#39;</span>
 </code></pre></div></p>
+<details class="tip">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">conseil_poste</span><span class="p">(</span><span class="n">poids</span><span class="p">,</span> <span class="n">taille</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+    <span class="n">joueurs_classes</span> <span class="o">=</span> <span class="n">classement_k_joueurs</span><span class="p">(</span><span class="n">poids</span><span class="p">,</span> <span class="n">taille</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+    <span class="n">dico</span> <span class="o">=</span> <span class="n">occurence</span><span class="p">(</span><span class="n">joueurs_classes</span><span class="p">)</span>
+    <span class="n">poste_conseille</span> <span class="o">=</span> <span class="n">cle_max</span><span class="p">(</span><span class="n">dico</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">poste_conseille</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <p>Faire varier les différents paramètres pour observer leur rôle respectif.</p>
 
@@ -3300,7 +3330,7 @@
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">16 mai 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">22 mai 2023</span>
       
     
   </small>
