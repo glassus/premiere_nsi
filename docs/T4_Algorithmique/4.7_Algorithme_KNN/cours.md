@@ -171,7 +171,7 @@ De la même manière qu'on avait [classé les joueurs suivant leur IMC](https://
     'mercredi'
     ```
 
-    {#
+    
     ??? tip "Correction"
         ```python linenums='1'
         def cle_max(d):
@@ -182,7 +182,7 @@ De la même manière qu'on avait [classé les joueurs suivant leur IMC](https://
                     key_max = key
             return key_max
         ```      
-    #}
+    
 
 ### 4.3 Fonction ```conseil_poste```
 
@@ -204,7 +204,7 @@ De la même manière qu'on avait [classé les joueurs suivant leur IMC](https://
     '2ème ligne'
     ```
 
-    {#
+    
     ??? tip "Correction"
         ```python linenums='1'
         def conseil_poste(poids, taille, k):
@@ -213,6 +213,6 @@ De la même manière qu'on avait [classé les joueurs suivant leur IMC](https://
             poste_conseille = cle_max(dico)
             return poste_conseille
         ```  
-    #}
+    
 
 Faire varier les différents paramètres pour observer leur rôle respectif.
