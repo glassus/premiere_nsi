@@ -15,7 +15,7 @@ La bibliothèque [pandas](https://pandas.pydata.org/){. target="_blank"}  est pa
 
 Le type de variable dans lequel ```pandas``` va stocker les données s'appelle une **dataframe**, qui sera souvent abrégée par ```df```.
 
-Nous allons retravailler avec le fichier [`top14.csv `](../data/top14.csv).
+Nous allons retravailler avec le fichier [`top14.csv ` :arrow_down:](../data/top14.csv).
 
 
 !!! note "Première dataframe :heart:"
