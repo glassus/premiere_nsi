@@ -307,12 +307,12 @@ Le principe du filtrage va être de créer une nouvelle *dataframe* ne contenant
 !!! example "{{ exercice() }}"
     Créer une dataframe ```grands``` qui contient tous les joueurs mesurant plus de 2 mètres (inclus).
 
-    {#    
+        
     ??? tip "Correction "
         ```python
         >>> grands = df[df['Taille'] >= 200]
         ```
-    #}
+    
 
 Pour effectuer des opérations sur les booléens, on utilisera le symbole ```&``` pour le ET et ```|``` pour le OU.
 
@@ -320,7 +320,7 @@ Pour effectuer des opérations sur les booléens, on utilisera le symbole ```&``
 !!! example "{{ exercice() }}"
      Créer une dataframe ```grands_et_gros``` qui contient tous les joueurs mesurant plus de 2 mètres (inclus) et pesant plus de 120 kg (inclus).
 
-    {#    
+       
     ??? tip "Correction"
         ```python
         >>> grands_gros = df[(df['Taille'] >= 200) & (df['Poids'] >= 120)]
@@ -330,24 +330,24 @@ Pour effectuer des opérations sur les booléens, on utilisera le symbole ```&``
         ```python
         >>> grands_gros = grands[grands['Poids'] >= 120]
         ```
-    #}
+    
 
 !!! example "{{ exercice() }}"
     Trouver en une seule ligne le joueur le plus léger du Top14.
 
-    {#  
+      
     ??? tip "Correction"
         ```python
         >>> df[df['Poids'] == min(df['Poids'])]
                Equipe             Nom  Poste Date de naissance  Taille  Poids
         491  Racing92  Teddy IRIBAREN  Mêlée        25/09/1990     170     70
         ```
-    #}
+    
 
 !!! example "{{ exercice() }}"
     Tracer le nuage de point poids-taille comme précédemment, mais en marquant d'un point bleu les 2èmes ligne et d'un point rouge les piliers.
 
-    {#    
+        
     ??? tip "Correction"
         ```python linenums='1'
         import pandas as pd
@@ -371,7 +371,7 @@ Pour effectuer des opérations sur les booléens, on utilisera le symbole ```&``
         ```
 
         ![image](data/ex4.png){: .center}
-    #}  
+     
 
 
 
