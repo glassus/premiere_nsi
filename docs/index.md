@@ -11,15 +11,15 @@
         
 ## Thèmes en cours d'étude 
 
-:arrow_right: [Utilisation du module Pandas](./T5_Traitement_de_donnees/5.3_Pandas/cours/)
+:arrow_right: [Découvrir les commandes Linux avec le jeu Terminus](./T3_Architecture_materielle/3.5_Decouverte_des_commandes_Linux/cours/)
 
-:arrow_right: [Algorithme KNN](./T4_Algorithmique/4.7_Algorithme_KNN/cours/)
-
+:arrow_right: [Pygame](./T6_Mini-projets/05_Initiation_Pygame/){. target="_blank"} 
 
 !!! note "*Anciens thèmes traités*"
+    - [Utilisation du module Pandas](./T5_Traitement_de_donnees/5.3_Pandas/cours/)
+    - [Algorithme KNN](./T4_Algorithmique/4.7_Algorithme_KNN/cours/)
     - [Trier des données](./T5_Traitement_de_donnees/5.2_Trier_des_donnees/cours/)
     - [Manipulation de fichiers csv](./T5_Traitement_de_donnees/5.1_Manipulation_csv/cours/)
-
     - [Dictionnaires](./T2_Representation_des_donnees/2.3_Dictionnaires/cours/)
     - [Dichotomie](./T4_Algorithmique/4.5_Dichotomie/cours/)
     - [Architecture Von Neumann](./T3_Architecture_materielle/3.2_Architecture_Von_Neumann/cours/)
