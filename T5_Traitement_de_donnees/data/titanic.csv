@@ -1,0 +1,1310 @@
+classe,survivant,nom,sexe,age,prix,embarquement
+1,1, Miss. Elisabeth Walton Allen,female,29,211.34,Southampton
+1,1, Master. Hudson Trevor Allison,male,1,151.55,Southampton
+1,0, Miss. Helen Loraine Allison,female,2,151.55,Southampton
+1,0, Mr. Hudson Joshua Creighton Allison,male,30,151.55,Southampton
+1,0, Mrs. Hudson J C (Bessie Waldo Daniels) Allison,female,25,151.55,Southampton
+1,1, Mr. Harry Anderson,male,48,26.55,Southampton
+1,1, Miss. Kornelia Theodosia Andrews,female,63,77.96,Southampton
+1,0, Mr. Thomas Jr Andrews,male,39,0,Southampton
+1,1, Mrs. Edward Dale (Charlotte Lamson) Appleton,female,53,51.48,Southampton
+1,0, Mr. Ramon Artagaveytia,male,71,49.5,Calais
+1,0, Col. John Jacob Astor,male,47,227.53,Calais
+1,1, Mrs. John Jacob (Madeleine Talmadge Force) Astor,female,18,227.53,Calais
+1,1, Mme. Leontine Pauline Aubart,female,24,69.3,Calais
+1,1, Miss. Ellen Nellie Barber,female,26,78.85,Southampton
+1,1, Mr. Algernon Henry Wilson Barkworth,male,80,30,Southampton
+1,0, Mr. John D Baumann,male,60,25.93,Southampton
+1,0, Mr. Quigg Edmond Baxter,male,24,247.52,Calais
+1,1, Mrs. James (Helene DeLaudeniere Chaput) Baxter,female,50,247.52,Calais
+1,1, Miss. Albina Bazzani,female,32,76.29,Calais
+1,0, Mr. Thomson Beattie,male,36,75.24,Calais
+1,1, Mr. Richard Leonard Beckwith,male,37,52.55,Southampton
+1,1, Mrs. Richard Leonard (Sallie Monypeny) Beckwith,female,47,52.55,Southampton
+1,1, Mr. Karl Howell Behr,male,26,30,Calais
+1,1, Miss. Rosalie Bidois,female,42,227.53,Calais
+1,1, Miss. Ellen Bird,female,29,221.78,Southampton
+1,0, Mr. Jakob Birnbaum,male,25,26,Calais
+1,1, Mr. Dickinson H Bishop,male,25,91.08,Calais
+1,1, Mrs. Dickinson H (Helen Walton) Bishop,female,19,91.08,Calais
+1,1, Miss. Amelia Bissette,female,35,135.63,Southampton
+1,1, Mr. Mauritz Hakan Bjornstrom-Steffansson,male,28,26.55,Southampton
+1,0, Mr. Stephen Weart Blackwell,male,45,35.5,Southampton
+1,1, Mr. Henry Blank,male,40,31,Calais
+1,1, Miss. Caroline Bonnell,female,30,164.87,Southampton
+1,1, Miss. Elizabeth Bonnell,female,58,26.55,Southampton
+1,0, Mr. John James Borebank,male,42,26.55,Southampton
+1,1, Miss. Grace Scott Bowen,female,45,262.38,Calais
+1,1, Miss. Elsie Edith Bowerman,female,22,55,Southampton
+1,1, Mr. George (George Arthur Brayton) Bradley,male,37,26.55,Southampton
+1,0, Mr. John Bertram Brady,male,41,30.5,Southampton
+1,0, Mr. Emil Brandeis,male,48,50.5,Calais
+1,0, Dr. Arthur Jackson Brewe,male,45,39.6,Calais
+1,1, Mrs. James Joseph (Margaret Tobin) Brown,female,44,27.72,Calais
+1,1, Mrs. John Murray (Caroline Lane Lamson) Brown,female,59,51.48,Southampton
+1,1, Mrs. William Robert (Emma Eliza Ward) Bucknell,female,60,76.29,Calais
+1,1, Miss. Elizabeth Margaret Burns,female,41,134.5,Calais
+1,0, Major. Archibald Willingham Butt,male,45,26.55,Southampton
+1,0, Mr. Alexander Cairns,male,28,31,Southampton
+1,1, Mr. Edward Pennington Calderhead,male,42,26.29,Southampton
+1,1, Mrs. Edward (Helen Churchill Hungerford) Candee,female,53,27.45,Calais
+1,1, Mr. Thomas Drake Martinez Cardeza,male,36,512.33,Calais
+1,1, Mrs. James Warburton Martinez (Charlotte Wardle Drake) Cardeza,female,58,512.33,Calais
+1,0, Mr. Frans Olof Carlsson,male,33,5,Southampton
+1,0, Mr. Francisco M Carrau,male,28,47.1,Southampton
+1,0, Mr. Jose Pedro Carrau,male,17,47.1,Southampton
+1,1, Master. William Thornton II Carter,male,11,120,Southampton
+1,1, Miss. Lucile Polk Carter,female,14,120,Southampton
+1,1, Mr. William Ernest Carter,male,36,120,Southampton
+1,1, Mrs. William Ernest (Lucile Polk) Carter,female,36,120,Southampton
+1,0, Mr. Howard Brown Case,male,49,26,Southampton
+1,1, Mrs. Henry Arthur Jr (Eleanor Genevieve Fosdick) Cassebeer,female,36,27.72,Calais
+1,0, Mr. Tyrell William Cavendish,male,36,78.85,Southampton
+1,1, Mrs. Tyrell William (Julia Florence Siegel) Cavendish,female,76,78.85,Southampton
+1,0, Mr. Herbert Fuller Chaffee,male,46,61.18,Southampton
+1,1, Mrs. Herbert Fuller (Carrie Constance Toogood) Chaffee,female,47,61.18,Southampton
+1,1, Mr. Norman Campbell Chambers,male,27,53.1,Southampton
+1,1, Mrs. Norman Campbell (Bertha Griggs) Chambers,female,33,53.1,Southampton
+1,1, Miss. Victorine Chaudanson,female,36,262.38,Calais
+1,1, Miss. Gladys Cherry,female,30,86.5,Southampton
+1,1, Mr. Paul Romaine Chevre,male,45,29.7,Calais
+1,1, Mrs. (Edith Martha Bowerman) Chibnall,female,48,55,Southampton
+1,0, Mr. Roderick Robert Crispin Chisholm,male,40,0,Southampton
+1,0, Mr. Walter Miller Clark,male,27,136.78,Calais
+1,1, Mrs. Walter Miller (Virginia McDowell) Clark,female,26,136.78,Calais
+1,1, Miss. Alice Cleaver,female,22,151.55,Southampton
+1,0, Mr. George Quincy Clifford,male,40,52,Southampton
+1,0, Mr. Edward Pomeroy Colley,male,47,25.59,Southampton
+1,1, Miss. Sara Rebecca Compton,female,39,83.16,Calais
+1,0, Mr. Alexander Taylor Jr Compton,male,37,83.16,Calais
+1,1, Mrs. Alexander Taylor (Mary Eliza Ingersoll) Compton,female,64,83.16,Calais
+1,1, Mrs. Robert Clifford (Malvina Helen Lamson) Cornell,female,55,25.7,Southampton
+1,0, Mr. John Bertram Crafton,male,59,26.55,Southampton
+1,0, Capt. Edward Gifford Crosby,male,70,71,Southampton
+1,1, Miss. Harriet R Crosby,female,36,71,Southampton
+1,1, Mrs. Edward Gifford (Catherine Elizabeth Halstead) Crosby,female,64,26.55,Southampton
+1,0, Mr. John Bradley Cumings,male,39,71.28,Calais
+1,1, Mrs. John Bradley (Florence Briggs Thayer) Cumings,female,38,71.28,Calais
+1,1, Mr. Peter Denis  Daly,male,51,26.55,Southampton
+1,1, Mr. Robert Williams Daniel,male,27,30.5,Southampton
+1,1, Miss. Sarah Daniels,female,33,151.55,Southampton
+1,0, Mr. Thornton Davidson,male,31,52,Southampton
+1,1, Mrs. Thornton (Orian Hays) Davidson,female,27,52,Southampton
+1,1, Mr. Albert Adrian Dick,male,31,57,Southampton
+1,1, Mrs. Albert Adrian (Vera Gillespie) Dick,female,17,57,Southampton
+1,1, Dr. Washington Dodge,male,53,81.86,Southampton
+1,1, Master. Washington Dodge,male,4,81.86,Southampton
+1,1, Mrs. Washington (Ruth Vidaver) Dodge,female,54,81.86,Southampton
+1,0, Mr. Walter Donald Douglas,male,50,106.43,Calais
+1,1, Mrs. Frederick Charles (Mary Helene Baxter) Douglas,female,27,247.52,Calais
+1,1, Mrs. Walter Donald (Mahala Dutton) Douglas,female,48,106.43,Calais
+1,1, Lady. (Lucille Christiana Sutherland) (Mrs Morgan) Duff Gordon,female,48,39.6,Calais
+1,1, Sir. Cosmo Edmund (Mr Morgan) Duff Gordon,male,49,56.93,Calais
+1,0, Mr. William Crothers Dulles,male,39,29.7,Calais
+1,1, Mrs. Boulton (Olive Potter) Earnshaw,female,23,83.16,Calais
+1,1, Miss. Caroline Louise Endres,female,38,227.53,Calais
+1,1, Miss. Elizabeth Mussey Eustis,female,54,78.27,Calais
+1,0, Miss. Edith Corse Evans,female,36,31.68,Calais
+1,0, Mr. John Farthing,male,57,221.78,Southampton
+1,1, Mrs. Alfred (Antoinette) Flegenheim,female,48,31.68,Southampton
+1,1, Miss. Margaret Fleming,female,42,110.88,Calais
+1,1, Mr. John Irwin (Irving) Flynn,male,36,26.39,Southampton
+1,0, Mr. Benjamin Laventall Foreman,male,30,27.75,Calais
+1,1, Miss. Alice Elizabeth Fortune,female,24,263,Southampton
+1,1, Miss. Ethel Flora Fortune,female,28,263,Southampton
+1,1, Miss. Mabel Helen Fortune,female,23,263,Southampton
+1,0, Mr. Charles Alexander Fortune,male,19,263,Southampton
+1,0, Mr. Mark Fortune,male,64,263,Southampton
+1,1, Mrs. Mark (Mary McDougald) Fortune,female,60,263,Southampton
+1,1, Miss. Laura Mabel Francatelli,female,30,56.93,Calais
+1,0, Mr. Thomas Parham Franklin,male,37,26.55,Southampton
+1,1, Dr. Henry William Frauenthal,male,50,133.65,Southampton
+1,1, Mr. Isaac Gerald Frauenthal,male,43,27.72,Calais
+1,1, Mrs. Henry William (Clara Heinsheimer) Frauenthal,female,42,133.65,Southampton
+1,1, Miss. Hedwig Margaritha Frolicher,female,22,49.5,Calais
+1,1, Mr. Maxmillian Frolicher-Stehli,male,60,79.2,Calais
+1,1, Mrs. Maxmillian (Margaretha Emerentia Stehli) Frolicher-Stehli,female,48,79.2,Calais
+1,0, Mr. Richard Fry,male,39,0,Southampton
+1,0, Mr. Jacques Heath Futrelle,male,37,53.1,Southampton
+1,1, Mrs. Jacques Heath (Lily May Peel) Futrelle,female,35,53.1,Southampton
+1,0, Mr. Arthur H Gee,male,47,38.5,Southampton
+1,1, Miss. Amalie Geiger,female,35,211.5,Calais
+1,1, Miss. Dorothy Winifred Gibson,female,22,59.4,Calais
+1,1, Mrs. Leonard (Pauline C Boeson) Gibson,female,45,59.4,Calais
+1,0, Mr. Victor Giglio,male,24,79.2,Calais
+1,1, Mr. Samuel L Goldenberg,male,49,89.1,Calais
+1,1, Mrs. Samuel L (Edwiga Grabowska) Goldenberg,female,40,89.1,Calais
+1,0, Mr. George B Goldschmidt,male,71,34.65,Calais
+1,1, Col. Archibald IV Gracie,male,53,28.5,Calais
+1,1, Miss. Margaret Edith Graham,female,19,30,Southampton
+1,0, Mr. George Edward Graham,male,38,153.46,Southampton
+1,1, Mrs. William Thompson (Edith Junkins) Graham,female,58,153.46,Southampton
+1,1, Mr. William Bertram Greenfield,male,23,63.36,Calais
+1,1, Mrs. Leo David (Blanche Strouse) Greenfield,female,45,63.36,Calais
+1,0, Mr. Benjamin Guggenheim,male,46,79.2,Calais
+1,1, Mr. George Achilles Harder,male,25,55.44,Calais
+1,1, Mrs. George Achilles (Dorothy Annan) Harder,female,25,55.44,Calais
+1,1, Mr. Henry Sleeper Harper,male,48,76.73,Calais
+1,1, Mrs. Henry Sleeper (Myna Haxtun) Harper,female,49,76.73,Calais
+1,0, Mr. Charles H Harrington,male,37,42.4,Southampton
+1,0, Mr. Henry Birkhardt Harris,male,45,83.48,Southampton
+1,1, Mrs. Henry Birkhardt (Irene Wallach) Harris,female,35,83.48,Southampton
+1,0, Mr. William Harrison,male,40,0,Southampton
+1,1, Mr. Hammad Hassab,male,27,76.73,Calais
+1,1, Mr. Walter James Hawksford,male,45,30,Southampton
+1,1, Miss. Margaret Bechstein Hays,female,24,83.16,Calais
+1,0, Mr. Charles Melville Hays,male,55,93.5,Southampton
+1,1, Mrs. Charles Melville (Clara Jennings Gregg) Hays,female,52,93.5,Southampton
+1,0, Mr. Christopher Head,male,42,42.5,Southampton
+1,0, Mr. Herbert Henry Hilliard,male,44,51.86,Southampton
+1,0, Mr. William Edward Hipkins,male,55,50,Southampton
+1,1, Miss. Jean Gertrude Hippach,female,16,57.98,Calais
+1,1, Mrs. Louis Albert (Ida Sophia Fischer) Hippach,female,44,57.98,Calais
+1,1, Mrs. John C (Anna Andrews) Hogeboom,female,51,77.96,Southampton
+1,0, Mr. Alexander Oskar Holverson,male,42,52,Southampton
+1,1, Mrs. Alexander Oskar (Mary Aline Towner) Holverson,female,35,52,Southampton
+1,1, Mr. Harry (Mr E Haven) Homer,male,35,26.55,Calais
+1,1, Mr. Frederick Maxfield Hoyt,male,38,90,Southampton
+1,0, Mr. William Fisher Hoyt,male,42,30.7,Calais
+1,1, Mrs. Frederick Maxfield (Jane Anne Forby) Hoyt,female,35,90,Southampton
+1,1, Miss. Amelie Icard,female,38,80,Southampton
+1,0, Miss. Ann Elizabeth Isham,female,50,28.71,Calais
+1,1, Mr. Joseph Bruce Ismay,male,49,0,Southampton
+1,0, Mr. Charles Cresson Jones,male,46,26,Southampton
+1,0, Mr. Henry Forbes Julian,male,50,26,Southampton
+1,0, Mr. Edwin Keeping,male,33,211.5,Calais
+1,0, Mr. Edward Austin Kent,male,58,29.7,Calais
+1,0, Mr. Frederick R Kenyon,male,41,51.86,Southampton
+1,1, Mrs. Frederick R (Marion) Kenyon,female,31,51.86,Southampton
+1,1, Mr. Edwin Nelson Jr Kimball,male,42,52.55,Southampton
+1,1, Mrs. Edwin Nelson Jr (Gertrude Parsons) Kimball,female,45,52.55,Southampton
+1,0, Mr. Herman Klaber,male,45,26.55,Southampton
+1,1, Miss. Emilie Kreuchen,female,39,211.34,Southampton
+1,1, Dr. Alice (Farnham) Leader,female,49,25.93,Southampton
+1,1, Miss. Bertha LeRoy,female,30,106.43,Calais
+1,1, Mr. Gustave J Lesurer,male,35,512.33,Calais
+1,0, Mr. Ervin G Lewy,male,31,27.72,Calais
+1,0, Mr. Erik Gustaf (Mr Edward Lingrey) Lindeberg-Lind,male,42,26.55,Southampton
+1,1, Mrs. Carl Johan (Sigrid Posse) Lindstrom,female,55,27.72,Calais
+1,1, Miss. Mary Conover Lines,female,16,39.4,Southampton
+1,1, Mrs. Ernest H (Elizabeth Lindsey James) Lines,female,51,39.4,Southampton
+1,0, Mr. Milton Clyde Long,male,29,30,Southampton
+1,1, Miss. Gretchen Fiske Longley,female,21,77.96,Southampton
+1,0, Mr. Joseph Holland Loring,male,30,45.5,Southampton
+1,1, Miss. Elise Lurette,female,58,146.52,Calais
+1,1, Miss. Georgette Alexandra Madill,female,15,211.34,Southampton
+1,0, Mr. John Edward Maguire,male,30,26,Southampton
+1,1, Miss. Roberta Maioni,female,16,86.5,Southampton
+1,1, Mr. Pierre Marechal,male,28,29.7,Calais
+1,0, Mr. Daniel Warner Marvin,male,19,53.1,Southampton
+1,1, Mrs. Daniel Warner (Mary Graham Carmichael Farquarson) Marvin,female,18,53.1,Southampton
+1,1, Mlle. Berthe Antonine (Mrs de Villiers) Mayne,female,24,49.5,Calais
+1,0, Mr. Thomas Francis McCaffry,male,46,75.24,Calais
+1,0, Mr. Timothy J McCarthy,male,54,51.86,Southampton
+1,1, Mr. James Robert McGough,male,36,26.29,Southampton
+1,0, Mr. Edgar Joseph Meyer,male,28,82.17,Calais
+1,1, Mrs. Edgar Joseph (Leila Saks) Meyer,female,25,82.17,Calais
+1,0, Mr. Francis Davis Millet,male,65,26.55,Southampton
+1,0, Dr. William Edward Minahan,male,44,90,Queenstown
+1,1, Miss. Daisy E Minahan,female,33,90,Queenstown
+1,1, Mrs. William Edward (Lillian E Thorpe) Minahan,female,37,90,Queenstown
+1,1, Mr. Philipp Edmund Mock,male,30,57.75,Calais
+1,0, Mr. Harry Markland Molson,male,55,30.5,Southampton
+1,0, Mr. Clarence Bloomfield Moore,male,47,42.4,Southampton
+1,0, Mr. Charles H Natsch,male,37,29.7,Calais
+1,1, Miss. Madeleine Newell,female,31,113.28,Calais
+1,1, Miss. Marjorie Newell,female,23,113.28,Calais
+1,0, Mr. Arthur Webster Newell,male,58,113.28,Calais
+1,1, Miss. Helen Monypeny Newsom,female,19,26.28,Southampton
+1,0, Mr. Arthur Ernest Nicholson,male,64,26,Southampton
+1,1, Dona. Fermina Oliva y Ocana,female,39,108.9,Calais
+1,1, Mr. Alfred Fernand Omont,male,29,25.74,Calais
+1,1, Miss. Helene Ragnhild Ostby,female,22,61.98,Calais
+1,0, Mr. Engelhart Cornelius Ostby,male,65,61.98,Calais
+1,0, Mr. Servando Ovies y Rodriguez,male,29,27.72,Calais
+1,0, Mr. William Henry Marsh Parr,male,29,0,Southampton
+1,0, Mr. Austen Partner,male,46,28.5,Southampton
+1,0, Mr. Vivian Ponsonby Payne,male,23,93.5,Southampton
+1,0, Mr. Thomas Clinton Pears,male,29,66.6,Southampton
+1,1, Mrs. Thomas (Edith Wearne) Pears,female,22,66.6,Southampton
+1,0, Mr. Victor de Satode Penasco y Castellana,male,18,108.9,Calais
+1,1, Mrs. Victor de Satode (Maria Josefa Perez de Soto y Vallejo) Penasco y Castellana,female,17,108.9,Calais
+1,1, Miss. Anne Perreault,female,30,93.5,Southampton
+1,1, Major. Arthur Godfrey Peuchen,male,52,30.5,Southampton
+1,0, Mr. Walter Chamberlain Porter,male,47,52,Southampton
+1,1, Mrs. Thomas Jr (Lily Alexenia Wilson) Potter,female,56,83.16,Calais
+1,0, Jonkheer. John George Reuchlin,male,38,0,Southampton
+1,1, Mr. George Alexander Lucien Rheims,male,36,39.6,Southampton
+1,0, Mr. Sante Ringhini,male,22,135.63,Calais
+1,0, Mr. Victor Robbins,male,45,227.53,Calais
+1,1, Mrs. Edward Scott (Elisabeth Walton McMillan) Robert,female,43,211.34,Southampton
+1,0, Mr. Washington Augustus II Roebling,male,31,50.5,Southampton
+1,1, Mr. Charles Hallace (Mr C Rolmane) Romaine,male,45,26.55,Southampton
+1,0, Mr. Hugh Roscoe Rood,male,38,50,Southampton
+1,1, Miss. Edith Louise Rosenbaum,female,33,27.72,Calais
+1,0, Mr. George (Mr George Thorne) Rosenshine,male,46,79.2,Calais
+1,0, Mr. John Hugo Ross,male,36,40.13,Calais
+1,1, the Countess. of (Lucy Noel Martha Dyer-Edwards) Rothes,female,33,86.5,Southampton
+1,0, Mr. Martin Rothschild,male,55,59.4,Calais
+1,1, Mrs. Martin (Elizabeth L. Barrett) Rothschild,female,54,59.4,Calais
+1,0, Mr. Alfred G Rowe,male,33,26.55,Southampton
+1,1, Master. John Borie Ryerson,male,13,262.38,Calais
+1,1, Miss. Emily Borie Ryerson,female,18,262.38,Calais
+1,1, Miss. Susan Parker Suzette Ryerson,female,21,262.38,Calais
+1,0, Mr. Arthur Larned Ryerson,male,61,262.38,Calais
+1,1, Mrs. Arthur Larned (Emily Maria Borie) Ryerson,female,48,262.38,Calais
+1,1, Mr. Adolphe Saalfeld,male,47,30.5,Southampton
+1,1, Mlle. Emma Sagesser,female,24,69.3,Calais
+1,1, Mr. Abraham L Salomon,male,43,26,Southampton
+1,1, Mrs. Paul (Emma Mock) Schabert,female,35,57.75,Calais
+1,1, Miss. Augusta Serepeca,female,30,31,Calais
+1,1, Mr. Frederic Kimber Seward,male,34,26.55,Southampton
+1,1, Miss. Elizabeth W Shutes,female,40,153.46,Southampton
+1,1, Mr. Spencer Victor Silverthorne,male,35,26.29,Southampton
+1,0, Mr. William Baird Silvey,male,50,55.9,Southampton
+1,1, Mrs. William Baird (Alice Munger) Silvey,female,39,55.9,Southampton
+1,1, Col. Oberst Alfons Simonius-Blumer,male,56,35.5,Calais
+1,1, Mr. William Thompson Sloper,male,28,35.5,Southampton
+1,0, Mr. John Montgomery Smart,male,56,26.55,Southampton
+1,0, Mr. James Clinch Smith,male,56,30.7,Calais
+1,0, Mr. Lucien Philip Smith,male,24,60,Southampton
+1,0, Mr. Richard William Smith,male,57,26,Southampton
+1,1, Mrs. Lucien Philip (Mary Eloise Hughes) Smith,female,18,60,Southampton
+1,1, Mr. John Pillsbury Snyder,male,24,82.27,Southampton
+1,1, Mrs. John Pillsbury (Nelle Stevenson) Snyder,female,23,82.27,Southampton
+1,1, Master. Robert Douglas Spedden,male,6,134.5,Calais
+1,1, Mr. Frederic Oakley Spedden,male,45,134.5,Calais
+1,1, Mrs. Frederic Oakley (Margaretta Corning Stone) Spedden,female,40,134.5,Calais
+1,0, Mr. William Augustus Spencer,male,57,146.52,Calais
+1,1, Mrs. William Augustus (Marie Eugenie) Spencer,female,45,146.52,Calais
+1,1, Dr. Max Stahelin-Maeglin,male,32,30.5,Calais
+1,0, Mr. William Thomas Stead,male,62,26.55,Southampton
+1,1, Mr. Charles Emil Henry Stengel,male,54,55.44,Calais
+1,1, Mrs. Charles Emil Henry (Annie May Morris) Stengel,female,43,55.44,Calais
+1,1, Mrs. Walter Bertram (Martha Eustis) Stephenson,female,52,78.27,Calais
+1,0, Mr. Albert A Stewart,male,54,27.72,Calais
+1,1, Mrs. George Nelson (Martha Evelyn) Stone,female,62,80,Southampton
+1,0, Mr. Isidor Straus,male,67,221.78,Southampton
+1,0, Mrs. Isidor (Rosalie Ida Blun) Straus,female,63,221.78,Southampton
+1,0, Mr. Frederick Sutton,male,61,32.32,Southampton
+1,1, Mrs. Frederick Joel (Margaret Welles Barron) Swift,female,48,25.93,Southampton
+1,1, Miss. Ruth Taussig,female,18,79.65,Southampton
+1,0, Mr. Emil Taussig,male,52,79.65,Southampton
+1,1, Mrs. Emil (Tillie Mandelbaum) Taussig,female,39,79.65,Southampton
+1,1, Mr. Elmer Zebley Taylor,male,48,52,Southampton
+1,1, Mrs. Elmer Zebley (Juliet Cummins Wright) Taylor,female,48,52,Southampton
+1,0, Mr. John Borland Thayer,male,49,110.88,Calais
+1,1, Mr. John Borland Jr Thayer,male,17,110.88,Calais
+1,1, Mrs. John Borland (Marian Longstreth Morris) Thayer,female,39,110.88,Calais
+1,1, Mrs. Gertrude Maybelle Thorne,female,37,79.2,Calais
+1,1, Mr. Gilbert Milligan Jr Tucker,male,31,28.54,Calais
+1,0, Don. Manuel E Uruchurtu,male,40,27.72,Calais
+1,0, Mr. Wyckoff Van der hoef,male,61,33.5,Southampton
+1,0, Mr. William Anderson Walker,male,47,34.02,Southampton
+1,1, Miss. Anna Ward,female,35,512.33,Calais
+1,0, Mr. Frank Manley Warren,male,64,75.25,Calais
+1,1, Mrs. Frank Manley (Anna Sophia Atkinson) Warren,female,60,75.25,Calais
+1,0, Col. John Weir,male,60,26.55,Southampton
+1,0, Mr. Percival Wayland White,male,54,77.29,Southampton
+1,0, Mr. Richard Frasar White,male,21,77.29,Southampton
+1,1, Mrs. John Stuart (Ella Holmes) White,female,55,135.63,Calais
+1,1, Miss. Mary Natalie Wick,female,31,164.87,Southampton
+1,0, Mr. George Dennick Wick,male,57,164.87,Southampton
+1,1, Mrs. George Dennick (Mary Hitchcock) Wick,female,45,164.87,Southampton
+1,0, Mr. George Dunton Widener,male,50,211.5,Calais
+1,0, Mr. Harry Elkins Widener,male,27,211.5,Calais
+1,1, Mrs. George Dunton (Eleanor Elkins) Widener,female,50,211.5,Calais
+1,1, Miss. Constance Willard,female,21,26.55,Southampton
+1,0, Mr. Charles Duane Williams,male,51,61.38,Calais
+1,1, Mr. Richard Norris II Williams,male,21,61.38,Calais
+1,0, Mr. Fletcher Fellows Williams-Lambert,male,43,35,Southampton
+1,1, Miss. Helen Alice Wilson,female,31,134.5,Calais
+1,1, Mr. Hugh Woolner,male,45,35.5,Southampton
+1,0, Mr. George Wright,male,62,26.55,Southampton
+1,1, Miss. Marie Grice Young,female,36,135.63,Calais
+2,0, Mr. Samuel Abelson,male,30,24,Calais
+2,1, Mrs. Samuel (Hannah Wizosky) Abelson,female,28,24,Calais
+2,0, Mr. Charles Augustus Aldworth,male,30,13,Southampton
+2,0, Mr. Edgardo Samuel Andrew,male,18,11.5,Southampton
+2,0, Mr. Frank Thomas Andrew,male,25,10.5,Southampton
+2,0, Mr. William A Angle,male,34,26,Southampton
+2,1, Mrs. William A (Florence Mary Agnes Hughes) Angle,female,36,26,Southampton
+2,0, Mr. John Ashby,male,57,13,Southampton
+2,0, Mr. Percy Andrew Bailey,male,18,11.5,Southampton
+2,0, Mr. Charles Robert Baimbrigge,male,23,10.5,Southampton
+2,1, Mrs. (Ada E Hall) Ball,female,36,13,Southampton
+2,0, Mr. Frederick James Banfield,male,28,10.5,Southampton
+2,0, Rev. Robert James Bateman,male,51,12.53,Southampton
+2,1, Mr. Edward Beane,male,32,26,Southampton
+2,1, Mrs. Edward (Ethel Clarke) Beane,female,19,26,Southampton
+2,0, Mr. Henry James Beauchamp,male,28,26,Southampton
+2,1, Master. Richard F Becker,male,1,39,Southampton
+2,1, Miss. Marion Louise Becker,female,4,39,Southampton
+2,1, Miss. Ruth Elizabeth Becker,female,12,39,Southampton
+2,1, Mrs. Allen Oliver (Nellie E Baumgardner) Becker,female,36,39,Southampton
+2,1, Mr. Lawrence Beesley,male,34,13,Southampton
+2,1, Miss. Lilian W Bentham,female,19,13,Southampton
+2,0, Mr. William John Berriman,male,23,13,Southampton
+2,0, Mr. William Hull Botsford,male,26,13,Southampton
+2,0, Mr. Solomon Bowenur,male,42,13,Southampton
+2,0, Mr. James H Bracken,male,27,13,Southampton
+2,1, Miss. Amelia Mildred Brown,female,24,13,Southampton
+2,1, Miss. Edith Eileen Brown,female,15,39,Southampton
+2,0, Mr. Thomas William Solomon Brown,male,60,39,Southampton
+2,1, Mrs. Thomas William Solomon (Elizabeth Catherine Ford) Brown,female,40,39,Southampton
+2,1, Miss. Dagmar Jenny Ingeborg  Bryhl,female,20,26,Southampton
+2,0, Mr. Kurt Arnold Gottfrid Bryhl,male,25,26,Southampton
+2,1, Miss. Kate Buss,female,36,13,Southampton
+2,0, Mr. Reginald Fenton Butler,male,25,13,Southampton
+2,0, Rev. Thomas Roussel Davids Byles,male,42,13,Southampton
+2,1, Mrs. (Karolina) Bystrom,female,42,13,Southampton
+2,1, Master. Alden Gates Caldwell,male,1,29,Southampton
+2,1, Mr. Albert Francis Caldwell,male,26,29,Southampton
+2,1, Mrs. Albert Francis (Sylvia Mae Harbaugh) Caldwell,female,22,29,Southampton
+2,1, Miss. Clear Annie Cameron,female,35,21,Southampton
+2,0, Mr. William Campbell,male,21,0,Southampton
+2,0, Mr. William Carbines,male,19,13,Southampton
+2,0, Mrs. Ernest Courtenay (Lilian Hughes) Carter,female,44,26,Southampton
+2,0, Rev. Ernest Courtenay Carter,male,54,26,Southampton
+2,0, Mr. Charles Henry Chapman,male,52,13.5,Southampton
+2,0, Mr. John Henry Chapman,male,37,26,Southampton
+2,0, Mrs. John Henry (Sara Elizabeth Lawry) Chapman,female,29,26,Southampton
+2,1, Miss. Julie Rachel Christy,female,25,30,Southampton
+2,1, Mrs. (Alice Frances) Christy,female,45,30,Southampton
+2,0, Mr. Charles Valentine Clarke,male,29,26,Southampton
+2,1, Mrs. Charles V (Ada Maria Winfield) Clarke,female,28,26,Southampton
+2,0, Mr. Reginald Charles Coleridge,male,29,10.5,Southampton
+2,0, Mr. Erik Gustaf Collander,male,28,13,Southampton
+2,1, Mr. Sidney C Stuart Collett,male,24,10.5,Southampton
+2,1, Miss. Marjorie Lottie Collyer,female,8,26.25,Southampton
+2,0, Mr. Harvey Collyer,male,31,26.25,Southampton
+2,1, Mrs. Harvey (Charlotte Annie Tate) Collyer,female,31,26.25,Southampton
+2,1, Mrs. (Selena Rogers) Cook,female,22,10.5,Southampton
+2,0, Mrs. Walter H (Irene Colvin) Corbett,female,30,13,Southampton
+2,0, Mrs. Percy C (Mary Phyllis Elizabeth Miller) Corey,female,30,21,Southampton
+2,0, Mr. Henry Harry Cotterill,male,20,11.5,Southampton
+2,0, Mr. Alfred Fleming Cunningham,male,21,0,Southampton
+2,1, Master. John Morgan Jr Davies,male,8,36.75,Southampton
+2,0, Mr. Charles Henry Davies,male,18,73.5,Southampton
+2,1, Mrs. John Morgan (Elizabeth Agnes Mary White)  Davies,female,48,36.75,Southampton
+2,1, Miss. Mary Davis,female,28,13,Southampton
+2,0, Mr. Jose Joaquim de Brito,male,32,13,Southampton
+2,0, Mr. Percy William Deacon,male,17,73.5,Southampton
+2,0, Mr. Sebastiano del Carlo,male,29,27.72,Calais
+2,1, Mrs. Sebastiano (Argenia Genovesi) del Carlo,female,24,27.72,Calais
+2,0, Mr. Herbert Denbury,male,25,31.5,Southampton
+2,0, Mr. William Dibden,male,18,73.5,Southampton
+2,1, Miss. Elsie Doling,female,18,23,Southampton
+2,1, Mrs. John T (Ada Julia Bone) Doling,female,34,23,Southampton
+2,0, Mr. William James Downton,male,54,26,Southampton
+2,1, Master. Marshall Brines Drew,male,8,32.5,Southampton
+2,0, Mr. James Vivian Drew,male,42,32.5,Southampton
+2,1, Mrs. James Vivian (Lulu Thorne Christian) Drew,female,34,32.5,Southampton
+2,1, Miss. Asuncion Duran y More,female,27,13.86,Calais
+2,1, Miss. Florentina Duran y More,female,30,13.86,Calais
+2,0, Mr. George Floyd Eitemiller,male,23,13,Southampton
+2,0, Mr. Ingvar Enander,male,21,13,Southampton
+2,0, Mr. Arne Jonas Fahlstrom,male,18,13,Southampton
+2,0, Mr. Harry Faunthorpe,male,40,26,Southampton
+2,1, Mrs. Lizzie (Elizabeth Anne Wilkinson) Faunthorpe,female,29,26,Southampton
+2,0, Mr. Joseph Charles Fillbrook,male,18,10.5,Southampton
+2,0, Mr. Stanley Hubert Fox,male,36,13,Southampton
+2,0, Mr. Anthony Wood Archie Frost,male,37,0,Southampton
+2,0, Miss. Annie Clemmer Funk,female,38,13,Southampton
+2,0, Mr. Joseph J Fynney,male,35,26,Southampton
+2,0, Mr. Harry Gale,male,38,21,Southampton
+2,0, Mr. Shadrach Gale,male,34,21,Southampton
+2,1, Miss. Ethel Garside,female,34,13,Southampton
+2,0, Mr. Alfred Gaskell,male,16,26,Southampton
+2,0, Mr. Lawrence Gavey,male,26,10.5,Southampton
+2,0, Mr. William Gilbert,male,47,10.5,Southampton
+2,0, Mr. Edgar Giles,male,21,11.5,Southampton
+2,0, Mr. Frederick Edward Giles,male,21,11.5,Southampton
+2,0, Mr. Ralph Giles,male,24,13.5,Southampton
+2,0, Mr. John William Gill,male,24,13,Southampton
+2,0, Mr. William Henry Gillespie,male,34,13,Southampton
+2,0, Mr. Hans Kristensen Givard,male,30,13,Southampton
+2,0, Mr. Samuel Greenberg,male,52,13,Southampton
+2,0, Mr. Reginald Hale,male,30,13,Southampton
+2,1, Master. Viljo Hamalainen,male,1,14.5,Southampton
+2,1, Mrs. William (Anna) Hamalainen,female,24,14.5,Southampton
+2,0, Mr. William H Harbeck,male,44,13,Southampton
+2,1, Miss. Annie Jessie Nina Harper,female,6,33,Southampton
+2,0, Rev. John Harper,male,28,33,Southampton
+2,1, Mr. George Harris,male,62,10.5,Southampton
+2,0, Mr. Walter Harris,male,30,10.5,Southampton
+2,1, Miss. Eva Miriam Hart,female,7,26.25,Southampton
+2,0, Mr. Benjamin Hart,male,43,26.25,Southampton
+2,1, Mrs. Benjamin (Esther Ada Bloomfield) Hart,female,45,26.25,Southampton
+2,1, Miss. Alice Herman,female,24,65,Southampton
+2,1, Miss. Kate Herman,female,24,65,Southampton
+2,0, Mr. Samuel Herman,male,49,65,Southampton
+2,1, Mrs. Samuel (Jane Laver) Herman,female,48,65,Southampton
+2,1, Mrs. (Mary D Kingcome)  Hewlett,female,55,16,Southampton
+2,0, Mr. Leonard Mark Hickman,male,24,73.5,Southampton
+2,0, Mr. Lewis Hickman,male,32,73.5,Southampton
+2,0, Mr. Stanley George Hickman,male,21,73.5,Southampton
+2,0, Miss. Marta Hiltunen,female,18,13,Southampton
+2,1, Miss. Ellen Nellie Hocking,female,20,23,Southampton
+2,0, Mr. Richard George Hocking,male,23,11.5,Southampton
+2,0, Mr. Samuel James Metcalfe Hocking,male,36,13,Southampton
+2,1, Mrs. Elizabeth (Eliza Needs) Hocking,female,54,23,Southampton
+2,0, Mr. Henry Price Hodges,male,50,13,Southampton
+2,0, Mr. Stephen Hold,male,44,26,Southampton
+2,1, Mrs. Stephen (Annie Margaret Hill) Hold,female,29,26,Southampton
+2,0, Mr. Ambrose Jr Hood,male,21,73.5,Southampton
+2,1, Mr. Masabumi Hosono,male,42,13,Southampton
+2,0, Mr. Benjamin Howard,male,63,26,Southampton
+2,0, Mrs. Benjamin (Ellen Truelove Arman) Howard,female,60,26,Southampton
+2,0, Mr. George Henry Hunt,male,33,12.28,Southampton
+2,1, Miss. Bertha Ilett,female,17,10.5,Southampton
+2,0, Mr. Sidney Samuel Jacobsohn,male,42,27,Southampton
+2,1, Mrs. Sidney Samuel (Amy Frances Christy) Jacobsohn,female,24,27,Southampton
+2,0, Mr. John Denzil Jarvis,male,47,15,Southampton
+2,0, Mr. Clifford Thomas Jefferys,male,24,31.5,Southampton
+2,0, Mr. Ernest Wilfred Jefferys,male,22,31.5,Southampton
+2,0, Mr. Stephen Curnow Jenkin,male,32,10.5,Southampton
+2,1, Mrs. Amin S (Marie Marthe Thuillard) Jerwan,female,23,13.79,Calais
+2,0, Mr. Sinai Kantor,male,34,26,Southampton
+2,1, Mrs. Sinai (Miriam Sternin) Kantor,female,24,26,Southampton
+2,0, Mrs. J Frank (Claire Bennett) Karnes,female,22,21,Southampton
+2,1, Miss. Nora A Keane,female,46,12.35,Queenstown
+2,0, Mr. Daniel Keane,male,35,12.35,Queenstown
+2,1, Mrs. Florence Fannie Kelly,female,45,13.5,Southampton
+2,0, Rev. Charles Leonard Kirkland,male,57,12.35,Queenstown
+2,0, Mr. Robert J Knight,male,39,0,Southampton
+2,0, Mr. Johan Henrik Johannesson Kvillner,male,31,10.5,Southampton
+2,0, Mrs. William (Anna Sylfven) Lahtinen,female,26,26,Southampton
+2,0, Rev. William Lahtinen,male,30,26,Southampton
+2,0, Mr. John Joseph Lamb,male,30,10.71,Queenstown
+2,1, Miss. Louise Laroche,female,1,41.58,Calais
+2,1, Miss. Simonne Marie Anne Andree Laroche,female,3,41.58,Calais
+2,0, Mr. Joseph Philippe Lemercier Laroche,male,25,41.58,Calais
+2,1, Mrs. Joseph (Juliette Marie Louise Lafargue) Laroche,female,22,41.58,Calais
+2,1, Miss. Bertha Lehmann,female,17,12,Calais
+2,1, Miss. Jessie Wills Leitch,female,31,33,Southampton
+2,1, Mrs. (Amelia Milley) Lemore,female,34,10.5,Southampton
+2,0, Mr. Rene Jacques Levy,male,36,12.88,Calais
+2,0, Mr. Robert William Norman Leyson,male,24,10.5,Southampton
+2,0, Mr. John Lingane,male,61,12.35,Queenstown
+2,0, Mr. Charles Alexander Louch,male,50,26,Southampton
+2,1, Mrs. Charles Alexander (Alice Adelaide Slow) Louch,female,42,26,Southampton
+2,0, Mrs. (Mary) Mack,female,57,10.5,Southampton
+2,0, Mr. Noel Malachard,male,25,15.05,Calais
+2,1, Master. Andre Mallet,male,1,37,Calais
+2,0, Mr. Albert Mallet,male,31,37,Calais
+2,1, Mrs. Albert (Antoinette Magnin) Mallet,female,24,37,Calais
+2,0, Mr. Serafino Emilio Mangiavacchi,male,30,15.58,Calais
+2,0, Mr. William John Matthews,male,30,13,Southampton
+2,0, Mr. Frank Hubert Maybery,male,40,16,Southampton
+2,0, Mr. Arthur Gordon McCrae,male,32,13.5,Southampton
+2,0, Mr. James Matthew McCrie,male,30,13,Southampton
+2,0, Mr. Peter David McKane,male,46,26,Southampton
+2,1, Miss. Madeleine Violet Mellinger,female,13,19.5,Southampton
+2,1, Mrs. (Elizabeth Anne Maidment) Mellinger,female,41,19.5,Southampton
+2,1, Mr. William John Mellors,male,19,10.5,Southampton
+2,0, Mr. August Meyer,male,39,13,Southampton
+2,0, Mr. Jacob Christian Milling,male,48,13,Southampton
+2,0, Mr. Henry Michael Mitchell,male,70,10.5,Southampton
+2,0, Rev. Juozas Montvila,male,27,13,Southampton
+2,0, Dr. Ernest Moraweck,male,54,14,Southampton
+2,0, Mr. Henry Samuel (Mr Henry Marshall) Morley,male,39,26,Southampton
+2,0, Mr. Thomas Charles Mudd,male,16,10.5,Southampton
+2,0, Mr. Thomas Francis Myles,male,62,9.69,Queenstown
+2,0, Mr. Nicholas Nasser,male,33,30.07,Calais
+2,1, Mrs. Nicholas (Adele Achem) Nasser,female,14,30.07,Calais
+2,1, Master. Edmond Roger Navratil,male,2,26,Southampton
+2,1, Master. Michel M Navratil,male,3,26,Southampton
+2,0, Mr. Michel (Louis M Hoffman) Navratil,male,37,26,Southampton
+2,0, Mr. Israel Nesson,male,26,13,Southampton
+2,0, Mr. Joseph Charles Nicholls,male,19,36.75,Southampton
+2,0, Mr. Robert Douglas Norman,male,28,13.5,Southampton
+2,1, Mr. Alfred (Baron von Drachstedt) Nourney,male,20,13.86,Calais
+2,1, Mrs. (Elizabeth Ramell) Nye,female,29,10.5,Southampton
+2,0, Mr. Richard Otter,male,39,13,Southampton
+2,1, Mr. Percy Thomas Oxenham,male,22,10.5,Southampton
+2,1, Mr. Julian Padro y Manent,male,26,13.86,Calais
+2,0, Dr. Alfred Pain,male,23,10.5,Southampton
+2,1, Mr. Emilio Pallas y Castello,male,29,13.86,Calais
+2,0, Mr. Clifford Richard Parker,male,28,10.5,Southampton
+2,0, Mr. Francis Frank Parkes,male,18,0,Southampton
+2,1, Mrs. (Lutie Davis) Parrish,female,50,26,Southampton
+2,0, Mr. Frederick William Pengelly,male,19,10.5,Southampton
+2,0, Mr. Rene Pernot,male,39,15.05,Calais
+2,0, Rev. Joseph Maria Peruschitz,male,41,13,Southampton
+2,1, Miss. Alice Frances Louisa Phillips,female,21,21,Southampton
+2,1, Miss. Kate Florence (Mrs Kate Louise Phillips Marshall) Phillips,female,19,26,Southampton
+2,0, Mr. Escott Robert Phillips,male,43,21,Southampton
+2,1, Mrs. (Rosa) Pinsky,female,32,13,Southampton
+2,0, Mr. Martin Ponesell,male,34,13,Southampton
+2,1, Mr. Emilio Ilario Giuseppe Portaluppi,male,30,12.74,Calais
+2,0, Mr. Franz Pulbaum,male,27,15.03,Calais
+2,1, Miss. Phyllis May Quick,female,2,26,Southampton
+2,1, Miss. Winifred Vera Quick,female,8,26,Southampton
+2,1, Mrs. Frederick Charles (Jane Richards) Quick,female,33,26,Southampton
+2,0, Mr. David Reeves,male,36,10.5,Southampton
+2,0, Mr. Peter Henry Renouf,male,34,21,Southampton
+2,1, Mrs. Peter Henry (Lillian Jefferys) Renouf,female,30,21,Southampton
+2,1, Ms. Encarnacion Reynaldo,female,28,13,Southampton
+2,0, Mr. Emile Richard,male,23,15.05,Calais
+2,1, Master. George Sibley Richards,male,1,18.75,Southampton
+2,1, Master. William Rowe Richards,male,3,18.75,Southampton
+2,1, Mrs. Sidney (Emily Hocking) Richards,female,24,18.75,Southampton
+2,1, Miss. Lucy Ridsdale,female,50,10.5,Southampton
+2,0, Mr. Reginald Harry Rogers,male,19,10.5,Southampton
+2,1, Miss. Emily Rugg,female,21,10.5,Southampton
+2,0, Mr. August Schmidt,male,26,13,Southampton
+2,0, Mr. Charles Frederick Waddington Sedgwick,male,25,13,Southampton
+2,0, Mr. Percival James R Sharp,male,27,26,Southampton
+2,1, Mrs. William (Imanita Parrish Hall) Shelley,female,25,26,Southampton
+2,1, Miss. Lyyli Karoliina Silven,female,18,13,Southampton
+2,1, Miss. Maude Sincock,female,20,36.75,Southampton
+2,1, Miss. Anna Sinkkonen,female,30,13,Southampton
+2,0, Mr. Ernst Adolf Sjostedt,male,59,13.5,Southampton
+2,1, Miss. Hilda Mary Slayter,female,30,12.35,Queenstown
+2,0, Mr. Richard James Slemen,male,35,10.5,Southampton
+2,1, Miss. Marion Elsie Smith,female,40,13,Southampton
+2,0, Mr. Samuel James Hayden Sobey,male,25,13,Southampton
+2,0, Mr. Samuel Ward Stanton,male,41,15.05,Calais
+2,0, Mr. Philip Joseph Stokes,male,25,10.5,Southampton
+2,0, Mr. George Swane,male,19,13,Southampton
+2,0, Mr. George Frederick Sweet,male,14,65,Southampton
+2,1, Miss. Ellen Toomey,female,50,10.5,Southampton
+2,0, Mr. Moses Aaron Troupiansky,male,23,13,Southampton
+2,1, Mrs. William H (Jessie L) Trout,female,28,12.65,Southampton
+2,1, Miss. Edwina Celia Winnie Troutt,female,27,10.5,Southampton
+2,0, Mr. William John Robert Turpin,male,29,21,Southampton
+2,0, Mrs. William John Robert (Dorothy Ann Wonnacott) Turpin,female,27,21,Southampton
+2,0, Mr. James Veal,male,40,13,Southampton
+2,1, Miss. Nellie Walcroft,female,31,21,Southampton
+2,0, Mr. John James Ware,male,30,21,Southampton
+2,0, Mr. William Jeffery Ware,male,23,10.5,Southampton
+2,1, Mrs. John James (Florence Louise Long) Ware,female,31,21,Southampton
+2,0, Mr. Ennis Hastings Watson,male,15,0,Southampton
+2,1, Miss. Bertha J Watt,female,12,15.75,Southampton
+2,1, Mrs. James (Elizabeth Bessie Inglis Milne) Watt,female,40,15.75,Southampton
+2,1, Miss. Susan Webber,female,33,13,Southampton
+2,0, Mr. Leopold Weisz,male,27,26,Southampton
+2,1, Mrs. Leopold (Mathilde Francoise Pede) Weisz,female,29,26,Southampton
+2,1, Master. Ralph Lester Wells,male,2,23,Southampton
+2,1, Miss. Joan Wells,female,4,23,Southampton
+2,1, Mrs. Arthur Henry (Addie Dart Trevaskis) Wells,female,29,23,Southampton
+2,1, Miss. Barbara J West,female,1,27.75,Southampton
+2,1, Miss. Constance Mirium West,female,5,27.75,Southampton
+2,0, Mr. Edwy Arthur West,male,36,27.75,Southampton
+2,1, Mrs. Edwy Arthur (Ada Mary Worth) West,female,33,27.75,Southampton
+2,0, Mr. Edward H Wheadon,male,66,10.5,Southampton
+2,0, Mr. Edwin Frederick Wheeler,male,24,12.88,Southampton
+2,1, Mr. Charles Wilhelms,male,31,13,Southampton
+2,1, Mr. Charles Eugene Williams,male,23,13,Southampton
+2,1, Miss. Marion Wright,female,26,13.5,Southampton
+2,0, Miss. Henriette (Mrs Harbeck) Yrois,female,24,13,Southampton
+3,0, Mr. Anthony Abbing,male,42,7.55,Southampton
+3,0, Master. Eugene Joseph Abbott,male,13,20.25,Southampton
+3,0, Mr. Rossmore Edward Abbott,male,16,20.25,Southampton
+3,1, Mrs. Stanton (Rosa Hunt) Abbott,female,35,20.25,Southampton
+3,1, Miss. Karen Marie Abelseth,female,16,7.65,Southampton
+3,1, Mr. Olaus Jorgensen Abelseth,male,25,7.65,Southampton
+3,1, Mr. Abraham August Johannes Abrahamsson,male,20,7.93,Southampton
+3,1, Mrs. Joseph (Sophie Halaut Easu) Abrahim,female,18,7.23,Calais
+3,0, Mr. Mauritz Nils Martin Adahl,male,30,7.25,Southampton
+3,0, Mr. John Adams,male,26,8.05,Southampton
+3,0, Mrs. Johan (Johanna Persdotter Larsson) Ahlin,female,40,9.48,Southampton
+3,1, Master. Philip Frank Aks,male,1,9.35,Southampton
+3,1, Mrs. Sam (Leah Rosen) Aks,female,18,9.35,Southampton
+3,1, Mr. Nassef Cassem Albimona,male,26,18.79,Calais
+3,0, Mr. William Alexander,male,26,7.89,Southampton
+3,0, Mr. Ilmari Rudolf Alhomaki,male,20,7.93,Southampton
+3,0, Mr. Ahmed Ali,male,24,7.05,Southampton
+3,0, Mr. William Ali,male,25,7.05,Southampton
+3,0, Mr. William Henry Allen,male,35,8.05,Southampton
+3,0, Mr. Owen George Allum,male,18,8.3,Southampton
+3,0, Mr. Albert Karvin Andersen,male,32,22.53,Southampton
+3,1, Miss. Carla Christine Nielsine Andersen-Jensen,female,19,7.85,Southampton
+3,0, Master. Sigvard Harald Elias Andersson,male,4,31.28,Southampton
+3,0, Miss. Ebba Iris Alfrida Andersson,female,6,31.28,Southampton
+3,0, Miss. Ellis Anna Maria Andersson,female,2,31.28,Southampton
+3,1, Miss. Erna Alexandra Andersson,female,17,7.93,Southampton
+3,0, Miss. Ida Augusta Margareta Andersson,female,38,7.78,Southampton
+3,0, Miss. Ingeborg Constanzia Andersson,female,9,31.28,Southampton
+3,0, Miss. Sigrid Elisabeth Andersson,female,11,31.28,Southampton
+3,0, Mr. Anders Johan Andersson,male,39,31.28,Southampton
+3,1, Mr. August Edvard (Wennerstrom) Andersson,male,27,7.8,Southampton
+3,0, Mr. Johan Samuel Andersson,male,26,7.78,Southampton
+3,0, Mrs. Anders Johan (Alfrida Konstantia Brogren) Andersson,female,39,31.28,Southampton
+3,0, Mr. Paul Edvin Andreasson,male,20,7.85,Southampton
+3,0, Mr. Minko Angheloff,male,26,7.9,Southampton
+3,0, Mr. Josef Arnold-Franchi,male,25,17.8,Southampton
+3,0, Mrs. Josef (Josefine Franchi) Arnold-Franchi,female,18,17.8,Southampton
+3,0, Mr. Ernst Axel Algot Aronsson,male,24,7.78,Southampton
+3,0, Mr. Adola Asim,male,35,7.05,Southampton
+3,0, Master. Carl Edgar Asplund,male,5,31.39,Southampton
+3,0, Master. Clarence Gustaf Hugo Asplund,male,9,31.39,Southampton
+3,1, Master. Edvin Rojj Felix Asplund,male,3,31.39,Southampton
+3,0, Master. Filip Oscar Asplund,male,13,31.39,Southampton
+3,1, Miss. Lillian Gertrud Asplund,female,5,31.39,Southampton
+3,0, Mr. Carl Oscar Vilhelm Gustafsson Asplund,male,40,31.39,Southampton
+3,1, Mr. Johan Charles Asplund,male,23,7.8,Southampton
+3,1, Mrs. Carl Oscar (Selma Augusta Emilia Johansson) Asplund,female,38,31.39,Southampton
+3,1, Mrs. Mariana (Miriam) Assaf Khalil,female,45,7.23,Calais
+3,0, Mr. Gerios Assaf,male,21,7.23,Calais
+3,0, Mr. Ali Assam,male,23,7.05,Southampton
+3,0, Miss. Malake Attalah,female,17,14.46,Calais
+3,0, Mr. Sleiman Attalah,male,30,7.23,Calais
+3,0, Mr. Albert Augustsson,male,23,7.85,Southampton
+3,1, Miss. Banoura Ayoub,female,13,7.23,Calais
+3,0, Mr. Raffull Baccos,male,20,7.23,Calais
+3,0, Mr. Karl Alfred Backstrom,male,32,15.85,Southampton
+3,1, Mrs. Karl Alfred (Maria Mathilda Gustafsson) Backstrom,female,33,15.85,Southampton
+3,1, Miss. Eugenie Baclini,female,1,19.26,Calais
+3,1, Miss. Helene Barbara Baclini,female,1,19.26,Calais
+3,1, Miss. Marie Catherine Baclini,female,5,19.26,Calais
+3,1, Mrs. Solomon (Latifa Qurban) Baclini,female,24,19.26,Calais
+3,1, Miss. Emily Louisa Badman,female,18,8.05,Southampton
+3,0, Mr. Mohamed Badt,male,40,7.23,Calais
+3,0, Mr. Cerin Balkic,male,26,7.9,Southampton
+3,1, Mr. Hanna Assi Barah,male,20,7.23,Calais
+3,0, Miss. Saiide Barbara,female,18,14.45,Calais
+3,0, Mrs. (Catherine David) Barbara,female,45,14.45,Calais
+3,0, Miss. Julia Barry,female,27,7.88,Queenstown
+3,0, Mr. David John Barton,male,22,8.05,Southampton
+3,0, Mr. William Thomas Beavan,male,19,8.05,Southampton
+3,0, Mr. John Viktor Bengtsson,male,26,7.78,Southampton
+3,0, Mr. Karl Ivar Sven Berglund,male,22,9.35,Southampton
+3,0, Master. Seman Betros,male,20,7.23,Calais
+3,0, Mr. Tannous Betros,male,20,4.01,Calais
+3,1, Mr. Lee Bing,male,32,56.5,Southampton
+3,0, Mr. Hans Martin Monsen Birkeland,male,21,7.78,Southampton
+3,0, Mr. Ernst Herbert Bjorklund,male,18,7.75,Southampton
+3,0, Mr. Guentcho Bostandyeff,male,26,7.9,Southampton
+3,0, Master. Akar Boulos,male,6,15.25,Calais
+3,0, Miss. Nourelain Boulos,female,9,15.25,Calais
+3,0, Mr. Hanna Boulos,male,18,7.23,Calais
+3,0, Mrs. Joseph (Sultana) Boulos,female,40,15.25,Calais
+3,0, Miss. Mary Bourke,female,40,7.75,Queenstown
+3,0, Mr. John Bourke,male,40,15.5,Queenstown
+3,0, Mrs. John (Catherine) Bourke,female,32,15.5,Queenstown
+3,0, Mr. David John Dai Bowen,male,21,16.1,Southampton
+3,1, Miss. Bridget Delia Bradley,female,22,7.73,Queenstown
+3,0, Miss. Elin Ester Maria Braf,female,20,7.85,Southampton
+3,0, Mr. Lewis Richard Braund,male,29,7.05,Southampton
+3,0, Mr. Owen Harris Braund,male,22,7.25,Southampton
+3,0, Mr. Karl Rudolf Brobeck,male,22,7.8,Southampton
+3,0, Mr. William Alfred Brocklebank,male,35,8.05,Southampton
+3,0, Miss. Katherine Buckley,female,19,7.28,Queenstown
+3,1, Mr. Daniel Buckley,male,21,7.82,Queenstown
+3,0, Mr. Jeremiah Burke,male,19,6.75,Queenstown
+3,0, Miss. Mary Delia Burns,female,18,7.88,Queenstown
+3,0, Miss. Manda Cacic,female,21,8.66,Southampton
+3,0, Miss. Marija Cacic,female,30,8.66,Southampton
+3,0, Mr. Jego Grga Cacic,male,18,8.66,Southampton
+3,0, Mr. Luka Cacic,male,38,8.66,Southampton
+3,0, Mr. Jovo Calic,male,17,8.66,Southampton
+3,0, Mr. Petar Calic,male,17,8.66,Southampton
+3,0, Miss. Mary Canavan,female,21,7.75,Queenstown
+3,0, Mr. Patrick Canavan,male,21,7.75,Queenstown
+3,0, Mr. Ernest Charles Cann,male,21,8.05,Southampton
+3,0, Mr. Joseph Caram,male,28,14.46,Calais
+3,0, Mrs. Joseph (Maria Elias) Caram,female,18,14.46,Calais
+3,0, Mr. August Sigfrid Carlsson,male,28,7.8,Southampton
+3,0, Mr. Carl Robert Carlsson,male,24,7.85,Southampton
+3,1, Miss. Helen Ellen Carr,female,16,7.75,Queenstown
+3,0, Miss. Jeannie Carr,female,37,7.75,Queenstown
+3,0, Mr. Alfred John Carver,male,28,7.25,Southampton
+3,0, Mr. Francesco Celotti,male,24,8.05,Southampton
+3,0, Mr. David Charters,male,21,7.73,Queenstown
+3,1, Mr. Chang Chip,male,32,56.5,Southampton
+3,0, Mr. Emil Christmann,male,29,8.05,Southampton
+3,0, Mr. Apostolos Chronopoulos,male,26,14.45,Calais
+3,0, Mr. Demetrios Chronopoulos,male,18,14.45,Calais
+3,0, Mr. Domingos Fernandeo Coelho,male,20,7.05,Southampton
+3,1, Mr. Gurshon Gus Cohen,male,18,8.05,Southampton
+3,0, Mr. Patrick Colbert,male,24,7.25,Queenstown
+3,0, Mr. Peju Coleff,male,36,7.5,Southampton
+3,0, Mr. Satio Coleff,male,24,7.5,Southampton
+3,0, Mr. Thomas Henry Conlon,male,31,7.73,Queenstown
+3,0, Mr. Michael Connaghton,male,31,7.75,Queenstown
+3,1, Miss. Kate Connolly,female,22,7.75,Queenstown
+3,0, Miss. Kate Connolly,female,30,7.63,Queenstown
+3,0, Mr. Patrick Connors,male,71,7.75,Queenstown
+3,0, Mr. Jacob Cook,male,43,8.05,Southampton
+3,0, Mr. Bartol Cor,male,35,7.9,Southampton
+3,0, Mr. Ivan Cor,male,27,7.9,Southampton
+3,0, Mr. Liudevit Cor,male,19,7.9,Southampton
+3,0, Mr. Harry Corn,male,30,8.05,Southampton
+3,1, Master. Eden Leslie Neville Coutts,male,9,15.9,Southampton
+3,1, Master. William Loch William Coutts,male,3,15.9,Southampton
+3,1, Mrs. William (Winnie Minnie Treanor) Coutts,female,36,15.9,Southampton
+3,0, Mr. Daniel Coxon,male,59,7.25,Southampton
+3,0, Mr. Ernest James Crease,male,19,8.16,Southampton
+3,1, Miss. Laura Alice Cribb,female,17,16.1,Southampton
+3,0, Mr. John Hatfield Cribb,male,44,16.1,Southampton
+3,0, Mr. Jeso Culumovic,male,17,8.66,Southampton
+3,0, Mr. Shedid Daher,male,23,7.23,Calais
+3,1, Mr. Karl Edwart Dahl,male,45,8.05,Southampton
+3,0, Miss. Gerda Ulrika Dahlberg,female,22,10.52,Southampton
+3,0, Mr. Branko Dakic,male,19,10.17,Southampton
+3,1, Miss. Margaret Marcella Maggie Daly,female,30,6.95,Queenstown
+3,1, Mr. Eugene Patrick Daly,male,29,7.75,Queenstown
+3,0, Master. Gilbert Sigvard Emanuel Danbom,male,0,14.4,Southampton
+3,0, Mr. Ernst Gilbert Danbom,male,34,14.4,Southampton
+3,0, Mrs. Ernst Gilbert (Anna Sigrid Maria Brogren) Danbom,female,28,14.4,Southampton
+3,0, Mr. Yoto Danoff,male,27,7.9,Southampton
+3,0, Mr. Ristiu Dantcheff,male,25,7.9,Southampton
+3,0, Mr. Alfred J Davies,male,24,24.15,Southampton
+3,0, Mr. Evan Davies,male,22,8.05,Southampton
+3,0, Mr. John Samuel Davies,male,21,24.15,Southampton
+3,0, Mr. Joseph Davies,male,17,8.05,Southampton
+3,0, Mr. Thomas Henry Davison,male,32,16.1,Southampton
+3,1, Mrs. Thomas Henry (Mary E Finck) Davison,female,34,16.1,Southampton
+3,1, Mr. Guillaume Joseph de Messemaeker,male,37,17.4,Southampton
+3,1, Mrs. Guillaume Joseph (Emma) de Messemaeker,female,36,17.4,Southampton
+3,1, Mr. Theodore de Mulder,male,30,9.5,Southampton
+3,0, Mr. Alfons de Pelsmaeker,male,16,9.5,Southampton
+3,1, Master. Bertram Vere Dean,male,1,20.58,Southampton
+3,1, Miss. Elizabeth Gladys Millvina Dean,female,0,20.58,Southampton
+3,0, Mr. Bertram Frank Dean,male,26,20.58,Southampton
+3,1, Mrs. Bertram (Eva Georgetta Light) Dean,female,33,20.58,Southampton
+3,0, Mr. Redjo Delalic,male,25,7.9,Southampton
+3,0, Mr. Marinko Demetri,male,23,7.9,Southampton
+3,0, Mr. Mitto Denkoff,male,30,7.9,Southampton
+3,0, Mr. Samuel Dennis,male,22,7.25,Southampton
+3,0, Mr. William Dennis,male,36,7.25,Southampton
+3,1, Miss. Margaret Delia Devaney,female,19,7.88,Queenstown
+3,0, Mr. Mirko Dika,male,17,7.9,Southampton
+3,0, Mr. Jovan Dimic,male,42,8.66,Southampton
+3,0, Mr. Valtcho Dintcheff,male,43,7.9,Southampton
+3,0, Mr. Tannous Doharr,male,28,7.23,Calais
+3,0, Mr. Patrick Dooley,male,32,7.75,Queenstown
+3,1, Mr. Edward Arthur Dorking,male,19,8.05,Southampton
+3,1, Miss. Elizabeth Dowdell,female,30,12.48,Southampton
+3,0, Miss. Elizabeth Doyle,female,24,7.75,Queenstown
+3,1, Miss. Jennie Drapkin,female,23,8.05,Southampton
+3,0, Mr. Jozef Drazenoic,male,33,7.9,Calais
+3,0, Mr. Frank Duane,male,65,7.75,Queenstown
+3,1, Mr. Joseph Duquemin,male,24,7.55,Southampton
+3,0, Mr. Adolf Fredrik Dyker,male,23,13.9,Southampton
+3,1, Mrs. Adolf Fredrik (Anna Elisabeth Judith Andersson) Dyker,female,22,13.9,Southampton
+3,0, Mr. Gustaf Hjalmar Edvardsson,male,18,7.78,Southampton
+3,0, Mr. Hans Linus Eklund,male,16,7.78,Southampton
+3,0, Mr. Johan Ekstrom,male,45,6.98,Southampton
+3,0, Mr. Dibo Elias,male,29,7.23,Calais
+3,0, Mr. Joseph Elias,male,39,7.23,Calais
+3,0, Mr. Joseph Jr Elias,male,17,7.23,Calais
+3,0, Mr. Tannous Elias,male,15,7.23,Calais
+3,0, Mr. William James Elsbury,male,47,7.25,Southampton
+3,1, Miss. Virginia Ethel Emanuel,female,5,12.48,Southampton
+3,0, Mr. Farred Chehab Emir,male,29,7.23,Calais
+3,0, Mr. Thomas James Everett,male,41,15.1,Southampton
+3,0, Mr. James Farrell,male,41,7.75,Queenstown
+3,1, Mr. Luigi Finoli,male,34,7.05,Southampton
+3,0, Mr. Eberhard Thelander Fischer,male,18,7.8,Southampton
+3,0, Miss. Honora Fleming,female,22,7.75,Queenstown
+3,0, Mr. James Flynn,male,28,7.75,Queenstown
+3,0, Mr. John Flynn,male,42,6.95,Queenstown
+3,0, Mr. Joseph Foley,male,26,7.88,Queenstown
+3,0, Mr. William Foley,male,20,7.75,Queenstown
+3,1, Mr. Choong Foo,male,32,56.5,Southampton
+3,0, Miss. Doolina Margaret Daisy Ford,female,21,34.38,Southampton
+3,0, Miss. Robina Maggie Ruby Ford,female,9,34.38,Southampton
+3,0, Mr. Arthur Ford,male,22,8.05,Southampton
+3,0, Mr. Edward Watson Ford,male,18,34.38,Southampton
+3,0, Mr. William Neal Ford,male,16,34.38,Southampton
+3,0, Mrs. Edward (Margaret Ann Watson) Ford,female,48,34.38,Southampton
+3,0, Mr. Patrick Fox,male,22,7.75,Queenstown
+3,0, Mr. Charles (Charles Fardon) Franklin,male,38,7.25,Southampton
+3,0, Mr. Martin Gallagher,male,25,7.74,Queenstown
+3,0, Mr. John Garfirth,male,21,14.5,Southampton
+3,0, Mr. Stanio Gheorgheff,male,25,7.9,Calais
+3,0, Mr. Eliezer Gilinski,male,22,8.05,Southampton
+3,1, Miss. Katherine Katie Gilnagh,female,16,7.73,Queenstown
+3,1, Miss. Mary Agatha Glynn,female,19,7.75,Queenstown
+3,1, Master. Frank John William Frankie Goldsmith,male,9,20.53,Southampton
+3,0, Mr. Frank John Goldsmith,male,33,20.53,Southampton
+3,0, Mr. Nathan Goldsmith,male,41,7.85,Southampton
+3,1, Mrs. Frank John (Emily Alice Brown) Goldsmith,female,31,20.53,Southampton
+3,0, Mr. Manuel Estanslas Goncalves,male,38,7.05,Southampton
+3,0, Master. Harold Victor Goodwin,male,9,46.9,Southampton
+3,0, Master. Sidney Leonard Goodwin,male,1,46.9,Southampton
+3,0, Master. William Frederick Goodwin,male,11,46.9,Southampton
+3,0, Miss. Jessie Allis Goodwin,female,10,46.9,Southampton
+3,0, Miss. Lillian Amy Goodwin,female,16,46.9,Southampton
+3,0, Mr. Charles Edward Goodwin,male,14,46.9,Southampton
+3,0, Mr. Charles Frederick Goodwin,male,40,46.9,Southampton
+3,0, Mrs. Frederick (Augusta Tyler) Goodwin,female,43,46.9,Southampton
+3,0, Mr. George Henry Green,male,51,8.05,Southampton
+3,0, Mr. Daniel Danielsen Gronnestad,male,32,8.36,Southampton
+3,0, Mr. Robert Guest,male,32,8.05,Southampton
+3,0, Mr. Alfred Ossian Gustafsson,male,20,9.85,Southampton
+3,0, Mr. Anders Vilhelm Gustafsson,male,37,7.93,Southampton
+3,0, Mr. Johan Birger Gustafsson,male,28,7.93,Southampton
+3,0, Mr. Karl Gideon Gustafsson,male,19,7.78,Southampton
+3,0, Miss. Aloisia Haas,female,24,8.85,Southampton
+3,0, Miss. Kate Hagardon,female,17,7.73,Queenstown
+3,0, Mr. Ingvald Olai Olsen Hagland,male,28,19.97,Southampton
+3,0, Mr. Konrad Mathias Reiersen Hagland,male,19,19.97,Southampton
+3,0, Mr. Pekka Pietari Hakkarainen,male,28,15.85,Southampton
+3,1, Mrs. Pekka Pietari (Elin Matilda Dolck) Hakkarainen,female,24,15.85,Southampton
+3,0, Mr. Leon Hampe,male,20,9.5,Southampton
+3,0, Mr. Mansour Hanna,male,24,7.23,Calais
+3,0, Mr. Claus Peter Hansen,male,41,14.11,Southampton
+3,0, Mr. Henrik Juul Hansen,male,26,7.85,Southampton
+3,0, Mr. Henry Damsgaard Hansen,male,21,7.85,Southampton
+3,1, Mrs. Claus Peter (Jennie L Howard) Hansen,female,45,14.11,Southampton
+3,0, Miss. Alice Phoebe Harknett,female,21,7.55,Southampton
+3,0, Mr. Abraham (David Lishin) Harmer,male,25,7.25,Southampton
+3,0, Mr. Henry Hart,male,27,6.86,Queenstown
+3,0, Mr. Houssein G N Hassan,male,11,18.79,Calais
+3,1, Miss. Hanora Nora Healy,female,29,7.75,Queenstown
+3,1, Mr. Oskar Arvid Hedman,male,27,6.98,Southampton
+3,1, Mr. Ling Hee,male,24,56.5,Southampton
+3,0, Miss. Hanora Nora Hegarty,female,18,6.75,Queenstown
+3,1, Miss. Laina Heikkinen,female,26,7.93,Southampton
+3,0, Miss. Wendla Maria Heininen,female,23,7.93,Southampton
+3,1, Miss. Hilda Maria Hellstrom,female,22,8.96,Southampton
+3,0, Mr. Ignjac Hendekovic,male,28,7.9,Southampton
+3,0, Miss. Jenny Lovisa Henriksson,female,28,7.78,Southampton
+3,0, Miss. Delia Henry,female,23,7.75,Queenstown
+3,1, Miss. Hildur E Hirvonen,female,2,12.29,Southampton
+3,1, Mrs. Alexander (Helga E Lindqvist) Hirvonen,female,22,12.29,Southampton
+3,0, Mr. John Fredrik Alexander Holm,male,43,6.45,Southampton
+3,0, Mr. Johan Martin Holthen,male,28,22.53,Southampton
+3,1, Miss. Eliina Honkanen,female,27,7.93,Southampton
+3,0, Mr. John Horgan,male,22,7.75,Queenstown
+3,1, Miss. May Elizabeth Howard,female,27,8.05,Southampton
+3,0, Mr. Adolf Mathias Nicolai Olsen Humblen,male,42,7.65,Southampton
+3,1, Mr. Abraham Hyman,male,34,7.89,Southampton
+3,0, Mr. Yousseff Ibrahim Shawah,male,30,7.23,Calais
+3,0, Mr. Ylio Ilieff,male,32,7.9,Southampton
+3,0, Miss. Ida Livija Ilmakangas,female,27,7.93,Southampton
+3,0, Miss. Pieta Sofia Ilmakangas,female,25,7.93,Southampton
+3,0, Mr. Kanio Ivanoff,male,20,7.9,Southampton
+3,1, Mr. Ivan Jalsevac,male,29,7.9,Calais
+3,1, Mr. Carl Olof Jansson,male,21,7.8,Southampton
+3,0, Mr. Jose Neto Jardin,male,21,7.05,Southampton
+3,0, Mr. Hans Peder Jensen,male,20,7.85,Southampton
+3,0, Mr. Niels Peder Jensen,male,48,7.85,Southampton
+3,0, Mr. Svend Lauritz Jensen,male,17,7.05,Southampton
+3,1, Miss. Annie Jermyn,female,26,7.75,Queenstown
+3,1, Mr. Bernt Johannesen-Bratthammer,male,29,8.11,Southampton
+3,0, Mr. Jakob Alfred Johanson,male,34,6.5,Southampton
+3,1, Mr. Oskar Leander Johansson Palmquist,male,26,7.78,Southampton
+3,0, Mr. Erik Johansson,male,22,7.8,Southampton
+3,0, Mr. Gustaf Joel Johansson,male,33,8.65,Southampton
+3,0, Mr. Karl Johan Johansson,male,31,7.78,Southampton
+3,0, Mr. Nils Johansson,male,29,7.85,Southampton
+3,1, Master. Harold Theodor Johnson,male,4,11.13,Southampton
+3,1, Miss. Eleanor Ileen Johnson,female,1,11.13,Southampton
+3,0, Mr. Alfred Johnson,male,49,0,Southampton
+3,0, Mr. Malkolm Joackim Johnson,male,33,7.78,Southampton
+3,0, Mr. William Cahoone Jr Johnson,male,19,0,Southampton
+3,1, Mrs. Oscar W (Elisabeth Vilhelmina Berg) Johnson,female,27,11.13,Southampton
+3,0, Master. William Arthur Willie Johnston,male,8,23.45,Southampton
+3,0, Miss. Catherine Helen Carrie Johnston,female,7,23.45,Southampton
+3,0, Mr. Andrew G Johnston,male,36,23.45,Southampton
+3,0, Mrs. Andrew G (Elizabeth Lily Watson) Johnston,female,36,23.45,Southampton
+3,0, Mr. Lalio Jonkoff,male,23,7.9,Southampton
+3,1, Mr. Carl Jonsson,male,32,7.85,Southampton
+3,0, Mr. Nils Hilding Jonsson,male,27,7.85,Southampton
+3,0, Miss. Katriina Jussila,female,20,9.83,Southampton
+3,0, Miss. Mari Aina Jussila,female,21,9.83,Southampton
+3,1, Mr. Eiriik Jussila,male,32,7.93,Southampton
+3,0, Mr. Nikolai Erland Kallio,male,17,7.13,Southampton
+3,0, Mr. Johannes Halvorsen Kalvik,male,21,8.43,Southampton
+3,0, Mr. Milan Karaic,male,30,7.9,Southampton
+3,1, Mr. Einar Gervasius Karlsson,male,21,7.8,Southampton
+3,0, Mr. Julius Konrad Eugen Karlsson,male,33,7.85,Southampton
+3,0, Mr. Nils August Karlsson,male,22,7.52,Southampton
+3,1, Miss. Manca Karun,female,4,13.42,Calais
+3,1, Mr. Franz Karun,male,39,13.42,Calais
+3,0, Mr. Fared Kassem,male,18,7.23,Calais
+3,0, Mr. Vassilios (Catavelas Vassilios) Katavelas,male,19,7.23,Calais
+3,0, Mr. Andrew Andy Keane,male,23,7.75,Queenstown
+3,0, Mr. Arthur Keefe,male,39,7.25,Southampton
+3,1, Miss. Anna Katherine Annie Kate Kelly,female,20,7.75,Queenstown
+3,1, Miss. Mary Kelly,female,22,7.75,Queenstown
+3,0, Mr. James Kelly,male,35,7.83,Queenstown
+3,0, Mr. James Kelly,male,44,8.05,Southampton
+3,1, Mr. John Kennedy,male,24,7.75,Queenstown
+3,0, Mr. Betros Khalil,male,25,14.45,Calais
+3,0, Mrs. Betros (Zahie Maria Elias) Khalil,female,20,14.45,Calais
+3,0, Mr. John Kiernan,male,24,7.75,Queenstown
+3,0, Mr. Philip Kiernan,male,22,7.75,Queenstown
+3,0, Mr. Thomas J Kilgannon,male,22,7.74,Queenstown
+3,0, Miss. Maria Kink,female,22,8.66,Southampton
+3,0, Mr. Vincenz Kink,male,26,8.66,Southampton
+3,1, Miss. Luise Gretchen Kink-Heilmann,female,4,22.03,Southampton
+3,1, Mr. Anton Kink-Heilmann,male,29,22.03,Southampton
+3,1, Mrs. Anton (Luise Heilmann) Kink-Heilmann,female,26,22.03,Southampton
+3,0, Miss. Gertrud Emilia Klasen,female,1,12.18,Southampton
+3,0, Mr. Klas Albin Klasen,male,18,7.85,Southampton
+3,0, Mrs. (Hulda Kristina Eugenia Lofqvist) Klasen,female,36,12.18,Southampton
+3,0, Mr. Theodor Kraeff,male,25,7.9,Calais
+3,1, Mr. Neshan Krekorian,male,25,7.23,Calais
+3,0, Mr. Sarkis Lahoud,male,30,7.23,Calais
+3,0, Miss. Kristina Sofia Laitinen,female,37,9.59,Southampton
+3,0, Mr. Kristo Laleff,male,23,7.9,Southampton
+3,1, Mr. Ali Lam,male,37,56.5,Southampton
+3,0, Mr. Len Lam,male,23,56.5,Southampton
+3,1, Miss. Aurora Adelia Landergren,female,22,7.25,Southampton
+3,0, Mr. Patrick Lane,male,16,7.75,Queenstown
+3,1, Mr. Fang Lang,male,26,56.5,Southampton
+3,0, Mr. August Viktor Larsson,male,29,9.48,Southampton
+3,0, Mr. Bengt Edvin Larsson,male,29,7.78,Southampton
+3,0, Mr. Edvard A Larsson-Rondberg,male,22,7.78,Southampton
+3,1, Mr. Fahim (Philip Zenni) Leeni,male,22,7.23,Calais
+3,0, Master. Henry Forbes Lefebre,male,5,25.47,Southampton
+3,0, Miss. Ida Lefebre,female,3,25.47,Southampton
+3,0, Miss. Jeannie Lefebre,female,8,25.47,Southampton
+3,0, Miss. Mathilde Lefebre,female,12,25.47,Southampton
+3,0, Mrs. Frank (Frances) Lefebre,female,40,25.47,Southampton
+3,0, Mr. Antti Gustaf Leinonen,male,32,7.93,Southampton
+3,0, Mr. Peter L Lemberopolous,male,35,6.44,Calais
+3,0, Miss. Mary Lennon,female,18,15.5,Queenstown
+3,0, Mr. Denis Lennon,male,20,15.5,Queenstown
+3,0, Mr. Lionel Leonard,male,36,0,Southampton
+3,0, Mr. James Lester,male,39,24.15,Southampton
+3,0, Mr. Rene Aime Lievens,male,24,9.5,Southampton
+3,0, Miss. Agda Thorilda Viktoria Lindahl,female,25,7.78,Southampton
+3,0, Miss. Augusta Charlotta Lindblom,female,45,7.75,Southampton
+3,0, Mr. Edvard Bengtsson Lindell,male,36,15.55,Southampton
+3,0, Mrs. Edvard Bengtsson (Elin Gerda Persson) Lindell,female,30,15.55,Southampton
+3,1, Mr. Eino William Lindqvist,male,20,7.93,Southampton
+3,0, Mr. Michael Linehan,male,21,7.88,Queenstown
+3,0, Mr. Lee Ling,male,28,56.5,Southampton
+3,0, Mr. Simon Lithman,male,28,7.55,Southampton
+3,0, Mr. William Arthur Lobb,male,30,16.1,Southampton
+3,0, Mrs. William Arthur (Cordelia K Stanlick) Lobb,female,26,16.1,Southampton
+3,0, Mr. Edward Lockyer,male,21,7.88,Southampton
+3,0, Mr. John Hall (Henry) Lovell,male,21,7.25,Southampton
+3,1, Mr. Nikola Lulic,male,27,8.66,Southampton
+3,0, Mr. Johan Svensson Lundahl,male,51,7.05,Southampton
+3,1, Miss. Olga Elida Lundin,female,23,7.85,Southampton
+3,1, Mr. Thure Edvin Lundstrom,male,32,7.58,Southampton
+3,0, Mr. Stanko Lyntakoff,male,44,7.9,Southampton
+3,0, Mr. George William MacKay,male,20,7.55,Southampton
+3,1, Miss. Margaret Maggie Madigan,female,21,7.75,Queenstown
+3,1, Mr. Fridtjof Arne Madsen,male,24,7.14,Southampton
+3,0, Mr. Matti Alexanteri Maenpaa,male,22,7.13,Southampton
+3,0, Miss. Bridget Delia Mahon,female,20,7.88,Queenstown
+3,0, Mr. John Mahon,male,22,7.75,Queenstown
+3,0, Mr. Simon Maisner,male,34,8.05,Southampton
+3,0, Mr. Kalle Edvard Makinen,male,29,7.93,Southampton
+3,1, Mr. Hanna Mamee,male,12,7.23,Calais
+3,0, Miss. Mary Mangan,female,31,7.75,Queenstown
+3,1, Miss. Margareth Mannion,female,29,7.74,Queenstown
+3,0, Mr. Sarkis Mardirosian,male,25,7.23,Calais
+3,0, Mr. Marin Markoff,male,35,7.9,Calais
+3,0, Mr. Johann Markun,male,33,7.9,Southampton
+3,1, Mrs. Fatima Masselmani,female,32,7.23,Calais
+3,0, Mr. Nicola Matinoff,male,30,7.9,Calais
+3,1, Miss. Catherine Katie McCarthy,female,24,7.75,Queenstown
+3,1, Mr. Thomas Joseph McCormack,male,19,7.75,Queenstown
+3,1, Miss. Agnes McCoy,female,29,23.25,Queenstown
+3,1, Miss. Alicia McCoy,female,26,23.25,Queenstown
+3,1, Mr. Bernard McCoy,male,24,23.25,Queenstown
+3,1, Miss. Brigdet Delia McDermott,female,31,7.79,Queenstown
+3,0, Mr. Michael McEvoy,male,19,15.5,Queenstown
+3,1, Miss. Mary McGovern,female,22,7.88,Queenstown
+3,1, Miss. Anna Annie McGowan,female,15,8.03,Queenstown
+3,0, Miss. Katherine McGowan,female,35,7.75,Queenstown
+3,0, Mr. Martin McMahon,male,20,7.75,Queenstown
+3,0, Mr. Neal McNamee,male,24,16.1,Southampton
+3,0, Mrs. Neal (Eileen O'Leary) McNamee,female,19,16.1,Southampton
+3,0, Miss. Bridget McNeill,female,27,7.75,Queenstown
+3,0, Miss. (Marion Ogden) Meanwell,female,69,8.05,Southampton
+3,0, Mrs. Thomas (Annie Louise Rowley) Meek,female,31,8.05,Southampton
+3,0, Mr. Alfonzo Meo,male,56,8.05,Southampton
+3,0, Mr. Robert Mernagh,male,26,7.75,Queenstown
+3,1, Mr. Karl Albert Midtsjo,male,21,7.78,Southampton
+3,0, Mr. Frank Miles,male,23,8.05,Southampton
+3,0, Mr. Ivan Mineff,male,24,7.9,Southampton
+3,0, Mr. Lazar Minkoff,male,21,7.9,Southampton
+3,0, Mr. Stoytcho Mionoff,male,28,7.9,Southampton
+3,0, Mr. Mito Mitkoff,male,23,7.9,Southampton
+3,1, Miss. Helen Mary Ellie Mockler,female,23,7.88,Queenstown
+3,0, Mr. Sigurd Hansen Moen,male,25,7.65,Southampton
+3,1, Master. Meier Moor,male,6,12.48,Southampton
+3,1, Mrs. (Beila) Moor,female,27,12.48,Southampton
+3,0, Mr. Leonard Charles Moore,male,19,8.05,Southampton
+3,1, Miss. Bertha Moran,female,28,24.15,Queenstown
+3,0, Mr. Daniel J Moran,male,29,24.15,Queenstown
+3,0, Mr. James Moran,male,22,8.46,Queenstown
+3,0, Mr. William Morley,male,34,8.05,Southampton
+3,0, Mr. Thomas Rowan Morrow,male,30,7.75,Queenstown
+3,1, Mr. Albert Johan Moss,male,29,7.78,Southampton
+3,1, Master. Gerios Moubarek,male,7,15.25,Calais
+3,1, Master. Halim Gonios (William George) Moubarek,male,4,15.25,Calais
+3,1, Mrs. George (Omine Amenia Alexander) Moubarek,female,24,15.25,Calais
+3,1, Mrs. (Mantoura Boulos) Moussa,female,35,7.23,Calais
+3,0, Mr. Rahamin Haim Moutal,male,28,8.05,Southampton
+3,1, Miss. Katherine Katie Mullens,female,19,7.73,Queenstown
+3,1, Miss. Bertha E Mulvihill,female,24,7.75,Queenstown
+3,0, Mr. Joseph Murdlin,male,22,8.05,Southampton
+3,1, Miss. Katherine Kate Murphy,female,18,15.5,Queenstown
+3,1, Miss. Margaret Jane Murphy,female,25,15.5,Queenstown
+3,1, Miss. Nora Murphy,female,34,15.5,Queenstown
+3,0, Mr. Pehr Fabian Oliver Malkolm Myhrman,male,18,7.75,Southampton
+3,0, Mr. Penko Naidenoff,male,22,7.9,Southampton
+3,1, Miss. Adele Kiamie Jane Najib,female,15,7.23,Calais
+3,1, Miss. Maria (Mary) Nakid,female,1,15.74,Calais
+3,1, Mr. Sahid Nakid,male,20,15.74,Calais
+3,1, Mrs. Said (Waika Mary Mowad) Nakid,female,19,15.74,Calais
+3,0, Mr. William Henry Nancarrow,male,33,8.05,Southampton
+3,0, Mr. Minko Nankoff,male,32,7.9,Southampton
+3,0, Mr. Mustafa Nasr,male,20,7.23,Calais
+3,0, Miss. Hannah Naughton,female,21,7.75,Queenstown
+3,0, Mr. Christo Nenkoff,male,22,7.9,Southampton
+3,1, Master. Elias Nicola-Yarred,male,12,11.24,Calais
+3,1, Miss. Jamila Nicola-Yarred,female,14,11.24,Calais
+3,0, Miss. Manta Josefina Nieminen,female,29,7.93,Southampton
+3,0, Mr. Samuel Niklasson,male,28,8.05,Southampton
+3,1, Miss. Berta Olivia Nilsson,female,18,7.78,Southampton
+3,1, Miss. Helmina Josefina Nilsson,female,26,7.85,Southampton
+3,0, Mr. August Ferdinand Nilsson,male,21,7.85,Southampton
+3,0, Mr. Iisakki Antino Aijo Nirva,male,41,7.13,Southampton
+3,1, Mr. Juha Niskanen,male,39,7.93,Southampton
+3,0, Mr. Richard Cater Nosworthy,male,21,7.8,Southampton
+3,0, Mr. Mansouer Novel,male,29,7.23,Calais
+3,1, Miss. Anna Sofia Nysten,female,22,7.75,Southampton
+3,0, Mr. Johan Hansen Nysveen,male,61,6.24,Southampton
+3,0, Mr. Thomas O'Brien,male,27,15.5,Queenstown
+3,0, Mr. Timothy O'Brien,male,21,7.83,Queenstown
+3,1, Mrs. Thomas (Johanna Hannah Godfrey) O'Brien,female,26,15.5,Queenstown
+3,0, Mr. Patrick D O'Connell,male,17,7.73,Queenstown
+3,0, Mr. Maurice O'Connor,male,16,7.75,Queenstown
+3,0, Mr. Patrick O'Connor,male,23,7.75,Queenstown
+3,0, Mr. Nils Martin Odahl,male,23,9.23,Southampton
+3,0, Ms. Bridget O'Donoghue,female,21,7.75,Queenstown
+3,1, Miss. Bridget O'Driscoll,female,24,7.75,Queenstown
+3,1, Miss. Ellen Nellie O'Dwyer,female,25,7.88,Queenstown
+3,1, Miss. Velin Ohman,female,22,7.78,Southampton
+3,1, Mr. Patrick O'Keefe,male,22,7.75,Queenstown
+3,1, Miss. Hanora Norah O'Leary,female,16,7.83,Queenstown
+3,1, Master. Artur Karl Olsen,male,9,3.17,Southampton
+3,0, Mr. Henry Margido Olsen,male,28,22.53,Southampton
+3,0, Mr. Karl Siegwart Andreas Olsen,male,42,8.4,Southampton
+3,0, Mr. Ole Martin Olsen,male,27,7.31,Southampton
+3,0, Miss. Elina Olsson,female,31,7.85,Southampton
+3,0, Mr. Nils Johan Goransson Olsson,male,28,7.85,Southampton
+3,1, Mr. Oscar Wilhelm Olsson,male,32,7.78,Southampton
+3,0, Mr. Thor Anderson Olsvigen,male,20,9.23,Southampton
+3,0, Miss. Jelka Oreskovic,female,23,8.66,Southampton
+3,0, Miss. Marija Oreskovic,female,20,8.66,Southampton
+3,0, Mr. Luka Oreskovic,male,20,8.66,Southampton
+3,0, Mr. Olaf Elon Osen,male,16,9.22,Southampton
+3,1, Mrs. Mara Osman,female,31,8.68,Southampton
+3,0, Miss. Bridget Mary O'Sullivan,female,21,7.63,Queenstown
+3,0, Master. Gosta Leonard Palsson,male,2,21.08,Southampton
+3,0, Master. Paul Folke Palsson,male,6,21.08,Southampton
+3,0, Miss. Stina Viola Palsson,female,3,21.08,Southampton
+3,0, Miss. Torborg Danira Palsson,female,8,21.08,Southampton
+3,0, Mrs. Nils (Alma Cornelia Berglund) Palsson,female,29,21.08,Southampton
+3,0, Master. Eino Viljami Panula,male,1,39.69,Southampton
+3,0, Master. Juha Niilo Panula,male,7,39.69,Southampton
+3,0, Master. Urho Abraham Panula,male,2,39.69,Southampton
+3,0, Mr. Ernesti Arvid Panula,male,16,39.69,Southampton
+3,0, Mr. Jaako Arnold Panula,male,14,39.69,Southampton
+3,0, Mrs. Juha (Maria Emilia Ojala) Panula,female,41,39.69,Southampton
+3,0, Mr. Jakob Pasic,male,21,8.66,Southampton
+3,0, Mr. George Patchett,male,19,14.5,Southampton
+3,0, Mr. Uscher Paulner,male,16,8.71,Calais
+3,0, Mr. Stefo Pavlovic,male,32,7.9,Southampton
+3,0, Master. Alfred Edward Peacock,male,1,13.78,Southampton
+3,0, Miss. Treasteall Peacock,female,3,13.78,Southampton
+3,0, Mrs. Benjamin (Edith Nile) Peacock,female,26,13.78,Southampton
+3,0, Mr. Ernest Pearce,male,32,7,Southampton
+3,0, Mr. Olaf Pedersen,male,28,7.78,Southampton
+3,0, Mr. Joseph Peduzzi,male,24,8.05,Southampton
+3,0, Mr. Edvard Pekoniemi,male,21,7.93,Southampton
+3,0, Mr. Nikolai Johannes Peltomaki,male,25,7.93,Southampton
+3,0, Mr. John Henry Perkin,male,22,7.25,Southampton
+3,1, Mr. Ernst Ulrik Persson,male,25,7.78,Southampton
+3,1, Master. Michael J Peter,male,5,22.36,Calais
+3,1, Miss. Anna Peter,female,3,22.36,Calais
+3,1, Mrs. Catherine (Catherine Rizk) Peter,female,26,22.36,Calais
+3,0, Miss. Katie Peters,female,26,8.14,Queenstown
+3,0, Mr. Marius Petersen,male,24,8.05,Southampton
+3,0, Miss. Matilda Petranec,female,28,7.9,Southampton
+3,0, Mr. Nedelio Petroff,male,19,7.9,Southampton
+3,0, Mr. Pastcho (Pentcho) Petroff,male,29,7.9,Southampton
+3,0, Mr. Johan Emil Petterson,male,25,7.78,Southampton
+3,0, Miss. Ellen Natalia Pettersson,female,18,7.78,Southampton
+3,1, Mr. Berk (Berk Trembisky) Pickard,male,32,8.05,Southampton
+3,0, Mr. Vasil Plotcharsky,male,27,7.9,Southampton
+3,0, Mr. Mate Pokrnic,male,17,8.66,Southampton
+3,0, Mr. Tome Pokrnic,male,24,8.66,Southampton
+3,0, Mr. Alexander Radeff,male,27,7.9,Southampton
+3,0, Mrs. (Lena Jacobsen Solvang) Rasmussen,female,62,8.11,Southampton
+3,0, Mr. Raihed Razi,male,30,7.23,Calais
+3,0, Mr. James George Reed,male,19,7.25,Southampton
+3,0, Mr. Tido Rekic,male,38,7.9,Southampton
+3,0, Mr. Harold J Reynolds,male,21,8.05,Southampton
+3,0, Master. Albert Rice,male,10,29.13,Queenstown
+3,0, Master. Arthur Rice,male,4,29.13,Queenstown
+3,0, Master. Eric Rice,male,7,29.13,Queenstown
+3,0, Master. Eugene Rice,male,2,29.13,Queenstown
+3,0, Master. George Hugh Rice,male,8,29.13,Queenstown
+3,0, Mrs. William (Margaret Norton) Rice,female,39,29.13,Queenstown
+3,0, Miss. Susanna Juhantytar Sanni Riihivouri,female,22,39.69,Southampton
+3,0, Mr. Matti Rintamaki,male,35,7.13,Southampton
+3,1, Miss. Johanna Hannah Riordan,female,18,7.72,Queenstown
+3,0, Mr. Samuel Beard Risien,male,69,14.5,Southampton
+3,0, Mrs. Samuel (Emma) Risien,female,58,14.5,Southampton
+3,0, Mr. Alexander A Robins,male,50,14.5,Southampton
+3,0, Mrs. Alexander A (Grace Charity Laury) Robins,female,47,14.5,Southampton
+3,0, Mr. William John Rogers,male,29,8.05,Southampton
+3,0, Mr. Knud Paust Rommetvedt,male,49,7.78,Southampton
+3,0, Miss. Salli Helena Rosblom,female,2,20.21,Southampton
+3,0, Mr. Viktor Richard Rosblom,male,18,20.21,Southampton
+3,0, Mrs. Viktor (Helena Wilhelmina) Rosblom,female,41,20.21,Southampton
+3,1, Miss. Sarah A Roth,female,26,8.05,Southampton
+3,0, Mr. Richard Henry Rouse,male,50,8.05,Southampton
+3,0, Mr. Alfred George John Rush,male,16,8.05,Southampton
+3,1, Mr. Edward Ryan,male,24,7.75,Queenstown
+3,0, Mr. Patrick Ryan,male,29,24.15,Queenstown
+3,0, Mr. Amin Saad,male,30,7.23,Calais
+3,0, Mr. Khalil Saad,male,25,7.23,Calais
+3,0, Mr. Jean Nassr Saade,male,20,7.23,Calais
+3,0, Mr. Matthew Sadlier,male,20,7.73,Queenstown
+3,0, Mr. Harry Sadowitz,male,17,7.58,Southampton
+3,0, Mr. Simon Sivertsen Saether,male,39,7.25,Southampton
+3,0, Master. Thomas Henry Sage,male,4,69.55,Southampton
+3,0, Master. William Henry Sage,male,15,69.55,Southampton
+3,0, Miss. Ada Sage,female,10,69.55,Southampton
+3,0, Miss. Constance Gladys Sage,female,7,69.55,Southampton
+3,0, Miss. Dorothy Edith Dolly Sage,female,14,69.55,Southampton
+3,0, Miss. Stella Anna Sage,female,20,69.55,Southampton
+3,0, Mr. Douglas Bullen Sage,male,18,69.55,Southampton
+3,0, Mr. Frederick Sage,male,16,69.55,Southampton
+3,0, Mr. George John Jr Sage,male,19,69.55,Southampton
+3,0, Mr. John George Sage,male,44,69.55,Southampton
+3,0, Mrs. John (Annie Bullen) Sage,female,44,69.55,Southampton
+3,0, Mr. Karl Johan Salander,male,24,9.33,Southampton
+3,1, Miss. Anna Kristine Salkjelsvik,female,21,7.65,Southampton
+3,0, Mr. Johan Werner Salonen,male,39,7.93,Southampton
+3,0, Mr. Elias Samaan,male,17,21.68,Calais
+3,0, Mr. Hanna Samaan,male,40,21.68,Calais
+3,0, Mr. Youssef Samaan,male,16,21.68,Calais
+3,1, Miss. Beatrice Irene Sandstrom,female,1,16.7,Southampton
+3,1, Mrs. Hjalmar (Agnes Charlotta Bengtsson) Sandstrom,female,24,16.7,Southampton
+3,1, Miss. Marguerite Rut Sandstrom,female,4,16.7,Southampton
+3,1, Mr. Julius Sap,male,25,9.5,Southampton
+3,0, Mr. William Henry Saundercock,male,20,8.05,Southampton
+3,0, Mr. Frederick Charles Sawyer,male,25,8.05,Southampton
+3,0, Mr. James Scanlan,male,22,7.73,Queenstown
+3,0, Mr. Todor Sdycoff,male,42,7.9,Southampton
+3,0, Mr. Patrick Shaughnessy,male,24,7.75,Queenstown
+3,1, Mr. Jan Baptist Sheerlinck,male,29,9.5,Southampton
+3,0, Mr. Frederick William Shellard,male,55,15.1,Southampton
+3,1, Miss. Ellen Natalia Shine,female,20,7.78,Queenstown
+3,0, Mr. Charles Joseph Shorney,male,22,8.05,Southampton
+3,0, Mr. John Simmons,male,39,8.05,Southampton
+3,0, Mr. Orsen Sirayanian,male,22,7.23,Calais
+3,0, Mr. Maurice Sirota,male,20,8.05,Southampton
+3,0, Mr. Husein Sivic,male,40,7.9,Southampton
+3,0, Mr. Antti Wilhelm Sivola,male,21,7.93,Southampton
+3,1, Miss. Anna Sofia Sjoblom,female,18,7.5,Southampton
+3,0, Master. Harald Skoog,male,4,27.9,Southampton
+3,0, Master. Karl Thorsten Skoog,male,10,27.9,Southampton
+3,0, Miss. Mabel Skoog,female,9,27.9,Southampton
+3,0, Miss. Margit Elizabeth Skoog,female,2,27.9,Southampton
+3,0, Mr. Wilhelm Skoog,male,40,27.9,Southampton
+3,0, Mrs. William (Anna Bernhardina Karlsson) Skoog,female,45,27.9,Southampton
+3,0, Mr. Petco Slabenoff,male,42,7.9,Southampton
+3,0, Mr. Selman Francis Slocovski,male,20,8.05,Southampton
+3,0, Mr. Mile Smiljanic,male,37,8.66,Southampton
+3,0, Mr. Thomas Smith,male,26,7.75,Queenstown
+3,1, Miss. Julia Smyth,female,17,7.73,Queenstown
+3,0, Mr. Peter Andreas Lauritz Andersen Soholt,male,19,7.65,Southampton
+3,0, Mr. Francis William Somerton,male,30,8.05,Southampton
+3,0, Mr. Woolf Spector,male,23,8.05,Southampton
+3,0, Mr. Henry John Spinner,male,32,8.05,Southampton
+3,0, Mr. Ivan Staneff,male,23,7.9,Southampton
+3,0, Mr. Ivan Stankovic,male,33,8.66,Calais
+3,1, Miss. Amy Zillah Elsie Stanley,female,23,7.55,Southampton
+3,0, Mr. Edward Roland Stanley,male,21,8.05,Southampton
+3,0, Mr. Thomas Storey,male,61,7.9,Southampton
+3,0, Mr. Ilia Stoytcheff,male,19,7.9,Southampton
+3,0, Miss. Ida Sofia Strandberg,female,22,9.84,Southampton
+3,1, Mr. Juho Stranden,male,31,7.93,Southampton
+3,0, Mr. Ivan Strilic,male,27,8.66,Southampton
+3,0, Miss. Telma Matilda Strom,female,2,10.46,Southampton
+3,0, Mrs. Wilhelm (Elna Matilda Persson) Strom,female,29,10.46,Southampton
+3,1, Mr. Victor Francis Sunderland,male,16,8.05,Southampton
+3,1, Mr. Johan Julian Sundman,male,44,7.93,Southampton
+3,0, Mr. Henry Jr Sutehall,male,25,7.05,Southampton
+3,0, Mr. Johan Svensson,male,74,7.78,Southampton
+3,1, Mr. Johan Cervin Svensson,male,14,9.23,Southampton
+3,0, Mr. Olof Svensson,male,24,7.8,Southampton
+3,1, Mr. Gunnar Isidor Tenglin,male,25,7.8,Southampton
+3,0, Mr. Thomas Leonard Theobald,male,34,8.05,Southampton
+3,1, Master. Assad Alexander Thomas,male,0,8.52,Calais
+3,0, Mr. Charles P Thomas,male,30,6.44,Calais
+3,0, Mr. John Thomas,male,34,6.44,Calais
+3,0, Mr. Tannous Thomas,male,16,7.23,Calais
+3,1, Mrs. Alexander (Thamine Thelma) Thomas,female,16,8.52,Calais
+3,0, Mr. Alexander Morrison Thomson,male,36,8.05,Southampton
+3,0, Mr. Percival Thorneycroft,male,36,16.1,Southampton
+3,1, Mrs. Percival (Florence Kate White) Thorneycroft,female,32,16.1,Southampton
+3,0, Mr. Juho Tikkanen,male,32,7.93,Southampton
+3,0, Mr. Roger Tobin,male,20,7.75,Queenstown
+3,0, Mr. Lalio Todoroff,male,23,7.9,Southampton
+3,0, Mr. Ernest Portage Tomlin,male,31,8.05,Southampton
+3,0, Mr. Ernst William Torber,male,44,8.05,Southampton
+3,0, Mr. Assad Torfa,male,20,7.23,Calais
+3,1, Mr. William Henry Tornquist,male,25,0,Southampton
+3,0, Mr. Nakli Toufik,male,17,7.23,Calais
+3,1, Master. Georges Youssef Touma,male,7,15.25,Calais
+3,1, Miss. Maria Youssef Touma,female,9,15.25,Calais
+3,1, Mrs. Darwis (Hanne Youssef Razi) Touma,female,29,15.25,Calais
+3,0, Mr. Stjepan Turcin,male,36,7.9,Southampton
+3,1, Miss. Anna Sofia Turja,female,18,9.84,Southampton
+3,1, Mrs. (Hedwig) Turkula,female,63,9.59,Southampton
+3,0, Master. James William van Billiard,male,10,14.5,Southampton
+3,0, Master. Walter John van Billiard,male,12,14.5,Southampton
+3,0, Mr. Austin Blyler van Billiard,male,41,14.5,Southampton
+3,0, Miss. Catharina Van Impe,female,10,24.15,Southampton
+3,0, Mr. Jean Baptiste Van Impe,male,36,24.15,Southampton
+3,0, Mrs. Jean Baptiste (Rosalie Paula Govaert) Van Impe,female,30,24.15,Southampton
+3,0, Mr. Philemon van Melkebeke,male,23,9.5,Southampton
+3,0, Mr. Johannes Joseph Vande Velde,male,33,9.5,Southampton
+3,0, Mr. Nestor Cyriel Vande Walle,male,28,9.5,Southampton
+3,0, Mr. Leo Peter Vanden Steen,male,28,9.5,Southampton
+3,0, Mr. Victor Vander Cruyssen,male,47,9,Southampton
+3,0, Miss. Augusta Maria Vander Planke,female,18,18,Southampton
+3,0, Mr. Julius Vander Planke,male,31,18,Southampton
+3,0, Mr. Leo Edmondus Vander Planke,male,16,18,Southampton
+3,0, Mrs. Julius (Emelia Maria Vandemoortele) Vander Planke,female,31,18,Southampton
+3,1, Mr. David Vartanian,male,22,7.23,Calais
+3,0, Mr. Olof Edvin Vendel,male,20,7.85,Southampton
+3,0, Miss. Hulda Amanda Adolfina Vestrom,female,14,7.85,Southampton
+3,0, Mr. Janko Vovk,male,22,7.9,Southampton
+3,0, Mr. Achille Waelens,male,22,9,Southampton
+3,0, Mr. Frederick Ware,male,34,8.05,Southampton
+3,0, Mr. Charles William Warren,male,30,7.55,Southampton
+3,0, Mr. James Webber,male,66,8.05,Southampton
+3,0, Mr. Linhart Wenzel,male,33,9.5,Southampton
+3,1, Mrs. George Joseph (Shawneene Abi-Saab) Whabee,female,38,7.23,Calais
+3,0, Mr. Carl/Charles Peter Widegren,male,51,7.75,Southampton
+3,0, Mr. Jakob Alfred Wiklund,male,18,6.5,Southampton
+3,0, Mr. Karl Johan Wiklund,male,21,6.5,Southampton
+3,1, Mrs. James (Ellen Needs) Wilkes,female,47,7,Southampton
+3,0, Mr. Aaron (Abi Weller) Willer,male,37,8.71,Southampton
+3,0, Mr. Edward Willey,male,18,7.55,Southampton
+3,0, Mr. Howard Hugh Harry Williams,male,28,8.05,Southampton
+3,0, Mr. Leslie Williams,male,29,16.1,Southampton
+3,0, Mr. Einar Windelov,male,21,7.25,Southampton
+3,0, Mr. Albert Wirz,male,27,8.66,Southampton
+3,0, Mr. Phillippe Wiseman,male,54,7.25,Southampton
+3,0, Mr. Camille Wittevrongel,male,36,9.5,Southampton
+3,0, Mr. Antoni Yasbeck,male,27,14.45,Calais
+3,1, Mrs. Antoni (Selini Alexander) Yasbeck,female,15,14.45,Calais
+3,0, Mr. Gerious Youseff,male,46,7.23,Calais
+3,0, Mr. Wazli Yousif,male,25,7.23,Calais
+3,0, Mr. Gerious Yousseff,male,45,14.46,Calais
+3,0, Miss. Hileni Zabour,female,15,14.45,Calais
+3,0, Miss. Thamine Zabour,female,19,14.45,Calais
+3,0, Mr. Mapriededer Zakarian,male,27,7.23,Calais
+3,0, Mr. Ortin Zakarian,male,27,7.23,Calais
+3,0, Mr. Leo Zimmerman,male,29,7.88,Southampton
