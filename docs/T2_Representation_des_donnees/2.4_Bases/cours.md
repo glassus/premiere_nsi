@@ -117,11 +117,11 @@ On a donc la correspondance :
 
 ### 2.1 De l'hexadécimal vers le décimal :
 
+
 |256|16|1|
 |:---:|:---:|:---:|
 |$16^2$|$16^1$|$16^0$|
 | 1| D|2|
-
 
 
  $\rm{1D2}_{16}=1 \times 16^2+ 13 \times 16^1+2 \times 16^0=256+208+2=466_{10}$
