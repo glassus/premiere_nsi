@@ -8,7 +8,9 @@
         - quelques conseils [ici](https://glassus.github.io/terminale_nsi/T7_Divers/9_AOC/cours/){. target="_blank"}
         - le fil [reddit](https://www.reddit.com/r/adventofcode/){. target="_blank"} consacré à Advent Of Code, avec des solutions dans une multitude de langages, et surtout des visualisations souvent impressionnantes. -->  
 
-        
+## Rendez-vous le 04 Septembre !
+
+{#
 ## Thèmes en cours d'étude 
 
 :arrow_right: [Découvrir les commandes Linux avec le jeu Terminus](./T3_Architecture_materielle/3.5_Decouverte_des_commandes_Linux/cours/)
@@ -104,7 +106,7 @@
         - 6.1 [Interactions sur une page web](./T6_IHM_Web/6.1_Interactions_page_web/cours/)
         - 6.2 [Protocole HTTP : étude du chargement d'une page web](./T6_IHM_Web/6.2_Protocole_HTTP/cours/)
         - 6.3 [Requêtes GET, POST et formulaires](./T6_IHM_Web/6.3_Get_Post_Formulaires/cours/)
-
+#}
 
 <!-- 
 
