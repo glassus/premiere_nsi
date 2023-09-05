@@ -1,5 +1,7 @@
 # Utilisation du service Capytale
 
+![image](data/logo.svg){: .center}
+
 Capytale est accessible via Lycéeconnecté, il faut donc avoir ses identifiants Educonnect.
 
 

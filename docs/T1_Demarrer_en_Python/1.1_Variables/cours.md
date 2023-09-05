@@ -102,7 +102,7 @@ va provoquer chez l'ordinateur le comportement suivant :
 Cette explication est suffisante pour aborder la notion de variable : c'est un mot (ou une lettre) qui va désigner une valeur. 
 
 
-!!! warning "Partie difficile (optionnelle)"
+??? warning "Partie difficile (optionnelle)"
     *La métaphore du tiroir est malheureusement un peu trop simplificatrice.*
 
     ### B.2 Une réalité bien plus complexe...
