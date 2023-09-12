@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
     
     
       
@@ -3948,13 +3948,7 @@ va donner ceci :
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;bonjour&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div></p>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="n">bonjour</span>
-<span class="n">bonjour</span>
-<span class="n">bonjour</span>
-<span class="n">bonjour</span>
-</code></pre></div>
-</div>
+<div class="tabbed-block"></div>
 </div>
 </div>
 </div>
@@ -4033,6 +4027,15 @@ We&#39;re up all night to get lucky
 </code></pre></div>
 </div>
 <p>Là encore, le <code>i</code> est une variable muette.</p>
+<div class="admonition tip">
+<p class="admonition-title">Le <code>_</code> comme variable muette</p>
+<p>Lorsque la variable de boucle est muette et ne sert qu'à effectuer <span class="arithmatex">\(n\)</span> fois la même action, on utilise souvent le caractère <code>_</code> (appelé <em>underscore</em>)comme variable de boucle.</p>
+<p>Il faut le comprendre comme un avertissement au lecteur du code : «cette boucle ne sert qu'à faire <span class="arithmatex">\(n\)</span> fois la même chose»</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tout ça est très répétitif&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
 <h2 id="4-tout-sur-le-range">4. Tout sur le <code>range</code>.<a class="headerlink" href="#4-tout-sur-le-range" title="Permanent link">⚓︎</a></h2>
 <h3 id="41-retour-sur-lexemple-precedent">4.1 Retour sur l'exemple précédent.<a class="headerlink" href="#41-retour-sur-lexemple-precedent" title="Permanent link">⚓︎</a></h3>
 <p>Si nous rendions la variable <code>i</code> moins muette ?</p>
@@ -4184,14 +4187,7 @@ va donner ceci :
 <span class="n">Mamie</span> <span class="n">dit</span> <span class="p">:</span> <span class="err">«</span> <span class="n">et</span> <span class="n">une</span> <span class="n">cuillère</span> <span class="n">pour</span> <span class="n">Loulou</span> <span class="err">!</span> <span class="err">»</span>
 </code></pre></div></p>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">parent</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Papa&quot;</span><span class="p">,</span> <span class="s2">&quot;Maman&quot;</span><span class="p">,</span> <span class="s2">&quot;Mamie&quot;</span><span class="p">]:</span>
-    <span class="k">for</span> <span class="n">enfant</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Riri&quot;</span><span class="p">,</span> <span class="s2">&quot;Fifi&quot;</span><span class="p">,</span> <span class="s2">&quot;Loulou&quot;</span><span class="p">]:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="s2">&quot;dit : « et une cuillère pour&quot;</span><span class="p">,</span> <span class="n">enfant</span><span class="p">,</span> <span class="s2">&quot;! »&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</div>
+<div class="tabbed-block"></div>
 </div>
 </div>
 </div>
@@ -4213,16 +4209,7 @@ Maman dit : « et une cuillère de compote pour Riri ! »
 ...
 </code></pre></div></p>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">parent</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Papa&quot;</span><span class="p">,</span> <span class="s2">&quot;Maman&quot;</span><span class="p">,</span> <span class="s2">&quot;Mamie&quot;</span><span class="p">]:</span>
-    <span class="k">for</span> <span class="n">enfant</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Riri&quot;</span><span class="p">,</span> <span class="s2">&quot;Fifi&quot;</span><span class="p">,</span> <span class="s2">&quot;Loulou&quot;</span><span class="p">]:</span>
-        <span class="k">for</span> <span class="n">nourriture</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;purée&quot;</span><span class="p">,</span> <span class="s2">&quot;compote&quot;</span><span class="p">]:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="s2">&quot;dit : « et une cuillère de&quot;</span><span class="p">,</span> <span class="n">nourriture</span><span class="p">,</span> <span class="s2">&quot;pour&quot;</span><span class="p">,</span> <span class="n">enfant</span><span class="p">,</span> <span class="s2">&quot;! »&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</div>
+<div class="tabbed-block"></div>
 </div>
 </div>
 </div>
@@ -4250,7 +4237,7 @@ Maman dit : « et une cuillère de compote pour Riri ! »
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">19 septembre 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">12 septembre 2023</span>
       
     
   </small>

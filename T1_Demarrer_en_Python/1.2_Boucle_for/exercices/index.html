@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
     
     
       
@@ -3794,16 +3794,7 @@
 <span class="n">Roschdy</span> <span class="n">a</span> <span class="n">eu</span> <span class="n">le</span> <span class="n">César</span> <span class="n">du</span> <span class="n">meilleur</span> <span class="n">acteur</span>
 </code></pre></div></p>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">liste_acteurs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Tahar&#39;</span><span class="p">,</span> <span class="s1">&#39;Omar&#39;</span><span class="p">,</span> <span class="s1">&#39;Guillaume&#39;</span><span class="p">,</span> <span class="s1">&#39;Swann&#39;</span><span class="p">,</span> <span class="s1">&#39;Alex&#39;</span><span class="p">,</span> <span class="s1">&#39;Roschdy&#39;</span><span class="p">]</span>
-
-<span class="k">for</span> <span class="n">acteur</span> <span class="ow">in</span> <span class="n">liste_acteurs</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">acteur</span><span class="p">,</span> <span class="s2">&quot;a eu le César du meilleur acteur&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</div>
+<div class="tabbed-block"></div>
 </div>
 </div>
 </div>
@@ -3834,65 +3825,13 @@
 </code></pre></div></td></tr></table></div>
 <p>Cette variable <code>chaine</code> est appelée un <strong>accumulateur</strong>.</p>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">chaine</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-<span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;v&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">]:</span>
-    <span class="n">chaine</span> <span class="o">+=</span> <span class="n">lettre</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">chaine</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</div>
+<div class="tabbed-block"></div>
 </div>
 </div>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  3</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Énoncé</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<ol>
-<li>Fabriquer la chaîne de caractères suivante (qui comporte 80 caractères) :
-<div class="highlight"><pre><span></span><code><span class="n">IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII</span>
-</code></pre></div></li>
-<li>Fabriquer la chaîne de caractères suivante :
-<div class="highlight"><pre><span></span><code><span class="n">IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII</span>
-<span class="n">NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN</span>
-<span class="n">FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</span>
-<span class="n">OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO</span>
-</code></pre></div></li>
-</ol>
-</div>
-</div>
-</div>
-</div>
-<!--     === "Correction"
-        1.
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">sol</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">80</span><span class="p">):</span>
-    <span class="n">sol</span> <span class="o">=</span> <span class="n">sol</span> <span class="o">+</span> <span class="s1">&#39;I&#39;</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-        2.
-        ```python linenums='1'
-        for lettre in 'INFO':
-            sol = ""
-            for k in range(80):
-                sol = sol + lettre
-            print(sol)
-        ``` -->
-
-<div class="admonition example">
-<p class="admonition-title">Exercice  4</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Énoncé</label><label for="__tabbed_4_2">Correction</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Énoncé</label><label for="__tabbed_3_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>En Python, la fonction <code>ord</code> renvoie le code Unicode d'un caractère et la fonction <code>chr</code> le contraire: elle renvoie le caractère correspondant à un code Unicode.</p>
@@ -3909,24 +3848,20 @@
 <span class="n">mot_secret</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 </code></pre></div></td></tr></table></div>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">mystere</span> <span class="o">=</span> <span class="p">[</span><span class="mi">111</span><span class="p">,</span> <span class="mi">107</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">106</span><span class="p">,</span> <span class="mi">111</span><span class="p">,</span> <span class="mi">117</span><span class="p">,</span> <span class="mi">233</span><span class="p">]</span>
-<span class="n">mot_secret</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-
-<span class="k">for</span> <span class="n">nombre</span> <span class="ow">in</span> <span class="n">mystere</span><span class="p">:</span>
-    <span class="n">lettre</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
-    <span class="n">mot_secret</span> <span class="o">=</span> <span class="n">mot_secret</span> <span class="o">+</span> <span class="n">lettre</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">mot_secret</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
+<div class="tabbed-block"></div>
 </div>
+</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  4</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Énoncé</label><label for="__tabbed_4_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>On souhaite calculer la somme des 1000 premiers nombres entiers naturels, c'est-à-dire:</p>
+<p><span class="arithmatex">\(1+2+3+4+5+ \dots +999+1000\)</span></p>
+<p>Écrire un programme avec une variable <code>somme</code> <strong>accumulateur</strong> (comme à l'exercice 3) qui contiendra la valeur souhaitée en fin de programme.</p>
+</div>
+<div class="tabbed-block"></div>
 </div>
 </div>
 </div>
@@ -3935,46 +3870,15 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Énoncé</label><label for="__tabbed_5_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>On souhaite calculer la somme des 1000 premiers nombres entiers naturels, c'est-à-dire:</p>
-<p><span class="arithmatex">\(1+2+3+4+5+ \dots +999+1000\)</span></p>
-<p>Écrire un programme avec une variable <code>somme</code> <strong>accumulateur</strong> (comme à l'exercice 3) qui contiendra la valeur souhaitée en fin de programme.</p>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1001</span><span class="p">):</span>
-    <span class="n">somme</span> <span class="o">+=</span> <span class="n">k</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">somme</span><span class="p">)</span>  
-</code></pre></div></td></tr></table></div>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition example">
-<p class="admonition-title">Exercice  6</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Énoncé</label><label for="__tabbed_6_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
 <p>Calculer <span class="arithmatex">\(1\times 2 \times 3 \times \dots 99 \times 100\)</span>.</p>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">produit</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">):</span>
-    <span class="n">produit</span> <span class="o">=</span> <span class="n">produit</span> <span class="o">*</span> <span class="n">k</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">produit</span><span class="p">)</span>  
-</code></pre></div></td></tr></table></div>
-</div>
+<div class="tabbed-block"></div>
 </div>
 </div>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice 7</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Énoncé</label><label for="__tabbed_7_2">Correction</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Énoncé</label><label for="__tabbed_6_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Proposer un code qui écrit la <strong>table de multiplication</strong> de 7, de 8 et de 9.</p>
@@ -3992,44 +3896,17 @@
 <div class="tabbed-block"></div>
 </div>
 </div>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice 8</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Énoncé</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Énoncé</label><label for="__tabbed_7_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Sur un jeu d'échecs, les cases sont repérées par une lettre (de A jusqu'à H) et par un chiffre (de 1 jusqu'à 8).</p>
 <p>Les cases sont donc A1, A2, A3, ..., H7, H8.</p>
 <p>Proposer un code qui écrit <strong>toutes</strong> les cases possibles.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Correction</label></div>
-<div class="tabbed-content">
+</div>
 <div class="tabbed-block"></div>
-</div>
-</div>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="s2">&quot;ABCDEFGH&quot;</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">chiffre</span> <span class="ow">in</span> <span class="s2">&quot;12345678&quot;</span><span class="p">:</span>
-        <span class="n">case</span> <span class="o">=</span> <span class="n">lettre</span> <span class="o">+</span> <span class="n">chiffre</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">case</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-<p>Autre solution utilisant la conversion d'un entier en chaine de caractères, grâce à la fonction <code>str</code> : </p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="s2">&quot;ABCDEFGH&quot;</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">chiffre</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">):</span>
-        <span class="n">case</span> <span class="o">=</span> <span class="n">lettre</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">chiffre</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">case</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</div>
 </div>
 </div>
 </div>
@@ -4039,7 +3916,7 @@
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">20 septembre 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">12 septembre 2023</span>
       
     
   </small>
