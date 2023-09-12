@@ -14,7 +14,7 @@ En mathématiques, on dit qu'un ensemble est *dénombrable* lorsqu'on peut assoc
 
 En informatique, il existe un concept similaire qui va désigner les objets que l'on peut **énumérer**, c'est-à-dire les décomposer en une succession ordonnée d'éléments. On les appelle les **énumérables** ou les **itérables** (Python utilise le mot anglais ```iterable```).
 
-- la variable ```NSI``` (qui est de type ```String```) est énumérable : on peut la décomposer en  ```N```,  ```S```, ```I```.
+- la variable ```"NSI"``` (qui est de type ```String```) est énumérable : on peut la décomposer en  ```N```,  ```S```, ```I```.
 - la variable ```[4, 3, 17]```  (qui est de type ```List```) est énumérable : on peut la décomposer en  ```4```,  ```3```, ```17```.
 - la variable ```5```  (qui est de type ```Int```) n'est PAS énumérable : on ne peut pas la décomposer. 
 
