@@ -267,7 +267,7 @@ Cette procédure d'**incrémentation** est très très classique, il faut la ma�
         >>> score = 100
         >>> score = score + 15
         ```
-        ou bien
+        ou encore 
         ```python
         >>> score = 100
         >>> score += 15
