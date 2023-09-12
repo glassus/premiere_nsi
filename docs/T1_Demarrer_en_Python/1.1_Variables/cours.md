@@ -390,7 +390,7 @@ Vous pouvez vérifier maintenant que les valeurs de ```a``` et de ```b``` ont bi
         Corriger cette erreur, de deux manières différentes.
 
     === "Correction"
-        {#
+        
         ```python
         >>> t = maison_Harry
         >>> maison_Harry = maison_Malfoy
@@ -400,7 +400,7 @@ Vous pouvez vérifier maintenant que les valeurs de ```a``` et de ```b``` ont bi
         ```python
         >>> maison_Harry, maison_Malfoy = maison_Malfoy, maison_Harry
         ```
-        #}
+        
 
 
 
