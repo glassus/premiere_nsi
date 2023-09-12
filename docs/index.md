@@ -11,7 +11,8 @@
 
 ## Thèmes en cours d'étude :
 - :arrow_right: [Variables](T1_Demarrer_en_Python/1.1_Variables/cours/)  
-
+- :arrow_right: [Boucle ```#!python for ... in ...``` ](T1_Demarrer_en_Python/1.2_Boucle_for/cours/)
+- :arrow_right: [Exercices ```#!python for ... in ...``` ](T1_Demarrer_en_Python/1.2_Boucle_for/exercices/)
 {#
 ## Thèmes en cours d'étude 
 

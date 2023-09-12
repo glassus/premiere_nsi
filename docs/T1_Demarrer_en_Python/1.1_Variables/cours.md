@@ -262,6 +262,7 @@ Cette procédure d'**incrémentation** est très très classique, il faut la ma�
         On initialise une variable ```score``` à 100 et on l'augmente de 15.
 
     === "Correction"
+        {#
         ```python
         >>> score = 100
         >>> score = score + 15
@@ -271,7 +272,7 @@ Cette procédure d'**incrémentation** est très très classique, il faut la ma�
         >>> score = 100
         >>> score += 15
         ```
-
+        #}
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
@@ -280,6 +281,7 @@ Cette procédure d'**incrémentation** est très très classique, il faut la ma�
         On initialise une variable ```cellule``` à 1 et on la multiplie par 2.
 
     === "Correction"
+        {#
         ```python
         >>> cellule = 1
         >>> cellule = cellule * 2
@@ -289,6 +291,7 @@ Cette procédure d'**incrémentation** est très très classique, il faut la ma�
         >>> cellule = 1
         >>> cellule *= 2
         ```
+        #}
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
@@ -297,6 +300,7 @@ Cette procédure d'**incrémentation** est très très classique, il faut la ma�
         On initialise une variable ```capital``` à 1000 et on lui enlève 5%.
 
     === "Correction"
+        {#
         ```python
         >>> capital = 1000
         >>> capital = capital - capital * 5/100
@@ -306,6 +310,7 @@ Cette procédure d'**incrémentation** est très très classique, il faut la ma�
         >>> capital = 1000
         >>> capital *= 0.95
         ```
+        #}
 
 
 #### B.3.3 L'échange de variables
@@ -385,6 +390,7 @@ Vous pouvez vérifier maintenant que les valeurs de ```a``` et de ```b``` ont bi
         Corriger cette erreur, de deux manières différentes.
 
     === "Correction"
+        {#
         ```python
         >>> t = maison_Harry
         >>> maison_Harry = maison_Malfoy
@@ -394,6 +400,7 @@ Vous pouvez vérifier maintenant que les valeurs de ```a``` et de ```b``` ont bi
         ```python
         >>> maison_Harry, maison_Malfoy = maison_Malfoy, maison_Harry
         ```
+        #}
 
 
 

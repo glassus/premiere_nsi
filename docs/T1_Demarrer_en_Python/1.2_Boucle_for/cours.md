@@ -65,12 +65,14 @@ Ici, il y a simplement un ```print(k)```, donc chaque lettre de ```"NSI"``` s'af
             print("bonjour")
         ``` 
     === "Correction"
+        {#
         ```python
         bonjour
         bonjour
         bonjour
         bonjour
         ``` 
+        #}
 
 Dans cet exercice, la **variable de boucle** ```m``` est **muette** : elle n'apparaît dans les instructions indentées sous le ```for```. 
 
@@ -165,6 +167,16 @@ Il y a mieux !
         We're up all night to get lucky
     
 Là encore, le ```i``` est une variable muette.
+
+!!! tip "Le ```_``` comme variable muette"
+    Lorsque la variable de boucle est muette et ne sert qu'à effectuer $n$ fois la même action, on utilise souvent le caractère ```_``` (appelé _underscore_)comme variable de boucle.
+
+    Il faut le comprendre comme un avertissement au lecteur du code : «cette boucle ne sert qu'à faire $n$ fois la même chose»
+
+    ```python linenums='1'
+    for _ in range(5):
+        print("Tout ça est très répétitif")
+    ```
 
 ## 4. Tout sur le ```range```. 
 
@@ -325,11 +337,13 @@ Il est très souvent utile d'imbriquer une boucle dans une autre, notamment lors
         Mamie dit : « et une cuillère pour Loulou ! »
         ```
     === "Correction"
+        {#
         ```python linenums='1'
         for parent in ["Papa", "Maman", "Mamie"]:
             for enfant in ["Riri", "Fifi", "Loulou"]:
                 print(parent, "dit : « et une cuillère pour", enfant, "! »")
         ```
+        #}
 
 !!! example "Exercice 4"
     === "Énoncé"
@@ -348,13 +362,16 @@ Il est très souvent utile d'imbriquer une boucle dans une autre, notamment lors
         ...
         ``` 
 
+
     === "Correction"
+        {#  
         ```python linenums='1'
         for parent in ["Papa", "Maman", "Mamie"]:
             for enfant in ["Riri", "Fifi", "Loulou"]:
                 for nourriture in ["purée", "compote"]:
                     print(parent, "dit : « et une cuillère de", nourriture, "pour", enfant, "! »")
         ```
+        #}
 
 
 

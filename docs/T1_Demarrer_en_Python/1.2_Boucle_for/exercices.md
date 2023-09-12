@@ -19,12 +19,14 @@
         Roschdy a eu le César du meilleur acteur
         ```
     === "Correction"
+        {#
         ```python linenums='1'
         liste_acteurs = ['Tahar', 'Omar', 'Guillaume', 'Swann', 'Alex', 'Roschdy']
 
         for acteur in liste_acteurs:
             print(acteur, "a eu le César du meilleur acteur")
         ```
+        #}
 
 
 !!! note "Concaténation de caractères :heart:"
@@ -56,6 +58,7 @@
 
         Cette variable `chaine` est appelée un **accumulateur**.
     === "Correction"
+        {#
         ```python linenums='1'
         chaine = ""
         for lettre in ['b', 'r', 'a', 'v', 'o']:
@@ -63,11 +66,12 @@
 
         print(chaine)
         ```
+        #}
 
 
 
 
-
+{#
 !!! example "{{ exercice() }}"
     === "Énoncé"
         1. Fabriquer la chaîne de caractères suivante (qui comporte 80 caractères) :
@@ -99,7 +103,7 @@
             print(sol)
         ``` -->
 
-
+#}
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
@@ -123,6 +127,7 @@
         ```
 
     === "Correction"
+        {#
         ```python linenums='1'
         mystere = [111, 107, 44, 32, 98, 105, 101, 110, 32, 106, 111, 117, 233]
         mot_secret = ""
@@ -133,6 +138,7 @@
 
         print(mot_secret)
         ```
+        #}
       
 !!! example "{{ exercice() }}"
     === "Énoncé"
@@ -143,23 +149,28 @@
         Écrire un programme avec une variable `somme` **accumulateur** (comme à l'exercice 3) qui contiendra la valeur souhaitée en fin de programme.
 
     === "Correction"
+        {#
         ```python linenums='1'
         somme = 0
         for k in range(1,1001):
             somme += k
         print(somme)  
         ```
+        #}
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
         Calculer $1\times 2 \times 3 \times \dots 99 \times 100$.
+
     === "Correction"
+        {#
         ```python linenums='1'
         produit = 1
         for k in range(1,100):
             produit = produit * k
         print(produit)  
         ```
+        #}
 
       
 
@@ -179,11 +190,13 @@
         9*9 = 81    
         ```
     === "Correction"
-    ```python linenums='1'
-    for a in range(7, 10):
-        for b in range(1, 10):
-            print(a, '*', b, '=', a*b)
-    ```
+        {#
+        ```python linenums='1'
+        for a in range(7, 10):
+            for b in range(1, 10):
+                print(a, '*', b, '=', a*b)
+        ```
+        #}
 
 !!! example "Exercice 8"
     === "Énoncé"
@@ -193,7 +206,8 @@
 
         Proposer un code qui écrit **toutes** les cases possibles.
 
-        === "Correction"
+    === "Correction"
+        {#
         ```python linenums='1'
         for lettre in "ABCDEFGH":
             for chiffre in "12345678":
@@ -210,4 +224,5 @@
                 case = lettre + str(chiffre)
                 print(case)
         ```
+        #}
   
