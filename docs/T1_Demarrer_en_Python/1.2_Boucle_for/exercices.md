@@ -47,6 +47,8 @@
 
         L'idée est d'ajouter une par une les lettres à la variable `chaine`.
 
+        À l'exécution, le programme doit afficher uniquement ```bravo```.
+
         Compléter le code.
 
 
@@ -54,6 +56,7 @@
         chaine = ""
         for ... in ['b', 'r', 'a', 'v', 'o']:
             ...
+        print(chaine)
         ```
 
         Cette variable `chaine` est appelée un **accumulateur**.
