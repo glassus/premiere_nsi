@@ -152,28 +152,28 @@
         Écrire un programme avec une variable `somme` **accumulateur** (comme à l'exercice 3) qui contiendra la valeur souhaitée en fin de programme.
 
     === "Correction"
-        {#
+        
         ```python linenums='1'
         somme = 0
         for k in range(1,1001):
             somme += k
         print(somme)  
         ```
-        #}
+        
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
         Calculer $1\times 2 \times 3 \times \dots 99 \times 100$.
 
     === "Correction"
-        {#
+        
         ```python linenums='1'
         produit = 1
         for k in range(1,100):
             produit = produit * k
         print(produit)  
         ```
-        #}
+        
 
       
 
