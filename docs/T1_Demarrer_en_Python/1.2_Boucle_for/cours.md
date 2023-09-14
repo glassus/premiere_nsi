@@ -65,14 +65,14 @@ Ici, il y a simplement un ```print(k)```, donc chaque lettre de ```"NSI"``` s'af
             print("bonjour")
         ``` 
     === "Correction"
-        {#
+        
         ```python
         bonjour
         bonjour
         bonjour
         bonjour
         ``` 
-        #}
+        
 
 Dans cet exercice, la **variable de boucle** ```m``` est **muette** : elle n'apparaît dans les instructions indentées sous le ```for```. 
 

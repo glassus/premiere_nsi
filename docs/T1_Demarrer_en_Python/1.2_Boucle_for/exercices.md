@@ -19,14 +19,14 @@
         Roschdy a eu le César du meilleur acteur
         ```
     === "Correction"
-        {#
+        
         ```python linenums='1'
         liste_acteurs = ['Tahar', 'Omar', 'Guillaume', 'Swann', 'Alex', 'Roschdy']
 
         for acteur in liste_acteurs:
             print(acteur, "a eu le César du meilleur acteur")
         ```
-        #}
+        
 
 
 !!! info "Concaténation de caractères :heart:"
@@ -58,7 +58,7 @@
 
         Cette variable `chaine` est appelée un **accumulateur**.
     === "Correction"
-        {#
+        
         ```python linenums='1'
         chaine = ""
         for lettre in ['b', 'r', 'a', 'v', 'o']:
@@ -66,7 +66,7 @@
 
         print(chaine)
         ```
-        #}
+        
 
 
 
