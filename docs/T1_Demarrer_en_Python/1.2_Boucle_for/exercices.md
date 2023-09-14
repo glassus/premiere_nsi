@@ -166,13 +166,14 @@
         Calculer $1\times 2 \times 3 \times \dots 99 \times 100$.
 
     === "Correction"
-        
+        {#
         ```python linenums='1'
         produit = 1
         for k in range(1,100):
             produit = produit * k
         print(produit)  
         ```
+        #}
         
 
       
