@@ -29,7 +29,7 @@
         #}
 
 
-!!! note "Concaténation de caractères :heart:"
+!!! info "Concaténation de caractères :heart:"
     Il est possible de *coller* (le vrai mot est *concaténer*) deux chaînes de caractères par l'opérateur ```+``` :
     ```python
     >>> "a" + "b"
