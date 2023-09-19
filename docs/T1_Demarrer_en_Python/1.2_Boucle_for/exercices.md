@@ -178,7 +178,7 @@
 
       
 
-!!! example "Exercice 7"
+!!! example "{{ exercice() }}"
     === "Énoncé"
         Proposer un code qui écrit la **table de multiplication** de 7, de 8 et de 9.
 
@@ -202,7 +202,7 @@
         ```
         #}
 
-!!! example "Exercice 8"
+!!! example "{{ exercice() }}"
     === "Énoncé"
         Sur un jeu d'échecs, les cases sont repérées par une lettre (de A jusqu'à H) et par un chiffre (de 1 jusqu'à 8).
 
@@ -229,4 +229,11 @@
                 print(case)
         ```
         #}
-  
+
+
+!!! example "{{ exercice() }}"
+
+    Travail sur ```ipythonblocks``` 
+    ![image](data/blocks.png){: .center}
+    
+    Exercice à faire sur Capytale : [https://capytale2.ac-paris.fr/web/c/8869-1863952](https://capytale2.ac-paris.fr/web/c/8869-1863952){. target="_blank"}
