@@ -3904,7 +3904,16 @@
 <div class="tabbed-block">
 <p>Calculer <span class="arithmatex">\(1\times 2 \times 3 \times \dots 99 \times 100\)</span>.</p>
 </div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">produit</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">101</span><span class="p">):</span>
+    <span class="n">produit</span> <span class="o">=</span> <span class="n">produit</span> <span class="o">*</span> <span class="n">k</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">produit</span><span class="p">)</span>  
+</code></pre></div></td></tr></table></div>
+</div>
 </div>
 </div>
 </div>
@@ -3925,7 +3934,14 @@
 9*9 = 81    
 </code></pre></div></p>
 </div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
 </div>
 </div>
 </div>
