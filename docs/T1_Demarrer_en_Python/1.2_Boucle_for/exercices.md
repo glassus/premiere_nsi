@@ -233,7 +233,7 @@
 
 !!! example "{{ exercice() }}"
 
-    Travail sur ```ipythonblocks``` 
+    Travail sur ```ipythonblocks``` :
     ![image](data/blocks.png){: .center}
     
     Exercice à faire sur Capytale : [https://capytale2.ac-paris.fr/web/c/8869-1863952](https://capytale2.ac-paris.fr/web/c/8869-1863952){. target="_blank"}
