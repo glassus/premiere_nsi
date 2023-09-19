@@ -166,14 +166,14 @@
         Calculer $1\times 2 \times 3 \times \dots 99 \times 100$.
 
     === "Correction"
-        {#
+        
         ```python linenums='1'
         produit = 1
-        for k in range(1,100):
+        for k in range(1,101):
             produit = produit * k
         print(produit)  
         ```
-        #}
+        
         
 
       
@@ -194,13 +194,13 @@
         9*9 = 81    
         ```
     === "Correction"
-        {#
+        
         ```python linenums='1'
         for a in range(7, 10):
             for b in range(1, 10):
                 print(a, '*', b, '=', a*b)
         ```
-        #}
+        
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
