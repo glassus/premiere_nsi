@@ -237,3 +237,31 @@
     ![image](data/blocks.png){: .center}
     
     Exercice à faire sur Capytale : [https://capytale2.ac-paris.fr/web/c/8869-1863952](https://capytale2.ac-paris.fr/web/c/8869-1863952){. target="_blank"}
+
+
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        Dans ma trousse je dispose de 5 feutres de couleur :
+
+        - jaune (J)
+        - vert (V)
+        - noir (N)
+        - bleu (B)
+        - orange (O)
+
+        Pour un exercice, je dois colorier 3 pastilles en choissant sans aucune contrainte des couleurs parmi les 5 disponibles. Je peux tout colorier en jaune (```JJJ```) ou bien colorier la 1ère en orange, la 2ème en bleu, la 3ème en vert (```OBV``` )
+
+        Faire afficher la totalité des combinaisons possibles.
+
+
+
+
+    === "Correction"
+        {#
+        ```python linenums='1'
+        for c1 in 'JVNBO':
+            for c2 in 'JVNBO':
+                for c3 in 'JVNBO':
+                    print(c1 + c2 + c3)
+        ```
+        #}

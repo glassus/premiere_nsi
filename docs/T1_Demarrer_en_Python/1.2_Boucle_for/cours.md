@@ -290,7 +290,8 @@ Il faut donc garder en tête que l'objet renvoyé par ```range()``` est un **it�
     
 ## 5. Une situation classique : la double boucle
 
-Il est très souvent utile d'imbriquer une boucle dans une autre, notamment lors du parcours de tous les pixels d'une image (voir les exercices graphiques sous Processing). Prenons pour l'instant un exemple numérique.
+Il est très souvent utile d'imbriquer une boucle dans une autre, notamment lors du parcours de tous les pixels d'une image.
+Prenons pour l'instant un exemple numérique.
 
 !!! note "Exemple fondateur :heart:"
     Le programme suivant :
