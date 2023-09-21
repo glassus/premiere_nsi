@@ -3954,7 +3954,25 @@
 <p>Les cases sont donc A1, A2, A3, ..., H7, H8.</p>
 <p>Proposer un code qui écrit <strong>toutes</strong> les cases possibles.</p>
 </div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="s2">&quot;ABCDEFGH&quot;</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">chiffre</span> <span class="ow">in</span> <span class="s2">&quot;12345678&quot;</span><span class="p">:</span>
+        <span class="n">case</span> <span class="o">=</span> <span class="n">lettre</span> <span class="o">+</span> <span class="n">chiffre</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">case</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Autre solution utilisant la conversion d'un entier en chaine de caractères, grâce à la fonction <code>str</code> : </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="s2">&quot;ABCDEFGH&quot;</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">chiffre</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">):</span>
+        <span class="n">case</span> <span class="o">=</span> <span class="n">lettre</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">chiffre</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">case</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
 </div>
 </div>
 </div>
@@ -3980,7 +3998,18 @@
 <p>Pour un exercice, je dois colorier 3 pastilles en choissant sans aucune contrainte des couleurs parmi les 5 disponibles. Je peux tout colorier en jaune (<code>JJJ</code>) ou bien colorier la 1ère en orange, la 2ème en bleu, la 3ème en vert (<code>OBV</code> )</p>
 <p>Faire afficher la totalité des combinaisons possibles.</p>
 </div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">couleurs</span> <span class="o">=</span> <span class="s2">&quot;JVNBO&quot;</span>
+<span class="k">for</span> <span class="n">c1</span> <span class="ow">in</span> <span class="n">couleurs</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">c2</span> <span class="ow">in</span> <span class="n">couleurs</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">c3</span> <span class="ow">in</span> <span class="n">couleurs</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">c1</span> <span class="o">+</span> <span class="n">c2</span> <span class="o">+</span> <span class="n">c3</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
 </div>
 </div>
 </div>
