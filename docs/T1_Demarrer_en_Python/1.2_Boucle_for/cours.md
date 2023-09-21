@@ -338,13 +338,13 @@ Prenons pour l'instant un exemple numérique.
         Mamie dit : « et une cuillère pour Loulou ! »
         ```
     === "Correction"
-        {#
+        
         ```python linenums='1'
         for parent in ["Papa", "Maman", "Mamie"]:
             for enfant in ["Riri", "Fifi", "Loulou"]:
                 print(parent, "dit : « et une cuillère pour", enfant, "! »")
         ```
-        #}
+        
 
 !!! example "Exercice 4"
     === "Énoncé"
@@ -365,14 +365,14 @@ Prenons pour l'instant un exemple numérique.
 
 
     === "Correction"
-        {#  
+          
         ```python linenums='1'
         for parent in ["Papa", "Maman", "Mamie"]:
             for enfant in ["Riri", "Fifi", "Loulou"]:
                 for nourriture in ["purée", "compote"]:
                     print(parent, "dit : « et une cuillère de", nourriture, "pour", enfant, "! »")
         ```
-        #}
+        
 
 
 
