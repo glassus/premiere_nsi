@@ -211,7 +211,7 @@
         Proposer un code qui écrit **toutes** les cases possibles.
 
     === "Correction"
-        {#
+        
         ```python linenums='1'
         for lettre in "ABCDEFGH":
             for chiffre in "12345678":
@@ -228,7 +228,7 @@
                 case = lettre + str(chiffre)
                 print(case)
         ```
-        #}
+        
 
 
 !!! example "{{ exercice() }}"
@@ -257,11 +257,12 @@
 
 
     === "Correction"
-        {#
+        
         ```python linenums='1'
-        for c1 in 'JVNBO':
-            for c2 in 'JVNBO':
-                for c3 in 'JVNBO':
+        couleurs = "JVNBO"
+        for c1 in couleurs:
+            for c2 in couleurs:
+                for c3 in couleurs:
                     print(c1 + c2 + c3)
         ```
-        #}
+        
