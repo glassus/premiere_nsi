@@ -4194,7 +4194,14 @@ va donner ceci :
 <span class="n">Mamie</span> <span class="n">dit</span> <span class="p">:</span> <span class="err">«</span> <span class="n">et</span> <span class="n">une</span> <span class="n">cuillère</span> <span class="n">pour</span> <span class="n">Loulou</span> <span class="err">!</span> <span class="err">»</span>
 </code></pre></div></p>
 </div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">parent</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Papa&quot;</span><span class="p">,</span> <span class="s2">&quot;Maman&quot;</span><span class="p">,</span> <span class="s2">&quot;Mamie&quot;</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">enfant</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Riri&quot;</span><span class="p">,</span> <span class="s2">&quot;Fifi&quot;</span><span class="p">,</span> <span class="s2">&quot;Loulou&quot;</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="s2">&quot;dit : « et une cuillère pour&quot;</span><span class="p">,</span> <span class="n">enfant</span><span class="p">,</span> <span class="s2">&quot;! »&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
 </div>
 </div>
 </div>
@@ -4216,7 +4223,16 @@ Maman dit : « et une cuillère de compote pour Riri ! »
 ...
 </code></pre></div></p>
 </div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">parent</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Papa&quot;</span><span class="p">,</span> <span class="s2">&quot;Maman&quot;</span><span class="p">,</span> <span class="s2">&quot;Mamie&quot;</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">enfant</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Riri&quot;</span><span class="p">,</span> <span class="s2">&quot;Fifi&quot;</span><span class="p">,</span> <span class="s2">&quot;Loulou&quot;</span><span class="p">]:</span>
+        <span class="k">for</span> <span class="n">nourriture</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;purée&quot;</span><span class="p">,</span> <span class="s2">&quot;compote&quot;</span><span class="p">]:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="s2">&quot;dit : « et une cuillère de&quot;</span><span class="p">,</span> <span class="n">nourriture</span><span class="p">,</span> <span class="s2">&quot;pour&quot;</span><span class="p">,</span> <span class="n">enfant</span><span class="p">,</span> <span class="s2">&quot;! »&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
 </div>
 </div>
 </div>
