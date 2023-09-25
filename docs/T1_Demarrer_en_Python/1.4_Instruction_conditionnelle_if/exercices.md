@@ -12,9 +12,15 @@
         ```python
         n = int(input('Entrez un nombre'))
         ``` 
-
+        
+        *Exemple d'utilisation du programme :*
+        ```python
+        Premier nombre ? 12
+        Deuxième nombre ? 45
+        le nombre le plus grand est 45
+        ```
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         n1 = int(input('Premier nombre ?'))
@@ -31,7 +37,7 @@
         "
         ) }}
 
-
+{#
 !!! example "{{ exercice() }}"
     === "Énoncé"
         Exercices à réaliser sur Capytale à partir de ce [lien](https://capytale2.ac-paris.fr/web/c/dc75-658380/mlc){. target="_blank"}.
@@ -69,6 +75,8 @@
                     grid[ligne,colonne].set_colors(0,0,0)
         grid.show()
         ```
+#}
+
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
@@ -80,8 +88,22 @@
 
         Écrire un code qui joue au FizzBuzz jusqu'à 50.
 
+        *Exemple d'utilisation du programme :*
+
+        ```python
+        1
+        2
+        fizz
+        4
+        buzz
+        fizz
+        7
+        8
+        ...
+        ```
+
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         for k in range(1,20):
@@ -110,7 +132,7 @@
         *Explication : la Terre faisant le tour du Soleil en [un peu plus que 365 jours](https://fr.vikidia.org/wiki/R%C3%A9volution_de_la_Terre_autour_du_Soleil), on s'est dit qu'on allait rajouter un jour tous les 4 ans, mais c'était trop, alors on a enlevé un jour tous les 100 ans, mais c'était plus assez, alors on a rajouté un jour tous les 400 ans, ce qui donne une approximation convenable.*
 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         """
         ```python linenums='1'
         annee = 2022

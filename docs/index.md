@@ -10,12 +10,17 @@
 
 
 ## Thèmes en cours d'étude :
-- :arrow_right: [Boucle ```#!python for ... in ...``` ](T1_Demarrer_en_Python/1.2_Boucle_for/cours/)
-- :arrow_right: [Exercices ```#!python for ... in ...``` ](T1_Demarrer_en_Python/1.2_Boucle_for/exercices/)
-
+- :arrow_right: [Instruction conditionnelle ```#!python if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/cours/)
+- [Exercices sur les ```#!python if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/exercices/)
 
 !!! info "*Anciens thèmes traités*"
     - [Variables](T1_Demarrer_en_Python/1.1_Variables/cours/) 
+    - [Boucle ```#!python for ... in ...``` ](T1_Demarrer_en_Python/1.2_Boucle_for/cours/)
+    - [Exercices ```#!python for ... in ...``` ](T1_Demarrer_en_Python/1.2_Boucle_for/exercices/)
+
+
+
+
 
 {#
 ## Thèmes en cours d'étude 
