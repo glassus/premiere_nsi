@@ -3125,7 +3125,7 @@ else:
 <p>Cette évaluation renvoie un booléen, <code>True</code> ou <code>False</code>.</p>
 <p>Les symboles de comparaison (ou d'appartenance) permettant d'écrire une condition sont :</p>
 <div class="admonition info inline">
-<p class="admonition-title">Opérateurs de comparaison</p>
+<p class="admonition-title">Opérateurs de comparaison <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
 <table>
 <thead>
 <tr>
@@ -3225,7 +3225,28 @@ else:
 <span class="n">voyelles</span> <span class="o">=</span> <span class="s1">&#39;aeiouy&#39;</span>
 </code></pre></div></td></tr></table></div>
 </div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">phrase</span> <span class="o">=</span> <span class="s1">&#39;cet exercice est prodigieusement ennuyeux&#39;</span>
+<span class="n">voyelles</span> <span class="o">=</span> <span class="s1">&#39;aeiouy&#39;</span>
+
+<span class="n">compteur</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">phrase</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">voyelles</span><span class="p">:</span>
+        <span class="n">compteur</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">compteur</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
 </div>
 </div>
 </div>
