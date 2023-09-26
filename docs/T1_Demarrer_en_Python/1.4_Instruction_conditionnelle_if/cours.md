@@ -48,7 +48,7 @@ Cette évaluation renvoie un booléen, ```True``` ou ```False```.
 
 Les symboles de comparaison (ou d'appartenance) permettant d'écrire une condition sont :
 
-!!! info inline  "Opérateurs de comparaison"
+!!! info inline  "Opérateurs de comparaison :heart: :heart: :heart:"
     |Opérateur|Signification|
     |:-:|:-:|
     |`==`| est égal à|
@@ -121,10 +121,10 @@ True
         phrase = 'cet exercice est prodigieusement ennuyeux'
         voyelles = 'aeiouy'
 
-        
+
         ```
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python linenums='1'
         phrase = 'cet exercice est prodigieusement ennuyeux'
