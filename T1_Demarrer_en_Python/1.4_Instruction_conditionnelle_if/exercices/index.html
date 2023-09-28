@@ -3127,7 +3127,24 @@ pour stocker dans une variable <code>n</code> un nombre tapé au clavier par l'u
 <p>Écrire un code qui détermine si une année est bissextile ou non.</p>
 <p><em>Explication : la Terre faisant le tour du Soleil en <a href="https://fr.vikidia.org/wiki/R%C3%A9volution_de_la_Terre_autour_du_Soleil">un peu plus que 365 jours</a>, on s'est dit qu'on allait rajouter un jour tous les 4 ans, mais c'était trop, alors on a enlevé un jour tous les 100 ans, mais c'était plus assez, alors on a rajouté un jour tous les 400 ans, ce qui donne une approximation convenable.</em></p>
 </div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">annee</span> <span class="o">=</span> <span class="mi">2022</span>
+
+<span class="k">if</span> <span class="n">annee</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">annee</span><span class="p">,</span> <span class="s2">&quot;est bissextile&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">annee</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">annee</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">annee</span><span class="p">,</span> <span class="s2">&quot;est bissextile&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">annee</span><span class="p">,</span> <span class="s2">&quot;n&#39;est pas bissextile&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
 </div>
 </div>
 </div>
