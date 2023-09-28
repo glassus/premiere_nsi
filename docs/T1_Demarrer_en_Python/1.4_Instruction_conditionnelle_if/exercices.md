@@ -26,7 +26,7 @@
         les deux nombres sont égaux
         ```
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python linenums='1'
         n1 = int(input('Premier nombre ?'))
