@@ -13,11 +13,17 @@
         n = int(input('Entrez un nombre'))
         ``` 
         
-        *Exemple d'utilisation du programme :*
+        *Exemples d'utilisation du programme :*
         ```python
         Premier nombre ? 12
         Deuxième nombre ? 45
         le nombre le plus grand est 45
+        ```
+
+        ```python
+        Premier nombre ? 17
+        Deuxième nombre ? 17
+        les deux nombres sont égaux
         ```
     === "Correction"
         {{ correction(False,
@@ -106,7 +112,7 @@
         {{ correction(False,
         "
         ```python linenums='1'
-        for k in range(1,20):
+        for k in range(1, 20):
             if k % 3 == 0 and k % 5 == 0:
                 print('fizzbuzz')
             elif k % 3 == 0:

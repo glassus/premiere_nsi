@@ -126,6 +126,7 @@ Voir le piège n°1 ...
     === "Énoncé"
         Trouver le plus petit nombre entier $n$ tel que $2^n$ soit supérieur à 1 milliard.
     === "Correction"
+        {#
         ```python linenums='1'
         n = 1
         while 2**n < 10**9:
@@ -133,6 +134,7 @@ Voir le piège n°1 ...
             print("trop petit")
         print("trouvé : ",n)
         ```
+        #}
 
 
 
@@ -154,12 +156,14 @@ Mais nous pourrions nous en passer : toutes les boucles ```for``` peuvent en fai
         ``` 
         Ré-écrire ce code en utilisant une boucle ```while```. 
     === "Correction"
+        {#
         ```python linenums='1'
         k = 0
         while k < 5:
             print("scooby-doo")
             k = k + 1
         ```
+        #}
 
 
 
@@ -202,7 +206,7 @@ print("merci, j'étais bloqué dans une boucle infinie")
         a = randint(1,10)
         ```
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         from random import randint

@@ -12,6 +12,7 @@
 ## Thèmes en cours d'étude :
 - :arrow_right: [Instruction conditionnelle ```#!python if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/cours/)
 - [Exercices sur les ```#!python if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/exercices/)
+- [Boucle ```#!python while```](./T1_Demarrer_en_Python/1.3_Boucle_while/cours/)
 
 !!! info "*Anciens thèmes traités*"
     - [Variables](T1_Demarrer_en_Python/1.1_Variables/cours/) 
