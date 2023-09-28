@@ -141,7 +141,7 @@
         {{ correction(True,
         """
         ```python linenums='1'
-        annee = 2022
+        annee = int(input("année ? "))
 
         if annee % 400 == 0:
             print(annee, \"est bissextile\")
