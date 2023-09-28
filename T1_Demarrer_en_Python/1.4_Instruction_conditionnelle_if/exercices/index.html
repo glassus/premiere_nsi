@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exercices" class="md-skip">
+        <a href="#macro-syntax-error" class="md-skip">
           Aller au contenu
         </a>
       
@@ -3023,131 +3023,11 @@
   
 
 
-<h1 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">⚓︎</a></h1>
-<div class="admonition example">
-<p class="admonition-title">Exercice  1</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Écrire un programme qui demande deux nombres et qui affiche le plus grand des deux.</p>
-<p>Aide :
-pour stocker dans une variable <code>n</code> un nombre tapé au clavier par l'utilisateur, on utilise le code suivant :</p>
-<div class="highlight"><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Entrez un nombre&#39;</span><span class="p">))</span>
-</code></pre></div>
-<p><em>Exemples d'utilisation du programme :</em>
-<div class="highlight"><pre><span></span><code><span class="n">Premier</span> <span class="n">nombre</span> <span class="err">?</span> <span class="mi">12</span>
-<span class="n">Deuxième</span> <span class="n">nombre</span> <span class="err">?</span> <span class="mi">45</span>
-<span class="n">le</span> <span class="n">nombre</span> <span class="n">le</span> <span class="n">plus</span> <span class="n">grand</span> <span class="n">est</span> <span class="mi">45</span>
+<h1 id="macro-syntax-error"><em>Macro Syntax Error</em><a class="headerlink" href="#macro-syntax-error" title="Permanent link">⚓︎</a></h1>
+<p><em>File</em>: <code>T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/exercices.md</code></p>
+<p><em>Line 144 in Markdown file:</em> <strong>expected token ',', got 'année'</strong>
+<div class="highlight"><pre><span></span><code>        annee = int(input(&quot;année ? &quot;))
 </code></pre></div></p>
-<div class="highlight"><pre><span></span><code><span class="n">Premier</span> <span class="n">nombre</span> <span class="err">?</span> <span class="mi">17</span>
-<span class="n">Deuxième</span> <span class="n">nombre</span> <span class="err">?</span> <span class="mi">17</span>
-<span class="n">les</span> <span class="n">deux</span> <span class="n">nombres</span> <span class="n">sont</span> <span class="n">égaux</span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">n1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Premier nombre ?&#39;</span><span class="p">))</span>
-<span class="n">n2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Deuxième nombre ?&#39;</span><span class="p">))</span>
-
-<span class="k">if</span> <span class="n">n1</span> <span class="o">&gt;</span> <span class="n">n2</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;le nombre le plus grand est&#39;</span><span class="p">,</span> <span class="n">n1</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">n2</span> <span class="o">&gt;</span> <span class="n">n1</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;le nombre le plus grand est&#39;</span><span class="p">,</span> <span class="n">n2</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;les deux nombres sont égaux&#39;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition example">
-<p class="admonition-title">Exercice  2</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Le jeu du FizzBuzz : il s'agit de compter à partir de 1 en remplaçant certains nombres par Fizz, Buzz ou Fizzbuzz :</p>
-<ul>
-<li>si le nombre est divisible par 3, on ne le dit pas et on le remplace par Fizz.</li>
-<li>si le nombre est divisible par 5, on ne le dit pas et on le remplace par Buzz.</li>
-<li>si le nombre est divisible par 3 et par 5, on ne le dit pas et on le remplace par FizzBuzz.</li>
-</ul>
-<p>Écrire un code qui joue au FizzBuzz jusqu'à 50.</p>
-<p><em>Exemple d'utilisation du programme :</em></p>
-<div class="highlight"><pre><span></span><code><span class="mi">1</span>
-<span class="mi">2</span>
-<span class="n">fizz</span>
-<span class="mi">4</span>
-<span class="n">buzz</span>
-<span class="n">fizz</span>
-<span class="mi">7</span>
-<span class="mi">8</span>
-<span class="o">...</span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">k</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">k</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;fizzbuzz&#39;</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">k</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;fizz&#39;</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">k</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;buzz&#39;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition example">
-<p class="admonition-title">Exercice  3</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Énoncé</label><label for="__tabbed_3_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Une année est déclarée bissextile (et compte donc 366 jours au lieu de 365) si elle est :</p>
-<ul>
-<li>soit divisible par 400.</li>
-<li>soit divisible par 4 mais pas divisible par 100.</li>
-</ul>
-<p>Écrire un code qui détermine si une année est bissextile ou non.</p>
-<p><em>Explication : la Terre faisant le tour du Soleil en <a href="https://fr.vikidia.org/wiki/R%C3%A9volution_de_la_Terre_autour_du_Soleil">un peu plus que 365 jours</a>, on s'est dit qu'on allait rajouter un jour tous les 4 ans, mais c'était trop, alors on a enlevé un jour tous les 100 ans, mais c'était plus assez, alors on a rajouté un jour tous les 400 ans, ce qui donne une approximation convenable.</em></p>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">annee</span> <span class="o">=</span> <span class="mi">2022</span>
-
-<span class="k">if</span> <span class="n">annee</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">annee</span><span class="p">,</span> <span class="s2">&quot;est bissextile&quot;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">annee</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">annee</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">annee</span><span class="p">,</span> <span class="s2">&quot;est bissextile&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">annee</span><span class="p">,</span> <span class="s2">&quot;n&#39;est pas bissextile&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</div>
-</div>
-</div>
-</div>
 
   <hr>
 <div class="md-source-file">
