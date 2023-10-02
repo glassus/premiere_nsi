@@ -235,4 +235,4 @@ else:
 
 ![image](data/compute.png){: .center width=30%}
 
-Le site [https://compute-it.toxicode.fr/](https://compute-it.toxicode.fr/) vous demande d'exécuter mentalement les instructions affichées, à l'aide des touches directionnelles de votre clavier. Attention, c'est très addictif !
+Le site [https://compute-it.toxicode.fr/](https://compute-it.toxicode.fr/) vous demande d'exécuter mentalement les instructions affichées, à l'aide des touches directionnelles de votre clavier. Attention, ce site est très addictif !
