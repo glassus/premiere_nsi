@@ -149,13 +149,3 @@
         else:
             print(annee, "n'est pas bissextile")
             
-
-
-
-        ```
-        """
-    
-
-
-        
-        ) }}
