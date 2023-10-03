@@ -4016,7 +4016,18 @@ va écrire une suite infinie de <code>ok</code> et ne <strong>jamais s'arrêter<
 <div class="tabbed-block">
 <p>Trouver le plus petit nombre entier <span class="arithmatex">\(n\)</span> tel que <span class="arithmatex">\(2^n\)</span> soit supérieur à 1 milliard.</p>
 </div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="mi">2</span><span class="o">**</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="p">:</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;trop petit&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;trouvé : &quot;</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
 </div>
 </div>
 </div>
@@ -4088,7 +4099,7 @@ Ré-écrire ce code en utilisant une boucle <code>while</code>. </p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">28 septembre 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">3 octobre 2023</span>
       
     
   </small>
