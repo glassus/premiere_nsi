@@ -195,7 +195,9 @@ print("merci, j'étais bloqué dans une boucle infinie")
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
-        Proposer un code qui choisit un nombre aléatoire entre 1 et 10, puis qui propose en boucle à l'utilisateur de le deviner, tant que celui-ci n'a pas trouvé.
+        Proposer un code qui choisit un nombre aléatoire entre 1 et 100, puis qui propose en boucle à l'utilisateur de le deviner, tant que celui-ci n'a pas trouvé. 
+
+        On donnera à l'utilisateur des instructions "trop grand !" ou "trop petit !" pour le guider.
 
         Aides :
 
