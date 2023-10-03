@@ -126,7 +126,7 @@ Voir le piège n°1 ...
     === "Énoncé"
         Trouver le plus petit nombre entier $n$ tel que $2^n$ soit supérieur à 1 milliard.
     === "Correction"
-        {#
+        
         ```python linenums='1'
         n = 1
         while 2**n < 10**9:
@@ -134,7 +134,7 @@ Voir le piège n°1 ...
             print("trop petit")
         print("trouvé : ",n)
         ```
-        #}
+        
 
 
 
