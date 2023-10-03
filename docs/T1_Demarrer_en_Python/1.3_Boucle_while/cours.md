@@ -209,7 +209,7 @@ print("merci, j'étais bloqué dans une boucle infinie")
         ```
     === "Correction"
         ```python linenums='1'
-       from random import randint
+        from random import randint
 
         mystere = randint(1, 100)
 
