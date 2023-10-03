@@ -156,14 +156,14 @@ Mais nous pourrions nous en passer : toutes les boucles ```for``` peuvent en fai
         ``` 
         Ré-écrire ce code en utilisant une boucle ```while```. 
     === "Correction"
-        {#
+        
         ```python linenums='1'
         k = 0
         while k < 5:
             print("scooby-doo")
             k = k + 1
         ```
-        #}
+        
 
 
 
