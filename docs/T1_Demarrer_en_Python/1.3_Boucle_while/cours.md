@@ -208,18 +208,35 @@ print("merci, j'étais bloqué dans une boucle infinie")
         a = randint(1,10)
         ```
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python linenums='1'
-        from random import randint
+       from random import randint
 
-        mystere = randint(1, 10)
+        mystere = randint(1, 100)
 
         while True:
             reponse = int(input('quel est le nombre mystère ? '))
-            if reponse == mystere:
+            if reponse > mystere:
+                print("trop grand !")
+            elif reponse < mystere:
+                print("trop petit !")
+            else:
+                print('bravo !')
                 break
-        print('bravo !')
+        ```
+        "
+        ) }}
+        
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        En vous basant sur l'exercice précédent, code un programme d'entraînement aux tables de multiplication de 1 à 10.
+
+    === "Correction"
+        {{ correction(False,
+        "
+        ```python linenums='1'
+
         ```
         "
         ) }}
