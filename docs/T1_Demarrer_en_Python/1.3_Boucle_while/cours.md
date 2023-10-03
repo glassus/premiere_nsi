@@ -208,8 +208,6 @@ print("merci, j'étais bloqué dans une boucle infinie")
         a = randint(1,10)
         ```
     === "Correction"
-        {{ correction(True,
-        "
         ```python linenums='1'
        from random import randint
 
@@ -225,8 +223,7 @@ print("merci, j'étais bloqué dans une boucle infinie")
                 print('bravo !')
                 break
         ```
-        "
-        ) }}
+    
         
 !!! example "{{ exercice() }}"
     === "Énoncé"
