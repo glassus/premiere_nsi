@@ -218,9 +218,9 @@ print("merci, j'étais bloqué dans une boucle infinie")
         while True:
             reponse = int(input('quel est le nombre mystère ? '))
             if reponse > mystere:
-                print("trop grand !")
+                print('trop grand !')
             elif reponse < mystere:
-                print("trop petit !")
+                print('trop petit !')
             else:
                 print('bravo !')
                 break
