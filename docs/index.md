@@ -1,20 +1,22 @@
-
+{#
 !!! abstract "Prendre un bon départ"  
     - [Utilisation des machines virtuelles](./T7_Divers/2_VM/cours/)
     - [Thonny](./T7_Divers/3_Thonny/cours/)
     - [Conseils généraux de travail](./T7_Divers/1_Conseils_generaux/cours/)
     - [Capytale](./T7_Divers/5_Capytale/cours/)
     - [Fiche de renseignements](https://capytale2.ac-paris.fr/web/c/7cd5-1782246){. target="_blank"}
-
+#}
 
 
 
 ## Thèmes en cours d'étude :
-- :arrow_right: [Instruction conditionnelle ```#!python if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/cours/)
-- [Exercices sur les ```#!python if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/exercices/)
-- [Boucle ```#!python while```](./T1_Demarrer_en_Python/1.3_Boucle_while/cours/)
+- :arrow_right: [Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/cours)
+- [Exercices sur les Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/cours)
 
 !!! info "*Anciens thèmes traités*"
+    - [Instruction conditionnelle ```#!python if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/cours/)
+    - [Exercices sur les ```#!python if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/exercices/)
+    - [Boucle ```#!python while```](./T1_Demarrer_en_Python/1.3_Boucle_while/cours/)
     - [Variables](T1_Demarrer_en_Python/1.1_Variables/cours/) 
     - [Boucle ```#!python for ... in ...``` ](T1_Demarrer_en_Python/1.2_Boucle_for/cours/)
     - [Exercices ```#!python for ... in ...``` ](T1_Demarrer_en_Python/1.2_Boucle_for/exercices/)

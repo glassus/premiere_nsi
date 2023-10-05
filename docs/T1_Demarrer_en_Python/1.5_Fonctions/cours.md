@@ -453,7 +453,7 @@ Il faut vérifier que les tests couvrent toutes les situations possibles, mais c
         2. Écrire la fonction ```fizzbuzz(n)```.
 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         def test_fizzbuzz():
