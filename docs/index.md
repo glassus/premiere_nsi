@@ -11,7 +11,7 @@
 
 ## Thèmes en cours d'étude :
 - :arrow_right: [Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/cours)
-- [Exercices sur les Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/cours)
+- [Exercices sur les Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/exercices)
 
 !!! info "*Anciens thèmes traités*"
     - [Instruction conditionnelle ```#!python if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/cours/)
