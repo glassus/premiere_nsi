@@ -3891,10 +3891,12 @@ ou mieux, en utilisant le modulo <code>%</code> :</p>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">decale</span><span class="p">(</span><span class="n">lettre</span><span class="p">):</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">decale</span><span class="p">(</span><span class="n">lettre</span><span class="p">):</span>
     <span class="n">rang_ancienne_lettre</span> <span class="o">=</span> <span class="nb">ord</span><span class="p">(</span><span class="n">lettre</span><span class="p">)</span> <span class="o">-</span> <span class="mi">65</span>
     <span class="n">rang_nouvelle_lettre</span> <span class="o">=</span> <span class="p">(</span><span class="n">rang_ancienne_lettre</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="o">%</span> <span class="mi">26</span> <span class="o">+</span> <span class="mi">65</span>  
     <span class="n">nouvelle_lettre</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="n">rang_nouvelle_lettre</span><span class="p">)</span>
+
     <span class="k">return</span> <span class="n">nouvelle_lettre</span>
 </code></pre></div></td></tr></table></div>
 </div>
