@@ -87,14 +87,26 @@
 
 
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
+        ```python linenums='1'
+        def decale(lettre):
+            rang_lettre = ord(lettre)
+            rang_nouvelle_lettre = rang_lettre + 3
+            if rang_nouvelle_lettre > ord('Z'):
+                rang_nouvelle_lettre -= 26
+            nouvelle_lettre = chr(rang_nouvelle_lettre)  
+
+            return nouvelle_lettre
+        ```
+        ou mieux, en utilisant le modulo ```%``` :
+
         ```python linenums='1'
         def decale(lettre):
             rang_ancienne_lettre = ord(lettre) - 65
             rang_nouvelle_lettre = (rang_ancienne_lettre + 3) % 26 + 65  
-            
-            return chr(rang_nouvelle_lettre)
+            nouvelle_lettre = chr(rang_nouvelle_lettre)
+            return nouvelle_lettre
         ```
         "
         ) }}
