@@ -106,6 +106,7 @@
             rang_ancienne_lettre = ord(lettre) - 65
             rang_nouvelle_lettre = (rang_ancienne_lettre + 3) % 26 + 65  
             nouvelle_lettre = chr(rang_nouvelle_lettre)
+            
             return nouvelle_lettre
         ```
         "
