@@ -3869,7 +3869,35 @@
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tests ok !&#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div></p>
 </div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">decale</span><span class="p">(</span><span class="n">lettre</span><span class="p">):</span>
+    <span class="n">rang_lettre</span> <span class="o">=</span> <span class="nb">ord</span><span class="p">(</span><span class="n">lettre</span><span class="p">)</span>
+    <span class="n">rang_nouvelle_lettre</span> <span class="o">=</span> <span class="n">rang_lettre</span> <span class="o">+</span> <span class="mi">3</span>
+    <span class="k">if</span> <span class="n">rang_nouvelle_lettre</span> <span class="o">&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;Z&#39;</span><span class="p">):</span>
+        <span class="n">rang_nouvelle_lettre</span> <span class="o">-=</span> <span class="mi">26</span>
+    <span class="n">nouvelle_lettre</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="n">rang_nouvelle_lettre</span><span class="p">)</span>  
+
+    <span class="k">return</span> <span class="n">nouvelle_lettre</span>
+</code></pre></div></td></tr></table></div>
+ou mieux, en utilisant le modulo <code>%</code> :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">decale</span><span class="p">(</span><span class="n">lettre</span><span class="p">):</span>
+    <span class="n">rang_ancienne_lettre</span> <span class="o">=</span> <span class="nb">ord</span><span class="p">(</span><span class="n">lettre</span><span class="p">)</span> <span class="o">-</span> <span class="mi">65</span>
+    <span class="n">rang_nouvelle_lettre</span> <span class="o">=</span> <span class="p">(</span><span class="n">rang_ancienne_lettre</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="o">%</span> <span class="mi">26</span> <span class="o">+</span> <span class="mi">65</span>  
+    <span class="n">nouvelle_lettre</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="n">rang_nouvelle_lettre</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">nouvelle_lettre</span>
+</code></pre></div></td></tr></table></div>
+</div>
 </div>
 </div>
 </div>
@@ -3956,7 +3984,7 @@
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">5 octobre 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">10 octobre 2023</span>
       
     
   </small>
