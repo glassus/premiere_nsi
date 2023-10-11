@@ -3,7 +3,15 @@
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
-        Définissez une fonction `maxi(n1, n2)` qui renvoie le plus grand élément entre `n1` et `n2`.
+        Écrire une fonction `maxi` qui prend comme paramètres deux nombres ```n1``` et ```n2``` et qui renvoie le plus grand élément entre `n1` et `n2`.
+
+        *Exemple d'utilisation*
+
+        ```python
+        >>> maxi(3,1)
+        3
+        ```
+
 
     === "Tester sa fonction"
         Vous pouvez utiliser la fonction de tests ci-dessous :
@@ -28,10 +36,64 @@
         "
         ) }}
 
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        Écrire une fonction ```moyenne``` qui prend en paramètre trois nombres ```a```, ```b``` et ```c```   et qui renvoie la moyenne de ces trois nombres.
+    
+        *Exemple d'utilisation*
+
+        ```python
+        >>> moyenne(6, 15, 9)
+        10
+        ```
+    === "Correction"
+        {{ correction(False,
+        "
+        ```python linenums='1'
+        def moyenne(a, b, c):
+            return (a + b + c) / 3 
+        ```
+        "
+        ) }}
+
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
-        Définissez une fonction `nb_voyelles(mot)` qui renvoie le nombre de voyelles de `mot`.
+        Écrire une fonction ```somme``` qui prend en paramètre un entier positif ```n``` et qui renvoie la somme de tous les entier de 1 à ```n```.
+        
+        $S = 1+2+3+4+5+ \dots +(n-1) + n$
+
+        *Exemple d'utilisation*
+
+        ```python
+        >>> somme(10)
+        55
+        ```
+    === "Correction"
+        {{ correction(False,
+        "
+        ```python linenums='1'
+        def somme(n):
+            s = 0
+            for k in range(1, n+1):
+                s += k
+            return s
+        ```
+        "
+        ) }}
+
+
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        Écrire une fonction `nb_voyelles` qui prend un paramètre la chaine de caractères ```mot```   renvoie le nombre de voyelles de `mot`.
+
+
+        *Exemple d'utilisation*
+
+        ```python
+        >>> nb_voyelles("bonjour")
+        3
+        ```
 
     === "Tester sa fonction"
         Vous pouvez utiliser la fonction de tests ci-dessous :

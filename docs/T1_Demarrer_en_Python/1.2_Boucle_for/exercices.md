@@ -155,9 +155,9 @@
         
         ```python linenums='1'
         somme = 0
-        for k in range(1,1001):
+        for k in range(1, 1001):
             somme += k
-        print(somme)  
+        print(somme)
         ```
         
 
