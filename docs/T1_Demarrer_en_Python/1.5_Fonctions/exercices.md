@@ -47,7 +47,7 @@
         10
         ```
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python linenums='1'
         def moyenne(a, b, c):
@@ -70,7 +70,7 @@
         55
         ```
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python linenums='1'
         def somme(n):
