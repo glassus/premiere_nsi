@@ -4359,7 +4359,38 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
 <li>Écrire la fonction <code>fizzbuzz(n)</code>.</li>
 </ol>
 </div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">test_fizzbuzz</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">fizzbuzz</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;fizz&#39;</span>
+    <span class="k">assert</span> <span class="n">fizzbuzz</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;buzz&#39;</span>
+    <span class="k">assert</span> <span class="n">fizzbuzz</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;fizzbuzz&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tests ok !&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">fizzbuzz</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;fizzbuzz&#39;</span>
+    <span class="k">elif</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;fizz&#39;</span>
+    <span class="k">elif</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;buzz&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span>
+</code></pre></div></td></tr></table></div>
+</div>
 </div>
 </div>
 </div>
@@ -4369,7 +4400,7 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">5 octobre 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">17 octobre 2023</span>
       
     
   </small>
