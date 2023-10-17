@@ -129,7 +129,7 @@
     === "Énoncé"
         Définissez une **fonction** `decale(lettre)` qui décale de 3 rangs dans l'alphabet la lettre majuscule `lettre` passée en argument (après Z, on recommencera à A..)
 
-        Aide : 
+        *Aide* 
         ```python
         >>> ord('A')
         65
@@ -137,6 +137,12 @@
         'A'
         ```
 
+        *Exemple d'utilisation*
+
+        ```python
+        >>> decale('F')
+        'I'
+        ```
 
     === "Tester sa fonction"
         Vous pouvez utiliser la fonction de tests ci-dessous :
@@ -179,6 +185,13 @@
     === "Énoncé"
         Rajoutez un paramètre `n` à la fonction précédente pour pouvoir décaler la lettre de `n` rangs.
 
+        *Exemple d'utilisation*
+
+        ```python
+        >>> decale('B', 5)
+        'G'
+        ```
+
     === "Tester sa fonction"
         Vous pouvez utiliser la fonction de tests ci-dessous :
         ```python linenums='1'
@@ -197,10 +210,13 @@
         "
         ```python linenums='1'
         def decale(lettre, n):
-            rang_ancienne_lettre = ord(lettre) - 65
-            rang_nouvelle_lettre = (rang_ancienne_lettre + n) % 26 + 65  
-            
-            return chr(rang_nouvelle_lettre)
+            rang_lettre = ord(lettre)
+            rang_nouvelle_lettre = rang_lettre + n
+            if rang_nouvelle_lettre > ord('Z'):
+                rang_nouvelle_lettre -= 26
+            nouvelle_lettre = chr(rang_nouvelle_lettre)  
+
+            return nouvelle_lettre
 
         ```
         "
@@ -210,7 +226,14 @@
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
-        Utilisez la fonction précédente pour créer la fonction `decale_phrase(p, n)` qui décale toutes les lettres d'une phrase `p` de `n` rangs.
+        Utilisez la fonction précédente pour créer la fonction `decale_phrase(p, n)` qui décale toutes les lettres d'une phrase `p` de `n` rangs. On laissera les espaces intacts.
+
+        *Exemple d'utilisation*
+
+        ```python
+        >>> decale_phrase("PAS MAL DU TOUT", 4)
+        'TEW QEP HY XSYX'
+        ```
 
     === "Correction"
         {{ correction(False,
