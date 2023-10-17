@@ -206,7 +206,7 @@
 
 
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python linenums='1'
         def decale(lettre, n):
@@ -236,7 +236,7 @@
         ```
 
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python linenums='1'
         def decale_phrase(p, n):
@@ -259,14 +259,17 @@
         Décodez la phrase `RT BTHHPVT CT RDCIXTCI GXTC S XCITGTHHPCI`.
 
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python linenums='1'
         def decale(lettre, n):
-            rang_ancienne_lettre = ord(lettre) - 65
-            rang_nouvelle_lettre = (rang_ancienne_lettre + n) % 26 + 65  
+            rang_lettre = ord(lettre)
+            rang_nouvelle_lettre = rang_lettre + n
+            if rang_nouvelle_lettre > ord('Z'):
+                rang_nouvelle_lettre -= 26
+            nouvelle_lettre = chr(rang_nouvelle_lettre)  
 
-            return chr(rang_nouvelle_lettre)
+            return nouvelle_lettre
 
         def decale_phrase(p, n):
             phrase_decalee = ''
