@@ -324,7 +324,7 @@
         2. Écrire une fonction ```syracuse(n)``` qui affiche tous les termes de la suite de Syracuse jusqu'à (on l'espère !) 1.  
 
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         1.
         ```python linenums='1'
@@ -352,7 +352,7 @@
         3. Modifier cette fonction pour afficher aussi le nombre de départ donnant ce plus grand temps de vol.
 
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         1.
         ```python linenums='1'
