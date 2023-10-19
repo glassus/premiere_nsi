@@ -138,7 +138,7 @@ En effet le nom de variable ```k``` est habituellement utilisé pour les nombres
         urne = ['oui', 'non', 'non', 'oui', 'oui', 'oui', 'non', 'oui', 'oui', 'oui', 'non', 'oui', 'non', 'non', 'oui', 'non', 'non', 'oui', 'oui', 'oui', 'oui', 'non', 'non', 'oui', 'non', 'oui', 'non', 'non', 'non', 'oui', 'oui', 'oui', 'oui', 'non', 'oui', 'non', 'non', 'oui', 'non', 'non', 'oui', 'non', 'non', 'non', 'non', 'non', 'non', 'non', 'oui', 'non', 'non', 'oui', 'oui', 'non', 'oui', 'oui', 'oui', 'oui', 'oui', 'oui', 'non', 'non', 'oui', 'oui', 'oui', 'oui', 'non', 'non', 'non', 'oui', 'oui', 'oui', 'non', 'non', 'non', 'non', 'oui', 'non', 'non', 'non', 'non', 'non', 'non', 'non', 'non', 'oui', 'non', 'oui', 'non', 'non', 'oui', 'oui', 'non', 'non', 'non', 'oui', 'oui', 'non', 'oui', 'oui', 'non', 'non', 'oui', 'oui', 'oui', 'non', 'oui', 'non', 'oui', 'oui', 'oui', 'oui', 'oui', 'non', 'non', 'non', 'non', 'oui', 'oui', 'oui', 'non', 'oui', 'non', 'oui', 'oui', 'oui', 'oui', 'oui', 'non', 'non', 'oui', 'non', 'non', 'non', 'non', 'non', 'non', 'oui', 'non', 'non', 'oui', 'non', 'non', 'oui', 'non', 'non', 'oui', 'oui', 'oui', 'oui', 'oui', 'oui', 'non', 'oui']
         ``` 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         urne = ['oui', 'non', 'non', 'oui', 'oui', 'oui', 'non', 'oui', 'oui', 'oui', 'non', 'oui', 'non', 'non', 'oui', 'non', 'non', 'oui', 'oui', 'oui', 'oui', 'non', 'non', 'oui', 'non', 'oui', 'non', 'non', 'non', 'oui', 'oui', 'oui', 'oui', 'non', 'oui', 'non', 'non', 'oui', 'non', 'non', 'oui', 'non', 'non', 'non', 'non', 'non', 'non', 'non', 'oui', 'non', 'non', 'oui', 'oui', 'non', 'oui', 'oui', 'oui', 'oui', 'oui', 'oui', 'non', 'non', 'oui', 'oui', 'oui', 'oui', 'non', 'non', 'non', 'oui', 'oui', 'oui', 'non', 'non', 'non', 'non', 'oui', 'non', 'non', 'non', 'non', 'non', 'non', 'non', 'non', 'oui', 'non', 'oui', 'non', 'non', 'oui', 'oui', 'non', 'non', 'non', 'oui', 'oui', 'non', 'oui', 'oui', 'non', 'non', 'oui', 'oui', 'oui', 'non', 'oui', 'non', 'oui', 'oui', 'oui', 'oui', 'oui', 'non', 'non', 'non', 'non', 'oui', 'oui', 'oui', 'non', 'oui', 'non', 'oui', 'oui', 'oui', 'oui', 'oui', 'non', 'non', 'oui', 'non', 'non', 'non', 'non', 'non', 'non', 'oui', 'non', 'non', 'oui', 'non', 'non', 'oui', 'non', 'non', 'oui', 'oui', 'oui', 'oui', 'oui', 'oui', 'non', 'oui']
@@ -235,12 +235,19 @@ Chaque élément étant accessible par son indice (de ```0``` à   ```len(liste)
         ```
         En utilisant un parcours **par indice** :
         
-        1. Afficher les éléments de cette liste.
-        2. Afficher les éléments de cette liste **dans l'ordre inverse** (en commençant par 9)
+        1. Afficher un à un les éléments de cette liste.
+        2. Afficher un à un les éléments de cette liste **dans l'ordre inverse** (en commençant par 9)
 
     === "Correction :heart:"
-        {{ correction(True,
+        {{ correction(False,
         "
+        1. 
+        ```python linenums='1'
+        for i in range(len(lst)):
+            print(lst[i])
+        ```
+
+        2.
         ```python linenums='1'
         lst = [3, 1, 4, 1, 5, 9]
 
@@ -299,6 +306,7 @@ Chaque élément étant accessible par son indice (de ```0``` à   ```len(liste)
         se cachent deux nombres consécutifs. Pouvez-vous les trouver ?
 
     === "Correction"
+        {#
         ```python linenums='1'
         lst = [2428970, 1518306, 4971405, 1690994, 7918102, 4030834, 8830131, 7514856, 7903128, 6307569, 6624056, 5260490, 6447835, 4598783, 9108626, 5045240, 4128269, 4460134, 2497873, 5076659, 8104003, 7604887, 7451976, 4136924, 5691945, 8726293, 7855592, 3562473, 8849129, 6488474, 5303587, 2606124, 5484044, 4559758, 7592232, 2211406, 9974334, 7988936, 7582946, 7668748, 1799997, 3837917, 3196209, 7064342, 2543765, 1182013, 7253381, 1153735, 1037391, 4375946, 4445821, 5965587, 6001887, 4162629, 5235783, 8716582, 4901175, 5445422, 1120005, 8332321, 7075046, 2194175, 5557300, 2887907, 5103214, 2520744, 5104399, 2065665, 3035703, 7890213, 1758301, 3407982, 1355453, 4896338, 7979392, 9671602, 9690721, 7423779, 7423780, 3080825, 6785783, 3836837, 7310931, 1857470, 3492507, 2823231, 1492310, 1911148, 9620515, 5564910, 7009452, 7464745, 9608747, 7267383, 6939140, 6556578, 3592267, 8135497, 4881660, 5346884, 6859150]
 
@@ -307,6 +315,7 @@ Chaque élément étant accessible par son indice (de ```0``` à   ```len(liste)
                 print(lst[i], lst[i+1])
 
         ```
+        #}
 
 
 
@@ -356,7 +365,7 @@ Il suffit d'écraser la valeur actuelle avec une nouvelle valeur
     === "Énoncé"
         Construire une liste contenant tous les nombres inférieurs à 100 qui sont divisibles par 7.
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         lst = []
@@ -373,7 +382,7 @@ Il suffit d'écraser la valeur actuelle avec une nouvelle valeur
         On considère la liste ```temp = [4, -5, 8, 10, -1, -2, 7, 13]```.  
         Construire la liste ```temp_pos``` qui ne contient que les éléments positifs de  ```temp```. 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         temp = [4, -5, 8, 10, -1, -2, 7, 13]
@@ -473,7 +482,7 @@ qui produira la liste ```[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
         ```
 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         À l'issue de ce code la variable ```compt``` contient ```[0, 0, 1, 1, 9, 0, 1, 0, 2, 0, 0, 0, 1, 3, 1, 1, 0, 1, 2, 5, 3, 0, 0, 2, 1, 0]```, qui correspond au nombre d'occurences de chaque lettre : 0 fois la lettre 'a', 0 fois la lettre 'b', 1 fois la lettre 'c', etc.
 
@@ -533,7 +542,7 @@ Pourtant les listes en compréhension *sans filtre* sont très fréquentes, nous
         Construire en compréhension la liste ```liste_voyelles``` qui contient toutes les voyelles présentes dans la variable ```phrase```.   
 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python
         >>> phrase = 'Bonjour les vacances sont finies'
@@ -589,7 +598,7 @@ Les listes en compréhension deviennent encore plus intéressantes lorsqu'on com
         1. On considère la fonction mathématique $f : x \mapsto 2x+3$. Coder la fonction ```f```.
         2. Créer (en compréhension) une liste contenant l'image des entiers de 1 à 10 par la fonction $f$.
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         def f(x):
@@ -605,7 +614,7 @@ Les listes en compréhension deviennent encore plus intéressantes lorsqu'on com
         On considère la liste ```lst = [51, 52, 66, 91, 92, 82, 65, 53, 86, 42, 79, 95]```. Seuls les nombres entre 60 et 90 ont une signification : ce sont des codes ASCII (récupérables par la fonction ```chr``` ).  
         Créer (en compréhension) une liste ```sol``` qui contient les lettres correspondants aux nombres ayant une signification.
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python
         >>> lst = [51, 52, 66, 91, 92, 82, 65, 53, 86, 42, 79, 95]
@@ -676,7 +685,7 @@ Pour en savoir plus sur les variables, vous pouvez revenir sur la [partie option
     === "Énoncé"
         Effectuer les tests nécessaires pour prouver que l'exemple précédent a bien produit deux objets différents.
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python
         >>> listA = [3, 4, 5]
@@ -773,7 +782,7 @@ La liste `a` est composée de 3 éléments qui sont eux-même des listes de 3 é
         Quelle est la somme de tous les nombres de la matrice ```m``` ?
 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         m = [[1, 9, 4], [4, 1, 8], [7, 10, 1]]
