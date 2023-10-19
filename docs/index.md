@@ -10,10 +10,13 @@
 
 
 ## Thèmes en cours d'étude :
-- :arrow_right: [Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/cours)
-- [Exercices sur les Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/exercices)
+- :books: Cours sur les [Listes](./T2_Representation_des_donnees/2.1_Listes/cours/) 
+- :gear: Exercices sur les [Listes](./T2_Representation_des_donnees/2.1_Listes/exercices/) 
+
 
 !!! info "*Anciens thèmes traités*"
+    - [Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/cours)
+    - [Exercices sur les Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/exercices)
     - [Instruction conditionnelle ```#!python if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/cours/)
     - [Exercices sur les ```#!python if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/exercices/)
     - [Boucle ```#!python while```](./T1_Demarrer_en_Python/1.3_Boucle_while/cours/)
