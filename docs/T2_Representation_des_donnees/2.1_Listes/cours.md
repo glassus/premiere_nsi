@@ -250,7 +250,7 @@ Chaque élément étant accessible par son indice (de ```0``` à   ```len(liste)
         2. Afficher un à un les éléments de cette liste **dans l'ordre inverse** (en commençant par 9)
 
     === "Correction :heart:"
-        {{ correction(False,
+        {{ correction(True,
         "
         1. 
         ```python linenums='1'
