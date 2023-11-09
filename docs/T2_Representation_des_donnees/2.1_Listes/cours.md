@@ -488,7 +488,7 @@ qui produira la liste ```[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
         texte = "cet texte est prodigieusement ennuyeux"
 
         def rang(lettre):
-            return(ord(lettre) - 97)
+            return ord(lettre) - 97
 
         compt = [0]*26
         for lettre in texte :
