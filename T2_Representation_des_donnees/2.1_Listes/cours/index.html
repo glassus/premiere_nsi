@@ -4552,7 +4552,16 @@ Les listes en compréhension deviennent encore plus intéressantes lorsqu'on com
 <li>Créer (en compréhension) une liste contenant l'image des entiers de 1 à 10 par la fonction <span class="arithmatex">\(f\)</span>.</li>
 </ol>
 </div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">3</span>
+
+<span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)]</span>
+</code></pre></div></td></tr></table></div>
+</div>
 </div>
 </div>
 </div>
@@ -4699,7 +4708,7 @@ D'autres possibilités existent, comme <code>listA.copy()</code>, ou encore <cod
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">9 novembre 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">14 novembre 2023</span>
       
     
   </small>
