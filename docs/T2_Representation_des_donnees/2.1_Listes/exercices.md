@@ -90,7 +90,7 @@
         **Q3b.**  Créer **en compréhension** une liste ```lst4``` contenant uniquement les jours comportant deux fois la lettre ```e``` dans leur nom.
 
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```python
