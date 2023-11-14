@@ -9,7 +9,9 @@
         Vous pouvez vous créer un compte pour valider vos résultats, ce site (géré par l'Académie de Poitiers) est **remarquable**. 
     
     === "Correction"
-        (avec les valeurs de test)
+        {{
+        correction(False,
+        """
         ```python linenums='1'
         lst = [0, 50, 40, 100, 70, 90, 0]
 
@@ -21,6 +23,13 @@
 
         print(total)
         ```
+
+        (à faire avec les valeurs de test) 
+        """
+        )
+        }}
+        
+
 
 !!! example "{{ exercice() }}"
 
@@ -37,35 +46,61 @@
         4
         ```
 
-        1. Créer **en compréhension** une liste ```lst1``` contenant uniquement les jours comportant 5 lettres.
-        2. Créer **en compréhension** une liste ```lst2``` contenant uniquement les jours comportant la lettre ```a``` dans leur nom.
-        3. Créer une fonction ```compte_e``` qui prend en paramètre une chaine de caractères et qui renvoie le nombre de ```e``` que contient cette chaine de caractères.
-        4.  Créer **en compréhension** une liste ```lst4``` contenant uniquement les jours comportant deux fois la lettre ```e``` dans leur nom.
+        **Q1.** Créer **en compréhension** une liste ```lst1``` contenant uniquement les jours comportant 5 lettres.
+        {{
+        correction(False,
+        """
+        ??? success \"Correction\" 
+            ```python
+            lst1 = [day for day in jours if len(day) == 5]
+            ```            
+        """
+        )
+        }}
 
-    === "Correction"    
-        1.
-        ```python
-        lst1 = [day for day in jours if len(day) == 5]
-        ```
-        2.  
-        ```python
-        lst2 = [day for day in jours if 'a' in day]
-        ```
+        **Q2.** Créer **en compréhension** une liste ```lst2``` contenant uniquement les jours comportant la lettre ```a``` dans leur nom.
+        {{
+        correction(False,
+        """
+        ??? success \"Correction\" 
+            ```python
+            lst2 = [day for day in jours if 'a' in day]
+            ```        
+        """
+        )
+        }}
 
-        3. 
-        ```python linenums='1'
-        def compte_e(mot):
-            compteur = 0
-            for lettre in mot:
-            if lettre == 'e':
-                compteur += 1
-            return compteur
-        ```
+        **Q3a.** Créer une fonction ```compte_e``` qui prend en paramètre une chaine de caractères et qui renvoie le nombre de ```e``` que contient cette chaine de caractères.
+        {{
+        correction(False,
+        """
+        ??? success \"Correction\" 
+            ```python linenums='1'
+            def compte_e(mot):
+                compteur = 0
+                for lettre in mot:
+                    if lettre == 'e':
+                        compteur += 1
+                return compteur
+            ```    
+        """
+        )
+        }}
 
-        4. 
-        ```python
-        lst4 = [day for day in jours if compte_e(day) == 2]
-        ```
+        **Q3b.**  Créer **en compréhension** une liste ```lst4``` contenant uniquement les jours comportant deux fois la lettre ```e``` dans leur nom.
+
+        {{
+        correction(False,
+        """
+        ??? success \"Correction\" 
+            ```python
+            lst4 = [day for day in jours if compte_e(day) == 2]
+            ```    
+        """
+        )
+        }}
+
+
 
 
 
@@ -98,7 +133,7 @@
         - sur une même ligne, on affichera tous les symboles côte à côte, en rajoutant le paramètre ```end = ''``` à la fonction ```print```. (*exemple :* ```print('*', end = '')``` )
         - on ira à la ligne à la fin de chaque ligne, par l'instruction ```print()```     
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         m = [[17, 71, 75, 89, 45, 10, 54, 26, 59, 47, 57, 64, 44], \\
@@ -130,7 +165,7 @@
     === "Énoncé"
         Résolvez le pydéfi **Insaisissable matrice** proposé à [cette adresse](https://pydefis.callicode.fr/defis/AlgoMat/txt)        
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         M=[[17, 3, 4, 14, 5, 17], [8, 16, 3, 17, 14, 12], [13, 5, 15, 4, 16, 3], [14, 7, 3, 16, 3, 2], [6, 1, 16, 10, 5, 13], [11, 1, 9, 11, 18, 8]]
@@ -184,51 +219,53 @@
         - [énoncé orginal](https://adventofcode.com/2021/day/2){. target="_blank"}
 
        
-        - Téléchargez le fichier [input1.txt](https://raw.githubusercontent.com/glassus/aoc2021/main/day02/input1.txt). Votre fichier ```.py``` de travail doit se situer dans le même répertoire que le fichier ```input1.txt```.
+        - Téléchargez le fichier [input.txt](data/input.txt). Votre fichier ```.py``` de travail doit se situer dans le même répertoire que le fichier ```input.txt```.
 
-        **Q1.** Nous allons récupérer toutes les données (on dit *parser les données*) dans une liste, grâce à l'instruction :
-        ```python
-        data_str = open('input1.txt').read().splitlines()
+        :arrow_right: **Parsing des données**
+
+        *Parser* des données consiste à les récupérer et les rendre exploitables. C'est quelque chose de souvent pénible (dans les énigmes de code ET dans la vraie vie). Pourtant de la qualité du parsing (et surtout de la structure de stockage choisie) va dépendre la difficulté (ou non) de l'exploitation des données.
+
+        Proposition de parsing :
+
+        ```python linenums='1'
+        data_raw = open('input1.txt').read().splitlines()
+        lst_raw = [d.split(' ') for d in data_raw]
+        lst = [[l[0], int(l[1])] for l in lst_raw]
+
         ```
-        Combien cette liste comporte-t-elle d'éléments ?
 
-        **Q2.** Afficher successivement tous les éléments de cette liste.
+        Exécutez ce code et observez ce que contient la liste ```lst```.
 
-        **Q3.**  Pour séparer une chaine de caractères en une **liste** de plusieurs chaines de caractères, nous pouvons utiliser la fonction ```split``` :
-
-        ```python
-        >>> "hello world".split(" ")
-        ['hello', 'world']
-        ``` 
-        Grâce à cette fonction ```split```,  affichez successivement uniquement les instructions ```forward```, ```up``` ou ```down```. 
-
-        **Q4**. Appelons ```x``` et ```y``` l'abscisse et l'ordonnée (initialisées à 0) du sous-marin. 
-        Que valent ```x``` et ```y``` à la fin des instructions ?
-
-        On rappelle que la fonction ```int``` permet de convertir une chaine de caractères en nombre :
-
-        ```python
-        >>> int('4')
-        4
-        ```   
+        :arrow_right: **Résolution de l'énigme**
+        
+        À la fin de toutes ses manœuvres, quel est le produit de l'abscisse du sous-marin et de sa profondeur ?
+     
 
 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python
-        data_str = open('input1.txt').read().splitlines()
+        data_raw = open('input.txt').read().splitlines()
+        lst_raw = [d.split(' ') for d in data_raw]
+        lst = [[l[0], int(l[1])] for l in lst_raw]
 
-        for ligne in data_str:
-            lst = ligne.split(' ')
-            if lst[0] == 'forward':
-                x += int(lst[1])
-            elif lst[0] == 'down':
-                y += int(lst[1])
-            else:
-                y -= int(lst[1])
+        x = 0
+        y = 0
+
+        for couple in lst:
+            direction = couple[0]
+            valeur = couple[1]
+            if direction == 'forward':
+                x += valeur
+            if direction == 'down':
+                y += valeur
+            if direction == 'up':
+                y -= valeur
 
         print(x*y)
         ```
+
+        La réponse est donc 1746616.
         "
         ) }}
