@@ -3797,8 +3797,33 @@ Résolvez le <strong>Pydéfi</strong> proposé à <a href="https://pydefis.calli
 <span class="mi">4</span>
 </code></pre></div>
 <p><strong>Q1.</strong> Créer <strong>en compréhension</strong> une liste <code>lst1</code> contenant uniquement les jours comportant 5 lettres.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="n">lst1</span> <span class="o">=</span> <span class="p">[</span><span class="n">day</span> <span class="k">for</span> <span class="n">day</span> <span class="ow">in</span> <span class="n">jours</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">day</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span><span class="p">]</span>
+</code></pre></div>
+</details>
 <p><strong>Q2.</strong> Créer <strong>en compréhension</strong> une liste <code>lst2</code> contenant uniquement les jours comportant la lettre <code>a</code> dans leur nom.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="n">lst2</span> <span class="o">=</span> <span class="p">[</span><span class="n">day</span> <span class="k">for</span> <span class="n">day</span> <span class="ow">in</span> <span class="n">jours</span> <span class="k">if</span> <span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="n">day</span><span class="p">]</span>
+</code></pre></div>
+</details>
 <p><strong>Q3a.</strong> Créer une fonction <code>compte_e</code> qui prend en paramètre une chaine de caractères et qui renvoie le nombre de <code>e</code> que contient cette chaine de caractères.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">compte_e</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
+    <span class="n">compteur</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">mot</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">lettre</span> <span class="o">==</span> <span class="s1">&#39;e&#39;</span><span class="p">:</span>
+            <span class="n">compteur</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">compteur</span>
+</code></pre></div></td></tr></table></div>
+</details>
 <p><strong>Q3b.</strong>  Créer <strong>en compréhension</strong> une liste <code>lst4</code> contenant uniquement les jours comportant deux fois la lettre <code>e</code> dans leur nom.</p>
 </div>
 </div>
