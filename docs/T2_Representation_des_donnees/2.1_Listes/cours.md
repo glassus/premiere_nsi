@@ -629,7 +629,7 @@ Les listes en compréhension deviennent encore plus intéressantes lorsqu'on com
         On considère la liste ```lst = [51, 52, 66, 91, 92, 82, 65, 53, 86, 42, 79, 95]```. Seuls les nombres entre 60 et 90 ont une signification : ce sont des codes ASCII (récupérables par la fonction ```chr``` ).  
         Créer (en compréhension) une liste ```sol``` qui contient les lettres correspondants aux nombres ayant une signification.
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python
         >>> lst = [51, 52, 66, 91, 92, 82, 65, 53, 86, 42, 79, 95]
