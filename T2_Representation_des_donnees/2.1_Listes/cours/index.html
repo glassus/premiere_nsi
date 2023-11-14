@@ -4573,7 +4573,13 @@ Les listes en compréhension deviennent encore plus intéressantes lorsqu'on com
 <p>On considère la liste <code>lst = [51, 52, 66, 91, 92, 82, 65, 53, 86, 42, 79, 95]</code>. Seuls les nombres entre 60 et 90 ont une signification : ce sont des codes ASCII (récupérables par la fonction <code>chr</code> ).<br />
 Créer (en compréhension) une liste <code>sol</code> qui contient les lettres correspondants aux nombres ayant une signification.</p>
 </div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">51</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">95</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">decode</span> <span class="o">=</span> <span class="p">[</span><span class="nb">chr</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">lst</span> <span class="k">if</span> <span class="n">k</span> <span class="o">&gt;</span> <span class="mi">60</span>  <span class="ow">and</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="mi">90</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">decode</span>
+<span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">]</span>
+</code></pre></div>
+</div>
 </div>
 </div>
 </div>
