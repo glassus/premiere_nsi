@@ -7,9 +7,10 @@
     - [Fiche de renseignements](https://capytale2.ac-paris.fr/web/c/7cd5-1782246){. target="_blank"}
 #}
 
+{#
 !!! question "Code Puzzle du jour"
     :arrow_right: [https://www.codepuzzle.io/D83WJ](https://www.codepuzzle.io/DKQE3){. target="_blank"}
-
+#}
 
 
 
