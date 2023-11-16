@@ -4026,7 +4026,28 @@ forward 2
 <p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" /> <strong>Résolution de l'énigme</strong></p>
 <p>À la fin de toutes ses manœuvres, quel est le produit de l'abscisse du sous-marin et de sa profondeur ?</p>
 </div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">data_raw</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;input.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+<span class="n">lst_raw</span> <span class="o">=</span> <span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">data_raw</span><span class="p">]</span>
+<span class="n">lst</span> <span class="o">=</span> <span class="p">[[</span><span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">int</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">])]</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">lst_raw</span><span class="p">]</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">couple</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
+    <span class="n">direction</span> <span class="o">=</span> <span class="n">couple</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">valeur</span> <span class="o">=</span> <span class="n">couple</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">direction</span> <span class="o">==</span> <span class="s1">&#39;forward&#39;</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">+=</span> <span class="n">valeur</span>
+    <span class="k">if</span> <span class="n">direction</span> <span class="o">==</span> <span class="s1">&#39;down&#39;</span><span class="p">:</span>
+        <span class="n">y</span> <span class="o">+=</span> <span class="n">valeur</span>
+    <span class="k">if</span> <span class="n">direction</span> <span class="o">==</span> <span class="s1">&#39;up&#39;</span><span class="p">:</span>
+        <span class="n">y</span> <span class="o">-=</span> <span class="n">valeur</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="p">)</span>
+</code></pre></div>
+<p>La réponse est donc 1746616.</p>
+</div>
 </div>
 </div>
 </div>
