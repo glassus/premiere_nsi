@@ -277,7 +277,7 @@
 
 
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python
         data_raw = open('input.txt').read().splitlines()
