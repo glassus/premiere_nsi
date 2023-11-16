@@ -3880,7 +3880,27 @@ Afficher successivement chaque ligne du tableau en respectant les règles suivan
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Énoncé</label><label for="__tabbed_4_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Résolvez le pydéfi <strong>Insaisissable matrice</strong> proposé à <a href="https://pydefis.callicode.fr/defis/AlgoMat/txt">cette adresse</a>        </p>
+<p>Pydéfi <strong>Insaisissable matrice</strong> (version originale à <a class="" href="https://pydefis.callicode.fr/defis/AlgoMat/txt" target="_blank">cette adresse</a>)</p>
+<p>On considère la matrice suivante :</p>
+<div class="highlight"><pre><span></span><code><span class="o">-------------------------------</span>
+<span class="o">|</span> <span class="mi">17</span> <span class="o">|</span> <span class="mi">3</span>  <span class="o">|</span> <span class="mi">4</span>  <span class="o">|</span> <span class="mi">14</span> <span class="o">|</span> <span class="mi">5</span>  <span class="o">|</span> <span class="mi">17</span> <span class="o">|</span>
+<span class="o">-------------------------------</span>
+<span class="o">|</span> <span class="mi">8</span>  <span class="o">|</span> <span class="mi">16</span> <span class="o">|</span> <span class="mi">3</span>  <span class="o">|</span> <span class="mi">17</span> <span class="o">|</span> <span class="mi">14</span> <span class="o">|</span> <span class="mi">12</span> <span class="o">|</span>
+<span class="o">-------------------------------</span>
+<span class="o">|</span> <span class="mi">13</span> <span class="o">|</span> <span class="mi">5</span>  <span class="o">|</span> <span class="mi">15</span> <span class="o">|</span> <span class="mi">4</span>  <span class="o">|</span> <span class="mi">16</span> <span class="o">|</span> <span class="mi">3</span>  <span class="o">|</span>
+<span class="o">-------------------------------</span>
+<span class="o">|</span> <span class="mi">14</span> <span class="o">|</span> <span class="mi">7</span>  <span class="o">|</span> <span class="mi">3</span>  <span class="o">|</span> <span class="mi">16</span> <span class="o">|</span> <span class="mi">3</span>  <span class="o">|</span> <span class="mi">2</span>  <span class="o">|</span>
+<span class="o">-------------------------------</span>
+<span class="o">|</span> <span class="mi">6</span>  <span class="o">|</span> <span class="mi">1</span>  <span class="o">|</span> <span class="mi">16</span> <span class="o">|</span> <span class="mi">10</span> <span class="o">|</span> <span class="mi">5</span>  <span class="o">|</span> <span class="mi">13</span> <span class="o">|</span>
+<span class="o">-------------------------------</span>
+<span class="o">|</span> <span class="mi">11</span> <span class="o">|</span> <span class="mi">1</span>  <span class="o">|</span> <span class="mi">9</span>  <span class="o">|</span> <span class="mi">11</span> <span class="o">|</span> <span class="mi">18</span> <span class="o">|</span> <span class="mi">8</span>  <span class="o">|</span>
+<span class="o">-------------------------------</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">M</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">17</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">17</span><span class="p">],</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span> <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">13</span><span class="p">],</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">8</span><span class="p">]]</span>
+</code></pre></div>
+<p>Cette matrice va évoluer au cours du temps, et le contenu <code>k</code> d'une case est transformé, à chaque étape en <code>(9*k + 3) % 19</code>.</p>
+<p>Rappelons que  <code>a % b</code> donne le reste de la division entière de <code>a</code> par <code>b</code>.</p>
+<p>À chaque étape de calcul, tous les nombres de la matrice sont simultanément modifiés. L'entrée du problème est le nombre d'étapes à appliquer (ici : <strong>39</strong>). Vous devez répondre en donnant la somme des valeurs contenues dans la matrice après application de toutes les étapes.</p>
 </div>
 <div class="tabbed-block"></div>
 </div>
@@ -3936,7 +3956,7 @@ forward 2
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">14 novembre 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">16 novembre 2023</span>
       
     
   </small>
