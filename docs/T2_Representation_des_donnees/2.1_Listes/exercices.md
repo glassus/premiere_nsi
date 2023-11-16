@@ -259,7 +259,7 @@
         Proposition de parsing :
 
         ```python linenums='1'
-        data_raw = open('input1.txt').read().splitlines()
+        data_raw = open('input.txt').read().splitlines()
         lst_raw = [d.split(' ') for d in data_raw]
         lst = [[l[0], int(l[1])] for l in lst_raw]
 
