@@ -196,18 +196,21 @@
 
 
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         ```python linenums='1'
-        M=[[17, 3, 4, 14, 5, 17], [8, 16, 3, 17, 14, 12], [13, 5, 15, 4, 16, 3], [14, 7, 3, 16, 3, 2], [6, 1, 16, 10, 5, 13], [11, 1, 9, 11, 18, 8]]
+        M = [[17, 3, 4, 14, 5, 17], [8, 16, 3, 17, 14, 12], [13, 5, 15, 4, 16, 3], [14, 7, 3, 16, 3, 2], [6, 1, 16, 10, 5, 13], [11, 1, 9, 11, 18, 8]]
 
         def f(k):
             return (9*k + 3) % 19
 
-        for _ in range(39):
+        def tour():
             for i in range(6):
                 for j in range(6):
                     M[i][j] = f(M[i][j])
+
+        for _ in range(39):
+            tour()
 
         somme = 0
         for i in range(6):
