@@ -163,7 +163,38 @@
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
-        Résolvez le pydéfi **Insaisissable matrice** proposé à [cette adresse](https://pydefis.callicode.fr/defis/AlgoMat/txt)        
+        Pydéfi **Insaisissable matrice** (version originale à [cette adresse](https://pydefis.callicode.fr/defis/AlgoMat/txt){. target="_blank"})
+
+        On considère la matrice suivante :
+
+        ```python
+        -------------------------------
+        | 17 | 3  | 4  | 14 | 5  | 17 |
+        -------------------------------
+        | 8  | 16 | 3  | 17 | 14 | 12 |
+        -------------------------------
+        | 13 | 5  | 15 | 4  | 16 | 3  |
+        -------------------------------
+        | 14 | 7  | 3  | 16 | 3  | 2  |
+        -------------------------------
+        | 6  | 1  | 16 | 10 | 5  | 13 |
+        -------------------------------
+        | 11 | 1  | 9  | 11 | 18 | 8  |
+        -------------------------------
+        ``` 
+        
+        ```python
+        M = [[17, 3, 4, 14, 5, 17], [8, 16, 3, 17, 14, 12], [13, 5, 15, 4, 16, 3], [14, 7, 3, 16, 3, 2], [6, 1, 16, 10, 5, 13], [11, 1, 9, 11, 18, 8]]
+        ```
+
+        Cette matrice va évoluer au cours du temps, et le contenu `k` d'une case est transformé, à chaque étape en `(9*k + 3) % 19`.
+
+        Rappelons que  `a % b` donne le reste de la division entière de `a` par `b`.
+
+        À chaque étape de calcul, tous les nombres de la matrice sont simultanément modifiés. L'entrée du problème est le nombre d'étapes à appliquer (ici : **39**). Vous devez répondre en donnant la somme des valeurs contenues dans la matrice après application de toutes les étapes.
+
+
+
     === "Correction"
         {{ correction(False,
         "
