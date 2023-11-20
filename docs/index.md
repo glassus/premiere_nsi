@@ -9,16 +9,19 @@
 
 
 !!! question "Code Puzzle du jour"
-    :arrow_right: [https://www.codepuzzle.io/DUPJ4](https://www.codepuzzle.io/DUPJ4){. target="_blank"}
+    :arrow_right: [https://www.codepuzzle.io/D9Z6Q](https://www.codepuzzle.io/D9Z6Q){. target="_blank"}
 
 
 
 ## Thèmes en cours d'étude :
-- :books: Cours sur les [Listes](./T2_Representation_des_donnees/2.1_Listes/cours/) 
-- :gear: Exercices sur les [Listes](./T2_Representation_des_donnees/2.1_Listes/exercices/) 
+- :books: [Interactions sur une page web](./T6_IHM_Web/6.1_Interactions_page_web/cours/)
+-  Cours sur les [Listes](./T2_Representation_des_donnees/2.1_Listes/cours/) 
+
 
 
 !!! info "*Anciens thèmes traités*"
+    - [Listes](./T2_Representation_des_donnees/2.1_Listes/cours/) 
+    - [Exercices sur les Listes](./T2_Representation_des_donnees/2.1_Listes/exercices/) 
     - [Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/cours)
     - [Exercices sur les Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/exercices)
     - [Instruction conditionnelle ```#!python if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/cours/)
