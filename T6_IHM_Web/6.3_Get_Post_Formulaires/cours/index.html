@@ -4041,46 +4041,13 @@ Ce fichier est téléchargeable <a href="https://www.kaggle.com/wjburns/common-p
 <p>Nous allons utiliser un fichier beaucoup plus léger ne contenant que les 1000 premiers mots de passe : vous le trouverez à l'adresse <a href="http://glassus1.free.fr/extraitrockyou.txt" target="_blank">http://glassus1.free.fr/extraitrockyou.txt</a> .</p>
 <p>L'un de ces mots de passe est le mot de passe demandé à la page  <a href="http://glassus1.free.fr/exoBF.html" target="_blank">http://glassus1.free.fr/exoBF.html</a> .</p>
 <p>Lequel ?</p>
-<details class="note">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
-
-<span class="n">page_error</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;http://glassus1.free.fr/repBF.php?pass=&quot;</span><span class="p">)</span>
-
-<span class="n">liste_mdp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;extraitrockyou.txt&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
-
-<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://glassus1.free.fr/repBF.php?pass=&quot;</span>
-
-<span class="k">for</span> <span class="n">mdp</span> <span class="ow">in</span> <span class="n">liste_mdp</span><span class="p">:</span>
-    <span class="n">new_url</span> <span class="o">=</span> <span class="n">url</span> <span class="o">+</span> <span class="n">mdp</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">new_url</span><span class="p">)</span>
-    <span class="n">page_tentative</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">new_url</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">page_tentative</span><span class="o">.</span><span class="n">text</span> <span class="o">!=</span> <span class="n">page_error</span><span class="o">.</span><span class="n">text</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Le mot de passe est le suivant :&quot;</span><span class="p">,</span> <span class="n">mdp</span><span class="p">)</span>
-        <span class="k">break</span>
-</code></pre></div></td></tr></table></div>
-</details>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">3 janvier 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">20 novembre 2023</span>
       
     
   </small>
