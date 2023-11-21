@@ -1,5 +1,16 @@
 # Pages personnelles
 
+### O. Installation du serveur Xampp
+
+Dans le dossier Téléchargements :
+
+```sudo chmod +x xampp-linux....run``` 
+
+puis 
+
+```sudo ./xampp-linux....run``` 
+
+
 ### 1. Démarrage
 
 #### 1.1 Serveur démarré ou pas ?
