@@ -45,4 +45,22 @@ Si on veut tout copier :
 
 ### 3. Liens vers la page de chaque élève
 
+- [page de M. Lassus](http://192.168.1.198){. target="_blank"}
+- [page de Malone](http://192.168.1.102){. target="_blank"}
+- [page de Timéo](http://192.168.1.114){. target="_blank"}
+- [page de Moustapha](http://192.168.1.173){. target="_blank"}
+- [page de Jean](http://192.168.1.151){. target="_blank"}
+- [page de Sarah](http://192.168.1.154){. target="_blank"}
+- [page d'Antoine](http://192.168.1.150){. target="_blank"}
+- [page de Nathanaël](http://192.168.1.127){. target="_blank"}
+- [page de Lucas](http://192.168.1.119){. target="_blank"}
+- [page de Nathan](http://192.168.1.21){. target="_blank"}
+- [page de Périne](http://192.168.1.158){. target="_blank"}
+- [page de Rita](http://192.168.1.109){. target="_blank"}
+- [page de Tesnime](http://192.168.1.100){. target="_blank"}
+- [page de Max](http://192.168.1.126){. target="_blank"}
+- [page de Noé](http://192.168.1.133){. target="_blank"}
+- [page de Gead](http://192.168.1.172){. target="_blank"}
+- [page de Mikhaïlo](http://192.168.1.){. target="_blank"}
+
 
