@@ -126,8 +126,6 @@ Vous pouvez contempler [ici](https://exemplehtmlcss--g-lassus.repl.co){:target="
     - Modifiez le plus possible les attributs de style de la page.
 
 
-[lien téléchargement Geany](http://ftp.de.debian.org/debian/pool/main/g/geany/geany_1.37.1-2_amd64.deb){. target="_blank"}
-
 
 ## 2. Quand le client peut agir sur sa page : exemple avec JavaScript
 ![](data/dynclient.png){: .center}
