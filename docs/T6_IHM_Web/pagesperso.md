@@ -61,6 +61,6 @@ Si on veut tout copier :
 - [page de Max](http://192.168.1.126){. target="_blank"}
 - [page de Noé](http://192.168.1.133){. target="_blank"}
 - [page de Gead](http://192.168.1.172){. target="_blank"}
-- [page de Mikhaïlo](http://192.168.1.){. target="_blank"}
+- [page de Mikhaïlo](http://192.168.1.190){. target="_blank"}
 
 
