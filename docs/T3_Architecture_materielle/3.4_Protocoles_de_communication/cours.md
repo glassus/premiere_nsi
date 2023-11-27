@@ -318,6 +318,13 @@ Le protocole du bit alterné a longtemps été utilisé au sein de la couche 2 d
 
 
 <!-- [correction du DS](data/DS_routage_1NSI_corr.pdf)
+
+
+challenge d'analyse de trames Wirehark
+
+https://www.challenges-kids.fr/categories/network/chall3/
+
+
  -->
 
 
