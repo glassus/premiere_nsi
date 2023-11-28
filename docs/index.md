@@ -8,14 +8,25 @@
 #}
 
 
-!!! question "Code Puzzle du jour"
-    :arrow_right: [https://www.codepuzzle.io/D9Z6Q](https://www.codepuzzle.io/D9Z6Q){. target="_blank"}
+!!! abstract "Actualités"
+    -  [Présentation de l'algorithme de Gale-Shapley](https://glassus.github.io/terminale_nsi/T7_Divers/11_parcoursup/cours/){. target="_blank"}
 
+
+
+{{
+correction(False,
+"""
+!!! question \"Code Puzzle du jour\"
+    :arrow_right: [https://www.codepuzzle.io/D9Z6Q](https://www.codepuzzle.io/D9Z6Q){. target=\"_blank\"}
+    
+"""
+)
+}}
 
 
 ## Thèmes en cours d'étude :
 - :books: [Interactions sur une page web](./T6_IHM_Web/6.1_Interactions_page_web/cours/)
--  Cours sur les [Listes](./T2_Representation_des_donnees/2.1_Listes/cours/) 
+
 
 
 

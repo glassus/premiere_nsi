@@ -125,6 +125,11 @@ Vous pouvez contempler [ici](https://exemplehtmlcss--g-lassus.repl.co){:target="
     - Allez sur le site [http://sudouest.fr](http://sudouest.fr){:target="_blank"}, et affichez l'inspecteur d'élement de votre navigateur (généralement accessible en appuyant sur ```F12``` )
     - Modifiez le plus possible les attributs de style de la page.
 
+!!! note "Exercice 4"
+    - Résoudre [ce challenge](https://www.challenges-kids.fr/categories/web/chall5/){. target="_blank"}
+
+
+
 
 
 ## 2. Quand le client peut agir sur sa page : exemple avec JavaScript
@@ -202,7 +207,7 @@ La puissance du JavaScript permet de réaliser aujourd'hui des interfaces utilis
 - le cours d'OpenClassrooms : [https://openclassrooms.com/fr/courses/2984401-apprenez-a-coder-avec-javascript](https://openclassrooms.com/fr/courses/2984401-apprenez-a-coder-avec-javascript){:target="_blank"}
 
 
-!!! note "Exercice 4"
+!!! note "Exercice 5"
     - Reprenez votre page créée aux exercices précédents et rajoutez du JavaScript pour la rendre dynamique. Vous êtes libres !
 
 
