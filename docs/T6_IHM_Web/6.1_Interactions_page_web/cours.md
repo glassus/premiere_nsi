@@ -170,6 +170,9 @@ Inventé en 1995 par [Brendan Eich](https://fr.wikipedia.org/wiki/Brendan_Eich){
             <button type="button" onclick="choix('green');">vert</button>
 
             <button type="button" onclick="choix('purple');">violet</button> 
+
+            <input onchange="choix(this.value)" type="color" />
+            
         </div>
         <div>
           <p>
