@@ -26,6 +26,8 @@ correction(False,
 
 ## Thèmes en cours d'étude :
 - :books: [Interactions sur une page web](./T6_IHM_Web/6.1_Interactions_page_web/cours/)
+- :books: [Protocole ```http``` ](./T6_IHM_Web/6.2_Protocole_HTTP/cours/)
+- :books: [Requêtes GET et POST ](./T6_IHM_Web/6.3_Get_Post_Formulaires/cours/)
 
 
 
