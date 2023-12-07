@@ -7,9 +7,12 @@ Ce cours a pour but de présenter la constitution classique d'un réseau, et les
 
 ## 1. Premier réseau local
 
-> [lien](https://www.lernsoftware-filius.de/downloads/Setup/filius_1.9.0_all.deb) de téléchargement de Filius sous Linux
+!!! question "Installation de Filius"
+    Installation de la version 2.4.0 pour nos machines virtuelles :
 
-Au sein du logiciel [Filius](https://www.lernsoftware-filius.de/Herunterladen), créons le réseau local ci-dessous :
+    - Télécharger le fichier [filius_2.4.0_all.deb](data/filius_2.4.0_all.deb){. target="_blank"}
+    - Dans un terminal ouvert dans le dossier Téléchargements, taper ```sudo dpkg -i filius_2.4.0_all.deb``` 
+
 
 ![](data/f1.png){: .center}
 
