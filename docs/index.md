@@ -25,14 +25,15 @@ correction(False,
 
 
 ## Thèmes en cours d'étude :
-- :books: [Interactions sur une page web](./T6_IHM_Web/6.1_Interactions_page_web/cours/)
-- :books: [Protocole ```http``` ](./T6_IHM_Web/6.2_Protocole_HTTP/cours/)
-- :books: [Requêtes GET et POST ](./T6_IHM_Web/6.3_Get_Post_Formulaires/cours/)
+- :books: [Architecture réseau](./T3_Architecture_materielle/3.3_Architecture_reseau/cours/)
 
 
 
 
 !!! info "*Anciens thèmes traités*"
+    - [Interactions sur une page web](./T6_IHM_Web/6.1_Interactions_page_web/cours/)
+    - [Protocole ```http``` ](./T6_IHM_Web/6.2_Protocole_HTTP/cours/)
+    - [Requêtes GET et POST ](./T6_IHM_Web/6.3_Get_Post_Formulaires/cours/)
     - [Listes](./T2_Representation_des_donnees/2.1_Listes/cours/) 
     - [Exercices sur les Listes](./T2_Representation_des_donnees/2.1_Listes/exercices/) 
     - [Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/cours)
