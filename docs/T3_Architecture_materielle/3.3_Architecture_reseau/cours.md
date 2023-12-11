@@ -8,9 +8,9 @@ Ce cours a pour but de présenter la constitution classique d'un réseau, et les
 ## 1. Premier réseau local
 
 !!! question "Installation de Filius"
-    Installation de la version 2.4.0 pour nos machines virtuelles :
+    Installation de la version 1.14.2 pour nos machines virtuelles :
 
-    - Télécharger le fichier [filius_2.4.0_all.deb](data/filius_2.4.0_all.deb){. target="_blank"}
+    - Télécharger le fichier [filius_1.14.2_all.deb](data/filius_1.14.2_all.deb){. target="_blank"}
     - Dans un terminal ouvert dans le dossier Téléchargements, taper ```sudo dpkg -i filius_2.4.0_all.deb``` 
 
 
