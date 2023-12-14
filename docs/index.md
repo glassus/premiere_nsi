@@ -26,6 +26,8 @@ correction(False,
 
 ## Thèmes en cours d'étude :
 - :books: [Architecture réseau](./T3_Architecture_materielle/3.3_Architecture_reseau/cours/)
+- :books: [Protocoles de communication](./T3_Architecture_materielle/3.4_Protocoles_de_communication/cours/)
+- :books: [Booléens](./T2_Representation_des_donnees/2.5_Booleens/cours/)
 
 
 
