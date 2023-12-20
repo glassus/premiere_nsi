@@ -17,7 +17,7 @@
 correction(False,
 """
 !!! question \"Code Puzzle du jour\"
-    :arrow_right: [https://www.codepuzzle.io/D9Z6Q](https://www.codepuzzle.io/D9Z6Q){. target=\"_blank\"}
+    :arrow_right: [https://www.codepuzzle.io/DD4RW](https://www.codepuzzle.io/DD4RW){. target=\"_blank\"}
     
 """
 )
