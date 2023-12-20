@@ -7,10 +7,10 @@
     - [Fiche de renseignements](https://capytale2.ac-paris.fr/web/c/7cd5-1782246){. target="_blank"}
 #}
 
-
+{#
 !!! abstract "Actualités"
     -  [Présentation de l'algorithme de Gale-Shapley](https://glassus.github.io/terminale_nsi/T7_Divers/11_parcoursup/cours/){. target="_blank"}
-
+#}
 
 
 {{
@@ -25,14 +25,14 @@ correction(False,
 
 
 ## Thèmes en cours d'étude :
-- :books: [Architecture réseau](./T3_Architecture_materielle/3.3_Architecture_reseau/cours/)
-- :books: [Protocoles de communication](./T3_Architecture_materielle/3.4_Protocoles_de_communication/cours/)
+
 - :books: [Booléens](./T2_Representation_des_donnees/2.5_Booleens/cours/)
-
-
+- [Découverte des commandes Linux à travers le jeu Terminus](./T3_Architecture_materielle/3.5_Decouverte_des_commandes_Linux/cours/){. target="_blank"}
 
 
 !!! info "*Anciens thèmes traités*"
+    - [Architecture réseau](./T3_Architecture_materielle/3.3_Architecture_reseau/cours/)
+    - [Protocoles de communication](./T3_Architecture_materielle/3.4_Protocoles_de_communication/cours/)
     - [Interactions sur une page web](./T6_IHM_Web/6.1_Interactions_page_web/cours/)
     - [Protocole ```http``` ](./T6_IHM_Web/6.2_Protocole_HTTP/cours/)
     - [Requêtes GET et POST ](./T6_IHM_Web/6.3_Get_Post_Formulaires/cours/)
