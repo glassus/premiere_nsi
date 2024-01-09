@@ -2,7 +2,7 @@
 
 ![image](data/BO.png){: .center}
 
-
+{{initexo(0)}}
 
 
 ## 1. Repères historiques
@@ -202,16 +202,17 @@ False
 ```
 
 
-### 2.4 Exercice 1
+### 2.4 Exercice
 
-Comprendre ce mème :
-![image](data/drake.webp){: .center width=50%}
+!!! abstract "{{ exercice() }}"
+    Comprendre ce mème :
+    ![image](data/drake.webp){: .center width=50%}
 
 
 
-### 2.5 Exercice 2
+### 2.5 Exercice 
 
-!!! abstract "Exercice 2"
+!!! abstract "{{ exercice() }}"
     Ouvrir le [simulateur de circuits](http://dept-info.labri.fr/ENSEIGNEMENT/archi/circuits/blank-teacher.html){. target="_blank"} et créer pour chaque opération AND, OR, NOT un circuit électrique illustrant ses propriétés.
 
     Exemple (inintéressant) de circuit :
@@ -287,7 +288,37 @@ Il est temps de se reposer un peu et d'admirer cette vidéo :
 
 ### Remarque :
 Les fonctions NAND ET NOR sont dites **universelles** : chacune d'entre elles peut générer l'intégralité des autres portes logiques. Il est donc possible de coder toutes les opérations uniquement avec des NAND (ou uniquement avec des NOR).
-Voir [Wikipedia](https://fr.wikipedia.org/wiki/Fonction_NON-ET)
+
+!!! abstract "{{ exercice() }}"
+    Nous allons réutiliser le [simulateur de circuits](http://dept-info.labri.fr/ENSEIGNEMENT/archi/circuits/blank-teacher.html){. target="_blank"} mais en n'utilisant **QUE DES PORTES NAND**.
+
+    **Q1.** Réaliser la porte AND (avec que des NAND...)
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ![image](data/nand_and.png){: .center}
+        
+    """
+    )
+    }}
+
+    **Q2.** Réaliser la porte OR (avec que des NAND...)
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ![image](data/nand_or.png){: .center}
+
+        Vous pouvez trouver d'autres renseigements sur [Wikipedia](https://fr.wikipedia.org/wiki/Fonction_NON-ET){. target='_blank'}.
+        
+    """
+    )
+    }}
+         
+
 
 ### 3.4 Exercice 4
 
