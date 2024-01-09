@@ -307,7 +307,7 @@ Les fonctions NAND ET NOR sont dites **universelles** : chacune d'entre elles pe
     **Q2.** Réaliser la porte OR (avec que des NAND...)
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ![image](data/nand_or.png){: .center}
