@@ -3902,7 +3902,7 @@ On aurait pu aussi avoir un type :<ul>
 <p>Les paramètres passés au serveur par la méthode POST <strong>ne sont pas visibles</strong> dans l'url de la requête. Ils sont contenus dans le corps de la requête, mais non affichés sur le navigateur.</p>
 <p><img alt="" class="center" src="../data/post1.png" /></p>
 <p>Donc, la transmission du mot de passe est bien sécurisée par la méthode POST ? </p>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/26a0.svg" title=":warning:" /> Pas du tout ! Si le protocole de transmission est du <code>http</code>  et non pas du <code>https</code>, n'importe qui interceptant le trafic peut lire le contenu de la requête et y trouver le mot de passe en clair.</p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> Pas du tout ! Si le protocole de transmission est du <code>http</code>  et non pas du <code>https</code>, n'importe qui interceptant le trafic peut lire le contenu de la requête et y trouver le mot de passe en clair.</p>
 <p><strong>Exemple avec <a href="https://www.wireshark.org/">Wireshark</a></strong> :</p>
 <p><img alt="" class="center" src="../data/wireshark.png" /></p>
 <p>Le contenu de la variable <code>"pass"</code> est donc visible dans le contenu de la requête. </p>

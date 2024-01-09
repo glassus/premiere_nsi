@@ -3892,7 +3892,7 @@
 <p><img alt="image" class="center" src="../data/BO.png" /></p>
 <p><img alt="image" class="center" src="../data/meme.webp" width="40%" /></p>
 <div class="admonition abstract">
-<p class="admonition-title"><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/26a0.svg" title=":warning:" /> Attention <img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/26a0.svg" title=":warning:" /></p>
+<p class="admonition-title"><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> Attention <img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /></p>
 <p>La manière dont les nombres (entiers, non-entiers, positifs, négatifs...) sont traités par un langage de programmation est <strong>spécifique</strong> à ce langage.</p>
 <p>Dans toute la suite de ce cours, pour simplifier, nous considérerons que les nombres sont codés sur <strong>1 octet</strong> seulement. Ce qui ne correspond pas à la réalité, mais permet de comprendre les notions essentielles.</p>
 </div>
@@ -3923,7 +3923,7 @@ Le nombre maximal qu'on puisse coder est <code>11111111</code>. C'est l'entier n
 </div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Python et les entiers <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Python et les entiers <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
 <p>Depuis la version 3 du langage Python, il n'y a plus de taille maximale pour les entiers en Python.</p>
 <p>Ceci implique que la taille nécessaire au codage de l'entier est allouée dynamiquement par Python (avec pour seule limite celle de la mémoire disponible). </p>
 </div>
@@ -3978,7 +3978,7 @@ L'idée naturelle est de réserver 1 bit pour le signe, et de coder le reste du 
 <p>Comment, à partir du nombre <code>00000011</code>, aurait-on pu le trouver directement (sans raisonner de proche en proche) ?</p>
 <p>On peut remarquer qu'en inversant chaque bit du nombre de départ <code>00000011</code>, on obtient <code>11111100</code>, qui appelé le <strong>complément à 2</strong> du nombre <code>00000011</code>.</p>
 <p>Il ne reste donc plus qu'à ajouter <code>1</code> à ce nombre <code>11111100</code> pour obtenir le nombre cherché, <code>11111101</code></p>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/26a0.svg" title=":warning:" />  ce nombre <code>11111101</code> représente 253 en codage non signé. Il est donc nécessaire, lorsqu'on représente un nombre, de savoir si les nombres manipulés seront des entiers naturels (<em>non signés</em>) ou bien relatifs (<em>signés</em>).</p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" />  ce nombre <code>11111101</code> représente 253 en codage non signé. Il est donc nécessaire, lorsqu'on représente un nombre, de savoir si les nombres manipulés seront des entiers naturels (<em>non signés</em>) ou bien relatifs (<em>signés</em>).</p>
 <h3 id="23-tableau-des-entiers-en-binaire-signe">2.3 Tableau des entiers en binaire <strong>signé</strong><a class="headerlink" href="#23-tableau-des-entiers-en-binaire-signe" title="Permanent link">⚓︎</a></h3>
 <table>
 <thead>
@@ -4077,7 +4077,7 @@ L'idée naturelle est de réserver 1 bit pour le signe, et de coder le reste du 
 <h3 id="24-conclusion-ecriture-loppose-dun-nombre-positif">2.4 Conclusion : écriture l'opposé d'un nombre positif<a class="headerlink" href="#24-conclusion-ecriture-loppose-dun-nombre-positif" title="Permanent link">⚓︎</a></h3>
 <p>Considérons que ce nombre positif s'écrit sur 7 bits, donc qu'il est de la forme <code>0XXXXXXX</code>.</p>
 <div class="admonition note">
-<p class="admonition-title">Écriture de l'opposé d'un nombre positif <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Écriture de l'opposé d'un nombre positif <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
 <ul>
 <li>On prend le complément à 2 de chacun des 8 bits du nombre de départ</li>
 <li>On ajoute 1 au nombre obtenu.</li>
@@ -4101,7 +4101,7 @@ L'idée naturelle est de réserver 1 bit pour le signe, et de coder le reste du 
 </div>
 </div>
 </div>
-<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/27a1.svg" title=":arrow_right:" /> <strong>Remarque</strong><br />
+<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> <strong>Remarque</strong><br />
 Les nombres négatifs commenceront donc toujours par le bit 1, et les nombres positifs par le bit 0. Cela revient à suivre partiellement notre fausse bonne idée du 2.1.<br />
 Et cela donne surtout une méthode très pratique pour savoir qui est positif et qui est négatif !</p>
 <h2 id="3-travail-inverse-passage-du-binaire-signe-au-nombre-relatif">3. Travail inverse : passage du binaire signé au nombre relatif<a class="headerlink" href="#3-travail-inverse-passage-du-binaire-signe-au-nombre-relatif" title="Permanent link">⚓︎</a></h2>

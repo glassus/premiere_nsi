@@ -3900,15 +3900,15 @@
 <p>Le module <code>csv</code> utilisé précédemment se contente de lire les données structurées. Il ne fait aucun effort particulier pour analyser les données. Nous nous en sommes aperçus lorsqu'il a fallu convertir par <code>int()</code> toutes les valeurs numériques, qui étaient interprétées comme des chaînes de caractères.<br />
 La bibliothèque <a class="" href="https://pandas.pydata.org/" target="_blank">pandas</a>  est par contre spécialement conçue pour l'analyse des données (<em>data analysis</em>) : elle est donc naturellement bien plus performante.</p>
 <div class="admonition note">
-<p class="admonition-title">Importation du module <code>pandas</code> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Importation du module <code>pandas</code> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
 <p>L'import se fait classiquement par :
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
 </code></pre></div></p>
 </div>
 <p>Le type de variable dans lequel <code>pandas</code> va stocker les données s'appelle une <strong>dataframe</strong>, qui sera souvent abrégée par <code>df</code>.</p>
-<p>Nous allons retravailler avec le fichier <a href="../../data/top14.csv"><code>top14.csv</code> <img alt="⬇" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2b07.svg" title=":arrow_down:" /></a>.</p>
+<p>Nous allons retravailler avec le fichier <a href="../../data/top14.csv"><code>top14.csv</code> <img alt="⬇" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b07.svg" title=":arrow_down:" /></a>.</p>
 <div class="admonition note">
-<p class="admonition-title">Première dataframe <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Première dataframe <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
 <p>Nos données seront ensuite importées dans la dataframe <code>df</code> par l'instruction :
 <div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;top14.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> 
 </code></pre></div></p>
@@ -3937,7 +3937,7 @@ La bibliothèque <a class="" href="https://pandas.pydata.org/" target="_blank">p
 <p>Les données sont présentées dans l'ordre originel du fichier. </p>
 <h3 id="21-structure-globale-des-donnees">2.1 Structure globale des données<a class="headerlink" href="#21-structure-globale-des-donnees" title="Permanent link">⚓︎</a></h3>
 <div class="admonition abstract">
-<p class="admonition-title">La structure des données : <code>info</code> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">La structure des données : <code>info</code> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 <span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">pandas</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">DataFrame</span><span class="s1">&#39;&gt;</span>
 <span class="n">RangeIndex</span><span class="p">:</span> <span class="mi">595</span> <span class="n">entries</span><span class="p">,</span> <span class="mi">0</span> <span class="n">to</span> <span class="mi">594</span>
@@ -3958,7 +3958,7 @@ La bibliothèque <a class="" href="https://pandas.pydata.org/" target="_blank">p
 <h3 id="22-acces-a-une-fiche-particuliere">2.2 Accès à une fiche particulière<a class="headerlink" href="#22-acces-a-une-fiche-particuliere" title="Permanent link">⚓︎</a></h3>
 <p>D'après la commande précédente, il y a 595 entrées dans notre fichier de données. L'accès à une fiche particulière se fera avec la commande <code>loc</code>.</p>
 <div class="admonition abstract">
-<p class="admonition-title">Accès à une fiche : <code>loc</code> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Accès à une fiche : <code>loc</code> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">312</span><span class="p">]</span>
 <span class="n">Equipe</span>                         <span class="n">Lyon</span>
 <span class="n">Nom</span>                  <span class="n">Charlie</span> <span class="n">NGATAI</span>
@@ -3972,7 +3972,7 @@ La bibliothèque <a class="" href="https://pandas.pydata.org/" target="_blank">p
 <h3 id="23-premieres-et-dernieres-lignes">2.3 Premières et dernières lignes<a class="headerlink" href="#23-premieres-et-dernieres-lignes" title="Permanent link">⚓︎</a></h3>
 <p>Il est toutefois possible d'avoir uniquement les premières lignes du fichier avec la commande <code>head()</code> et les dernières du fichier avec la commande <code>tail()</code>. Ces commandes peuvent recevoir en paramètre un nombre entier :</p>
 <div class="admonition abstract">
-<p class="admonition-title">Les premières lignes du fichier : <code>head</code> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Les premières lignes du fichier : <code>head</code> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
   <span class="n">Equipe</span>                 <span class="n">Nom</span>   <span class="n">Poste</span> <span class="n">Date</span> <span class="n">de</span> <span class="n">naissance</span>  <span class="n">Taille</span>  <span class="n">Poids</span>
 <span class="mi">0</span>   <span class="n">Agen</span>  <span class="n">Anton</span> <span class="n">PEIKRISHVILI</span>  <span class="n">Pilier</span>        <span class="mi">18</span><span class="o">/</span><span class="mi">09</span><span class="o">/</span><span class="mi">1987</span>     <span class="mi">183</span>    <span class="mi">122</span>
@@ -3988,7 +3988,7 @@ La bibliothèque <a class="" href="https://pandas.pydata.org/" target="_blank">p
 </code></pre></div>
 </div>
 <div class="admonition abstract">
-<p class="admonition-title">Les dernières lignes du fichier : <code>tail</code> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Les dernières lignes du fichier : <code>tail</code> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
        <span class="n">Equipe</span>            <span class="n">Nom</span>    <span class="n">Poste</span> <span class="n">Date</span> <span class="n">de</span> <span class="n">naissance</span>  <span class="n">Taille</span>  <span class="n">Poids</span>
 <span class="mi">590</span>  <span class="n">Toulouse</span>     <span class="n">Werner</span> <span class="n">KOK</span>   <span class="n">Ailier</span>        <span class="mi">27</span><span class="o">/</span><span class="mi">01</span><span class="o">/</span><span class="mi">1993</span>     <span class="mi">177</span>     <span class="mi">78</span>
@@ -4008,7 +4008,7 @@ La bibliothèque <a class="" href="https://pandas.pydata.org/" target="_blank">p
 <h3 id="31-extraction-dune-colonne">3.1 Extraction d'une colonne<a class="headerlink" href="#31-extraction-dune-colonne" title="Permanent link">⚓︎</a></h3>
 <p>L'idée générale est que l'on va créer de nouveaux objets contenant uniquement les renseignements qui nous intéressent.</p>
 <div class="admonition abstract">
-<p class="admonition-title">Extraction d'une colonne : <code>df[colonne]</code>  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Extraction d'une colonne : <code>df[colonne]</code>  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
 <p>Pour créer une liste contenant uniquement les données numériques de la colonne <code>poids</code>, il suffit d'écrire :
 <div class="highlight"><pre><span></span><code><span class="n">poids</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span>
 </code></pre></div></p>
@@ -4034,7 +4034,7 @@ La bibliothèque <a class="" href="https://pandas.pydata.org/" target="_blank">p
 <h3 id="32-tri-et-analyse-automatique-des-donnees">3.2 Tri et Analyse automatique des données<a class="headerlink" href="#32-tri-et-analyse-automatique-des-donnees" title="Permanent link">⚓︎</a></h3>
 <p>L'interprétation numérique permet à <code>pandas</code> d'analyser automatiquement les données, avec notamment la fonction <code>describe()</code>.</p>
 <div class="admonition abstract">
-<p class="admonition-title">Résumé des données numériques : <code>describe</code>  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> </p>
+<p class="admonition-title">Résumé des données numériques : <code>describe</code>  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /> </p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 <span class="n">count</span>    <span class="mf">595.000000</span>
 <span class="n">mean</span>     <span class="mf">186.559664</span>
@@ -4056,7 +4056,7 @@ La bibliothèque <a class="" href="https://pandas.pydata.org/" target="_blank">p
 <p><img alt="image" class="center" src="../data/bam.png" /></p>
 <p>Pour les données non-numériques, la commande <code>describe()</code> n'est que peu d'utilité. Elle renseigne toutefois la valeur la plus fréquente (en statistiques, le <em>mode</em> ou <em>valeur modale</em>) grâce à <code>describe().top</code>.</p>
 <div class="admonition abstract">
-<p class="admonition-title">Valeur modale de données non-numériques : <code>describe().top</code>  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> </p>
+<p class="admonition-title">Valeur modale de données non-numériques : <code>describe().top</code>  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /> </p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">top</span>
 <span class="s1">&#39;3ème ligne&#39;</span>
 </code></pre></div>
@@ -4064,7 +4064,7 @@ La bibliothèque <a class="" href="https://pandas.pydata.org/" target="_blank">p
 <p><img alt="image" class="center" src="../data/mickey.jpg" width="40%" /></p>
 <p>Pour avoir un détail plus précis de la répartition des données, on peut utiliser <code>value_counts</code> :</p>
 <div class="admonition abstract">
-<p class="admonition-title">Répartition des valeurs : <code>value_counts</code>  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> </p>
+<p class="admonition-title">Répartition des valeurs : <code>value_counts</code>  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /> </p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 <span class="mi">3</span><span class="n">ème</span> <span class="n">ligne</span>    <span class="mi">111</span>
 <span class="n">Pilier</span>        <span class="mi">110</span>
@@ -4080,14 +4080,14 @@ La bibliothèque <a class="" href="https://pandas.pydata.org/" target="_blank">p
 </div>
 <p>Il est possible aussi de trier la dataframe en lui indiquant la colonne de tri :</p>
 <div class="admonition abstract">
-<p class="admonition-title">Trier les données : <code>sort_values</code>  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> </p>
+<p class="admonition-title">Trier les données : <code>sort_values</code>  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /> </p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">classement_par_taille</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Taille&#39;</span><span class="p">,</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
 </div>
 <h2 id="4-filtres-et-recherches">4. Filtres et recherches<a class="headerlink" href="#4-filtres-et-recherches" title="Permanent link">⚓︎</a></h2>
 <p>Le principe du filtrage va être de créer une nouvelle <em>dataframe</em> ne contenant que des lignes correspondant à un certain critère.</p>
 <div class="admonition abstract">
-<p class="admonition-title">Filtrage des lignes : <code>df[booléen]</code>  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> </p>
+<p class="admonition-title">Filtrage des lignes : <code>df[booléen]</code>  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /> </p>
 <p>Comment créer une <em>dataframe</em> ne contenant que les joueurs de l'UBB ?<br />
 L'idée syntaxique est d'écrire à l'intérieur de <code>df[]</code> le <strong>test</strong> qui permettra le filtrage.
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">UBB</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Equipe&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Bordeaux&#39;</span><span class="p">]</span>
@@ -4188,7 +4188,7 @@ Le booléen <code>df['Equipe'] == 'Bordeaux'</code> doit se comprendre ainsi : o
 Prenons un exemple stupide : fabriquons un nouveau champ <code>'Poids après les vacances'</code> qui contiendra le poids des joueurs augmenté de 8 kg. 
 Ceci se fera simplement par :</p>
 <div class="admonition abstract">
-<p class="admonition-title">Rajout d'une colonne  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> </p>
+<p class="admonition-title">Rajout d'une colonne  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /> </p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids après les vacances&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">8</span>
 </code></pre></div>
 </div>
@@ -4229,7 +4229,7 @@ Ceci se fera simplement par :</p>
 <li>renvoyer le poste le plus fréquent parmi ces <code>k</code> premiers élements.</li>
 </ul>
 <div class="admonition abstract">
-<p class="admonition-title">Algorithme KNN  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> </p>
+<p class="admonition-title">Algorithme KNN  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /> </p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
