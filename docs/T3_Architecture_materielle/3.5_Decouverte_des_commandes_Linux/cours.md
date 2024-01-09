@@ -18,7 +18,6 @@ Laissez-vous guider par le jeu, mais attention !
 - je vous conseille très fortement d'écrire un plan du jeu **au fur et à mesure** que vous avancez dans votre quête. Par exemple :
 ![image](data/term_2.png){: .center}
 
-<!--
+
 ## Correction
-Voici [un corrigé](data/Terminus-corrige.pdf) établi par Charles Poulmaire, de l'académie de Versailles.
--->
+Voici [un corrigé](data/Terminus-corrige.pdf) rédigé par Charles Poulmaire, de l'académie de Versailles.
