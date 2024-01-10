@@ -1,6 +1,6 @@
 # Énigme
 
-Vous pouvez faire cette énigme sur Capytale 
+Vous pouvez faire cette énigme sur Thonny (pensez à bien travailler dans le dossier qui contient vos deux images) ou bien sur Capytale 
 [https://capytale2.ac-paris.fr/web/c/5912-1397991](https://capytale2.ac-paris.fr/web/c/5912-1397991){. target="_blank"}
 
 ## 1. À la recherche du personnage mystère
