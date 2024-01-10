@@ -431,7 +431,7 @@ Pour comprendre ces résultats, il faut travailler en binaire. Voici les mêmes 
     **Q1.** Écrire une fonction ```chiffre``` qui prendra en paramètre un mot ```mot_clair``` et un mot de passe ```cle``` **de même taille** que ```mot_clair``` et qui renvoie la chaîne de caractères obtenue en XORant ```mot_clair``` avec ```cle```.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -451,7 +451,7 @@ Pour comprendre ces résultats, il faut travailler en binaire. Voici les mêmes 
     **Q2.** Chiffrer le mot `"BONJOUR"` avec la clé `"MAURIAC"`.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -466,7 +466,7 @@ Pour comprendre ces résultats, il faut travailler en binaire. Voici les mêmes 
     **Q3.** Reprendre la chaîne de caractères précédemment obtenue et la rechiffrer à nouveau avec la clé `"MAURIAC"`. Que constate-t-on ? Etait-ce prévisible ?
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -482,7 +482,7 @@ Pour comprendre ces résultats, il faut travailler en binaire. Voici les mêmes 
     **Q4.** :skull: Résoudre le Pydéfi [La clé endommagée](https://pydefis.callicode.fr/defis/MasqueJetable/txt){. target="_blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
