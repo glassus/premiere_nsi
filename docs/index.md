@@ -14,7 +14,7 @@
 
 
 !!! abstract "Actualités"
-    - [Page sur l'orientation post-Bac](T7_Divers/10_orientation/cours/){. target="_blank"}
+    - [Page sur l'orientation post-Bac](https://glassus.github.io/terminale_nsi/T7_Divers/10_orientation/cours/){. target="_blank"}
 
 {{
 correction(False,
