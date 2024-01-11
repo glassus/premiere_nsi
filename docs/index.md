@@ -13,6 +13,9 @@
 #}
 
 
+!!! abstract "Actualités"
+    - [Page sur l'orientation post-Bac](T7_Divers/10_orientation/cours/){. target="_blank"}
+
 {{
 correction(False,
 """
