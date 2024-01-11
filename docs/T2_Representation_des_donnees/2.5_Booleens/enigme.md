@@ -68,7 +68,7 @@ Le pixel de coordonnées (30, 70) est maintenant un pixel rouge.
 ```
 
 {{
-correction(True,
+correction(False,
 """
 ??? success \"Correction\" 
     ```python linenums='1'
