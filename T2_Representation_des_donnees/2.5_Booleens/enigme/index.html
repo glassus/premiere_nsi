@@ -3815,45 +3815,6 @@ Le pixel de coordonnées (30, 70) est maintenant un pixel rouge.</p>
 <h4 id="224-sauvegarder-une-image">2.2.4 Sauvegarder une image<a class="headerlink" href="#224-sauvegarder-une-image" title="Permanent link">⚓︎</a></h4>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">img_new</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;solution.png&quot;</span><span class="p">)</span>
 </code></pre></div>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-
-<span class="n">img_myst</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;mystere.bmp&#39;</span><span class="p">)</span>
-<span class="n">img_mask</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;mask.jpg&#39;</span><span class="p">)</span>
-
-<span class="n">largeur</span> <span class="o">=</span> <span class="n">img_myst</span><span class="o">.</span><span class="n">width</span>
-<span class="n">hauteur</span> <span class="o">=</span> <span class="n">img_myst</span><span class="o">.</span><span class="n">height</span>
-
-<span class="n">img_new</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;RGB&#39;</span><span class="p">,</span> <span class="n">img_myst</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">largeur</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">hauteur</span><span class="p">):</span>
-        <span class="n">pix_myst</span> <span class="o">=</span> <span class="n">img_myst</span><span class="o">.</span><span class="n">getpixel</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
-        <span class="n">pix_mask</span> <span class="o">=</span> <span class="n">img_mask</span><span class="o">.</span><span class="n">getpixel</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
-        <span class="n">new_pix</span> <span class="o">=</span> <span class="p">(</span><span class="n">pix_myst</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">^</span> <span class="n">pix_mask</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pix_myst</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">^</span> <span class="n">pix_mask</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">pix_myst</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">^</span> <span class="n">pix_mask</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
-        <span class="n">img_new</span><span class="o">.</span><span class="n">putpixel</span><span class="p">((</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">),</span> <span class="n">new_pix</span><span class="p">)</span>
-
-<span class="n">img_new</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> 
-</code></pre></div></td></tr></table></div>
-</details>
 
   <hr>
 <div class="md-source-file">
