@@ -66,3 +66,31 @@ Le pixel de coordonnées (30, 70) est maintenant un pixel rouge.
 ```python
 >>> img_new.save("solution.png")
 ```
+
+{{
+correction(True,
+"""
+??? success \"Correction\" 
+    ```python linenums='1'
+    from PIL import Image
+
+    img_myst = Image.open('mystere.bmp')
+    img_mask = Image.open('mask.jpg')
+
+    largeur = img_myst.width
+    hauteur = img_myst.height
+
+    img_new = Image.new('RGB', img_myst.size)
+
+    for x in range(largeur):
+        for y in range(hauteur):
+            pix_myst = img_myst.getpixel((x, y))
+            pix_mask = img_mask.getpixel((x, y))
+            new_pix = (pix_myst[0] ^ pix_mask[0], pix_myst[1] ^ pix_mask[1], pix_myst[2] ^ pix_mask[2])
+            img_new.putpixel((x,y), new_pix)
+
+    img_new.show() 
+    ```
+"""
+)
+}}

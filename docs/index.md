@@ -27,10 +27,11 @@ correction(False,
 ## Thèmes en cours d'étude :
 
 - :books: [Booléens](./T2_Representation_des_donnees/2.5_Booleens/cours/)
-- [Découverte des commandes Linux à travers le jeu Terminus](./T3_Architecture_materielle/3.5_Decouverte_des_commandes_Linux/cours/){. target="_blank"}
+- :question: [Énigme](./T2_Representation_des_donnees/2.5_Booleens/enigme/)
 
 
 !!! info "*Anciens thèmes traités*"
+    - [Découverte des commandes Linux à travers le jeu Terminus](./T3_Architecture_materielle/3.5_Decouverte_des_commandes_Linux/cours/){. target="_blank"}
     - [Architecture réseau](./T3_Architecture_materielle/3.3_Architecture_reseau/cours/)
     - [Protocoles de communication](./T3_Architecture_materielle/3.4_Protocoles_de_communication/cours/)
     - [Interactions sur une page web](./T6_IHM_Web/6.1_Interactions_page_web/cours/)
