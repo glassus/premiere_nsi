@@ -107,9 +107,12 @@ Appelons ```IP_A``` et ```IP_B``` les adresses IP respectives des machines A et 
 Appelons ```M``` le masque de sous-réseau.  
 Nommons ```&``` l'opérateur de conjonction entre nombres binaires (voir [ici](https://github.com/glassus/nsi/blob/master/Premiere/Theme03_Representation_des_donnees/05_Operateurs_booleens.ipynb)): 
 
-**Propriété :** A et B appartiennent au même sous-réseau ⇔ ```IP_A & M = IP_B & M```
+!!! abstract "Propriété :heart:"
+    A et B appartiennent au même sous-réseau ⇔ ```IP_A & M = IP_B & M```
 
-Exemple : considérons trois machines A, B, C d'IP respectives ```192.168.129.10```, ```192.168.135.200``` et ```192.168.145.1```, configurées avec un masque de sous-réseau égal à ```255.255.248.0```.  
+**Exemple :**
+
+Cconsidérons trois machines A, B, C d'IP respectives ```192.168.129.10```, ```192.168.135.200``` et ```192.168.145.1```, configurées avec un masque de sous-réseau égal à ```255.255.248.0```.  
 
 |        | machine A      | machine B       | machine C     |
 |--------|----------------|-----------------|---------------|
@@ -117,12 +120,48 @@ Exemple : considérons trois machines A, B, C d'IP respectives ```192.168.129.10
 | M      | 255.255.248.0  |  255.255.248.0  | 255.255.248.0 |
 | IP & M | 192.168.128.0  |  192.168.128.0  | 192.168.144.0 |
 
-rappel des règles de calcul :
+*Rappel des règles de calcul :*
 
 - pour tout octet ```x```, ```x & 255 = x```  et ```x & 0 = 0```.
 - ```129 & 248``` s'écrit en binaire ```10000001 & 11111000``` qui vaut ```10000000```, soit ```128``` en décimal.
 
 Conclusion : les machines A et B sont sous le même sous-réseau, mais pas la machine C.
+
+??? abstract "Exercice de bac"
+    Faire les questions **Q1.** et **Q2.** de l'exercice 5 du sujet [La Réunion J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_LeReunion_J1.pdf){. target="_blank"}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.a.\" 
+        Une adresse IPv4 se code à l'aide de 4 octets.
+    """
+    )
+    }}
+
+ 
+        
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.b.\" 
+        Le PC3 a pour adresse ```172.150.4.30 / 24```. Cela signfie que son masque, en notation CIDR, est 24. Ses 24 premiers bits sont donc à 1. Cela correspond au masque ```255.255.255.0``` en notation décimale.
+    """
+    )
+    }}
+
+        
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2.\" 
+        ![image](data/ex5LR2022.png){: .center}
+    """
+    )
+    }}
+         
+
 
 #### 2.1.3 Cohérence entre les deux explications
 Lorsqu'un masque de sous-réseau est égal à ```255.255.255.0```, l'opération de conjonction ```&``` avec chaque IP ne laissera intacts que les 3 premiers octets, le dernier sera égal à 0. Donc si deux adresses s'écrivent ```A.B.C.X``` et   ```A.B.C.Y```, elles appartiendront forcément au même sous-réseau (typiquement, c'est le cas de ```192.168.0.33``` et ```192.168.0.1```).

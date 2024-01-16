@@ -28,7 +28,7 @@ correction(False,
 
 
 ## Thèmes en cours d'étude :
-
+- [Introduction extremums et moyennes](./T4_Algorithmique/4.1_Extremums_et_moyennes/intro_cours/)
 - :books: [Booléens](./T2_Representation_des_donnees/2.5_Booleens/cours/)
 - :question: [Énigme](./T2_Representation_des_donnees/2.5_Booleens/enigme/)
 
