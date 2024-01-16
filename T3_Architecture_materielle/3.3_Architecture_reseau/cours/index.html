@@ -4031,6 +4031,18 @@ Nommons <code>&amp;</code> l'opérateur de conjonction entre nombres binaires (v
 <details class="abstract">
 <summary>Exercice de bac</summary>
 <p>Faire les questions <strong>Q1.</strong> et <strong>Q2.</strong> de l'exercice 5 du sujet <a class="" href="https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_LeReunion_J1.pdf" target="_blank">La Réunion J1 2022</a></p>
+<details class="success">
+<summary>Correction Q1.a.</summary>
+<p>Une adresse IPv4 se code à l'aide de 4 octets.</p>
+</details>
+<details class="success">
+<summary>Correction Q1.b.</summary>
+<p>Le PC3 a pour adresse <code>172.150.4.30 / 24</code>. Cela signfie que son masque, en notation CIDR, est 24. Ses 24 premiers bits sont donc à 1. Cela correspond au masque <code>255.255.255.0</code> en notation décimale.</p>
+</details>
+<details class="success">
+<summary>Correction Q2.</summary>
+<p><img alt="image" class="center" src="../data/ex5LR2022.png" /></p>
+</details>
 </details>
 <h4 id="213-coherence-entre-les-deux-explications">2.1.3 Cohérence entre les deux explications<a class="headerlink" href="#213-coherence-entre-les-deux-explications" title="Permanent link">⚓︎</a></h4>
 <p>Lorsqu'un masque de sous-réseau est égal à <code>255.255.255.0</code>, l'opération de conjonction <code>&amp;</code> avec chaque IP ne laissera intacts que les 3 premiers octets, le dernier sera égal à 0. Donc si deux adresses s'écrivent <code>A.B.C.X</code> et   <code>A.B.C.Y</code>, elles appartiendront forcément au même sous-réseau (typiquement, c'est le cas de <code>192.168.0.33</code> et <code>192.168.0.1</code>).</p>
