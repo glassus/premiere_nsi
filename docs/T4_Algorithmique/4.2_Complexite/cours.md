@@ -66,8 +66,8 @@ Dans **les deux cas** l'algorithme a la même complexité (linéaire donc). Ce q
 
 *Exemple :* 
 ```python
->>> fabrique(7)
-['ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok']
+>>> mesure(100)
+3.5762786865234375e-05
 ```
 
 :arrow_right: Observer la variation du temps d'exécution en fonction du paramètre d'entrée.
