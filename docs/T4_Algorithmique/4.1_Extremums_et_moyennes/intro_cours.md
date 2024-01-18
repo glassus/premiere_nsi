@@ -177,3 +177,12 @@ Utilisation :
         ```
 
 
+## 3. Algorithme de recherche de maximum avec indice
+
+On cherche à coder une fonction `recherche_max_et_indice` qui prend en paramètre une liste `tab` et qui renvoie le plus grand élément de cette liste ainsi que l'indice de ce maximum dans la liste (si il est présent plusieurs fois, un seul indice sera renvoyé). L'usage de la fonction `max` est interdit.
+
+Utilisation :
+```python
+>>> recherche_max_et_indice([4, 1, 3, 8, 3, 8, 1])
+  8, 5
+```

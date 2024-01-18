@@ -1,6 +1,14 @@
 # Vers le tri par sélection
 
 
+:arrow_right: **pour tester votre code :**
+```python
+>>> ma_liste = [7, 5, 2, 8, 1, 4]
+>>> tri_selection(ma_liste)
+>>> ma_liste
+[1, 2, 4, 5, 7, 8]
+```
+
 
 
 ??? note "Code à trous :star: :star: :star: :star:" 
