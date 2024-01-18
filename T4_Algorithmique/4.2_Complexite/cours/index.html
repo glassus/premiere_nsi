@@ -3929,29 +3929,17 @@ Si un employé B met 20 secondes par enveloppe, on aura <span class="arithmatex"
 <p>Ici, la fonction <span class="arithmatex">\(f_A\)</span> serait <span class="arithmatex">\(f_A(x)=3x\)</span>, la fonction <span class="arithmatex">\(f_B\)</span> serait <span class="arithmatex">\(f_B(x)=20x\)</span></p>
 <p>Dans <strong>les deux cas</strong> l'algorithme a la même complexité (linéaire donc). Ce qui compte est le fait que pour chacun des employés, <strong>avoir deux fois plus d'enveloppes prendrait deux fois plus de temps</strong>.</p>
 <h3 id="14-verification-experimentale">1.4 Vérification expérimentale<a class="headerlink" href="#14-verification-experimentale" title="Permanent link">⚓︎</a></h3>
-<p>On considère la fonction ci-dessous :</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">fabrique</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="n">liste</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="n">liste</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;ok&quot;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">liste</span>
-</code></pre></div>
-<p>Le code ci-dessous va mesurer le temps d'exécution de cette fonction avec deux paramètres différents : la valeur 400 puis la valeur 800.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
-<span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-<span class="n">lstA</span> <span class="o">=</span> <span class="n">fabrique</span><span class="p">(</span><span class="mi">400</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;temps pour une liste de taille 400 :&quot;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span>
-<span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-<span class="n">lstB</span> <span class="o">=</span> <span class="n">fabrique</span><span class="p">(</span><span class="mi">800</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;temps pour une liste de taille 800 :&quot;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span>
-</code></pre></div>
-<p>Résultats de l'exécution :</p>
-<div class="highlight"><pre><span></span><code><span class="n">temps</span> <span class="n">pour</span> <span class="n">une</span> <span class="n">liste</span> <span class="n">de</span> <span class="n">taille</span> <span class="mi">400</span> <span class="p">:</span> <span class="mf">2.384185791015625e-05</span>
-<span class="n">temps</span> <span class="n">pour</span> <span class="n">une</span> <span class="n">liste</span> <span class="n">de</span> <span class="n">taille</span> <span class="mi">800</span> <span class="p">:</span> <span class="mf">4.2438507080078125e-05</span>
-</code></pre></div>
-<p><strong>Interprétation :</strong><br />
-Doubler la taille du paramètre d'entrée a eu pour effet de doubler (quasiment) le temps d'exécution. Cela semble indiquer que la complexité de cette fonction est <strong>linéaire</strong>.<br />
-En observant l'algorithme, nous pouvons confirmer cette supposition : le nombre d'opérations de la boucle <code>for</code> est égal au paramètre <code>n</code>, et est donc directement proportionnel à la valeur de ce paramètre.</p>
+<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> Construire une fonction <code>fabrique</code> qui prend en paramètre un entier <code>n</code> et qui renvoie une liste composée de <code>n</code> fois le mot <code>'ok'</code>. </p>
+<p><em>Exemple :</em> 
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">fabrique</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="p">[</span><span class="s1">&#39;ok&#39;</span><span class="p">,</span> <span class="s1">&#39;ok&#39;</span><span class="p">,</span> <span class="s1">&#39;ok&#39;</span><span class="p">,</span> <span class="s1">&#39;ok&#39;</span><span class="p">,</span> <span class="s1">&#39;ok&#39;</span><span class="p">,</span> <span class="s1">&#39;ok&#39;</span><span class="p">,</span> <span class="s1">&#39;ok&#39;</span><span class="p">]</span>
+</code></pre></div></p>
+<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> Utiliser le module <code>time</code> (et sa fonction <code>time.time()</code>, qui permet de donner le nombre de secondes écoulées depuis le 01/01/1970 à 00h00) pour créer une fonction <code>mesure</code> qui prend en paramètre un entier <code>n</code> et qui mesure le temps mis d'exécution de l'appel <code>fabrique(n)</code>.</p>
+<p><em>Exemple :</em> 
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">fabrique</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="p">[</span><span class="s1">&#39;ok&#39;</span><span class="p">,</span> <span class="s1">&#39;ok&#39;</span><span class="p">,</span> <span class="s1">&#39;ok&#39;</span><span class="p">,</span> <span class="s1">&#39;ok&#39;</span><span class="p">,</span> <span class="s1">&#39;ok&#39;</span><span class="p">,</span> <span class="s1">&#39;ok&#39;</span><span class="p">,</span> <span class="s1">&#39;ok&#39;</span><span class="p">]</span>
+</code></pre></div></p>
+<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> Observer la variation du temps d'exécution en fonction du paramètre d'entrée.</p>
 <h2 id="2-complexite-quadratique">2. Complexité quadratique<a class="headerlink" href="#2-complexite-quadratique" title="Permanent link">⚓︎</a></h2>
 <h3 id="21-exemple">2.1 Exemple<a class="headerlink" href="#21-exemple" title="Permanent link">⚓︎</a></h3>
 <div class="admonition aide">
@@ -3980,28 +3968,12 @@ Combien de temps cela va-t-il vous prendre pour tondre le terrain de votre voisi
 </div>
 <p>Les algorithmes quadratiques sont moins «intéressants» que les algorithmes linéaires, car ils vont consommer beaucoup plus de ressources. Lors de l'élaboration d'un algorithme, on va toujours essayer de trouver l'algorithme ayant la complexité la plus faible possible.</p>
 <h3 id="23-verification-experimentale">2.3 Vérification expérimentale<a class="headerlink" href="#23-verification-experimentale" title="Permanent link">⚓︎</a></h3>
-<p>On considère la fonction ci-dessous :</p>
+<p>Effectuer des mesures de temps d'exécution pour la fonction ci-dessous :</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">tables</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
             <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
 </code></pre></div>
-<p>Le code ci-dessous va mesurer le temps d'exécution de cette fonction avec deux paramètres différents : la valeur 100 puis la valeur 200.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
-<span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-<span class="n">tables</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;temps pour n = 100 :&quot;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span>
-<span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-<span class="n">tables</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;temps pour n = 200 : &quot;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span>
-</code></pre></div>
-<p>Résultats de l'exécution :</p>
-<div class="highlight"><pre><span></span><code><span class="n">temps</span> <span class="n">pour</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">100</span> <span class="p">:</span> <span class="mf">0.0003533363342285156</span>
-<span class="n">temps</span> <span class="n">pour</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">200</span> <span class="p">:</span> <span class="mf">0.0014693737030029297</span>
-</code></pre></div>
-<p><strong>Interprétation :</strong><br />
-Doubler la taille du paramètre d'entrée a eu pour effet de <strong>quadrupler</strong> le temps d'exécution. Cela semble indiquer que la complexité de cette fonction est <strong>quadratique</strong>, car <span class="arithmatex">\(2^2=4\)</span>.  </p>
-<p>En observant l'algorithme, nous pouvons confirmer cette supposition : le nombre d'opérations des deux boucles <code>for</code> est égal à <code>n^2</code>.</p>
 <h2 id="3-complexite-constante">3. Complexité constante<a class="headerlink" href="#3-complexite-constante" title="Permanent link">⚓︎</a></h2>
 <p>Il peut arriver (mais c'est rare) que la complexité d'un algorithme soit indépendante de la taille des données à traiter.<br />
 Dans ce cas, c'est souvent une très bonne nouvelle.</p>
@@ -4023,7 +3995,7 @@ Dans ce cas, c'est souvent une très bonne nouvelle.</p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">12 décembre 2021</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">18 janvier 2024</span>
       
     
   </small>
