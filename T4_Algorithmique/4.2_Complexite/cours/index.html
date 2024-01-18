@@ -3936,8 +3936,8 @@ Si un employé B met 20 secondes par enveloppe, on aura <span class="arithmatex"
 </code></pre></div></p>
 <p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> Utiliser le module <code>time</code> (et sa fonction <code>time.time()</code>, qui permet de donner le nombre de secondes écoulées depuis le 01/01/1970 à 00h00) pour créer une fonction <code>mesure</code> qui prend en paramètre un entier <code>n</code> et qui mesure le temps mis d'exécution de l'appel <code>fabrique(n)</code>.</p>
 <p><em>Exemple :</em> 
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">fabrique</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
-<span class="p">[</span><span class="s1">&#39;ok&#39;</span><span class="p">,</span> <span class="s1">&#39;ok&#39;</span><span class="p">,</span> <span class="s1">&#39;ok&#39;</span><span class="p">,</span> <span class="s1">&#39;ok&#39;</span><span class="p">,</span> <span class="s1">&#39;ok&#39;</span><span class="p">,</span> <span class="s1">&#39;ok&#39;</span><span class="p">,</span> <span class="s1">&#39;ok&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">mesure</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="mf">3.5762786865234375e-05</span>
 </code></pre></div></p>
 <p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> Observer la variation du temps d'exécution en fonction du paramètre d'entrée.</p>
 <h2 id="2-complexite-quadratique">2. Complexité quadratique<a class="headerlink" href="#2-complexite-quadratique" title="Permanent link">⚓︎</a></h2>
