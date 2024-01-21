@@ -53,7 +53,7 @@ Ici, la fonction $f_A$ serait $f_A(x)=3x$, la fonction $f_B$ serait $f_B(x)=20x$
 Dans **les deux cas** l'algorithme a la même complexité (linéaire donc). Ce qui compte est le fait que pour chacun des employés, **avoir deux fois plus d'enveloppes prendrait deux fois plus de temps**.
 
 ### 1.4 Vérification expérimentale 
-
+{#
 :arrow_right: Construire une fonction ```fabrique``` qui prend en paramètre un entier ```n``` et qui renvoie une liste composée de ```n``` fois le mot ```'ok'```. 
          
 *Exemple :* 
@@ -72,10 +72,10 @@ Dans **les deux cas** l'algorithme a la même complexité (linéaire donc). Ce q
 
 :arrow_right: Observer la variation du temps d'exécution en fonction du paramètre d'entrée.
 
+#}
 
 
 
-{#
 On considère la fonction ci-dessous :
 
 
@@ -110,7 +110,7 @@ temps pour une liste de taille 800 : 4.2438507080078125e-05
 **Interprétation :**  
 Doubler la taille du paramètre d'entrée a eu pour effet de doubler (quasiment) le temps d'exécution. Cela semble indiquer que la complexité de cette fonction est **linéaire**.  
 En observant l'algorithme, nous pouvons confirmer cette supposition : le nombre d'opérations de la boucle ```for``` est égal au paramètre ```n```, et est donc directement proportionnel à la valeur de ce paramètre.
-#}
+
 
 ## 2. Complexité quadratique
 
@@ -154,7 +154,7 @@ def tables(n):
             c = a * b
 
 ```
-{#
+
 Le code ci-dessous va mesurer le temps d'exécution de cette fonction avec deux paramètres différents : la valeur 100 puis la valeur 200.
 
 
@@ -180,7 +180,7 @@ temps pour n = 200 : 0.0014693737030029297
 Doubler la taille du paramètre d'entrée a eu pour effet de **quadrupler** le temps d'exécution. Cela semble indiquer que la complexité de cette fonction est **quadratique**, car $2^2=4$.  
 
 En observant l'algorithme, nous pouvons confirmer cette supposition : le nombre d'opérations des deux boucles ```for``` est égal à ```n^2```.
-#}
+
 
 ## 3. Complexité constante
 
