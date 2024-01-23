@@ -157,7 +157,7 @@ Voici donc un ordre de grandeur de ce que *devraient* être les temps nécessair
         def tri_selection(lst):
             for i in range(len(lst)-1):
                 i_min = i
-                for k in range(i, len(lst)):
+                for k in range(i+1, len(lst)):
                     if lst[k] < lst[i_min]:
                         i_min = k
                 lst[i_min], lst[i] = lst[i], lst[i_min]
