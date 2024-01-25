@@ -28,14 +28,17 @@ correction(False,
 
 
 ## Thèmes en cours d'étude :
+- :books: [Codage des caractères](./T2_Representation_des_donnees/2.6_Codage_caracteres/cours/)  
+- :books: [Tri par insertion](./T4_Algorithmique/4.3_Tri_par_insertion/cours/) 
 - :books: [Tri par sélection](./T4_Algorithmique/4.4_Tri_par_selection/cours/)
 - :books: [Complexité](./T4_Algorithmique/4.2_Complexite/cours/)
-- :books: [Extremums et moyennes](./T4_Algorithmique/4.1_Extremums_et_moyennes/cours/)
-- :books: [Booléens](./T2_Representation_des_donnees/2.5_Booleens/cours/)
-- :question: [Énigme](./T2_Representation_des_donnees/2.5_Booleens/enigme/)
+
 
 
 !!! info "*Anciens thèmes traités*"
+    - [Extremums et moyennes](./T4_Algorithmique/4.1_Extremums_et_moyennes/cours/)
+    - [Booléens](./T2_Representation_des_donnees/2.5_Booleens/cours/)
+    - [Énigme](./T2_Representation_des_donnees/2.5_Booleens/enigme/)
     - [Découverte des commandes Linux à travers le jeu Terminus](./T3_Architecture_materielle/3.5_Decouverte_des_commandes_Linux/cours/){. target="_blank"}
     - [Architecture réseau](./T3_Architecture_materielle/3.3_Architecture_reseau/cours/)
     - [Protocoles de communication](./T3_Architecture_materielle/3.4_Protocoles_de_communication/cours/)

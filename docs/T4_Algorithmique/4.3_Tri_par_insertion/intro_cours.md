@@ -1,7 +1,18 @@
 # Vers le tri par insertion
 
+!!! tip "Principe de l'algorithme"
+    Pour toutes les valeurs, en commençant par la deuxième :
+
+    - Tant qu'on trouve à gauche une valeur supérieure et qu'on n'est pas revenu à la première valeur, on échange ces deux valeurs.
 
 
+Pour tester son code :
+```python
+>>> maliste = [7, 5, 2, 8, 1, 4]
+>>> tri_insertion(maliste)
+>>> maliste
+[1, 2, 4, 5, 7, 8]
+```
 
 ??? note "Code à trous :star: :star: :star: :star:"
     ```python linenums='1'
@@ -9,7 +20,6 @@
         '''trie en place la liste lst donnée en paramètre'''
                            
     ``` 
-
 
 
 ??? note "Code à trous :star: :star: :star: :octicons-star-24: " 

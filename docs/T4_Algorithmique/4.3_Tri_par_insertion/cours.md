@@ -33,6 +33,7 @@ Pour toutes les valeurs, en commençant par la deuxième :
 
 
 !!! note "Tri par insertion (version simple) :heart:"
+    {#
     ```python linenums='1'
     def tri_insertion(lst):
         '''trie en place la liste lst donnée en paramètre'''
@@ -50,6 +51,8 @@ Pour toutes les valeurs, en commençant par la deuxième :
     4. On échange de place avec l'élément précédent.
     5. Notre élément est maintenant à l'indice ```k - 1```.  
     La boucle peut continuer.
+    #}
+
 
 *Application :*
 
@@ -113,41 +116,7 @@ Observez l'animation ci-dessous et comparer avec la version initiale.
 
 Lire le [cours sur la complexité](../../4.2_Complexite/cours/) et proposer des mesures expérimentales pour déterminer la complexité du tri par insertion.
 
-<!--
-Pour pouvoir utiliser la fonction `%timeit`, nous allons modifier légèrement notre algorithme de tri : comme la fonction `%timeit` effectue un grand nombre d'appel à la fonction `tri()`, la liste serait triée dès le premier appel et les autres appels essaieraient donc de tri une liste *déjà triée*. 
 
-
-```python
-def tri(L) :
-    l = list(L) # pour ne pas modifier la liste passée en argument.
-    for k ...
-```
-
-
-```python
-a = [k for k in range(100,0,-1)] #on se place dans le pire des cas : une liste triée dans l'ordre décroissant
-```
-
-
-```python
-b = [k for k in range(200,0,-1)] #on se place dans le pire des cas : une liste triée dans l'ordre décroissant
-```
-
-
-```python
-%timeit tri(a)
-```
-
-
-```python
-%timeit tri(b)
-```
-
-En comparant les temps de tri des listes `a` et `b`, que pouvez-vous supposer sur la complexité du tri par insertion ?
-
-Une liste à trier 2 fois plus longue prend 4 fois plus de temps : l'algorithme semble de complexité **quadratique**.
-
--->
 
 ### 3.2 Démonstration
 Dénombrons le nombre d'opérations dans le pire des cas, pour une liste de taille $n$.
@@ -210,7 +179,15 @@ Ici, la propriété serait : « Quand $k$ varie entre 0 et `longueur(liste) -1`,
 
 
 
+## 4. Bonus : comparaison des algorithmes de tri 
 
+
+Une jolie animation permettant de comparer les tris :  
+*(on peut y constater que le tri par sélection met toujours autant de temps pour trier la liste, quelque soit son état initial)*
+
+![image](data/comparaisons.gif){: .center}
+
+Issue de ce [site](https://www.toptal.com/developers/sorting-algorithms){. target="_blank"}.
 
 
 ---
