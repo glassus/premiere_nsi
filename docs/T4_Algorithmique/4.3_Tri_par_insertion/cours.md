@@ -33,7 +33,7 @@ Pour toutes les valeurs, en commençant par la deuxième :
 
 
 !!! note "Tri par insertion (version simple) :heart:"
-    {#
+    
     ```python linenums='1'
     def tri_insertion(lst):
         '''trie en place la liste lst donnée en paramètre'''
@@ -51,7 +51,7 @@ Pour toutes les valeurs, en commençant par la deuxième :
     4. On échange de place avec l'élément précédent.
     5. Notre élément est maintenant à l'indice ```k - 1```.  
     La boucle peut continuer.
-    #}
+    
 
 
 *Application :*
