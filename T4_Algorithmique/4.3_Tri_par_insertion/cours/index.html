@@ -3953,6 +3953,29 @@ Voici le fonctionnement de l'algorithme :  </p>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Tri par insertion (version simple) <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">tri_insertion</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;trie en place la liste lst donnée en paramètre&#39;&#39;&#39;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)):</span>                 <span class="c1">#(1)</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="n">i</span>                                    <span class="c1">#(2)</span>
+        <span class="k">while</span> <span class="n">k</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="p">:</span>      <span class="c1">#(3)</span>
+            <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>  <span class="c1">#(4)    </span>
+            <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">-</span> <span class="mi">1</span>                            <span class="c1">#(5)   </span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>On commence à 1 et non pas à 0.</li>
+<li>On «duplique» la variable <code>i</code> en une variable <code>k</code>.<br />
+On se positionne sur l'élément d'indice <code>k</code>. On va faire «reculer» cet élément tant que c'est possible. On ne touche pas à <code>i</code>. </li>
+<li>Tant qu'on n'est pas revenu au début de la liste et qu'il y a une valeur plus grande à gauche.</li>
+<li>On échange de place avec l'élément précédent.</li>
+<li>Notre élément est maintenant à l'indice <code>k - 1</code>.<br />
+La boucle peut continuer.</li>
+</ol>
 </div>
 <p><em>Application :</em></p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">maliste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
