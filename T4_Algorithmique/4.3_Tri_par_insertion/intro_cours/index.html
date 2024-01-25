@@ -3767,6 +3767,19 @@
 
 
 <h1 id="vers-le-tri-par-insertion">Vers le tri par insertion<a class="headerlink" href="#vers-le-tri-par-insertion" title="Permanent link">⚓︎</a></h1>
+<div class="admonition tip">
+<p class="admonition-title">Principe de l'algorithme</p>
+<p>Pour toutes les valeurs, en commençant par la deuxième :</p>
+<ul>
+<li>Tant qu'on trouve à gauche une valeur supérieure et qu'on n'est pas revenu à la première valeur, on échange ces deux valeurs.</li>
+</ul>
+</div>
+<p>Pour tester son code :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">maliste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tri_insertion</span><span class="p">(</span><span class="n">maliste</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">maliste</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+</code></pre></div></p>
 <details class="note">
 <summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /></summary>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -3831,7 +3844,7 @@
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">20 février 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">25 janvier 2024</span>
       
     
   </small>

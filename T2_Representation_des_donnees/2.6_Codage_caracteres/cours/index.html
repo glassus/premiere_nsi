@@ -3870,7 +3870,7 @@
 <p>En ASCII, 127 <em>«points de code»</em> (nombres associés aux caractères) sont disponibles. Les caractères sont donc codés sur <strong>7 bits</strong>.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Aide</label><label for="__tabbed_1_3">Correction</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Aide</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Décoder l'expression suivante, écrite en ASCII :</p>
@@ -3881,15 +3881,6 @@
 <li>la fonction <code>split(" ")</code> permet de décomposer une chaine de caractères en une liste, en se servant de l'espace <code>" "</code> comme caractère séparateur.</li>
 <li><code>int("1101100",2)</code> permet de récupérer facilement la valeur en base 10 du nombre binaire <code>1101100</code>.</li>
 </ul>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;1101100 1100101 1110011 100000 1001110 1010011 1001001 100000 1100011 100111 1100101 1110011 1110100 100000 1101100 1100101 1110011 100000 1101101 1100101 1101001 1101100 1101100 1100101 1110101 1110010 1110011&quot;</span>
-<span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">msg</span> <span class="p">:</span>
-    <span class="n">s</span> <span class="o">+=</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-</code></pre></div>
 </div>
 </div>
 </div>
@@ -3957,41 +3948,9 @@ D'autres encodages plus légers, mais plus complexes, sont donc proposés :</p>
 <div class="admonition abstract">
 <p class="admonition-title">Pourquoi le caractère <code>é</code> en UTF-8 devient-il <code>Ã©</code> en ISO 8859-15 ? </p>
 <p><strong>Q1.</strong> Grâce à la fonction <code>ord</code> puis à la fonction <code>bin</code>, écrire en binaire le nombre associé au caractère <code>é</code> en UTF-8.</p>
-<details class="tip">
-<summary>Correction</summary>
-<p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;é&#39;</span><span class="p">)</span>
-<span class="mi">233</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="mi">233</span><span class="p">)</span>
-<span class="s1">&#39;0b11101001&#39;</span>
-</code></pre></div>
-Donc en UTF-8, <code>é</code> est associé au nombre <code>11101001</code>.</p>
-</details>
 <p><strong>Q2.</strong> D'après l'explication de fonctionnement de l'encodage adaptatif de l'UTF-8 (voir ci-dessus), les 8 bits nécessaires à l'encodage de <code>é</code> en UTF-8 vont être «encapsulés» dans 2 octets de la forme <code>110XXXXX 10XXXXXX</code>, où les 11 <code>X</code> représentent les 11 bits d'information disponibles. Écrire ces 2 octets en complétant si nécessaire avec des <code>0</code> à gauche.</p>
-<details class="tip">
-<summary>Correction</summary>
-<p>Sur 11 bits, le nombre <code>11101001</code> va s'écrire <code>00011101001</code>. En séparant ces 11 bits en deux groupes de 5 bits et 6 bits (<code>00011</code>et <code>101001</code>), et en les encapsulant, on obtient les deux octets <code>11000011 10101001</code>.</p>
-</details>
 <p><strong>Q3.</strong> Convertir les deux octets obtenus en notation décimale (grâce à <code>int</code>) puis en hexadécimal (grâce à <code>hex</code>).</p>
-<details class="tip">
-<summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;11000011&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="mi">195</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">hex</span><span class="p">(</span><span class="mi">195</span><span class="p">)</span>
-<span class="s1">&#39;0xc3&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;10101001&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="mi">169</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">hex</span><span class="p">(</span><span class="mi">169</span><span class="p">)</span>
-<span class="s1">&#39;0xa9&#39;</span>
-</code></pre></div>
-</details>
 <p><strong>Q4.</strong> Si un logiciel considère <strong>à tort</strong> que les deux octets servant à encoder le <code>é</code> en UTF-8 servent à encoder deux caractères en ISO 8859-15, quels seront ces deux caractères ?</p>
-<details class="tip">
-<summary>Correction</summary>
-<p>Le premier octet, <code>c3</code> en hexadécimal, sera perçu en ISO 8859-15 comme le caractère <code>Ã</code>.<br />
-Le deuxième octet, <code>a9</code> en hexadécimal, sera perçu en ISO 8859-15 comme la lettre <code>©</code>.  </p>
-<p>Finalement, ce qui aurait dû être un <code>é</code> en UTF-8 se retrouvera être un <code>Ã©</code> en ISO 8859-15. </p>
-<p><img alt="image" class="center" src="../data/iso-latin.png" /></p>
-</details>
 </div>
 <h2 id="utilisation-grandissante-de-lencodage-utf-8">Utilisation grandissante de l'encodage UTF-8<a class="headerlink" href="#utilisation-grandissante-de-lencodage-utf-8" title="Permanent link">⚓︎</a></h2>
 <p>La majorité des sites internet utilisent maintenant l'UTF-8, tout comme les systèmes d'exploitation récents.
@@ -4002,7 +3961,7 @@ Le deuxième octet, <code>a9</code> en hexadécimal, sera perçu en ISO 8859-15 
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">7 mars 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">25 janvier 2024</span>
       
     
   </small>

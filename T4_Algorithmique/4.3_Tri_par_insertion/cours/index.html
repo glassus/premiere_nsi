@@ -2370,6 +2370,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#4-bonus-comparaison-des-algorithmes-de-tri" class="md-nav__link">
+    4. Bonus : comparaison des algorithmes de tri
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#bibliographie" class="md-nav__link">
     Bibliographie
   </a>
@@ -3946,29 +3953,6 @@ Voici le fonctionnement de l'algorithme :  </p>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Tri par insertion (version simple) <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">tri_insertion</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;trie en place la liste lst donnée en paramètre&#39;&#39;&#39;</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)):</span>                 <span class="c1">#(1)</span>
-        <span class="n">k</span> <span class="o">=</span> <span class="n">i</span>                                    <span class="c1">#(2)</span>
-        <span class="k">while</span> <span class="n">k</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="p">:</span>      <span class="c1">#(3)</span>
-            <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>  <span class="c1">#(4)    </span>
-            <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">-</span> <span class="mi">1</span>                            <span class="c1">#(5)   </span>
-</code></pre></div></td></tr></table></div>
-<ol>
-<li>On commence à 1 et non pas à 0.</li>
-<li>On «duplique» la variable <code>i</code> en une variable <code>k</code>.<br />
-On se positionne sur l'élément d'indice <code>k</code>. On va faire «reculer» cet élément tant que c'est possible. On ne touche pas à <code>i</code>. </li>
-<li>Tant qu'on n'est pas revenu au début de la liste et qu'il y a une valeur plus grande à gauche.</li>
-<li>On échange de place avec l'élément précédent.</li>
-<li>Notre élément est maintenant à l'indice <code>k - 1</code>.<br />
-La boucle peut continuer.</li>
-</ol>
 </div>
 <p><em>Application :</em></p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">maliste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
@@ -4026,37 +4010,6 @@ La boucle peut continuer.</li>
 <h2 id="3-complexite-de-lalgorithme">3. Complexité de l'algorithme<a class="headerlink" href="#3-complexite-de-lalgorithme" title="Permanent link">⚓︎</a></h2>
 <h3 id="31-etude-experimentale">3.1  Étude expérimentale<a class="headerlink" href="#31-etude-experimentale" title="Permanent link">⚓︎</a></h3>
 <p>Lire le <a href="../../4.2_Complexite/cours/">cours sur la complexité</a> et proposer des mesures expérimentales pour déterminer la complexité du tri par insertion.</p>
-<!--
-Pour pouvoir utiliser la fonction `%timeit`, nous allons modifier légèrement notre algorithme de tri : comme la fonction `%timeit` effectue un grand nombre d'appel à la fonction `tri()`, la liste serait triée dès le premier appel et les autres appels essaieraient donc de tri une liste *déjà triée*. 
-
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">tri</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="p">:</span>
-    <span class="n">l</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="c1"># pour ne pas modifier la liste passée en argument.</span>
-    <span class="k">for</span> <span class="n">k</span> <span class="o">...</span>
-</code></pre></div>
-
-
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)]</span> <span class="c1">#on se place dans le pire des cas : une liste triée dans l&#39;ordre décroissant</span>
-</code></pre></div>
-
-
-<div class="highlight"><pre><span></span><code><span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)]</span> <span class="c1">#on se place dans le pire des cas : une liste triée dans l&#39;ordre décroissant</span>
-</code></pre></div>
-
-
-<div class="highlight"><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="n">tri</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-</code></pre></div>
-
-
-<div class="highlight"><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="n">tri</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-</code></pre></div>
-
-En comparant les temps de tri des listes `a` et `b`, que pouvez-vous supposer sur la complexité du tri par insertion ?
-
-Une liste à trier 2 fois plus longue prend 4 fois plus de temps : l'algorithme semble de complexité **quadratique**.
-
--->
-
 <h3 id="32-demonstration">3.2 Démonstration<a class="headerlink" href="#32-demonstration" title="Permanent link">⚓︎</a></h3>
 <p>Dénombrons le nombre d'opérations dans le pire des cas, pour une liste de taille <span class="arithmatex">\(n\)</span>.</p>
 <ul>
@@ -4104,6 +4057,11 @@ une propriété <span class="arithmatex">\(P(n)\)</span> est vraie si :</p>
 <li>quand <span class="arithmatex">\(k\)</span> vaut 0, on place le minimum <span class="arithmatex">\(m_0\)</span> de la liste en position 0, la sous-liste [<span class="arithmatex">\(m_0\)</span>] est donc triée.</li>
 <li>si la sous-liste de <span class="arithmatex">\(k\)</span> éléments [<span class="arithmatex">\(m_0, m_1, ..., m_{k-1}\)</span>] est triée, l'algorithme rajoute en dernière position de la liste le minimum de la sous-liste restante, dont tous les éléments sont supérieurs au maximum de la sous-liste de <span class="arithmatex">\(k\)</span> éléments. La sous-liste de <span class="arithmatex">\(k+1\)</span> éléments [<span class="arithmatex">\(m_0, m_1, ..., m_{k-1}, m_k\)</span>] est donc elle aussi triée.</li>
 </ul>
+<h2 id="4-bonus-comparaison-des-algorithmes-de-tri">4. Bonus : comparaison des algorithmes de tri<a class="headerlink" href="#4-bonus-comparaison-des-algorithmes-de-tri" title="Permanent link">⚓︎</a></h2>
+<p>Une jolie animation permettant de comparer les tris :<br />
+<em>(on peut y constater que le tri par sélection met toujours autant de temps pour trier la liste, quelque soit son état initial)</em></p>
+<p><img alt="image" class="center" src="../data/comparaisons.gif" /></p>
+<p>Issue de ce <a class="" href="https://www.toptal.com/developers/sorting-algorithms" target="_blank">site</a>.</p>
 <hr />
 <h2 id="bibliographie">Bibliographie<a class="headerlink" href="#bibliographie" title="Permanent link">⚓︎</a></h2>
 <ul>
@@ -4116,7 +4074,7 @@ une propriété <span class="arithmatex">\(P(n)\)</span> est vraie si :</p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">21 février 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">25 janvier 2024</span>
       
     
   </small>
