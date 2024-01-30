@@ -3948,6 +3948,15 @@ D'autres encodages plus légers, mais plus complexes, sont donc proposés :</p>
 <div class="admonition abstract">
 <p class="admonition-title">Pourquoi le caractère <code>é</code> en UTF-8 devient-il <code>Ã©</code> en ISO 8859-15 ? </p>
 <p><strong>Q1.</strong> Grâce à la fonction <code>ord</code> puis à la fonction <code>bin</code>, écrire en binaire le nombre associé au caractère <code>é</code> en UTF-8.</p>
+<details class="success">
+<summary>Correction</summary>
+<p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;é&#39;</span><span class="p">)</span>
+<span class="mi">233</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="mi">233</span><span class="p">)</span>
+<span class="s1">&#39;0b11101001&#39;</span>
+</code></pre></div>
+Donc en UTF-8, <code>é</code> est associé au nombre <code>11101001</code>. </p>
+</details>
 <p><strong>Q2.</strong> D'après l'explication de fonctionnement de l'encodage adaptatif de l'UTF-8 (voir ci-dessus), les 8 bits nécessaires à l'encodage de <code>é</code> en UTF-8 vont être «encapsulés» dans 2 octets de la forme <code>110XXXXX 10XXXXXX</code>, où les 11 <code>X</code> représentent les 11 bits d'information disponibles. Écrire ces 2 octets en complétant si nécessaire avec des <code>0</code> à gauche.</p>
 <p><strong>Q3.</strong> Convertir les deux octets obtenus en notation décimale (grâce à <code>int</code>) puis en hexadécimal (grâce à <code>hex</code>).</p>
 <p><strong>Q4.</strong> Si un logiciel considère <strong>à tort</strong> que les deux octets servant à encoder le <code>é</code> en UTF-8 servent à encoder deux caractères en ISO 8859-15, quels seront ces deux caractères ?</p>
@@ -3961,7 +3970,7 @@ D'autres encodages plus légers, mais plus complexes, sont donc proposés :</p>
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">25 janvier 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">30 janvier 2024</span>
       
     
   </small>
