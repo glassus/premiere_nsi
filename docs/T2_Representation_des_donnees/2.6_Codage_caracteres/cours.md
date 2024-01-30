@@ -136,7 +136,7 @@ Le principe fondateur de l'UTF-8 est qu'il est **adaptatif** : les caracères le
     **Q1.** Grâce à la fonction ```ord``` puis à la fonction ```bin```, écrire en binaire le nombre associé au caractère ```é``` en UTF-8.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
