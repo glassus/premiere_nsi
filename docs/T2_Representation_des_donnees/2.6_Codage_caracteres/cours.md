@@ -168,7 +168,7 @@ Le principe fondateur de l'UTF-8 est qu'il est **adaptatif** : les caracères le
     **Q3.** Convertir les deux octets obtenus en notation décimale (grâce à ```int```) puis en hexadécimal (grâce à ```hex```).
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
@@ -190,7 +190,7 @@ Le principe fondateur de l'UTF-8 est qu'il est **adaptatif** : les caracères le
     **Q4.** Si un logiciel considère **à tort** que les deux octets servant à encoder le ```é``` en UTF-8 servent à encoder deux caractères en ISO 8859-15, quels seront ces deux caractères ?
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Le premier octet, ```c3``` en hexadécimal, sera perçu en ISO 8859-15 comme le caractère ```Ã```.  
