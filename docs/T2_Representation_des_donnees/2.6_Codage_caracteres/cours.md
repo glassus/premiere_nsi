@@ -131,6 +131,7 @@ Le principe fondateur de l'UTF-8 est qu'il est **adaptatif** : les caracères le
 ## 5. La réponse à une question existentielle
 
 !!! abstract "Pourquoi le caractère `é` en UTF-8 devient-il `Ã©` en ISO 8859-15 ? "
+    ![image](data/zefede.png){: .center width=30%}
     
         
     **Q1.** Grâce à la fonction ```ord``` puis à la fonction ```bin```, écrire en binaire le nombre associé au caractère ```é``` en UTF-8.

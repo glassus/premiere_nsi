@@ -78,7 +78,7 @@ Observez l'animation ci-dessous et comparer avec la version initiale.
 
 ### 2.2 Codage de l'algorithme
 
-!!! note "Tri par insertion (version optimisée) :heart:"
+!!! note "Tri par insertion (version optimisée)"
     ```python linenums='1'
     def tri_insertion_v2(lst) :
         '''trie en place la liste lst donnée en paramètre'''
