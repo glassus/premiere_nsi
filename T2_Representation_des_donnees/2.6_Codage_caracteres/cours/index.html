@@ -3963,7 +3963,26 @@ Donc en UTF-8, <code>é</code> est associé au nombre <code>11101001</code>. </p
 <p>Sur 11 bits, le nombre <code>11101001</code> va s'écrire <code>00011101001</code>. En séparant ces 11 bits en deux groupes de 5 bits et 6 bits (<code>00011</code>et <code>101001</code>), et en les encapsulant, on obtient les deux octets <code>11000011 10101001</code>. </p>
 </details>
 <p><strong>Q3.</strong> Convertir les deux octets obtenus en notation décimale (grâce à <code>int</code>) puis en hexadécimal (grâce à <code>hex</code>).</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;11000011&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="mi">195</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">hex</span><span class="p">(</span><span class="mi">195</span><span class="p">)</span>
+<span class="s1">&#39;0xc3&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;10101001&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="mi">169</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">hex</span><span class="p">(</span><span class="mi">169</span><span class="p">)</span>
+<span class="s1">&#39;0xa9&#39;</span>
+</code></pre></div>
+</details>
 <p><strong>Q4.</strong> Si un logiciel considère <strong>à tort</strong> que les deux octets servant à encoder le <code>é</code> en UTF-8 servent à encoder deux caractères en ISO 8859-15, quels seront ces deux caractères ?</p>
+<details class="success">
+<summary>Correction</summary>
+<p>Le premier octet, <code>c3</code> en hexadécimal, sera perçu en ISO 8859-15 comme le caractère <code>Ã</code>.<br />
+Le deuxième octet, <code>a9</code> en hexadécimal, sera perçu en ISO 8859-15 comme la lettre <code>©</code>.  </p>
+<p>Finalement, ce qui aurait dû être un <code>é</code> en UTF-8 se retrouvera être un <code>Ã©</code> en ISO 8859-15. </p>
+<p><img alt="image" class="center" src="../data/iso-latin.png" /> </p>
+</details>
 </div>
 <h2 id="utilisation-grandissante-de-lencodage-utf-8">Utilisation grandissante de l'encodage UTF-8<a class="headerlink" href="#utilisation-grandissante-de-lencodage-utf-8" title="Permanent link">⚓︎</a></h2>
 <p>La majorité des sites internet utilisent maintenant l'UTF-8, tout comme les systèmes d'exploitation récents.
