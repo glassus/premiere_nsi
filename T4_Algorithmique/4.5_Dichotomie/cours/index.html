@@ -4250,13 +4250,10 @@ Extrait de [Wikipedia](https://fr.wikipedia.org/wiki/Diviser_pour_r%C3%A9gner_(i
 <h3 id="13-methode-naive-recherche-par-balayage">1.3 Méthode naïve : recherche par balayage<a class="headerlink" href="#13-methode-naive-recherche-par-balayage" title="Permanent link">⚓︎</a></h3>
 <p>C'est la méthode la plus intuitive : on essaie toutes les valeurs (par exemple, dans l'ordre croissant) jusqu'à trouver la bonne.</p>
 <div class="admonition abstract">
-<p class="admonition-title">Exercice 1</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
+<p class="admonition-title">Exercice  1</p>
 <p>Écrire un code permettant d'afficher l'indice de la valeur <code>14</code> dans la liste <code>lst = [2, 3, 6, 7, 11, 14, 18, 19, 24]</code>.</p>
-</div>
-<div class="tabbed-block">
+<details class="success">
+<summary>Correction</summary>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -4265,31 +4262,24 @@ Extrait de [Wikipedia](https://fr.wikipedia.org/wiki/Diviser_pour_r%C3%A9gner_(i
     <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span>  <span class="mi">14</span> <span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-</div>
-</div>
-</div>
+</details>
 </div>
 <div class="admonition abstract">
-<p class="admonition-title">Exercice 2</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Écrire une fonction <code>trouve</code> qui reçoit pour paramètres une liste <code>lst</code> et un nombre <code>val</code> et qui renvoie l'indice de <code>val</code> dans la liste <code>lst</code>. Si la valeur <code>val</code> n'est pas trouvée, on renverra <code>"non trouvé"</code>.</p>
-</div>
-<div class="tabbed-block">
+<p class="admonition-title">Exercice  2</p>
+<p>Écrire une fonction <code>recherche_naive</code> qui reçoit pour paramètres une liste <code>lst</code> et un nombre <code>val</code> et qui renvoie l'indice de <code>val</code> dans la liste <code>lst</code>. Si la valeur <code>val</code> n'est pas trouvée, on renverra <code>None</code>.</p>
+<details class="success">
+<summary>Correction</summary>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">trouve</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">lst</span><span class="p">)</span> <span class="p">:</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_naive</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span> <span class="p">:</span>
     <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">))</span> <span class="p">:</span>
         <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">k</span>
-    <span class="k">return</span> <span class="s2">&quot;non trouvé&quot;</span>
+    <span class="k">return</span> <span class="kc">None</span>
 </code></pre></div></td></tr></table></div>
-</div>
-</div>
-</div>
+</details>
 </div>
 <h3 id="13-complexite-de-la-methode-naive">1.3 Complexité de la méthode naïve<a class="headerlink" href="#13-complexite-de-la-methode-naive" title="Permanent link">⚓︎</a></h3>
 <div class="admonition note">
@@ -4367,20 +4357,6 @@ Recherchons la valeur 14 dans notre liste `lst`.
 <p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> <a class="" href="../intro_cours/" target="_blank">Codes à trous</a></p>
 <div class="admonition note">
 <p class="admonition-title">Recherche dichotomique dans une liste triée <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_dichotomique</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span> <span class="p">:</span>
-    <span class="n">indice_debut</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">indice_fin</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
-    <span class="k">while</span> <span class="n">indice_debut</span> <span class="o">&lt;=</span> <span class="n">indice_fin</span> <span class="p">:</span>
-        <span class="n">indice_centre</span> <span class="o">=</span> <span class="p">(</span><span class="n">indice_debut</span> <span class="o">+</span> <span class="n">indice_fin</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>     
-        <span class="n">valeur_centrale</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">indice_centre</span><span class="p">]</span>            
-        <span class="k">if</span> <span class="n">valeur_centrale</span> <span class="o">==</span> <span class="n">val</span> <span class="p">:</span>          
-            <span class="k">return</span> <span class="n">indice_centre</span>
-        <span class="k">if</span> <span class="n">valeur_centrale</span> <span class="o">&lt;</span> <span class="n">val</span> <span class="p">:</span>             
-            <span class="n">indice_debut</span> <span class="o">=</span> <span class="n">indice_centre</span> <span class="o">+</span> <span class="mi">1</span>
-        <span class="k">else</span> <span class="p">:</span>
-            <span class="n">indice_fin</span> <span class="o">=</span> <span class="n">indice_centre</span> <span class="o">-</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="kc">None</span>
-</code></pre></div>
 </div>
 <p><strong>Utilisation</strong></p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">mylist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">24</span><span class="p">]</span>
@@ -4390,18 +4366,18 @@ Recherchons la valeur 14 dans notre liste `lst`.
 <span class="mi">0</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_dichotomique</span><span class="p">(</span><span class="n">mylist</span><span class="p">,</span> <span class="mi">24</span><span class="p">)</span>
 <span class="mi">8</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_dichotomique</span><span class="p">(</span><span class="n">mylist</span><span class="p">,</span> <span class="mi">2022</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_dichotomique</span><span class="p">(</span><span class="n">mylist</span><span class="p">,</span> <span class="mi">1789</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> 
 </code></pre></div>
 <h3 id="24-visualisations-avec-pythontutor">2.4 Visualisations avec PythonTutor<a class="headerlink" href="#24-visualisations-avec-pythontutor" title="Permanent link">⚓︎</a></h3>
-<div class="admonition aide">
-<p class="admonition-title">Cas où la valeur est trouvée</p>
+<details class="aide">
+<summary>Cas où la valeur est trouvée</summary>
 <p><iframe width="1000" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20recherche_dichotomique%28lst,%20val%29%20%3A%0A%20%20%20%20indice_debut%20%3D%200%0A%20%20%20%20indice_fin%20%3D%20len%28lst%29%20-%201%0A%20%20%20%20while%20indice_debut%20%3C%3D%20indice_fin%20%3A%0A%20%20%20%20%20%20%20%20indice_centre%20%3D%20%28indice_debut%20%2B%20indice_fin%29%20//%202%20%20%20%20%20%0A%20%20%20%20%20%20%20%20valeur_centrale%20%3D%20lst%5Bindice_centre%5D%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20if%20valeur_centrale%20%3D%3D%20val%20%3A%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20indice_centre%0A%20%20%20%20%20%20%20%20if%20valeur_centrale%20%3C%20val%20%3A%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20indice_debut%20%3D%20indice_centre%20%2B%201%0A%20%20%20%20%20%20%20%20else%20%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20indice_fin%20%3D%20indice_centre%20-%201%0A%20%20%20%20return%20None%0A%0Amylist%20%3D%20%5B2,%203,%206,%207,%2011,%2014,%2018,%2019,%2024%5D%0Aprint%28recherche_dichotomique%28mylist,%2014%29%29%0A&codeDivHeight=400&codeDivWidth=600&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe></p>
-</div>
-<div class="admonition aide">
-<p class="admonition-title">Cas où la valeur N'est PAS trouvée</p>
+</details>
+<details class="aide">
+<summary>Cas où la valeur N'est PAS trouvée</summary>
 <p><iframe width="1000" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20recherche_dichotomique%28lst,%20val%29%20%3A%0A%20%20%20%20indice_debut%20%3D%200%0A%20%20%20%20indice_fin%20%3D%20len%28lst%29%20-%201%0A%20%20%20%20while%20indice_debut%20%3C%3D%20indice_fin%20%3A%0A%20%20%20%20%20%20%20%20indice_centre%20%3D%20%28indice_debut%20%2B%20indice_fin%29%20//%202%20%20%20%20%20%0A%20%20%20%20%20%20%20%20valeur_centrale%20%3D%20lst%5Bindice_centre%5D%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20if%20valeur_centrale%20%3D%3D%20val%20%3A%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20indice_centre%0A%20%20%20%20%20%20%20%20if%20valeur_centrale%20%3C%20val%20%3A%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20indice_debut%20%3D%20indice_centre%20%2B%201%0A%20%20%20%20%20%20%20%20else%20%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20indice_fin%20%3D%20indice_centre%20-%201%0A%20%20%20%20return%20None%0A%0Amylist%20%3D%20%5B2,%203,%206,%207,%2011,%2014,%2018,%2019,%2024%5D%0Aprint%28recherche_dichotomique%28mylist,%205%29%29%0A&codeDivHeight=400&codeDivWidth=600&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe></p>
-</div>
+</details>
 <h3 id="25-terminaison-de-lalgorithme">2.5 Terminaison de l'algorithme<a class="headerlink" href="#25-terminaison-de-lalgorithme" title="Permanent link">⚓︎</a></h3>
 <p>Est-on sûr que l'algorithme va se terminer ?<br />
 La boucle <code>while</code> qui est utilisée doit nous inciter à la prudence (voir <a href="https://github.com/glassus/nsi/blob/master/Premiere/Theme01_Bases_de_Python/02_Boucle_while/boucles_while.ipynb">cours</a> sur la boucle While).<br />
@@ -4432,13 +4408,8 @@ Puis 2 valeurs.<br />
 Puis une seule valeur.<br />
 Il y a donc 3 étapes avant de trouver la valeur cherchée.</p>
 <div class="admonition abstract">
-<p class="admonition-title">Exercice</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Énoncé</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<ol>
-<li>Remplissez le tableau ci-dessous :</li>
-</ol>
+<p class="admonition-title">Exercice  3</p>
+<p>Q1. Remplissez le tableau ci-dessous :</p>
 <table>
 <thead>
 <tr>
@@ -4469,13 +4440,44 @@ Il y a donc 3 étapes avant de trouver la valeur cherchée.</p>
 </tr>
 </tbody>
 </table>
-<ol>
-<li>Pouvez-vous deviner le nombre d'étapes nécessaires pour une liste de 4096 termes ?</li>
-<li>Pour une liste de <span class="arithmatex">\(2^n\)</span> termes, quel est le nombre d'étapes ?</li>
-</ol>
-</div>
-</div>
-</div>
+<p>Q2. Pouvez-vous deviner le nombre d'étapes nécessaires pour une liste de 4096 termes ?</p>
+<p>Q3. Pour une liste de <span class="arithmatex">\(2^n\)</span> termes, quel est le nombre d'étapes ?</p>
+<details class="success">
+<summary>Correction</summary>
+<p>Q1. </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">taille de la liste</th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">8</th>
+<th style="text-align: center;">16</th>
+<th style="text-align: center;">32</th>
+<th style="text-align: center;">64</th>
+<th style="text-align: center;">128</th>
+<th style="text-align: center;">256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">nombre d'étapes</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">8</td>
+</tr>
+</tbody>
+</table>
+<p>Q2. <span class="arithmatex">\(2^{12}=4096\)</span> donc il faut 12 étapes.</p>
+<p>Q3. Il faut <span class="arithmatex">\(n\)</span> étapes.</p>
+</details>
 </div>
 <p><strong>Conclusion :</strong> </p>
 <p>C'est le nombre de puissances de 2 que contient le nombre <span class="arithmatex">\(N\)</span> de termes de la liste qui est déterminant dans la complexité de l'algorithme. </p>
@@ -4486,6 +4488,8 @@ Il y a donc 3 étapes avant de trouver la valeur cherchée.</p>
 <p>La recherche dichotomique se fait avec une <strong>complexité logarithmique</strong>.</p>
 </div>
 <p>Cette complexité est bien meilleure qu'une complexité linéaire. Le nombre d'opérations à effectuer est très peu sensible à la taille des données d'entrée, ce qui en fait un algorithme très efficace.</p>
+<p>Par exemple, si on faisait une recherche dichotomomique sur les 8 milliards d'êtres humains de la planète (en admettant qu'on ait réussi à les classer...), il suffirait de 33 étapes pour trouver l'individu cherché !</p>
+<p>(car <span class="arithmatex">\(2^{33}= 8589934592\)</span>)</p>
 <h2 id="3-experiences-et-comparaison-des-vitesses-dexecution">3. Expériences et comparaison des vitesses d'exécution<a class="headerlink" href="#3-experiences-et-comparaison-des-vitesses-dexecution" title="Permanent link">⚓︎</a></h2>
 <h4 id="avec-une-liste-contenant-100-000-valeurs">Avec une liste contenant 100 000 valeurs<a class="headerlink" href="#avec-une-liste-contenant-100-000-valeurs" title="Permanent link">⚓︎</a></h4>
 <div class="highlight"><pre><span></span><code><span class="c1"># cette ligne de code permet de transformer le contenu du fichier input_centmille.txt</span>
@@ -4529,8 +4533,6 @@ Il y a donc 3 étapes avant de trouver la valeur cherchée.</p>
 <li>méthode 2: la recherche dans une liste 10 fois plus grand prend environ 1,2 fois plus de temps : la vitesse de l'algorithme est bien proportionnelle au <strong>logarithme</strong> de la taille <span class="arithmatex">\(n\)</span> de la liste.  <span class="arithmatex">\(\frac{\log(1000000)}{\log(100000)} \approx 1,2\)</span></li>
 </ul>
 <p><strong>Remarque :</strong> Il ne faut toutefois pas oublier que la méthode dichotomique, bien plus rapide, nécessite que la liste ait été auparavant triée. Ce qui rajoute du temps de calcul ! (cf <a href="https://github.com/glassus/nsi/blob/master/Premiere/Theme05_Algorithmique/03_Tri_par_insertion.ipynb">tri par insertion</a> ou <a href="https://github.com/glassus/nsi/blob/master/Premiere/Theme05_Algorithmique/04_Tri_par_selection.ipynb">tri par sélection</a> )</p>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
 
 
 
@@ -4551,7 +4553,7 @@ Il y a donc 3 étapes avant de trouver la valeur cherchée.</p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">1 mai 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">4 février 2024</span>
   </span>
 
     
