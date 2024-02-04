@@ -1,5 +1,7 @@
 # 4.5 Dichotomie
 
+{{initexo(0)}}
+
 *ou comment rechercher efficacement dans une liste triée ?*
 
 ![image](data/BO.png){: .center}
@@ -90,30 +92,47 @@ L'objectif est de définir un algorithme de recherche efficace d'une valeur arbi
 C'est la méthode la plus intuitive : on essaie toutes les valeurs (par exemple, dans l'ordre croissant) jusqu'à trouver la bonne.
 
 
-!!! abstract "Exercice 1"
-    === "Énoncé"
-        Écrire un code permettant d'afficher l'indice de la valeur `14` dans la liste `lst = [2, 3, 6, 7, 11, 14, 18, 19, 24]`.
-    === "Correction"
+!!! abstract "{{ exercice() }}"
+
+    Écrire un code permettant d'afficher l'indice de la valeur `14` dans la liste `lst = [2, 3, 6, 7, 11, 14, 18, 19, 24]`.
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         lst = [2, 3, 6, 7, 11, 14, 18, 19, 24]
         for k in range(len(lst)):
             if lst[k] ==  14 :
                 print(k)
-        ```
+        ```        
+    """
+    )
+    }}
 
 
-!!! abstract "Exercice 2"
-    === "Énoncé"
-        Écrire une fonction `trouve` qui reçoit pour paramètres une liste `lst` et un nombre `val` et qui renvoie l'indice de `val` dans la liste `lst `. Si la valeur `val` n'est pas trouvée, on renverra `"non trouvé"`.
-    === "Correction"
+
+
+!!! abstract "{{ exercice() }}"
+
+    Écrire une fonction `recherche_naive` qui reçoit pour paramètres une liste `lst` et un nombre `val` et qui renvoie l'indice de `val` dans la liste `lst `. Si la valeur `val` n'est pas trouvée, on renverra `None`.
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
-        def trouve(val, lst) :
+        def recherche_naive(lst, val) :
             for k in range(len(lst)) :
                 if lst[k] == val:
                     return k
-            return "non trouvé"
+            return None
 
-        ```
+        ```        
+    """
+    )
+    }}
+
 
 
 ### 1.3 Complexité de la méthode naïve
@@ -211,6 +230,7 @@ Nous allons faire *se rapprocher* les indices `indice_debut` et `indice_fin` **t
 
 
 !!! note "Recherche dichotomique dans une liste triée :heart: :heart: :heart:"
+    {#
     ```python
     def recherche_dichotomique(lst, val) :
         indice_debut = 0
@@ -227,6 +247,7 @@ Nous allons faire *se rapprocher* les indices `indice_debut` et `indice_fin` **t
         return None
             
     ```
+    #}
 
 **Utilisation**
 
@@ -238,17 +259,17 @@ Nous allons faire *se rapprocher* les indices `indice_debut` et `indice_fin` **t
 0
 >>> recherche_dichotomique(mylist, 24)
 8
->>> recherche_dichotomique(mylist, 2022)
+>>> recherche_dichotomique(mylist, 1789)
 >>> 
 ```
 
 ### 2.4 Visualisations avec PythonTutor
 
-!!! aide "Cas où la valeur est trouvée"
+??? aide "Cas où la valeur est trouvée"
     <iframe width="1000" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20recherche_dichotomique%28lst,%20val%29%20%3A%0A%20%20%20%20indice_debut%20%3D%200%0A%20%20%20%20indice_fin%20%3D%20len%28lst%29%20-%201%0A%20%20%20%20while%20indice_debut%20%3C%3D%20indice_fin%20%3A%0A%20%20%20%20%20%20%20%20indice_centre%20%3D%20%28indice_debut%20%2B%20indice_fin%29%20//%202%20%20%20%20%20%0A%20%20%20%20%20%20%20%20valeur_centrale%20%3D%20lst%5Bindice_centre%5D%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20if%20valeur_centrale%20%3D%3D%20val%20%3A%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20indice_centre%0A%20%20%20%20%20%20%20%20if%20valeur_centrale%20%3C%20val%20%3A%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20indice_debut%20%3D%20indice_centre%20%2B%201%0A%20%20%20%20%20%20%20%20else%20%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20indice_fin%20%3D%20indice_centre%20-%201%0A%20%20%20%20return%20None%0A%0Amylist%20%3D%20%5B2,%203,%206,%207,%2011,%2014,%2018,%2019,%2024%5D%0Aprint%28recherche_dichotomique%28mylist,%2014%29%29%0A&codeDivHeight=400&codeDivWidth=600&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 
-!!! aide "Cas où la valeur N'est PAS trouvée"
+??? aide "Cas où la valeur N'est PAS trouvée"
     <iframe width="1000" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20recherche_dichotomique%28lst,%20val%29%20%3A%0A%20%20%20%20indice_debut%20%3D%200%0A%20%20%20%20indice_fin%20%3D%20len%28lst%29%20-%201%0A%20%20%20%20while%20indice_debut%20%3C%3D%20indice_fin%20%3A%0A%20%20%20%20%20%20%20%20indice_centre%20%3D%20%28indice_debut%20%2B%20indice_fin%29%20//%202%20%20%20%20%20%0A%20%20%20%20%20%20%20%20valeur_centrale%20%3D%20lst%5Bindice_centre%5D%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20if%20valeur_centrale%20%3D%3D%20val%20%3A%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20indice_centre%0A%20%20%20%20%20%20%20%20if%20valeur_centrale%20%3C%20val%20%3A%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20indice_debut%20%3D%20indice_centre%20%2B%201%0A%20%20%20%20%20%20%20%20else%20%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20indice_fin%20%3D%20indice_centre%20-%201%0A%20%20%20%20return%20None%0A%0Amylist%20%3D%20%5B2,%203,%206,%207,%2011,%2014,%2018,%2019,%2024%5D%0Aprint%28recherche_dichotomique%28mylist,%205%29%29%0A&codeDivHeight=400&codeDivWidth=600&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 ### 2.5 Terminaison de l'algorithme
@@ -293,18 +314,34 @@ Puis 2 valeurs.
 Puis une seule valeur.  
 Il y a donc 3 étapes avant de trouver la valeur cherchée.
 
-!!! abstract "Exercice"
-    === "Énoncé"
-        1. Remplissez le tableau ci-dessous :
+!!! abstract "{{ exercice() }}"
+    
+    Q1. Remplissez le tableau ci-dessous :
+
+    | taille de la liste | 1 | 2 | 4 | 8 | 16 | 32 | 64 | 128 | 256 |
+    | :----------------- |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+    | nombre d'étapes    | _ | _ |  _  |   3 |  _ | _   | _   | _   | _   |  _  |
+
+    Q2. Pouvez-vous deviner le nombre d'étapes nécessaires pour une liste de 4096 termes ?
+
+    Q3. Pour une liste de $2^n$ termes, quel est le nombre d'étapes ?
+    
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
+         Q1. 
 
         | taille de la liste | 1 | 2 | 4 | 8 | 16 | 32 | 64 | 128 | 256 |
         | :----------------- |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-        | nombre d'étapes    | _ | _ |  _  |   3 |  _ | _   | _   | _   | _   |  _  |
+        | nombre d'étapes    | 0 |1 |  2  |   3 |  4 | 5   | 6   | 7   | 8   |  9  |
 
-        2. Pouvez-vous deviner le nombre d'étapes nécessaires pour une liste de 4096 termes ?
-        3. Pour une liste de $2^n$ termes, quel est le nombre d'étapes ?
-    
-         
+        Q2. $2^{12}=4096$ donc il faut 12 étapes.
+
+        Q3. Il faut $n$ étapes.
+        """
+    )
+    }}    
 
 **Conclusion :** 
 
@@ -319,6 +356,10 @@ Ce nombre s'appelle le *logarithme de base 2* et se note $\log_2(N)$.
 
 
 Cette complexité est bien meilleure qu'une complexité linéaire. Le nombre d'opérations à effectuer est très peu sensible à la taille des données d'entrée, ce qui en fait un algorithme très efficace.
+
+Par exemple, si on faisait une recherche dichotomomique sur les 8 milliards d'êtres humains de la planète (en admettant qu'on ait réussi à les classer...), il suffirait de 33 étapes pour trouver l'individu cherché !
+
+(car $2^{33}= 8589934592$)
 
 
 ## 3. Expériences et comparaison des vitesses d'exécution
@@ -397,7 +438,3 @@ Mesurons le temps nécessaire pour trouver l'indice de la dernière valeur de la
 
 **Remarque :** Il ne faut toutefois pas oublier que la méthode dichotomique, bien plus rapide, nécessite que la liste ait été auparavant triée. Ce qui rajoute du temps de calcul ! (cf [tri par insertion](https://github.com/glassus/nsi/blob/master/Premiere/Theme05_Algorithmique/03_Tri_par_insertion.ipynb) ou [tri par sélection](https://github.com/glassus/nsi/blob/master/Premiere/Theme05_Algorithmique/04_Tri_par_selection.ipynb) )
 
-
-```python
-
-```
