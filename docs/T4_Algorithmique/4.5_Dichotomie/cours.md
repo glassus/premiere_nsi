@@ -97,7 +97,7 @@ C'est la méthode la plus intuitive : on essaie toutes les valeurs (par exemple,
     Écrire un code permettant d'afficher l'indice de la valeur `14` dans la liste `lst = [2, 3, 6, 7, 11, 14, 18, 19, 24]`.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -118,7 +118,7 @@ C'est la méthode la plus intuitive : on essaie toutes les valeurs (par exemple,
     Écrire une fonction `recherche_naive` qui reçoit pour paramètres une liste `lst` et un nombre `val` et qui renvoie l'indice de `val` dans la liste `lst `. Si la valeur `val` n'est pas trouvée, on renverra `None`.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -327,7 +327,7 @@ Il y a donc 3 étapes avant de trouver la valeur cherchée.
     Q3. Pour une liste de $2^n$ termes, quel est le nombre d'étapes ?
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
          Q1. 
