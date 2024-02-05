@@ -4252,34 +4252,10 @@ Extrait de [Wikipedia](https://fr.wikipedia.org/wiki/Diviser_pour_r%C3%A9gner_(i
 <div class="admonition abstract">
 <p class="admonition-title">Exercice  1</p>
 <p>Écrire un code permettant d'afficher l'indice de la valeur <code>14</code> dans la liste <code>lst = [2, 3, 6, 7, 11, 14, 18, 19, 24]</code>.</p>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">24</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)):</span>
-    <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span>  <span class="mi">14</span> <span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice  2</p>
 <p>Écrire une fonction <code>recherche_naive</code> qui reçoit pour paramètres une liste <code>lst</code> et un nombre <code>val</code> et qui renvoie l'indice de <code>val</code> dans la liste <code>lst</code>. Si la valeur <code>val</code> n'est pas trouvée, on renverra <code>None</code>.</p>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_naive</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span> <span class="p">:</span>
-    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">))</span> <span class="p">:</span>
-        <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">k</span>
-    <span class="k">return</span> <span class="kc">None</span>
-</code></pre></div></td></tr></table></div>
-</details>
 </div>
 <h3 id="13-complexite-de-la-methode-naive">1.3 Complexité de la méthode naïve<a class="headerlink" href="#13-complexite-de-la-methode-naive" title="Permanent link">⚓︎</a></h3>
 <div class="admonition note">
@@ -4442,42 +4418,6 @@ Il y a donc 3 étapes avant de trouver la valeur cherchée.</p>
 </table>
 <p>Q2. Pouvez-vous deviner le nombre d'étapes nécessaires pour une liste de 4096 termes ?</p>
 <p>Q3. Pour une liste de <span class="arithmatex">\(2^n\)</span> termes, quel est le nombre d'étapes ?</p>
-<details class="success">
-<summary>Correction</summary>
-<p>Q1. </p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">taille de la liste</th>
-<th style="text-align: center;">1</th>
-<th style="text-align: center;">2</th>
-<th style="text-align: center;">4</th>
-<th style="text-align: center;">8</th>
-<th style="text-align: center;">16</th>
-<th style="text-align: center;">32</th>
-<th style="text-align: center;">64</th>
-<th style="text-align: center;">128</th>
-<th style="text-align: center;">256</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">nombre d'étapes</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">8</td>
-</tr>
-</tbody>
-</table>
-<p>Q2. <span class="arithmatex">\(2^{12}=4096\)</span> donc il faut 12 étapes.</p>
-<p>Q3. Il faut <span class="arithmatex">\(n\)</span> étapes.</p>
-</details>
 </div>
 <p><strong>Conclusion :</strong> </p>
 <p>C'est le nombre de puissances de 2 que contient le nombre <span class="arithmatex">\(N\)</span> de termes de la liste qui est déterminant dans la complexité de l'algorithme. </p>
@@ -4553,7 +4493,7 @@ Il y a donc 3 étapes avant de trouver la valeur cherchée.</p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">4 février 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">5 février 2024</span>
   </span>
 
     
