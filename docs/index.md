@@ -28,6 +28,7 @@ correction(False,
 
 
 ## Thèmes en cours d'étude :
+- :books: [Dichotomie](./T4_Algorithmique/4.5_Dichotomie/cours/)
 - :books: [Codage des caractères](./T2_Representation_des_donnees/2.6_Codage_caracteres/cours/)  
 - :books: [Tri par insertion](./T4_Algorithmique/4.3_Tri_par_insertion/cours/) 
 - :books: [Tri par sélection](./T4_Algorithmique/4.4_Tri_par_selection/cours/)

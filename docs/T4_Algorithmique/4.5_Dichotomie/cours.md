@@ -364,9 +364,11 @@ Par exemple, si on faisait une recherche dichotomomique sur les 8 milliards d'ê
 
 ## 3. Expériences et comparaison des vitesses d'exécution
 
-#### Avec une liste contenant 100 000 valeurs 
+!!! abstract "{{ exercice() }}"
+    Mesurer le temps d'exécution de deux fonctions ```recherche_naive``` et ```recherche_dichotomique```. On se placera dans le pire des cas (recherche d'une valeur introuvable), avec des listes de taille 100 000 puis 1 000 000.  
+         
 
-
+{#
 ```python
 # cette ligne de code permet de transformer le contenu du fichier input_centmille.txt
 # en une liste L de 100 000 valeurs.
@@ -438,3 +440,4 @@ Mesurons le temps nécessaire pour trouver l'indice de la dernière valeur de la
 
 **Remarque :** Il ne faut toutefois pas oublier que la méthode dichotomique, bien plus rapide, nécessite que la liste ait été auparavant triée. Ce qui rajoute du temps de calcul ! (cf [tri par insertion](https://github.com/glassus/nsi/blob/master/Premiere/Theme05_Algorithmique/03_Tri_par_insertion.ipynb) ou [tri par sélection](https://github.com/glassus/nsi/blob/master/Premiere/Theme05_Algorithmique/04_Tri_par_selection.ipynb) )
 
+#}
