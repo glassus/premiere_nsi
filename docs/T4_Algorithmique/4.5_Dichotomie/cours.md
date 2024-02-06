@@ -97,7 +97,7 @@ C'est la méthode la plus intuitive : on essaie toutes les valeurs (par exemple,
     Écrire un code permettant d'afficher l'indice de la valeur `14` dans la liste `lst = [2, 3, 6, 7, 11, 14, 18, 19, 24]`.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -118,7 +118,7 @@ C'est la méthode la plus intuitive : on essaie toutes les valeurs (par exemple,
     Écrire une fonction `recherche_naive` qui reçoit pour paramètres une liste `lst` et un nombre `val` et qui renvoie l'indice de `val` dans la liste `lst `. Si la valeur `val` n'est pas trouvée, on renverra `None`.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -230,7 +230,7 @@ Nous allons faire *se rapprocher* les indices `indice_debut` et `indice_fin` **t
 
 
 !!! note "Recherche dichotomique dans une liste triée :heart: :heart: :heart:"
-    {#
+    
     ```python
     def recherche_dichotomique(lst, val) :
         indice_debut = 0
@@ -247,7 +247,7 @@ Nous allons faire *se rapprocher* les indices `indice_debut` et `indice_fin` **t
         return None
             
     ```
-    #}
+    
 
 **Utilisation**
 
