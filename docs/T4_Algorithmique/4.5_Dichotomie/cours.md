@@ -367,6 +367,74 @@ Par exemple, si on faisait une recherche dichotomomique sur les 8 milliards d'ê
 !!! abstract "{{ exercice() }}"
     Mesurer le temps d'exécution de deux fonctions ```recherche_naive``` et ```recherche_dichotomique```. On se placera dans le pire des cas (recherche d'une valeur introuvable), avec des listes de taille 100 000 puis 1 000 000.  
          
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ```python linenums='1'
+        import time
+
+        def recherche_dichotomique(lst, val) :
+            indice_debut = 0
+            indice_fin = len(lst) - 1
+            while indice_debut <= indice_fin :
+                indice_centre = (indice_debut + indice_fin) // 2     
+                valeur_centrale = lst[indice_centre]            
+                if valeur_centrale == val :          
+                    return indice_centre
+                if valeur_centrale < val :             
+                    indice_debut = indice_centre + 1
+                else :
+                    indice_fin = indice_centre - 1
+            return None
+
+        def recherche_naive(lst, val) :
+            for k in range(len(lst)) :
+                if lst[k] == val:
+                    return k
+            return None
+
+
+
+        def mesures(n):
+            lst = [k for k in range(n)]
+            val = n
+            total = 0
+            for _ in range(10):
+                t0 = time.time()
+                recherche_naive(lst, val)
+                total += time.time() - t0
+            print(f'naive pour {n} valeurs : {total/10}')
+            total = 0
+            for _ in range(10):
+                t0 = time.time()
+                recherche_dichotomique(lst, val)
+                total += time.time() - t0
+            print(f'dicho pour {n} valeurs : {total/10}')
+        
+        ```  
+
+        Tests avec une liste de taille 100 000, 1 000 000 puis 10 000 000:
+        ```python
+        >>> mesures(10**5)
+        naive pour 100000 valeurs : 0.004096603393554688
+        dicho pour 100000 valeurs : 2.574920654296875e-06
+        >>> mesures(10**6)
+        naive pour 1000000 valeurs : 0.03997344970703125
+        dicho pour 1000000 valeurs : 3.0517578125e-06
+        >>> mesures(10**7)
+        naive pour 10000000 valeurs : 0.4003706216812134
+        dicho pour 10000000 valeurs : 3.886222839355469e-06
+        ```
+
+        - **Recherche naïve :** la recherche dans une liste 10 fois plus grand prend environ 10 fois plus de temps : la vitesse de l'algorithme est bien proportionnelle à la taille $n$ de la liste. $\\frac{10^6}{10^5} = 10$
+        - **Recherche dichotomique :** la recherche dans une liste 10 fois plus grand prend environ 1,2 fois plus de temps : la vitesse de l'algorithme est bien proportionnelle au **logarithme** de la taille $n$ de la liste.  $\\frac{\\log(1000000)}{\\log(100000)} \\approx 1,2$
+    """
+    )
+    }}
+
+
+
 
 {#
 ```python

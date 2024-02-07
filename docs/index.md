@@ -28,15 +28,17 @@ correction(False,
 
 
 ## Thèmes en cours d'étude :
+- :books: [Micro:bit](./T3_Architecture_materielle/3.1_Microbit/cours/)
 - :books: [Dichotomie](./T4_Algorithmique/4.5_Dichotomie/cours/)
-- :books: [Codage des caractères](./T2_Representation_des_donnees/2.6_Codage_caracteres/cours/)  
-- :books: [Tri par insertion](./T4_Algorithmique/4.3_Tri_par_insertion/cours/) 
-- :books: [Tri par sélection](./T4_Algorithmique/4.4_Tri_par_selection/cours/)
-- :books: [Complexité](./T4_Algorithmique/4.2_Complexite/cours/)
+
 
 
 
 !!! info "*Anciens thèmes traités*"
+    - [Codage des caractères](./T2_Representation_des_donnees/2.6_Codage_caracteres/cours/)  
+    - [Tri par insertion](./T4_Algorithmique/4.3_Tri_par_insertion/cours/) 
+    - [Tri par sélection](./T4_Algorithmique/4.4_Tri_par_selection/cours/)
+    - [Complexité](./T4_Algorithmique/4.2_Complexite/cours/)
     - [Extremums et moyennes](./T4_Algorithmique/4.1_Extremums_et_moyennes/cours/)
     - [Booléens](./T2_Representation_des_donnees/2.5_Booleens/cours/)
     - [Énigme](./T2_Representation_des_donnees/2.5_Booleens/enigme/)
