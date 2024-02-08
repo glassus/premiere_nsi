@@ -368,7 +368,7 @@ Par exemple, si on faisait une recherche dichotomomique sur les 8 milliards d'ê
     Mesurer le temps d'exécution de deux fonctions ```recherche_naive``` et ```recherche_dichotomique```. On se placera dans le pire des cas (recherche d'une valeur introuvable), avec des listes de taille 100 000 puis 1 000 000.  
          
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
