@@ -598,6 +598,43 @@ display.show(Image.SAD)
     )
     }}
 
+
+!!! abstract "{{ exercice() }}"
+    En utilisant les fonctions ```accelerometer.get_x()``` et ```accelerometer.get_y()``` de l'[accéléromètre](https://microbit-micropython.readthedocs.io/fr/latest/accelerometer.html){. target="_blank"}, créer un code qui allumera la LED du centre lorsque la carte est à l'horizontale, puis qui fera bouger cette LED en fonction de l'inclinaison de la carte.
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ```python linenums='1'
+        from microbit import *
+
+        x = 2
+        y = 2
+        while True:
+            incx = accelerometer.get_x()
+            if incx > 500:
+                x += 1
+                x = min(x,4)
+            if incx <-500:
+                x -= 1
+                x = max(0,x)
+            incy = accelerometer.get_y()
+            if incy > 500:
+                y += 1
+                y = min(y,4)
+            if incy <-500:
+                y -= 1
+                y = max(0,y)
+            display.clear()
+            display.set_pixel(x,y,9)
+            sleep(1000)
+        ``` 
+    """
+    )
+    }}
+
+
 {#
 
 ### 2.5 Capteur de lumière [(vidéo)](https://youtu.be/TKhCr-dQMBY){. target="_blank"}
