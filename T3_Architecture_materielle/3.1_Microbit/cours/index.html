@@ -4508,6 +4508,67 @@ Par exemple, l'instruction <code>randint(2, 8)</code> va renvoyer un nombre (pse
 <p class="admonition-title">Exercice  10</p>
 <p>En utilisant les fonctions <code>accelerometer.get_x()</code> et <code>accelerometer.get_y()</code> de l'<a class="" href="https://microbit-micropython.readthedocs.io/fr/latest/accelerometer.html" target="_blank">accéléromètre</a>, créer un code qui allumera la LED du centre lorsque la carte est à l'horizontale, puis qui fera bouger cette LED en fonction de l'inclinaison de la carte.</p>
 </div>
+<div class="admonition abstract">
+<p class="admonition-title">Exercice  11</p>
+<p><strong>Communication radio</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">radio</span>
+
+<span class="n">radio</span><span class="o">.</span><span class="n">on</span><span class="p">()</span>
+<span class="n">radio</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">channel</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">radio</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">power</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="n">radio</span><span class="o">.</span><span class="n">receive</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">message</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">message</span> <span class="o">==</span> <span class="s1">&#39;yes&#39;</span><span class="p">:</span>
+            <span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">YES</span><span class="p">)</span>
+            <span class="n">sleep</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+            <span class="n">display</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">message</span> <span class="o">==</span> <span class="s1">&#39;no&#39;</span><span class="p">:</span>
+            <span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">NO</span><span class="p">)</span>
+            <span class="n">sleep</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+            <span class="n">display</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">button_a</span><span class="o">.</span><span class="n">was_pressed</span><span class="p">():</span>
+        <span class="n">radio</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s1">&#39;yes&#39;</span><span class="p">)</span>
+        <span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">YES</span><span class="p">)</span>
+        <span class="n">sleep</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+        <span class="n">display</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">button_b</span><span class="o">.</span><span class="n">was_pressed</span><span class="p">():</span>
+        <span class="n">radio</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s1">&#39;no&#39;</span><span class="p">)</span>
+        <span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">NO</span><span class="p">)</span>
+        <span class="n">sleep</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+        <span class="n">display</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<p>Plus de renseignements <a class="" href="https://nsirennes.fr/os-archi/bbc-microbit/" target="_blank">ici</a></p>
+</div>
 
 
 
