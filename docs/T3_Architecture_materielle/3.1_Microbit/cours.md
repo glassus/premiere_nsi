@@ -634,6 +634,44 @@ display.show(Image.SAD)
     )
     }}
 
+!!! abstract "{{ exercice() }}"
+    **Communication radio**
+
+    ```python linenums='1'
+    from microbit import *
+    import radio
+    
+    radio.on()
+    radio.config(channel=12)
+    radio.config(power=7)
+
+    while True:
+        message = radio.receive()
+        if message:
+            if message == 'yes':
+                display.show(Image.YES)
+                sleep(500)
+                display.clear()
+            elif message == 'no':
+                display.show(Image.NO)
+                sleep(500)
+                display.clear()
+        if button_a.was_pressed():
+            radio.send('yes')
+            display.show(Image.YES)
+            sleep(500)
+            display.clear()
+        if button_b.was_pressed():
+            radio.send('no')
+            display.show(Image.NO)
+            sleep(500)
+            display.clear()
+    ```
+
+    Plus de renseignements [ici](https://nsirennes.fr/os-archi/bbc-microbit/){. target="_blank"}
+
+
+
 
 {#
 
