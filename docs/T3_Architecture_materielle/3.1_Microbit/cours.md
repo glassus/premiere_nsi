@@ -178,7 +178,7 @@ display.show(Image.SAD)
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -241,7 +241,7 @@ display.set_pixel(1, 4, 9)
     Faire clignoter le pixel central.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -267,7 +267,7 @@ display.set_pixel(1, 4, 9)
     On pourra aussi utiliser l'instruction `display.clear()` pour éteindre tout l'affichage.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -321,7 +321,7 @@ display.show(Image.SAD)
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
