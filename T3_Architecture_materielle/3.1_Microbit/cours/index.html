@@ -4507,10 +4507,63 @@ Par exemple, l'instruction <code>randint(2, 8)</code> va renvoyer un nombre (pse
 <div class="admonition abstract">
 <p class="admonition-title">Exercice  10</p>
 <p>En utilisant les fonctions <code>accelerometer.get_x()</code> et <code>accelerometer.get_y()</code> de l'<a class="" href="https://microbit-micropython.readthedocs.io/fr/latest/accelerometer.html" target="_blank">accéléromètre</a>, créer un code qui allumera la LED du centre lorsque la carte est à l'horizontale, puis qui fera bouger cette LED en fonction de l'inclinaison de la carte.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">def</span> <span class="nf">move</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="n">incx</span> <span class="o">=</span> <span class="n">accelerometer</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">incx</span> <span class="o">&gt;</span> <span class="mi">500</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">incx</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">500</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+    <span class="n">incy</span> <span class="o">=</span> <span class="n">accelerometer</span><span class="o">.</span><span class="n">get_y</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">incy</span> <span class="o">&gt;</span> <span class="mi">500</span><span class="p">:</span>
+        <span class="n">y</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">incy</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">500</span><span class="p">:</span>
+        <span class="n">y</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">display</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+    <span class="o">...</span><span class="p">,</span> <span class="o">...</span>  <span class="o">=</span> <span class="n">move</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+    <span class="n">display</span><span class="o">.</span><span class="n">set_pixel</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>    
+</code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice  11</p>
 <p><strong>Communication radio</strong></p>
+<p>Voici un code proposant une communication radio entre deux cartes. Inspirez-vous de ce code pour (par exemple) faire un «vrai» Pierre-Feuille-Ciseaux entre deux cartes.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -4569,6 +4622,14 @@ Par exemple, l'instruction <code>randint(2, 8)</code> va renvoyer un nombre (pse
 </code></pre></div></td></tr></table></div>
 <p>Plus de renseignements <a class="" href="https://nsirennes.fr/os-archi/bbc-microbit/" target="_blank">ici</a></p>
 </div>
+<div class="admonition abstract">
+<p class="admonition-title">Exercice  12</p>
+<p>En utilisant l'exercice 10 et la communication radio, faire «passer» une led d'une carte à l'autre en inclinant la carte.</p>
+<details class="tip">
+<summary>video</summary>
+<p><iframe width="463" height="823" src="https://www.youtube.com/embed/uaG4TuBxN-w" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+</details>
+</div>
 
 
 
@@ -4589,7 +4650,7 @@ Par exemple, l'instruction <code>randint(2, 8)</code> va renvoyer un nombre (pse
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">13 février 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">15 février 2024</span>
   </span>
 
     
