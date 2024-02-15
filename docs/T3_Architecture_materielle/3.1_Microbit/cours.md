@@ -602,6 +602,36 @@ display.show(Image.SAD)
 !!! abstract "{{ exercice() }}"
     En utilisant les fonctions ```accelerometer.get_x()``` et ```accelerometer.get_y()``` de l'[accéléromètre](https://microbit-micropython.readthedocs.io/fr/latest/accelerometer.html){. target="_blank"}, créer un code qui allumera la LED du centre lorsque la carte est à l'horizontale, puis qui fera bouger cette LED en fonction de l'inclinaison de la carte.
 
+
+    ```python linenums='1'
+    from microbit import *
+
+    def move(x, y):
+        incx = accelerometer.get_x()
+        if incx > 500:
+            x += 1
+            x = min(..., ...)
+        if incx < -500:
+            x -= 1
+            x = max(..., ...)
+        incy = accelerometer.get_y()
+        if incy > 500:
+            y += 1
+            y = min(..., ...)
+        if incy < -500:
+            y -= 1
+            y = max(..., ...)
+        return x, y
+
+    x = 2
+    y = 2
+    while True:
+        display.clear()
+        ..., ...  = move(..., ...)
+        display.set_pixel(..., ..., 9)
+        sleep(200)    
+    ```
+
     {{
     correction(False,
     """
@@ -609,26 +639,30 @@ display.show(Image.SAD)
         ```python linenums='1'
         from microbit import *
 
-        x = 2
-        y = 2
-        while True:
+        def move(x, y):
             incx = accelerometer.get_x()
             if incx > 500:
                 x += 1
                 x = min(x,4)
-            if incx <-500:
+            if incx < -500:
                 x -= 1
                 x = max(0,x)
             incy = accelerometer.get_y()
             if incy > 500:
                 y += 1
                 y = min(y,4)
-            if incy <-500:
+            if incy < -500:
                 y -= 1
                 y = max(0,y)
+            return x, y
+
+        x = 2
+        y = 2
+        while True:
             display.clear()
+            x, y  = move(x, y)
             display.set_pixel(x,y,9)
-            sleep(1000)
+            sleep(200)  
         ``` 
     """
     )
@@ -636,6 +670,8 @@ display.show(Image.SAD)
 
 !!! abstract "{{ exercice() }}"
     **Communication radio**
+
+    Voici un code proposant une communication radio entre deux cartes. Inspirez-vous de ce code pour (par exemple) faire un «vrai» Pierre-Feuille-Ciseaux entre deux cartes.
 
     ```python linenums='1'
     from microbit import *
@@ -669,6 +705,139 @@ display.show(Image.SAD)
     ```
 
     Plus de renseignements [ici](https://nsirennes.fr/os-archi/bbc-microbit/){. target="_blank"}
+
+
+
+
+!!! abstract "{{ exercice() }}"
+    En utilisant l'exercice 10 et la communication radio, faire «passer» une led d'une carte à l'autre en inclinant la carte.
+
+    ??? tip "video"
+         
+        <iframe width="463" height="823" src="https://www.youtube.com/embed/uaG4TuBxN-w" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        Carte 1
+
+        ```python linenums='1'
+        from microbit import *
+        import radio
+
+        radio.on()
+        radio.config(channel=12)
+        radio.config(power=7)
+        hasBall = True
+        x = 2
+        y = 2
+
+        def move(x, y):
+            incx = accelerometer.get_x()
+            if incx > 500:
+                x += 1
+                x = min(x,5)
+            if incx <-500:
+                x -= 1
+                x = max(0,x)
+            incy = accelerometer.get_y()
+            if incy > 500:
+                y += 1
+                y = min(y,4)
+            if incy <-500:
+                y -= 1
+                y = max(0,y)
+            return x, y
+
+        while True:
+            if not hasBall:
+                message = radio.receive()
+                if message: 
+                    y = int(message)
+                    x = 4
+                    hasBall = True
+            if hasBall:
+                x, y = move(x, y)
+                if x <= 4:
+                    display.clear()
+                    display.set_pixel(x, y, 9)
+                if x == 5:
+                    radio.send(str(y))
+                    display.clear()
+                    hasBall = False         
+        
+            sleep(100)
+        ```
+
+        Carte 2
+
+        ```python linenums='1'
+        from microbit import *
+        import radio
+
+        radio.on()
+        radio.config(channel=12)
+        radio.config(power=7)
+        hasBall = False
+        x = 2
+        y = 2
+
+        def move(x, y):
+            incx = accelerometer.get_x()
+            if incx > 500:
+                x += 1
+                x = min(x,4)
+            if incx <-500:
+                x -= 1
+                x = max(-1,x)
+            incy = accelerometer.get_y()
+            if incy > 500:
+                y += 1
+                y = min(y,4)
+            if incy <-500:
+                y -= 1
+                y = max(0,y)
+            return x, y
+
+        while True:
+            if not hasBall:
+                message = radio.receive()
+                if message:     
+                    y = int(message)
+                    x = 0
+                    hasBall = True
+            if hasBall:
+                x, y = move(x, y)
+                if x >= 0 :
+                    display.clear()
+                    display.set_pixel(x, y, 9)
+                if x == -1:
+                    radio.send(str(y))
+                    display.clear()
+                    hasBall = False         
+        
+            sleep(100)
+        ```
+    """
+    )
+    }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
