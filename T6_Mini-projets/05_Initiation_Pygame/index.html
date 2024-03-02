@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.12">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -3365,18 +3365,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#0-preambule" class="md-nav__link">
+  <a href="#1-preparation-de-la-scene" class="md-nav__link">
     <span class="md-ellipsis">
-      0. Preambule
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-preparation-de-la-scene-du-jeu" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Préparation de la scène du jeu
+      1. Préparation de la scène
     </span>
   </a>
   
@@ -3452,6 +3443,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#33-activation-dun-framerate" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Activation d'un framerate
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3491,11 +3491,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-a-vous" class="md-nav__link">
+  <a href="#5-controle-avec-la-microbit" class="md-nav__link">
     <span class="md-ellipsis">
-      5. À vous !
+      5. Contrôle avec la micro:bit
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="5. Contrôle avec la micro:bit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-programme-a-televerser-dans-la-microbit" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Programme à téléverser dans la micro:bit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-recuperation-des-donnees-dans-pygame" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Récupération des données dans Pygame
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4218,46 +4242,44 @@
 
 <h1 id="initiation-a-pygame">Initiation à Pygame<a class="headerlink" href="#initiation-a-pygame" title="Permanent link">⚓︎</a></h1>
 <p><img alt="" class="center" src="../data/logopygame.png" width="60%" /></p>
-<h2 id="0-preambule">0. Preambule<a class="headerlink" href="#0-preambule" title="Permanent link">⚓︎</a></h2>
-<ul>
-<li><a class="" href="https://www.pygame.org/news" target="_blank">Pygame</a> est un package de Python facilitant la création de jeux basés une interface graphique.</li>
-<li>Au lycée, vous pouvez l'installer sur votre distribution Python, par <code>pip3 install pygame</code>.</li>
-<li>
-<p>Sur votre pc perso, vous pouvez utiliser le gestionnaire de packages de Thonny (<code>Outils / Gérer les Paquets</code> )</p>
-</li>
-<li>
-<p>Installation et paramétrage de <a href="../Github/">Github Desktop</a></p>
-</li>
-</ul>
-<h2 id="1-preparation-de-la-scene-du-jeu">1. Préparation de la scène du jeu<a class="headerlink" href="#1-preparation-de-la-scene-du-jeu" title="Permanent link">⚓︎</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pygame</span><span class="o">,</span> <span class="nn">sys</span>
+<h2 id="1-preparation-de-la-scene">1. Préparation de la scène<a class="headerlink" href="#1-preparation-de-la-scene" title="Permanent link">⚓︎</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pygame</span>
 <span class="kn">from</span> <span class="nn">pygame.locals</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="n">pygame</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+<span class="n">pygame</span><span class="o">.</span><span class="n">init</span><span class="p">()</span> <span class="c1"># (4)</span>
 
-<span class="n">fenetre</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">((</span><span class="mi">640</span><span class="p">,</span> <span class="mi">480</span><span class="p">))</span>
+<span class="n">fenetre</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">((</span><span class="mi">640</span><span class="p">,</span> <span class="mi">480</span><span class="p">))</span> <span class="c1"># (1)</span>
+<span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">186</span><span class="p">,</span> <span class="mi">181</span><span class="p">))</span> <span class="c1"># (2)</span>
 
-<span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">186</span><span class="p">,</span><span class="mi">181</span><span class="p">])</span>
+<span class="n">running</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">while</span> <span class="n">running</span><span class="p">:</span> 
+    <span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">186</span><span class="p">,</span> <span class="mi">181</span><span class="p">))</span> <span class="c1"># (2)</span>
+    <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span> <span class="c1">#(3) </span>
 
-<span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
-
-<span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
-  <span class="k">pass</span>
+<span class="n">pygame</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
 </code></pre></div>
+<ol>
+<li>On crée une fenêtre de taille <code>(640, 480)</code>.</li>
+<li>On remplit la fenêtre avec la couleur <code>(10, 186, 181)</code>.</li>
+<li>Permet de rafraîchir la totalité de la fenêtre. Pour l'instant inutile car rien ne bouge...</li>
+<li>Initialisation du module <code>pygame</code>. </li>
+</ol>
 <p>Ce code devrait vous donner ceci :</p>
 <p><img alt="image" class="center" src="../data/f1.png" width="30%" /></p>
-<p><strong>Commentaires</strong></p>
+<p><strong>Remarques</strong></p>
 <ul>
-<li>Le package <code>sys</code> permettra de fermer le programme au niveau de l'OS par la commande <code>sys.exit()</code> </li>
 <li>La ligne <code>from pygame.locals import *</code> permettra d'utiliser des variables locales déjà définies par <code>pygame</code>, comme <code>MOUSEBUTTONDOWN</code>, par exemple.</li>
 <li>Durant tout le code, notre scène de travail sera l'objet <code>fenetre</code>, dans lequel nous viendrons coller de nouveaux éléments. </li>
+<li>Pour l'instant, notre code nous enferme dans une boucle infinie : la fenêtre ne se ferme pas, il faut arrêter Python depuis Thonny. Nous y remedierons bientôt.</li>
 </ul>
-<p><strong>Éléments structurants d'un code <code>pygame</code> :</strong></p>
+<div class="admonition abstract">
+<p class="admonition-title">Les éléments structurants d'un code <code>pygame</code></p>
 <ul>
 <li><code>pygame.init()</code>  effectue une initialisation globale de tous les modules <code>pygame</code> importés. À mettre au début du code.</li>
-<li><code>pygame.display.flip()</code> effectue un rafraîchissement total de tous les éléments graphiques de la fenêtre. À mettre donc plutôt vers la fin du code.</li>
-<li><code>while True :</code> comme très souvent dans les jeux, la structure essentielle est une boucle infinie dont on ne sortira que par une interruption système (<code>sys.exit()</code>) où lors de la bascule d'un booléen. Pour l'instant, cette boucle est vide (<code>pass</code> ).</li>
+<li><code>while running:</code> comme très souvent dans les jeux, la structure essentielle est une boucle infinie dont on ne sortira que par la bascule d'un booléen. Ici on restera bloqué dans la boucle jusqu'au moment où la variable <code>running</code> passera à <code>False</code>.</li>
+<li><code>pygame.display.flip()</code> effectue un rafraîchissement total de tous les éléments graphiques de la fenêtre. À mettre à l'intérieur de la boucle infinie, généralement à la fin de celle-ci.</li>
 </ul>
+</div>
 <h2 id="2-apparition-dun-personnage">2. Apparition d'un personnage<a class="headerlink" href="#2-apparition-dun-personnage" title="Permanent link">⚓︎</a></h2>
 <h3 id="21-telechargement-de-limage">2.1. Téléchargement de l'image<a class="headerlink" href="#21-telechargement-de-limage" title="Permanent link">⚓︎</a></h3>
 <p>Nous allons travailler avec le sprite ci-dessous, nommé <code>perso.png</code>. Il est issu de <a href="https://openclassrooms.com/fr/courses/1399541-interface-graphique-pygame-pour-python/1399813-premieres-fenetres">https://openclassrooms.com/fr/courses/1399541-interface-graphique-pygame-pour-python/1399813-premieres-fenetres</a></p>
@@ -4265,15 +4287,21 @@
 <p><a href="../data/perso.png">Téléchargez-le</a> pour le mettre dans le même dossier que votre code <code>pygame</code>.</p>
 <p>Vous pouvez trouver sur internet un grand nombre de sprites libres de droits, au format <code>png</code> (donc gérant la transparence), dans de multiples positions (ce qui permet de simuler des mouvements fluides). Ici nous travaillerons avec un sprite unique.</p>
 <h3 id="22-importation-de-limage-dans-la-fenetre">2.2. Importation de l'image dans la fenêtre<a class="headerlink" href="#22-importation-de-limage-dans-la-fenetre" title="Permanent link">⚓︎</a></h3>
-<p><div class="highlight"><pre><span></span><code><span class="n">perso</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;perso.png&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">convert_alpha</span><span class="p">()</span>
+<p><div class="highlight"><pre><span></span><code><span class="n">perso</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;perso.png&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">convert_alpha</span><span class="p">()</span>
 </code></pre></div>
 La fonction <code>convert_alpha()</code> est appelée pour que soit correctement traité le canal de transparence (canal <em>alpha</em>) de notre image.</p>
 <h3 id="23-affichage-de-limage">2.3. Affichage de l'image<a class="headerlink" href="#23-affichage-de-limage" title="Permanent link">⚓︎</a></h3>
 <p>À ce stade, <code>perso</code> est un objet <code>pygame</code> de type <code>Surface</code> .</p>
-<p>Afin de facilement pouvoir le déplacer, nous allons stocker la position de cet objet dans une variable <code>position_perso</code>,  qui sera de type <code>rect</code>. </p>
-<p><div class="highlight"><pre><span></span><code><span class="n">position_perso</span> <span class="o">=</span> <span class="n">perso</span><span class="o">.</span><span class="n">get_rect</span><span class="p">()</span>
+<p>Afin de facilement pouvoir le déplacer, nous allons stocker la position de cet objet dans une variable <code>position_perso</code>,  grâce à l'instruction <code>perso.get_rect()</code>.</p>
+<p>Notre image est devenue «un rectangle» que nous allons positionner où nous voulons.</p>
+<p>Par exemple, pour positionner le coin supérieur gauche du personnage aux coordonnées <code>(100, 200)</code>, nous écrirons :</p>
+<div class="highlight"><pre><span></span><code><span class="n">position_perso</span> <span class="o">=</span> <span class="n">perso</span><span class="o">.</span><span class="n">get_rect</span><span class="p">()</span>
+<span class="n">position_perso</span><span class="o">.</span><span class="n">topleft</span> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
 </code></pre></div>
-Pour afficher cette image, nous allons venir le superposer aux éléments graphiques déjà dessinés (en l'occurence : rien) avec l'instruction <code>blit()</code> :</p>
+<blockquote>
+<p>Il y a d'autres instructions que <code>topleft</code> : vous pouvez les retrouver <a class="" href="https://pygame.readthedocs.io/en/latest/rect/rect.html#points-of-interest" target="_blank">ici</a>.</p>
+</blockquote>
+<p>Pour afficher cette image, nous allons venir le superposer aux éléments graphiques déjà dessinés (en l'occurence : rien) avec l'instruction <code>blit()</code> :</p>
 <div class="highlight"><pre><span></span><code><span class="n">fenetre</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">perso</span><span class="p">,</span> <span class="n">position_perso</span><span class="p">)</span>
 </code></pre></div>
 <p><strong>▸ récapitulatif du code</strong></p>
@@ -4293,46 +4321,70 @@ Pour afficher cette image, nous allons venir le superposer aux éléments graphi
 <span class="normal">14</span>
 <span class="normal">15</span>
 <span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">pygame</span><span class="o">,</span> <span class="nn">sys</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">pygame</span>
 <span class="kn">from</span> <span class="nn">pygame.locals</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">pygame</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
 
 <span class="n">fenetre</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">((</span><span class="mi">640</span><span class="p">,</span> <span class="mi">480</span><span class="p">))</span>
-<span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">186</span><span class="p">,</span><span class="mi">181</span><span class="p">])</span>
 
-<span class="n">perso</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;perso.png&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">convert_alpha</span><span class="p">()</span>
+<span class="n">perso</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;perso.png&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">convert_alpha</span><span class="p">()</span>
 <span class="n">position_perso</span> <span class="o">=</span> <span class="n">perso</span><span class="o">.</span><span class="n">get_rect</span><span class="p">()</span>
 
-<span class="n">fenetre</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">perso</span><span class="p">,</span> <span class="n">position_perso</span><span class="p">)</span>
+<span class="n">running</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">while</span> <span class="n">running</span><span class="p">:</span> 
+    <span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">186</span><span class="p">,</span> <span class="mi">181</span><span class="p">))</span>
+    <span class="n">position_perso</span><span class="o">.</span><span class="n">topleft</span> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+    <span class="n">fenetre</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">perso</span><span class="p">,</span> <span class="n">position_perso</span><span class="p">)</span>
+    <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
 
-<span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
-
-<span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
-  <span class="k">pass</span>
+<span class="n">pygame</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
 <p><strong>Aperçu</strong></p>
 <p><img alt="image" class="center" src="../data/f2.png" width="30%" /></p>
 <h2 id="3-gestion-des-evenements">3. Gestion des évènements<a class="headerlink" href="#3-gestion-des-evenements" title="Permanent link">⚓︎</a></h2>
 <p>Lorsqu'un programme <code>pygame</code> est lancé, la variable interne <code>pygame.event.get()</code> reçoit en continu les évènements des périphériques gérés par le système d'exploitation.<br />
 Nous allons nous intéresser aux évènements de type <code>KEYDOWN</code> (touche de clavier appuyée) ou de type <code>MOUSEBUTTONDOWN</code> (boutons de souris appuyé).</p>
-<p>La gestion des évènements nous permettra de pouvoir enfin fermer proprement la fenêtre Pygame, grâce au code suivant :</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># routine pour pouvoir fermer «proprement» la fenêtre Pygame</span>
-<span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">pygame</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">get</span><span class="p">():</span>
+<p>Pour commencer, la gestion des évènements nous permettra de pouvoir enfin fermer proprement la fenêtre Pygame, grâce au code suivant :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">pygame</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">get</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">QUIT</span><span class="p">:</span>
-        <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
-        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
-</code></pre></div>
+        <span class="n">running</span> <span class="o">=</span> <span class="kc">False</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  1</p>
+<p>Intégrer le code ci-dessus au code précédent afin de pouvoir fermer proprement la fenêtre.</p>
+</div>
 <h3 id="31-evenements-clavier">3.1. Évènements clavier<a class="headerlink" href="#31-evenements-clavier" title="Permanent link">⚓︎</a></h3>
 <h4 id="311-exemple-de-code">3.1.1. Exemple de code<a class="headerlink" href="#311-exemple-de-code" title="Permanent link">⚓︎</a></h4>
 <p>La structure de code pour détecter l'appui sur une touche de clavier est, dans le cas de la détection de la touche «Flèche droite» :</p>
-<p><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">pygame</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">get</span><span class="p">():</span>   
-  <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">KEYDOWN</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">K_RIGHT</span><span class="p">:</span>
-      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;flèche droite appuyée&quot;</span><span class="p">)</span>
-</code></pre></div>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">pygame</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">get</span><span class="p">():</span>   
+    <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">KEYDOWN</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">K_RIGHT</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;flèche droite appuyée&#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 La touche (en anglais <em>key</em>) «Flèche Droite» est appelée <code>K_RIGHT</code> par <code>pygame</code>. </p>
-<p>Le nom de toutes les touches peut être retrouvé à l'adresse https://www.pygame.org/docs/ref/key.html.</p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> il ne doit y avoir qu'une seule boucle de capture d'évènements, donc la routine de fermeture de la fenêtre doit être dans la même boucle :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">pygame</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">get</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">KEYDOWN</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">K_RIGHT</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;flèche droite appuyée&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">QUIT</span><span class="p">:</span>
+        <span class="n">running</span> <span class="o">=</span> <span class="kc">False</span>
+</code></pre></div></td></tr></table></div>
+<p>Le nom de toutes les touches peut être retrouvé à l'adresse <a class="" href="https://www.pygame.org/docs/ref/key.html" target="_blank">https://www.pygame.org/docs/ref/key.html</a>.</p>
 <p><strong>Remarque :</strong> c'est grâce à la ligne initiale
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pygame.locals</span> <span class="kn">import</span> <span class="o">*</span>
 </code></pre></div>
@@ -4349,13 +4401,28 @@ Il existe donc toujours un intervalle de temps pendant lequel la touche reste ap
 </code></pre></div>
 <h3 id="32-evenements-souris">3.2 Évènements souris<a class="headerlink" href="#32-evenements-souris" title="Permanent link">⚓︎</a></h3>
 <h4 id="321-exemple-de-code">3.2.1. Exemple de code<a class="headerlink" href="#321-exemple-de-code" title="Permanent link">⚓︎</a></h4>
-<p>La structure de code pour détecter l'appui sur un bouton de la souris est, dans le cas de la détection du bouton de gauche (le bouton 1)  :</p>
+<p>La structure de code pour détecter l'appui sur un bouton de la souris est :</p>
 <div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">pygame</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">get</span><span class="p">():</span>    
-  <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">MOUSEBUTTONDOWN</span> <span class="ow">and</span> <span class="n">event</span><span class="o">.</span><span class="n">button</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">:</span>
-      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;clic gauche détecté&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">MOUSEBUTTONDOWN</span> <span class="ow">and</span> <span class="n">event</span><span class="o">.</span><span class="n">button</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;clic gauche détecté&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">MOUSEBUTTONDOWN</span> <span class="ow">and</span> <span class="n">event</span><span class="o">.</span><span class="n">button</span> <span class="o">==</span> <span class="mi">3</span> <span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;clic droit détecté&#39;</span><span class="p">)</span>
 </code></pre></div>
+<p>Le clic-gauche est associé à la valeur 1, le clic-droit à la valeur 3 (le clic-molette éventuel à la valeur 2).</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice  2</p>
+<p>Reprendre le code initial et y intégrer la capture d'évènements souris afin que s'affiche en console le bouton de souris appuyé.</p>
+</div>
 <h4 id="322-recuperation-des-coordonnees-de-la-souris">3.2.2. Récupération des coordonnées de la souris<a class="headerlink" href="#322-recuperation-des-coordonnees-de-la-souris" title="Permanent link">⚓︎</a></h4>
 <p>Le tuple <code>(abscisse, ordonnée)</code> des coordonnées de la souris sera récupéré avec l'instruction <code>pygame.mouse.get_pos()</code>.</p>
+<h3 id="33-activation-dun-framerate">3.3 Activation d'un framerate<a class="headerlink" href="#33-activation-dun-framerate" title="Permanent link">⚓︎</a></h3>
+<p>Pour l'instant, notre boucle infinie tourne «à fond» et le rafraîchissement de l'affichage se fait aussi rapidement que le peut le processeur. 
+Afin de garder le contrôle sur cet fréquence de rafraîchissement (le nombre de <em>frames par seconde</em>, le fameux FPS) nous allons utiliser une horloge.</p>
+<p><code>clock = pygame.time.Clock()</code> 
+crée une horloge dans le corps du programme.</p>
+<p>Ensuite, dans la boucle, nous rajouterons</p>
+<p><code>clock.tick(30)</code> </p>
+<p>pour régler (par exemple) le FPS à 30.</p>
 <h2 id="4-deplacement-du-personnage">4. Déplacement du personnage<a class="headerlink" href="#4-deplacement-du-personnage" title="Permanent link">⚓︎</a></h2>
 <p>Le déplacement d'un personnage se fera toujours par modification de ses coordonnées (et visuellement, par effacement de la dernière position).
 Ce déplacement pourra être :  </p>
@@ -4364,15 +4431,12 @@ Ce déplacement pourra être :  </p>
 <li>relatif : on indique de combien le personnage doit se décaler par rapport à sa position initiale.</li>
 </ul>
 <h3 id="41-deplacement-absolu">4.1. Déplacement absolu<a class="headerlink" href="#41-deplacement-absolu" title="Permanent link">⚓︎</a></h3>
-<p>Pour afficher le personnage à la position <code>(100,200)</code>, on écrira :
-<div class="highlight"><pre><span></span><code><span class="n">position_perso</span><span class="o">.</span><span class="n">topleft</span> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span>
-</code></pre></div>
-où <code>position_perso</code> est l'objet de type <code>rect</code>  contenant les coordonnées.</p>
+<p><em>Rappel :</em> pour afficher le personnage à la position <code>(300,200)</code>, on écrit simplement:
+<div class="highlight"><pre><span></span><code><span class="n">position_perso</span><span class="o">.</span><span class="n">topleft</span> <span class="o">=</span> <span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span>
+</code></pre></div></p>
+<p>Au prochain <code>fenetre.blit(perso, position_perso)</code>, le personnage sera positionné à cette nouvelle position. </p>
 <div class="admonition example">
-<p class="admonition-title">Exercice 1</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Correction possible</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
+<p class="admonition-title">Exercice  3</p>
 <p>Réaliser un déplacement aléatoire, comme l'animation ci-dessous.</p>
 <p><img alt="image" class="center" src="../data/exo1.gif" width="30%" /></p>
 <p>Vous pourrez utiliser les instructions :</p>
@@ -4381,61 +4445,68 @@ où <code>position_perso</code> est l'objet de type <code>rect</code>  contenant
 <li><code>randint(a,b)</code> du package <code>random</code>, qui renvoie un entier pseudo-aléatoire entre <code>a</code>  et <code>b</code>.</li>
 </ul>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">pygame</span><span class="o">,</span> <span class="nn">sys</span>
-<span class="kn">from</span> <span class="nn">pygame.locals</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
-
-<span class="n">pygame</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
-
-<span class="n">fenetre</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">((</span><span class="mi">640</span><span class="p">,</span> <span class="mi">480</span><span class="p">))</span>
-
-<span class="n">perso</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;perso.png&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">convert_alpha</span><span class="p">()</span>
-
-<span class="n">position_perso</span> <span class="o">=</span> <span class="n">perso</span><span class="o">.</span><span class="n">get_rect</span><span class="p">()</span>
-
-<span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
-    <span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">186</span><span class="p">,</span><span class="mi">181</span><span class="p">])</span>
-    <span class="n">position_perso</span><span class="o">.</span><span class="n">topleft</span> <span class="o">=</span> <span class="p">(</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">540</span><span class="p">),</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">380</span><span class="p">))</span>
-    <span class="n">fenetre</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">perso</span><span class="p">,</span> <span class="n">position_perso</span><span class="p">)</span>
-    <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
-    <span class="n">pygame</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</div>
-</div>
-</div>
-</div>
 <h3 id="42-deplacement-relatif">4.2. Déplacement relatif<a class="headerlink" href="#42-deplacement-relatif" title="Permanent link">⚓︎</a></h3>
 <p>Pour déplacer le personnage de 15 pixels vers la droite et de 10 pixels vers le haut par rapport à sa position précédente, on écrira :
 <div class="highlight"><pre><span></span><code><span class="n">position_perso</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="o">-</span><span class="mi">10</span><span class="p">)</span>
 </code></pre></div>
 où <code>position_perso</code> est l'objet de type <code>rect</code>  contenant les coordonnées.</p>
 <div class="admonition example">
-<p class="admonition-title">Exercice 2</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Correction possible</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
+<p class="admonition-title">Exercice  4</p>
 <p>Réaliser un contrôle au clavier du personnage, comme dans l'animation ci-dessous.
 <img alt="image" class="center" src="../data/exo2.gif" /></p>
+<div class="highlight"><pre><span></span><code>```
+</code></pre></div>
 </div>
-<div class="tabbed-block">
+<div class="admonition example">
+<p class="admonition-title">Exercice  5</p>
+<p>Rajouter des instructions afin que le personnage ne puisse pas sortir de la fenêtre de jeu.</p>
+<p>On utilisera les variables suivantes :</p>
+<ul>
+<li><code>position_perso.top</code> : ordonnnée du haut du personnage</li>
+<li><code>position_perso.bottom</code> : ordonnnée du bas du personnage</li>
+<li><code>position_perso.left</code> : ordonnnée de la gauche du personnage</li>
+<li><code>position_perso.right</code> : ordonnnée de la droite du personnage</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  6</p>
+<p>Reprendre l'exercice précédent mais faire en sorte que le personnage réapparaisse à l'opposé de là où il est sorti.</p>
+</div>
+<h2 id="5-controle-avec-la-microbit">5. Contrôle avec la micro:bit<a class="headerlink" href="#5-controle-avec-la-microbit" title="Permanent link">⚓︎</a></h2>
+<p>Pour pouvoir contrôler notre personnage avec (par exemple) les boutons de la carte micro:bit, il va falloir :</p>
+<ul>
+<li>mettre dans la carte un programme minimal qui va se contenter d'envoyer des données.</li>
+<li>mettre dans notre programme Pygame une instruction capable de recevoir les données envoyées par la carte.</li>
+</ul>
+<h3 id="51-programme-a-televerser-dans-la-microbit">5.1 Programme à téléverser dans la micro:bit<a class="headerlink" href="#51-programme-a-televerser-dans-la-microbit" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">incX</span> <span class="o">=</span> <span class="n">accelerometer</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span>
+    <span class="n">incY</span> <span class="o">=</span> <span class="n">accelerometer</span><span class="o">.</span><span class="n">get_y</span><span class="p">()</span>
+
+    <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">,</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">incX</span><span class="p">,</span><span class="n">incY</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+
+    <span class="n">sleep</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Ce programme va envoyer, 20 fois par seconde, la valeur de l'inclinaison en X et la valeur de l'inclinaison en Y.</p>
+<h3 id="52-recuperation-des-donnees-dans-pygame">5.2 Récupération des données dans Pygame<a class="headerlink" href="#52-recuperation-des-donnees-dans-pygame" title="Permanent link">⚓︎</a></h3>
+<p>Il faut connaître le port utilisé par le système d'exploitation pour communiquer avec la micro:bit. Sous Linux, ce port est de la forme <code>ttyACM0</code>, sous Windows il sera de la forme <code>COM2</code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">connaitre le port sous Windows</p>
+<p>Ouvrir un terminal via <code>cmd</code> et taper la commande <code>mode</code>. </p>
+</div>
+<p>Une fois le programme d'envoi téléversé dans la micro:bit et le port connu, testez le programme suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -4449,108 +4520,26 @@ où <code>position_perso</code> est l'objet de type <code>rect</code>  contenant
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">pygame</span><span class="o">,</span> <span class="nn">sys</span>
-<span class="kn">from</span> <span class="nn">pygame.locals</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">serial</span>
 
-<span class="n">pygame</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
-<span class="n">pygame</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">set_repeat</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">port</span> <span class="o">=</span> <span class="s2">&quot;COM2&quot;</span> <span class="c1"># à adapter en allant voir le port utilisé par la microbit</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">serial</span><span class="o">.</span><span class="n">Serial</span><span class="p">(</span><span class="n">port</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">baudrate</span> <span class="o">=</span> <span class="mi">115200</span>
 
-<span class="n">fenetre</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">((</span><span class="mi">640</span><span class="p">,</span> <span class="mi">480</span><span class="p">))</span>
-
-<span class="n">perso</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;perso.png&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">convert_alpha</span><span class="p">()</span>
-
-<span class="n">position_perso</span> <span class="o">=</span> <span class="n">perso</span><span class="o">.</span><span class="n">get_rect</span><span class="p">()</span>
-
-<span class="n">pas_deplacement</span> <span class="o">=</span> <span class="mi">15</span> 
-
-<span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
-
-    <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">pygame</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">get</span><span class="p">()</span> <span class="p">:</span>    
-        <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">KEYDOWN</span><span class="p">:</span>
-
-            <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">K_DOWN</span> <span class="p">:</span> 
-                <span class="n">position_perso</span> <span class="o">=</span> <span class="n">position_perso</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">pas_deplacement</span><span class="p">)</span>
-
-            <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">K_UP</span> <span class="p">:</span>
-                <span class="n">position_perso</span> <span class="o">=</span> <span class="n">position_perso</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="n">pas_deplacement</span><span class="p">)</span>
-
-            <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">K_RIGHT</span> <span class="p">:</span> 
-                <span class="n">position_perso</span> <span class="o">=</span> <span class="n">position_perso</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">pas_deplacement</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-
-            <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">K_LEFT</span> <span class="p">:</span> 
-                <span class="n">position_perso</span> <span class="o">=</span> <span class="n">position_perso</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="o">-</span><span class="n">pas_deplacement</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>   
-
-        <span class="c1"># routine pour pouvoir fermer «proprement» la fenêtre Pygame</span>
-        <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">QUIT</span><span class="p">:</span>
-            <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
-            <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
-
-    <span class="n">fenetre</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">186</span><span class="p">,</span><span class="mi">181</span><span class="p">])</span>
-    <span class="n">fenetre</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">perso</span><span class="p">,</span> <span class="n">position_perso</span><span class="p">)</span>
-    <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">s</span><span class="o">.</span><span class="n">flushInput</span><span class="p">()</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+    <span class="n">incX</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">incY</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">incX</span><span class="p">,</span> <span class="n">incY</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
+<p>En inclinant la carte, vous devriez voir bouger les valeurs dans la console de Thonny. Observer quelles sont les valeurs minimales et maximales.</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice  7</p>
+<p>À l'aide de l'exemple précédent, modifiez le code de l'exercice 5 afin de pouvoir bouger le personnage à l'aide de la micro:bit.</p>
 </div>
-</div>
-</div>
-</div>
-<h2 id="5-a-vous">5. À vous !<a class="headerlink" href="#5-a-vous" title="Permanent link">⚓︎</a></h2>
-<p>Fabriquez le jeu que vous souhaitez à partir des informations ci-dessus.
-Bien d'autres aides peuvent être trouvées dans les liens citées dans la partie Bibliographie.</p>
-<p><strong>Exemple</strong> de réalisation possible : un clicker avec un temps qui diminue à progressivement, et comptage des points.</p>
-<p><img alt="image" class="center" src="../data/exo3.gif" width="30%" /></p>
-<p><strong>Quelques aides :</strong></p>
-<ul>
-<li>
-<p><strong>écrire du texte :</strong><br />
-<div class="highlight"><pre><span></span><code><span class="n">font</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">Font</span><span class="p">(</span><span class="n">pygame</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">get_default_font</span><span class="p">(),</span> <span class="mi">36</span><span class="p">)</span>
-<span class="n">text</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s2">&quot;Game Over&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
-<span class="n">fenetre</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="p">(</span><span class="mi">550</span><span class="p">,</span><span class="mi">40</span><span class="p">))</span>
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>dessiner un rectangle :</strong><br />
-<div class="highlight"><pre><span></span><code><span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="n">fenetre</span><span class="p">,(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">),(</span><span class="mi">500</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
-</code></pre></div>
-dessine un rectangle vert de 100 pixels sur 10 pixels, dont le coin en haut à gauche est à la position (500,20).</p>
-</li>
-<li>
-<p><strong>gérer le temps:</strong>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
-<span class="n">topchrono</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-<span class="n">delai</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">sortir</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="k">while</span> <span class="n">sortir</span> <span class="o">==</span> <span class="kc">False</span> <span class="p">:</span>
-  <span class="k">if</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">topchrono</span> <span class="o">&gt;</span> <span class="n">delai</span> <span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;5 secondes se sont écoulées&quot;</span><span class="p">)</span>
-    <span class="n">sortir</span> <span class="o">=</span> <span class="kc">True</span>
-</code></pre></div></p>
-</li>
-</ul>
 <p></br></p>
 <hr />
 <p><strong>Bibliographie</strong></p>
@@ -4578,7 +4567,7 @@ dessine un rectangle vert de 100 pixels sur 10 pixels, dont le coin en haut à g
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">9 février 2022</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2 mars 2024</span>
   </span>
 
     
@@ -4662,7 +4651,7 @@ dessine un rectangle vert de 100 pixels sur 10 pixels, dont le coin en haut à g
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
       
         <script src="../../scripts/mathjax.js"></script>
       
