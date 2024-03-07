@@ -301,6 +301,59 @@ Le clic-gauche est associé à la valeur 1, le clic-droit à la valeur 3 (le cli
 
 Le tuple ```(abscisse, ordonnée)``` des coordonnées de la souris sera récupéré avec l'instruction ```pygame.mouse.get_pos()```.
 
+Cette fonction n'a pas besoin d'être dans notre boucle d'écoute des évènements : elle peut se situer n'importe où dans le code.
+
+
+!!! example "{{ exercice() }}"
+    Faire afficher en console les coordonnées de la souris.
+
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
+        ```python linenums='1'
+
+        import pygame
+        from pygame.locals import *
+
+        pygame.init()
+
+        fenetre = pygame.display.set_mode((640, 480))
+
+        perso = pygame.image.load('perso.png').convert_alpha()
+        position_perso = perso.get_rect()
+
+        pygame.key.set_repeat(50)
+
+        running = True
+        while running: 
+            fenetre.fill((10, 186, 181))
+            position_perso.topleft = (100, 200)
+            fenetre.blit(perso, position_perso)
+
+            x, y = pygame.mouse.get_pos()
+            print(x, y)
+
+            pygame.display.flip()
+            
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    running = False
+
+            if event.type == MOUSEBUTTONDOWN and event.button == 1 :
+                print('clic gauche détecté')
+            if event.type == MOUSEBUTTONDOWN and event.button == 3 :
+                print('clic droit détecté')
+        
+        pygame.quit()
+        
+        ```
+    """
+    )
+    }}
+
+
 
 
 
