@@ -28,6 +28,7 @@ correction(False,
 
 
 ## Thèmes en cours d'étude :
+- [Projet Pygame - Micro:bit](./T6_Mini-projets/05_Initiation_Pygame/)
 - :books: [Micro:bit](./T3_Architecture_materielle/3.1_Microbit/cours/)
 - :books: [Dichotomie](./T4_Algorithmique/4.5_Dichotomie/cours/)
 
