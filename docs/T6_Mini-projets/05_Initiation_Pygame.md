@@ -254,7 +254,7 @@ Le clic-gauche est associé à la valeur 1, le clic-droit à la valeur 3 (le cli
     Reprendre le code initial et y intégrer la capture d'évènements souris afin que s'affiche en console le bouton de souris appuyé.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
