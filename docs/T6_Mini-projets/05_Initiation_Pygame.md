@@ -150,7 +150,7 @@ for event in pygame.event.get():
     Intégrer le code ci-dessus au code précédent afin de pouvoir fermer proprement la fenêtre.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
