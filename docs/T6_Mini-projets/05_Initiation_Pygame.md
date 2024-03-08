@@ -720,7 +720,7 @@ En inclinant la carte, vous devriez voir bouger les valeurs dans la console de T
     À l'aide de l'exemple précédent, modifiez le code de l'exercice 5 afin de pouvoir bouger le personnage à l'aide de la micro:bit.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
