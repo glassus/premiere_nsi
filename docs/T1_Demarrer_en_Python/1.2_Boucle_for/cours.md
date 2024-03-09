@@ -259,34 +259,34 @@ Il faut donc garder en tête que l'objet renvoyé par ```range()``` est un **it�
 
 !!! example "Exercice 2"
 
-        Faire afficher les séries de nombres suivantes.
-        
-        On utilisera la syntaxe ```print(k, end = ' ')``` ) pour afficher les nombres horizontalement.
+    Faire afficher les séries de nombres suivantes.
+    
+    On utilisera la syntaxe ```print(k, end = ' ')``` ) pour afficher les nombres horizontalement.
 
-        A. ```0 1 2 3 4 5``` 
-        ??? success "Correction"
-            ```python linenums='1'
-            for k in range(6):
-                print(k, end = ' ')
-            ```
-        B. ```10 11 12 13 14 15 ``` 
-        ??? success "Correction"
-            ```python linenums='1'
-            for k in range(10,16):
-                print(k, end = ' ')
-            ```
-        C. ```3 6 9 12 ``` 
-        ??? success "Correction"
-            ```python linenums='1'
-            for k in range(3,13,3):
-                print(k, end = ' ')
-            ```
-        D. ```10 9 8 7 6 5 4 3 2 1 0  ``` 
-        ??? success "Correction"
-            ```python linenums='1'
-            for k in range(10,-1,-1):
-                print(k, end = ' ')
-            ```
+    A. ```0 1 2 3 4 5``` 
+    ??? success "Correction"
+        ```python linenums='1'
+        for k in range(6):
+            print(k, end = ' ')
+        ```
+    B. ```10 11 12 13 14 15 ``` 
+    ??? success "Correction"
+        ```python linenums='1'
+        for k in range(10,16):
+            print(k, end = ' ')
+        ```
+    C. ```3 6 9 12 ``` 
+    ??? success "Correction"
+        ```python linenums='1'
+        for k in range(3,13,3):
+            print(k, end = ' ')
+        ```
+    D. ```10 9 8 7 6 5 4 3 2 1 0  ``` 
+    ??? success "Correction"
+        ```python linenums='1'
+        for k in range(10,-1,-1):
+            print(k, end = ' ')
+        ```
     
 ## 5. Une situation classique : la double boucle
 
