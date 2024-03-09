@@ -4406,35 +4406,40 @@ Si nécessaire, on peut le convertir en liste :
 <p>Il faut donc garder en tête que l'objet renvoyé par <code>range()</code> est un <strong>itérable</strong> assimilable à une liste de nombres.  </p>
 <div class="admonition example">
 <p class="admonition-title">Exercice 2</p>
-<div class="highlight"><pre><span></span><code>Faire afficher les séries de nombres suivantes.
-
-On utilisera la syntaxe ```print(k, end = &#39; &#39;)``` ) pour afficher les nombres horizontalement.
-
-A. ```0 1 2 3 4 5``` 
-??? success &quot;Correction&quot;
-    ```python linenums=&#39;1&#39;
-    for k in range(6):
-        print(k, end = &#39; &#39;)
-    ```
-B. ```10 11 12 13 14 15 ``` 
-??? success &quot;Correction&quot;
-    ```python linenums=&#39;1&#39;
-    for k in range(10,16):
-        print(k, end = &#39; &#39;)
-    ```
-C. ```3 6 9 12 ``` 
-??? success &quot;Correction&quot;
-    ```python linenums=&#39;1&#39;
-    for k in range(3,13,3):
-        print(k, end = &#39; &#39;)
-    ```
-D. ```10 9 8 7 6 5 4 3 2 1 0  ``` 
-??? success &quot;Correction&quot;
-    ```python linenums=&#39;1&#39;
-    for k in range(10,-1,-1):
-        print(k, end = &#39; &#39;)
-    ```
-</code></pre></div>
+<p>Faire afficher les séries de nombres suivantes.</p>
+<p>On utilisera la syntaxe <code>print(k, end = ' ')</code> ) pour afficher les nombres horizontalement.</p>
+<p>A. <code>0 1 2 3 4 5</code> </p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>B. <code>10 11 12 13 14 15</code> </p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">16</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>C. <code>3 6 9 12</code> </p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>D. <code>10 9 8 7 6 5 4 3 2 1 0</code> </p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <h2 id="5-une-situation-classique-la-double-boucle">5. Une situation classique : la double boucle<a class="headerlink" href="#5-une-situation-classique-la-double-boucle" title="Permanent link">⚓︎</a></h2>
 <p>Il est très souvent utile d'imbriquer une boucle dans une autre, notamment lors du parcours de tous les pixels d'une image.
@@ -4566,7 +4571,7 @@ Maman dit : « et une cuillère de compote pour Riri ! »
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">21 septembre 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">9 mars 2024</span>
   </span>
 
     
