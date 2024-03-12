@@ -519,13 +519,13 @@ où ```position_perso``` est l'objet de type ```rect```  contenant les coordonn�
 
     On utilisera les variables suivantes :
 
-    - ```position_perso.top``` : ordonnnée du haut du personnage
-    - ```position_perso.bottom``` : ordonnnée du bas du personnage
-    - ```position_perso.left``` : ordonnnée de la gauche du personnage
-    - ```position_perso.right``` : ordonnnée de la droite du personnage
+    - ```position_perso.top``` : ordonnée du haut du personnage
+    - ```position_perso.bottom``` : ordonnée du bas du personnage
+    - ```position_perso.left``` : abscisse de la gauche du personnage
+    - ```position_perso.right``` : abscisse de la droite du personnage
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
