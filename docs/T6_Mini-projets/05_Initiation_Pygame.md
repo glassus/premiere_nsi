@@ -670,6 +670,8 @@ Pour pouvoir contrôler notre personnage avec (par exemple) les boutons de la ca
 
 ### 5.1 Programme à téléverser dans la micro:bit
 
+[Lien vers le simulateur](https://python.microbit.org/v/3){. target="_blank"}
+
 ```python linenums='1'
 from microbit import *
 
