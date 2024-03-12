@@ -449,7 +449,7 @@ Au prochain ```fenetre.blit(perso, position_perso)```, le personnage sera positi
 
 Pour déplacer le personnage de 15 pixels vers la droite et de 10 pixels vers le haut par rapport à sa position précédente, on écrira :
 ```python
-position_perso.move(15,-10)
+position_perso = position_perso.move(15,-10)
 ```
 où ```position_perso``` est l'objet de type ```rect```  contenant les coordonnées.
 
@@ -459,7 +459,7 @@ où ```position_perso``` est l'objet de type ```rect```  contenant les coordonn�
     ![image](data/exo2.gif){: .center}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
