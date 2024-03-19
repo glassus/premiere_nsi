@@ -102,7 +102,7 @@ La résolution de ce problème peut se faire de manière gloutonne : à chaque �
 ### 2.1 Solution du problème
 
 !!! note "Rendu de monnaie :heart: :heart: :heart:"
-    {#
+    
     ```python linenums='1'
     def rendu(somme_a_rendre):
         pieces = [200, 100, 50, 20, 10, 5, 2, 1]
@@ -123,7 +123,7 @@ La résolution de ce problème peut se faire de manière gloutonne : à chaque �
     4. On met à jour la somme à rendre.
     5. La pièce était trop grosse, on avance dans la liste.
 
-    #}
+    
 
 Utilisation : `rendu(13)` doit renvoyer `[10, 2, 1]`
 
