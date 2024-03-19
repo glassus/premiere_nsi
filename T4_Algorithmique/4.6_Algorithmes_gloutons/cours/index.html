@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.14">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.10ba22f1.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -2715,7 +2715,7 @@
           <li class="md-nav__item">
   <a href="#31-petite-aide-technique-avant-de-commencer" class="md-nav__link">
     <span class="md-ellipsis">
-      3.1 Petite aide technique avant de commencer
+      3.1 Petite aide technique avant de commencer
     </span>
   </a>
   
@@ -4244,12 +4244,17 @@
 <h3 id="12-remplir-un-rectangle-avec-des-carres">1.2 Remplir un rectangle avec des carrés<a class="headerlink" href="#12-remplir-un-rectangle-avec-des-carres" title="Permanent link">⚓︎</a></h3>
 <p><em>(d'après S.Tummarello et E.Buonocore)</em></p>
 <p>On considère un rectangle de dimension 11 sur 13 (figure 0). On veut remplir ce rectangle avec le minimum de carrés.</p>
-<p><img alt="" class="center" src="../data/remplissage_carres2.png" /></p>
-<p>Un algorithme glouton va chercher à positionner d'abord le plus grand carré possible (figure 1). </p>
-<p>C'est une stratégie efficace (8 carrés nécessaires), mais qui n'est pas optimale : la figure 2 présente un pavage avec seulement 6 carrés.</p>
-<p>Encore une fois, la solution gloutonne n'est pas la solution optimale.</p>
-<p>Est-ce qu'un algorithme glouton va <strong>toujours</strong> passer à côté de la solution optimale ? 
-Non ! Il arrive <em>aussi</em> qu'il donne la solution optimale. Changeons le rectangle initial en un rectangle de 10 sur 15 :</p>
+<p><img alt="" class="center" src="../data/carres0.png" /></p>
+<p>Un algorithme glouton va chercher à positionner d'abord le plus grand carré possible (figure 1) :</p>
+<p><img alt="" class="center" src="../data/carres1.png" /></p>
+<p>C'est une stratégie efficace (8 carrés nécessaires), mais qui n'est pas optimale !</p>
+<details class="success">
+<summary>stratégie optimale</summary>
+<p>La figure 2 présente un pavage avec seulement 6 carrés.
+<img alt="" class="center" src="../data/carres2.png" /></p>
+</details>
+<p><strong>Question :</strong> Est-ce qu'un algorithme glouton va <strong>toujours</strong> passer à côté de la solution optimale ? </p>
+<p>Non ! Il arrive <em>aussi</em> qu'il donne la solution optimale. Changeons le rectangle initial en un rectangle de 10 sur 15 :</p>
 <p><img alt="" class="center" src="../data/remplissage_carres3.png" /></p>
 <p>Dans cette situation, l'algorithme glouton nous amène à la solution optimale.</p>
 <h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">⚓︎</a></h2>
@@ -4265,35 +4270,6 @@ Non ! Il arrive <em>aussi</em> qu'il donne la solution optimale. Changeons le re
 <h3 id="21-solution-du-probleme">2.1 Solution du problème<a class="headerlink" href="#21-solution-du-probleme" title="Permanent link">⚓︎</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Rendu de monnaie <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">rendu</span><span class="p">(</span><span class="n">somme_a_rendre</span><span class="p">):</span>
-    <span class="n">pieces</span> <span class="o">=</span> <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-    <span class="n">solution</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">i</span> <span class="o">=</span>  <span class="mi">0</span>   <span class="c1"># (1)</span>
-    <span class="k">while</span> <span class="n">somme_a_rendre</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">pieces</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">somme_a_rendre</span> <span class="p">:</span> <span class="c1"># (2) </span>
-            <span class="n">solution</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pieces</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>   <span class="c1"># (3) </span>
-            <span class="n">somme_a_rendre</span> <span class="o">=</span> <span class="n">somme_a_rendre</span> <span class="o">-</span> <span class="n">pieces</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="c1"># (4)</span>
-        <span class="k">else</span> <span class="p">:</span>
-            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>   <span class="c1"># (5) </span>
-    <span class="k">return</span> <span class="n">solution</span>
-</code></pre></div></td></tr></table></div>
-<ol>
-<li>On part du 1er indice -&gt; la plus grande pièce</li>
-<li>Est-ce que la pièce peut être rendue ?</li>
-<li>On garde la pièce dans la liste <code>solution</code></li>
-<li>On met à jour la somme à rendre.</li>
-<li>La pièce était trop grosse, on avance dans la liste.</li>
-</ol>
 </div>
 <p>Utilisation : <code>rendu(13)</code> doit renvoyer <code>[10, 2, 1]</code></p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">rendu</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span>
@@ -4634,7 +4610,7 @@ Dans ce cas-là, la stratégie gloutonne peut être employée pour avoir vite et
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">14 mars 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">19 mars 2024</span>
   </span>
 
     
@@ -4718,7 +4694,7 @@ Dans ce cas-là, la stratégie gloutonne peut être employée pour avoir vite et
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.bd41221c.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       
