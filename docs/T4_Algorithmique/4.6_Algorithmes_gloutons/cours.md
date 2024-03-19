@@ -52,15 +52,24 @@ Ce chemin est-il optimal ?
 
 On considère un rectangle de dimension 11 sur 13 (figure 0). On veut remplir ce rectangle avec le minimum de carrés.
 
-![](data/remplissage_carres2.png){: .center}
+![](data/carres0.png){: .center}
 
-Un algorithme glouton va chercher à positionner d'abord le plus grand carré possible (figure 1). 
+Un algorithme glouton va chercher à positionner d'abord le plus grand carré possible (figure 1) :
 
-C'est une stratégie efficace (8 carrés nécessaires), mais qui n'est pas optimale : la figure 2 présente un pavage avec seulement 6 carrés.
+![](data/carres1.png){: .center}
 
-Encore une fois, la solution gloutonne n'est pas la solution optimale.
+C'est une stratégie efficace (8 carrés nécessaires), mais qui n'est pas optimale !
 
-Est-ce qu'un algorithme glouton va **toujours** passer à côté de la solution optimale ? 
+??? success "stratégie optimale"
+
+    La figure 2 présente un pavage avec seulement 6 carrés.
+    ![](data/carres2.png){: .center}
+
+
+
+**Question :** Est-ce qu'un algorithme glouton va **toujours** passer à côté de la solution optimale ? 
+
+
 Non ! Il arrive *aussi* qu'il donne la solution optimale. Changeons le rectangle initial en un rectangle de 10 sur 15 :
 
 ![](data/remplissage_carres3.png){: .center}
@@ -93,6 +102,7 @@ La résolution de ce problème peut se faire de manière gloutonne : à chaque �
 ### 2.1 Solution du problème
 
 !!! note "Rendu de monnaie :heart: :heart: :heart:"
+    {#
     ```python linenums='1'
     def rendu(somme_a_rendre):
         pieces = [200, 100, 50, 20, 10, 5, 2, 1]
@@ -113,7 +123,7 @@ La résolution de ce problème peut se faire de manière gloutonne : à chaque �
     4. On met à jour la somme à rendre.
     5. La pièce était trop grosse, on avance dans la liste.
 
-
+    #}
 
 Utilisation : `rendu(13)` doit renvoyer `[10, 2, 1]`
 
