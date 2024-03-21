@@ -28,7 +28,8 @@ correction(False,
 
 
 ## Thèmes en cours d'étude :
-- :books: [Algorithmes gloutons](./T4_Algorithmique/4.6_Algorithmes_gloutons/cours.md)
+- :books: [Dictionnaires](./T2_Representation_des_donnees/2.3_Dictionnaires/cours/)
+- :books: [Algorithmes gloutons](./T4_Algorithmique/4.6_Algorithmes_gloutons/cours/)
 - [Projet Pygame - Micro:bit](./T6_Mini-projets/05_Initiation_Pygame/)
 - :books: [Micro:bit](./T3_Architecture_materielle/3.1_Microbit/cours/)
 - :books: [Dichotomie](./T4_Algorithmique/4.5_Dichotomie/cours/)
