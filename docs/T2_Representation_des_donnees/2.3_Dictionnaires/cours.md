@@ -141,7 +141,7 @@ Ces méthodes sont importantes (elles figurent explicitement au programme de NSI
     Créer une fonction `achat(habit)` qui augmente de 1 le nombre d'habits (pantalon, pull ou tee-shirt) de mon dressing.
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -198,7 +198,7 @@ Nous allons résoudre ce problème grâce à :
     Améliorer la fonction `achat(habit)` en y incluant un test pour prendre en compte les nouveaux habits.
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -225,7 +225,7 @@ Nous allons résoudre ce problème grâce à :
     Créer un dictionnaire qui associera à chaque prénom son nombre d'occurrences dans la liste.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -253,7 +253,7 @@ Nous allons résoudre ce problème grâce à :
 
      
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
