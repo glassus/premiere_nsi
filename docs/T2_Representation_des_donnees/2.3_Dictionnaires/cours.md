@@ -105,11 +105,16 @@ Ces méthodes sont importantes (elles figurent explicitement au programme de NSI
     correction(True,
     """
     ??? success \"Correction\" 
+        ```python linenums='1'
         dressing = {'pantalons':3, 'pulls':4, 'tee-shirts':8}
 
         for habit in dressing:
-            print(habit, '->', dressing[habit])
+            print(habit, '->', dressing[habit])       
+        ```
+
     """
+
+    
     )
     }}
 
@@ -161,6 +166,15 @@ Ces méthodes sont importantes (elles figurent explicitement au programme de NSI
     dressing = {"pantalons":3, "pulls":4, "tee-shirts":8}
     ```
     Créer une fonction `achat(habit)` qui augmente de 1 le nombre d'habits (pantalon, pull ou tee-shirt) de mon dressing.
+
+    Exemple d'utilisation :
+    ```python
+    >>> dressing["pulls"]
+    4
+    >>> achat("pulls")
+    >>> dressing["pulls"]
+    5
+    ```
     
     {{
     correction(False,
