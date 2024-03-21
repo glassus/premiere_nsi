@@ -4183,26 +4183,21 @@ Un dictionnaire est délimité par des accolades. </p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  1</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
 <p>Reprenons notre dictionnaire <code>dressing</code> :
 <div class="highlight"><pre><span></span><code><span class="n">dressing</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;pantalons&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;pulls&quot;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;tee-shirts&quot;</span><span class="p">:</span><span class="mi">8</span><span class="p">}</span>
 </code></pre></div>
 Créer une fonction <code>achat(habit)</code> qui augmente de 1 le nombre d'habits (pantalon, pull ou tee-shirt) de mon dressing.</p>
-</div>
-<div class="tabbed-block">
+<details class="success">
+<summary>Correction</summary>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">dressing</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;pantalons&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;pulls&quot;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;tee-shirts&quot;</span><span class="p">:</span><span class="mi">8</span><span class="p">}</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">dressing</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;pantalons&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;pulls&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;tee-shirts&#39;</span><span class="p">:</span><span class="mi">8</span><span class="p">}</span>
 
 <span class="k">def</span> <span class="nf">achat</span><span class="p">(</span><span class="n">habit</span><span class="p">):</span>
     <span class="n">dressing</span><span class="p">[</span><span class="n">habit</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
 </code></pre></div></td></tr></table></div>
-</div>
-</div>
-</div>
+</details>
 </div>
 <p><strong>Remarque :</strong>
 Petit problème si on essaie d'acheter un vêtement pour la 1ère fois</p>
@@ -4234,12 +4229,9 @@ Petit problème si on essaie d'acheter un vêtement pour la 1ère fois</p>
 <h2 id="3-exercices">3. Exercices<a class="headerlink" href="#3-exercices" title="Permanent link">⚓︎</a></h2>
 <div class="admonition example">
 <p class="admonition-title">Exercice  2</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
 <p>Améliorer la fonction <code>achat(habit)</code> en y incluant un test pour prendre en compte les nouveaux habits.</p>
-</div>
-<div class="tabbed-block">
+<details class="success">
+<summary>Correction</summary>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -4250,21 +4242,16 @@ Petit problème si on essaie d'acheter un vêtement pour la 1ère fois</p>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">dressing</span><span class="p">[</span><span class="n">habit</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
 </code></pre></div></td></tr></table></div>
-</div>
-</div>
-</div>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  3</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Énoncé</label><label for="__tabbed_3_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
 <p>On considère la liste suivante :
 <div class="highlight"><pre><span></span><code><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Samuel&#39;</span><span class="p">,</span> <span class="s1">&#39;Pauline&#39;</span><span class="p">,</span> <span class="s1">&#39;Lina&#39;</span><span class="p">,</span> <span class="s1">&#39;Lina&#39;</span><span class="p">,</span> <span class="s1">&#39;Louis&#39;</span><span class="p">,</span> <span class="s1">&#39;Waëll&#39;</span><span class="p">,</span> <span class="s1">&#39;Clément&#39;</span><span class="p">,</span> <span class="s1">&#39;Khaled&#39;</span><span class="p">,</span> <span class="s1">&#39;Alexandre&#39;</span><span class="p">,</span> <span class="s1">&#39;Elie&#39;</span><span class="p">,</span> <span class="s1">&#39;Khaled&#39;</span><span class="p">,</span> <span class="s1">&#39;Khaled&#39;</span><span class="p">,</span> <span class="s1">&#39;Armand&#39;</span><span class="p">,</span> <span class="s1">&#39;Lina&#39;</span><span class="p">,</span> <span class="s1">&#39;Louis&#39;</span><span class="p">,</span> <span class="s1">&#39;Lina&#39;</span><span class="p">,</span> <span class="s1">&#39;Lina&#39;</span><span class="p">,</span> <span class="s1">&#39;Elie&#39;</span><span class="p">,</span> <span class="s1">&#39;Jules&#39;</span><span class="p">,</span> <span class="s1">&#39;Louis&#39;</span><span class="p">,</span> <span class="s1">&#39;Clément&#39;</span><span class="p">,</span> <span class="s1">&#39;Khaled&#39;</span><span class="p">,</span> <span class="s1">&#39;Jules-Evan&#39;</span><span class="p">,</span> <span class="s1">&#39;Lina&#39;</span><span class="p">,</span> <span class="s1">&#39;Jules&#39;</span><span class="p">,</span> <span class="s1">&#39;Hadzo&#39;</span><span class="p">,</span> <span class="s1">&#39;Zoran&#39;</span><span class="p">,</span> <span class="s1">&#39;Clément&#39;</span><span class="p">,</span> <span class="s1">&#39;Armand&#39;</span><span class="p">,</span> <span class="s1">&#39;Louis&#39;</span><span class="p">,</span> <span class="s1">&#39;Elie&#39;</span><span class="p">,</span> <span class="s1">&#39;Lina&#39;</span><span class="p">,</span> <span class="s1">&#39;Alexandre&#39;</span><span class="p">,</span> <span class="s1">&#39;Khaled&#39;</span><span class="p">,</span> <span class="s1">&#39;Iris&#39;</span><span class="p">,</span> <span class="s1">&#39;Gianni&#39;</span><span class="p">,</span> <span class="s1">&#39;Gianni&#39;</span><span class="p">,</span> <span class="s1">&#39;Pauline&#39;</span><span class="p">,</span> <span class="s1">&#39;Gianni&#39;</span><span class="p">,</span> <span class="s1">&#39;Elie&#39;</span><span class="p">,</span> <span class="s1">&#39;Iris&#39;</span><span class="p">,</span> <span class="s1">&#39;Armand&#39;</span><span class="p">,</span> <span class="s1">&#39;Louis&#39;</span><span class="p">,</span> <span class="s1">&#39;Clément&#39;</span><span class="p">,</span> <span class="s1">&#39;Pauline&#39;</span><span class="p">,</span> <span class="s1">&#39;Zoran&#39;</span><span class="p">,</span> <span class="s1">&#39;Khaled&#39;</span><span class="p">,</span> <span class="s1">&#39;Zoran&#39;</span><span class="p">,</span> <span class="s1">&#39;Elie&#39;</span><span class="p">,</span> <span class="s1">&#39;Waëll&#39;</span><span class="p">,</span> <span class="s1">&#39;Pauline&#39;</span><span class="p">,</span> <span class="s1">&#39;Lina&#39;</span><span class="p">,</span> <span class="s1">&#39;Alexandre&#39;</span><span class="p">,</span> <span class="s1">&#39;Khaled&#39;</span><span class="p">,</span> <span class="s1">&#39;Mehmet&#39;</span><span class="p">,</span> <span class="s1">&#39;Khaled&#39;</span><span class="p">,</span> <span class="s1">&#39;Hadzo&#39;</span><span class="p">,</span> <span class="s1">&#39;Zoran&#39;</span><span class="p">,</span> <span class="s1">&#39;Gianni&#39;</span><span class="p">,</span> <span class="s1">&#39;Jules&#39;</span><span class="p">,</span> <span class="s1">&#39;Paul&#39;</span><span class="p">,</span> <span class="s1">&#39;Pauline&#39;</span><span class="p">,</span> <span class="s1">&#39;Clément&#39;</span><span class="p">,</span> <span class="s1">&#39;Alexandre&#39;</span><span class="p">,</span> <span class="s1">&#39;Iris&#39;</span><span class="p">,</span> <span class="s1">&#39;Khaled&#39;</span><span class="p">,</span> <span class="s1">&#39;Gianni&#39;</span><span class="p">,</span> <span class="s1">&#39;Elie&#39;</span><span class="p">,</span> <span class="s1">&#39;Jules&#39;</span><span class="p">,</span> <span class="s1">&#39;Khaled&#39;</span><span class="p">,</span> <span class="s1">&#39;Louis&#39;</span><span class="p">,</span> <span class="s1">&#39;Jules-Evan&#39;</span><span class="p">,</span> <span class="s1">&#39;Jules-Evan&#39;</span><span class="p">,</span> <span class="s1">&#39;Louis&#39;</span><span class="p">,</span> <span class="s1">&#39;Gianni&#39;</span><span class="p">,</span> <span class="s1">&#39;Elie&#39;</span><span class="p">,</span> <span class="s1">&#39;Clément&#39;</span><span class="p">,</span> <span class="s1">&#39;Khaled&#39;</span><span class="p">,</span> <span class="s1">&#39;Louis&#39;</span><span class="p">,</span> <span class="s1">&#39;Louis&#39;</span><span class="p">,</span> <span class="s1">&#39;Emrys&#39;</span><span class="p">,</span> <span class="s1">&#39;Jules&#39;</span><span class="p">,</span> <span class="s1">&#39;Pauline&#39;</span><span class="p">,</span> <span class="s1">&#39;Armand&#39;</span><span class="p">,</span> <span class="s1">&#39;Elie&#39;</span><span class="p">,</span> <span class="s1">&#39;Jules&#39;</span><span class="p">,</span> <span class="s1">&#39;Elie&#39;</span><span class="p">,</span> <span class="s1">&#39;Khaled&#39;</span><span class="p">,</span> <span class="s1">&#39;Clément&#39;</span><span class="p">,</span> <span class="s1">&#39;Louis&#39;</span><span class="p">,</span> <span class="s1">&#39;Khaled&#39;</span><span class="p">,</span> <span class="s1">&#39;Emrys&#39;</span><span class="p">,</span> <span class="s1">&#39;Samuel&#39;</span><span class="p">,</span> <span class="s1">&#39;Hadzo&#39;</span><span class="p">,</span> <span class="s1">&#39;Elie&#39;</span><span class="p">,</span> <span class="s1">&#39;Clément&#39;</span><span class="p">,</span> <span class="s1">&#39;Alexandre&#39;</span><span class="p">,</span> <span class="s1">&#39;Hadzo&#39;</span><span class="p">,</span> <span class="s1">&#39;Lina&#39;</span><span class="p">,</span> <span class="s1">&#39;Iris&#39;</span><span class="p">,</span> <span class="s1">&#39;Alexandre&#39;</span><span class="p">,</span> <span class="s1">&#39;Mehmet&#39;</span><span class="p">,</span> <span class="s1">&#39;Elie&#39;</span><span class="p">,</span> <span class="s1">&#39;Jules&#39;</span><span class="p">,</span> <span class="s1">&#39;Khaled&#39;</span><span class="p">,</span> <span class="s1">&#39;Pauline&#39;</span><span class="p">,</span> <span class="s1">&#39;Samuel&#39;</span><span class="p">,</span> <span class="s1">&#39;Armand&#39;</span><span class="p">,</span> <span class="s1">&#39;Mehmet&#39;</span><span class="p">,</span> <span class="s1">&#39;Clément&#39;</span><span class="p">,</span> <span class="s1">&#39;Jules&#39;</span><span class="p">,</span> <span class="s1">&#39;Armand&#39;</span><span class="p">,</span> <span class="s1">&#39;Mehmet&#39;</span><span class="p">,</span> <span class="s1">&#39;Lina&#39;</span><span class="p">,</span> <span class="s1">&#39;Armand&#39;</span><span class="p">,</span> <span class="s1">&#39;Clément&#39;</span><span class="p">,</span> <span class="s1">&#39;Hadzo&#39;</span><span class="p">,</span> <span class="s1">&#39;Clément&#39;</span><span class="p">,</span> <span class="s1">&#39;Emrys&#39;</span><span class="p">,</span> <span class="s1">&#39;Samuel&#39;</span><span class="p">,</span> <span class="s1">&#39;Zoran&#39;</span><span class="p">,</span> <span class="s1">&#39;Zoran&#39;</span><span class="p">,</span> <span class="s1">&#39;Zoran&#39;</span><span class="p">,</span> <span class="s1">&#39;Mehmet&#39;</span><span class="p">,</span> <span class="s1">&#39;Jules&#39;</span><span class="p">,</span> <span class="s1">&#39;Khaled&#39;</span><span class="p">,</span> <span class="s1">&#39;Khaled&#39;</span><span class="p">,</span> <span class="s1">&#39;Elie&#39;</span><span class="p">,</span> <span class="s1">&#39;Armand&#39;</span><span class="p">,</span> <span class="s1">&#39;Jules&#39;</span><span class="p">,</span> <span class="s1">&#39;Alexandre&#39;</span><span class="p">,</span> <span class="s1">&#39;Alexandre&#39;</span><span class="p">,</span> <span class="s1">&#39;Louis&#39;</span><span class="p">,</span> <span class="s1">&#39;Armand&#39;</span><span class="p">,</span> <span class="s1">&#39;Zoran&#39;</span><span class="p">,</span> <span class="s1">&#39;Iris&#39;</span><span class="p">,</span> <span class="s1">&#39;Clément&#39;</span><span class="p">,</span> <span class="s1">&#39;Mehmet&#39;</span><span class="p">,</span> <span class="s1">&#39;Armand&#39;</span><span class="p">,</span> <span class="s1">&#39;Armand&#39;</span><span class="p">,</span> <span class="s1">&#39;Khaled&#39;</span><span class="p">,</span> <span class="s1">&#39;Lina&#39;</span><span class="p">,</span> <span class="s1">&#39;Lina&#39;</span><span class="p">,</span> <span class="s1">&#39;Jules&#39;</span><span class="p">,</span> <span class="s1">&#39;Louis&#39;</span><span class="p">,</span> <span class="s1">&#39;Paul&#39;</span><span class="p">,</span> <span class="s1">&#39;Pauline&#39;</span><span class="p">,</span> <span class="s1">&#39;Pauline&#39;</span><span class="p">,</span> <span class="s1">&#39;Pauline&#39;</span><span class="p">,</span> <span class="s1">&#39;Khaled&#39;</span><span class="p">,</span> <span class="s1">&#39;Lina&#39;</span><span class="p">,</span> <span class="s1">&#39;Waëll&#39;</span><span class="p">,</span> <span class="s1">&#39;Zoran&#39;</span><span class="p">,</span> <span class="s1">&#39;Hadzo&#39;</span><span class="p">,</span> <span class="s1">&#39;Emrys&#39;</span><span class="p">,</span> <span class="s1">&#39;Gianni&#39;</span><span class="p">,</span> <span class="s1">&#39;Jules&#39;</span><span class="p">,</span> <span class="s1">&#39;Samuel&#39;</span><span class="p">,</span> <span class="s1">&#39;Gianni&#39;</span><span class="p">,</span> <span class="s1">&#39;Pauline&#39;</span><span class="p">,</span> <span class="s1">&#39;Waëll&#39;</span><span class="p">,</span> <span class="s1">&#39;Clément&#39;</span><span class="p">,</span> <span class="s1">&#39;Khaled&#39;</span><span class="p">,</span> <span class="s1">&#39;Jules&#39;</span><span class="p">,</span> <span class="s1">&#39;Jules&#39;</span><span class="p">,</span> <span class="s1">&#39;Louis&#39;</span><span class="p">,</span> <span class="s1">&#39;Zoran&#39;</span><span class="p">,</span> <span class="s1">&#39;Alexandre&#39;</span><span class="p">,</span> <span class="s1">&#39;Iris&#39;</span><span class="p">,</span> <span class="s1">&#39;Paul&#39;</span><span class="p">,</span> <span class="s1">&#39;Emrys&#39;</span><span class="p">,</span> <span class="s1">&#39;Armand&#39;</span><span class="p">,</span> <span class="s1">&#39;Waëll&#39;</span><span class="p">,</span> <span class="s1">&#39;Zoran&#39;</span><span class="p">,</span> <span class="s1">&#39;Jules&#39;</span><span class="p">,</span> <span class="s1">&#39;Lina&#39;</span><span class="p">,</span> <span class="s1">&#39;Elie&#39;</span><span class="p">,</span> <span class="s1">&#39;Paul&#39;</span><span class="p">,</span> <span class="s1">&#39;Elie&#39;</span><span class="p">,</span> <span class="s1">&#39;Armand&#39;</span><span class="p">,</span> <span class="s1">&#39;Jules-Evan&#39;</span><span class="p">,</span> <span class="s1">&#39;Zoran&#39;</span><span class="p">,</span> <span class="s1">&#39;Alexandre&#39;</span><span class="p">,</span> <span class="s1">&#39;Zoran&#39;</span><span class="p">,</span> <span class="s1">&#39;Elie&#39;</span><span class="p">,</span> <span class="s1">&#39;Elie&#39;</span><span class="p">,</span> <span class="s1">&#39;Elie&#39;</span><span class="p">,</span> <span class="s1">&#39;Lina&#39;</span><span class="p">,</span> <span class="s1">&#39;Armand&#39;</span><span class="p">,</span> <span class="s1">&#39;Louis&#39;</span><span class="p">,</span> <span class="s1">&#39;Zoran&#39;</span><span class="p">,</span> <span class="s1">&#39;Lina&#39;</span><span class="p">,</span> <span class="s1">&#39;Armand&#39;</span><span class="p">,</span> <span class="s1">&#39;Alexandre&#39;</span><span class="p">,</span> <span class="s1">&#39;Samuel&#39;</span><span class="p">,</span> <span class="s1">&#39;Iris&#39;</span><span class="p">,</span> <span class="s1">&#39;Zoran&#39;</span><span class="p">,</span> <span class="s1">&#39;Paul&#39;</span><span class="p">,</span> <span class="s1">&#39;Pauline&#39;</span><span class="p">,</span> <span class="s1">&#39;Jules&#39;</span><span class="p">,</span> <span class="s1">&#39;Armand&#39;</span><span class="p">,</span> <span class="s1">&#39;Jules&#39;</span><span class="p">,</span> <span class="s1">&#39;Iris&#39;</span><span class="p">,</span> <span class="s1">&#39;Iris&#39;</span><span class="p">,</span> <span class="s1">&#39;Jules&#39;</span><span class="p">,</span> <span class="s1">&#39;Alexandre&#39;</span><span class="p">,</span> <span class="s1">&#39;Jules-Evan&#39;</span><span class="p">,</span> <span class="s1">&#39;Jules&#39;</span><span class="p">,</span> <span class="s1">&#39;Iris&#39;</span><span class="p">,</span> <span class="s1">&#39;Iris&#39;</span><span class="p">,</span> <span class="s1">&#39;Armand&#39;</span><span class="p">,</span> <span class="s1">&#39;Lina&#39;</span><span class="p">,</span> <span class="s1">&#39;Pauline&#39;</span><span class="p">,</span> <span class="s1">&#39;Zoran&#39;</span><span class="p">,</span> <span class="s1">&#39;Zoran&#39;</span><span class="p">,</span> <span class="s1">&#39;Pauline&#39;</span><span class="p">,</span> <span class="s1">&#39;Mehmet&#39;</span><span class="p">]</span>
 </code></pre></div></p>
 <p>Créer un dictionnaire qui associera à chaque prénom son nombre d'occurrences dans la liste.</p>
-</div>
-<div class="tabbed-block">
+<details class="success">
+<summary>Correction</summary>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -4279,20 +4266,15 @@ Petit problème si on essaie d'acheter un vêtement pour la 1ère fois</p>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">occurrence</span><span class="p">[</span><span class="n">prenom</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
 </code></pre></div></td></tr></table></div>
-</div>
-</div>
-</div>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  4</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Énoncé</label><label for="__tabbed_4_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
 <p>On considère la liste suivante :
 <code>lst = ['5717', '1133', '5545', '4031', '6398', '2734', '3070', '1346', '7849', '7288', '7587', '6217', '8240', '5733', '6466', '7972', '7341', '6616', '5061', '2441', '2571', '4496', '4831', '5395', '8584', '3033', '6266', '2452', '6909', '3021', '5404', '3799', '5053', '8096', '2488', '8519', '6896', '7300', '5914', '7464', '5068', '1386', '9898', '8313', '1072', '1441', '7333', '5691', '6987', '5255']</code> </p>
 <p>Quel est le <strong>chiffre</strong> qui revient le plus fréquemment dans cette liste ?</p>
-</div>
-<div class="tabbed-block">
+<details class="success">
+<summary>Correction</summary>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -4335,13 +4317,7 @@ Petit problème si on essaie d'acheter un vêtement pour la 1ère fois</p>
 <span class="nb">print</span><span class="p">(</span><span class="n">chiffre_max</span><span class="p">,</span> <span class="s1">&#39;est le chiffre le plus fréquent&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;il apparait&#39;</span><span class="p">,</span> <span class="n">occ_max</span><span class="p">,</span> <span class="s1">&#39;fois&#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition example">
-<p class="admonition-title">Exercice  5</p>
-<p><a class="" href="https://glassus.github.io/terminale_nsi/T1_Structures_de_donnees/1.2_Dictionnaires/exercices/#exercice-2" target="_blank">Exercice de bac</a></p>
+</details>
 </div>
 
 
@@ -4363,7 +4339,7 @@ Petit problème si on essaie d'acheter un vêtement pour la 1ère fois</p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">30 avril 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">21 mars 2024</span>
   </span>
 
     
