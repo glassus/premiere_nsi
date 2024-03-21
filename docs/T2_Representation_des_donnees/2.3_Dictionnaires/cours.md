@@ -233,6 +233,17 @@ Nous allons résoudre ce problème grâce à :
 !!! example "{{ exercice() }}"
     Améliorer la fonction `achat(habit)` en y incluant un test pour prendre en compte les nouveaux habits.
     
+    Exemple d'utilisation :
+
+    ```python
+    >>> dressing
+    {'pantalons': 3, 'pulls': 4, 'tee-shirts': 8}
+    >>> achat('pulls')
+    >>> achat('chapeau')
+    >>> dressing
+    {'pantalons': 3, 'pulls': 5, 'tee-shirts': 8, 'chapeau': 1}
+    ```
+
     {{
     correction(False,
     """
