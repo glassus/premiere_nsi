@@ -272,7 +272,7 @@ Nous allons résoudre ce problème grâce à :
     Créer un dictionnaire qui associera à chaque prénom son nombre d'occurrences dans la liste.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
