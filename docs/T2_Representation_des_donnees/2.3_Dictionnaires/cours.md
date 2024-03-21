@@ -229,7 +229,7 @@ Nous allons résoudre ce problème grâce à :
     ```
 
 ## 3. Exercices
-
+ 
 !!! example "{{ exercice() }}"
     Améliorer la fonction `achat(habit)` en y incluant un test pour prendre en compte les nouveaux habits.
     
@@ -245,7 +245,7 @@ Nous allons résoudre ce problème grâce à :
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
