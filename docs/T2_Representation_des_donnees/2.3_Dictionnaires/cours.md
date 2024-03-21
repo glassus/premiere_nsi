@@ -1,5 +1,7 @@
 # 2.3 Dictionnaires
 
+{{initexo(0)}}
+
 ![image](data/BO.png){: .center}
 
 # 1. Les dictionnaires : premiers exemples
@@ -91,6 +93,26 @@ Ces méthodes sont importantes (elles figurent explicitement au programme de NSI
     <iframe width="800" height="300" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=dressing%20%3D%20%7B%22pantalons%22%3A3,%20%22pulls%22%3A4,%20%22tee-shirts%22%3A8%7D%0Afor%20habit%20in%20dressing%3A%0A%20%20%20%20print%28dressing%5Bhabit%5D%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 
+!!! example "{{ exercice() }}"
+    Faire afficher la sortie suivante :
+    ```python
+    pantalons -> 3
+    pulls -> 4
+    tee-shirts -> 8
+    ```    
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
+        dressing = {'pantalons':3, 'pulls':4, 'tee-shirts':8}
+
+        for habit in dressing:
+            print(habit, '->', dressing[habit])
+    """
+    )
+    }}
+
 
 ### 2.4 Création d'un dictionnaire vide
 
@@ -132,7 +154,7 @@ Ces méthodes sont importantes (elles figurent explicitement au programme de NSI
     del dressing["chaussettes"]
     ```
 
-{{ initexo(0)}}
+
 !!! example "{{ exercice() }}"
     Reprenons notre dictionnaire ```dressing``` :
     ```python
