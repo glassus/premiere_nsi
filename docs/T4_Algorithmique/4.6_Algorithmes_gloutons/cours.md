@@ -3,7 +3,7 @@ en anglais : _greedy algorithms_
 
 ![image](data/BO.png){: .center}
 
-
+{{initexo(0)}}
 
 ![](data/greedy.png){: .center}
 
@@ -199,27 +199,36 @@ Comment classer les éléments de cette liste par leur **deuxième** élément ?
 Nous allons procéder en 2 temps.
 
 #### 3.1.1 Une fonction qui renvoie le deuxième élément
-Créons une fonction qui renvoie le deuxième élément d'un objet `liste` :
 
+!!! example "{{ exercice() }}"
+    Créer une fonction qui renvoie le deuxième élément d'un objet `liste`.
 
-```python
-def deuxieme(lst) :
-        return lst[1]
-```
+    *Exemple d'utilisation*
+    ```python
+    >>> simpsons = ['Bart', 'Lisa', 'Maggie']
+    >>> deuxieme(simpsons)
+    'Lisa'
+    ```
 
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
+        ```python
+        def deuxieme(lst) :
+            return lst[1]
+        ```
+    """
+    )
+    }}
 
-
-Utilisation :
-```python
->>> simpsons = ['Bart', 'Lisa', 'Maggie']
->>> deuxieme(simpsons)
-  'Lisa'
-```
 
 
 #### 3.1.2 Tri de la liste grâce à cette fonction ```deuxieme```
 
 Nous allons utiliser la fonction ```sorted```, qui prend en paramètre une liste à trier et une fonction de tri.
+
+**:heart: Exemple :**
 
 ```python
 >>> mylist = [["A", 3], ["B", 2], ["C", 8]]
@@ -228,18 +237,45 @@ Nous allons utiliser la fonction ```sorted```, qui prend en paramètre une liste
 [['C', 8], ['A', 3], ['B', 2]]
 ```
 
-Cette méthode de tri va nous être très utile.
+!!! example "{{ exercice() }}"
+    On considère une liste ```releve``` de 100 élèves avec leur note :
+    ```python
+    releve = [['Lucas', 13], ['Patrick', 4], ['Michelle', 15], ['Emmanuel', 8], ['Jacqueline', 3], ['Laurent', 11], ['Marcelle', 18], ['Maurice', 14], ['Michelle', 12], ['Michelle', 16], ['Alexandra', 12], ['Patricia', 18], ['Danielle', 15], ['Marc', 2], ['Hélène', 3], ['Benjamin', 16], ['Laetitia', 2], ['Hugues', 10], ['Samuel', 14], ['Émilie', 6], ['Emmanuel-Maurice', 15], ['Laurent', 13], ['Stéphane', 11], ['David', 16], ['Yves', 7], ['Xavier', 12], ['Véronique-Pauline', 6], ['Vincent-Hugues', 15], ['Céline', 11], ['Éric-Alain', 19], ['Samuel', 13], ['Grégoire', 16], ['Élodie', 13], ['Daniel', 2], ['Joseph', 18], ['Mathilde', 18], ['Claudine', 16], ['Jean', 12], ['Marcel', 8], ['Nicolas', 7], ['Luc', 11], ['Gabrielle', 8], ['Marianne', 8], ['Paul-Stéphane', 3], ['Florence', 18], ['Joseph', 18], ['Alice', 2], ['Frédérique', 17], ['Laurent', 4], ['Béatrice', 10], ['Agnès-Cécile', 13], ['Joséphine', 3], ['Gilbert', 8], ['Claire', 15], ['Tristan', 7], ['Nathan', 18], ['Cécile', 7], ['Laurent-Roland', 14], ['Christine', 14], ['Olivier', 4], ['Patrick', 18], ['Margot', 11], ['Jessica', 9], ['Guillaume', 19], ['Nicole', 8], ['Louise', 11], ['Kevin', 11], ['Hugues-Martin', 19], ['Emmanuel', 10], ['Nicolas', 5], ['Christiane', 7], ['Charles', 8], ['Paulette', 15], ['Colette', 7], ['Vanessa-Émilie', 6], ['Élise', 5], ['Denis', 2], ['Alfred', 20], ['Simone', 3], ['Océane-Joséphine', 9], ['Henri', 10], ['Rosalie', 6], ['Dorothée', 9], ['Rémy', 8], ['Marcel', 18], ['Odette', 19], ['Monique', 15], ['Mathieu', 12], ['Anne', 9], ['Stéphanie-Dominique', 9], ['Astrid', 10], ['René', 17], ['Laurence', 11], ['Océane', 16], ['Hugues', 7], ['Gérard', 11], ['Xavier', 4], ['Patricia', 19], ['Aurélie', 17], ['Théodore', 5]]
+    ```
+
+    Quel est l'élève qui a obtenu la meilleure note ?
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
+        ```python linenums='1'
+        releve = [['Lucas', 13], ['Patrick', 4], ['Michelle', 15], ['Emmanuel', 8], ['Jacqueline', 3], ['Laurent', 11], ['Marcelle', 18], ['Maurice', 14], ['Michelle', 12], ['Michelle', 16], ['Alexandra', 12], ['Patricia', 18], ['Danielle', 15], ['Marc', 2], ['Hélène', 3], ['Benjamin', 16], ['Laetitia', 2], ['Hugues', 10], ['Samuel', 14], ['Émilie', 6], ['Emmanuel-Maurice', 15], ['Laurent', 13], ['Stéphane', 11], ['David', 16], ['Yves', 7], ['Xavier', 12], ['Véronique-Pauline', 6], ['Vincent-Hugues', 15], ['Céline', 11], ['Éric-Alain', 19], ['Samuel', 13], ['Grégoire', 16], ['Élodie', 13], ['Daniel', 2], ['Joseph', 18], ['Mathilde', 18], ['Claudine', 16], ['Jean', 12], ['Marcel', 8], ['Nicolas', 7], ['Luc', 11], ['Gabrielle', 8], ['Marianne', 8], ['Paul-Stéphane', 3], ['Florence', 18], ['Joseph', 18], ['Alice', 2], ['Frédérique', 17], ['Laurent', 4], ['Béatrice', 10], ['Agnès-Cécile', 13], ['Joséphine', 3], ['Gilbert', 8], ['Claire', 15], ['Tristan', 7], ['Nathan', 18], ['Cécile', 7], ['Laurent-Roland', 14], ['Christine', 14], ['Olivier', 4], ['Patrick', 18], ['Margot', 11], ['Jessica', 9], ['Guillaume', 19], ['Nicole', 8], ['Louise', 11], ['Kevin', 11], ['Hugues-Martin', 19], ['Emmanuel', 10], ['Nicolas', 5], ['Christiane', 7], ['Charles', 8], ['Paulette', 15], ['Colette', 7], ['Vanessa-Émilie', 6], ['Élise', 5], ['Denis', 2], ['Alfred', 20], ['Simone', 3], ['Océane-Joséphine', 9], ['Henri', 10], ['Rosalie', 6], ['Dorothée', 9], ['Rémy', 8], ['Marcel', 18], ['Odette', 19], ['Monique', 15], ['Mathieu', 12], ['Anne', 9], ['Stéphanie-Dominique', 9], ['Astrid', 10], ['René', 17], ['Laurence', 11], ['Océane', 16], ['Hugues', 7], ['Gérard', 11], ['Xavier', 4], ['Patricia', 19], ['Aurélie', 17], ['Théodore', 5]]
+
+        def deuxieme(lst) :
+                return lst[1]
+
+        classement = sorted(releve, key = deuxieme, reverse = True)
+
+        print(classement[0])
+        
+        ```
+    """
+    )
+    }}
 
 
 ### 3.2 Retour sur le problème du sac à dos
-On considère un sac de 40 kg et les objets suivants :
 
-| objet  |  A  |  B  |  C  |  D  |  E  |  F  |
-|:------:|:---:|:---:|:---:|:---:|:---:|:---:|
-|  masse (en kg) |  13 |  12 |  8  |  10 |  14 |  18 |
-| valeur (en €)| 700 | 500 | 200 | 300 | 600 | 800 |
+!!! info ":star: Le problème :star:"
+    On considère un sac de 40 kg et les objets suivants :
 
-Quels objets faut-il prendre ?
+    | objet  |  A  |  B  |  C  |  D  |  E  |  F  |
+    |:------:|:---:|:---:|:---:|:---:|:---:|:---:|
+    |  masse (en kg) |  13 |  12 |  8  |  10 |  14 |  18 |
+    | valeur (en €)| 700 | 500 | 200 | 300 | 600 | 800 |
+
+    Quels objets faut-il prendre ?
 
 **Stratégie gloutonne :**
 
@@ -257,28 +293,47 @@ objets = [["A", 13, 700], ["B", 12, 500], ["C", 8, 200], ["D", 10, 300], ["E", 1
 
 En s'inspirant du 3.1.2, on classe ces objets suivant leur taux de valeur.
 
-:arrow_right: **à vous** :arrow_left:
+!!! example "{{ exercice() }}"
+    Créer une fonction ```ratio``` qui prend en paramètre une liste ```objet```    décrivant un objet (exemple : ```["C", 8, 200]``` ) et qui renvoie le nombre valeur/masse (donc le 3ème élément divisé par le 2ème).
+
+    *Exemple d'utilisation :*
+    ```python
+    >>> ratio(['C', 8, 200])
+    25.0
+    ``` 
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
+        ```python linenums='1'
+        def ratio(objet):
+            return objet[2] / objet[1]
+        ```
+    """
+    )
+    }}
 
 
-```python linenums='1'
-objets = [["A", 13, 700], ["B", 12, 500], ["C", 8, 200], ["D", 10, 300], ["E", 14, 600], ["F", 18, 800]]
 
-def ratio(objet):
-    # renvoie le rapport prix/poids d'un objet
-    return objet[2] / objet[1]
+!!! example "{{ exercice() }}"
+    Créer une liste ```objets_tries``` qui reprend les objets de la liste ```objets```, classés suivant leur taux de valeur (ratio valeur/masse)
 
-objets_tries = sorted(objets, key = ratio, reverse = True)
-```
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
+        ```python linenums='1'
+        objets = [['A', 13, 700], ['B', 12, 500], ['C', 8, 200], ['D', 10, 300], ['E', 14, 600], ['F', 18, 800]]
 
-```python
->>> objets_tries
- [['A', 13, 700],
- ['F', 18, 800],
- ['E', 14, 600],
- ['B', 12, 500],
- ['D', 10, 300],
- ['C', 8, 200]]
-```
+        def ratio(objet):
+            return objet[2] / objet[1]
+
+        objets_tries = sorted(objets, key = ratio, reverse = True)
+        ```
+    """
+    )
+    }}
 
 
 
