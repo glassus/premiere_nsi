@@ -184,9 +184,9 @@ Ce problème (de la catégorie des problème dits d'_analyse combinatoire_) malg
 !!! abstract "Où en est-on de la recherche académique sur le problème du sac à dos ?"
     Actuellement :  
 
-    * On sait trouver LA meilleure solution, mais en explorant toutes les combinaisons une par une. Cette méthode par **force brute** est inapplicable si beaucoup d'objets sont en jeu.
-    * On sait facilement trouver une _bonne_ solution, mais pas forcément la meilleure, par exemple en adoptant une stratégie gloutonne.
-    * On ne sait pas trouver facilement (en temps polynomial) la meilleure solution. Si vous y arrivez, [1 Million de $](https://www.claymath.org/millennium/p-vs-np/){. target="_blank"} sont pour vous.
+    * On sait trouver LA meilleure solution, mais en explorant toutes les combinaisons une par une. Cette méthode par **force brute** est inapplicable si beaucoup d'objets sont en jeu. *(nous allons le faire)*
+    * On sait facilement trouver une _bonne_ solution, mais pas forcément la meilleure, par exemple en adoptant une stratégie gloutonne. *(nous allons le faire)*
+    * On ne sait pas trouver facilement (en temps polynomial) la meilleure solution. Si vous y arrivez, [1 Million de $](https://www.claymath.org/millennium/p-vs-np/){. target="_blank"} sont pour vous. *(nous n'allons pas le faire)*
 
 
 
@@ -201,7 +201,7 @@ Nous allons procéder en 2 temps.
 #### 3.1.1 Une fonction qui renvoie le deuxième élément
 
 !!! example "{{ exercice() }}"
-    Créer une fonction qui renvoie le deuxième élément d'un objet `liste`.
+    Créer une fonction ```deuxieme``` qui prend en paramètre un tableau ```lst``` de type `List` et qui renvoie le deuxième élément de ```lst```. 
 
     *Exemple d'utilisation*
     ```python
@@ -232,13 +232,15 @@ Nous allons utiliser la fonction ```sorted```, qui prend en paramètre une liste
 
 ```python
 >>> mylist = [["A", 3], ["B", 2], ["C", 8]]
->>> mynewlist = sorted(mylist, key = deuxieme, reverse = True)
+>>> mynewlist = sorted(mylist, key=deuxieme, reverse=True)
 >>> mynewlist
 [['C', 8], ['A', 3], ['B', 2]]
 ```
 
 !!! example "{{ exercice() }}"
-    On considère une liste ```releve``` de 100 élèves avec leur note :
+    On considère une liste ```releve``` de 100 élèves avec leur note.
+    
+    *(liste créée grâce au module magique [faker](https://www.docstring.fr/blog/generer-des-donnees-aleatoires-avec-faker/){. target="_blank"})*
     ```python
     releve = [['Lucas', 13], ['Patrick', 4], ['Michelle', 15], ['Emmanuel', 8], ['Jacqueline', 3], ['Laurent', 11], ['Marcelle', 18], ['Maurice', 14], ['Michelle', 12], ['Michelle', 16], ['Alexandra', 12], ['Patricia', 18], ['Danielle', 15], ['Marc', 2], ['Hélène', 3], ['Benjamin', 16], ['Laetitia', 2], ['Hugues', 10], ['Samuel', 14], ['Émilie', 6], ['Emmanuel-Maurice', 15], ['Laurent', 13], ['Stéphane', 11], ['David', 16], ['Yves', 7], ['Xavier', 12], ['Véronique-Pauline', 6], ['Vincent-Hugues', 15], ['Céline', 11], ['Éric-Alain', 19], ['Samuel', 13], ['Grégoire', 16], ['Élodie', 13], ['Daniel', 2], ['Joseph', 18], ['Mathilde', 18], ['Claudine', 16], ['Jean', 12], ['Marcel', 8], ['Nicolas', 7], ['Luc', 11], ['Gabrielle', 8], ['Marianne', 8], ['Paul-Stéphane', 3], ['Florence', 18], ['Joseph', 18], ['Alice', 2], ['Frédérique', 17], ['Laurent', 4], ['Béatrice', 10], ['Agnès-Cécile', 13], ['Joséphine', 3], ['Gilbert', 8], ['Claire', 15], ['Tristan', 7], ['Nathan', 18], ['Cécile', 7], ['Laurent-Roland', 14], ['Christine', 14], ['Olivier', 4], ['Patrick', 18], ['Margot', 11], ['Jessica', 9], ['Guillaume', 19], ['Nicole', 8], ['Louise', 11], ['Kevin', 11], ['Hugues-Martin', 19], ['Emmanuel', 10], ['Nicolas', 5], ['Christiane', 7], ['Charles', 8], ['Paulette', 15], ['Colette', 7], ['Vanessa-Émilie', 6], ['Élise', 5], ['Denis', 2], ['Alfred', 20], ['Simone', 3], ['Océane-Joséphine', 9], ['Henri', 10], ['Rosalie', 6], ['Dorothée', 9], ['Rémy', 8], ['Marcel', 18], ['Odette', 19], ['Monique', 15], ['Mathieu', 12], ['Anne', 9], ['Stéphanie-Dominique', 9], ['Astrid', 10], ['René', 17], ['Laurence', 11], ['Océane', 16], ['Hugues', 7], ['Gérard', 11], ['Xavier', 4], ['Patricia', 19], ['Aurélie', 17], ['Théodore', 5]]
     ```
@@ -255,7 +257,7 @@ Nous allons utiliser la fonction ```sorted```, qui prend en paramètre une liste
         def deuxieme(lst) :
                 return lst[1]
 
-        classement = sorted(releve, key = deuxieme, reverse = True)
+        classement = sorted(releve, key=deuxieme, reverse=True)
 
         print(classement[0])
         
@@ -291,7 +293,7 @@ objets = [["A", 13, 700], ["B", 12, 500], ["C", 8, 200], ["D", 10, 300], ["E", 1
 ```
 
 
-En s'inspirant du 3.1.2, on classe ces objets suivant leur taux de valeur.
+
 
 !!! example "{{ exercice() }}"
     Créer une fonction ```ratio``` qui prend en paramètre une liste ```objet```    décrivant un objet (exemple : ```["C", 8, 200]``` ) et qui renvoie le nombre valeur/masse (donc le 3ème élément divisé par le 2ème).
@@ -329,7 +331,7 @@ En s'inspirant du 3.1.2, on classe ces objets suivant leur taux de valeur.
         def ratio(objet):
             return objet[2] / objet[1]
 
-        objets_tries = sorted(objets, key = ratio, reverse = True)
+        objets_tries = sorted(objets, key=ratio, reverse=True)
         ```
     """
     )
@@ -339,35 +341,77 @@ En s'inspirant du 3.1.2, on classe ces objets suivant leur taux de valeur.
 
 #### 3.2.2 Calcul de la solution, par méthode gloutonne
 
-:arrow_right: **à vous** :arrow_left:
+Contrairement à l'algorithme du rendu de monnaie, où chaque pièce est disponible en quantité infinie, on ne possède ici qu'un seul objet de chaque type.
+
+Cela signifie qu'il va suffir de parcourir la liste des objets (préalablement classés suivant leur taux de valeur) et de décider à chaque fois si cet objet peut être pris ou pas.
 
 
-```python linenums='1'
-objets  = [["A", 13, 700], ["B", 12, 500], ["C", 8, 200], ["D", 10, 300], ["E", 14, 600], ["F", 18, 800]]
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        Écrire l'algorithme de résolution gloutonne du problème du sac à dos pour la liste ```objets```.
 
-def ratio(objet):
-    # renvoie le rapport prix/poids d'un objet
-    return objet[2] / objet[1]
+        ```python
+        objets = [['A', 13, 700], ['B', 12, 500], ['C', 8, 200], ['D', 10, 300], ['E', 14, 600], ['F', 18, 800]]
+        ```     
+    === "Aide"
+        ```python linenums='1'
+        objets  = [['A', 13, 700], ['B', 12, 500], ['C', 8, 200], ['D', 10, 300], ['E', 14, 600], ['F', 18, 800]]
 
-objets_tries = sorted(objets, key = ratio, reverse = True)
+        def ratio(objet):
+            ...
 
-poids_max = 40
-poids_sac = 0
+        objets_tries = ...
 
-butin = []
+        poids_max = ...
+        poids_sac = ...
 
-for objet in objets_tries:
-    poids_objet = objet[1]
-    if poids_objet + poids_sac <= poids_max :
-        butin.append(objet[0])
-        poids_sac += poids_objet
+        butin = []
 
-```
+        for objet in ...:
+            poids_objet = ...
+            if ... + ... <= ... :
+                butin.append(...)
+                ... += ...
 
-```python
->>> butin
-    ['A', 'F', 'C']
-```
+        ```        
+
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
+        ```python linenums='1'
+        objets  = [['A', 13, 700], ['B', 12, 500], ['C', 8, 200], ['D', 10, 300], ['E', 14, 600], ['F', 18, 800]]
+
+        def ratio(objet):
+            return objet[2] / objet[1]
+
+        objets_tries = sorted(objets, key=ratio, reverse=True)
+
+        poids_max = 40
+        poids_sac = 0
+
+        butin = []
+
+        for objet in objets_tries:
+            poids_objet = objet[1]
+            if poids_objet + poids_sac <= poids_max :
+                butin.append(objet[0])
+                poids_sac += poids_objet
+
+        ```
+
+        ```python
+        >>> butin
+            ['A', 'F', 'C']
+        >>> poids_sac
+        39
+        ``` 
+    """
+    )
+    }}
+
+
 
 
 
@@ -382,7 +426,7 @@ Nous allons pour cela avoir recours à la force brute pour tester toutes les com
 
 ### 3.3 Force brute 
 
-- Il faut créer une liste de mots binaires qui vont correspondre à chaque combinaison. Par exemple, '101001' signifiera qu'on prend les objets A, C et F.
+- Il faut créer une liste de mots binaires qui vont correspondre à chaque combinaison. Par exemple, `101001` signifiera qu'on prend les objets A, C et F.
 Cette liste est de taille $2^n$, où $n$ est le nombre d'objets. C'est cela qui pose problème : avec 80 objets, on obtient une liste à traiter qui contient plus de $10^{24}$ objets, soit de l'ordre de grandeur du nombre d'étoiles dans l'Univers observable, ou de gouttes d'eau dans la mer, ou du nombre de grains de sables au Sahara... (voir [https://fr.wikipedia.org/wiki/Ordres_de_grandeur_de_nombres](https://fr.wikipedia.org/wiki/Ordres_de_grandeur_de_nombres){. target="_blank"} )
 - Une fois cette liste établie, il suffit de parcourir chaque élément et de calculer le poids total et la valeur totale correspondante. Si le poids total dépasse le poids autorisé, on met la valeur à 0 car cette combinaison ne nous intéresse pas.
 - Il ne reste qu'à chercher la valeur maximale et regarder la combinaison à laquelle elle correspond.
@@ -506,13 +550,13 @@ for k in range(len(meilleure_comb)) :
   'ABE'
 ```
 
-re-Damned ! La force brute a mis en évidence une combinaison **meilleure que celle donnée par l'algorithme glouton**. 
+Damned ! La force brute a mis en évidence une combinaison **meilleure que celle donnée par l'algorithme glouton**. 
 
 En effet la combinaison A-B-E est bien valide (poids total 39) et rapporte 1800, donc 100 de mieux que la solution gloutonne.
 
 Par contre, la force brute est inenvisageable pour si le nombre d'objets est grand, alors que la stratégie gloutonne reste très rapide.
 
-## Conclusion 
-
-La stratégie gloutonne donne très rapidement des solutions **satisfaisantes** mais **pas forcément optimales**. Pour beaucoup de problèmes (dont le problème du sac à dos), la recherche d'une solution optimale sans passer par la force brute semble impossible (mais n'est pas démontrée).  
-Dans ce cas-là, la stratégie gloutonne peut être employée pour avoir vite et bien une solution convenable, même si peut-être non optimale. On dit que la stratégie gloutonne est une **heuristique** de résolution. On sait que ce n'est pas forcément optimal, mais faute de mieux, on s'en contente...
+ 
+!!! abstract ":heart: Conclusion :heart:"
+    La stratégie gloutonne donne très rapidement des solutions **satisfaisantes** mais **pas forcément optimales**. Pour beaucoup de problèmes (dont le problème du sac à dos), la recherche d'une solution optimale sans passer par la force brute semble impossible (mais cela n'est pas (encore ?) démontré).  
+    Dans ce cas-là, la stratégie gloutonne peut être employée pour avoir vite et bien une solution convenable, même si peut-être non optimale. On dit que la stratégie gloutonne est une **heuristique** de résolution. On sait que ce n'est pas forcément optimal, mais faute de mieux, on s'en contente...
