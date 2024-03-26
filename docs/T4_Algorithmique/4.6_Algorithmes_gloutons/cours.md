@@ -279,6 +279,10 @@ Nous allons utiliser la fonction ```sorted```, qui prend en paramètre une liste
 
     Quels objets faut-il prendre ?
 
+    :warning: **Vous ne pouvez prendre qu'un seul objet de chaque type** :warning:
+
+    *(interdiction de donner la combinaison A-A-D, par exemple)*
+
 **Stratégie gloutonne :**
 
 - on va classer les objets dans l'ordre décroissant de leur taux de valeur (taux de valeur = valeur / masse). Ainsi le premier élément de la liste sera celui ayant le meilleur rapport valeur/masse.
