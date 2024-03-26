@@ -211,7 +211,7 @@ Nous allons procéder en 2 temps.
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -248,7 +248,7 @@ Nous allons utiliser la fonction ```sorted```, qui prend en paramètre une liste
     Quel est l'élève qui a obtenu la meilleure note ?
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -305,7 +305,7 @@ objets = [["A", 13, 700], ["B", 12, 500], ["C", 8, 200], ["D", 10, 300], ["E", 1
     ``` 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -322,7 +322,7 @@ objets = [["A", 13, 700], ["B", 12, 500], ["C", 8, 200], ["D", 10, 300], ["E", 1
     Créer une liste ```objets_tries``` qui reprend les objets de la liste ```objets```, classés suivant leur taux de valeur (ratio valeur/masse)
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -377,7 +377,7 @@ Cela signifie qu'il va suffir de parcourir la liste des objets (préalablement c
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
