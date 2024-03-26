@@ -309,7 +309,7 @@ objets = [["A", 13, 700], ["B", 12, 500], ["C", 8, 200], ["D", 10, 300], ["E", 1
     ``` 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -411,6 +411,8 @@ Cela signifie qu'il va suffir de parcourir la liste des objets (préalablement c
         >>> poids_sac
         39
         ``` 
+
+        Il faut donc choisir la combinaison A, F, C. Elle est bien valide (poids 39) et rapporte 1700.
     """
     )
     }}
@@ -419,7 +421,7 @@ Cela signifie qu'il va suffir de parcourir la liste des objets (préalablement c
 
 
 
-Il faut donc choisir la combinaison A, F, C. Elle est bien valide (poids 39) et rapporte 1700.
+
 
 
 
