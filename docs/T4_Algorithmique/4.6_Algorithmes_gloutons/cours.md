@@ -211,7 +211,7 @@ Nous allons procéder en 2 temps.
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
@@ -248,7 +248,7 @@ Nous allons utiliser la fonction ```sorted```, qui prend en paramètre une liste
     Quel est l'élève qui a obtenu la meilleure note ?
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
