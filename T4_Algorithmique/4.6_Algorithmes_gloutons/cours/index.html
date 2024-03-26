@@ -4449,6 +4449,13 @@ Evidemment, la somme de leur masse ne doit pas dépasser 15 kg.</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">ratio</span><span class="p">([</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">200</span><span class="p">])</span>
 <span class="mf">25.0</span>
 </code></pre></div></p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">ratio</span><span class="p">(</span><span class="n">objet</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">objet</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">/</span> <span class="n">objet</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  4</p>
@@ -4505,7 +4512,6 @@ Evidemment, la somme de leur masse ne doit pas dépasser 15 kg.</p>
 </div>
 </div>
 </div>
-<p>Il faut donc choisir la combinaison A, F, C. Elle est bien valide (poids 39) et rapporte 1700.</p>
 <p><strong>Question</strong> (toujours la même) :  </p>
 <p>L'algorithme glouton nous a-t-il donné la solution <strong>optimale</strong> ?<br />
 Nous allons pour cela avoir recours à la force brute pour tester toutes les combinaisons possibles.</p>
