@@ -1,5 +1,5 @@
 # 2.7 Codage des entiers
-
+{{initexo(0)}}
 ![image](data/BO.png){: .center}
 
 ![image](data/meme.webp){: .center width=40%}
@@ -18,17 +18,24 @@
 Sur un octet, le nombre minimal qu'on puisse coder est `00000000`. C'est l'entier naturel 0.  
 Le nombre maximal qu'on puisse coder est `11111111`. C'est l'entier naturel 255.
 
-!!! abstract "Exercice"
-    === "Énoncé"
-        1. Quel est le plus grand entier non signé codable sur 16 bits ?
-        2. ... sur 32 bits ?
-        3. ... $n$ bits ?
+!!! example "{{ exercice() }}"
+    
+    1. Quel est le plus grand entier non signé codable sur 16 bits ?
+    2. ... sur 32 bits ?
+    3. ... $n$ bits ?
 
         
-    === "Correction"
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         1. $N=1+2+2^2+2^3+\dots+2^{15}= 65535$
         2. $N=1+2+2^2+2^3+\dots+2^{31}= 4294967295$
-        3. Pour tout $n \in \mathbb{N}$, $1+2+2^2+2^3+\dots+2^{n-1}=2^{n}-1$ (formule de la somme des termes d'une suite géométrique de raison 2).
+        3. Pour tout $n \in \mathbb{N}$, $1+2+2^2+2^3+\dots+2^{n-1}=2^{n}-1$ (formule de la somme des termes d'une suite géométrique de raison 2).        
+    """
+    )
+    }}
+
     
 
 !!! note "Python et les entiers :heart:"
@@ -37,20 +44,28 @@ Le nombre maximal qu'on puisse coder est `11111111`. C'est l'entier naturel 255.
     Ceci implique que la taille nécessaire au codage de l'entier est allouée dynamiquement par Python (avec pour seule limite celle de la mémoire disponible). 
 
 
-!!! abstract "Exercice"
-    === "Énoncé"
-        1. Effectuer la somme des deux nombres binaires `00001101` et `00001011`.
-        2. Vérifier que le résultat est cohérent en base 10.
-    === "Correction"
+!!! example "{{ exercice() }}"
+    
+    1. Effectuer la somme des deux nombres binaires `00001101` et `00001011`.
+    2. Vérifier que le résultat est cohérent en base 10.
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         1. ![](data/add1.png)
-        2. Cette addition correspond à $13+11=24$
+        2. Cette addition correspond à $13+11=24$        
+    """
+    )
+    }}
+
+
 
 
 
 
 
 ## 2. Les nombres entiers en binaire signé 
-
+*ou* Comment représenter des nombres **négatifs** ???
 ### 2.1 La (partiellement) fausse bonne idée
 Comment différencier les nombres positifs des nombres négatifs ?   
 L'idée naturelle est de réserver 1 bit pour le signe, et de coder le reste du nombre «naturellement».
@@ -107,29 +122,30 @@ Il ne reste donc plus qu'à ajouter `1` à ce nombre `11111100` pour obtenir le 
 
 ### 2.3 Tableau des entiers en binaire **signé**
 
-|binaire | base 10|
-|:--:|:--:|
-|10000000|-128|
-|10000001|-127|
-|10000010|-126|
-|10000011|-125|
-|10000100|-124|
-|10001001|-123|
-|...|...|
-|11111100|-4|
-|11111101|-3|
-|11111110|-2|
-|11111111|-1|
-|00000000|0|
-|00000001|1|
-|00000010|2|
-|00000011|3|
-|00000100|4|
-|...|...|
-|01111100|124|
-|01111101|125|
-|01111110|126|
-|01111111|127|
+??? tip "Tableau"
+    |binaire | base 10|
+    |:--:|:--:|
+    |10000000|-128|
+    |10000001|-127|
+    |10000010|-126|
+    |10000011|-125|
+    |10000100|-124|
+    |10001001|-123|
+    |...|...|
+    |11111100|-4|
+    |11111101|-3|
+    |11111110|-2|
+    |11111111|-1|
+    |00000000|0|
+    |00000001|1|
+    |00000010|2|
+    |00000011|3|
+    |00000100|4|
+    |...|...|
+    |01111100|124|
+    |01111101|125|
+    |01111110|126|
+    |01111111|127|
 
 
 
@@ -145,16 +161,25 @@ Considérons que ce nombre positif s'écrit sur 7 bits, donc qu'il est de la for
     - On prend le complément à 2 de chacun des 8 bits du nombre de départ
     - On ajoute 1 au nombre obtenu.
 
-!!! abstract "Exercice"
-    === "Énoncé"
-        Donner l'écriture binaire sur un octet du nombre $-13$.
-    === "Correction"
+!!! example "{{ exercice() }}"
+    
+    Donner l'écriture binaire sur un octet du nombre $-13$.
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         Commençons par écrire le nombre 13 en binaire. Il s'écrit  `00001101`.
 
         - en prenant le complément à 2 de chaque bit, on obtient `11110010`.
         - en ajoutant 1 à ce dernier nombre, on obtient `11110011`. 
 
-        Le nombre $-13$ s'écrit donc `11110011`.
+        Le nombre $-13$ s'écrit donc `11110011`.       
+    """
+    )
+    }}
+
+
 
 
 :arrow_right: **Remarque**  
@@ -172,17 +197,47 @@ Considérons le nombre `11101101`, codé en binaire signé. À quel nombre relat
 5. Le nombre initial était donc $-19$.
 
 !!! abstract "Exercice"
-    === "Énoncé"
-        1. En binaire signé, à quel nombre correspond `11110001`?
-        2. En binaire signé, quel est le plus grand nombre que l'on puisse écrire sur un octet ? 
-        3. Quel est le plus petit nombre ?
-        4. Au total, combien de nombres différents peuvent être écrits en binaire signé ?
 
-    === "Correction"
-        1. `11110001` - `1` = `11110000`. En prenant le complément à 2, on trouve `00001111`, qui vaut 15. Le nombre `11110001` représente donc $-15$.
-        2. Le plus grand nombre est `01111111`, soit $+127$.
-        3. Le plus petit nombre est `10000000`. `10000000` - `1` = `01111111`. Le complément est `10000000`, qui est égal à 128. Donc le nombre minimal est $-128$.
-        4. Il y a 128 nombres négatifs (de $-128$ à $-1$), le nombre 0, puis 127 nombres positifs (de 1 à 127). Il y a donc 256 nombres au total, comme en binaire non signé. 
+    **Q1.** En binaire signé, à quel nombre correspond `11110001`?
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        `11110001` - `1` = `11110000`. En prenant le complément à 2, on trouve `00001111`, qui vaut 15. Le nombre `11110001` représente donc $-15$.
+    """
+    )
+    }}
+
+    **Q2.** En binaire signé, quel est le plus grand nombre que l'on puisse écrire sur un octet ? 
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        Le plus grand nombre est `01111111`, soit $+127$.
+    """
+    )
+    }}
+
+    **Q3.** Quel est le plus petit nombre ?
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        Le plus petit nombre est `10000000`. `10000000` - `1` = `01111111`. Le complément est `10000000`, qui est égal à 128. Donc le nombre minimal est $-128$.
+    """
+    )
+    }}
+    **Q4.** Au total, combien de nombres différents peuvent être écrits en binaire signé ?
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        Il y a 128 nombres négatifs (de $-128$ à $-1$), le nombre 0, puis 127 nombres positifs (de 1 à 127). Il y a donc 256 nombres au total, comme en binaire non signé.  
+    """
+    )
+    }}
+
+
 
 
 ## 4. Le codage des entiers, une source intarissable d'erreurs...
@@ -202,7 +257,11 @@ Cette catastrophe (150 millions d'euros et des années de travail perdus) a fait
 
 ### 4.2 Le bug de l'année 2038
 
-![image](data/2038.gif){: .center}
+<center>
+<gif-player src="https://glassus.github.io/premiere_nsi/T2_Representation_des_donnees/2.7_Codage_entiers/data/2038.gif" speed="1" play></gif-player>
+</center>
+
+
 
 Expliquons ce (superbe) gif issu de la page Wikipedia [Bug de l'an 2038](https://fr.wikipedia.org/wiki/Bug_de_l%27an_2038){. target="_blank"}.
 

@@ -28,16 +28,17 @@ correction(False,
 
 
 ## Thèmes en cours d'étude :
-- :books: [Dictionnaires](./T2_Representation_des_donnees/2.3_Dictionnaires/cours/)
-- :books: [Algorithmes gloutons](./T4_Algorithmique/4.6_Algorithmes_gloutons/cours/)
-- [Projet Pygame - Micro:bit](./T6_Mini-projets/05_Initiation_Pygame/)
-- :books: [Micro:bit](./T3_Architecture_materielle/3.1_Microbit/cours/)
-- :books: [Dichotomie](./T4_Algorithmique/4.5_Dichotomie/cours/)
+- [Codage des entiers](./T2_Representation_des_donnees/2.7_Codage_entiers/cours/)
 
 
 
 
 !!! info "*Anciens thèmes traités*"
+    - [Dictionnaires](./T2_Representation_des_donnees/2.3_Dictionnaires/cours/)
+    - [Algorithmes gloutons](./T4_Algorithmique/4.6_Algorithmes_gloutons/cours/)
+    - [Projet Pygame - Micro:bit](./T6_Mini-projets/05_Initiation_Pygame/)
+    - [Micro:bit](./T3_Architecture_materielle/3.1_Microbit/cours/)
+    - [Dichotomie](./T4_Algorithmique/4.5_Dichotomie/cours/)
     - [Codage des caractères](./T2_Representation_des_donnees/2.6_Codage_caracteres/cours/)  
     - [Tri par insertion](./T4_Algorithmique/4.3_Tri_par_insertion/cours/) 
     - [Tri par sélection](./T4_Algorithmique/4.4_Tri_par_selection/cours/)
