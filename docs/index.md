@@ -28,6 +28,7 @@ correction(False,
 
 
 ## Thèmes en cours d'étude :
+- [Rendu du projet Pygame sur Capytale](https://capytale2.ac-paris.fr/web/c/7b99-3309019){. target="_blank"}
 - [Codage des entiers](./T2_Representation_des_donnees/2.7_Codage_entiers/cours/)
 
 
