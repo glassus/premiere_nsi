@@ -26,7 +26,7 @@ Le nombre maximal qu'on puisse coder est `11111111`. C'est l'entier naturel 255.
 
         
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         1. $N=1+2+2^2+2^3+\dots+2^{15}= 65535$
