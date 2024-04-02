@@ -4263,6 +4263,16 @@ L'addition <span class="arithmatex">\((+3)+(-3)\)</span> serait égale à <span 
 <p>Plutôt que de chercher à écrire directement le nombre <span class="arithmatex">\(-3\)</span>, nous allons chercher à déterminer ce qu'il faut ajouter à <span class="arithmatex">\((+3)\)</span> pour obtenir 0.</p>
 <p>Que faut-il ajouter au nombre <span class="arithmatex">\((+3)\)</span> pour obtenir 0 ?
 <img alt="" class="center" src="../data/add3b.png" /></p>
+<p>L'idée naturelle est de commencer par la droite, en essayant de «fabriquer du zéro» en choisissant le bon bit à ajouter :</p>
+<p><img alt="" class="center" src="../data/add4b.png" /></p>
+<p><img alt="" class="center" src="../data/add4d.png" /></p>
+<p>On arrive bien à fabriquer des 0 sur tout notre octet, mais que devient la retenue (en anglais <em>carry</em>) de 1 qui déborde de notre octet ?</p>
+<p>Réponse : rien ! Elle sera perdue et c'est une très bonne nouvelle. Ce nombre sera donc considéré comme un 0 : nous avons trouvé comment coder <span class="arithmatex">\(-3\)</span>.</p>
+<p>Le nombre <span class="arithmatex">\(-3\)</span> s'écrit donc <code>11111101</code>.</p>
+<p>Comment, à partir du nombre <code>00000011</code>, aurait-on pu le trouver directement (sans raisonner de proche en proche) ?</p>
+<p>On peut remarquer qu'en inversant chaque bit du nombre de départ <code>00000011</code>, on obtient <code>11111100</code>, qui appelé le <strong>complément à 2</strong> du nombre <code>00000011</code>.</p>
+<p>Il ne reste donc plus qu'à ajouter <code>1</code> à ce nombre <code>11111100</code> pour obtenir le nombre cherché, <code>11111101</code></p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" />  ce nombre <code>11111101</code> représente 253 en codage non signé. Il est donc nécessaire, lorsqu'on représente un nombre, de savoir si les nombres manipulés seront des entiers naturels (<em>non signés</em>) ou bien relatifs (<em>signés</em>).</p>
 <h3 id="23-tableau-des-entiers-en-binaire-signe">2.3 Tableau des entiers en binaire <strong>signé</strong><a class="headerlink" href="#23-tableau-des-entiers-en-binaire-signe" title="Permanent link">⚓︎</a></h3>
 <details class="tip">
 <summary>Tableau</summary>
