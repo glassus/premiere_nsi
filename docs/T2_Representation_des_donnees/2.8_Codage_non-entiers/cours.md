@@ -47,7 +47,7 @@ Donc $3,6875=11,1011_2$
     Donner l'écriture binaire de 20,875.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         - partie entière : $20 = 10100_2$
