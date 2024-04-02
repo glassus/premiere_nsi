@@ -28,13 +28,14 @@ correction(False,
 
 
 ## Thèmes en cours d'étude :
-- [Rendu du projet Pygame sur Capytale](https://capytale2.ac-paris.fr/web/c/7b99-3309019){. target="_blank"}
+- [Codage des non-entiers](./T2_Representation_des_donnees/2.8_Codage_non-entiers/cours/)
 - [Codage des entiers](./T2_Representation_des_donnees/2.7_Codage_entiers/cours/)
 
 
 
 
 !!! info "*Anciens thèmes traités*"
+    - [Rendu du projet Pygame sur Capytale](https://capytale2.ac-paris.fr/web/c/7b99-3309019){. target="_blank"}    
     - [Dictionnaires](./T2_Representation_des_donnees/2.3_Dictionnaires/cours/)
     - [Algorithmes gloutons](./T4_Algorithmique/4.6_Algorithmes_gloutons/cours/)
     - [Projet Pygame - Micro:bit](./T6_Mini-projets/05_Initiation_Pygame/)
