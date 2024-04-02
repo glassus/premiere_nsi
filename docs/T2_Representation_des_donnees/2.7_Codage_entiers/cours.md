@@ -180,7 +180,7 @@ Considérons que ce nombre positif s'écrit sur 7 bits, donc qu'il est de la for
     Donner l'écriture binaire sur un octet du nombre $-13$.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Commençons par écrire le nombre 13 en binaire. Il s'écrit  `00001101`.
