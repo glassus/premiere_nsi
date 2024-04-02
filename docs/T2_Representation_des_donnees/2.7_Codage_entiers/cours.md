@@ -80,8 +80,22 @@ Dans ce cas, `00000011` serait le nombre $+3$ et `10000011` serait le nombre $-3
 **Problèmes :**
 
 - le zéro serait représenté à la fois par `00000000` et `10000000`, ce qui n'est pas très économe.
-- plus grave : l'addition $(+3)+(-3)$ serait égale à $-6$ !
-![](data/add2.png){: .center}
+- plus grave : 
+
+!!! example "{{ exercice() }}"
+    Avec cette convention, effectuer l'addition $(+3)+(-3)$ en binaire.
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
+        ![](data/add2.png){: .center}
+        L'addition $(+3)+(-3)$ serait égale à $-6$ !
+    """
+    )
+    }}
+
+
 
 
 **Moralité :**
@@ -98,6 +112,7 @@ Que faut-il ajouter au nombre $(+3)$ pour obtenir 0 ?
 ![](data/add3b.png){: .center}
 
 
+{#
 L'idée naturelle est de commencer par la droite, en essayant de «fabriquer du zéro» en choisissant le bon bit à ajouter :
 
 ![](data/add4b.png){: .center}
@@ -118,7 +133,7 @@ Il ne reste donc plus qu'à ajouter `1` à ce nombre `11111100` pour obtenir le 
 
 :warning:  ce nombre `11111101` représente 253 en codage non signé. Il est donc nécessaire, lorsqu'on représente un nombre, de savoir si les nombres manipulés seront des entiers naturels (*non signés*) ou bien relatifs (*signés*).
 
-
+#}
 
 ### 2.3 Tableau des entiers en binaire **signé**
 

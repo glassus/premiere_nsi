@@ -1,7 +1,10 @@
+{{initexo(0)}}
+
 # 2.8 Codage des non-entiers
 
 ![image](data/BO.png){: .center}
 
+![image](data/meme.jpg){: .center width=40%}
 
 
 Le principe est l'extension du système déjà rencontré pour les nombres entiers. La partie décimale (à droite de la virgule) correspondra aux puissances négatives de 2.  
@@ -39,35 +42,49 @@ On prend ensuite le chiffre des unités de tous les nombres obtenus : 1011
 
 Donc $3,6875=11,1011_2$
 
+!!! example "{{ exercice() }}"
+    
+    Donner l'écriture binaire de 20,875.
 
-!!! abstract "Exercice 1"
-    === "Énoncé"
-        Donner l'écriture binaire de 20,875.
-    === "Correction"
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         - partie entière : $20 = 10100_2$
         - partie décimale :
-            - $0,875 \times 2 = \textbf{1},75$  
-            - $0,75 \times 2 = \textbf{1},5$
-            - $0,5 \times 2  = \textbf{1}$
+            - $0,875 \\times 2 = \\textbf{1},75$  
+            - $0,75 \\times 2 = \\textbf{1},5$
+            - $0,5 \\times 2  = \\textbf{1}$
  
-        Donc $20,875=10100,111_2$
+        Donc $20,875=10100,111_2$        
+    """
+    )
+    }}
 
 
 
-!!! abstract "Exercice 2"
-    === "Énoncé"
-        Donner l'écriture binaire de 0,2.
-    === "Correction"
+
+
+!!! example "{{ exercice() }}"
+    Donner l'écriture binaire de 0,2.
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         - partie entière : $0 = 0_2$
         - partie décimale :
-            - $0,2 \times 2 = \textbf{0},4$  
-            - $0,4 \times 2 = \textbf{0},8$
-            - $0,8 \times 2  = \textbf{1},6$
-            - $0,6 \times 2  = \textbf{1},2$
-            - $0,2 \times 2 = \textbf{0},4$ 
+            - $0,2 \\times 2 = \\textbf{0},4$  
+            - $0,4 \\times 2 = \\textbf{0},8$
+            - $0,8 \\times 2  = \\textbf{1},6$
+            - $0,6 \\times 2  = \\textbf{1},2$
+            - $0,2 \\times 2 = \\textbf{0},4$ 
             - *et cela continue...*
  
-        Le nombre 0,2 n'admet pas d'écriture binaire **finie**.
+        Le nombre 0,2 n'admet pas d'écriture binaire **finie**. :frowning:         
+    """
+    )
+    }}
 
 
 ### Conclusion 
@@ -156,12 +173,16 @@ renverra
 a et b sont égaux
 ``` 
 
-!!! abstract "Exercice"
-    === "Énoncé"
-        On considère la fonction $f(x)=x^3-6x+2$.   
-        L'équation $f(x)=1$ admet une solution unique dans l'intervalle $[0;1]$.  
-        Trouver une valeur approchée de cette solution à $10^{-5}$ près. On prendra `e`$=0,001$.
-    === "Correction"
+!!! example "{{ exercice() }}"
+    On considère la fonction $f(x)=x^3-6x+2$.   
+    L'équation $f(x)=1$ admet une solution unique dans l'intervalle $[0;1]$.  
+    Trouver une valeur approchée de cette solution à $10^{-5}$ près. On prendra `e`$=0,001$.
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python
         def f(x):
             return x**3 - 6 * x + 2
@@ -171,5 +192,9 @@ a et b sont égaux
         while abs(f(a) - 1 ) > e :
             a += 10**(-5)
         print(a)
-        ```
+        ```        
+    """
+    )
+    }}
+
 
