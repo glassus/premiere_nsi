@@ -86,7 +86,7 @@ Dans ce cas, `00000011` serait le nombre $+3$ et `10000011` serait le nombre $-3
     Avec cette convention, effectuer l'addition $(+3)+(-3)$ en binaire.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![](data/add2.png){: .center}
