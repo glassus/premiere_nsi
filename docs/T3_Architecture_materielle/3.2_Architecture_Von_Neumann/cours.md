@@ -1,7 +1,7 @@
 # 3.2 Architecture Von Neumann
 
 ![image](data/BO.png){: .center}
-
+{{initexo(0)}}
 
 ![image](data/JVN.jpg){: .center}
 
@@ -24,10 +24,14 @@ On distingue 4 zones essentielles :
 
 ## 2. Activité 1 : simulation d'un programme en assembleur
 
+![image](data/meme.png){: .center width=40%}
+
+{#
 Cette activité est disponible [ici](https://www.youtube.com/watch?v=5xABe90yolM){. target="_blank"} en vidéo.
 
 <iframe width="933" height="668" src="https://www.youtube.com/embed/5xABe90yolM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+#}
 ### 2.1 Le programme que nous étudierons
 
 
@@ -106,20 +110,24 @@ Une fois transformé en binaire, on retrouve le code donné au début du paragra
 
 
 
-!!! abstract "Exercice"
-    === "Énoncé"
-        Coder en assembleur la séquence d'instruction suivante :
+!!! example "{{ exercice() }}"
+
+    Coder en assembleur la séquence d'instruction suivante :
 
 
-        ```python
-        w = 10
-        x = 3
-        y = 5
-        z = w - (x + y)
-        ```
+    ```python
+    w = 10
+    x = 3
+    y = 5
+    z = w - (x + y)
+    ```
 
-        Vous aurez pour cela besoin de l'instruction `subl rA rB` qui effectue l'opération `rB-rA` et la stocke dans `rB`. (`rA` et `rB` sont les noms des registres).
-    === "Correction"
+    Vous aurez pour cela besoin de l'instruction `subl rA rB` qui effectue l'opération `rB-rA` et la stocke dans `rB`. (`rA` et `rB` sont les noms des registres).
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```
         .pos 0
         mrmovl x, %eax
@@ -136,6 +144,11 @@ Une fois transformé en binaire, on retrouve le code donné au début du paragra
         y:  .long 5
         z:  .long 0
         ``` 
+    """
+    )
+    }}
+
+
          
 
 
