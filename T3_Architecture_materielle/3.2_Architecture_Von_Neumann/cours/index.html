@@ -4210,9 +4210,7 @@
 <li>les <strong>Entrées/Sorties</strong>, permettant de gérer les informations avec l'extérieur.</li>
 </ul>
 <h2 id="2-activite-1-simulation-dun-programme-en-assembleur">2. Activité 1 : simulation d'un programme en assembleur<a class="headerlink" href="#2-activite-1-simulation-dun-programme-en-assembleur" title="Permanent link">⚓︎</a></h2>
-<p>Cette activité est disponible <a class="" href="https://www.youtube.com/watch?v=5xABe90yolM" target="_blank">ici</a> en vidéo.</p>
-<iframe width="933" height="668" src="https://www.youtube.com/embed/5xABe90yolM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<p><img alt="image" class="center" src="../data/meme.png" width="40%" /></p>
 <h3 id="21-le-programme-que-nous-etudierons">2.1 Le programme que nous étudierons<a class="headerlink" href="#21-le-programme-que-nous-etudierons" title="Permanent link">⚓︎</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">5</span>
@@ -4272,11 +4270,8 @@ c:  .long 0
 <p><img alt="image" class="center" src="../data/instrY86.png" width="30%" />
 <img alt="image" class="center" src="../data/encodage.png" width="60%" /></p>
 </details>
-<div class="admonition abstract">
-<p class="admonition-title">Exercice</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
+<div class="admonition example">
+<p class="admonition-title">Exercice  1</p>
 <p>Coder en assembleur la séquence d'instruction suivante :</p>
 <div class="highlight"><pre><span></span><code><span class="n">w</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
@@ -4284,26 +4279,6 @@ c:  .long 0
 <span class="n">z</span> <span class="o">=</span> <span class="n">w</span> <span class="o">-</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>
 </code></pre></div>
 <p>Vous aurez pour cela besoin de l'instruction <code>subl rA rB</code> qui effectue l'opération <code>rB-rA</code> et la stocke dans <code>rB</code>. (<code>rA</code> et <code>rB</code> sont les noms des registres).</p>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>.pos 0
-mrmovl x, %eax
-mrmovl y, %ebx
-mrmovl w, %ecx
-addl %eax, %ebx
-subl %ebx, %ecx
-rmmovl %ecx, z
-halt
-
-.align 4
-w:  .long 10
-x:  .long 3
-y:  .long 5
-z:  .long 0
-</code></pre></div>
-</div>
-</div>
-</div>
 </div>
 <h3 id="24-resume-des-notions-essentielles">2.4 Résumé des notions essentielles<a class="headerlink" href="#24-resume-des-notions-essentielles" title="Permanent link">⚓︎</a></h3>
 <ul>
@@ -4387,7 +4362,7 @@ Néanmoins, il est parfois possible d'agir au niveau le plus bas (le langage-mac
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">11 avril 2022</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">3 avril 2024</span>
   </span>
 
     
