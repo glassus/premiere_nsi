@@ -4255,7 +4255,7 @@ Vous pouvez avoir un aperçu de la représentation des nombres flottants sur <a 
 <span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">float</span><span class="s1">&#39;&gt;</span>
 </code></pre></div>
 <p>Ces flottants (traduction française) sont à manipuler avec une extrême précaution. Il faut garder en tête que les calculs sont potentiellement faux, du moins imprécis, lorsque des flottants interviennent.</p>
-<p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mf">0.5</span><span class="o">-</span><span class="mf">0.2</span><span class="o">-</span><span class="mf">0.2</span><span class="o">-</span><span class="mf">0.1</span>
+<p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mf">0.5</span> <span class="o">-</span> <span class="mf">0.2</span> <span class="o">-</span> <span class="mf">0.2</span> <span class="o">-</span> <span class="mf">0.1</span>
 <span class="o">-</span><span class="mf">2.7755575615628914e-17</span>
 </code></pre></div>
 <a class="" href="" target="_blank"></a></p>
@@ -4289,16 +4289,17 @@ Vous pouvez avoir un aperçu de la représentation des nombres flottants sur <a 
 <p>La fonction <code>abs(a-b)</code> renvoie un nombre positif égal à la distance entre <code>a</code> et <code>b</code>. Il faut alors décider d'un écart minimal <code>e</code> en dessous duquel on considèrera que <code>a</code> et <code>b</code> sont égaux.</p>
 <p>Le script </p>
 <div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mf">0.1</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mf">0.3</span><span class="o">-</span><span class="mf">0.2</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mf">0.3</span> <span class="o">-</span> <span class="mf">0.2</span>
 <span class="n">e</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">12</span><span class="p">)</span>
-<span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">e</span> <span class="p">:</span>
+<span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">e</span> <span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a et b sont égaux&quot;</span><span class="p">)</span>
 <span class="k">else</span> <span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a et b sont différents&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>renverra
 <div class="highlight"><pre><span></span><code>a et b sont égaux
-</code></pre></div></p>
+</code></pre></div>
+car notre code les aura considérés comme «suffisamment proches».</p>
 <div class="admonition example">
 <p class="admonition-title">Exercice  3</p>
 <p>On considère la fonction <span class="arithmatex">\(f(x)=x^3-6x+2\)</span>. <br />
