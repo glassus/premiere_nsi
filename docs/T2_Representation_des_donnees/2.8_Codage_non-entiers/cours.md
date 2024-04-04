@@ -114,7 +114,7 @@ Ces flottants (traduction française) sont à manipuler avec une extrême préca
 
 
 ```python
->>> 0.5-0.2-0.2-0.1
+>>> 0.5 - 0.2 - 0.2 - 0.1
 -2.7755575615628914e-17
 ```
 [](){. target="_blank"}
@@ -165,9 +165,9 @@ Le script
 
 ```python
 a = 0.1
-b = 0.3-0.2
+b = 0.3 - 0.2
 e = 10**(-12)
-if abs(a-b) < e :
+if abs(a - b) < e :
     print("a et b sont égaux")
 else :
     print("a et b sont différents")
@@ -177,6 +177,7 @@ renverra
 ```
 a et b sont égaux
 ``` 
+car notre code les aura considérés comme «suffisamment proches».
 
 !!! example "{{ exercice() }}"
     On considère la fonction $f(x)=x^3-6x+2$.   
@@ -190,7 +191,7 @@ a et b sont égaux
     ??? success \"Correction\" 
         ```python
         def f(x):
-            return x**3 - 6 * x + 2
+            return x**3 - 6*x + 2
 
         e = 10**(-3)
         a = 0
