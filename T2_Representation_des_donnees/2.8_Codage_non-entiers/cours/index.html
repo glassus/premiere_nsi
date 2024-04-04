@@ -4225,6 +4225,22 @@
 <div class="admonition example">
 <p class="admonition-title">Exercice  2</p>
 <p>Donner l'écriture binaire de 0,2.</p>
+<details class="success">
+<summary>Correction</summary>
+<ul>
+<li>partie entière : <span class="arithmatex">\(0 = 0_2\)</span></li>
+<li>partie décimale :<ul>
+<li><span class="arithmatex">\(0,2 \times 2 = \textbf{0},4\)</span>  </li>
+<li><span class="arithmatex">\(0,4 \times 2 = \textbf{0},8\)</span></li>
+<li><span class="arithmatex">\(0,8 \times 2  = \textbf{1},6\)</span></li>
+<li><span class="arithmatex">\(0,6 \times 2  = \textbf{1},2\)</span></li>
+<li><span class="arithmatex">\(0,2 \times 2 = \textbf{0},4\)</span> </li>
+<li><em>et cela continue...</em></li>
+</ul>
+</li>
+</ul>
+<p>Le nombre 0,2 n'admet pas d'écriture binaire <strong>finie</strong>. <img alt="😦" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f626.svg" title=":frowning:" />         </p>
+</details>
 </div>
 <h3 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">⚓︎</a></h3>
 <p>Certains nombres n'admettent pas une écriture binaire <strong>finie</strong>. Or la mémoire d'un ordinateur, quelqu'il soit, est toujours finie. Certains nombres ne peuvent donc pas être représentés correctement en machine : c'est une impossibilité théorique. Cela amène à des comportements étranges : </p>
@@ -4242,7 +4258,9 @@
 <span class="o">-</span><span class="mf">2.7755575615628914e-17</span>
 </code></pre></div>
 <a class="" href="" target="_blank"></a></p>
-<p>En 1991, durant la Guerre du Golfe, un missile anti-missile américain a raté sa cible de 500 mètres car son ordinateur interne émettait un signal toutes les 0.1 secondes. Au bout de 100 heures de fonctionnement, l'approximation du nombre flottant 0.1 a conduit à un décalage de 0,34 secondes, ce qui lui a fait rater sa cible. (<a class="" href="http://www-users.math.umn.edu/~arnold//disasters/patriot.html" target="_blank">source</a>)</p>
+<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> En 1991, durant la Guerre du Golfe, un missile anti-missile américain a raté sa cible de 500 mètres car son ordinateur interne émettait un signal toutes les 0.1 secondes. Au bout de 100 heures de fonctionnement, l'approximation du nombre flottant 0.1 a conduit à un décalage de 0,34 secondes, ce qui lui a fait rater sa cible. (<a class="" href="http://www-users.math.umn.edu/~arnold//disasters/patriot.html" target="_blank">source</a>)</p>
+<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> Hormis ce cas tragique, est-ce si grave de devoir travailler avec des valeurs approchées ? Non, pas vraiment : par exemple, la valeur de Pi utilisée par la NASA pour faire ses calculs (généralement très, très, très précis) est <code>3.141592653589793</code>, donc «juste» 15 chiffres après la virgule. (<a class="" href="https://www.jpl.nasa.gov/edu/news/2016/3/16/how-many-decimals-of-pi-do-we-really-need/" target="_blank">source</a>)</p>
+<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> Un bug intéressant : on a enfin compris pourquoi dans Minecraft les barques tombant d'une certaine hauteur cassaient, et pas d'autres. La raison ? Les nombres flottants bien sûr ! <a class="" href="https://www.youtube.com/watch?v=ei58gGM9Z8k" target="_blank">(vidéo)</a></p>
 <h2 id="3-comment-faire-des-tests-degalite-sur-les-flottants">3. Comment faire des tests d'egalité sur les flottants ?<a class="headerlink" href="#3-comment-faire-des-tests-degalite-sur-les-flottants" title="Permanent link">⚓︎</a></h2>
 <p>Première réponse : ON N'EN FAIT PAS.</p>
 <p>Si <code>a</code> et <code>b</code> sont deux flottants, le test classique</p>
@@ -4306,7 +4324,7 @@ Trouver une valeur approchée de cette solution à <span class="arithmatex">\(10
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2 avril 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">4 avril 2024</span>
   </span>
 
     
