@@ -4305,6 +4305,18 @@ car notre code les aura considérés comme «suffisamment proches».</p>
 <p>On considère la fonction <span class="arithmatex">\(f(x)=x^3-6x+2\)</span>. <br />
 L'équation <span class="arithmatex">\(f(x)=1\)</span> admet une solution unique dans l'intervalle <span class="arithmatex">\([0;1]\)</span>.<br />
 Trouver une valeur approchée de cette solution à <span class="arithmatex">\(10^{-5}\)</span> près. On prendra <code>e</code><span class="arithmatex">\(=0,001\)</span>.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">6</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
+
+<span class="n">e</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="nb">abs</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span> <span class="p">)</span> <span class="o">&gt;</span> <span class="n">e</span> <span class="p">:</span>
+    <span class="n">a</span> <span class="o">+=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</code></pre></div>
+</details>
 </div>
 
 
