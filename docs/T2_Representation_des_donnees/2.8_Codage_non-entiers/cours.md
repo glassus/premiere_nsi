@@ -69,7 +69,7 @@ Donc $3,6875=11,1011_2$
     Donner l'écriture binaire de 0,2.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         - partie entière : $0 = 0_2$
@@ -119,7 +119,12 @@ Ces flottants (traduction française) sont à manipuler avec une extrême préca
 ```
 [](){. target="_blank"}
 
-En 1991, durant la Guerre du Golfe, un missile anti-missile américain a raté sa cible de 500 mètres car son ordinateur interne émettait un signal toutes les 0.1 secondes. Au bout de 100 heures de fonctionnement, l'approximation du nombre flottant 0.1 a conduit à un décalage de 0,34 secondes, ce qui lui a fait rater sa cible. ([source](http://www-users.math.umn.edu/~arnold//disasters/patriot.html){. target="_blank"})
+:arrow_right: En 1991, durant la Guerre du Golfe, un missile anti-missile américain a raté sa cible de 500 mètres car son ordinateur interne émettait un signal toutes les 0.1 secondes. Au bout de 100 heures de fonctionnement, l'approximation du nombre flottant 0.1 a conduit à un décalage de 0,34 secondes, ce qui lui a fait rater sa cible. ([source](http://www-users.math.umn.edu/~arnold//disasters/patriot.html){. target="_blank"})
+
+
+:arrow_right: Hormis ce cas tragique, est-ce si grave de devoir travailler avec des valeurs approchées ? Non, pas vraiment : par exemple, la valeur de Pi utilisée par la NASA pour faire ses calculs (généralement très, très, très précis) est ```3.141592653589793```, donc «juste» 15 chiffres après la virgule. ([source](https://www.jpl.nasa.gov/edu/news/2016/3/16/how-many-decimals-of-pi-do-we-really-need/){. target="_blank"})
+
+:arrow_right: Un bug intéressant : on a enfin compris pourquoi dans Minecraft les barques tombant d'une certaine hauteur cassaient, et pas d'autres. La raison ? Les nombres flottants bien sûr ! [(vidéo)](https://www.youtube.com/watch?v=ei58gGM9Z8k){. target="_blank"}
 
 ## 3. Comment faire des tests d'egalité sur les flottants ? 
 
