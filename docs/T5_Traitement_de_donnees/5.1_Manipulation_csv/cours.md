@@ -1,10 +1,11 @@
 # 5.1 Manipulation de fichiers csv
 
+![image](data/BO.png){: .center}
+
 ![image](data/meme.png){: .center}
 
 
-
-![image](data/BO.png){: .center}
+{{initexo(0)}}
 
 
 Les fichiers CSV (pour Comma Separated Values) sont des fichiers-texte (ils ne contiennent aucune mise en forme) utilisés pour stocker des données, séparées par des virgules (ou des points-virgules, ou des espaces...). Il n'y a pas de norme officielle du CSV.  
@@ -149,43 +150,63 @@ Le fichier [`top14.csv `](../data/top14.csv)  contient tous les joueurs du Top1
 
 _Ce fichier a été généré par Rémi Deniaud, de l'académie de Bordeaux._
 
+!!! example "{{ question() }}"
+    Stocker dans  une variable `joueurs`  les renseignements de tous les joueurs présents dans ce fichier csv.
 
-**Q1.** Stocker dans  une variable `joueurs`  les renseignements de tous les joueurs présents dans ce fichier csv.
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ```python linenums='1'
+        import csv
+        f = open('data/top14.csv', 'r', encoding = 'utf-8')
+        donnees = csv.DictReader(f)
+        joueurs = []
+        for ligne in donnees:
+            joueurs.append(dict(ligne))
+            
+        f.close()
+        ```        
+    """
+    )
+    }}
 
-
-??? tip "réponse"
-    ```python linenums='1'
-    import csv
-    f = open('data/top14.csv', "r", encoding = 'utf-8')
-    donnees = csv.DictReader(f)
-    joueurs = []
-    for ligne in donnees:
-        joueurs.append(dict(ligne))
-        
-    f.close()
-    ```
 
 
 ### 3.1 Première analyse
 
-**Q2.** Combien de joueurs sont présents dans ce fichier ?
+!!! example "{{ question() }}"
+    
+    Combien de joueurs sont présents dans ce fichier ?
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ```python
+        >>> len(joueurs)
+        595
+        ```        
+    """
+    )
+    }}
 
 
-??? tip "réponse"
-    ```python
-    >>> len(joueurs)
-     595
-    ```}
+!!! example "{{ question() }}"
+    Quel est le nom du joueur n°486 ?
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ```python
+        >>> joueurs[486]['Nom']
+        'Wenceslas LAURET'
+        ```        
+    """
+    )
+    }}
 
 
-**Q3.** Quel est le nom du joueur n°486 ?
-
-
-??? tip "réponse"
-    ```python
-    >>> joueurs[486]['Nom']
-      'Wenceslas LAURET'
-    ```
 
 
 
@@ -196,41 +217,53 @@ _Ce fichier a été généré par Rémi Deniaud, de l'académie de Bordeaux._
 
 ### 3.2 Extraction de données particulières
 
+!!! example "{{ question() }}"
+    En 2019, où jouait Baptiste SERIN ?  
 
-**Q4.**  Où joue Baptiste SERIN ?  
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        La méthode la plus naturelle est de parcourir toute la liste jusqu'à trouver le bon joueur, puis d'afficher son équipe.
+        ```python
+        >>> for joueur in joueurs :
+                if joueur['Nom'] == 'Baptiste SERIN' :
+                    print(joueur['Equipe'])
+        ```
 
-La méthode la plus naturelle est de parcourir toute la liste jusqu'à trouver le bon joueur, puis d'afficher son équipe.
+        Une méthode plus efficace est d'utiliser une liste par compréhension incluant un test. 
 
-
-??? tip "réponse"
-    ```python
-    >>> for joueur in joueurs :
-            if joueur['Nom'] == 'Baptiste SERIN' :
-                print(joueur['Equipe'])
-    ```
-
-
-Une méthode plus efficace est d'utiliser une liste par compréhension incluant un test. 
-
-
-??? tip "réponse"
-    ```python
-    >>> clubSerin = [joueur['Equipe'] for joueur in joueurs if joueur['Nom'] == 'Baptiste SERIN']
-    >>> clubSerin
-    ```
+        ```python
+        >>> clubSerin = [joueur['Equipe'] for joueur in joueurs if joueur['Nom'] == 'Baptiste SERIN']
+        >>> clubSerin
+        ```
 
 
+    """
+    )
+    }}
 
-**Q5.**  Qui sont les joueurs de plus de 140 kg ?
-
-Attention à bien convertir en entier la chaine de caractère renvoyée par la clé ```Poids```, à l'aide de la fonction ```int()```. 
 
 
-??? tip "réponse"
-    ```python
-    >>> lourds = [(joueur['Nom'], joueur['Poids']) for joueur in joueurs if int(joueur['Poids']) > 140]
-    >>> lourds
-    ```
+
+!!! example "{{ question() }}"
+    Qui sont les joueurs de plus de 140 kg ?
+
+    *Attention à bien convertir en entier la chaine de caractère renvoyée par la clé ```Poids```, à l'aide de la fonction ```int()```.*
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ```python
+        >>> lourds = [(joueur['Nom'], joueur['Poids']) for joueur in joueurs if int(joueur['Poids']) > 140]
+        >>> lourds
+        ```        
+    """
+    )
+    }}
+
+
 
 
 ### 4. Exploitation graphique
@@ -241,8 +274,8 @@ Nous allons utiliser le module Matplotlib pour illustrer les données de notre f
 
 ```python linenums='1'
 import matplotlib.pyplot as plt
-X = [0,1,3,6]
-Y = [12,10,7,15]
+X = [0, 1, 3, 6]
+Y = [12, 10, 7, 15]
 plt.plot(X,Y,'ro') # r pour red, o pour un cercle. voir https://matplotlib.org/api/markers_api.html
 plt.show()
 ```
@@ -253,47 +286,58 @@ plt.show()
 
 ### 4.2 Application
 
-**Q1.** Afficher sur un graphique tous les joueurs de rugby du Top14, en mettant le poids en abscisse et la taille en ordonnée.
+!!! example "{{ question() }}"
+    Afficher sur un graphique tous les joueurs de rugby du Top14, en mettant le poids en abscisse et la taille en ordonnée.
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ```python linenums='1'
+        X = [int(joueur['Poids']) for joueur in joueurs]
+        Y = [int(joueur['Taille']) for joueur in joueurs]
+        plt.plot(X, Y, 'ro') # r pour red, o pour un cercle. voir https://matplotlib.org/api/markers_api.html
+        plt.show()
+        ```
 
 
-??? tip "réponse"
+        ![png](data/01_Manipulation_csv_37_0.png){: .center}        
+    """
+    )
+    }}
 
-    ```python linenums='1'
-    X = [int(joueur['Poids']) for joueur in joueurs]
-    Y = [int(joueur['Taille']) for joueur in joueurs]
-    plt.plot(X, Y, 'ro') # r pour red, o pour un cercle. voir https://matplotlib.org/api/markers_api.html
-    plt.show()
-    ```
+!!! example "{{ question() }}"
+    Faire apparaître ensuite les joueurs évoluant au poste de Centre en bleu, et les 2ème lignes en vert.
 
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ```python linenums='1'
+        #tous les joueurs
+        X = [int(joueur['Poids']) for joueur in joueurs]
+        Y = [int(joueur['Taille']) for joueur in joueurs]
+        plt.plot(X, Y, 'ro') 
 
-    ![png](data/01_Manipulation_csv_37_0.png){: .center}
+        #on recolorie les Centres en bleu
+        X = [int(joueur['Poids']) for joueur in joueurs if joueur['Poste'] == 'Centre']
+        Y = [int(joueur['Taille']) for joueur in joueurs if joueur['Poste'] == 'Centre']
+        plt.plot(X, Y, 'bo')
 
-
-**Q2.** Faire apparaître ensuite les joueurs évoluant au poste de Centre en bleu, et les 2ème lignes en vert.
-
-
-??? tip "réponse"
-    ```python linenums='1'
-    #tous les joueurs
-    X = [int(joueur['Poids']) for joueur in joueurs]
-    Y = [int(joueur['Taille']) for joueur in joueurs]
-    plt.plot(X, Y, 'ro') 
-
-    #on recolorie les Centres en bleu
-    X = [int(joueur['Poids']) for joueur in joueurs if joueur['Poste'] == 'Centre']
-    Y = [int(joueur['Taille']) for joueur in joueurs if joueur['Poste'] == 'Centre']
-    plt.plot(X, Y, 'bo')
-
-    #on recolorie les 2ème ligne en vert
-    X = [int(joueur['Poids']) for joueur in joueurs if joueur['Poste'] == '2ème ligne']
-    Y = [int(joueur['Taille']) for joueur in joueurs if joueur['Poste'] == '2ème ligne']
-    plt.plot(X, Y, 'go')
+        #on recolorie les 2ème ligne en vert
+        X = [int(joueur['Poids']) for joueur in joueurs if joueur['Poste'] == '2ème ligne']
+        Y = [int(joueur['Taille']) for joueur in joueurs if joueur['Poste'] == '2ème ligne']
+        plt.plot(X, Y, 'go')
 
 
-    plt.show()
-    ```
+        plt.show()
+        ```
 
 
-    ![png](data/01_Manipulation_csv_38_0.png){: .center}
+        ![png](data/01_Manipulation_csv_38_0.png){: .center}        
+    """
+    )
+    }}
+
 
 
