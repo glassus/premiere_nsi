@@ -154,7 +154,7 @@ _Ce fichier a été généré par Rémi Deniaud, de l'académie de Bordeaux._
     Stocker dans  une variable `joueurs`  les renseignements de tous les joueurs présents dans ce fichier csv.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
