@@ -4322,15 +4322,39 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 <div class="admonition example">
 <p class="admonition-title">Question  2</p>
 <p>Combien de joueurs sont présents dans ce fichier ?</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">joueurs</span><span class="p">)</span>
+<span class="mi">595</span>
+</code></pre></div>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Question  3</p>
 <p>Quel est le nom du joueur n°486 ?</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">joueurs</span><span class="p">[</span><span class="mi">486</span><span class="p">][</span><span class="s1">&#39;Nom&#39;</span><span class="p">]</span>
+<span class="s1">&#39;Wenceslas LAURET&#39;</span>
+</code></pre></div>
+</details>
 </div>
 <h3 id="32-extraction-de-donnees-particulieres">3.2 Extraction de données particulières<a class="headerlink" href="#32-extraction-de-donnees-particulieres" title="Permanent link">⚓︎</a></h3>
 <div class="admonition example">
 <p class="admonition-title">Question  4</p>
 <p>En 2019, où jouait Baptiste SERIN ?  </p>
+<details class="success">
+<summary>Correction</summary>
+<p>La méthode la plus naturelle est de parcourir toute la liste jusqu'à trouver le bon joueur, puis d'afficher son équipe.
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Nom&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Baptiste SERIN&#39;</span> <span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Equipe&#39;</span><span class="p">])</span>
+</code></pre></div></p>
+<p>Une méthode plus efficace est d'utiliser une liste par compréhension incluant un test. </p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">clubSerin</span> <span class="o">=</span> <span class="p">[</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Equipe&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="k">if</span> <span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Nom&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Baptiste SERIN&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">clubSerin</span>
+</code></pre></div>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Question  5</p>
