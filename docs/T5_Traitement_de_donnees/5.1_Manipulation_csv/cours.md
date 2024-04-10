@@ -252,7 +252,7 @@ _Ce fichier a été généré par Rémi Deniaud, de l'académie de Bordeaux._
     *Attention à bien convertir en entier la chaine de caractère renvoyée par la clé ```Poids```, à l'aide de la fonction ```int()```.*
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
@@ -269,6 +269,11 @@ _Ce fichier a été généré par Rémi Deniaud, de l'académie de Bordeaux._
 ### 4. Exploitation graphique
 Nous allons utiliser le module Matplotlib pour illustrer les données de notre fichier csv.
 
+Pour tracer un nuage de points (par l'instruction ```plt.plot```), Matplotlib requiert :
+
+- une liste ```X``` contenant toutes les abscisses des points à tracer.
+- une liste ```Y``` contenant toutes les ordonnées des points à tracer.
+
 ### 4.1 Exemple 
 
 
@@ -276,9 +281,17 @@ Nous allons utiliser le module Matplotlib pour illustrer les données de notre f
 import matplotlib.pyplot as plt
 X = [0, 1, 3, 6]
 Y = [12, 10, 7, 15]
-plt.plot(X,Y,'ro') # r pour red, o pour un cercle. voir https://matplotlib.org/api/markers_api.html
+plt.plot(X, Y, 'ro') 
 plt.show()
 ```
+Dans l'instruction ```plt.plot(X, Y, 'ro') ``` :
+
+- ```X``` sont les abscisses,
+- ```Y``` sont les ordonnées,
+- ```'ro'``` signifie :
+    - qu'on veut des points (c'est le ```'o'```, plus de choix [ici](https://matplotlib.org/stable/api/markers_api.html){. target="_blank"}).
+    - qu'on veut qu'ils soient rouges (c'est le ```'r'``` plus de choix [ici](https://matplotlib.org/stable/gallery/color/named_colors.html#tableau-palette){. target="_blank"}).
+
 
 
 ![png](data/01_Manipulation_csv_34_0.png){: .center}
@@ -296,7 +309,7 @@ plt.show()
         ```python linenums='1'
         X = [int(joueur['Poids']) for joueur in joueurs]
         Y = [int(joueur['Taille']) for joueur in joueurs]
-        plt.plot(X, Y, 'ro') # r pour red, o pour un cercle. voir https://matplotlib.org/api/markers_api.html
+        plt.plot(X, Y, 'ro') 
         plt.show()
         ```
 

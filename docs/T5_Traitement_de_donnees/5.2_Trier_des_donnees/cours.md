@@ -48,7 +48,7 @@ f.close()
 !!! example "{{ question() }}"
     Définir de la même manière une fonction `joueursPoste` qui prend une chaîne de caractères `poste` et qui renvoie la liste des fiches des joueurs jouant à ce poste.
 
-    *Utilisation :*
+    *Exemple d'utilisation :*
     ```python
     >>> joueursPoste("Talonneur")
     [{'Equipe': 'Agen', 'Nom': 'Clément MARTINEZ', 'Poste': 'Talonneur', 'Date de naissance': '14/03/1996', 'Taille': '181', 'Poids': '105'}, {'Equipe': 'Agen', 'Nom': 'Marc BARTHOMEUF', 'Poste': 'T...
