@@ -4360,20 +4360,41 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 <p class="admonition-title">Question  5</p>
 <p>Qui sont les joueurs de plus de 140 kg ?</p>
 <p><em>Attention à bien convertir en entier la chaine de caractère renvoyée par la clé <code>Poids</code>, à l'aide de la fonction <code>int()</code>.</em></p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">lourds</span> <span class="o">=</span> <span class="p">[(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Nom&#39;</span><span class="p">],</span> <span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">140</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">lourds</span>
+</code></pre></div>
+</details>
 </div>
 <h3 id="4-exploitation-graphique">4. Exploitation graphique<a class="headerlink" href="#4-exploitation-graphique" title="Permanent link">⚓︎</a></h3>
 <p>Nous allons utiliser le module Matplotlib pour illustrer les données de notre fichier csv.</p>
+<p>Pour tracer un nuage de points (par l'instruction <code>plt.plot</code>), Matplotlib requiert :</p>
+<ul>
+<li>une liste <code>X</code> contenant toutes les abscisses des points à tracer.</li>
+<li>une liste <code>Y</code> contenant toutes les ordonnées des points à tracer.</li>
+</ul>
 <h3 id="41-exemple">4.1 Exemple<a class="headerlink" href="#41-exemple" title="Permanent link">⚓︎</a></h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="n">X</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
 <span class="n">Y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="s1">&#39;ro&#39;</span><span class="p">)</span> <span class="c1"># r pour red, o pour un cercle. voir https://matplotlib.org/api/markers_api.html</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">)</span> 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
+Dans l'instruction <code>plt.plot(X, Y, 'ro')</code> :</p>
+<ul>
+<li><code>X</code> sont les abscisses,</li>
+<li><code>Y</code> sont les ordonnées,</li>
+<li><code>'ro'</code> signifie :<ul>
+<li>qu'on veut des points (c'est le <code>'o'</code>, plus de choix <a class="" href="https://matplotlib.org/stable/api/markers_api.html" target="_blank">ici</a>).</li>
+<li>qu'on veut qu'ils soient rouges (c'est le <code>'r'</code> plus de choix <a class="" href="https://matplotlib.org/stable/gallery/color/named_colors.html#tableau-palette" target="_blank">ici</a>).</li>
+</ul>
+</li>
+</ul>
 <p><img alt="png" class="center" src="../data/01_Manipulation_csv_34_0.png" /></p>
 <h3 id="42-application">4.2 Application<a class="headerlink" href="#42-application" title="Permanent link">⚓︎</a></h3>
 <div class="admonition example">
@@ -4404,7 +4425,7 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">9 avril 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">10 avril 2024</span>
   </span>
 
     
