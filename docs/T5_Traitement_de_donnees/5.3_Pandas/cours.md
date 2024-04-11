@@ -307,11 +307,17 @@ Le principe du filtrage va être de créer une nouvelle *dataframe* ne contenant
 !!! example "{{ exercice() }}"
     Créer une dataframe ```grands``` qui contient tous les joueurs mesurant plus de 2 mètres (inclus).
 
-        
-    ??? tip "Correction "
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\"
         ```python
         >>> grands = df[df['Taille'] >= 200]
         ```
+    """
+    )
+    }}
+
     
 
 Pour effectuer des opérations sur les booléens, on utilisera le symbole ```&``` pour le ET et ```|``` pour le OU.
@@ -320,8 +326,10 @@ Pour effectuer des opérations sur les booléens, on utilisera le symbole ```&``
 !!! example "{{ exercice() }}"
      Créer une dataframe ```grands_et_gros``` qui contient tous les joueurs mesurant plus de 2 mètres (inclus) et pesant plus de 120 kg (inclus).
 
-       
-    ??? tip "Correction"
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\"
         ```python
         >>> grands_gros = df[(df['Taille'] >= 200) & (df['Poids'] >= 120)]
         ```
@@ -329,14 +337,20 @@ Pour effectuer des opérations sur les booléens, on utilisera le symbole ```&``
         Autre solution, en utilisant la datadframe ```grands``` de l'exercice 1 :
         ```python
         >>> grands_gros = grands[grands['Poids'] >= 120]
-        ```
+        ```  
+    """
+    )
+    }}
+
     
 
 !!! example "{{ exercice() }}"
     Trouver en une seule ligne le joueur le plus léger du Top14.
 
-      
-    ??? tip "Correction"
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\"
         ```python
         >>> df[df['Poids'] == min(df['Poids'])]
                Equipe             Nom  Poste Date de naissance  Taille  Poids
@@ -347,13 +361,19 @@ Pour effectuer des opérations sur les booléens, on utilisera le symbole ```&``
         ```python
         >>> df.sort_values(by='Poids', ascending=True).head(1)
         ```
+    """
+    )
+    }}  
+
     
 
 !!! example "{{ exercice() }}"
-    Tracer le nuage de point poids-taille comme précédemment, mais en marquant d'un point bleu les 2èmes ligne et d'un point rouge les piliers.
+    Tracer le nuage de points poids-taille comme précédemment, mais en marquant d'un point bleu les 2èmes ligne et d'un point rouge les piliers.
 
-        
-    ??? tip "Correction"
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\"
         ```python linenums='1'
         import pandas as pd
         import matplotlib.pyplot as plt
@@ -375,7 +395,11 @@ Pour effectuer des opérations sur les booléens, on utilisera le symbole ```&``
         plt.plot(X, Y, 'go')
         ```
 
-        ![image](data/ex4.png){: .center}
+        ![image](data/ex4.png){: .center}  
+    """
+    )
+    }}
+
      
 
 
@@ -413,22 +437,32 @@ del df['Poids après les vacances']
 !!! example "{{ exercice() }}"
     **Q1.** Créer une colonne contenant l'IMC de chaque joueur.
 
-    {# 
-    ??? tip "Correction Q1"
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python
         >>> df['IMC'] = df['Poids'] / (df['Taille']/100)**2
-        ```
-    #}
+        ``` 
+    """
+    )
+    }}
+
 
 
     **Q2.** Créer une nouvelle dataframe contenant tous les joueurs du Top14 classés par ordre d'IMC croissant.
     
-    {#
-    ??? tip "Correction Q2"
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python
         >>> df_imc = df.sort_values(by='IMC', ascending = True)
         ```
-    #}
+    """
+    )
+    }}
+
 
 ## 6. Retour sur le KNN
 
@@ -465,19 +499,25 @@ Il va nous suffir de :
         ...
     ```
 
-    {#
-    ```python linenums='1'
-    import pandas as pd
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ```python linenums='1'
+        import pandas as pd
 
-    df = pd.read_csv('top14.csv', encoding = 'utf-8') 
+        df = pd.read_csv('top14.csv', encoding = 'utf-8') 
 
-    def conseil_poste(df, poids, taille, k):
-        df['distance'] = (df['Poids']-poids)**2 + (df['Taille']-taille)**2
-        df = df.sort_values(by = 'distance', ascending=True)
-        df = df.head(k)
-        return df['Poste'].describe().top 
-    ```
-    #}
+        def conseil_poste(df, poids, taille, k):
+            df['distance'] = (df['Poids']-poids)**2 + (df['Taille']-taille)**2
+            df = df.sort_values(by = 'distance', ascending=True)
+            df = df.head(k)
+            return df['Poste'].describe().top 
+        ```        
+    """
+    )
+    }}
+
 
 
 ```python

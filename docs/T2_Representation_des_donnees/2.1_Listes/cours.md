@@ -186,6 +186,8 @@ Chaque élément étant accessible par son indice (de ```0``` à   ```len(liste)
 
 :warning: **Bonne habitude à prendre** : nommer sa variable d'indice ```i```, ```j```, ```k``` ou ```indice``` mais pas autre chose !  
 
+![image](data/meme_iterators.jpeg){: .center width=40%}
+
 
 ### 4.3 Avantages et inconvénients de chaque méthode
 
