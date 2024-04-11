@@ -323,7 +323,7 @@ Dans l'instruction ```plt.plot(X, Y, 'ro') ``` :
     Faire apparaître ensuite les joueurs évoluant au poste de Centre en bleu, et les 2ème lignes en vert.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
