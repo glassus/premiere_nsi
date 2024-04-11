@@ -303,7 +303,7 @@ Dans l'instruction ```plt.plot(X, Y, 'ro') ``` :
     Afficher sur un graphique tous les joueurs de rugby du Top14, en mettant le poids en abscisse et la taille en ordonnée.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
