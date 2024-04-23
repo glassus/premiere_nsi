@@ -125,7 +125,7 @@ Une fois transformé en binaire, on retrouve le code donné au début du paragra
     Vous aurez pour cela besoin de l'instruction `subl rA rB` qui effectue l'opération `rB-rA` et la stocke dans `rB`. (`rA` et `rB` sont les noms des registres).
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```
