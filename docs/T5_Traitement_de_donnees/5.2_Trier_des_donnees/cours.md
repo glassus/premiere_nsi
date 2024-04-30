@@ -256,7 +256,7 @@ On peut aussi inverser l'ordre de tri :
     $(102-90)^2+(190-180)^2=244$
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
