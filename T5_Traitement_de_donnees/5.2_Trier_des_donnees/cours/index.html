@@ -4263,6 +4263,17 @@ Ici, plusieurs clés peuvent être des critères de tri : la taille, le poids.</
 <div class="admonition example">
 <p class="admonition-title">Question  5</p>
 <p>Trier les joueurs de Bordeaux suivant leur Indice de Masse Corporelle (<a class="" href="https://fr.wikipedia.org/wiki/Indice_de_masse_corporelle" target="_blank">IMC</a> )    </p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">IMC</span><span class="p">(</span><span class="n">player</span><span class="p">):</span>
+    <span class="n">masse</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">player</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span>
+    <span class="n">taille_m</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">player</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">])</span> <span class="o">/</span> <span class="mi">100</span>
+    <span class="k">return</span> <span class="n">masse</span> <span class="o">/</span> <span class="n">taille_m</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">joueursUBB</span> <span class="o">=</span> <span class="p">[</span><span class="n">player</span> <span class="k">for</span> <span class="n">player</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="k">if</span> <span class="n">player</span><span class="p">[</span><span class="s1">&#39;Equipe&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Bordeaux&#39;</span><span class="p">]</span>
+<span class="n">joueursUBB_tri</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">joueursUBB</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">IMC</span><span class="p">)</span>
+</code></pre></div>
+</details>
 </div>
 <h2 id="3-recherche-des-joueurs-de-profil-physique-similaire">3. Recherche des joueurs de profil physique similaire<a class="headerlink" href="#3-recherche-des-joueurs-de-profil-physique-similaire" title="Permanent link">⚓︎</a></h2>
 <h3 id="31-distance-entre-deux-joueurs">3.1 Distance entre deux joueurs<a class="headerlink" href="#31-distance-entre-deux-joueurs" title="Permanent link">⚓︎</a></h3>
