@@ -265,7 +265,7 @@ On peut aussi inverser l'ordre de tri :
             p2 = int(joueur2['Poids'])
             t1 = int(joueur1['Taille'])
             t2 = int(joueur2['Taille'])
-            return (p1-p2)**2+(t1-t2)**2
+            return (p1 - p2)**2 + (t1 - t2)**2
         ```        
     """
     )
@@ -315,7 +315,7 @@ Baptiste SERIN est donc le joueur numéro 530.
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
