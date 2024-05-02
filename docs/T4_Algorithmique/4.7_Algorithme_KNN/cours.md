@@ -6,7 +6,7 @@
     La méthode KNN est une méthode simple et efficace de classification. La classification est un enjeu majeur de l'Intelligence Artificielle :
 
     - la caméra d'une voiture autonome perçoit un panneau, mais quel est ce panneau ?
-    - un grain de beauté est pris en photo par un dermatologue, ce grain de beauté est-il cancéreux ?
+    - un grain de beauté est pris en photo par un dermatologue, ce grain de beauté est-il à surveiller ?
     - ...
 
     La méthode du KNN va trouver quels sont, dans une base de données déjà bien remplie et labellée, les k-objets (les 6 objets si $k=6$ par exemple) qui se rapprochent le plus de l'objet à classifier. En prenant ensuite la caractéristique la plus fréquente parmi ces 6 objets, on devine alors dans quelle catégorie notre objet doit se classer.
@@ -117,7 +117,7 @@ De la même manière qu'on avait [classé les joueurs suivant leur IMC](https://
     - ```taille``` : la taille du joueur X
     - ```k``` : le nombre de joueurs les plus proches que l'on veut garder
 
-    et qui renvoie une liste contenant les k joueurs classés suivant leur proximité morphologique avec le joueur X.
+    et qui renvoie une liste contenant les `k` joueurs classés suivant leur proximité morphologique avec le joueur X.
 
     **Exemple d'utilisation :**
     ```python
