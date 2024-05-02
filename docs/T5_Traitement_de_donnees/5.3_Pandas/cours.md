@@ -1,5 +1,6 @@
 # 5.3 Utilisation du module Pandas
 
+Les manipulations de ce cours pourront être effectuées sur un Notebook de [Capytale](https://capytale2.ac-paris.fr/web/c/974e-3503914){. target="_blank"}.
 
 ## 1. Introduction et première dataframe
 
