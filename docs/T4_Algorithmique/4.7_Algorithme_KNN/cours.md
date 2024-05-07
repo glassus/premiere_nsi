@@ -130,7 +130,7 @@ De la même manière qu'on avait [classé les joueurs suivant leur IMC](https://
     """
     ??? success \"Correction\" 
         ```python linenums='1'
-        def classement_k_joueurs(poids, taille):
+        def classement_k_joueurs(poids, taille, k):
             couples = []
             for player in joueurs:
                 couples.append((player, distance(poids, taille, player)))
