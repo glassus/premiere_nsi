@@ -4486,7 +4486,17 @@ Ceci se fera simplement par :</p>
 <div class="admonition example">
 <p class="admonition-title">Exercice  5</p>
 <p><strong>Q1.</strong> Créer une colonne contenant l'IMC de chaque joueur.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;IMC&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+</code></pre></div>
+</details>
 <p><strong>Q2.</strong> Créer une nouvelle dataframe contenant tous les joueurs du Top14 classés par ordre d'IMC croissant.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df_imc</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;IMC&#39;</span><span class="p">,</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+</details>
 </div>
 <h2 id="6-retour-sur-le-knn">6. Retour sur le KNN<a class="headerlink" href="#6-retour-sur-le-knn" title="Permanent link">⚓︎</a></h2>
 <p>Comme dans <a class="" href="https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.7_Algorithme_KNN/cours/" target="_blank">ce cours</a>, nous allons construire une fonction  <code>conseil_poste</code> recevant en paramètres :</p>
