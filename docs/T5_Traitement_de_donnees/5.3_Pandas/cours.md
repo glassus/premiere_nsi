@@ -439,7 +439,7 @@ del df['Poids après les vacances']
     **Q1.** Créer une colonne contenant l'IMC de chaque joueur.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
@@ -454,7 +454,7 @@ del df['Poids après les vacances']
     **Q2.** Créer une nouvelle dataframe contenant tous les joueurs du Top14 classés par ordre d'IMC croissant.
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
