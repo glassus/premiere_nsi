@@ -527,3 +527,5 @@ Il va nous suffir de :
 >>> conseil_poste(df, 130, 160, 10)
 'Pilier'
 ```
+
+
