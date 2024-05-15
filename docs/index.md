@@ -28,6 +28,9 @@ correction(False,
 
 
 ## Thèmes en cours d'étude :
+{#
+- [Analyse de données sur Capytale](https://capytale2.ac-paris.fr/web/c/1548-3575893)
+#}
 - [Utilisation du module Pandas](./T5_Traitement_de_donnees/5.3_Pandas/cours/)
 - [Algorithme KNN](./T4_Algorithmique/4.7_Algorithme_KNN/cours/)
 - [Trier des données](./T5_Traitement_de_donnees/5.2_Trier_des_donnees/cours/)
