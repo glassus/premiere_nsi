@@ -28,7 +28,7 @@ correction(False,
 
 
 ## Thèmes en cours d'étude :
-
+- [Travail sur Tkinter](T6_Mini-projets/Tkinter.md){. target="_blank"}
 - [Analyse de données sur Capytale](https://capytale2.ac-paris.fr/web/c/1548-3575893)
 - [Utilisation du module Pandas](./T5_Traitement_de_donnees/5.3_Pandas/cours/)
 - [Algorithme KNN](./T4_Algorithmique/4.7_Algorithme_KNN/cours/)
