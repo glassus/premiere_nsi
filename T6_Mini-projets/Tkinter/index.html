@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.1_Extremums_et_moyennes/intro_cours/">
+        <link rel="canonical" href="https://glassus.github.io/premiere_nsi/T6_Mini-projets/Tkinter/">
       
       
-        <link rel="prev" href="../cours/">
+        <link rel="prev" href="../Github/">
       
       
-        <link rel="next" href="../../4.2_Complexite/cours/">
+        <link rel="next" href="../../T7_Divers/1_Conseils_generaux/cours/">
       
       
-      <link rel="icon" href="../../../xtra/fav1NSI.png">
+      <link rel="icon" href="../../xtra/fav1NSI.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.24">
     
     
       
-        <title>Vers les extremums et moyennes - Première NSI Gr2 - Lycée François Mauriac - Bordeaux</title>
+        <title>Introduction à Tkinter - Première NSI Gr2 - Lycée François Mauriac - Bordeaux</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
   
@@ -47,8 +47,8 @@
     
       
     
-    <script src="../../../xtra/webcomponentsjs/webcomponents-loader.js"></script>
-    <script src="../../../xtra/gifplayer/gif-player.es6.js" defer async></script>
+    <script src="../../xtra/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../../xtra/gifplayer/gif-player.es6.js" defer async></script>
     <!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
@@ -62,11 +62,11 @@
       
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../../xtra/stylesheets/pyoditeur.css">
+      <link rel="stylesheet" href="../../xtra/stylesheets/pyoditeur.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -92,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vers-les-extremums-et-moyennes" class="md-skip">
+        <a href="#introduction-a-tkinter" class="md-skip">
           Aller au contenu
         </a>
       
@@ -106,7 +106,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="../../.." title="Première NSI Gr2 - Lycée François Mauriac - Bordeaux" class="md-header__button md-logo" aria-label="Première NSI Gr2 - Lycée François Mauriac - Bordeaux" data-md-component="logo">
+    <a href="../.." title="Première NSI Gr2 - Lycée François Mauriac - Bordeaux" class="md-header__button md-logo" aria-label="Première NSI Gr2 - Lycée François Mauriac - Bordeaux" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Z"/></svg>
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Vers les extremums et moyennes
+              Introduction à Tkinter
             
           </span>
         </div>
@@ -233,7 +233,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -252,7 +252,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T1_Demarrer_en_Python/sommaire/" class="md-tabs__link">
+        <a href="../../T1_Demarrer_en_Python/sommaire/" class="md-tabs__link">
           
   
   T1 Bases de Python
@@ -270,7 +270,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T2_Representation_des_donnees/sommaire/" class="md-tabs__link">
+        <a href="../../T2_Representation_des_donnees/sommaire/" class="md-tabs__link">
           
   
   T2 Rep. des données
@@ -288,7 +288,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T3_Architecture_materielle/sommaire/" class="md-tabs__link">
+        <a href="../../T3_Architecture_materielle/sommaire/" class="md-tabs__link">
           
   
   T3 Arch. matérielle
@@ -302,13 +302,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../sommaire/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../T4_Algorithmique/sommaire/" class="md-tabs__link">
           
   
   T4 Algorithmique
@@ -326,7 +324,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T5_Traitement_de_donnees/sommaire/" class="md-tabs__link">
+        <a href="../../T5_Traitement_de_donnees/sommaire/" class="md-tabs__link">
           
   
   T5 Trait. des données
@@ -344,7 +342,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T6_IHM_Web/pagesperso/" class="md-tabs__link">
+        <a href="../../T6_IHM_Web/pagesperso/" class="md-tabs__link">
           
   
   T6 IHM sur le web
@@ -358,11 +356,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../T6_Mini-projets/05_Initiation_Pygame/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../05_Initiation_Pygame/" class="md-tabs__link">
           
   
   Mini-projets
@@ -386,7 +386,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T7_Divers/1_Conseils_generaux/cours/" class="md-tabs__link">
+        <a href="../../T7_Divers/1_Conseils_generaux/cours/" class="md-tabs__link">
           
   
   Divers
@@ -407,7 +407,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../T8_Liens_utiles/liens/" class="md-tabs__link">
+        <a href="../../T8_Liens_utiles/liens/" class="md-tabs__link">
           
   
   Liens utiles
@@ -442,7 +442,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Première NSI Gr2 - Lycée François Mauriac - Bordeaux" class="md-nav__button md-logo" aria-label="Première NSI Gr2 - Lycée François Mauriac - Bordeaux" data-md-component="logo">
+    <a href="../.." title="Première NSI Gr2 - Lycée François Mauriac - Bordeaux" class="md-nav__button md-logo" aria-label="Première NSI Gr2 - Lycée François Mauriac - Bordeaux" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Z"/></svg>
@@ -472,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -532,7 +532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Demarrer_en_Python/sommaire/" class="md-nav__link">
+      <a href="../../T1_Demarrer_en_Python/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -593,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Demarrer_en_Python/1.1_Variables/cours/" class="md-nav__link">
+      <a href="../../T1_Demarrer_en_Python/1.1_Variables/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -662,7 +662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Demarrer_en_Python/1.2_Boucle_for/cours/" class="md-nav__link">
+      <a href="../../T1_Demarrer_en_Python/1.2_Boucle_for/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -683,7 +683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Demarrer_en_Python/1.2_Boucle_for/exercices/" class="md-nav__link">
+      <a href="../../T1_Demarrer_en_Python/1.2_Boucle_for/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -752,7 +752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Demarrer_en_Python/1.3_Boucle_while/cours/" class="md-nav__link">
+      <a href="../../T1_Demarrer_en_Python/1.3_Boucle_while/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -821,7 +821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/cours/" class="md-nav__link">
+      <a href="../../T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -842,7 +842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/exercices/" class="md-nav__link">
+      <a href="../../T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -911,7 +911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Demarrer_en_Python/1.5_Fonctions/cours/" class="md-nav__link">
+      <a href="../../T1_Demarrer_en_Python/1.5_Fonctions/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -932,7 +932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T1_Demarrer_en_Python/1.5_Fonctions/exercices/" class="md-nav__link">
+      <a href="../../T1_Demarrer_en_Python/1.5_Fonctions/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1008,7 +1008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Representation_des_donnees/sommaire/" class="md-nav__link">
+      <a href="../../T2_Representation_des_donnees/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1069,7 +1069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Representation_des_donnees/2.1_Listes/cours/" class="md-nav__link">
+      <a href="../../T2_Representation_des_donnees/2.1_Listes/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1090,7 +1090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Representation_des_donnees/2.1_Listes/exercices/" class="md-nav__link">
+      <a href="../../T2_Representation_des_donnees/2.1_Listes/exercices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1159,7 +1159,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Representation_des_donnees/2.2_Tuples/cours/" class="md-nav__link">
+      <a href="../../T2_Representation_des_donnees/2.2_Tuples/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1228,7 +1228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Representation_des_donnees/2.3_Dictionnaires/cours/" class="md-nav__link">
+      <a href="../../T2_Representation_des_donnees/2.3_Dictionnaires/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1297,7 +1297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Representation_des_donnees/2.4_Bases/cours/" class="md-nav__link">
+      <a href="../../T2_Representation_des_donnees/2.4_Bases/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1366,7 +1366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Representation_des_donnees/2.5_Booleens/cours/" class="md-nav__link">
+      <a href="../../T2_Representation_des_donnees/2.5_Booleens/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1387,7 +1387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Representation_des_donnees/2.5_Booleens/enigme/" class="md-nav__link">
+      <a href="../../T2_Representation_des_donnees/2.5_Booleens/enigme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1456,7 +1456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Representation_des_donnees/2.6_Codage_caracteres/cours/" class="md-nav__link">
+      <a href="../../T2_Representation_des_donnees/2.6_Codage_caracteres/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1525,7 +1525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Representation_des_donnees/2.7_Codage_entiers/cours/" class="md-nav__link">
+      <a href="../../T2_Representation_des_donnees/2.7_Codage_entiers/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1594,7 +1594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Representation_des_donnees/2.8_Codage_non-entiers/cours/" class="md-nav__link">
+      <a href="../../T2_Representation_des_donnees/2.8_Codage_non-entiers/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1663,7 +1663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T2_Representation_des_donnees/2.9_Chaines_caracteres/cours/" class="md-nav__link">
+      <a href="../../T2_Representation_des_donnees/2.9_Chaines_caracteres/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1739,7 +1739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T3_Architecture_materielle/sommaire/" class="md-nav__link">
+      <a href="../../T3_Architecture_materielle/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1800,7 +1800,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T3_Architecture_materielle/3.1_Microbit/cours/" class="md-nav__link">
+      <a href="../../T3_Architecture_materielle/3.1_Microbit/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1821,7 +1821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T3_Architecture_materielle/3.1_Microbit/cours_old/" class="md-nav__link">
+      <a href="../../T3_Architecture_materielle/3.1_Microbit/cours_old/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1890,7 +1890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T3_Architecture_materielle/3.2_Architecture_Von_Neumann/cours/" class="md-nav__link">
+      <a href="../../T3_Architecture_materielle/3.2_Architecture_Von_Neumann/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1959,7 +1959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T3_Architecture_materielle/3.3_Architecture_reseau/cours/" class="md-nav__link">
+      <a href="../../T3_Architecture_materielle/3.3_Architecture_reseau/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2028,7 +2028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T3_Architecture_materielle/3.4_Protocoles_de_communication/cours/" class="md-nav__link">
+      <a href="../../T3_Architecture_materielle/3.4_Protocoles_de_communication/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2097,7 +2097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T3_Architecture_materielle/3.5_Decouverte_des_commandes_Linux/cours/" class="md-nav__link">
+      <a href="../../T3_Architecture_materielle/3.5_Decouverte_des_commandes_Linux/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2130,28 +2130,25 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2162,7 +2159,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             T4 Algorithmique
@@ -2176,7 +2173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sommaire/" class="md-nav__link">
+      <a href="../../T4_Algorithmique/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2194,8 +2191,6 @@
                 
   
   
-    
-  
   
   
     
@@ -2205,11 +2200,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
@@ -2223,7 +2220,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             4.1 Extremums et moyennes
@@ -2237,7 +2234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cours/" class="md-nav__link">
+      <a href="../../T4_Algorithmique/4.1_Extremums_et_moyennes/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2306,7 +2303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.2_Complexite/cours/" class="md-nav__link">
+      <a href="../../T4_Algorithmique/4.2_Complexite/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2375,7 +2372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.3_Tri_par_insertion/cours/" class="md-nav__link">
+      <a href="../../T4_Algorithmique/4.3_Tri_par_insertion/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2444,7 +2441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.4_Tri_par_selection/cours/" class="md-nav__link">
+      <a href="../../T4_Algorithmique/4.4_Tri_par_selection/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2513,7 +2510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.5_Dichotomie/cours/" class="md-nav__link">
+      <a href="../../T4_Algorithmique/4.5_Dichotomie/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2582,7 +2579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.6_Algorithmes_gloutons/cours/" class="md-nav__link">
+      <a href="../../T4_Algorithmique/4.6_Algorithmes_gloutons/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2651,7 +2648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.7_Algorithme_KNN/cours/" class="md-nav__link">
+      <a href="../../T4_Algorithmique/4.7_Algorithme_KNN/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2727,7 +2724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T5_Traitement_de_donnees/sommaire/" class="md-nav__link">
+      <a href="../../T5_Traitement_de_donnees/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2788,7 +2785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T5_Traitement_de_donnees/5.1_Manipulation_csv/cours/" class="md-nav__link">
+      <a href="../../T5_Traitement_de_donnees/5.1_Manipulation_csv/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2857,7 +2854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T5_Traitement_de_donnees/5.2_Trier_des_donnees/cours/" class="md-nav__link">
+      <a href="../../T5_Traitement_de_donnees/5.2_Trier_des_donnees/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2926,7 +2923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T5_Traitement_de_donnees/5.3_Pandas/cours/" class="md-nav__link">
+      <a href="../../T5_Traitement_de_donnees/5.3_Pandas/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3002,7 +2999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_IHM_Web/pagesperso/" class="md-nav__link">
+      <a href="../../T6_IHM_Web/pagesperso/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3023,7 +3020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_IHM_Web/sommaire/" class="md-nav__link">
+      <a href="../../T6_IHM_Web/sommaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3084,7 +3081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_IHM_Web/6.1_Interactions_page_web/cours/" class="md-nav__link">
+      <a href="../../T6_IHM_Web/6.1_Interactions_page_web/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3153,7 +3150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_IHM_Web/6.2_Protocole_HTTP/cours/" class="md-nav__link">
+      <a href="../../T6_IHM_Web/6.2_Protocole_HTTP/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3222,7 +3219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_IHM_Web/6.3_Get_Post_Formulaires/cours/" class="md-nav__link">
+      <a href="../../T6_IHM_Web/6.3_Get_Post_Formulaires/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3255,25 +3252,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
-        
-          
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -3284,7 +3284,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Mini-projets
@@ -3298,7 +3298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_Mini-projets/05_Initiation_Pygame/" class="md-nav__link">
+      <a href="../05_Initiation_Pygame/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3319,7 +3319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_Mini-projets/Attaque_BF/" class="md-nav__link">
+      <a href="../Attaque_BF/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3340,7 +3340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_Mini-projets/D%C3%A9codeuses/" class="md-nav__link">
+      <a href="../D%C3%A9codeuses/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3361,7 +3361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_Mini-projets/Exercice_Perseverance/" class="md-nav__link">
+      <a href="../Exercice_Perseverance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3382,7 +3382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T6_Mini-projets/Github/" class="md-nav__link">
+      <a href="../Github/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3400,10 +3400,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../T6_Mini-projets/Tkinter/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -3412,6 +3421,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -3511,7 +3521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T7_Divers/1_Conseils_generaux/cours/" class="md-nav__link">
+      <a href="../../T7_Divers/1_Conseils_generaux/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3580,7 +3590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T7_Divers/2_VM/cours/" class="md-nav__link">
+      <a href="../../T7_Divers/2_VM/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3649,7 +3659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T7_Divers/3_Thonny/cours/" class="md-nav__link">
+      <a href="../../T7_Divers/3_Thonny/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3718,7 +3728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T7_Divers/4_Processing/cours/" class="md-nav__link">
+      <a href="../../T7_Divers/4_Processing/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3787,7 +3797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T7_Divers/4_Processing_p5/cours/" class="md-nav__link">
+      <a href="../../T7_Divers/4_Processing_p5/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3856,7 +3866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T7_Divers/5_Capytale/cours/" class="md-nav__link">
+      <a href="../../T7_Divers/5_Capytale/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3925,7 +3935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T7_Divers/5_Exposes/cours/" class="md-nav__link">
+      <a href="../../T7_Divers/5_Exposes/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4001,7 +4011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T8_Liens_utiles/liens/" class="md-nav__link">
+      <a href="../../T8_Liens_utiles/liens/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4041,187 +4051,12 @@
   
 
 
-<h1 id="vers-les-extremums-et-moyennes">Vers les extremums et moyennes<a class="headerlink" href="#vers-les-extremums-et-moyennes" title="Permanent link">⚓︎</a></h1>
-<h2 id="1-algorithme-de-recherche-de-maximum">1. Algorithme de recherche de maximum<a class="headerlink" href="#1-algorithme-de-recherche-de-maximum" title="Permanent link">⚓︎</a></h2>
-<p>On cherche à coder une fonction <code>recherche_max</code> qui prend en paramètre une liste <code>tab</code> et qui renvoie le plus grand élément de cette liste. L'usage de la fonction <code>max</code> est interdit.</p>
-<p>Utilisation :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_max</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
-  <span class="mi">8</span>
-</code></pre></div></p>
-<details class="note">
-<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /></summary>
-<div class="admonition note">
-<p class="admonition-title">Recherche de maximum </p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_max</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie le maximum de la liste tab&#39;&#39;&#39;</span>
-</code></pre></div>
-</div>
-</details>
-<details class="note">
-<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span> </summary>
-<div class="admonition note">
-<p class="admonition-title">Recherche de maximum </p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_max</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie le maximum de la liste tab&#39;&#39;&#39;</span>
-    <span class="o">...</span> <span class="o">=</span> <span class="o">...</span>                
-    <span class="k">for</span> <span class="o">...</span> <span class="ow">in</span> <span class="o">...</span><span class="p">:</span>
-        <span class="k">if</span> <span class="o">...</span> <span class="o">&gt;</span> <span class="o">...</span><span class="p">:</span>
-            <span class="o">...</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="k">return</span> <span class="o">...</span>
-</code></pre></div>
-</div>
-</details>
-<details class="note">
-<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span></summary>
-<div class="admonition note">
-<p class="admonition-title">Recherche de maximum </p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_max</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie le maximum de la liste tab&#39;&#39;&#39;</span>
-    <span class="n">maxi</span> <span class="o">=</span> <span class="o">...</span>           
-    <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="o">...</span><span class="p">:</span>
-        <span class="k">if</span> <span class="o">...</span> <span class="o">&gt;</span> <span class="o">...</span><span class="p">:</span>
-            <span class="o">...</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="k">return</span> <span class="o">...</span>
-</code></pre></div>
-</div>
-</details>
-<details class="note">
-<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span></summary>
-<div class="admonition note">
-<p class="admonition-title">Recherche de maximum </p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_max</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie le maximum de la liste tab&#39;&#39;&#39;</span>
-    <span class="n">maxi</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>           
-    <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">tab</span><span class="p">:</span>
-        <span class="k">if</span> <span class="o">...</span> <span class="o">&gt;</span> <span class="o">...</span><span class="p">:</span>
-            <span class="n">maxi</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="k">return</span> <span class="o">...</span>
-</code></pre></div>
-</div>
-</details>
-<h2 id="2-algorithme-de-calcul-de-moyenne">2. Algorithme de calcul de moyenne<a class="headerlink" href="#2-algorithme-de-calcul-de-moyenne" title="Permanent link">⚓︎</a></h2>
-<p>On cherche à coder une fonction <code>moyenne</code> qui prend en paramètre une liste <code>tab</code> et qui renvoie la moyenne des éléments de cette liste.</p>
-<p>Utilisation :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">moyenne</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
-  <span class="mf">4.0</span>
-</code></pre></div></p>
-<details class="note">
-<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /></summary>
-<div class="admonition note">
-<p class="admonition-title">Recherche de maximum </p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39; renvoie la moyenne de tab&#39;&#39;&#39;</span>
-</code></pre></div>
-</div>
-</details>
-<details class="note">
-<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span> </summary>
-<div class="admonition note">
-<p class="admonition-title">Recherche de maximum </p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39; renvoie la moyenne de tab&#39;&#39;&#39;</span>
-    <span class="o">...</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="k">for</span> <span class="o">...</span> <span class="ow">in</span> <span class="o">...</span><span class="p">:</span>
-        <span class="o">...</span> <span class="o">+=</span> <span class="o">...</span>
-    <span class="k">return</span> <span class="o">...</span> <span class="o">/</span> <span class="o">...</span>
-</code></pre></div>
-</div>
-</details>
-<details class="note">
-<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span></summary>
-<div class="admonition note">
-<p class="admonition-title">Recherche de maximum </p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39; renvoie la moyenne de tab&#39;&#39;&#39;</span>
-    <span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="o">...</span><span class="p">:</span>
-        <span class="o">...</span> <span class="o">+=</span> <span class="o">...</span>
-    <span class="k">return</span> <span class="o">...</span> <span class="o">/</span> <span class="o">...</span>
-</code></pre></div>
-</div>
-</details>
-<details class="note">
-<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span></summary>
-<div class="admonition note">
-<p class="admonition-title">Recherche de maximum </p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39; renvoie la moyenne de tab&#39;&#39;&#39;</span>
-    <span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">tab</span><span class="p">:</span>
-        <span class="n">somme</span> <span class="o">+=</span> <span class="o">...</span>
-    <span class="k">return</span> <span class="o">...</span> <span class="o">/</span> <span class="o">...</span>
-</code></pre></div>
-</div>
-</details>
-<h2 id="3-algorithme-de-recherche-doccurrence">3. Algorithme de recherche d'occurrence<a class="headerlink" href="#3-algorithme-de-recherche-doccurrence" title="Permanent link">⚓︎</a></h2>
-<p>On cherche à coder une fonction <code>recherche_occurrence</code> qui prend en paramètre un élement <code>elt</code> et une liste <code>tab</code> et qui renvoie la liste (éventuellement vide) des indices de <code>elt</code> dans <code>tab</code>.</p>
-<p>Utilisation :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_occurrence</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
-<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_occurrence</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
-<span class="p">[]</span>
-</code></pre></div></p>
-<details class="note">
-<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /></summary>
-<div class="admonition note">
-<p class="admonition-title">Recherche d'occurrence </p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_occurrence</span><span class="p">(</span><span class="n">elt</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39; renvoie la liste (éventuellement vide)</span>
-<span class="sd">    des indices de elt dans tab&#39;&#39;&#39;</span>
-</code></pre></div>
-</div>
-</details>
-<details class="note">
-<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span> </summary>
-<div class="admonition note">
-<p class="admonition-title">Recherche d'occurrence </p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_occurrence</span><span class="p">(</span><span class="n">elt</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39; renvoie la liste (éventuellement vide)</span>
-<span class="sd">    des indices de elt dans tab&#39;&#39;&#39;</span>
-    <span class="o">...</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="k">for</span> <span class="o">...</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">...</span><span class="p">):</span>
-        <span class="k">if</span> <span class="o">...</span> <span class="o">==</span> <span class="o">...</span><span class="p">:</span>
-            <span class="o">...</span>
-    <span class="k">return</span> <span class="o">...</span>
-</code></pre></div>
-</div>
-</details>
-<details class="note">
-<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span></summary>
-<div class="admonition note">
-<p class="admonition-title">Recherche d'occurrence </p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_occurrence</span><span class="p">(</span><span class="n">elt</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39; renvoie la liste (éventuellement vide)</span>
-<span class="sd">    des indices de elt dans tab&#39;&#39;&#39;</span>
-    <span class="n">liste_indices</span> <span class="o">=</span> <span class="o">...</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">...</span><span class="p">):</span>
-        <span class="k">if</span> <span class="o">...</span> <span class="o">==</span> <span class="o">...</span><span class="p">:</span>
-            <span class="o">....</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    <span class="k">return</span> <span class="o">...</span>
-</code></pre></div>
-</div>
-</details>
-<details class="note">
-<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span></summary>
-<div class="admonition note">
-<p class="admonition-title">Recherche d'occurrence </p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_occurrence</span><span class="p">(</span><span class="n">elt</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39; renvoie la liste (éventuellement vide)</span>
-<span class="sd">    des indices de elt dans tab&#39;&#39;&#39;</span>
-    <span class="n">liste_indices</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)):</span>
-        <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="o">...</span><span class="p">:</span>
-            <span class="o">....</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    <span class="k">return</span> <span class="o">...</span>
-</code></pre></div>
-</div>
-</details>
-<h2 id="3-algorithme-de-recherche-de-maximum-avec-indice">3. Algorithme de recherche de maximum avec indice<a class="headerlink" href="#3-algorithme-de-recherche-de-maximum-avec-indice" title="Permanent link">⚓︎</a></h2>
-<p>On cherche à coder une fonction <code>recherche_max_et_indice</code> qui prend en paramètre une liste <code>tab</code> et qui renvoie le plus grand élément de cette liste ainsi que l'indice de ce maximum dans la liste (si il est présent plusieurs fois, un seul indice sera renvoyé). L'usage de la fonction <code>max</code> est interdit.</p>
-<p>Utilisation :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_max_et_indice</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
-  <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span>
-</code></pre></div></p>
+<h1 id="introduction-a-tkinter">Introduction à Tkinter<a class="headerlink" href="#introduction-a-tkinter" title="Permanent link">⚓︎</a></h1>
+<p><img alt="" class="center" src="../data/tkinter-tutorial.png" width="20%" /></p>
+<p><code>Tkinter</code> est un module de Python permettant la création d'interfaces graphiques.</p>
+<p>Nous allons suivre pas à pas l'excellent travail de Fabrice Sincère, disponible à cette page :</p>
+<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> <a class="" href="http://f.sincere.free.fr/isn/python/cours_python_tkinter.php" target="_blank">http://f.sincere.free.fr/isn/python/cours_python_tkinter.php</a></p>
+<p>Vous pouvez aussi poser des questions à <a class="" href="https://www.perplexity.ai/" target="_blank">https://www.perplexity.ai/</a> ou une autre IA.</p>
 
 
 
@@ -4242,7 +4077,7 @@
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">18 janvier 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">23 mai 2024</span>
   </span>
 
     
@@ -4256,7 +4091,7 @@
 
 
                 
-    <script src="../../../js/ide.js"></script> 
+    <script src="../../js/ide.js"></script> 
 
               </article>
             </div>
@@ -4323,14 +4158,14 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.081f42fc.min.js"></script>
       
-        <script src="../../../scripts/mathjax.js"></script>
+        <script src="../../scripts/mathjax.js"></script>
       
-        <script src="../../../xtra/javascripts/interpreter.js"></script>
+        <script src="../../xtra/javascripts/interpreter.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
