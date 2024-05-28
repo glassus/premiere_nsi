@@ -4264,6 +4264,119 @@
 </code></pre></div>
 <p>Pour savoir ce qu'il faut écrire à la place des pointillés, faites des tests (avec un <code>print</code>, par exemple) pour savoir à quoi ressemble la variable <code>colors</code> qui est renvoyée par la fonction <code>askcolor</code>. </p>
 <p>Souvenez-vous ensuite que <code>Tkinter</code> travaille avec les couleurs en écriture hexadécimale et non pas RGB...</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span> <span class="n">ttk</span>
+<span class="kn">from</span> <span class="nn">tkinter.colorchooser</span> <span class="kn">import</span> <span class="n">askcolor</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+
+<span class="k">def</span> <span class="nf">cercle</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">largeur</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">)</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="mi">30</span>
+    <span class="n">zone_dessin</span><span class="o">.</span><span class="n">create_oval</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">r</span><span class="p">,</span> <span class="n">y</span><span class="o">-</span><span class="n">r</span><span class="p">,</span> <span class="n">x</span><span class="o">+</span><span class="n">r</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="n">r</span><span class="p">,</span> <span class="n">outline</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">couleur</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
+
+
+<span class="k">def</span> <span class="nf">effacer</span><span class="p">():</span>
+    <span class="n">zone_dessin</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">ALL</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">change_color</span><span class="p">():</span>
+    <span class="n">colors</span> <span class="o">=</span> <span class="n">askcolor</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Tkinter Color Chooser&#39;</span><span class="p">)</span>
+    <span class="n">couleur</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">colors</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+
+<span class="n">ma_fenetre</span> <span class="o">=</span> <span class="n">Tk</span><span class="p">()</span>
+<span class="n">ma_fenetre</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Traceur de cercles&#39;</span><span class="p">)</span>
+
+<span class="n">couleur</span> <span class="o">=</span> <span class="n">StringVar</span><span class="p">()</span>
+<span class="n">couleur</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+
+
+<span class="n">largeur</span> <span class="o">=</span> <span class="mi">480</span>
+<span class="n">hauteur</span> <span class="o">=</span> <span class="mi">320</span>
+<span class="n">zone_dessin</span> <span class="o">=</span> <span class="n">Canvas</span><span class="p">(</span><span class="n">ma_fenetre</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">largeur</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">hauteur</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+<span class="n">zone_dessin</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">padx</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="n">frame1</span> <span class="o">=</span> <span class="n">Frame</span><span class="p">(</span><span class="n">ma_fenetre</span><span class="p">,</span> <span class="n">borderwidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">relief</span><span class="o">=</span><span class="n">GROOVE</span><span class="p">)</span>
+<span class="n">frame1</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">padx</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">frame2</span> <span class="o">=</span> <span class="n">Frame</span><span class="p">(</span><span class="n">ma_fenetre</span><span class="p">,</span> <span class="n">relief</span><span class="o">=</span><span class="n">GROOVE</span><span class="p">)</span>
+<span class="n">frame2</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">padx</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">bouton_Tracer</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">frame1</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Tracer&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">cercle</span><span class="p">)</span>
+<span class="n">bouton_Tracer</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">padx</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+
+<span class="n">bouton_Effacer</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">frame1</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Effacer&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">effacer</span><span class="p">)</span>
+<span class="n">bouton_Effacer</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">padx</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="n">bouton_Couleur</span> <span class="o">=</span> <span class="n">ttk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">frame1</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Couleur&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">change_color</span><span class="p">)</span>
+<span class="n">bouton_Couleur</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">padx</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+
+<span class="n">bouton_Quitter</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">frame2</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Quitter&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">ma_fenetre</span><span class="o">.</span><span class="n">destroy</span><span class="p">)</span>
+<span class="n">bouton_Quitter</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">padx</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="n">ma_fenetre</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+</details>
 <h2 id="4-etape-3">4. Étape 3<a class="headerlink" href="#4-etape-3" title="Permanent link">⚓︎</a></h2>
 <p><img alt="image" class="center" src="../data/etape3.png" /></p>
 <p><em>Instructions :</em></p>
