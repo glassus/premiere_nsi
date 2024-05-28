@@ -291,3 +291,85 @@ correction(False,
 )
 }}
 
+
+
+## 5. Bonus
+
+![image](data/avec_souris.gif){: .center}
+
+Remplacer le placement aléatoire par un placement au clic de souris.
+
+{{
+correction(False,
+"""
+??? success \"Correction\" 
+    ```python linenums='1'
+    from tkinter import *
+    from tkinter import ttk
+    from tkinter.colorchooser import askcolor
+
+    def cercle(x, y):
+        r = rayon.get()
+        zone_dessin.create_oval(x-r, y-r, x+r, y+r, outline='black', fill=couleur.get())
+
+
+    def clic(event):
+        x = event.x
+        y = event.y
+        cercle(x, y)
+
+    def effacer():
+        zone_dessin.delete(ALL)
+
+
+    def change_color():
+        colors = askcolor(title='Tkinter Color Chooser')
+        couleur.set(colors[1])
+
+
+    ma_fenetre = Tk()
+    ma_fenetre.title('Traceur de cercles')
+
+    couleur = StringVar()
+    couleur.set('blue')
+
+    rayon = IntVar()
+    rayon.set(30)
+
+
+    largeur = 480
+    hauteur = 320
+    x, y = largeur//2, hauteur//2
+
+    zone_dessin = Canvas(ma_fenetre, width=largeur, height=hauteur, bg='white')
+    zone_dessin.bind('<Button-1>', clic)
+    zone_dessin.pack(padx=5, pady=5)
+
+    frame1 = Frame(ma_fenetre, borderwidth=2, relief=GROOVE)
+    frame1.pack(side=LEFT, padx=10, pady=10)
+
+    frame2 = Frame(ma_fenetre, relief=GROOVE)
+    frame2.pack(side=LEFT, padx=10, pady=10)
+
+
+    bouton_Effacer = Button(frame1, text='Effacer', command=effacer)
+    bouton_Effacer.pack(side=LEFT, padx=5, pady=5)
+
+    bouton_Couleur = ttk.Button(frame1, text='Couleur', command=change_color)
+    bouton_Couleur.pack(side=LEFT, padx=5, pady=5)
+
+    curseur = Scale(frame1, from_=10, to=50, resolution=10, orient=HORIZONTAL,
+            length=100, width=20, label='Rayon', tickinterval=40, variable=rayon)
+    curseur.pack(side=LEFT, padx=10, pady=10)
+
+    bouton_Quitter = Button(frame2, text='Quitter', command=ma_fenetre.destroy)
+    bouton_Quitter.pack(side=LEFT, padx=5, pady=5)
+
+    ma_fenetre.mainloop()
+
+
+
+    ```
+"""
+)
+}}
