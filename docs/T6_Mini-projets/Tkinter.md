@@ -134,7 +134,7 @@ Pour savoir ce qu'il faut écrire à la place des pointillés, faites des tests 
 Souvenez-vous ensuite que ```Tkinter``` travaille avec les couleurs en écriture hexadécimale et non pas RGB...
 
 {{
-correction(False,
+correction(True,
 """
 ??? success \"Correction\" 
     ```python linenums='1'
