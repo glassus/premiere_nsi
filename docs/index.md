@@ -27,6 +27,9 @@ correction(False,
 )
 }}
 
+[https://play.typeracer.com?universe=lang_fr&rt=1k3ga5kice](https://play.typeracer.com?universe=lang_fr&rt=1k3ga5kice){. target="_blank"}
+
+
 
 !!! bug "Jeu sur CodeCombat"
     - Rendez-vous sur [https://codecombat.com/](https://codecombat.com/){. target="_blank"}
