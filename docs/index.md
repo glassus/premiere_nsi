@@ -12,9 +12,10 @@
     -  [Présentation de l'algorithme de Gale-Shapley](https://glassus.github.io/terminale_nsi/T7_Divers/11_parcoursup/cours/){. target="_blank"}
 #}
 
-
+{#
 !!! abstract "Actualités"
     - [Page sur l'orientation post-Bac](https://glassus.github.io/terminale_nsi/T7_Divers/10_orientation/cours/){. target="_blank"}
+#}
 
 {{
 correction(False,
@@ -25,6 +26,15 @@ correction(False,
 """
 )
 }}
+
+
+!!! bug "Jeu sur CodeCombat"
+    - Rendez-vous sur [https://codecombat.com/](https://codecombat.com/){. target="_blank"}
+    - Cliquez sur *«je suis un étudiant»* puis rentrez le code de la classe : ```PoolLargeDown``` 
+    - Pour la création du compte, vous pouvez donner une adresse factice type ```hdsdls@ldsjflks.fr```, elle n'est pas vérifiée.
+    - Plus tard, choisissez le parcours *«Introduction à l'informatique»*.
+
+
 
 
 ## Thèmes en cours d'étude :
