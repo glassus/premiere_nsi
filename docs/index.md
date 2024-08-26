@@ -1,11 +1,11 @@
-{#
+
 !!! abstract "Prendre un bon départ"  
     - [Utilisation des machines virtuelles](./T7_Divers/2_VM/cours/)
     - [Thonny](./T7_Divers/3_Thonny/cours/)
     - [Conseils généraux de travail](./T7_Divers/1_Conseils_generaux/cours/)
     - [Capytale](./T7_Divers/5_Capytale/cours/)
     - [Fiche de renseignements](https://capytale2.ac-paris.fr/web/c/7cd5-1782246){. target="_blank"}
-#}
+
 
 {#
 !!! abstract "Actualités"
@@ -27,34 +27,29 @@ correction(False,
 )
 }}
 
-[https://play.typeracer.com?universe=lang_fr&rt=1k3ga5kice](https://play.typeracer.com?universe=lang_fr&rt=1k3ga5kice){. target="_blank"}
 
 
 
-!!! bug "Jeu sur CodeCombat"
-    - Rendez-vous sur [https://codecombat.com/](https://codecombat.com/){. target="_blank"}
-    - Cliquez sur *«je suis un étudiant»* puis rentrez le code de la classe : ```PoolLargeDown``` 
-    - Pour la création du compte, vous pouvez donner une adresse factice type ```hdsdls@ldsjflks.fr```, elle n'est pas vérifiée.
-    - Plus tard, choisissez le parcours *«Introduction à l'informatique»*.
+
 
 
 
 
 ## Thèmes en cours d'étude :
-- [Travail sur Tkinter](T6_Mini-projets/Tkinter.md){. target="_blank"}
-- [Analyse de données sur Capytale](https://capytale2.ac-paris.fr/web/c/1548-3575893)
-- [Utilisation du module Pandas](./T5_Traitement_de_donnees/5.3_Pandas/cours/)
-- [Algorithme KNN](./T4_Algorithmique/4.7_Algorithme_KNN/cours/)
-- [Trier des données](./T5_Traitement_de_donnees/5.2_Trier_des_donnees/cours/)
-- [Manipulation de fichiers csv](./T5_Traitement_de_donnees/5.1_Manipulation_csv/cours/)
-- [Architecture Von Neumann](./T3_Architecture_materielle/3.2_Architecture_Von_Neumann/cours/)
-- [Codage des non-entiers](./T2_Representation_des_donnees/2.8_Codage_non-entiers/cours/)
-- [Codage des entiers](./T2_Representation_des_donnees/2.7_Codage_entiers/cours/)
+- [Variables](T1_Demarrer_en_Python/1.1_Variables/cours/) 
 
 
-
-
+{#
 !!! info "*Anciens thèmes traités*"
+    - [Travail sur Tkinter](T6_Mini-projets/Tkinter.md){. target="_blank"}
+    - [Analyse de données sur Capytale](https://capytale2.ac-paris.fr/web/c/1548-3575893)
+    - [Utilisation du module Pandas](./T5_Traitement_de_donnees/5.3_Pandas/cours/)
+    - [Algorithme KNN](./T4_Algorithmique/4.7_Algorithme_KNN/cours/)
+    - [Trier des données](./T5_Traitement_de_donnees/5.2_Trier_des_donnees/cours/)
+    - [Manipulation de fichiers csv](./T5_Traitement_de_donnees/5.1_Manipulation_csv/cours/)
+    - [Architecture Von Neumann](./T3_Architecture_materielle/3.2_Architecture_Von_Neumann/cours/)
+    - [Codage des non-entiers](./T2_Representation_des_donnees/2.8_Codage_non-entiers/cours/)
+    - [Codage des entiers](./T2_Representation_des_donnees/2.7_Codage_entiers/cours/)
     - [Rendu du projet Pygame sur Capytale](https://capytale2.ac-paris.fr/web/c/7b99-3309019){. target="_blank"}    
     - [Dictionnaires](./T2_Representation_des_donnees/2.3_Dictionnaires/cours/)
     - [Algorithmes gloutons](./T4_Algorithmique/4.6_Algorithmes_gloutons/cours/)
@@ -89,7 +84,7 @@ correction(False,
 
 
 
-{#
+
 ## Thèmes en cours d'étude 
 
 :arrow_right: [Découvrir les commandes Linux avec le jeu Terminus](./T3_Architecture_materielle/3.5_Decouverte_des_commandes_Linux/cours/)
