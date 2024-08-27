@@ -256,13 +256,14 @@ Cette procédure d'**incrémentation** est très très classique, il faut la ma�
     Cette syntaxe peut se ranger dans la catégorie des **sucres syntaxiques** : c'est bien de la connaître, c'est amusant de s'en servir, mais son utilisation n'est en rien obligatoire et peut avoir un effet néfaste, celui d'oublier réellement ce qu'il se passe derrière.
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        Écrire le code «classique» et le code «Pythonesque» pour l'instruction suivante :
+    Écrire le code «classique» et le code «Pythonesque» pour l'instruction suivante :
 
-        On initialise une variable ```score``` à 100 et on l'augmente de 15.
+    On initialise une variable ```score``` à 100 et on l'augmente de 15.
 
-    === "Correction"
-        
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python
         >>> score = 100
         >>> score = score + 15
@@ -271,17 +272,24 @@ Cette procédure d'**incrémentation** est très très classique, il faut la ma�
         ```python
         >>> score = 100
         >>> score += 15
-        ```
+        ```       
+    """
+    )
+    }}
+        
+
         
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        Écrire le code «classique» et le code «Pythonesque» pour l'instruction suivante :
 
-        On initialise une variable ```cellule``` à 1 et on la multiplie par 2.
+    Écrire le code «classique» et le code «Pythonesque» pour l'instruction suivante :
 
-    === "Correction"
-        
+    On initialise une variable ```cellule``` à 1 et on la multiplie par 2.
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python
         >>> cellule = 1
         >>> cellule = cellule * 2
@@ -290,17 +298,24 @@ Cette procédure d'**incrémentation** est très très classique, il faut la ma�
         ```python
         >>> cellule = 1
         >>> cellule *= 2
-        ```
+        ```        
+    """
+    )
+    }}
+        
+
         
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        Écrire le code «classique» et le code «Pythonesque» pour l'instruction suivante.
 
-        On initialise une variable ```capital``` à 1000 et on lui enlève 5%.
+    Écrire le code «classique» et le code «Pythonesque» pour l'instruction suivante.
 
-    === "Correction"
-        
+    On initialise une variable ```capital``` à 1000 et on lui enlève 5%.
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python
         >>> capital = 1000
         >>> capital = capital - capital * 5/100
@@ -309,7 +324,12 @@ Cette procédure d'**incrémentation** est très très classique, il faut la ma�
         ```python
         >>> capital = 1000
         >>> capital *= 0.95
-        ```
+        ```    
+    """
+    )
+    }}
+        
+
         
 
 
@@ -381,16 +401,18 @@ Vous pouvez vérifier maintenant que les valeurs de ```a``` et de ```b``` ont bi
     C'est de nouveau un *sucre syntaxique*. Cette syntaxe nous dispense de créer nous-même une troisième variable. Mais pas de miracle : en interne, Python crée lui-même cette variable temporaire. La simultanéité n'existe pas en informatique.
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        Une petite erreur s'est glissée à Poudlard :
-        ```python
-        >>> maison_Harry = "Serpentard"
-        >>> maison_Malfoy =  "Gryffondor"
-        ```
-        Corriger cette erreur, de deux manières différentes.
 
-    === "Correction"
-        
+    Une petite erreur s'est glissée à Poudlard :
+    ```python
+    >>> maison_Harry = "Serpentard"
+    >>> maison_Malfoy =  "Gryffondor"
+    ```
+    Corriger cette erreur, de deux manières différentes.
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python
         >>> t = maison_Harry
         >>> maison_Harry = maison_Malfoy
@@ -399,7 +421,12 @@ Vous pouvez vérifier maintenant que les valeurs de ```a``` et de ```b``` ont bi
         ou plus rapidement :
         ```python
         >>> maison_Harry, maison_Malfoy = maison_Malfoy, maison_Harry
-        ```
+        ```        
+    """
+    )
+    }}
+        
+
         
 
 
