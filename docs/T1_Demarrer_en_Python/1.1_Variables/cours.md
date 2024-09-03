@@ -3,7 +3,14 @@
 ## A. Pourquoi des variables ?
 
 ### A.1 Introduction
-Considérons la phrase *«nous allons stocker le prix du spectacle dans une variable  ```a```, qui vaudra donc au départ 32.»*
+
+
+De la même manière que dans votre chambre chaque objet a (normalement) une place attitrée, un ordinateur (dont le rôle peut se résumer à «manipuler très vite des données») va assigner à chaque objet une place particulière dans son espace-mémoire. Et il lui assignera un nom (choisi par l'utilisateur) afin de pouvoir accéder à cette valeur.
+
+Nous ne rentrerons pas dans le détail du processus d'allocation-mémoire, nous retiendrons juste ceci : pour manipuler un objet, il faut qu'il déjà qu'il ait un nom. C'est par cela que nous allons commencer :
+
+!!! info "Première variable"
+    Considérons la phrase *«nous allons stocker le prix du spectacle dans une variable  ```a```, qui vaudra au départ 32.»*
 
 Il y a plusieurs commentaires à faire sur une telle annonce :
 
@@ -344,6 +351,7 @@ Imaginons les variables suivantes :
 ```
 Le but est d'échanger les valeurs de ```a``` et de ```b```.
 
+{#
 ▸ **Méthode naïve**
 
 ```python
@@ -366,6 +374,9 @@ La variable ```a``` a été écrasée dès qu'on lui a donné la valeur de la va
 
 Comment la préserver ?
 
+#}
+
+{#
 La situation est similaire au problème suivant : comment échanger le contenu de ces deux verres ?
 
 ![image](data/verres.png){: .center width=20%}
@@ -400,6 +411,8 @@ Vous pouvez vérifier maintenant que les valeurs de ```a``` et de ```b``` ont bi
     ```
     C'est de nouveau un *sucre syntaxique*. Cette syntaxe nous dispense de créer nous-même une troisième variable. Mais pas de miracle : en interne, Python crée lui-même cette variable temporaire. La simultanéité n'existe pas en informatique.
 
+
+#}
 !!! example "{{ exercice() }}"
 
     Une petite erreur s'est glissée à Poudlard :
@@ -513,7 +526,7 @@ Pour nommer correctement une variable, il existe des règles à respecter.
 
 !!! abstract "Les règles"
     - le nom de la variable peut contenir les caractères suivants :
-        - des lettres **non accentuées** (attention, minuscule et majuscule sont des caractères différents)
+        - des lettres **non accentuées**. Attention, minuscule et majuscule sont des caractères différents. Les accents sont en fait *tolérés* mais sont à éviter.
         - des chiffres (mais pas comme premier caractère)
         - le tiret du bas _ (underscore, tiret du 8)
     

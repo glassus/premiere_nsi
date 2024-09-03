@@ -292,6 +292,9 @@ Quelles sont les règles régissant ces espaces de noms ? Les frontières entre 
         ```ligne 6``` : l'accès à la variable globale ```bonus``` est autorisé, selon la règle 2.            
 
 
+![image](data/meme_global_perche.jpeg){: .center width=50%}
+
+
 !!! danger "À propos de la règle n°3"
     _(toute la vérité, rien que la vérité)_
 
