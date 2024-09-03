@@ -739,9 +739,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-iterer-sur-une-liste" class="md-nav__link">
+  <a href="#23-lindentation" class="md-nav__link">
     <span class="md-ellipsis">
-      2.2 Itérer sur une liste
+      2.3 L'indentation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-iterer-sur-une-liste" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Itérer sur une liste
     </span>
   </a>
   
@@ -4235,29 +4244,34 @@ va donner ceci :
 </div>
 <p>Ici, il y a simplement un <code>print(k)</code>, donc chaque lettre de <code>"NSI"</code> s'affiche l'une après l'autre.</p>
 <div class="admonition example">
-<p class="admonition-title">Exercice 1</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
+<p class="admonition-title">Exercice  1</p>
 <p>Que donne le script suivant ?
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="s1">&#39;NASA&#39;</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;bonjour&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div></p>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="n">bonjour</span>
-<span class="n">bonjour</span>
-<span class="n">bonjour</span>
-<span class="n">bonjour</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-</div>
 <p>Dans cet exercice, la <strong>variable de boucle</strong> <code>m</code> est <strong>muette</strong> : elle n'apparaît dans les instructions indentées sous le <code>for</code>. </p>
 <p>La variable <code>m</code> prend successivement les valeurs <code>'N</code>, <code>'A'</code>, <code>'S'</code> et <code>'A'</code>, mais on ne le voit pas.</p>
 <p><img alt="image" class="center" src="../data/muettes.jpg" width="40%" /></p>
+<h3 id="23-lindentation">2.3 L'indentation<a class="headerlink" href="#23-lindentation" title="Permanent link">⚓︎</a></h3>
+<p>L'indentation est primordiale en Python : c'est elle qui indique les <strong>blocs de code</strong>. Dans d'autres langages, ils peuvent être délimités par des accolades <code>{</code> et <code>}</code>. </p>
+<p>Dans une boucle, tout ce qui sera indenté sous le <code>for</code> sera répété un certain nombre de fois. Puis le code continuera : on dit qu'on sera <em>sorti de la boucle</em>.</p>
+<p>Observez la différence entre l'exécution des codes suivants :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="s1">&#39;NASA&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;bonjour&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;au revoir&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>et </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="s1">&#39;NASA&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;bonjour&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;au revoir&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>et persuadez-vous de l'importance d'être vigilant sur l'indentation !</p>
 <div class="admonition warning">
 <p class="admonition-title">Comment éviter les erreurs classiques</p>
 <p>Quand vous écrivez une boucle <code class="highlight"><span class="k">for</span> <span class="o">...</span> <span class="ow">in</span> <span class="o">...</span></code>, veillez bien à :</p>
@@ -4266,7 +4280,7 @@ va donner ceci :
 <li>indenter sous le <code>for</code> les instructions qui doivent être répétées. Si l'indentation ne s'est pas faite automatiquement après appui sur la touche <code>Entrée</code>, c'est que vous avez oublié les <code>:</code>.  </li>
 </ul>
 </div>
-<h3 id="22-iterer-sur-une-liste">2.2 Itérer sur une liste<a class="headerlink" href="#22-iterer-sur-une-liste" title="Permanent link">⚓︎</a></h3>
+<h3 id="23-iterer-sur-une-liste">2.3 Itérer sur une liste<a class="headerlink" href="#23-iterer-sur-une-liste" title="Permanent link">⚓︎</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Exemple fondateur n°2 <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
 <p>Le programme suivant :
@@ -4298,7 +4312,6 @@ va donner ceci :
 </code></pre></div></td></tr></table></div></p>
 </div>
 <p>Notez l'importance d'avoir choisi des noms de variables explicites : ils aident grandement à la lisibilité du code.</p>
-<p><em>Trailer : Dans le cours spécifique sur les listes, nous verrons une toute autre manière de parcourir une liste.</em></p>
 <h2 id="3-comment-repeter-n-fois-la-meme-action">3. Comment répéter <code>n</code> fois la même action ?<a class="headerlink" href="#3-comment-repeter-n-fois-la-meme-action" title="Permanent link">⚓︎</a></h2>
 <p>Scratch dispose du (très pratique) bloc suivant :
 <img alt="image" class="center" src="../data/repeat.png" width="10%" /></p>
@@ -4405,41 +4418,13 @@ Si nécessaire, on peut le convertir en liste :
 </code></pre></div></p>
 <p>Il faut donc garder en tête que l'objet renvoyé par <code>range()</code> est un <strong>itérable</strong> assimilable à une liste de nombres.  </p>
 <div class="admonition example">
-<p class="admonition-title">Exercice 2</p>
+<p class="admonition-title">Exercice  2</p>
 <p>Faire afficher les séries de nombres suivantes.</p>
 <p>On utilisera la syntaxe <code>print(k, end = ' ')</code> ) pour afficher les nombres horizontalement.</p>
 <p>A. <code>0 1 2 3 4 5</code> </p>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
 <p>B. <code>10 11 12 13 14 15</code> </p>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">16</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
 <p>C. <code>3 6 9 12</code> </p>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">3</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
 <p>D. <code>10 9 8 7 6 5 4 3 2 1 0</code> </p>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
 </div>
 <h2 id="5-une-situation-classique-la-double-boucle">5. Une situation classique : la double boucle<a class="headerlink" href="#5-une-situation-classique-la-double-boucle" title="Permanent link">⚓︎</a></h2>
 <p>Il est très souvent utile d'imbriquer une boucle dans une autre, notamment lors du parcours de tous les pixels d'une image.
@@ -4475,10 +4460,7 @@ va donner ceci :
 <p><iframe width="800" height="300" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=for%20a%20in%20range%281,5%29%3A%0A%20%20%20%20for%20b%20in%20range%281,4%29%3A%0A%20%20%20%20%20%20%20%20p%20%3D%20a%20*%20b%0A%20%20%20%20%20%20%20%20print%28a,%20'*',%20b,%20'%3D',%20p%29%0A&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe></p>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Exercice 3</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
+<p class="admonition-title">Exercice  3</p>
 <p>Écrire un programme qui affiche :
 <div class="highlight"><pre><span></span><code><span class="n">Papa</span> <span class="n">dit</span> <span class="p">:</span> <span class="err">«</span> <span class="n">et</span> <span class="n">une</span> <span class="n">cuillère</span> <span class="n">pour</span> <span class="n">Riri</span> <span class="err">!</span> <span class="err">»</span>
 <span class="n">Papa</span> <span class="n">dit</span> <span class="p">:</span> <span class="err">«</span> <span class="n">et</span> <span class="n">une</span> <span class="n">cuillère</span> <span class="n">pour</span> <span class="n">Fifi</span> <span class="err">!</span> <span class="err">»</span>
@@ -4491,22 +4473,8 @@ va donner ceci :
 <span class="n">Mamie</span> <span class="n">dit</span> <span class="p">:</span> <span class="err">«</span> <span class="n">et</span> <span class="n">une</span> <span class="n">cuillère</span> <span class="n">pour</span> <span class="n">Loulou</span> <span class="err">!</span> <span class="err">»</span>
 </code></pre></div></p>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">parent</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Papa&quot;</span><span class="p">,</span> <span class="s2">&quot;Maman&quot;</span><span class="p">,</span> <span class="s2">&quot;Mamie&quot;</span><span class="p">]:</span>
-    <span class="k">for</span> <span class="n">enfant</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Riri&quot;</span><span class="p">,</span> <span class="s2">&quot;Fifi&quot;</span><span class="p">,</span> <span class="s2">&quot;Loulou&quot;</span><span class="p">]:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="s2">&quot;dit : « et une cuillère pour&quot;</span><span class="p">,</span> <span class="n">enfant</span><span class="p">,</span> <span class="s2">&quot;! »&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</div>
-</div>
-</div>
-</div>
 <div class="admonition example">
-<p class="admonition-title">Exercice 4</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Énoncé</label><label for="__tabbed_3_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
+<p class="admonition-title">Exercice  4</p>
 <p>Rajouter à la phrase précédente le contenu de la cuillère (purée puis compote). </p>
 <p>Exemple :
 <div class="highlight"><pre><span></span><code>Papa dit : « et une cuillère de purée pour Riri ! »
@@ -4519,19 +4487,6 @@ Maman dit : « et une cuillère de purée pour Riri ! »
 Maman dit : « et une cuillère de compote pour Riri ! »
 ...
 </code></pre></div></p>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">parent</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Papa&quot;</span><span class="p">,</span> <span class="s2">&quot;Maman&quot;</span><span class="p">,</span> <span class="s2">&quot;Mamie&quot;</span><span class="p">]:</span>
-    <span class="k">for</span> <span class="n">enfant</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Riri&quot;</span><span class="p">,</span> <span class="s2">&quot;Fifi&quot;</span><span class="p">,</span> <span class="s2">&quot;Loulou&quot;</span><span class="p">]:</span>
-        <span class="k">for</span> <span class="n">nourriture</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;purée&quot;</span><span class="p">,</span> <span class="s2">&quot;compote&quot;</span><span class="p">]:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="s2">&quot;dit : « et une cuillère de&quot;</span><span class="p">,</span> <span class="n">nourriture</span><span class="p">,</span> <span class="s2">&quot;pour&quot;</span><span class="p">,</span> <span class="n">enfant</span><span class="p">,</span> <span class="s2">&quot;! »&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</div>
-</div>
-</div>
 </div>
 <h2 id="6-pour-conclure">6. Pour conclure<a class="headerlink" href="#6-pour-conclure" title="Permanent link">⚓︎</a></h2>
 <div class="admonition done">
@@ -4571,7 +4526,7 @@ Maman dit : « et une cuillère de compote pour Riri ! »
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">9 mars 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">3 septembre 2024</span>
   </span>
 
     
