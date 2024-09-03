@@ -4,7 +4,7 @@
     - [Thonny](./T7_Divers/3_Thonny/cours/)
     - [Conseils généraux de travail](./T7_Divers/1_Conseils_generaux/cours/)
     - [Capytale](./T7_Divers/5_Capytale/cours/)
-    - [Fiche de renseignements](https://capytale2.ac-paris.fr/web/c/7cd5-1782246){. target="_blank"}
+    - [Fiche de renseignements](https://capytale2.ac-paris.fr/web/c/f59b-3818531){. target="_blank"}
 
 
 {#
