@@ -57,21 +57,30 @@ Il existe donc une instruction permettant de faire une (ou plusieurs) action(s) 
 
 Ici, il y a simplement un ```print(k)```, donc chaque lettre de ```"NSI"``` s'affiche l'une après l'autre.
 
-!!! example "Exercice 1"
-    === "Énoncé"
-        Que donne le script suivant ?
-        ```python linenums='1'
-        for m in 'NASA':
-            print("bonjour")
-        ``` 
-    === "Correction"
-        
+{{initexo(0)}}
+
+!!! example "{{ exercice() }}"
+    Que donne le script suivant ?
+    ```python linenums='1'
+    for m in 'NASA':
+        print("bonjour")
+    ``` 
+    
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python
         bonjour
         bonjour
         bonjour
         bonjour
-        ``` 
+        ```         
+    """
+    )
+    }}
+        
+
         
 
 Dans cet exercice, la **variable de boucle** ```m``` est **muette** : elle n'apparaît dans les instructions indentées sous le ```for```. 
@@ -80,6 +89,30 @@ La variable ```m``` prend successivement les valeurs ```'N```, ```'A'```, ```'S'
 
 ![image](data/muettes.jpg){: .center width=40%}
 
+
+### 2.3 L'indentation
+
+L'indentation est primordiale en Python : c'est elle qui indique les **blocs de code**. Dans d'autres langages, ils peuvent être délimités par des accolades ```{``` et ```}```. 
+
+Dans une boucle, tout ce qui sera indenté sous le ```for``` sera répété un certain nombre de fois. Puis le code continuera : on dit qu'on sera *sorti de la boucle*.
+
+Observez la différence entre l'exécution des codes suivants :
+
+```python linenums='1'
+for m in 'NASA':
+    print("bonjour")
+    print("au revoir")
+```
+
+et 
+
+```python linenums='1'
+for m in 'NASA':
+    print("bonjour")
+print("au revoir")
+```
+
+et persuadez-vous de l'importance d'être vigilant sur l'indentation !
 
 
 
@@ -90,7 +123,7 @@ La variable ```m``` prend successivement les valeurs ```'N```, ```'A'```, ```'S'
     - indenter sous le ```for``` les instructions qui doivent être répétées. Si l'indentation ne s'est pas faite automatiquement après appui sur la touche ```Entrée```, c'est que vous avez oublié les ```:```.  
 
 
-### 2.2 Itérer sur une liste
+### 2.3 Itérer sur une liste
 
 !!! note "Exemple fondateur n°2 :heart:"
     Le programme suivant :
@@ -127,8 +160,6 @@ La variable ```m``` prend successivement les valeurs ```'N```, ```'A'```, ```'S'
 Notez l'importance d'avoir choisi des noms de variables explicites : ils aident grandement à la lisibilité du code.
 
 
-
-*Trailer : Dans le cours spécifique sur les listes, nous verrons une toute autre manière de parcourir une liste.*
 
 ## 3. Comment répéter ```n``` fois la même action ?
 
@@ -256,37 +287,73 @@ Si nécessaire, on peut le convertir en liste :
 Il faut donc garder en tête que l'objet renvoyé par ```range()``` est un **itérable** assimilable à une liste de nombres.  
 
 
-
-!!! example "Exercice 2"
+!!! example "{{ exercice() }}"
+    
 
     Faire afficher les séries de nombres suivantes.
     
     On utilisera la syntaxe ```print(k, end = ' ')``` ) pour afficher les nombres horizontalement.
 
     A. ```0 1 2 3 4 5``` 
-    ??? success "Correction"
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         for k in range(6):
             print(k, end = ' ')
-        ```
+        ``` 
+    """
+    )
+    }}
+
+
     B. ```10 11 12 13 14 15 ``` 
-    ??? success "Correction"
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         for k in range(10,16):
             print(k, end = ' ')
-        ```
+        ```        
+    """
+    )
+    }}
+
     C. ```3 6 9 12 ``` 
-    ??? success "Correction"
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         for k in range(3,13,3):
             print(k, end = ' ')
         ```
+    """
+    )
+    }}
+
+
+
     D. ```10 9 8 7 6 5 4 3 2 1 0  ``` 
-    ??? success "Correction"
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         for k in range(10,-1,-1):
             print(k, end = ' ')
-        ```
+        ```        
+    """
+    )
+    }}
+
+
     
 ## 5. Une situation classique : la double boucle
 
@@ -323,55 +390,66 @@ Prenons pour l'instant un exemple numérique.
     <iframe width="800" height="300" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=for%20a%20in%20range%281,5%29%3A%0A%20%20%20%20for%20b%20in%20range%281,4%29%3A%0A%20%20%20%20%20%20%20%20p%20%3D%20a%20*%20b%0A%20%20%20%20%20%20%20%20print%28a,%20'*',%20b,%20'%3D',%20p%29%0A&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 
-!!! example "Exercice 3"
-    === "Énoncé"
-        Écrire un programme qui affiche :
-        ```python
-        Papa dit : « et une cuillère pour Riri ! »
-        Papa dit : « et une cuillère pour Fifi ! »
-        Papa dit : « et une cuillère pour Loulou ! »
-        Maman dit : « et une cuillère pour Riri ! »
-        Maman dit : « et une cuillère pour Fifi ! »
-        Maman dit : « et une cuillère pour Loulou ! »
-        Mamie dit : « et une cuillère pour Riri ! »
-        Mamie dit : « et une cuillère pour Fifi ! »
-        Mamie dit : « et une cuillère pour Loulou ! »
-        ```
-    === "Correction"
+!!! example "{{ exercice() }}"
+
+    Écrire un programme qui affiche :
+    ```python
+    Papa dit : « et une cuillère pour Riri ! »
+    Papa dit : « et une cuillère pour Fifi ! »
+    Papa dit : « et une cuillère pour Loulou ! »
+    Maman dit : « et une cuillère pour Riri ! »
+    Maman dit : « et une cuillère pour Fifi ! »
+    Maman dit : « et une cuillère pour Loulou ! »
+    Mamie dit : « et une cuillère pour Riri ! »
+    Mamie dit : « et une cuillère pour Fifi ! »
+    Mamie dit : « et une cuillère pour Loulou ! »
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        for parent in ['Papa', 'Maman', 'Mamie']:
+            for enfant in ['Riri', 'Fifi', 'Loulou']:
+                print(parent, 'dit : « et une cuillère pour', enfant, '! »')        
+    """
+    )
+    }}
+
         
+!!! example "{{ exercice() }}"
+    
+    Rajouter à la phrase précédente le contenu de la cuillère (purée puis compote). 
+    
+    Exemple :
+    ```
+    Papa dit : « et une cuillère de purée pour Riri ! »
+    Papa dit : « et une cuillère de compote pour Riri ! »
+    Papa dit : « et une cuillère de purée pour Fifi ! »
+    Papa dit : « et une cuillère de compote pour Fifi ! »
+    Papa dit : « et une cuillère de purée pour Loulou ! »
+    Papa dit : « et une cuillère de compote pour Loulou ! »
+    Maman dit : « et une cuillère de purée pour Riri ! »
+    Maman dit : « et une cuillère de compote pour Riri ! »
+    ...
+    ``` 
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
-        for parent in ["Papa", "Maman", "Mamie"]:
-            for enfant in ["Riri", "Fifi", "Loulou"]:
-                print(parent, "dit : « et une cuillère pour", enfant, "! »")
-        ```
-        
-
-!!! example "Exercice 4"
-    === "Énoncé"
-        Rajouter à la phrase précédente le contenu de la cuillère (purée puis compote). 
-        
-        Exemple :
-        ```
-        Papa dit : « et une cuillère de purée pour Riri ! »
-        Papa dit : « et une cuillère de compote pour Riri ! »
-        Papa dit : « et une cuillère de purée pour Fifi ! »
-        Papa dit : « et une cuillère de compote pour Fifi ! »
-        Papa dit : « et une cuillère de purée pour Loulou ! »
-        Papa dit : « et une cuillère de compote pour Loulou ! »
-        Maman dit : « et une cuillère de purée pour Riri ! »
-        Maman dit : « et une cuillère de compote pour Riri ! »
-        ...
-        ``` 
-
-
-    === "Correction"
+        for parent in ['Papa', 'Maman', 'Mamie']:
+            for enfant in ['Riri', 'Fifi', 'Loulou']:
+                for nourriture in ['purée', 'compote']:
+                    print(parent, 'dit : « et une cuillère de', nourriture, 'pour', enfant, '! »')
+        ```        
+    """
+    )
+    }}
           
-        ```python linenums='1'
-        for parent in ["Papa", "Maman", "Mamie"]:
-            for enfant in ["Riri", "Fifi", "Loulou"]:
-                for nourriture in ["purée", "compote"]:
-                    print(parent, "dit : « et une cuillère de", nourriture, "pour", enfant, "! »")
-        ```
+
         
 
 
