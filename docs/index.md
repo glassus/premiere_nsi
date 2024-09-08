@@ -1,4 +1,4 @@
-
+{#
 !!! abstract "Prendre un bon départ"  
     - [Utilisation des machines virtuelles](./T7_Divers/2_VM/cours/)
     - [Thonny](./T7_Divers/3_Thonny/cours/)
@@ -7,7 +7,7 @@
     - [Fiche de renseignements](https://capytale2.ac-paris.fr/web/c/f59b-3818531){. target="_blank"}
 
 
-{#
+
 !!! abstract "Actualités"
     -  [Présentation de l'algorithme de Gale-Shapley](https://glassus.github.io/terminale_nsi/T7_Divers/11_parcoursup/cours/){. target="_blank"}
 #}
@@ -37,6 +37,9 @@ correction(False,
 
 ## Thèmes en cours d'étude :
 - [Variables](T1_Demarrer_en_Python/1.1_Variables/cours/) 
+- [Boucle ```#!python for ... in ...``` ](T1_Demarrer_en_Python/1.2_Boucle_for/cours/)
+- [Exercices ```#!python for ... in ...``` ](T1_Demarrer_en_Python/1.2_Boucle_for/exercices/)
+
 
 
 {#

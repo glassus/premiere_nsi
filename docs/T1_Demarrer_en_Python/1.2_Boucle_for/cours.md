@@ -85,7 +85,7 @@ Ici, il y a simplement un ```print(k)```, donc chaque lettre de ```"NSI"``` s'af
 
 Dans cet exercice, la **variable de boucle** ```m``` est **muette** : elle n'apparaît dans les instructions indentées sous le ```for```. 
 
-La variable ```m``` prend successivement les valeurs ```'N```, ```'A'```, ```'S'``` et ```'A'```, mais on ne le voit pas.
+La variable ```m``` prend successivement les valeurs ```'N```, ```'A'```, ```'S'``` et ```'A'```, mais on ne la voit pas.
 
 ![image](data/muettes.jpg){: .center width=40%}
 
