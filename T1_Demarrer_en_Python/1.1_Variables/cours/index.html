@@ -4458,6 +4458,43 @@ ou bien
 <span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">5</span>
 </code></pre></div>
 Le but est d'échanger les valeurs de <code>a</code> et de <code>b</code>.</p>
+<p>▸ <strong>Méthode naïve</strong></p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">b</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+</code></pre></div>
+<p>Que valent <code>a</code> et <code>b</code> maintenant ?</p>
+<p>Malheureusement :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+<span class="mi">5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span>
+<span class="mi">5</span>
+<span class="o">&gt;</span>
+</code></pre></div></p>
+<p>La variable <code>a</code> a été écrasée dès qu'on lui a donné la valeur de la variable <code>b</code>.</p>
+<p>Comment la préserver ?</p>
+<p>La situation est similaire au problème suivant : comment échanger le contenu de ces deux verres ?</p>
+<p><img alt="image" class="center" src="../data/verres.png" width="20%" /></p>
+<p>La méthode est évidente : il nous faut un troisième verre.</p>
+<p>Nous allons faire de même pour nos variables. Nous allons utiliser une variable <strong>temporaire</strong> (on parle aussi de variable <strong>tampon</strong>) pour conserver la mémoire de la valeur de <code>a</code> (par exemple) avant que celle-ci ne se fasse écraser :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">a</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">b</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">temp</span>
+</code></pre></div>
+<p>Vous pouvez vérifier maintenant que les valeurs de <code>a</code> et de <code>b</code> ont bien été échangées.</p>
+<div class="admonition info">
+<p class="admonition-title">Syntaxe classique et syntaxe Pythonesque <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
+<p>L'échange de deux variables <code>a</code> et de <code>b</code> s'écrit donc :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">a</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">b</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">temp</span>
+</code></pre></div>
+Mais il existe aussi une syntaxe particulière à Python, bien plus courte :</p>
+<p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span>
+</code></pre></div>
+C'est de nouveau un <em>sucre syntaxique</em>. Cette syntaxe nous dispense de créer nous-même une troisième variable. Mais pas de miracle : en interne, Python crée lui-même cette variable temporaire. La simultanéité n'existe pas en informatique.</p>
+</div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  4</p>
 <p>Une petite erreur s'est glissée à Poudlard :
