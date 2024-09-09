@@ -351,7 +351,7 @@ Imaginons les variables suivantes :
 ```
 Le but est d'échanger les valeurs de ```a``` et de ```b```.
 
-{#
+
 ▸ **Méthode naïve**
 
 ```python
@@ -374,9 +374,9 @@ La variable ```a``` a été écrasée dès qu'on lui a donné la valeur de la va
 
 Comment la préserver ?
 
-#}
 
-{#
+
+
 La situation est similaire au problème suivant : comment échanger le contenu de ces deux verres ?
 
 ![image](data/verres.png){: .center width=20%}
@@ -412,7 +412,7 @@ Vous pouvez vérifier maintenant que les valeurs de ```a``` et de ```b``` ont bi
     C'est de nouveau un *sucre syntaxique*. Cette syntaxe nous dispense de créer nous-même une troisième variable. Mais pas de miracle : en interne, Python crée lui-même cette variable temporaire. La simultanéité n'existe pas en informatique.
 
 
-#}
+
 !!! example "{{ exercice() }}"
 
     Une petite erreur s'est glissée à Poudlard :
