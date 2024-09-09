@@ -294,7 +294,7 @@ Cette procédure d'**incrémentation** est très très classique, il faut la ma�
     On initialise une variable ```cellule``` à 1 et on la multiplie par 2.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
@@ -320,7 +320,7 @@ Cette procédure d'**incrémentation** est très très classique, il faut la ma�
     On initialise une variable ```capital``` à 1000 et on lui enlève 5%.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
