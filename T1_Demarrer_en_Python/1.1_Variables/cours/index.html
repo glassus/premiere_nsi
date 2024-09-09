@@ -4502,6 +4502,16 @@ C'est de nouveau un <em>sucre syntaxique</em>. Cette syntaxe nous dispense de cr
 <span class="o">&gt;&gt;&gt;</span> <span class="n">maison_Malfoy</span> <span class="o">=</span>  <span class="s2">&quot;Gryffondor&quot;</span>
 </code></pre></div>
 Corriger cette erreur, de deux manières différentes.</p>
+<details class="success">
+<summary>Correction</summary>
+<p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">maison_Harry</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">maison_Harry</span> <span class="o">=</span> <span class="n">maison_Malfoy</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">maison_Malfoy</span> <span class="o">=</span> <span class="n">t</span>
+</code></pre></div>
+ou plus rapidement :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">maison_Harry</span><span class="p">,</span> <span class="n">maison_Malfoy</span> <span class="o">=</span> <span class="n">maison_Malfoy</span><span class="p">,</span> <span class="n">maison_Harry</span>
+</code></pre></div></p>
+</details>
 </div>
 <h2 id="c-differents-types-de-variables">C. Différents types de variables<a class="headerlink" href="#c-differents-types-de-variables" title="Permanent link">⚓︎</a></h2>
 <p>Pour l'instant, les variables que nous avons manipulées contiennent toutes des nombres entiers.</p>
