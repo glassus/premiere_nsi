@@ -176,12 +176,12 @@
     Écrire un programme avec une variable `somme` **accumulateur** (comme à l'exercice 3) qui contiendra la valeur souhaitée en fin de programme.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
         somme = 0
-        for k in range(1, 1001):
+        for k in range(1001):
             somme += k
         print(somme)
         ```        
