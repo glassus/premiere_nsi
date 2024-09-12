@@ -92,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#macro-syntax-error" class="md-skip">
+        <a href="#exercices-sur-la-boucle-for-in" class="md-skip">
           Aller au contenu
         </a>
       
@@ -4051,11 +4051,144 @@
   
 
 
-<h1 id="macro-syntax-error"><em>Macro Syntax Error</em><a class="headerlink" href="#macro-syntax-error" title="Permanent link">⚓︎</a></h1>
-<p><em>File</em>: <code>T1_Demarrer_en_Python/1.2_Boucle_for/exercices.md</code></p>
-<p><em>Line 74 in Markdown file:</em> <strong>unexpected char '?' at 1776</strong>
-<div class="highlight"><pre><span></span><code>    ??? success \&quot;Correction\&quot; 
+<h1 id="exercices-sur-la-boucle-for-in">Exercices sur la boucle <code>for ... in</code><a class="headerlink" href="#exercices-sur-la-boucle-for-in" title="Permanent link">⚓︎</a></h1>
+<div class="admonition example">
+<p class="admonition-title">Exercice  1</p>
+<p>On donne une liste d'acteurs : 
+<div class="highlight"><pre><span></span><code><span class="n">liste_acteurs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Tahar&#39;</span><span class="p">,</span> <span class="s1">&#39;Omar&#39;</span><span class="p">,</span> <span class="s1">&#39;Guillaume&#39;</span><span class="p">,</span> <span class="s1">&#39;Swann&#39;</span><span class="p">,</span> <span class="s1">&#39;Alex&#39;</span><span class="p">,</span> <span class="s1">&#39;Roschdy&#39;</span><span class="p">]</span>
 </code></pre></div></p>
+<p>Utilisez cette liste pour produire la sortie suivante:
+<div class="highlight"><pre><span></span><code><span class="n">Tahar</span> <span class="n">a</span> <span class="n">eu</span> <span class="n">le</span> <span class="n">César</span> <span class="n">du</span> <span class="n">meilleur</span> <span class="n">acteur</span>
+<span class="n">Omar</span> <span class="n">a</span> <span class="n">eu</span> <span class="n">le</span> <span class="n">César</span> <span class="n">du</span> <span class="n">meilleur</span> <span class="n">acteur</span>
+<span class="n">Guillaume</span> <span class="n">a</span> <span class="n">eu</span> <span class="n">le</span> <span class="n">César</span> <span class="n">du</span> <span class="n">meilleur</span> <span class="n">acteur</span>
+<span class="n">Swann</span> <span class="n">a</span> <span class="n">eu</span> <span class="n">le</span> <span class="n">César</span> <span class="n">du</span> <span class="n">meilleur</span> <span class="n">acteur</span>
+<span class="n">Alex</span> <span class="n">a</span> <span class="n">eu</span> <span class="n">le</span> <span class="n">César</span> <span class="n">du</span> <span class="n">meilleur</span> <span class="n">acteur</span>
+<span class="n">Roschdy</span> <span class="n">a</span> <span class="n">eu</span> <span class="n">le</span> <span class="n">César</span> <span class="n">du</span> <span class="n">meilleur</span> <span class="n">acteur</span>
+</code></pre></div></p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">liste_acteurs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Tahar&#39;</span><span class="p">,</span> <span class="s1">&#39;Omar&#39;</span><span class="p">,</span> <span class="s1">&#39;Guillaume&#39;</span><span class="p">,</span> <span class="s1">&#39;Swann&#39;</span><span class="p">,</span> <span class="s1">&#39;Alex&#39;</span><span class="p">,</span> <span class="s1">&#39;Roschdy&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">acteur</span> <span class="ow">in</span> <span class="n">liste_acteurs</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">acteur</span><span class="p">,</span> <span class="s1">&#39;a eu le César du meilleur acteur&#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<div class="admonition info">
+<p class="admonition-title"><img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /> Concaténation de caractères <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
+<p>Il est possible de <em>coller</em> (le vrai mot est <em>concaténer</em>) deux chaînes de caractères par l'opérateur <code>+</code> :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;a&quot;</span> <span class="o">+</span> <span class="s2">&quot;b&quot;</span>
+<span class="s1">&#39;ab&#39;</span>
+</code></pre></div></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  2</p>
+<p>Dans l'extrait de code suivant:</p>
+<ul>
+<li><code>chaine</code> est une variable initialisée avec un <code>str</code> vide : <code>""</code>;</li>
+<li>on veut qu'en sortie de programme cette variable contienne la valeur <code>'bravo'</code>.</li>
+</ul>
+<p>L'idée est d'ajouter une par une les lettres à la variable <code>chaine</code>.</p>
+<p>À l'exécution, le programme doit afficher uniquement <code>bravo</code>.</p>
+<p>Compléter le code.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">chaine</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="k">for</span> <span class="o">...</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;v&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">]:</span>
+    <span class="o">...</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">chaine</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Cette variable <code>chaine</code> est appelée un <strong>accumulateur</strong>.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">chaine</span> <span class="o">=</span> 
+<span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;v&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">]:</span>
+    <span class="n">chaine</span> <span class="o">=</span> <span class="n">chaine</span> <span class="o">+</span> <span class="n">lettre</span> <span class="c1">#(1)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">chaine</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Ou bien <code>chaine += lettre</code> </li>
+</ol>
+</details>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  3</p>
+<p>En Python, la fonction <code>ord</code> renvoie le code Unicode d'un caractère et la fonction <code>chr</code> le contraire: elle renvoie le caractère correspondant à un code Unicode.</p>
+<p>Par exemple:
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<span class="mi">97</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">chr</span><span class="p">(</span><span class="mi">97</span><span class="p">)</span>
+<span class="s1">&#39;a&#39;</span>
+</code></pre></div></p>
+<p>Voici une liste contenant les codes Unicode des lettres d'un mot secret...
+À vous d'écrire un programme où en sortie, la variable <code>mot_secret</code> contiendra la chaîne de caractères de ce mot.   </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">mystere</span> <span class="o">=</span> <span class="p">[</span><span class="mi">111</span><span class="p">,</span> <span class="mi">107</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">106</span><span class="p">,</span> <span class="mi">111</span><span class="p">,</span> <span class="mi">117</span><span class="p">,</span> <span class="mi">233</span><span class="p">]</span>
+<span class="n">mot_secret</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+<span class="c1"># à vous !</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  4</p>
+<p>On souhaite calculer la somme des 1000 premiers nombres entiers naturels, c'est-à-dire:</p>
+<p><span class="arithmatex">\(1+2+3+4+5+ \dots +999+1000\)</span></p>
+<p>Écrire un programme avec une variable <code>somme</code> <strong>accumulateur</strong> (comme à l'exercice 3) qui contiendra la valeur souhaitée en fin de programme.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  5</p>
+<p>Calculer <span class="arithmatex">\(1\times 2 \times 3 \times \dots 99 \times 100\)</span>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  6</p>
+<p>Proposer un code qui écrit la <strong>table de multiplication</strong> de 7, de 8 et de 9.</p>
+<p>La sortie doit ressembler à :
+<div class="highlight"><pre><span></span><code>7*1 = 7
+
+7*2 = 14
+
+...    
+...
+
+9*9 = 81    
+</code></pre></div></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  7</p>
+<p>Sur un jeu d'échecs, les cases sont repérées par une lettre (de A jusqu'à H) et par un chiffre (de 1 jusqu'à 8).</p>
+<p>Les cases sont donc A1, A2, A3, ..., H7, H8.</p>
+<p>Proposer un code qui écrit <strong>toutes</strong> les cases possibles.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  8</p>
+<p>Travail sur <code>ipythonblocks</code> :
+<img alt="image" class="center" src="../data/blocks.png" /></p>
+<p>Exercice à faire sur Capytale : <a class="" href="https://capytale2.ac-paris.fr/web/c/8869-1863952" target="_blank">https://capytale2.ac-paris.fr/web/c/8869-1863952</a></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  9</p>
+<p>Dans ma trousse je dispose de 5 feutres de couleur :</p>
+<ul>
+<li>jaune (J)</li>
+<li>vert (V)</li>
+<li>noir (N)</li>
+<li>bleu (B)</li>
+<li>orange (O)</li>
+</ul>
+<p>Pour un exercice, je dois colorier 3 pastilles en choissant sans aucune contrainte des couleurs parmi les 5 disponibles. Je peux tout colorier en jaune (<code>JJJ</code>) ou bien colorier la 1ère en orange, la 2ème en bleu, la 3ème en vert (<code>OBV</code> )</p>
+<p>Faire afficher la totalité des combinaisons possibles.</p>
+</div>
 
 
 
