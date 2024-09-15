@@ -4306,25 +4306,7 @@ va écrire une suite infinie de <code>ok</code> et ne <strong>jamais s'arrêter<
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  1</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
 <p>Trouver le plus petit nombre entier <span class="arithmatex">\(n\)</span> tel que <span class="arithmatex">\(2^n\)</span> soit supérieur à 1 milliard.</p>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">while</span> <span class="mi">2</span><span class="o">**</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="p">:</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;trop petit&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;trouvé : &quot;</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</div>
-</div>
-</div>
 </div>
 <h2 id="4-quelques-remarques">4. Quelques remarques<a class="headerlink" href="#4-quelques-remarques" title="Permanent link">⚓︎</a></h2>
 <h3 id="41-lien-entre-while-et-for">4.1 Lien entre <code>while</code> et <code>for</code><a class="headerlink" href="#41-lien-entre-while-et-for" title="Permanent link">⚓︎</a></h3>
@@ -4333,9 +4315,6 @@ va écrire une suite infinie de <code>ok</code> et ne <strong>jamais s'arrêter<
 <p>Mais nous pourrions nous en passer : toutes les boucles <code>for</code> peuvent en fait être ré-écrites en utilisant <code>while</code>. (alors que la réciproque est fausse)</p>
 <div class="admonition example">
 <p class="admonition-title">Exercice  2</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
 <p>On considère le code ci-dessous :
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
@@ -4343,24 +4322,10 @@ va écrire une suite infinie de <code>ok</code> et ne <strong>jamais s'arrêter<
 </code></pre></div></td></tr></table></div>
 Ré-écrire ce code en utilisant une boucle <code>while</code>. </p>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;scooby-doo&quot;</span><span class="p">)</span>
-    <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span>
-</code></pre></div></td></tr></table></div>
-</div>
-</div>
-</div>
-</div>
 <h3 id="42-les-boucles-infinies-volontaires">4.2 Les boucles infinies volontaires<a class="headerlink" href="#42-les-boucles-infinies-volontaires" title="Permanent link">⚓︎</a></h3>
 <p><img alt="image" class="center" src="../data/anakin.jpg" width="40%" /></p>
 <p>La boucle infinie a été présentée comme un danger qu'il faut éviter. </p>
 <p>Pourtant, dans quelques situations, il est d'usage d'enfermer <em>volontairement</em> l'utilisateur dans une boucle infinie.</p>
-<p>C'est notamment le cas des codes Processing (ou p5) où la fonction <code>draw()</code> est une boucle infinie dont on ne sort que lorsqu'un évènement est intercepté (par exemple, le clic sur la fermeture de la fenêtre d'affichage).</p>
 <p>Observez et exécutez le code suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -4380,9 +4345,6 @@ Ré-écrire ce code en utilisant une boucle <code>while</code>. </p>
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Exercice  3</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Énoncé</label><label for="__tabbed_3_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
 <p>Proposer un code qui choisit un nombre aléatoire entre 1 et 100, puis qui propose en boucle à l'utilisateur de le deviner, tant que celui-ci n'a pas trouvé. </p>
 <p>On donnera à l'utilisateur des instructions "trop grand !" ou "trop petit !" pour le guider.</p>
 <p>Aides :</p>
@@ -4394,47 +4356,9 @@ Ré-écrire ce code en utilisant une boucle <code>while</code>. </p>
 </code></pre></div></li>
 </ul>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
-
-<span class="n">mystere</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-
-<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="n">reponse</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;quel est le nombre mystère ? &#39;</span><span class="p">))</span>
-    <span class="k">if</span> <span class="n">reponse</span> <span class="o">&gt;</span> <span class="n">mystere</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;trop grand !&#39;</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">reponse</span> <span class="o">&lt;</span> <span class="n">mystere</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;trop petit !&#39;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;bravo !&#39;</span><span class="p">)</span>
-        <span class="k">break</span>
-</code></pre></div></td></tr></table></div>
-</div>
-</div>
-</div>
-</div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  4</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Énoncé</label><label for="__tabbed_4_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
 <p>En vous basant sur l'exercice précédent, code un programme d'entraînement aux tables de multiplication de 1 à 10.</p>
-</div>
-<div class="tabbed-block"></div>
-</div>
-</div>
 </div>
 
 
@@ -4456,7 +4380,7 @@ Ré-écrire ce code en utilisant une boucle <code>while</code>. </p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">3 octobre 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">15 septembre 2024</span>
   </span>
 
     
