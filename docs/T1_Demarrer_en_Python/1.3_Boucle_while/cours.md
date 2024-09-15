@@ -123,17 +123,25 @@ Voir le piège n°1 ...
 
 {{ initexo(0) }}
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        Trouver le plus petit nombre entier $n$ tel que $2^n$ soit supérieur à 1 milliard.
-    === "Correction"
-        
+    Trouver le plus petit nombre entier $n$ tel que $2^n$ soit supérieur à 1 milliard.
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         n = 1
         while 2**n < 10**9:
             n = n + 1
-            print("trop petit")
-        print("trouvé : ",n)
-        ```
+            print('trop petit')
+        print('trouvé : ',n)
+        ```        
+    """
+    )
+    }}
+
+        
+
         
 
 
@@ -148,21 +156,29 @@ La boucle bornée ```for``` que nous avons étudiée est très pratique.
 Mais nous pourrions nous en passer : toutes les boucles ```for``` peuvent en fait être ré-écrites en utilisant ```while```. (alors que la réciproque est fausse)
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        On considère le code ci-dessous :
-        ```python linenums='1'
-        for k in range(5):
-            print("scooby-doo")
-        ``` 
-        Ré-écrire ce code en utilisant une boucle ```while```. 
-    === "Correction"
-        
+
+    On considère le code ci-dessous :
+    ```python linenums='1'
+    for k in range(5):
+        print("scooby-doo")
+    ``` 
+    Ré-écrire ce code en utilisant une boucle ```while```. 
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         k = 0
         while k < 5:
-            print("scooby-doo")
+            print('scooby-doo')
             k = k + 1
-        ```
+        ```        
+    """
+    )
+    }}
+        
+
         
 
 
@@ -176,8 +192,6 @@ Mais nous pourrions nous en passer : toutes les boucles ```for``` peuvent en fai
 La boucle infinie a été présentée comme un danger qu'il faut éviter. 
 
 Pourtant, dans quelques situations, il est d'usage d'enfermer _volontairement_ l'utilisateur dans une boucle infinie.
-
-C'est notamment le cas des codes Processing (ou p5) où la fonction ```draw()``` est une boucle infinie dont on ne sort que lorsqu'un évènement est intercepté (par exemple, le clic sur la fermeture de la fenêtre d'affichage).
 
 Observez et exécutez le code suivant :
 
@@ -194,20 +208,24 @@ print("merci, j'étais bloqué dans une boucle infinie")
 - vous avez découvert l'expression ```break``` qui comme son nom l'indique permet de casser la boucle (cela marche pour ```while``` comme pour ```for```) et donc d'en sortir. Son emploi est controversé parmi les puristes de la programmation. Nous dirons juste que c'est une instruction bien pratique.
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        Proposer un code qui choisit un nombre aléatoire entre 1 et 100, puis qui propose en boucle à l'utilisateur de le deviner, tant que celui-ci n'a pas trouvé. 
 
-        On donnera à l'utilisateur des instructions "trop grand !" ou "trop petit !" pour le guider.
+    Proposer un code qui choisit un nombre aléatoire entre 1 et 100, puis qui propose en boucle à l'utilisateur de le deviner, tant que celui-ci n'a pas trouvé. 
 
-        Aides :
+    On donnera à l'utilisateur des instructions "trop grand !" ou "trop petit !" pour le guider.
 
-        - ```int()``` permet de convertir une chaîne de caractères en nombre. 
-        - pour avoir un nombre ```a``` pseudo-aléatoire :
-        ```python
-        from random import randint
-        a = randint(1,10)
-        ```
-    === "Correction"
+    Aides :
+
+    - ```int()``` permet de convertir une chaîne de caractères en nombre. 
+    - pour avoir un nombre ```a``` pseudo-aléatoire :
+    ```python
+    from random import randint
+    a = randint(1,10)
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         from random import randint
 
@@ -222,19 +240,33 @@ print("merci, j'étais bloqué dans une boucle infinie")
             else:
                 print('bravo !')
                 break
-        ```
+        ```        
+    """
+    )
+    }}
+
     
         
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        En vous basant sur l'exercice précédent, code un programme d'entraînement aux tables de multiplication de 1 à 10.
 
-    === "Correction"
-        {{ correction(False,
-        "
+    En vous basant sur l'exercice précédent, code un programme d'entraînement aux tables de multiplication de 1 à 10.
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
+        from random import randint
 
-        ```
-        "
-        ) }}
-        
+        while True:
+            a = randint(1, 10)
+            b = randint(1, 10)
+            reponse = 0
+            while reponse != a*b:
+                question = str(a) + '*' + str(b) + ' = '
+                reponse = int(input(question))
+        ```        
+    """
+    )
+    }}
+    
