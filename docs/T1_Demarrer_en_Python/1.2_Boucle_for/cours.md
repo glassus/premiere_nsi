@@ -409,12 +409,14 @@ Prenons pour l'instant un exemple numérique.
     correction(True,
     """
     ??? success \"Correction\" 
+        ```python linenums='1'
         adultes = ['Papa', 'Maman', 'Mamie']
         enfants = ['Riri', 'Fifi', 'Loulou']
 
         for parent in adultes:
             for enfant in enfants:
-                print(parent, 'dit : « et une cuillère pour', enfant, '! »')        
+                print(parent, 'dit : « et une cuillère pour', enfant, '! »')   
+        ```     
     """
     )
     }}
