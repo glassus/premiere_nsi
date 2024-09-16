@@ -406,11 +406,14 @@ Prenons pour l'instant un exemple numérique.
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
-        for parent in ['Papa', 'Maman', 'Mamie']:
-            for enfant in ['Riri', 'Fifi', 'Loulou']:
+        adultes = ['Papa', 'Maman', 'Mamie']
+        enfants = ['Riri', 'Fifi', 'Loulou']
+
+        for parent in adultes:
+            for enfant in enfants:
                 print(parent, 'dit : « et une cuillère pour', enfant, '! »')        
     """
     )
