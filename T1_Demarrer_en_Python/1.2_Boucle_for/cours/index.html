@@ -4510,11 +4510,18 @@ va donner ceci :
 </code></pre></div></p>
 <details class="success">
 <summary>Correction</summary>
-<p>adultes = ['Papa', 'Maman', 'Mamie']
-enfants = ['Riri', 'Fifi', 'Loulou']</p>
-<p>for parent in adultes:
-    for enfant in enfants:
-        print(parent, 'dit : « et une cuillère pour', enfant, '! »')        </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">adultes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Papa&#39;</span><span class="p">,</span> <span class="s1">&#39;Maman&#39;</span><span class="p">,</span> <span class="s1">&#39;Mamie&#39;</span><span class="p">]</span>
+<span class="n">enfants</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Riri&#39;</span><span class="p">,</span> <span class="s1">&#39;Fifi&#39;</span><span class="p">,</span> <span class="s1">&#39;Loulou&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">parent</span> <span class="ow">in</span> <span class="n">adultes</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">enfant</span> <span class="ow">in</span> <span class="n">enfants</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="s1">&#39;dit : « et une cuillère pour&#39;</span><span class="p">,</span> <span class="n">enfant</span><span class="p">,</span> <span class="s1">&#39;! »&#39;</span><span class="p">)</span>   
+</code></pre></div></td></tr></table></div>
 </details>
 </div>
 <div class="admonition example">
