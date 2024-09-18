@@ -67,14 +67,29 @@ Avec donc le risque de rester infiniment bloqué à l'intérieur !
 
 La ```condition``` est un booléen, c'est-à-dire une expression que Python évaluera à ```True``` ou à ```False```.
 
-Exemple de booléens résultant d'une évaluation :
+Prenons une variable ```a``` égale à 10.
 ```python
->>> 1 < 3
-True
->>> 5 > 7
-False
 >>> a = 10
+>>> a
+10
+```
+
+Voici différents tests sur cette variable ```a```. Chacun de ces tests va donner un booléen, qui sera égal à ```True``` ou à ```False```. 
+
+La syntaxe de ces tests est à connaître par cœur.
+
+```python
 >>> a > 8
+True
+>>> a > 12
+False
+>>> a == 10
+True
+>>> a != 7
+True
+>>> a != 10
+False
+>>> a >= 10
 True
 ```
 
