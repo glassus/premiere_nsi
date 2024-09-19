@@ -197,7 +197,7 @@
     Calculer $1\times 2 \times 3 \times \dots 99 \times 100$.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -233,7 +233,7 @@
     ```
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
