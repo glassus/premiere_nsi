@@ -292,6 +292,91 @@
     Exercice à faire sur Capytale : [https://capytale2.ac-paris.fr/web/c/8869-1863952](https://capytale2.ac-paris.fr/web/c/8869-1863952){. target="_blank"}
 
 
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Ex. 1\" 
+        ```python linenums='1'
+        grid = BlockGrid(10, 10, fill=(125,234,231))
+
+        for k in range(10):
+            grid[k,2].set_colors(0,0,0)
+        grid.show()
+        ```
+    """
+    )
+    }}
+
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Ex. 2\" 
+        ```python linenums='1'
+        grid = BlockGrid(10, 10, fill=(125, 234, 231))
+
+        for col in range(0, 10, 2):
+            for lig in range(10):
+                grid[lig, col].set_colors(0, 0, 0)
+
+        grid.show()
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Ex. 3\" 
+        ```python linenums='1'
+        grid = BlockGrid(10, 10, fill=(125,234,231))
+
+        for col in range(0, 10, 2):
+            for lig in range(0, 10, 2):
+                grid[lig, col].set_colors(0, 0, 0)
+
+        for col in range(1, 10, 2):
+            for lig in range(1, 10, 2):
+                grid[lig, col].set_colors(0, 0, 0)        
+
+        grid.show()
+        ```
+
+        ou bien (plus difficile):
+
+        ```python linenums='1'
+        grid = BlockGrid(10, 10, fill=(125,234,231))
+
+        for x in range(10):
+            for y in range(10):
+                if (x + y) % 2 == 1: #on teste si la somme abscisse + ordonnée est impaire
+                    grid[x, y].set_colors(0, 0, 0)     
+
+        grid.show()
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Ex. 4\" 
+        ```python linenums='1'
+        grid = BlockGrid(10, 10, fill=(125,234,231))
+
+        for y in range(10):
+            for x in range(y, 10):
+                grid[x, y].set_colors(0, 0, 0)     
+        grid.show()
+        ```    
+    """
+    )
+    }}
+
+
+
 !!! example "{{ exercice() }}"
     
     Dans ma trousse je dispose de 5 feutres de couleur :
