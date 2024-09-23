@@ -326,7 +326,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Ex. 3\" 
         ```python linenums='1'
