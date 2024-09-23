@@ -4366,6 +4366,19 @@
 </ul>
 <p>Pour un exercice, je dois colorier 3 pastilles en choissant sans aucune contrainte des couleurs parmi les 5 disponibles. Je peux tout colorier en jaune (<code>JJJ</code>) ou bien colorier la 1ère en orange, la 2ème en bleu, la 3ème en vert (<code>OBV</code> )</p>
 <p>Faire afficher la totalité des combinaisons possibles.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">couleurs</span> <span class="o">=</span> <span class="s1">&#39;JVNBO&#39;</span>
+<span class="k">for</span> <span class="n">c1</span> <span class="ow">in</span> <span class="n">couleurs</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">c2</span> <span class="ow">in</span> <span class="n">couleurs</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">c3</span> <span class="ow">in</span> <span class="n">couleurs</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">c1</span> <span class="o">+</span> <span class="n">c2</span> <span class="o">+</span> <span class="n">c3</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 
 
