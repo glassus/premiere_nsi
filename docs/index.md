@@ -29,10 +29,7 @@ correction(False,
 
 
 
-
-- [DS01](data/DS01_for.pdf)
-- [correction](data/DS01_for_corr.pdf)
-
+[Compute it - Toxicode](https://compute-it.toxicode.fr/){. target="_blank"}
 
 
 
