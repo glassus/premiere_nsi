@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.36">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.38">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.06209087.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8c3ca2c6.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -4339,6 +4339,17 @@ va écrire une suite infinie de <code>ok</code> et ne <strong>jamais s'arrêter<
 <div class="admonition example">
 <p class="admonition-title">Exercice  1</p>
 <p>Trouver le plus petit nombre entier <span class="arithmatex">\(n\)</span> tel que <span class="arithmatex">\(2^n\)</span> soit supérieur à 1 milliard.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="mi">2</span><span class="o">**</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="p">:</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;trouvé : &#39;</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <h2 id="4-quelques-remarques">4. Quelques remarques<a class="headerlink" href="#4-quelques-remarques" title="Permanent link">⚓︎</a></h2>
 <h3 id="41-lien-entre-while-et-for">4.1 Lien entre <code>while</code> et <code>for</code><a class="headerlink" href="#41-lien-entre-while-et-for" title="Permanent link">⚓︎</a></h3>
@@ -4364,9 +4375,9 @@ Ré-écrire ce code en utilisant une boucle <code>while</code>. </p>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">reponse</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;tapez sur la lettre S du clavier pour me sortir de cet enfer : &quot;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">reponse</span> <span class="o">==</span> <span class="s1">&#39;S&#39;</span> <span class="ow">or</span> <span class="n">reponse</span> <span class="o">==</span> <span class="s1">&#39;s&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">reponse</span> <span class="o">==</span> <span class="s1">&#39;s&#39;</span><span class="p">:</span>
         <span class="k">break</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;merci, j&#39;étais bloqué dans une boucle infinie&quot;</span><span class="p">)</span>
@@ -4377,20 +4388,7 @@ Ré-écrire ce code en utilisant une boucle <code>while</code>. </p>
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Exercice  3</p>
-<p>Proposer un code qui choisit un nombre aléatoire entre 1 et 100, puis qui propose en boucle à l'utilisateur de le deviner, tant que celui-ci n'a pas trouvé. </p>
-<p>On donnera à l'utilisateur des instructions "trop grand !" ou "trop petit !" pour le guider.</p>
-<p>Aides :</p>
-<ul>
-<li><code>int()</code> permet de convertir une chaîne de caractères en nombre. </li>
-<li>pour avoir un nombre <code>a</code> pseudo-aléatoire :
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
-</code></pre></div></li>
-</ul>
-</div>
-<div class="admonition example">
-<p class="admonition-title">Exercice  4</p>
-<p>En vous basant sur l'exercice précédent, code un programme d'entraînement aux tables de multiplication de 1 à 10.</p>
+<p>Reprendre l'exemple précédent en faisant deviner un mot de passe (préalablement stocké dans une variable).</p>
 </div>
 
 
@@ -4412,7 +4410,7 @@ Ré-écrire ce code en utilisant une boucle <code>while</code>. </p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">18 septembre 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">26 septembre 2024</span>
   </span>
 
     
@@ -4496,7 +4494,7 @@ Ré-écrire ce code en utilisant une boucle <code>while</code>. </p>
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d6f25eb3.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       
