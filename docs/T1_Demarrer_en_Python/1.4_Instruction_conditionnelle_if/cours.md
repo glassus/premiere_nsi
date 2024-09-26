@@ -114,18 +114,20 @@ True
 ```
 
 !!! example "Exercice"
-    === "Énoncé"
-        Compter le nombre de voyelles de la phrase ```'cet exercice est prodigieusement ennuyeux'``` 
 
-        ```python linenums='1'
-        phrase = 'cet exercice est prodigieusement ennuyeux'
-        voyelles = 'aeiouy'
+    Compter le nombre de voyelles de la phrase ```'cet exercice est prodigieusement ennuyeux'``` 
+
+    ```python linenums='1'
+    phrase = 'cet exercice est prodigieusement ennuyeux'
+    voyelles = 'aeiouy'
 
 
-        ```
-    === "Correction"
-        {{ correction(True,
-        "
+    ```
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         phrase = 'cet exercice est prodigieusement ennuyeux'
         voyelles = 'aeiouy'
@@ -137,9 +139,11 @@ True
                 compteur += 1
                 
         print(compteur)
-        ```
-        "
-        ) }}
+        ```        
+    """
+    )
+    }}
+
 
 
 ## 3. Un test très fréquent : le test de divisibilité
@@ -158,18 +162,21 @@ True
 
 
 !!! example "Exercice"
-    === "Énoncé"
-        Afficher la liste de tous les nombres entre 1 et 100 qui sont divisibles à la fois par 2 et par 7. 
-    === "Correction"
-        {{ correction(True,
-        "
+
+    Afficher la liste de tous les nombres entre 1 et 100 qui sont divisibles à la fois par 2 et par 7. 
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         for n in range(1,101):
             if n % 2 == 0 and n % 7 == 0:
                 print(n)
-        ```
-        "
-        ) }}
+        ```        
+    """
+    )
+    }}
 
 
 

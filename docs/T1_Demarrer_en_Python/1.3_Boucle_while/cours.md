@@ -141,14 +141,13 @@ Voir le piège n°1 ...
     Trouver le plus petit nombre entier $n$ tel que $2^n$ soit supérieur à 1 milliard.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
         n = 1
         while 2**n < 10**9:
             n = n + 1
-            print('trop petit')
         print('trouvé : ',n)
         ```        
     """
@@ -211,9 +210,9 @@ Pourtant, dans quelques situations, il est d'usage d'enfermer _volontairement_ l
 Observez et exécutez le code suivant :
 
 ```python linenums='1'
-while True :
+while True:
     reponse = input("tapez sur la lettre S du clavier pour me sortir de cet enfer : ")
-    if reponse == 'S' or reponse == 's':
+    if reponse == 's':
         break
 
 print("merci, j'étais bloqué dans une boucle infinie")
@@ -222,6 +221,28 @@ print("merci, j'étais bloqué dans une boucle infinie")
 - le début du code : ```while True``` est typique des boucles infinies volontaires. On aurait tout aussi bien pu écrire ```while 3 > 2``` (on rencontre même parfois des ```while 1```)
 - vous avez découvert l'expression ```break``` qui comme son nom l'indique permet de casser la boucle (cela marche pour ```while``` comme pour ```for```) et donc d'en sortir. Son emploi est controversé parmi les puristes de la programmation. Nous dirons juste que c'est une instruction bien pratique.
 
+
+!!! example "{{ exercice() }}"
+    Reprendre l'exemple précédent en faisant deviner un mot de passe (préalablement stocké dans une variable).
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ```python linenums='1'
+        mdp = 'supermotdepasse'
+
+        while True:
+            rep = input('mot de passe ?')
+            if rep == mdp:
+                break
+        print('accès autorisé')
+        ```
+    """
+    )
+    }}
+
+{#
 !!! example "{{ exercice() }}"
 
     Proposer un code qui choisit un nombre aléatoire entre 1 et 100, puis qui propose en boucle à l'utilisateur de le deviner, tant que celui-ci n'a pas trouvé. 
@@ -231,7 +252,7 @@ print("merci, j'étais bloqué dans une boucle infinie")
     Aides :
 
     - ```int()``` permet de convertir une chaîne de caractères en nombre. 
-    - pour avoir un nombre ```a``` pseudo-aléatoire :
+    - pour avoir un nombre ```a``` pseudo-aléatoire entre 1 et 10 :
     ```python
     from random import randint
     a = randint(1,10)
@@ -285,3 +306,4 @@ print("merci, j'étais bloqué dans une boucle infinie")
     )
     }}
     
+#}
