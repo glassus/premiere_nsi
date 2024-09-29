@@ -28,9 +28,8 @@ correction(False,
 }}
 
 
-
-[Compute it - Toxicode](https://compute-it.toxicode.fr/){. target="_blank"}
-
+- [DS02](data/DS02_for_while.pdf){. target="_blank"}
+- [DS02 correction](data/DS02_for_while_corr.pdf){. target="_blank"}
 
 
 ## Thèmes en cours d'étude :

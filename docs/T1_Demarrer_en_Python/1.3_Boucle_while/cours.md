@@ -243,6 +243,21 @@ print("merci, j'étais bloqué dans une boucle infinie")
     }}
 
 {#
+
+code avec haslib :
+
+import hashlib
+hsh = '696cebb8f23e45f3c3d8e6582bc1a8182abc0119ed3dd89b7de069a9ea8957ab'
+
+while True:
+    rep = input("mot de passe ")
+    if hashlib.sha256(rep.encode("utf-8")).hexdigest() == hsh:
+        break
+print("accès autorisé")
+
+mdp : supermdp
+
+
 !!! example "{{ exercice() }}"
 
     Proposer un code qui choisit un nombre aléatoire entre 1 et 100, puis qui propose en boucle à l'utilisateur de le deviner, tant que celui-ci n'a pas trouvé. 
