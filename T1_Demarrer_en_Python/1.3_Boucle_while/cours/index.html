@@ -92,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#macro-syntax-error" class="md-skip">
+        <a href="#13-boucle-while" class="md-skip">
           Aller au contenu
         </a>
       
@@ -764,6 +764,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Cours
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -773,6 +784,133 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-premiers-exemples" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Premiers exemples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-syntaxe-generale" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Syntaxe générale
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Syntaxe générale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-la-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 La condition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-les-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Les instructions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-les-pieges" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Les pièges ...
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Les pièges ...">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-piege-n1-ne-jamais-sortir-de-la-boucle" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 piège n°1 : ne JAMAIS SORTIR de la boucle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-piege-n2-ne-jamais-entrer-dans-la-boucle" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 piège n°2 : ne JAMAIS ENTRER dans la boucle
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-quelques-remarques" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Quelques remarques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Quelques remarques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-lien-entre-while-et-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Lien entre while et for
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-les-boucles-infinies-volontaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Les boucles infinies volontaires
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4072,11 +4210,197 @@
   
 
 
-<h1 id="macro-syntax-error"><em>Macro Syntax Error</em><a class="headerlink" href="#macro-syntax-error" title="Permanent link">⚓︎</a></h1>
-<p><em>File</em>: <code>T1_Demarrer_en_Python/1.3_Boucle_while/cours.md</code></p>
-<p><em>Line 249 in Markdown file:</em> <strong>expected token ',', got 'mot'</strong>
-<div class="highlight"><pre><span></span><code>            rep = input(&quot;mot de passe &quot;)
+<h1 id="13-boucle-while">1.3 Boucle While<a class="headerlink" href="#13-boucle-while" title="Permanent link">⚓︎</a></h1>
+<h2 id="1-premiers-exemples">1. Premiers exemples<a class="headerlink" href="#1-premiers-exemples" title="Permanent link">⚓︎</a></h2>
+<p>À la différence essentielle des boucles <code>for</code>, dont on peut savoir à l'avance combien de fois elles vont être exécutées, les boucles <code>while</code> sont des boucles dont on ne sort que lorsqu'une condition n'est plus satisfaite. </p>
+<p>Avec donc le risque de rester infiniment bloqué à l'intérieur !  </p>
+<p><img alt="image" class="center" src="../data/danger.jpg" width="40%" /></p>
+<div class="admonition note">
+<p class="admonition-title">Exemple fondateur n°1 <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
+<p>Le programme suivant :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ok&quot;</span><span class="p">)</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;fini&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+va donner ceci :
+<div class="highlight"><pre><span></span><code><span class="n">ok</span>
+<span class="n">ok</span>
+<span class="n">ok</span>
+<span class="n">fini</span>
 </code></pre></div></p>
+</div>
+<div class="admonition aide">
+<p class="admonition-title">Analyse grâce à PythonTutor</p>
+<p><iframe width="800" height="300" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=a%20%3D%200%0Awhile%20a%20%3C%203%3A%0A%20%20%20%20print%28%22ok%22%29%0A%20%20%20%20a%20%3D%20a%20%2B%201%0Aprint%28%22fini%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe></p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>le code ci-dessous va-t-il donner un résultat différent ?
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ok&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;fini&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+</div>
+<details class="info">
+<summary>Résultat du programme ⏬</summary>
+<div class="highlight"><pre><span></span><code><span class="n">ok</span>
+<span class="n">ok</span>
+<span class="n">ok</span>
+<span class="n">fini</span>
+</code></pre></div>
+</details>
+<p><strong>Conclusion</strong> : l'évaluation de la condition ne se fait pas à chaque ligne mais bien au début de chaque tour de boucle. Si la variable qui déclenchera la sortie de boucle atteint sa valeur de sortie au milieu des instructions, les lignes restantes sont quand même exécutées.</p>
+<h2 id="2-syntaxe-generale">2. Syntaxe générale<a class="headerlink" href="#2-syntaxe-generale" title="Permanent link">⚓︎</a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">Écriture d'une boucle <code>while</code></p>
+<div class="highlight"><pre><span></span><code><span class="k">while</span> <span class="n">condition</span><span class="p">:</span>
+    <span class="n">instruction1</span>
+    <span class="n">instruction2</span>
+        <span class="o">...</span>
+    <span class="n">instructionN</span>
+</code></pre></div>
+</div>
+<h3 id="21-la-condition">2.1 La condition<a class="headerlink" href="#21-la-condition" title="Permanent link">⚓︎</a></h3>
+<p>La <code>condition</code> est un booléen, c'est-à-dire une expression que Python évaluera à <code>True</code> ou à <code>False</code>.</p>
+<p>Prenons une variable <code>a</code> égale à 10.
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+<span class="mi">10</span>
+</code></pre></div></p>
+<p>Voici différents tests sur cette variable <code>a</code>. Chacun de ces tests va donner un booléen, qui sera égal à <code>True</code> ou à <code>False</code>. </p>
+<p>La syntaxe de ces tests est à connaître par cœur.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">8</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">12</span>
+<span class="kc">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">10</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">7</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">10</span>
+<span class="kc">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">&gt;=</span> <span class="mi">10</span>
+<span class="kc">True</span>
+</code></pre></div>
+<p>Un cours sur les booléens aura lieu <a href="../../../T2_Representation_des_donnees/2.5_Booleens/cours/">ici</a>.</p>
+<h3 id="22-les-instructions">2.2 Les instructions<a class="headerlink" href="#22-les-instructions" title="Permanent link">⚓︎</a></h3>
+<p>Les instructions <code>instruction1</code> jusqu'à <code>instructionN</code> sont exécutées dans cet ordre à chaque tour de boucle. </p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> <strong>Attention :</strong> ces instructions doivent obligatoirement avoir un impact sur la <code>condition</code> évaluée après le <code>while</code>(dans le cours sur la <a href="../../../T4_Algorithmique/4.5_Dichotomie/cours/">dichotomie</a>, nous évoquerons la notion de <em>variant de boucle</em>).</p>
+<p>Voir le piège n°1 ...</p>
+<h2 id="3-les-pieges">3. Les pièges ...<a class="headerlink" href="#3-les-pieges" title="Permanent link">⚓︎</a></h2>
+<h3 id="31-piege-n1-ne-jamais-sortir-de-la-boucle">3.1 piège n°1 : ne JAMAIS SORTIR de la boucle<a class="headerlink" href="#31-piege-n1-ne-jamais-sortir-de-la-boucle" title="Permanent link">⚓︎</a></h3>
+<div class="admonition bug">
+<p class="admonition-title">Exemple fondateur n°2 <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
+<p>Le programme suivant :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ok&quot;</span><span class="p">)</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="mi">0</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ce texte ne s&#39;écrira jamais&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+va écrire une suite infinie de <code>ok</code> et ne <strong>jamais s'arrêter</strong></p>
+</div>
+<h3 id="32-piege-n2-ne-jamais-entrer-dans-la-boucle">3.2 piège n°2 : ne JAMAIS ENTRER dans la boucle<a class="headerlink" href="#32-piege-n2-ne-jamais-entrer-dans-la-boucle" title="Permanent link">⚓︎</a></h3>
+<div class="admonition bug">
+<p class="admonition-title">Exemple fondateur n°3 <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
+<p>Le programme suivant :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ce texte non plus ne s&#39;écrira jamais&quot;</span><span class="p">)</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;fini&quot;</span><span class="p">)</span> 
+</code></pre></div></td></tr></table></div></p>
+<p>va écrire <code>fini</code> et s'arrêter.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  1</p>
+<p>Trouver le plus petit nombre entier <span class="arithmatex">\(n\)</span> tel que <span class="arithmatex">\(2^n\)</span> soit supérieur à 1 milliard.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="mi">2</span><span class="o">**</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="p">:</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;trouvé : &#39;</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<h2 id="4-quelques-remarques">4. Quelques remarques<a class="headerlink" href="#4-quelques-remarques" title="Permanent link">⚓︎</a></h2>
+<h3 id="41-lien-entre-while-et-for">4.1 Lien entre <code>while</code> et <code>for</code><a class="headerlink" href="#41-lien-entre-while-et-for" title="Permanent link">⚓︎</a></h3>
+<p><img alt="image" class="center" src="../data/scooby.png" width="40%" /></p>
+<p>La boucle bornée <code>for</code> que nous avons étudiée est très pratique.</p>
+<p>Mais nous pourrions nous en passer : toutes les boucles <code>for</code> peuvent en fait être ré-écrites en utilisant <code>while</code>. (alors que la réciproque est fausse)</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice  2</p>
+<p>On considère le code ci-dessous :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;scooby-doo&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+Ré-écrire ce code en utilisant une boucle <code>while</code>. </p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;scooby-doo&#39;</span><span class="p">)</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<h3 id="42-les-boucles-infinies-volontaires">4.2 Les boucles infinies volontaires<a class="headerlink" href="#42-les-boucles-infinies-volontaires" title="Permanent link">⚓︎</a></h3>
+<p><img alt="image" class="center" src="../data/anakin.jpg" width="40%" /></p>
+<p>La boucle infinie a été présentée comme un danger qu'il faut éviter. </p>
+<p>Pourtant, dans quelques situations, il est d'usage d'enfermer <em>volontairement</em> l'utilisateur dans une boucle infinie.</p>
+<p>Observez et exécutez le code suivant :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">reponse</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;tapez sur la lettre S du clavier pour me sortir de cet enfer : &quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">reponse</span> <span class="o">==</span> <span class="s1">&#39;s&#39;</span><span class="p">:</span>
+        <span class="k">break</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;merci, j&#39;étais bloqué dans une boucle infinie&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>le début du code : <code>while True</code> est typique des boucles infinies volontaires. On aurait tout aussi bien pu écrire <code>while 3 &gt; 2</code> (on rencontre même parfois des <code>while 1</code>)</li>
+<li>vous avez découvert l'expression <code>break</code> qui comme son nom l'indique permet de casser la boucle (cela marche pour <code>while</code> comme pour <code>for</code>) et donc d'en sortir. Son emploi est controversé parmi les puristes de la programmation. Nous dirons juste que c'est une instruction bien pratique.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Exercice  3</p>
+<p>Reprendre l'exemple précédent en faisant deviner un mot de passe (préalablement stocké dans une variable).</p>
+</div>
 
 
 
