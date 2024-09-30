@@ -4400,6 +4400,40 @@ Ré-écrire ce code en utilisant une boucle <code>while</code>. </p>
 <div class="admonition example">
 <p class="admonition-title">Exercice  3</p>
 <p>Reprendre l'exemple précédent en faisant deviner un mot de passe (préalablement stocké dans une variable).</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">mdp</span> <span class="o">=</span> <span class="s1">&#39;supermotdepasse&#39;</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">rep</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;mot de passe ?&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">rep</span> <span class="o">==</span> <span class="n">mdp</span><span class="p">:</span>
+        <span class="k">break</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;accès autorisé&#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>mieux :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">hashlib</span>
+<span class="n">hsh</span> <span class="o">=</span> <span class="s1">&#39;696cebb8f23e45f3c3d8e6582bc1a8182abc0119ed3dd89b7de069a9ea8957ab&#39;</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">rep</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;mot de passe &quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">rep</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span> <span class="o">==</span> <span class="n">hsh</span><span class="p">:</span>
+        <span class="k">break</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;accès autorisé&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 
 
