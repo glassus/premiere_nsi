@@ -81,7 +81,7 @@
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Il va afficher 4.
@@ -98,7 +98,7 @@
     On rappelle qu'une augmentation de 4 % correspond à une multiplication par 1,04.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
