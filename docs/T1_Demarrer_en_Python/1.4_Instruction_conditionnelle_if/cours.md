@@ -2,7 +2,7 @@
 
 ![image](data/if_else_meme.jpeg){: .center width=50%}
 
-
+{{initexo(0)}}
 
 L'instruction conditionnelle `if` permet de soumettre l'exécution d'instructions à une condition donnée.
 Cette condition sera une expression booléenne, comme pour la boucle `while`.
@@ -113,7 +113,8 @@ True
 True
 ```
 
-!!! example "Exercice"
+!!! example "{{ exercice() }}"
+    
 
     Compter le nombre de voyelles de la phrase ```'cet exercice est prodigieusement ennuyeux'``` 
 
@@ -161,12 +162,12 @@ True
     ```     
 
 
-!!! example "Exercice"
+!!! example "{{ exercice() }}"
 
     Afficher la liste de tous les nombres entre 1 et 100 qui sont divisibles à la fois par 2 et par 7. 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
