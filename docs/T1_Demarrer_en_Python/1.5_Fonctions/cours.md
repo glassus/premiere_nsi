@@ -441,29 +441,41 @@ AssertionError
 Il faut vérifier que les tests couvrent toutes les situations possibles, mais ce n'est pas toujours facile !
 
 !!! example "Exercice"
-    === "Énoncé"
-        On considère (à nouveau !) le jeu du FizzBuzz. 
-     
-        *Rappel des règles*
+    On considère (à nouveau !) le jeu du FizzBuzz. 
+    
+    *Rappel des règles*
 
-        - si le nombre est divisible par 3, on ne le dit pas et on le remplace par Fizz.
-        - si le nombre est divisible par 5, on ne le dit pas et on le remplace par Buzz.
-        - si le nombre est divisible par 3 et par 5, on ne le dit pas et on le remplace par FizzBuzz.
+    - si le nombre est divisible par 3, on ne le dit pas et on le remplace par Fizz.
+    - si le nombre est divisible par 5, on ne le dit pas et on le remplace par Buzz.
+    - si le nombre est divisible par 3 et par 5, on ne le dit pas et on le remplace par FizzBuzz.
 
-        On souhaite écrire la fonction ```fizzbuzz(n)``` qui renverra soit le nombre ```n```, soit le mot par lequel il faut le remplacer.
-        
-        1. Écrire la fonction ```test_fizzbuzz()``` qui testera la fonction ```fizzbuzz(n)```.
-        2. Écrire la fonction ```fizzbuzz(n)```.
+    On souhaite écrire la fonction ```fizzbuzz``` qui renverra soit le nombre ```n``` (passé en paramètre), soit le mot par lequel il faut le remplacer.
+    
+    **Q1.** Écrire la fonction ```test_fizzbuzz``` qui testera la fonction ```fizzbuzz```.
 
-    === "Correction"
-        {{ correction(True,
-        "
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         def test_fizzbuzz():
             assert fizzbuzz(6) == 'fizz'
             assert fizzbuzz(10) == 'buzz'
             assert fizzbuzz(15) == 'fizzbuzz'
-            print('tests ok !')
+            print('tests ok !')        
+        ```
+    """
+    )
+    }}
+
+    **Q2.** Écrire la fonction ```fizzbuzz```.
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ```python linenums='1'
+
             
         def fizzbuzz(n):
             if n % 3 == 0 and n % 5 == 0:
@@ -474,8 +486,8 @@ Il faut vérifier que les tests couvrent toutes les situations possibles, mais c
                 return 'buzz'
             else:
                 return n
-                
-        ```
+                    
+    """
+    )
+    }}
 
-        "
-        ) }}

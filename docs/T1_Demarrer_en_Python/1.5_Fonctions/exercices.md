@@ -23,64 +23,74 @@
             print("tests ok")
         ```
 
-    === "Correction"
-        {{ correction(True,
-        "
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         def maxi(n1, n2):
             if n1 < n2 :
                 return n2
             else :
                 return n1
-        ```
-        "
-        ) }}
+        ```        
+    """
+    )
+    }}
+
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        Écrire une fonction ```moyenne``` qui prend en paramètre trois nombres ```a```, ```b``` et ```c```   et qui renvoie la moyenne de ces trois nombres.
-    
-        *Exemple d'utilisation*
 
-        ```python
-        >>> moyenne(6, 15, 9)
-        10
-        ```
-    === "Correction"
-        {{ correction(True,
-        "
+    Écrire une fonction ```moyenne``` qui prend en paramètre trois nombres ```a```, ```b``` et ```c```   et qui renvoie la moyenne de ces trois nombres.
+
+    *Exemple d'utilisation*
+
+    ```python
+    >>> moyenne(6, 15, 9)
+    10
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         def moyenne(a, b, c):
             return (a + b + c) / 3 
-        ```
-        "
-        ) }}
+        ```        
+    """
+    )
+    }}
+
 
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        Écrire une fonction ```somme``` qui prend en paramètre un entier positif ```n``` et qui renvoie la somme de tous les entier de 1 à ```n```.
-        
-        $S = 1+2+3+4+5+ \dots +(n-1) + n$
 
-        *Exemple d'utilisation*
+    Écrire une fonction ```somme``` qui prend en paramètre un entier positif ```n``` et qui renvoie la somme de tous les entier de 1 à ```n```.
+    
+    $S = 1+2+3+4+5+ \dots +(n-1) + n$
 
-        ```python
-        >>> somme(10)
-        55
-        ```
-    === "Correction"
-        {{ correction(True,
-        "
+    *Exemple d'utilisation*
+
+    ```python
+    >>> somme(10)
+    55
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         def somme(n):
             s = 0
             for k in range(1, n+1):
                 s += k
             return s
-        ```
-        "
-        ) }}
+        ```        
+    """
+    )
+    }}
 
 
 !!! example "{{ exercice() }}"
@@ -105,9 +115,10 @@
             print("tests ok")
         ```
 
-    === "Correction"
-        {{ correction(True,
-        "
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         def nb_voyelles(mot):
             voyelles = 'aeiouy'
@@ -116,9 +127,10 @@
                 if lettre in voyelles:
                     nb += 1
             return nb
-        ```
-        "
-        ) }}
+        ```        
+    """
+    )
+    }}
 
 
 
@@ -127,7 +139,7 @@
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
-        Définissez une **fonction** `decale(lettre)` qui décale de 3 rangs dans l'alphabet la lettre majuscule `lettre` passée en argument (après Z, on recommencera à A..)
+        Définissez une **fonction** `decale` qui décale de 3 rangs dans l'alphabet la lettre majuscule `lettre` passée en paramètre (après Z, on recommencera à A..)
 
         *Aide* 
         ```python
@@ -154,9 +166,10 @@
         ```
 
 
-    === "Correction"
-        {{ correction(True,
-        "
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         def decale(lettre):
             rang_lettre = ord(lettre)
@@ -176,9 +189,11 @@
             nouvelle_lettre = chr(rang_nouvelle_lettre)
             
             return nouvelle_lettre
-        ```
-        "
-        ) }}
+        ```        
+    """
+    )
+    }}
+
 
 
 !!! example "{{ exercice() }}"
@@ -203,11 +218,10 @@
         ```
 
 
-
-
-    === "Correction"
-        {{ correction(True,
-        "
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         def decale(lettre, n):
             rang_lettre = ord(lettre)
@@ -218,26 +232,27 @@
 
             return nouvelle_lettre
 
-        ```
-        "
-        ) }}
-
+        ```        
+    """
+    )
+    }}
 
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        Utilisez la fonction précédente pour créer la fonction `decale_phrase(p, n)` qui décale toutes les lettres d'une phrase `p` de `n` rangs. On laissera les espaces intacts.
 
-        *Exemple d'utilisation*
+    Utilisez la fonction précédente pour créer la fonction `decale_phrase` qui prend en paramètres une phrase ```p``` et un nombre ```n``` et qui décale toutes les lettres de `p` de `n` rangs. On laissera les espaces intacts.
 
-        ```python
-        >>> decale_phrase("PAS MAL DU TOUT", 4)
-        'TEW QEP HY XSYX'
-        ```
+    *Exemple d'utilisation*
 
-    === "Correction"
-        {{ correction(True,
-        "
+    ```python
+    >>> decale_phrase("PAS MAL DU TOUT", 4)
+    'TEW QEP HY XSYX'
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         def decale_phrase(p, n):
             phrase_decalee = ''
@@ -248,19 +263,20 @@
                     nouvelle_lettre = decale(lettre, n)
                     phrase_decalee += nouvelle_lettre
             return phrase_decalee
-        ```
-        "
-        ) }}
-
+        ```        
+    """
+    )
+    }}
 
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        Décodez la phrase `RT BTHHPVT CT RDCIXTCI GXTC S XCITGTHHPCI`.
 
-    === "Correction"
-        {{ correction(True,
-        "
+    Décodez la phrase `RT BTHHPVT CT RDCIXTCI GXTC S XCITGTHHPCI`.
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         def decale(lettre, n):
             rang_lettre = ord(lettre)
@@ -307,64 +323,80 @@
         decrypt2(msg)
 
 
-        ```
-        "
-        ) }}
-
+        ```        
+    """
+    )
+    }}
 
 
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        La [conjecture de Syracuse](https://fr.wikipedia.org/wiki/Conjecture_de_Syracuse) (ou de Collatz) postule ceci :  
 
-        *Prenons un nombre $n$ : si $n$ est pair, on le divise par 2, sinon on le multiplie par 3 puis on ajoute 1. On recommence cette opération tant que possible. Au bout d'un certain temps, on finira toujours par tomber sur le nombre 1.*
+    La [conjecture de Syracuse](https://fr.wikipedia.org/wiki/Conjecture_de_Syracuse) (ou de Collatz) postule ceci :  
 
-        1. Écrire une fonction ```suivant(n)``` qui renvoie le successeur du nombre ```n```, suivant les règles énoncées ci-dessus.
-        2. Écrire une fonction ```syracuse(n)``` qui affiche tous les termes de la suite de Syracuse jusqu'à (on l'espère !) 1.  
+    *Prenons un nombre $n$ : si $n$ est pair, on le divise par 2, sinon on le multiplie par 3 puis on ajoute 1. On recommence cette opération tant que possible. Au bout d'un certain temps, on finira toujours par tomber sur le nombre 1.*
 
-    === "Correction"
-        {{ correction(True,
-        "
-        1.
+    **Q1.** Écrire une fonction ```suivant``` qui prend en paramètre un nombre ```n```  renvoie le successeur de```n```, suivant les règles énoncées ci-dessus.
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         def suivant(n):
             if n % 2 == 0:
                 return n // 2
             else:
                 return 3*n + 1
-        ```
-        2.
+        ```        
+    """
+    )
+    }}
+
+
+    **Q2.** Écrire une fonction ```syracuse``` qui affiche tous les termes de la suite de Syracuse depuis un nombre ```n``` passé en paramètre jusqu'à (on l'espère !) 1.  
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         def syracuse(n):
             print(n)
             while n != 1:
                 n = suivant(n)
                 print(n)
-        ``` 
-        "
-        ) }}        
+        ```         
+    """
+    )
+    }}
+     
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        1. Écrire une fonction ```temps_de_vol(n)``` qui renvoie le nombre d'étapes pour arriver à 1, en partant de ```n```
-        2. Écrire une fonction ```temps_max(nmax)``` qui affiche le plus grand temps de vol pour un nombre entre 1 et ```nmax```.
-        3. Modifier cette fonction pour afficher aussi le nombre de départ donnant ce plus grand temps de vol.
 
-    === "Correction"
-        {{ correction(True,
-        "
-        1.
+    **Q1.** Écrire une fonction ```temps_de_vol``` qui prend un nombre ```n``` en paramètre et qui renvoie le nombre d'étapes pour arriver à 1, en partant de ```n```.
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         def temps_de_vol(n):
             compteur = 1
             while n != 1:
                 compteur += 1
                 n = suivant(n)
-            return compteur
-
+            return compteur    
         ```
-        2.
+    """
+    )
+    }}
+    **Q2.** Écrire une fonction ```temps_max(nmax)``` qui affiche le plus grand temps de vol pour un nombre entre 1 et ```nmax```.
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         def temps_max(nmax):
             maximum = 0
@@ -373,7 +405,28 @@
                 if duree > maximum:
                     maximum = duree
             print('le plus grand temps de vol vaut :', maximum)
-        ``` 
-        "
-        ) }}        
+        ```         
+    """
+    )
+    }}
+
+    **Q3.** Modifier cette fonction pour afficher aussi le nombre de départ donnant ce plus grand temps de vol.
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ```python linenums='1'
+        def temps_max_avec_val(nmax):
+            maximum = 0
+            for k in range(1, nmax + 1):
+                duree = temps_de_vol(k)
+                if duree > maximum:
+                    maximum = duree
+                    nb_max = k
+            print('le plus grand temps de vol vaut :', maximum, 'obtenu pour la valeur', nb_max)
+        ```    
+    """
+    )
+    }}       
        

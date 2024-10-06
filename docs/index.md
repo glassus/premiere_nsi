@@ -39,6 +39,8 @@ correction(False,
 - [Exercices sur ```#!python while```](./T1_Demarrer_en_Python/1.3_Boucle_while/exercices/)
 - [Instruction conditionnelle ```#!python if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/cours/)
 - [Exercices sur les ```#!python if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/exercices/)
+- [Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/cours)
+- [Exercices sur les Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/exercices)
 
 !!! info "*Anciens thèmes traités*"
     - [Boucle ```#!python for ... in ...``` ](T1_Demarrer_en_Python/1.2_Boucle_for/cours/)
