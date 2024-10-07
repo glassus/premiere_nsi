@@ -27,22 +27,21 @@ correction(False,
 )
 }}
 
-
+{#
 - [DS02](data/DS02_for_while.pdf){. target="_blank"}
 - [DS02 correction](data/DS02_for_while_corr.pdf){. target="_blank"}
-
+#}
 
 ## Thèmes en cours d'étude :
 
-
-- [Boucle ```#!python while```](./T1_Demarrer_en_Python/1.3_Boucle_while/cours/)
-- [Exercices sur ```#!python while```](./T1_Demarrer_en_Python/1.3_Boucle_while/exercices/)
-- [Instruction conditionnelle ```#!python if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/cours/)
-- [Exercices sur les ```#!python if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/exercices/)
 - [Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/cours)
 - [Exercices sur les Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/exercices)
 
 !!! info "*Anciens thèmes traités*"
+    - [Boucle ```#!python while```](./T1_Demarrer_en_Python/1.3_Boucle_while/cours/)
+    - [Exercices sur ```#!python while```](./T1_Demarrer_en_Python/1.3_Boucle_while/exercices/)
+    - [Instruction conditionnelle ```#!python if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/cours/)
+    - [Exercices sur les ```#!python if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/exercices/)
     - [Boucle ```#!python for ... in ...``` ](T1_Demarrer_en_Python/1.2_Boucle_for/cours/)
     - [Exercices ```#!python for ... in ...``` ](T1_Demarrer_en_Python/1.2_Boucle_for/exercices/)
     - [Variables](T1_Demarrer_en_Python/1.1_Variables/cours/) 
