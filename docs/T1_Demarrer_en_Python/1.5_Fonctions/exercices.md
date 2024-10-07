@@ -41,7 +41,7 @@
 
 !!! example "{{ exercice() }}"
 
-    Écrire une fonction ```moyenne``` qui prend en paramètre trois nombres ```a```, ```b``` et ```c```   et qui renvoie la moyenne de ces trois nombres.
+    Écrire une fonction ```moyenne``` qui prend en paramètres trois nombres ```a```, ```b``` et ```c```   et qui renvoie la moyenne de ces trois nombres.
 
     *Exemple d'utilisation*
 
