@@ -239,57 +239,80 @@ Quelles sont les règles régissant ces espaces de noms ? Les frontières entre 
 
 
 !!! example "Exercice"
-    === "Énoncé"
-        On considère les 3 codes ci-dessous. Pour chacun, dire **sans l'exécuter** s'il est valide ou non. S'il ne l'est pas, identifier la règle (parmi celles énoncées ci-dessus) qui est bafouée.
 
-        **code A**
-        ```python linenums='1'
-        points = 0
-        def verdict(reponse):
-            if reponse > 10:
-                points += 3
+    On considère les 3 codes ci-dessous. Pour chacun, dire **sans l'exécuter** s'il est valide ou non. S'il ne l'est pas, identifier la règle (parmi celles énoncées ci-dessus) qui est bafouée.
 
-        verdict(12)
-        ```    
+    **code A**
+    ```python linenums='1'
+    points = 0
+    def verdict(reponse):
+        if reponse > 10:
+            points += 3
 
-        **code B**
-        ```python linenums='1'
-        def bouge(x, decalage):
-            x += decalage
+    verdict(12)
+    ```    
 
-        bouge(100, 5)
-        print(x)
-        ```
-
-        **code C**
-        ```python linenums='1'
-        def test_bac(moyenne):
-            if moyenne >= 10:
-                print("admis !")
-
-        def coup_de_pouce(note):
-            return note + bonus
-
-        bonus = 0.6
-        ma_moyenne = 9.5
-        ma_moyenne = coup_de_pouce(ma_moyenne)
-        test_bac(ma_moyenne)
-        ```
-
-    === "Correction code A"
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
         Ce code n'est pas valide, car il contrevient à la règle 3.
 
         ```ligne 4``` : la modification de la variable globale ```points``` est interdite.
+        
+    """
+    )
+    }}
 
-    === "Correction code B"
+
+    **code B**
+    ```python linenums='1'
+    def bouge(x, decalage):
+        x += decalage
+
+    bouge(100, 5)
+    print(x)
+    ```
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
         Ce code n'est pas valide, car il contrevient à la règle 1.
 
-        ```ligne 5``` : l'accès à la variable locale ```x``` est interdit.
+        ```ligne 5``` : l'accès à la variable locale ```x``` est interdit.        
+    """
+    )
+    }}
 
-    === "Correction code C"
+    **code C**
+    ```python linenums='1'
+    def test_bac(moyenne):
+        if moyenne >= 10:
+            print("admis !")
+
+    def coup_de_pouce(note):
+        return note + bonus
+
+    bonus = 0.6
+    ma_moyenne = 9.5
+    ma_moyenne = coup_de_pouce(ma_moyenne)
+    test_bac(ma_moyenne)
+    ```
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
         Ce code est valide.
 
-        ```ligne 6``` : l'accès à la variable globale ```bonus``` est autorisé, selon la règle 2.            
+        ```ligne 6``` : l'accès à la variable globale ```bonus``` est autorisé, selon la règle 2.           
+    """
+    )
+    }}
+
+
+         
 
 
 ![image](data/meme_global_perche.jpeg){: .center width=50%}
@@ -302,7 +325,7 @@ Quelles sont les règles régissant ces espaces de noms ? Les frontières entre 
 
     Pour les autres types de variables,  on peut même *forcer* pour avoir cette possibilité en utilisant le mot ```global``` à l'intérieur de la fonction. 
     
-    Mais il faut essayer d'éviter ceci. Une fonction ne **doit** (c'est un ordre, mais vous pouvez choisir de l'ignorer, tout comme vous pouvez choisir de passer au feu rouge) modifier que les variables qu'elle crée (ses variables locales) ou bien les variables qu'on lui a données en paramètre. 
+    Mais il faut essayer d'éviter ceci. Une fonction ne **doit** (mais ceci est plus un conseil appuyé qu'une obligation légale...) modifier que les variables qu'elle crée (ses variables locales) ou bien les variables qu'on lui a données en paramètres. 
 
     Une fonction qui ne respecte pas cette règle présente des _effets de bord_ : on peut peut-être arriver à les gérer sur un «petit» code, mais cela devient illusoire sur un code utilisant de multiples fonctions. 
 
@@ -468,7 +491,7 @@ Il faut vérifier que les tests couvrent toutes les situations possibles, mais c
     )
     }}
 
-    **Q2.** Écrire la fonction ```fizzbuzz```.
+    **Q2.** Écrire la fonction ```fizzbuzz```. (Vous pouvez vous inspirer fortement du code de [l'exercice 2 du chapitre précédent](../../1.4_Instruction_conditionnelle_if/exercices/){. target="_blank"} )
 
     {{
     correction(False,
