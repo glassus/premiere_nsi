@@ -4678,6 +4678,21 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
 </ul>
 <p>On souhaite écrire la fonction <code>fizzbuzz</code> qui renverra soit le nombre <code>n</code> (passé en paramètre), soit le mot par lequel il faut le remplacer.</p>
 <p><strong>Q1.</strong> Écrire la fonction <code>test_fizzbuzz</code> qui testera la fonction <code>fizzbuzz</code>.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">test_fizzbuzz</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">fizzbuzz</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span>
+    <span class="k">assert</span> <span class="n">fizzbuzz</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;fizz&#39;</span>
+    <span class="k">assert</span> <span class="n">fizzbuzz</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;buzz&#39;</span>
+    <span class="k">assert</span> <span class="n">fizzbuzz</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;fizzbuzz&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tests ok !&#39;</span><span class="p">)</span>        
+</code></pre></div></td></tr></table></div>
+</details>
 <p><strong>Q2.</strong> Écrire la fonction <code>fizzbuzz</code>. (Vous pouvez vous inspirer fortement du code de <a class="" href="../../1.4_Instruction_conditionnelle_if/exercices/" target="_blank">l'exercice 2 du chapitre précédent</a> )</p>
 </div>
 
@@ -4700,7 +4715,7 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">9 octobre 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">10 octobre 2024</span>
   </span>
 
     
