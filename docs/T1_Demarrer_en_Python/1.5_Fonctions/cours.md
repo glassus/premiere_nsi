@@ -495,7 +495,7 @@ Il faut vérifier que les tests couvrent toutes les situations possibles, mais c
     **Q2.** Écrire la fonction ```fizzbuzz```. (Vous pouvez vous inspirer fortement du code de [l'exercice 2 du chapitre précédent](../../1.4_Instruction_conditionnelle_if/exercices/){. target="_blank"} )
 
     {{
-    correction(False,
+    correction(True
     """
     ??? success \"Correction\" 
         ```python linenums='1'
