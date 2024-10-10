@@ -66,7 +66,7 @@
 
 !!! example "{{ exercice() }}"
 
-    Écrire une fonction ```somme``` qui prend en paramètre un entier positif ```n``` et qui renvoie la somme de tous les entier de 1 à ```n```.
+    Écrire une fonction ```somme``` qui prend en paramètre un entier positif ```n``` et qui renvoie la somme de tous les entiers de 1 à ```n```.
     
     $S = 1+2+3+4+5+ \dots +(n-1) + n$
 
@@ -78,7 +78,7 @@
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -95,7 +95,7 @@
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
-        Écrire une fonction `nb_voyelles` qui prend un paramètre la chaine de caractères ```mot```   renvoie le nombre de voyelles de `mot`.
+        Écrire une fonction `nb_voyelles` qui prend en paramètre la chaine de caractères ```mot```   renvoie le nombre de voyelles de `mot`.
 
 
         *Exemple d'utilisation*
