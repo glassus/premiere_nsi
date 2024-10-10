@@ -477,11 +477,12 @@ Il faut vérifier que les tests couvrent toutes les situations possibles, mais c
     **Q1.** Écrire la fonction ```test_fizzbuzz``` qui testera la fonction ```fizzbuzz```.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
         def test_fizzbuzz():
+            assert fizzbuzz(4) == 4
             assert fizzbuzz(6) == 'fizz'
             assert fizzbuzz(10) == 'buzz'
             assert fizzbuzz(15) == 'fizzbuzz'
