@@ -23,14 +23,14 @@ correction(False,
 !!! question \"Code Puzzle du jour\"
     :arrow_right: [https://www.codepuzzle.io/DD4RW](https://www.codepuzzle.io/DD4RW){. target=\"_blank\"}
     
-"""
+
 )
 }}
 
-{#
-- [DS02](data/DS02_for_while.pdf){. target="_blank"}
-- [DS02 correction](data/DS02_for_while_corr.pdf){. target="_blank"}
-#}
+
+- [DS03](data/1NSI_2024_DS03_if.pdf){. target="_blank"}
+- [DS03 correction](data/1NSI_2024_DS03_if_corr.pdf){.target="_blank"}
+
 
 ## Thèmes en cours d'étude :
 
