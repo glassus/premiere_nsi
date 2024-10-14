@@ -17,15 +17,7 @@
     - [Page sur l'orientation post-Bac](https://glassus.github.io/terminale_nsi/T7_Divers/10_orientation/cours/){. target="_blank"}
 #}
 
-{{
-correction(False,
-"""
-!!! question \"Code Puzzle du jour\"
-    :arrow_right: [https://www.codepuzzle.io/DD4RW](https://www.codepuzzle.io/DD4RW){. target=\"_blank\"}
-    
 
-)
-}}
 
 
 - [DS03](data/1NSI_2024_DS03_if.pdf){. target="_blank"}
