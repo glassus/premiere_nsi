@@ -17,7 +17,7 @@
     - [Page sur l'orientation post-Bac](https://glassus.github.io/terminale_nsi/T7_Divers/10_orientation/cours/){. target="_blank"}
 #}
 
-
+- :arrow_right: [Découvrir les commandes Linux avec le jeu Terminus](./T3_Architecture_materielle/3.5_Decouverte_des_commandes_Linux/cours/)
 
 
 - [DS03](data/1NSI_2024_DS03_if.pdf){. target="_blank"}
