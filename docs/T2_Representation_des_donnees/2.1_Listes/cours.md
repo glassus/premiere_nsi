@@ -129,17 +129,19 @@ En effet le nom de variable ```k``` est habituellement utilisé pour les nombres
 
 {{ initexo(0)}}
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        Après un référendum, la liste ```urne``` contient uniquement des ```'oui'``` ou des ```'non'```.
-        Déterminer le vainqueur de ce référendum.
+
+    Après un référendum, la liste ```urne``` contient uniquement des ```'oui'``` ou des ```'non'```.
+    Déterminer le vainqueur de ce référendum.
 
 
-        ```python
-        urne = ['oui', 'non', 'non', 'oui', 'oui', 'oui', 'non', 'oui', 'oui', 'oui', 'non', 'oui', 'non', 'non', 'oui', 'non', 'non', 'oui', 'oui', 'oui', 'oui', 'non', 'non', 'oui', 'non', 'oui', 'non', 'non', 'non', 'oui', 'oui', 'oui', 'oui', 'non', 'oui', 'non', 'non', 'oui', 'non', 'non', 'oui', 'non', 'non', 'non', 'non', 'non', 'non', 'non', 'oui', 'non', 'non', 'oui', 'oui', 'non', 'oui', 'oui', 'oui', 'oui', 'oui', 'oui', 'non', 'non', 'oui', 'oui', 'oui', 'oui', 'non', 'non', 'non', 'oui', 'oui', 'oui', 'non', 'non', 'non', 'non', 'oui', 'non', 'non', 'non', 'non', 'non', 'non', 'non', 'non', 'oui', 'non', 'oui', 'non', 'non', 'oui', 'oui', 'non', 'non', 'non', 'oui', 'oui', 'non', 'oui', 'oui', 'non', 'non', 'oui', 'oui', 'oui', 'non', 'oui', 'non', 'oui', 'oui', 'oui', 'oui', 'oui', 'non', 'non', 'non', 'non', 'oui', 'oui', 'oui', 'non', 'oui', 'non', 'oui', 'oui', 'oui', 'oui', 'oui', 'non', 'non', 'oui', 'non', 'non', 'non', 'non', 'non', 'non', 'oui', 'non', 'non', 'oui', 'non', 'non', 'oui', 'non', 'non', 'oui', 'oui', 'oui', 'oui', 'oui', 'oui', 'non', 'oui']
-        ``` 
-    === "Correction"
-        {{ correction(True,
-        "
+    ```python
+    urne = ['oui', 'non', 'non', 'oui', 'oui', 'oui', 'non', 'oui', 'oui', 'oui', 'non', 'oui', 'non', 'non', 'oui', 'non', 'non', 'oui', 'oui', 'oui', 'oui', 'non', 'non', 'oui', 'non', 'oui', 'non', 'non', 'non', 'oui', 'oui', 'oui', 'oui', 'non', 'oui', 'non', 'non', 'oui', 'non', 'non', 'oui', 'non', 'non', 'non', 'non', 'non', 'non', 'non', 'oui', 'non', 'non', 'oui', 'oui', 'non', 'oui', 'oui', 'oui', 'oui', 'oui', 'oui', 'non', 'non', 'oui', 'oui', 'oui', 'oui', 'non', 'non', 'non', 'oui', 'oui', 'oui', 'non', 'non', 'non', 'non', 'oui', 'non', 'non', 'non', 'non', 'non', 'non', 'non', 'non', 'oui', 'non', 'oui', 'non', 'non', 'oui', 'oui', 'non', 'non', 'non', 'oui', 'oui', 'non', 'oui', 'oui', 'non', 'non', 'oui', 'oui', 'oui', 'non', 'oui', 'non', 'oui', 'oui', 'oui', 'oui', 'oui', 'non', 'non', 'non', 'non', 'oui', 'oui', 'oui', 'non', 'oui', 'non', 'oui', 'oui', 'oui', 'oui', 'oui', 'non', 'non', 'oui', 'non', 'non', 'non', 'non', 'non', 'non', 'oui', 'non', 'non', 'oui', 'non', 'non', 'oui', 'non', 'non', 'oui', 'oui', 'oui', 'oui', 'oui', 'oui', 'non', 'oui']
+    ``` 
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         urne = ['oui', 'non', 'non', 'oui', 'oui', 'oui', 'non', 'oui', 'oui', 'oui', 'non', 'oui', 'non', 'non', 'oui', 'non', 'non', 'oui', 'oui', 'oui', 'oui', 'non', 'non', 'oui', 'non', 'oui', 'non', 'non', 'non', 'oui', 'oui', 'oui', 'oui', 'non', 'oui', 'non', 'non', 'oui', 'non', 'non', 'oui', 'non', 'non', 'non', 'non', 'non', 'non', 'non', 'oui', 'non', 'non', 'oui', 'oui', 'non', 'oui', 'oui', 'oui', 'oui', 'oui', 'oui', 'non', 'non', 'oui', 'oui', 'oui', 'oui', 'non', 'non', 'non', 'oui', 'oui', 'oui', 'non', 'non', 'non', 'non', 'oui', 'non', 'non', 'non', 'non', 'non', 'non', 'non', 'non', 'oui', 'non', 'oui', 'non', 'non', 'oui', 'oui', 'non', 'non', 'non', 'oui', 'oui', 'non', 'oui', 'oui', 'non', 'non', 'oui', 'oui', 'oui', 'non', 'oui', 'non', 'oui', 'oui', 'oui', 'oui', 'oui', 'non', 'non', 'non', 'non', 'oui', 'oui', 'oui', 'non', 'oui', 'non', 'oui', 'oui', 'oui', 'oui', 'oui', 'non', 'non', 'oui', 'non', 'non', 'non', 'non', 'non', 'non', 'oui', 'non', 'non', 'oui', 'non', 'non', 'oui', 'non', 'non', 'oui', 'oui', 'oui', 'oui', 'oui', 'oui', 'non', 'oui']
 
@@ -159,9 +161,12 @@ En effet le nom de variable ```k``` est habituellement utilisé pour les nombres
             print('le non est vainqueur')
         else:
             print('le oui et le non sont à égalité')
-        ```
-        "
-        ) }}
+        ```        
+    """
+    )
+    }}
+
+
 
 ### 4.2 Parcours «par indice»
 
@@ -241,26 +246,32 @@ Chaque élément étant accessible par son indice (de ```0``` à   ```len(liste)
 
 {{initexo(0)}}
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        On donne la liste :
-        ```python
-        lst = [3, 1, 4, 1, 5, 9]
-        ```
-        En utilisant un parcours **par indice** :
-        
-        1. Afficher un à un les éléments de cette liste.
-        2. Afficher un à un les éléments de cette liste **dans l'ordre inverse** (en commençant par 9)
 
-    === "Correction :heart:"
-        {{ correction(True,
-        "
-        1. 
+    On donne la liste :
+    ```python
+    lst = [3, 1, 4, 1, 5, 9]
+    ```
+    En utilisant un parcours **par indice** :
+    
+    **Q1.** Afficher un à un les éléments de cette liste.
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         for i in range(len(lst)):
             print(lst[i])
-        ```
+        ```        
+    """
+    )
+    }}
 
-        2.
+    **Q2.** Afficher un à un les éléments de cette liste **dans l'ordre inverse** (en commençant par 9)
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         lst = [3, 1, 4, 1, 5, 9]
 
@@ -269,39 +280,44 @@ Chaque élément étant accessible par son indice (de ```0``` à   ```len(liste)
 
 
         ```
-        "
-        ) }}
+    """
+    )
+    }}
+
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        Trouvez le nombre qui est **exactement à la même place** dans la liste `list1` et dans la liste `list2`, sachant que les deux listes ont la même taille.
 
-        1. En utilisant une boucle ```for``` (une seule !). 
-        2. En utilisant une boucle ```while```. Quel est l'avantage de la boucle ```while``` ? 
+    Trouvez le nombre qui est **exactement à la même place** dans la liste `list1` et dans la liste `list2`, **sachant que les deux listes ont la même taille**.
 
-        ```python
-        list1 = [8468, 4560, 3941, 3328, 7, 9910, 9208, 8400, 6502, 1076, 5921, 6720, 948, 9561, 7391, 7745, 9007, 9707, 4370, 9636, 5265, 2638, 8919, 7814, 5142, 1060, 6971, 4065, 4629, 4490, 2480, 9180, 5623, 6600, 1764, 9846, 7605, 8271, 4681, 2818, 832, 5280, 3170, 8965, 4332, 3198, 9454, 2025, 2373, 4067]
-        list2 = [9093, 2559, 9664, 8075, 4525, 5847, 67, 8932, 5049, 5241, 5886, 1393, 9413, 8872, 2560, 4636, 9004, 7586, 1461, 350, 2627, 2187, 7778, 8933, 351, 7097, 356, 4110, 1393, 4864, 1088, 3904, 5623, 8040, 7273, 1114, 4394, 4108, 7123, 8001, 5715, 7215, 7460, 5829, 9513, 1256, 4052, 1585, 1608, 3941]
-        ```
+    ```python
+    list1 = [8468, 4560, 3941, 3328, 7, 9910, 9208, 8400, 6502, 1076, 5921, 6720, 948, 9561, 7391, 7745, 9007, 9707, 4370, 9636, 5265, 2638, 8919, 7814, 5142, 1060, 6971, 4065, 4629, 4490, 2480, 9180, 5623, 6600, 1764, 9846, 7605, 8271, 4681, 2818, 832, 5280, 3170, 8965, 4332, 3198, 9454, 2025, 2373, 4067]
+    list2 = [9093, 2559, 9664, 8075, 4525, 5847, 67, 8932, 5049, 5241, 5886, 1393, 9413, 8872, 2560, 4636, 9004, 7586, 1461, 350, 2627, 2187, 7778, 8933, 351, 7097, 356, 4110, 1393, 4864, 1088, 3904, 5623, 8040, 7273, 1114, 4394, 4108, 7123, 8001, 5715, 7215, 7460, 5829, 9513, 1256, 4052, 1585, 1608, 3941]
+    ```
         
-    === "Correction 1."
-        
+
+    **Q1.** En utilisant une boucle ```for``` (une seule !). 
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
-        list1 = [8468, 4560, 3941, 3328, 7, 9910, 9208, 8400, 6502, 1076, 5921, 6720, 948, 9561, 7391, 7745, 9007, 9707, 4370, 9636, 5265, 2638, 8919, 7814, 5142, 1060, 6971, 4065, 4629, 4490, 2480, 9180, 5623, 6600, 1764, 9846, 7605, 8271, 4681, 2818, 832, 5280, 3170, 8965, 4332, 3198, 9454, 2025, 2373, 4067]
-        list2 = [9093, 2559, 9664, 8075, 4525, 5847, 67, 8932, 5049, 5241, 5886, 1393, 9413, 8872, 2560, 4636, 9004, 7586, 1461, 350, 2627, 2187, 7778, 8933, 351, 7097, 356, 4110, 1393, 4864, 1088, 3904, 5623, 8040, 7273, 1114, 4394, 4108, 7123, 8001, 5715, 7215, 7460, 5829, 9513, 1256, 4052, 1585, 1608, 3941]
-
         for i in range(len(list1)):
             if list1[i] == list2[i]:
                 print(list1[i])
-        ```
-        
+        ```        
+    """
+    )
+    }}
 
-    === "Correction 2."
-        
+    **Q2.** En utilisant une boucle ```while```. Quel est l'avantage de la boucle ```while``` ? 
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
-        list1 = [8468, 4560, 3941, 3328, 7, 9910, 9208, 8400, 6502, 1076, 5921, 6720, 948, 9561, 7391, 7745, 9007, 9707, 4370, 9636, 5265, 2638, 8919, 7814, 5142, 1060, 6971, 4065, 4629, 4490, 2480, 9180, 5623, 6600, 1764, 9846, 7605, 8271, 4681, 2818, 832, 5280, 3170, 8965, 4332, 3198, 9454, 2025, 2373, 4067]
-        list2 = [9093, 2559, 9664, 8075, 4525, 5847, 67, 8932, 5049, 5241, 5886, 1393, 9413, 8872, 2560, 4636, 9004, 7586, 1461, 350, 2627, 2187, 7778, 8933, 351, 7097, 356, 4110, 1393, 4864, 1088, 3904, 5623, 8040, 7273, 1114, 4394, 4108, 7123, 8001, 5715, 7215, 7460, 5829, 9513, 1256, 4052, 1585, 1608, 3941]
-
         i = 0
         while list1[i] != list2[i]:
             i += 1
@@ -309,21 +325,29 @@ Chaque élément étant accessible par son indice (de ```0``` à   ```len(liste)
         ```
         Avantage : on s'arrête dès qu'on a trouvé !
 
-        Inconvénient : on part du principe que ce nombre existe vraiment. Si on ne le trouve pas, on aura une erreur...
+        Inconvénient : on part du principe que ce nombre existe vraiment. Si on ne le trouve pas, on aura une erreur...        
+    """
+    )
+    }}
+
+
+
         
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        Dans la liste 
 
-        ```python
-        lst = [2428970, 1518306, 4971405, 1690994, 7918102, 4030834, 8830131, 7514856, 7903128, 6307569, 6624056, 5260490, 6447835, 4598783, 9108626, 5045240, 4128269, 4460134, 2497873, 5076659, 8104003, 7604887, 7451976, 4136924, 5691945, 8726293, 7855592, 3562473, 8849129, 6488474, 5303587, 2606124, 5484044, 4559758, 7592232, 2211406, 9974334, 7988936, 7582946, 7668748, 1799997, 3837917, 3196209, 7064342, 2543765, 1182013, 7253381, 1153735, 1037391, 4375946, 4445821, 5965587, 6001887, 4162629, 5235783, 8716582, 4901175, 5445422, 1120005, 8332321, 7075046, 2194175, 5557300, 2887907, 5103214, 2520744, 5104399, 2065665, 3035703, 7890213, 1758301, 3407982, 1355453, 4896338, 7979392, 9671602, 9690721, 7423779, 7423780, 3080825, 6785783, 3836837, 7310931, 1857470, 3492507, 2823231, 1492310, 1911148, 9620515, 5564910, 7009452, 7464745, 9608747, 7267383, 6939140, 6556578, 3592267, 8135497, 4881660, 5346884, 6859150]
+    Dans la liste 
 
-        ```
-        se cachent deux nombres consécutifs (comme les nombres 4 et 5 dans la liste ```[6, 2, 4, 5, 3]``` ). Pouvez-vous les trouver ?
+    ```python
+    lst = [2428970, 1518306, 4971405, 1690994, 7918102, 4030834, 8830131, 7514856, 7903128, 6307569, 6624056, 5260490, 6447835, 4598783, 9108626, 5045240, 4128269, 4460134, 2497873, 5076659, 8104003, 7604887, 7451976, 4136924, 5691945, 8726293, 7855592, 3562473, 8849129, 6488474, 5303587, 2606124, 5484044, 4559758, 7592232, 2211406, 9974334, 7988936, 7582946, 7668748, 1799997, 3837917, 3196209, 7064342, 2543765, 1182013, 7253381, 1153735, 1037391, 4375946, 4445821, 5965587, 6001887, 4162629, 5235783, 8716582, 4901175, 5445422, 1120005, 8332321, 7075046, 2194175, 5557300, 2887907, 5103214, 2520744, 5104399, 2065665, 3035703, 7890213, 1758301, 3407982, 1355453, 4896338, 7979392, 9671602, 9690721, 7423779, 7423780, 3080825, 6785783, 3836837, 7310931, 1857470, 3492507, 2823231, 1492310, 1911148, 9620515, 5564910, 7009452, 7464745, 9608747, 7267383, 6939140, 6556578, 3592267, 8135497, 4881660, 5346884, 6859150]
 
-    === "Correction"
-        
+    ```
+    se cachent deux nombres consécutifs (comme les nombres 4 et 5 dans la liste ```[6, 2, 4, 5, 3]``` ). Pouvez-vous les trouver ?
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         lst = [2428970, 1518306, 4971405, 1690994, 7918102, 4030834, 8830131, 7514856, 7903128, 6307569, 6624056, 5260490, 6447835, 4598783, 9108626, 5045240, 4128269, 4460134, 2497873, 5076659, 8104003, 7604887, 7451976, 4136924, 5691945, 8726293, 7855592, 3562473, 8849129, 6488474, 5303587, 2606124, 5484044, 4559758, 7592232, 2211406, 9974334, 7988936, 7582946, 7668748, 1799997, 3837917, 3196209, 7064342, 2543765, 1182013, 7253381, 1153735, 1037391, 4375946, 4445821, 5965587, 6001887, 4162629, 5235783, 8716582, 4901175, 5445422, 1120005, 8332321, 7075046, 2194175, 5557300, 2887907, 5103214, 2520744, 5104399, 2065665, 3035703, 7890213, 1758301, 3407982, 1355453, 4896338, 7979392, 9671602, 9690721, 7423779, 7423780, 3080825, 6785783, 3836837, 7310931, 1857470, 3492507, 2823231, 1492310, 1911148, 9620515, 5564910, 7009452, 7464745, 9608747, 7267383, 6939140, 6556578, 3592267, 8135497, 4881660, 5346884, 6859150]
 
@@ -331,7 +355,12 @@ Chaque élément étant accessible par son indice (de ```0``` à   ```len(liste)
             if lst[i] + 1 == lst[i+1]:
                 print(lst[i], lst[i+1])
 
-        ```
+        ```        
+    """
+    )
+    }}
+        
+
         
 
 
@@ -379,28 +408,33 @@ Il suffit d'écraser la valeur actuelle avec une nouvelle valeur
 
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        Construire une liste contenant tous les nombres inférieurs à 100 qui sont divisibles par 7.
-    === "Correction"
-        {{ correction(True,
-        "
+
+    Construire une liste contenant tous les nombres inférieurs à 100 qui sont divisibles par 7.
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         lst = []
         for n in range(1, 101):
             if n % 7 == 0:
                 lst.append(n)
-        ```
-        "
-        ) }}
+        ```        
+    """
+    )
+    }}
 
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        On considère la liste ```temp = [4, -5, 8, 10, -1, -2, 7, 13]```.  
-        Construire la liste ```temp_pos``` qui ne contient que les éléments positifs de  ```temp```. 
-    === "Correction"
-        {{ correction(True,
-        "
+
+    On considère la liste ```temp = [4, -5, 8, 10, -1, -2, 7, 13]```.  
+    Construire la liste ```temp_pos``` qui ne contient que les éléments positifs de  ```temp```. 
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         temp = [4, -5, 8, 10, -1, -2, 7, 13]
 
@@ -408,9 +442,11 @@ Il suffit d'écraser la valeur actuelle avec une nouvelle valeur
         for t in temp:
             if t > 0:
                 temp_pos.append(t)
-        ```
-        "
-        ) }}
+        ```        
+    """
+    )
+    }}
+
 
 ### 5.3 Suppression d'un élément d'une liste ...
 #### 5.3.1 ... par la méthode remove() 
@@ -455,12 +491,6 @@ L'instruction `del`  (qui n'est pas une fonction) permet de supprimer un éléme
 
 
 
-!!! example "{{ exercice() }}"
-    === "Énoncé"
-        [Exercice](https://glassus.github.io/terminale_nsi/T6_6_Epreuve_pratique/BNS_2022/#exercice-361) de la BNS.
-    
-        
-
 
 ## 6. Construction d'une liste d'éléments identiques
 Il est souvent pratique d'initialiser une liste de taille donnée, souvent en la remplissant de 0.
@@ -484,28 +514,33 @@ qui produira la liste ```[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        Que fait le code ci-dessous ?
-        ```python
-        texte = "cet texte est prodigieusement ennuyeux"
 
-        def rang(lettre):
-            return ord(lettre) - 97
+    Que fait le code ci-dessous ?
+    ```python
+    texte = "cet texte est prodigieusement ennuyeux"
 
-        compt = [0]*26
-        for lettre in texte :
-            if lettre != " " :
-                compt[rang(lettre)] += 1
-        ```
+    def rang(lettre):
+        return ord(lettre) - 97
 
-    === "Correction"
-        {{ correction(False,
-        "
+    compt = [0]*26
+    for lettre in texte :
+        if lettre != " " :
+            compt[rang(lettre)] += 1
+    ```
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         À l'issue de ce code la variable ```compt``` contient ```[0, 0, 1, 1, 9, 0, 1, 0, 2, 0, 0, 0, 1, 3, 1, 1, 0, 1, 2, 5, 3, 0, 0, 2, 1, 0]```, qui correspond au nombre d'occurences de chaque lettre : 0 fois la lettre 'a', 0 fois la lettre 'b', 1 fois la lettre 'c', etc.
 
-        Ce genre de comptage se fera de manière beaucoup plus efficace et élégante avec la structure de dictionnaire.
-        "
-        ) }}
+        Ce genre de comptage se fera de manière beaucoup plus efficace et élégante avec la structure de dictionnaire.        
+    """
+    )
+    }}
+
+
 
 
 ## 7. Construction d'une liste *en compréhension* :star: :star: :star:
@@ -553,23 +588,26 @@ On se retrouve évidemment avec une nouvelle liste qui contient exactement les �
 Pourtant les listes en compréhension *sans filtre* sont très fréquentes, nous le verrons plus loin.
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        On considère la variable ```phrase = 'Bonjour les vacances sont finies'``` et la variable ```voyelles = 'aeiouy'```.
 
-        Construire en compréhension la liste ```liste_voyelles``` qui contient toutes les voyelles présentes dans la variable ```phrase```.   
+    On considère la variable ```phrase = 'Bonjour les vacances sont finies'``` et la variable ```voyelles = 'aeiouy'```.
 
-    === "Correction"
-        {{ correction(False,
-        "
+    Construire en compréhension la liste ```liste_voyelles``` qui contient toutes les voyelles présentes dans la variable ```phrase```.   
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python
         >>> phrase = 'Bonjour les vacances sont finies'
         >>> voyelles = 'aeiouy'
         >>> liste_voyelles = [lettre for lettre in phrase if lettre in voyelles]
         >>> liste_voyelles
         ['o', 'o', 'u', 'e', 'a', 'a', 'e', 'o', 'i', 'i', 'e']
-        ```
-        "
-        ) }}
+        ```        
+    """
+    )
+    }}
+
 
 
 #### 7.2.2 l'ensemble de départ
@@ -611,36 +649,56 @@ Les listes en compréhension deviennent encore plus intéressantes lorsqu'on com
     ```
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        1. On considère la fonction mathématique $f : x \mapsto 2x+3$. Coder la fonction ```f```.
-        2. Créer (en compréhension) une liste contenant l'image des entiers de 1 à 10 par la fonction $f$.
-    === "Correction"
-        {{ correction(True,
-        "
+
+    **Q1.** On considère la fonction mathématique $f : x \mapsto 2x+3$. Coder la fonction ```f```.
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ```python linenums='1'
+        def f(x):
+            return 2*x + 3
+
+        ```        
+    """
+    )
+    }}
+
+    **Q2.** Créer (en compréhension) une liste contenant l'image des entiers de 1 à 10 par la fonction $f$.
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         def f(x):
             return 2*x + 3
 
         lst = [f(x) for x in range(1, 11)]
-        ```
-        "
-        ) }}
+        ```        
+    """
+    )
+    }}
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        On considère la liste ```lst = [51, 52, 66, 91, 92, 82, 65, 53, 86, 42, 79, 95]```. Seuls les nombres entre 60 et 90 ont une signification : ce sont des codes ASCII (récupérables par la fonction ```chr``` ).  
-        Créer (en compréhension) une liste ```sol``` qui contient les lettres correspondants aux nombres ayant une signification.
-    === "Correction"
-        {{ correction(True,
-        "
+
+    On considère la liste ```lst = [51, 52, 66, 91, 92, 82, 65, 53, 86, 42, 79, 95]```. Seuls les nombres entre 60 et 90 ont une signification : ce sont des codes ASCII correspondant à des lettres majuscules (récupérables par la fonction ```chr``` ).  
+    Créer (en compréhension) une liste ```sol``` qui contient les lettres correspondants aux nombres ayant une signification.
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python
         >>> lst = [51, 52, 66, 91, 92, 82, 65, 53, 86, 42, 79, 95]
         >>> decode = [chr(k) for k in lst if k > 60  and k < 90]
         >>> decode
         ['B', 'R', 'A', 'V', 'O']
         ```
-        "
-        ) }}
+        
+    """
+    )
+    }}
+
 
 ## 8. Un phénomène inquiétant : la copie de liste
 
@@ -699,11 +757,13 @@ Pour en savoir plus sur les variables, vous pouvez revenir sur la [partie option
 
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        Effectuer les tests nécessaires pour prouver que l'exemple précédent a bien produit deux objets différents.
-    === "Correction"
-        {{ correction(False,
-        "
+
+    Effectuer les tests nécessaires pour prouver que l'exemple précédent a bien produit deux objets différents.
+    
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python
         >>> listA = [3, 4, 5]
         >>> listB = list(listA)
@@ -714,9 +774,11 @@ Pour en savoir plus sur les variables, vous pouvez revenir sur la [partie option
         140157471522368
         >>> id(listB)
         140157465797184
-        ```
-        "
-        ) }}
+        ```        
+    """
+    )
+    }}
+
 
 
 
@@ -747,29 +809,32 @@ La liste `a` est composée de 3 éléments qui sont eux-même des listes de 3 é
 
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        On considère le jeu du Morpion (ou *Tic-Tac-Toe*) dont la surface de jeu vierge est representée par le tableau :  
-        ```tab = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]``` 
 
-        Les premiers coups joués sont ceux-ci :
+    On considère le jeu du Morpion (ou *Tic-Tac-Toe*) dont la surface de jeu vierge est representée par le tableau :  
+    ```tab = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]``` 
 
-        - ```tab[1][1] = 'X'``` 
-        - ```tab[2][1] = 'O'``` 
-        - ```tab[2][2] = 'X'``` 
-        - ```tab[0][0] = 'O'``` 
+    Les premiers coups joués sont ceux-ci :
 
-        Quel coup doit maintenant jouer le joueur  `'X'` pour s'assurer la victoire ?
+    - ```tab[1][1] = 'X'``` 
+    - ```tab[2][1] = 'O'``` 
+    - ```tab[2][2] = 'X'``` 
+    - ```tab[0][0] = 'O'``` 
 
-    === "Correction"
-        {{ correction(True,
-        "
+    Quel coup doit maintenant jouer le joueur  `'X'` pour s'assurer la victoire ?
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python
         tab[0][2] = 'X'
         # ou
         tab[1][2] = 'X'
-        ```
-        "
-        ) }}
+        ```        
+    """
+    )
+    }}
+    === "Correction"
 
 
 ### 9.2 Parcours d'une liste de listes
@@ -791,16 +856,17 @@ La liste `a` est composée de 3 éléments qui sont eux-même des listes de 3 é
     ```
 
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-        On considère la liste ```m``` ('m' comme *matrice*) suivante :  
 
-        ```m = [[1, 9, 4], [4, 1, 8], [7, 10, 1]]```  
+    On considère la liste ```m``` (comme *matrice*) suivante :  
 
-        Quelle est la somme de tous les nombres de la matrice ```m``` ?
+    ```m = [[1, 9, 4], [4, 1, 8], [7, 10, 1]]```  
 
-    === "Correction"
-        {{ correction(True,
-        "
+    Quelle est la somme de tous les nombres de la matrice ```m``` ?
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         m = [[1, 9, 4], [4, 1, 8], [7, 10, 1]]
 
@@ -822,10 +888,11 @@ La liste `a` est composée de 3 éléments qui sont eux-même des listes de 3 é
                 somme += m[i][j]
 
         print(somme)
-        ```
+        ```        
+    """
+    )
+    }}
 
-        "
-        ) }}
 
 
 

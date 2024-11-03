@@ -17,19 +17,20 @@
     - [Page sur l'orientation post-Bac](https://glassus.github.io/terminale_nsi/T7_Divers/10_orientation/cours/){. target="_blank"}
 #}
 
-- :arrow_right: [Découvrir les commandes Linux avec le jeu Terminus](./T3_Architecture_materielle/3.5_Decouverte_des_commandes_Linux/cours/)
 
 
-- [DS03](data/1NSI_2024_DS03_if.pdf){. target="_blank"}
-- [DS03 correction](data/1NSI_2024_DS03_if_corr.pdf){.target="_blank"}
+
+- [DS04](data/DS04_fonctions_1NSI_2024.pdf){. target="_blank"}
+- [DS04 correction](data/DS04_fonctions_corr_1NSI_2024.pdf){.target="_blank"}
 
 
 ## Thèmes en cours d'étude :
+- [Listes](./T2_Representation_des_donnees/2.1_Listes/cours/) 
 
-- [Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/cours)
-- [Exercices sur les Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/exercices)
 
 !!! info "*Anciens thèmes traités*"
+    - [Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/cours)
+    - [Exercices sur les Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/exercices)
     - [Boucle ```#!python while```](./T1_Demarrer_en_Python/1.3_Boucle_while/cours/)
     - [Exercices sur ```#!python while```](./T1_Demarrer_en_Python/1.3_Boucle_while/exercices/)
     - [Instruction conditionnelle ```#!python if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/cours/)
