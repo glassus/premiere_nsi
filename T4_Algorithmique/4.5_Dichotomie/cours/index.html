@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.41">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
     
     
       
@@ -4291,7 +4291,7 @@ Extrait de [Wikipedia](https://fr.wikipedia.org/wiki/Diviser_pour_r%C3%A9gner_(i
 </code></pre></div>
 <p>Toutes les méthodes (proposition des valeurs dans l'ordre, au hasard, dans l'ordre inverse...) sont équivalentes : elles sont toutes aussi mauvaises, aucune stratégie n'est possible car les données ne sont pas triées. Si je suis à la recherche de la valeur "vert", le fait de piocher "rouge" ne me donnera aucune indication sur le fait que je devrais chercher plus à gauche à plus à droite que l'endroit où j'ai pioché.</p>
 <p>Il faudrait pour cela que la liste soit triée (et donc qu'elle soit «triable», ce qui n'est pas toujours le cas !). C'est donc le cas dans lequel nous allons nous placer dans toute la suite de ce cours :</p>
-<p><img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> Dans toute la suite, nous rechercherons un élément dans une liste d'entiers <strong>triée</strong> dans l'ordre croissant. <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> </p>
+<p><img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> Dans toute la suite, nous rechercherons un élément dans une liste d'entiers <strong>triée</strong> dans l'ordre croissant. <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> </p>
 <h3 id="12-contexte-de-recherche">1.2 Contexte de recherche<a class="headerlink" href="#12-contexte-de-recherche" title="Permanent link">⚓︎</a></h3>
 <p>Considérons donc la liste <code>lst</code>  suivante : </p>
 <p><img alt="image" class="center" src="../data/fig0.png" /></p>
@@ -4334,7 +4334,7 @@ Extrait de [Wikipedia](https://fr.wikipedia.org/wiki/Diviser_pour_r%C3%A9gner_(i
 </div>
 <h3 id="13-complexite-de-la-methode-naive">1.3 Complexité de la méthode naïve<a class="headerlink" href="#13-complexite-de-la-methode-naive" title="Permanent link">⚓︎</a></h3>
 <div class="admonition note">
-<p class="admonition-title">Complexité de la méthode naïve <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Complexité de la méthode naïve <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
 <p>Dans le cas d'une recherche naïve, le nombre (maximal) d'opérations nécessaires est proportionnel à la taille de la liste à étudier. Si on appelle <span class="arithmatex">\(n\)</span> la longueur de la liste, on dit que cet algorithme est <strong>d'ordre <span class="arithmatex">\(n\)</span></strong>, ou <strong>linéaire</strong>, ou en <span class="arithmatex">\(O(n)\)</span>.</p>
 </div>
 <p><strong>Remarque :</strong> 
@@ -4347,7 +4347,7 @@ La méthode naïve n'utilise pas le fait que la liste est triée, on aurait pu a
 (à chaque étape, une indication (trop grand, trop petit) permet d'affiner la proposition suivante)</p>
 </div>
 <p><strong>Réponse attendue :</strong> la meilleure stratégie est de <em>couper en deux</em> à chaque fois l'intervalle d'étude. On démarre de 50, puis 75 ou 25, etc.</p>
-<p><img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> Il convient toute fois de remettre en question cette méthode qui paraît <em>naturellement</em> optimale : si je propose 90 comme nombre de départ, j'ai certes moins de chance que le nombre soit entre 90 et 100, mais s'il l'est, j'ai gagné un gros avantage car mon nouvel intervalle est très réduit.</p>
+<p><img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> Il convient toute fois de remettre en question cette méthode qui paraît <em>naturellement</em> optimale : si je propose 90 comme nombre de départ, j'ai certes moins de chance que le nombre soit entre 90 et 100, mais s'il l'est, j'ai gagné un gros avantage car mon nouvel intervalle est très réduit.</p>
 <details class="tip">
 <summary>Notion d'espérance probabiliste</summary>
 <p>Déterminer si un risque vaut la peine d'être pris passe par la compréhension de la notion d'<strong>espérance probabiliste</strong>.
@@ -4405,9 +4405,9 @@ Recherchons la valeur 14 dans notre liste `lst`.
 <img alt="image" class="center" src="../data/fig4.png" /></li>
 </ul>
 <p>Nous allons faire <em>se rapprocher</em> les indices <code>indice_debut</code> et <code>indice_fin</code> <strong>tant que</strong> <code>indice_debut &lt;= indice_fin</code></p>
-<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> <a class="" href="../intro_cours/" target="_blank">Codes à trous</a></p>
+<p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/27a1.svg" title=":arrow_right:" /> <a class="" href="../intro_cours/" target="_blank">Codes à trous</a></p>
 <div class="admonition note">
-<p class="admonition-title">Recherche dichotomique dans une liste triée <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Recherche dichotomique dans une liste triée <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_dichotomique</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span> <span class="p">:</span>
     <span class="n">indice_debut</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">indice_fin</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
@@ -4513,7 +4513,7 @@ Il y a donc 3 étapes avant de trouver la valeur cherchée.</p>
 <p>Ce nombre s'appelle le <em>logarithme de base 2</em> et se note <span class="arithmatex">\(\log_2(N)\)</span>.</p>
 <p>On dit que l'algorithme de dichotomie a une <strong>vitesse logarithmique</strong>. On rencontrera parfois la notation <span class="arithmatex">\(O(\log_2(n))\)</span>.</p>
 <div class="admonition note">
-<p class="admonition-title">Complexité de la dichotomie <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
+<p class="admonition-title">Complexité de la dichotomie <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
 <p>La recherche dichotomique se fait avec une <strong>complexité logarithmique</strong>.</p>
 </div>
 <p>Cette complexité est bien meilleure qu'une complexité linéaire. Le nombre d'opérations à effectuer est très peu sensible à la taille des données d'entrée, ce qui en fait un algorithme très efficace.</p>
