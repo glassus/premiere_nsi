@@ -139,7 +139,7 @@ En effet le nom de variable ```k``` est habituellement utilisé pour les nombres
     ``` 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -255,7 +255,7 @@ Chaque élément étant accessible par son indice (de ```0``` à   ```len(liste)
     
     **Q1.** Afficher un à un les éléments de cette liste.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -269,7 +269,7 @@ Chaque élément étant accessible par son indice (de ```0``` à   ```len(liste)
     **Q2.** Afficher un à un les éléments de cette liste **dans l'ordre inverse** (en commençant par 9)
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
