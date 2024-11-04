@@ -4571,7 +4571,29 @@ En utilisant un parcours <strong>par indice</strong> :</p>
 <span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9093</span><span class="p">,</span> <span class="mi">2559</span><span class="p">,</span> <span class="mi">9664</span><span class="p">,</span> <span class="mi">8075</span><span class="p">,</span> <span class="mi">4525</span><span class="p">,</span> <span class="mi">5847</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">8932</span><span class="p">,</span> <span class="mi">5049</span><span class="p">,</span> <span class="mi">5241</span><span class="p">,</span> <span class="mi">5886</span><span class="p">,</span> <span class="mi">1393</span><span class="p">,</span> <span class="mi">9413</span><span class="p">,</span> <span class="mi">8872</span><span class="p">,</span> <span class="mi">2560</span><span class="p">,</span> <span class="mi">4636</span><span class="p">,</span> <span class="mi">9004</span><span class="p">,</span> <span class="mi">7586</span><span class="p">,</span> <span class="mi">1461</span><span class="p">,</span> <span class="mi">350</span><span class="p">,</span> <span class="mi">2627</span><span class="p">,</span> <span class="mi">2187</span><span class="p">,</span> <span class="mi">7778</span><span class="p">,</span> <span class="mi">8933</span><span class="p">,</span> <span class="mi">351</span><span class="p">,</span> <span class="mi">7097</span><span class="p">,</span> <span class="mi">356</span><span class="p">,</span> <span class="mi">4110</span><span class="p">,</span> <span class="mi">1393</span><span class="p">,</span> <span class="mi">4864</span><span class="p">,</span> <span class="mi">1088</span><span class="p">,</span> <span class="mi">3904</span><span class="p">,</span> <span class="mi">5623</span><span class="p">,</span> <span class="mi">8040</span><span class="p">,</span> <span class="mi">7273</span><span class="p">,</span> <span class="mi">1114</span><span class="p">,</span> <span class="mi">4394</span><span class="p">,</span> <span class="mi">4108</span><span class="p">,</span> <span class="mi">7123</span><span class="p">,</span> <span class="mi">8001</span><span class="p">,</span> <span class="mi">5715</span><span class="p">,</span> <span class="mi">7215</span><span class="p">,</span> <span class="mi">7460</span><span class="p">,</span> <span class="mi">5829</span><span class="p">,</span> <span class="mi">9513</span><span class="p">,</span> <span class="mi">1256</span><span class="p">,</span> <span class="mi">4052</span><span class="p">,</span> <span class="mi">1585</span><span class="p">,</span> <span class="mi">1608</span><span class="p">,</span> <span class="mi">3941</span><span class="p">]</span>
 </code></pre></div>
 <p><strong>Q1.</strong> En utilisant une boucle <code>for</code> (une seule !). </p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">list1</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="n">list1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">list2</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">list1</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+</details>
 <p><strong>Q2.</strong> En utilisant une boucle <code>while</code>. Quel est l'avantage de la boucle <code>while</code> ? </p>
+<details class="success">
+<summary>Correction</summary>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">list1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">list2</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list1</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+Avantage : on s'arrête dès qu'on a trouvé !</p>
+<p>Inconvénient : on part du principe que ce nombre existe vraiment. Si on ne le trouve pas, on aura une erreur...        </p>
+</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  3</p>
