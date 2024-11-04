@@ -298,7 +298,7 @@ Chaque élément étant accessible par son indice (de ```0``` à   ```len(liste)
     **Q1.** En utilisant une boucle ```for``` (une seule !). 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -314,7 +314,7 @@ Chaque élément étant accessible par son indice (de ```0``` à   ```len(liste)
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
