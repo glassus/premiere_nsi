@@ -412,7 +412,7 @@ Il suffit d'écraser la valeur actuelle avec une nouvelle valeur
     Construire une liste contenant tous les nombres inférieurs à 100 qui sont divisibles par 7.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
