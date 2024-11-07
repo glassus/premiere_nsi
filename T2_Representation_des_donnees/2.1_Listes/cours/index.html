@@ -4667,6 +4667,21 @@ Lorsqu'on souhaitera <strong>figer</strong> le contenu d'une liste (pour des rai
 <p class="admonition-title">Exercice  5</p>
 <p>On considère la liste <code>temp = [4, -5, 8, 10, -1, -2, 7, 13]</code>.<br />
 Construire la liste <code>temp_pos</code> qui ne contient que les éléments positifs de  <code>temp</code>. </p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">temp</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span>
+
+<span class="n">temp_pos</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">temp</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">t</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">temp_pos</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <h3 id="53-suppression-dun-element-dune-liste">5.3 Suppression d'un élément d'une liste ...<a class="headerlink" href="#53-suppression-dun-element-dune-liste" title="Permanent link">⚓︎</a></h3>
 <h4 id="531-par-la-methode-remove">5.3.1 ... par la méthode remove()<a class="headerlink" href="#531-par-la-methode-remove" title="Permanent link">⚓︎</a></h4>
@@ -4731,6 +4746,11 @@ Il est possible de faire comme ceci :</p>
     <span class="k">if</span> <span class="n">lettre</span> <span class="o">!=</span> <span class="s2">&quot; &quot;</span> <span class="p">:</span>
         <span class="n">compt</span><span class="p">[</span><span class="n">rang</span><span class="p">(</span><span class="n">lettre</span><span class="p">)]</span> <span class="o">+=</span> <span class="mi">1</span>
 </code></pre></div></p>
+<details class="success">
+<summary>Correction</summary>
+<p>À l'issue de ce code la variable <code>compt</code> contient <code>[0, 0, 1, 1, 9, 0, 1, 0, 2, 0, 0, 0, 1, 3, 1, 1, 0, 1, 2, 5, 3, 0, 0, 2, 1, 0]</code>, qui correspond au nombre d'occurences de chaque lettre : 0 fois la lettre 'a', 0 fois la lettre 'b', 1 fois la lettre 'c', etc.</p>
+<p>Ce genre de comptage se fera de manière beaucoup plus efficace et élégante avec la structure de dictionnaire.        </p>
+</details>
 </div>
 <h2 id="7-construction-dune-liste-en-comprehension">7. Construction d'une liste <em>en compréhension</em> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /><a class="headerlink" href="#7-construction-dune-liste-en-comprehension" title="Permanent link">⚓︎</a></h2>
 <p>C'est une grande caractéristique du langage Python (même si ce n'est pas une exclusivité) : la méthode de liste en compréhension propose une manière élégante, rapide et naturelle pour créer des listes.</p>
