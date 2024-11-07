@@ -432,7 +432,7 @@ Il suffit d'écraser la valeur actuelle avec une nouvelle valeur
     Construire la liste ```temp_pos``` qui ne contient que les éléments positifs de  ```temp```. 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -530,7 +530,7 @@ qui produira la liste ```[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         À l'issue de ce code la variable ```compt``` contient ```[0, 0, 1, 1, 9, 0, 1, 0, 2, 0, 0, 0, 1, 3, 1, 1, 0, 1, 2, 5, 3, 0, 0, 2, 1, 0]```, qui correspond au nombre d'occurences de chaque lettre : 0 fois la lettre 'a', 0 fois la lettre 'b', 1 fois la lettre 'c', etc.
