@@ -345,7 +345,7 @@ Chaque élément étant accessible par son indice (de ```0``` à   ```len(liste)
     se cachent deux nombres consécutifs (comme les nombres 4 et 5 dans la liste ```[6, 2, 4, 5, 3]``` ). Pouvez-vous les trouver ?
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
