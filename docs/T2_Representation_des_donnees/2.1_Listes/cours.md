@@ -244,7 +244,7 @@ Chaque élément étant accessible par son indice (de ```0``` à   ```len(liste)
 - le risque d'erreur : encore et toujours le ```index out of range```...
 
 
-{{initexo(0)}}
+
 !!! example "{{ exercice() }}"
 
     On donne la liste :

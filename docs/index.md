@@ -26,6 +26,7 @@
 
 ## Thèmes en cours d'étude :
 - [Listes](./T2_Representation_des_donnees/2.1_Listes/cours/) 
+- [Exercices sur les Listes](./T2_Representation_des_donnees/2.1_Listes/exercices/) 
 
 
 !!! info "*Anciens thèmes traités*"
