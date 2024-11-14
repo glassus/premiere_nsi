@@ -49,7 +49,7 @@
 
     **Q1.** Créer **en compréhension** une liste ```lst1``` contenant uniquement les jours comportant 5 lettres.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
