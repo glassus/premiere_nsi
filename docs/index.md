@@ -20,8 +20,8 @@
 
 
 
-- [DS05](data/DS05_listes1_1NSI_202.pdf){. target="_blank"}
-- [DS05 correction](data/DS05_listes1_1NSI_202_corr.pdf){.target="_blank"}
+- [DS05](data/DS05_listes1_1NSI_2024.pdf){. target="_blank"}
+- [DS05 correction](data/DS05_listes1_1NSI_2024_corr.pdf){.target="_blank"}
 
 
 ## Thèmes en cours d'étude :
