@@ -587,14 +587,19 @@ Il est pourtant éventuel : que se passe-t-il s'il n'y a pas de filtre ?
 On se retrouve évidemment avec une nouvelle liste qui contient exactement les éléments de la liste de départ, ce qui n'est pas très intéressant.
 Pourtant les listes en compréhension *sans filtre* sont très fréquentes, nous le verrons plus loin.
 
+{#
+EXO PAS TOP
+#}
+
 !!! example "{{ exercice() }}"
 
     On considère la variable ```phrase = 'Bonjour les vacances sont finies'``` et la variable ```voyelles = 'aeiouy'```.
 
     Construire en compréhension la liste ```liste_voyelles``` qui contient toutes les voyelles présentes dans la variable ```phrase```.   
 
+
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
