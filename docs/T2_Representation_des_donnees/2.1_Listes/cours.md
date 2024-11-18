@@ -657,7 +657,7 @@ Les listes en compréhension deviennent encore plus intéressantes lorsqu'on com
 
     **Q1.** On considère la fonction mathématique $f : x \mapsto 2x+3$. Coder la fonction ```f```.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -671,7 +671,7 @@ Les listes en compréhension deviennent encore plus intéressantes lorsqu'on com
 
     **Q2.** Créer (en compréhension) une liste contenant l'image des entiers de 1 à 10 par la fonction $f$.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
