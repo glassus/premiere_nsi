@@ -690,7 +690,7 @@ Les listes en compréhension deviennent encore plus intéressantes lorsqu'on com
     Créer (en compréhension) une liste ```sol``` qui contient les lettres correspondants aux nombres ayant une signification.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
@@ -839,7 +839,7 @@ La liste `a` est composée de 3 éléments qui sont eux-même des listes de 3 é
     """
     )
     }}
-    === "Correction"
+
 
 
 ### 9.2 Parcours d'une liste de listes
