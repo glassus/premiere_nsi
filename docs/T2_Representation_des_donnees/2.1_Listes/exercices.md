@@ -199,7 +199,7 @@
     À chaque étape de calcul, tous les nombres de la matrice sont simultanément modifiés. L'entrée du problème est le nombre d'étapes à appliquer (ici : **39**). Vous devez répondre en donnant la somme des valeurs contenues dans la matrice après application de toutes les étapes.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
