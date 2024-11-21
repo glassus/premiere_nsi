@@ -869,7 +869,7 @@ La liste `a` est composée de 3 éléments qui sont eux-même des listes de 3 é
     Quelle est la somme de tous les nombres de la matrice ```m``` ?
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
