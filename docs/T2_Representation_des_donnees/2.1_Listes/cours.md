@@ -828,7 +828,7 @@ La liste `a` est composée de 3 éléments qui sont eux-même des listes de 3 é
     Quel coup doit maintenant jouer le joueur  `'X'` pour s'assurer la victoire ?
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
