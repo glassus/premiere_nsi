@@ -2,6 +2,8 @@
 
 ### O. Installation du serveur Xampp
 
+[lien téléchargement XAMPP](https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/8.1.17/xampp-linux-x64-8.1.17-0-installer.run/download){. target="_blank"}
+
 Dans le dossier Téléchargements :
 
 ```sudo chmod +x xampp-linux....run``` 
@@ -44,7 +46,7 @@ Si on veut tout copier :
 ```sudo cp * /opt/lampp/htdocs/```
 
 ### 3. Liens vers la page de chaque élève
-
+{#
 - [page de M. Lassus](http://192.168.1.198){. target="_blank"}
 - [page de Malone](http://192.168.1.102){. target="_blank"}
 - [page de Timéo](http://192.168.1.114){. target="_blank"}
@@ -63,4 +65,4 @@ Si on veut tout copier :
 - [page de Gead](http://192.168.1.172){. target="_blank"}
 - [page de Mikhaïlo](http://192.168.1.190){. target="_blank"}
 
-
+#}

@@ -52,19 +52,19 @@ Il a été inventé en 1992 par [Tim Berners-Lee](https://fr.wikipedia.org/wiki/
 
     ```
 
-Vous pouvez contempler [ici](https://exemplehtmlpur--g-lassus.repl.co){:target="_blank"} le rendu de cette magnifique page.
+Vous pouvez contempler [ici](http://glassus1.free.fr/page_test.html){:target="_blank"} le rendu de cette magnifique page.
 
 {{ initexo(0)}}
 !!! example "{{ exercice() }}"
-    === "Énoncé"
-      - Créez un dossier contenant un fichier ```mapage.html```.
-      - Créez une page contenant une image et un lien vers le site du lycée.
-      - Vous pouvez utiliser le logiciel Geany, installé sur notre Debian.
-      - Vous pouvez aussi utiliser un éditeur en ligne avec rendu instantané, du type [https://www.w3schools.com/tryit/](https://www.w3schools.com/tryit/){:target="_blank"}
+
+    - Créez un dossier contenant un fichier ```mapage.html```.
+    - Créez une page contenant une image et un lien vers le site du lycée.
+    - Vous pouvez utiliser le logiciel Geany, installé sur notre Debian.
+    - Vous pouvez aussi utiliser un éditeur en ligne avec rendu instantané, du type [https://www.w3schools.com/tryit/](https://www.w3schools.com/tryit/){:target="_blank"}
        
 
 
-[lien téléchargement XAMPP](https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/8.1.17/xampp-linux-x64-8.1.17-0-installer.run/download){. target="_blank"}
+
 
 
 
@@ -111,21 +111,21 @@ Le fichier ```css``` (souvent nommé ```style.css``` et appelé **feuille de sty
     }
     ```
 
-Vous pouvez contempler [ici](https://exemplehtmlcss--g-lassus.repl.co){:target="_blank"} le nouveau rendu de cette encore plus magnifique page.
+Vous pouvez contempler [ici](http://glassus1.free.fr/page_test2.html){:target="_blank"} le nouveau rendu de cette encore plus magnifique page.
 
 **En savoir plus** 
 
 - le cours d'OpenClassrooms : [https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3](https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3){:target="_blank"}
 
 
-!!! note "Exercice 2"
+!!! example "{{ exercice() }}"
     Reprenez votre page de l'exercice 1 et rajoutez une feuille de style.
 
-!!! note "Exercice 3"
-    - Allez sur le site [http://sudouest.fr](http://sudouest.fr){:target="_blank"}, et affichez l'inspecteur d'élement de votre navigateur (généralement accessible en appuyant sur ```F12``` )
+!!! example "{{ exercice() }}"
+    - Allez sur le site [http://lemonde.fr](http://lemonde.fr){:target="_blank"}, et affichez l'inspecteur d'élement de votre navigateur (généralement accessible en appuyant sur ```F12``` )
     - Modifiez le plus possible les attributs de style de la page.
 
-!!! note "Exercice 4"
+!!! example "{{ exercice() }}"
     - Résoudre [ce challenge](https://www.challenges-kids.fr/categories/web/chall5/){. target="_blank"}
 
 
@@ -194,7 +194,7 @@ Inventé en 1995 par [Brendan Eich](https://fr.wikipedia.org/wiki/Brendan_Eich){
     ```
 
 
-Le résultat de cette page peut être consulté [ici](https://exemplejs.g-lassus.repl.co){:target="_blank"}. *(oui, j'ai confondu le jaune et le rose)*
+Le résultat de cette page peut être consulté [ici](http://glassus1.free.fr/page_test3.html){:target="_blank"}.
 
 **Commentaires**
 
