@@ -19,17 +19,18 @@
 
 
 
-
+{#
 - [DS05](data/DS05_listes1_1NSI_2024.pdf){. target="_blank"}
 - [DS05 correction](data/DS05_listes1_1NSI_2024_corr.pdf){.target="_blank"}
-
+#}
 
 ## Thèmes en cours d'étude :
-- [Listes](./T2_Representation_des_donnees/2.1_Listes/cours/) 
-- [Exercices sur les Listes](./T2_Representation_des_donnees/2.1_Listes/exercices/) 
+- [Interactions sur une page web](./T6_IHM_Web/6.1_Interactions_page_web/cours/)
 
 
 !!! info "*Anciens thèmes traités*"
+    - [Listes](./T2_Representation_des_donnees/2.1_Listes/cours/) 
+    - [Exercices sur les Listes](./T2_Representation_des_donnees/2.1_Listes/exercices/) 
     - [Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/cours)
     - [Exercices sur les Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/exercices)
     - [Boucle ```#!python while```](./T1_Demarrer_en_Python/1.3_Boucle_while/cours/)

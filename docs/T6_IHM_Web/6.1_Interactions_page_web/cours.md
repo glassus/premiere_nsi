@@ -57,7 +57,7 @@ Vous pouvez contempler [ici](http://glassus1.free.fr/page_test.html){:target="_b
 {{ initexo(0)}}
 !!! example "{{ exercice() }}"
 
-    - Créez un dossier contenant un fichier ```mapage.html```.
+    - Créez un dossier ```PageWeb```  contenant un fichier ```mapage.html```.
     - Créez une page contenant une image et un lien vers le site du lycée.
     - Vous pouvez utiliser le logiciel Geany, installé sur notre Debian.
     - Vous pouvez aussi utiliser un éditeur en ligne avec rendu instantané, du type [https://www.w3schools.com/tryit/](https://www.w3schools.com/tryit/){:target="_blank"}
