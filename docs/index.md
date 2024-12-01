@@ -12,17 +12,21 @@
     -  [Présentation de l'algorithme de Gale-Shapley](https://glassus.github.io/terminale_nsi/T7_Divers/11_parcoursup/cours/){. target="_blank"}
 #}
 
-{#
+
 !!! abstract "Actualités"
-    - [Page sur l'orientation post-Bac](https://glassus.github.io/terminale_nsi/T7_Divers/10_orientation/cours/){. target="_blank"}
-#}
+    Décembre est le mois d'[Advent of Code](https://adventofcode.com/2024){. target="_blank"} !
+    ![image](data/aoc2024.png){: .center width=20%}
+    
+    - [Conseils pour bien démarrer](https://glassus.github.io/terminale_nsi/T7_Divers/9_AOC/cours/){. target="_blank"}
 
 
 
-{#
-- [DS05](data/DS05_listes1_1NSI_2024.pdf){. target="_blank"}
-- [DS05 correction](data/DS05_listes1_1NSI_2024_corr.pdf){.target="_blank"}
-#}
+
+
+- [DS06](data/DS06_listes2_1NSI_2024.pdf){. target="_blank"}
+- [DS05 correction](data/DS06_listes2_1NSI_2024_corr.pdf){.target="_blank"}
+
+
 
 ## Thèmes en cours d'étude :
 - [Interactions sur une page web](./T6_IHM_Web/6.1_Interactions_page_web/cours/)
