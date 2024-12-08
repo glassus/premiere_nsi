@@ -211,8 +211,11 @@ La puissance du JavaScript permet de réaliser aujourd'hui des interfaces utilis
 
 
 !!! note "Exercice 5"
-    - Reprenez votre page créée aux exercices précédents et rajoutez du JavaScript pour la rendre dynamique. Vous êtes libres !
+    Reprenez votre page créée aux exercices précédents et rajoutez du JavaScript pour la rendre dynamique. Vous êtes libres !
 
+    Vous pouvez vous aider d'une IA, par exemple [perplexity.ai](https://www.perplexity.ai/){. target="_blank"}.
+    
+    Vous pouvez commencer par lui demander des choses simples (comment faire un message d'alerte, par exemple), puis aller vers des choses plus complexes (comment faire une calculatrice). N'oubliez pas, le but est de **comprendre** le code donné par l'IA. Vous pouvez d'ailleurs lui demander de vous l'expliquer !
 
 
 
