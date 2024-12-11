@@ -23,13 +23,15 @@
 
 
 
-
+{#
 - [DS06](data/DS06_listes2_1NSI_2024.pdf){. target="_blank"}
 - [DS06 correction](data/DS06_listes2_1NSI_2024_corr.pdf){.target="_blank"}
-
+#}
 
 
 ## Thèmes en cours d'étude :
+- [Mise en place du serveur de pages personnelles](./T6_IHM_Web/pagesperso/)
+- [Protocole ```http``` ](./T6_IHM_Web/6.2_Protocole_HTTP/cours/)
 - [Interactions sur une page web](./T6_IHM_Web/6.1_Interactions_page_web/cours/)
 
 
