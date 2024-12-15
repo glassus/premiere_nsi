@@ -30,6 +30,7 @@
 
 
 ## Thèmes en cours d'étude :
+- [Requêtes GET et POST ](./T6_IHM_Web/6.3_Get_Post_Formulaires/cours/)
 - [Mise en place du serveur de pages personnelles](./T6_IHM_Web/pagesperso/)
 - [Protocole ```http``` ](./T6_IHM_Web/6.2_Protocole_HTTP/cours/)
 - [Interactions sur une page web](./T6_IHM_Web/6.1_Interactions_page_web/cours/)
