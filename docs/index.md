@@ -30,6 +30,7 @@
 
 
 ## Thèmes en cours d'étude :
+- [Architecture réseau](./T3_Architecture_materielle/3.3_Architecture_reseau/cours/)
 - [Requêtes GET et POST ](./T6_IHM_Web/6.3_Get_Post_Formulaires/cours/)
 - [Mise en place du serveur de pages personnelles](./T6_IHM_Web/pagesperso/)
 - [Protocole ```http``` ](./T6_IHM_Web/6.2_Protocole_HTTP/cours/)
