@@ -4334,7 +4334,7 @@ On les appelle <em>listes</em> en Python, ou bien <em>tableaux</em> de manière 
 </div>
 <p>On peut observer le type de la variable ainsi créée :
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">maliste</span><span class="p">)</span>
-<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">list</span><span class="s1">&#39;&gt;</span>
+<span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="err">&#39;</span><span class="nc">list</span><span class="s1">&#39;&gt;</span>
 </code></pre></div></p>
 <p><strong>Remarques :</strong></p>
 <ul>
@@ -4738,7 +4738,7 @@ Il est possible de faire comme ceci :</p>
 <p>Que fait le code ci-dessous ?
 <div class="highlight"><pre><span></span><code><span class="n">texte</span> <span class="o">=</span> <span class="s2">&quot;cet texte est prodigieusement ennuyeux&quot;</span>
 
-<span class="k">def</span> <span class="nf">rang</span><span class="p">(</span><span class="n">lettre</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">rang</span><span class="p">(</span><span class="n">lettre</span><span class="p">):</span>
     <span class="k">return</span> <span class="nb">ord</span><span class="p">(</span><span class="n">lettre</span><span class="p">)</span> <span class="o">-</span> <span class="mi">97</span>
 
 <span class="n">compt</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">26</span>
@@ -4832,7 +4832,7 @@ Les listes en compréhension deviennent encore plus intéressantes lorsqu'on com
 <details class="success">
 <summary>Correction</summary>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">3</span>
 </code></pre></div></td></tr></table></div>
 </details>
@@ -4842,7 +4842,7 @@ Les listes en compréhension deviennent encore plus intéressantes lorsqu'on com
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">3</span>
 
 <span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)]</span>

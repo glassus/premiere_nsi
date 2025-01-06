@@ -4259,7 +4259,7 @@
 <h3 id="11-a-distance-pas-de-microbit-le-simulateur-est-la">1.1 À distance ? Pas de micro:bit ? le simulateur est là !<a class="headerlink" href="#11-a-distance-pas-de-microbit-le-simulateur-est-la" title="Permanent link">⚓︎</a></h3>
 <p>Rendez-vous sur la page <a href="https://create.withcode.uk/">https://create.withcode.uk/</a></p>
 <p>Effacez le code existant et collez-le code ci-dessous :</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s1">&#39;Hello, World!&#39;</span><span class="p">)</span>
@@ -4283,17 +4283,17 @@
 <p><a href="https://youtu.be/qqBmvHD5bCw">voir vidéo explicative (en anglais)</a></p>
 <p>LED signifie Light Emitting Diode, Diode électroluminescente. La carte micro:bit en dispose de 25, toutes programmables individuellement, ce qui permet d'afficher du texte, des nombres et des images.</p>
 <h4 id="211-afficher-un-texte-defilant-displayscrollstring-delay400">2.1.1 Afficher un texte "défilant" <code>display.scroll(string, delay=400)</code><a class="headerlink" href="#211-afficher-un-texte-defilant-displayscrollstring-delay400" title="Permanent link">⚓︎</a></h4>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;NSI&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>La première ligne de ce programme importe la bibliothèque de fonctions micro:bit. La deuxième ligne fait défiler un message à l’écran. Cela n'arrive qu'une seule fois.</p>
 <p>La vitesse de défilement peut être ralentie ou accélérée à l'aide du paramètre <code>delay</code>. L'unité est la milliseconde.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;mauriac&quot;</span><span class="p">,</span> <span class="n">delay</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
 </code></pre></div>
 <h4 id="212-afficher-une-image-displayshowimage">2.1.2 Afficher une "image" <code>display.show(image)</code><a class="headerlink" href="#212-afficher-une-image-displayshowimage" title="Permanent link">⚓︎</a></h4>
 <p>Exécuter le programme suivant:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">SAD</span><span class="p">)</span>
 </code></pre></div>
 <details class="note">
@@ -4365,7 +4365,7 @@ Image.SNAKE
 </details>
 <h4 id="creer-sa-propre-image">Créer sa propre image<a class="headerlink" href="#creer-sa-propre-image" title="Permanent link">⚓︎</a></h4>
 <p>Chaque pixel LED sur l’affichage physique peut prendre une parmi dix valeurs. Si un pixel prend la valeur 0 c’est qu’il est éteint. Littéralement, il a une luminosité de zéro. En revanche, s’il prend la valeur 9 il est à la luminosité maximale. Les valeurs de 1 à 8 représentent des niveaux de luminosité entre éteint (0) et « au maximum » (9).</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">bateau</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="s2">&quot;05050:&quot;</span>
                <span class="s2">&quot;05050:&quot;</span>
@@ -4379,7 +4379,7 @@ Image.SNAKE
 <h3 id="213-les-pixels-displayset_pixelx-y-val">2.1.3 Les pixels (<code>display.set_pixel(x, y, val)</code>)<a class="headerlink" href="#213-les-pixels-displayset_pixelx-y-val" title="Permanent link">⚓︎</a></h3>
 <p>Vous pouvez régler la luminosité des pixels de l'affichage individuellement de 0 (désactivé) à 9 (luminosité maximale). Pour des informations sur les coordonnées de l'affichage, voir le <a href="https://microbit.org/guide/hardware/leds/">guide pour matrice à LED</a>.</p>
 <p>Exécuter le programme suivant:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="n">display</span><span class="o">.</span><span class="n">set_pixel</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="22-boucle-while">2.2 Boucle <code>while</code><a class="headerlink" href="#22-boucle-while" title="Permanent link">⚓︎</a></h3>
@@ -4387,7 +4387,7 @@ Image.SNAKE
 <p>L'instruction de veille <code>sleep()</code> provoque la pause du micro:bit pendant un nombre défini de millisecondes choisi entre parenthèses.</p>
 <p>L'instruction <code>display.clear()</code> éteint l'affichage.</p>
 <p>Exécuter le programme ci-dessous:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">display</span><span class="o">.</span><span class="n">set_pixel</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
     <span class="n">sleep</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
@@ -4396,8 +4396,8 @@ Image.SNAKE
 </code></pre></div>
 <h4 id="avec-un-peu-daleatoire-voir-documentation-sur-le-hasard">Avec un peu d'aléatoire  (voir <a href="https://microbit-micropython.readthedocs.io/fr/latest/tutorials/random.html">documentation sur le hasard</a>)<a class="headerlink" href="#avec-un-peu-daleatoire-voir-documentation-sur-le-hasard" title="Permanent link">⚓︎</a></h4>
 <p>Dans le programme suivant que vous exécuterez, on importe <code>randint</code> du module <code>random</code> de MicroPython et on l'utilise pour afficher un pixel au hasard sur la matrice.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">randint</span>
 <span class="n">n</span><span class="o">=</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
 <span class="n">p</span><span class="o">=</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
 <span class="n">display</span><span class="o">.</span><span class="n">set_pixel</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
@@ -4405,7 +4405,7 @@ Image.SNAKE
 <p>Tester le programme précédent plusieurs fois de suite. Pour cela, redémarrer la micro:bit en appuyant sur le bouton <code>RESET</code> situé à l'arrière de la carte.</p>
 <h3 id="23-boucle-for">2.3 Boucle <code>for</code><a class="headerlink" href="#23-boucle-for" title="Permanent link">⚓︎</a></h3>
 <p>Le programme suivant utilise une boucle <code>for</code> pour faire défiler un pixel sur une ligne. Exécutez-le.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
         <span class="n">display</span><span class="o">.</span><span class="n">set_pixel</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
@@ -4419,7 +4419,7 @@ Image.SNAKE
 - <code>button_a.is_pressed()</code>: renvoie <em>True</em> si le bouton spécifié est actuellement enfoncé et <em>False</em> sinon.
 - <code>button_a.was_pressed()</code>: renvoie <em>True</em> ou <em>False</em> pour indiquer si le bouton a été appuyé depuis le démarrage de l'appareil ou la dernière fois que cette méthode a été appelée.</p>
 <p><strong>Exemple :</strong> Essayer le programme suivant qui fait défiler le texte "NSI" indéfiniment. On introduit l'<strong>instruction conditionnelle</strong> <code>if</code> qui va tester si le bouton A a été pressé (pendant le défilement du texte ou pendant la pause), auquel cas le programme s'arrête en exécutant la commande <code>break</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;NSI&quot;</span><span class="p">)</span>
     <span class="n">sleep</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
@@ -4435,7 +4435,7 @@ Image.SNAKE
 <p><img alt="" class="center" src="../data/exo1.webp" /></p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="n">display</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">button_a</span><span class="o">.</span><span class="n">was_pressed</span><span class="p">():</span>
@@ -4455,7 +4455,7 @@ Image.SNAKE
 <p>On veut créer le code permettant de déplacer un point vers la gauche ou vers la droite en appuyant sur A ou sur B.</p>
 <p><img alt="" class="center" src="../data/exo2.webp" /></p>
 <p>Compléter le code proposé :</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="n">display</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 <span class="n">i</span> <span class="o">=</span> <span class="mi">12</span>
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
@@ -4487,7 +4487,7 @@ Image.SNAKE
 Bouton B pour passer à l'image suivante, bouton A pour revenir à l'image précédente.</p>
 <p><img alt="" class="center" src="../data/exo3.webp" /></p>
 <p>Compléter le code proposé :</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="n">Image</span><span class="o">.</span><span class="n">HEART</span><span class="p">,</span> <span class="n">Image</span><span class="o">.</span><span class="n">HEART_SMALL</span><span class="p">,</span> <span class="n">Image</span><span class="o">.</span><span class="n">HAPPY</span><span class="p">,</span> <span class="n">Image</span><span class="o">.</span><span class="n">SMILE</span><span class="p">,</span>
        <span class="n">Image</span><span class="o">.</span><span class="n">SAD</span><span class="p">,</span> <span class="n">Image</span><span class="o">.</span><span class="n">CONFUSED</span><span class="p">,</span> <span class="n">Image</span><span class="o">.</span><span class="n">ANGRY</span><span class="p">,</span> <span class="n">Image</span><span class="o">.</span><span class="n">ASLEEP</span><span class="p">,</span> <span class="n">Image</span><span class="o">.</span><span class="n">SURPRISED</span><span class="p">,</span> <span class="n">Image</span><span class="o">.</span><span class="n">SILLY</span><span class="p">,</span>
@@ -4511,7 +4511,7 @@ Bouton B pour passer à l'image suivante, bouton A pour revenir à l'image préc
 <p>En inversant les LEDs d'un écran pour devenir un point d'entrée, l'écran LED devient un capteur de lumière basique, permettant de détecter la luminosité ambiante.</p>
 <p>La commande <code>display.read_light_level()</code> retourne un entier compris entre 0 et 255 représentant le niveau de lumière.</p>
 <p><strong>Exercice :</strong> Compléter le programme ci-dessous qui affiche une image de lune si on baisse la luminosité (en recouvrant la carte avec sa main par exemple) et un soleil sinon.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">soleil</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="s2">&quot;90909:&quot;</span>
                <span class="s2">&quot;09990:&quot;</span>
@@ -4547,7 +4547,7 @@ L'instruction <code>temperature()</code> renvoie la température de la carte mic
 </ul>
 <p>Dans l'exemple suivant à essayer, l'instruction <code>accelerometer.get_x()</code> permet de détecter un mouvement de gauche à droite en renvoyant un nombre compris entre -1023 et 1023; 0 étant la position "d'équilibre"</p>
 <div class="highlight"><pre><span></span><code><span class="c1">#Exemple</span>
-<span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">abscisse</span> <span class="o">=</span> <span class="n">accelerometer</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span>
@@ -4574,7 +4574,7 @@ L'instruction <code>temperature()</code> renvoie la température de la carte mic
 <p>La boussole détecte le champ magnétique de la Terre, nous permettant de savoir quelle direction la micro:bit indique. La boussole doit être étalonnée avant de pouvoir être utilisée. Pour cela, on utilise <code>compass.calibrate()</code> qui exécute un petit jeu: au départ, micro:bit fait défiler "Tilt to fill screen". Ensuite, incliner micro:bit pour déplacer le point au centre de l’écran autour jusqu'à ce que vous ayez rempli la totalité de l’écran.</p>
 <p>La fonction <code>compass.heading()</code> donne le cap de la boussole sous la forme d'un entier compris entre 0 et 360, représentant l'angle en degrés, dans le sens des aiguilles d'une montre, avec le nord égal à 0.</p>
 <p><strong>Exercice :</strong> Compléter le programme suivant qui indique le Nord.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">compass</span><span class="o">.</span><span class="n">calibrate</span><span class="p">()</span>
 

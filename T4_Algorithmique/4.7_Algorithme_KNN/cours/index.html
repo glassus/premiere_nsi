@@ -4240,7 +4240,7 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="n">poids</span><span class="p">,</span> <span class="n">taille</span><span class="p">,</span> <span class="n">player</span><span class="p">):</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">distance</span><span class="p">(</span><span class="n">poids</span><span class="p">,</span> <span class="n">taille</span><span class="p">,</span> <span class="n">player</span><span class="p">):</span>
     <span class="n">p</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">player</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span>
     <span class="n">t</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">player</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">])</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">poids</span><span class="o">-</span><span class="n">p</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">taille</span><span class="o">-</span><span class="n">t</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
@@ -4285,7 +4285,7 @@
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">classement_k_joueurs</span><span class="p">(</span><span class="n">poids</span><span class="p">,</span> <span class="n">taille</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">classement_k_joueurs</span><span class="p">(</span><span class="n">poids</span><span class="p">,</span> <span class="n">taille</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
     <span class="n">couples</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">player</span> <span class="ow">in</span> <span class="n">joueurs</span><span class="p">:</span>
         <span class="n">couples</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">player</span><span class="p">,</span> <span class="n">distance</span><span class="p">(</span><span class="n">poids</span><span class="p">,</span> <span class="n">taille</span><span class="p">,</span> <span class="n">player</span><span class="p">)))</span>
@@ -4317,7 +4317,7 @@
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">occurence</span><span class="p">(</span><span class="n">joueurs</span><span class="p">):</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">occurence</span><span class="p">(</span><span class="n">joueurs</span><span class="p">):</span>
     <span class="n">occ</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="k">for</span> <span class="n">player</span> <span class="ow">in</span> <span class="n">joueurs</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">player</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="n">occ</span><span class="p">:</span>
@@ -4349,7 +4349,7 @@
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">cle_max</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">cle_max</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
     <span class="n">maxi</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">d</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">maxi</span><span class="p">:</span>
@@ -4381,7 +4381,7 @@
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">conseil_poste</span><span class="p">(</span><span class="n">poids</span><span class="p">,</span> <span class="n">taille</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">conseil_poste</span><span class="p">(</span><span class="n">poids</span><span class="p">,</span> <span class="n">taille</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
     <span class="n">joueurs_classes</span> <span class="o">=</span> <span class="n">classement_k_joueurs</span><span class="p">(</span><span class="n">poids</span><span class="p">,</span> <span class="n">taille</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
     <span class="n">dico</span> <span class="o">=</span> <span class="n">occurence</span><span class="p">(</span><span class="n">joueurs_classes</span><span class="p">)</span>
     <span class="n">poste_conseille</span> <span class="o">=</span> <span class="n">cle_max</span><span class="p">(</span><span class="n">dico</span><span class="p">)</span>

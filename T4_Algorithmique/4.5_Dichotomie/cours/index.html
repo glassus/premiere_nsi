@@ -4324,7 +4324,7 @@ Extrait de [Wikipedia](https://fr.wikipedia.org/wiki/Diviser_pour_r%C3%A9gner_(i
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_naive</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span> <span class="p">:</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche_naive</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span> <span class="p">:</span>
     <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">))</span> <span class="p">:</span>
         <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">k</span>
@@ -4408,7 +4408,7 @@ Recherchons la valeur 14 dans notre liste `lst`.
 <p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/27a1.svg" title=":arrow_right:" /> <a class="" href="../intro_cours/" target="_blank">Codes à trous</a></p>
 <div class="admonition note">
 <p class="admonition-title">Recherche dichotomique dans une liste triée <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_dichotomique</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span> <span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche_dichotomique</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span> <span class="p">:</span>
     <span class="n">indice_debut</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">indice_fin</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
     <span class="k">while</span> <span class="n">indice_debut</span> <span class="o">&lt;=</span> <span class="n">indice_fin</span> <span class="p">:</span>
@@ -4563,9 +4563,9 @@ Il y a donc 3 étapes avant de trouver la valeur cherchée.</p>
 <span class="normal">36</span>
 <span class="normal">37</span>
 <span class="normal">38</span>
-<span class="normal">39</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+<span class="normal">39</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 
-<span class="k">def</span> <span class="nf">recherche_dichotomique</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span> <span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">recherche_dichotomique</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span> <span class="p">:</span>
     <span class="n">indice_debut</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">indice_fin</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
     <span class="k">while</span> <span class="n">indice_debut</span> <span class="o">&lt;=</span> <span class="n">indice_fin</span> <span class="p">:</span>
@@ -4579,7 +4579,7 @@ Il y a donc 3 étapes avant de trouver la valeur cherchée.</p>
             <span class="n">indice_fin</span> <span class="o">=</span> <span class="n">indice_centre</span> <span class="o">-</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="kc">None</span>
 
-<span class="k">def</span> <span class="nf">recherche_naive</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span> <span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">recherche_naive</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span> <span class="p">:</span>
     <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">))</span> <span class="p">:</span>
         <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">k</span>
@@ -4587,7 +4587,7 @@ Il y a donc 3 étapes avant de trouver la valeur cherchée.</p>
 
 
 
-<span class="k">def</span> <span class="nf">mesures</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">mesures</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
     <span class="n">val</span> <span class="o">=</span> <span class="n">n</span>
     <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>

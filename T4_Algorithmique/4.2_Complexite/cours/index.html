@@ -4246,14 +4246,14 @@ Si un employé B met 20 secondes par enveloppe, on aura <span class="arithmatex"
 <p>Dans <strong>les deux cas</strong> l'algorithme a la même complexité (linéaire donc). Ce qui compte est le fait que pour chacun des employés, <strong>avoir deux fois plus d'enveloppes prendrait deux fois plus de temps</strong>.</p>
 <h3 id="14-verification-experimentale">1.4 Vérification expérimentale<a class="headerlink" href="#14-verification-experimentale" title="Permanent link">⚓︎</a></h3>
 <p>On considère la fonction ci-dessous :</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">fabrique</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">fabrique</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">liste</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
         <span class="n">liste</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;ok&quot;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">liste</span>
 </code></pre></div>
 <p>Le code ci-dessous va mesurer le temps d'exécution de cette fonction avec deux paramètres différents : la valeur 400 puis la valeur 800.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 <span class="n">lstA</span> <span class="o">=</span> <span class="n">fabrique</span><span class="p">(</span><span class="mi">400</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;temps pour une liste de taille 400 :&quot;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span>
@@ -4297,13 +4297,13 @@ Combien de temps cela va-t-il vous prendre pour tondre le terrain de votre voisi
 <p>Les algorithmes quadratiques sont moins «intéressants» que les algorithmes linéaires, car ils vont consommer beaucoup plus de ressources. Lors de l'élaboration d'un algorithme, on va toujours essayer de trouver l'algorithme ayant la complexité la plus faible possible.</p>
 <h3 id="23-verification-experimentale">2.3 Vérification expérimentale<a class="headerlink" href="#23-verification-experimentale" title="Permanent link">⚓︎</a></h3>
 <p>Effectuer des mesures de temps d'exécution pour la fonction ci-dessous :</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">tables</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">tables</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
             <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
 </code></pre></div>
 <p>Le code ci-dessous va mesurer le temps d'exécution de cette fonction avec deux paramètres différents : la valeur 100 puis la valeur 200.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 <span class="n">tables</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;temps pour n = 100 :&quot;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span>

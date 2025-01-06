@@ -4293,7 +4293,7 @@ Exemple : <span class="arithmatex">\(13_{10}=1101_2=\rm{D}_{16}\)</span></p>
 <span class="normal">13</span>
 <span class="normal">14</span>
 <span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">restes_successifs</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">restes_successifs</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39; renvoie la liste des restes successifs lors des divisions de n par 2&#39;&#39;&#39;</span>
     <span class="n">restes</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">while</span> <span class="n">n</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">:</span>
@@ -4301,7 +4301,7 @@ Exemple : <span class="arithmatex">\(13_{10}=1101_2=\rm{D}_{16}\)</span></p>
         <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">//</span> <span class="mi">2</span>
     <span class="k">return</span> <span class="n">restes</span>
 
-<span class="k">def</span> <span class="nf">binaire</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">binaire</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">:</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39; recompose le mot binaire en mettant dans l&#39;ordre les restes successifs&#39;&#39;&#39;</span>
     <span class="n">liste</span> <span class="o">=</span> <span class="n">restes_successifs</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
     <span class="n">liste</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span> <span class="c1">#permet d&#39;inverser l&#39;ordre des élément d&#39;une liste</span>

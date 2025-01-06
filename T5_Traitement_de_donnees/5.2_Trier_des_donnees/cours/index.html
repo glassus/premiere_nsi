@@ -4180,7 +4180,7 @@
 <h1 id="52-trier-des-donnees">5.2 Trier des données<a class="headerlink" href="#52-trier-des-donnees" title="Permanent link">⚓︎</a></h1>
 <p><img alt="image" class="center" src="../data/BO.png" /></p>
 <p>Nous reprenons notre fichier de joueurs de rugby du Top14. : <a href="../../data/top14.csv"><code>top14.csv</code></a></p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">csv</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
 <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;top14.csv&#39;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
 <span class="n">donnees</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 <span class="n">joueurs</span> <span class="o">=</span> <span class="p">[]</span>
@@ -4199,7 +4199,7 @@
 </code></pre></div>
 <details class="success">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">joueursEquipe</span><span class="p">(</span><span class="n">equipe</span><span class="p">):</span>      
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">joueursEquipe</span><span class="p">(</span><span class="n">equipe</span><span class="p">):</span>      
     <span class="k">return</span> <span class="p">[</span><span class="n">player</span> <span class="k">for</span> <span class="n">player</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="k">if</span> <span class="n">player</span><span class="p">[</span><span class="s1">&#39;Equipe&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">equipe</span><span class="p">]</span>
 </code></pre></div>
 </details>
@@ -4213,7 +4213,7 @@
 </code></pre></div></p>
 <details class="success">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">joueursPoste</span><span class="p">(</span><span class="n">poste</span><span class="p">):</span>      
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">joueursPoste</span><span class="p">(</span><span class="n">poste</span><span class="p">):</span>      
     <span class="k">return</span> <span class="p">[</span><span class="n">player</span> <span class="k">for</span> <span class="n">player</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="k">if</span> <span class="n">player</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">poste</span><span class="p">]</span>
 </code></pre></div>
 </details>
@@ -4250,7 +4250,7 @@ Ici, plusieurs clés peuvent être des critères de tri : la taille, le poids.</
            <span class="p">{</span><span class="s2">&quot;Prenom&quot;</span> <span class="p">:</span> <span class="s2">&quot;Homer&quot;</span><span class="p">,</span> <span class="s2">&quot;age estimé&quot;</span><span class="p">:</span> <span class="s2">&quot;38&quot;</span><span class="p">},</span>
            <span class="p">{</span><span class="s2">&quot;Prenom&quot;</span> <span class="p">:</span> <span class="s2">&quot;Marge&quot;</span><span class="p">,</span> <span class="s2">&quot;age estimé&quot;</span><span class="p">:</span> <span class="s2">&quot;37&quot;</span><span class="p">}]</span>
 
-<span class="k">def</span> <span class="nf">age</span><span class="p">(</span><span class="n">personnage</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">age</span><span class="p">(</span><span class="n">personnage</span><span class="p">):</span>
     <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">personnage</span><span class="p">[</span><span class="s2">&quot;age estimé&quot;</span><span class="p">])</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">age</span><span class="p">(</span><span class="n">Simpsons</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -4283,7 +4283,7 @@ Ici, plusieurs clés peuvent être des critères de tri : la taille, le poids.</
 <p>Trier les joueurs du Top14 par taille.</p>
 <details class="success">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">taillePlayer</span><span class="p">(</span><span class="n">player</span><span class="p">)</span> <span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">taillePlayer</span><span class="p">(</span><span class="n">player</span><span class="p">)</span> <span class="p">:</span>
     <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">player</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">])</span>
 
 <span class="n">joueurs_taille_croissant</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">joueurs</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">taillePlayer</span><span class="p">)</span>
@@ -4295,7 +4295,7 @@ Ici, plusieurs clés peuvent être des critères de tri : la taille, le poids.</
 <p>Trier les joueurs du Top14 par poids.</p>
 <details class="success">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">poidsPlayer</span><span class="p">(</span><span class="n">player</span><span class="p">)</span> <span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">poidsPlayer</span><span class="p">(</span><span class="n">player</span><span class="p">)</span> <span class="p">:</span>
     <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">player</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span>
 
 <span class="n">joueurs_poids_croissant</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">joueurs</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">poidsPlayer</span><span class="p">)</span>
@@ -4307,7 +4307,7 @@ Ici, plusieurs clés peuvent être des critères de tri : la taille, le poids.</
 <p>Trier les joueurs de Bordeaux suivant leur Indice de Masse Corporelle (<a class="" href="https://fr.wikipedia.org/wiki/Indice_de_masse_corporelle" target="_blank">IMC</a> )    </p>
 <details class="success">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">IMC</span><span class="p">(</span><span class="n">player</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">IMC</span><span class="p">(</span><span class="n">player</span><span class="p">):</span>
     <span class="n">masse</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">player</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span>
     <span class="n">taille_m</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">player</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">])</span> <span class="o">/</span> <span class="mi">100</span>
     <span class="k">return</span> <span class="n">masse</span> <span class="o">/</span> <span class="n">taille_m</span><span class="o">**</span><span class="mi">2</span>
@@ -4337,7 +4337,7 @@ Ici, plusieurs clés peuvent être des critères de tri : la taille, le poids.</
 <p><span class="arithmatex">\((102-90)^2+(190-180)^2=244\)</span></p>
 <details class="success">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="n">joueur1</span><span class="p">,</span><span class="n">joueur2</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">distance</span><span class="p">(</span><span class="n">joueur1</span><span class="p">,</span><span class="n">joueur2</span><span class="p">):</span>
     <span class="n">p1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">joueur1</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span>
     <span class="n">p2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">joueur2</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span>
     <span class="n">t1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">joueur1</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">])</span>
@@ -4371,7 +4371,7 @@ Ici, plusieurs clés peuvent être des critères de tri : la taille, le poids.</
 </code></pre></div>
 <details class="success">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">distanceSerin</span><span class="p">(</span><span class="n">joueur</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">distanceSerin</span><span class="p">(</span><span class="n">joueur</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">distance</span><span class="p">(</span><span class="n">joueurs</span><span class="p">[</span><span class="mi">530</span><span class="p">],</span> <span class="n">joueur</span><span class="p">)</span>
 </code></pre></div>
 </details>

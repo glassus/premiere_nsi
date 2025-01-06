@@ -4204,7 +4204,7 @@
 <h3 id="11-a-distance-pas-de-microbit-le-simulateur-est-la">1.1 À distance ? Pas de micro:bit ? le simulateur est là !<a class="headerlink" href="#11-a-distance-pas-de-microbit-le-simulateur-est-la" title="Permanent link">⚓︎</a></h3>
 <p>Rendez-vous sur la page <a class="" href="https://python.microbit.org/v/3" target="_blank">https://python.microbit.org/v/3</a></p>
 <p>Effacez le code existant et collez-le code ci-dessous :</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s1">&#39;Hello, World!&#39;</span><span class="p">)</span>
@@ -4228,17 +4228,17 @@
 <p><a class="" href="https://youtu.be/qqBmvHD5bCw" target="_blank">voir vidéo explicative (en anglais)</a></p>
 <p>LED signifie Light Emitting Diode, Diode électroluminescente. La carte micro:bit en dispose de 25, toutes programmables individuellement, ce qui permet d'afficher du texte, des nombres et des images.</p>
 <h4 id="211-afficher-un-texte-defilant-displayscrollstring-delay400">2.1.1 Afficher un texte "défilant" <code>display.scroll(string, delay=400)</code><a class="headerlink" href="#211-afficher-un-texte-defilant-displayscrollstring-delay400" title="Permanent link">⚓︎</a></h4>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;NSI&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>La première ligne de ce programme importe la bibliothèque de fonctions micro:bit. La deuxième ligne fait défiler un message à l’écran. Cela n'arrive qu'une seule fois.</p>
 <p>La vitesse de défilement peut être ralentie ou accélérée à l'aide du paramètre <code>delay</code>. L'unité est la milliseconde.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;mauriac&quot;</span><span class="p">,</span> <span class="n">delay</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
 </code></pre></div>
 <h4 id="212-afficher-une-image-displayshowimage">2.1.2 Afficher une "image" <code>display.show(image)</code><a class="headerlink" href="#212-afficher-une-image-displayshowimage" title="Permanent link">⚓︎</a></h4>
 <p>Exécuter le programme suivant:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">SAD</span><span class="p">)</span>
 </code></pre></div>
 <details class="note">
@@ -4344,7 +4344,7 @@ On utilisera la liste
 <span class="normal">15</span>
 <span class="normal">16</span>
 <span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="n">Image</span><span class="o">.</span><span class="n">HEART</span><span class="p">,</span> <span class="n">Image</span><span class="o">.</span><span class="n">HEART_SMALL</span><span class="p">,</span> <span class="n">Image</span><span class="o">.</span><span class="n">HAPPY</span><span class="p">,</span> <span class="n">Image</span><span class="o">.</span><span class="n">SMILE</span><span class="p">,</span>
     <span class="n">Image</span><span class="o">.</span><span class="n">SAD</span><span class="p">,</span> <span class="n">Image</span><span class="o">.</span><span class="n">CONFUSED</span><span class="p">,</span> <span class="n">Image</span><span class="o">.</span><span class="n">ANGRY</span><span class="p">,</span> <span class="n">Image</span><span class="o">.</span><span class="n">ASLEEP</span><span class="p">,</span> <span class="n">Image</span><span class="o">.</span><span class="n">SURPRISED</span><span class="p">,</span> <span class="n">Image</span><span class="o">.</span><span class="n">SILLY</span><span class="p">,</span>
@@ -4367,7 +4367,7 @@ On utilisera la liste
 </div>
 <h4 id="creer-sa-propre-image">Créer sa propre image<a class="headerlink" href="#creer-sa-propre-image" title="Permanent link">⚓︎</a></h4>
 <p>Chaque pixel LED sur l’affichage physique peut prendre une parmi dix valeurs. Si un pixel prend la valeur 0 c’est qu’il est éteint. Littéralement, il a une luminosité de zéro. En revanche, s’il prend la valeur 9 il est à la luminosité maximale. Les valeurs de 1 à 8 représentent des niveaux de luminosité entre éteint (0) et « au maximum » (9).</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">bateau</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="s2">&quot;05050:&quot;</span>
                <span class="s2">&quot;05050:&quot;</span>
@@ -4380,7 +4380,7 @@ On utilisera la liste
 <h3 id="213-les-pixels-displayset_pixelx-y-val">2.1.3 Les pixels (<code>display.set_pixel(x, y, val)</code>)<a class="headerlink" href="#213-les-pixels-displayset_pixelx-y-val" title="Permanent link">⚓︎</a></h3>
 <p>Vous pouvez régler la luminosité des pixels de l'affichage individuellement de 0 (désactivé) à 9 (luminosité maximale). Pour des informations sur les coordonnées de l'affichage, voir le <a class="" href="https://microbit.org/guide/hardware/leds/" target="_blank">guide pour matrice à LED</a>.</p>
 <p>Exécuter le programme suivant:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="n">display</span><span class="o">.</span><span class="n">set_pixel</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
 </code></pre></div>
 <div class="admonition abstract">
@@ -4394,7 +4394,7 @@ On utilisera la liste
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">display</span><span class="o">.</span><span class="n">set_pixel</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
@@ -4420,8 +4420,8 @@ Par exemple, l'instruction <code>randint(2, 8)</code> va renvoyer un nombre (pse
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">randint</span>
 
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
@@ -4441,7 +4441,7 @@ Par exemple, l'instruction <code>randint(2, 8)</code> va renvoyer un nombre (pse
 <li><code>button_a.was_pressed()</code>: renvoie <em>True</em> ou <em>False</em> pour indiquer si le bouton a été appuyé depuis le démarrage de l'appareil ou la dernière fois que cette méthode a été appelée.</li>
 </ul>
 <p><strong>Exemple :</strong> Essayer le programme suivant qui fait défiler le texte "NSI" indéfiniment. Dès qu'un bouton est pressé, on sort de la boucle <code>break</code> et le programme s'achève.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;NSI&quot;</span><span class="p">)</span>
     <span class="n">sleep</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
@@ -4456,7 +4456,7 @@ Par exemple, l'instruction <code>randint(2, 8)</code> va renvoyer un nombre (pse
 <p><img alt="" class="center" src="../data/exo1.webp" />   </p>
 <details class="success">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">button_a</span><span class="o">.</span><span class="n">was_pressed</span><span class="p">():</span>
         <span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">SAD</span><span class="p">)</span>
@@ -4503,8 +4503,8 @@ Par exemple, l'instruction <code>randint(2, 8)</code> va renvoyer un nombre (pse
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">utime</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">utime</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">HAPPY</span><span class="p">)</span>
 <span class="n">t0</span> <span class="o">=</span> <span class="n">ticks_ms</span><span class="p">()</span>
@@ -4556,8 +4556,8 @@ Par exemple, l'instruction <code>randint(2, 8)</code> va renvoyer un nombre (pse
 <span class="normal">28</span>
 <span class="normal">29</span>
 <span class="normal">30</span>
-<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">randint</span>
 
 <span class="n">pierre</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="s1">&#39;09990:&#39;</span>
                <span class="s1">&#39;09009:&#39;</span>
@@ -4618,9 +4618,9 @@ Par exemple, l'instruction <code>randint(2, 8)</code> va renvoyer un nombre (pse
 <span class="normal">23</span>
 <span class="normal">24</span>
 <span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
-<span class="k">def</span> <span class="nf">move</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">move</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="n">incx</span> <span class="o">=</span> <span class="n">accelerometer</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span>
     <span class="k">if</span> <span class="n">incx</span> <span class="o">&gt;</span> <span class="mi">500</span><span class="p">:</span>
         <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
@@ -4677,8 +4677,8 @@ Par exemple, l'instruction <code>randint(2, 8)</code> va renvoyer un nombre (pse
 <span class="normal">25</span>
 <span class="normal">26</span>
 <span class="normal">27</span>
-<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">import</span> <span class="nn">radio</span>
+<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">radio</span>
 
 <span class="n">radio</span><span class="o">.</span><span class="n">on</span><span class="p">()</span>
 <span class="n">radio</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">channel</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
