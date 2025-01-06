@@ -12,7 +12,7 @@
     -  [Présentation de l'algorithme de Gale-Shapley](https://glassus.github.io/terminale_nsi/T7_Divers/11_parcoursup/cours/){. target="_blank"}
 #}
 
-
+{#
 !!! abstract "Actualités"
     Décembre est le mois d'[Advent of Code](https://adventofcode.com/2024){. target="_blank"} !
     ![image](data/aoc2024.png){: .center width=20%}
@@ -20,7 +20,7 @@
     - [Conseils pour bien démarrer](https://glassus.github.io/terminale_nsi/T7_Divers/9_AOC/cours/){. target="_blank"}
     - Vous pouvez retrouver mes solutions (quand elles existent...) à [cette adresse](https://github.com/glassus/aoc2024){. target="_blank"}
 
-
+#}
 
 
 {#
