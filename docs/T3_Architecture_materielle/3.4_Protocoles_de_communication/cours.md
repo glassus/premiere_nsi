@@ -239,7 +239,7 @@ En suivant le même principe, la machine ```192.168.1.1 ``` pourra envoyer son _
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction P3.Q1.\" 
         La ligne 2 montre que l'adresse MAC du serveur DNS est ```8A:FD:54:49:D0:CC```. 
@@ -248,7 +248,7 @@ En suivant le même principe, la machine ```192.168.1.1 ``` pourra envoyer son _
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction P3.Q2.\" 
         La couche Transport montre que le protocole utilisé est le protocole UDP. 
@@ -257,7 +257,7 @@ En suivant le même principe, la machine ```192.168.1.1 ``` pourra envoyer son _
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction P3.Q3.\" 
         Le commentaire de la couche Application indique que l'adresse IP du serveur web est ```192.168.254.201```.  
