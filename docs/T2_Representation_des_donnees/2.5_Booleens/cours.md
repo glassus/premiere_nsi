@@ -295,7 +295,7 @@ Les fonctions NAND ET NOR sont dites **universelles** : chacune d'entre elles pe
     **Q1.** Réaliser la porte AND (avec que des NAND...)
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![image](data/nand_and.png){: .center}
@@ -307,7 +307,7 @@ Les fonctions NAND ET NOR sont dites **universelles** : chacune d'entre elles pe
     **Q2.** Réaliser la porte OR (avec que des NAND...)
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![image](data/nand_or.png){: .center}
@@ -324,27 +324,30 @@ Les fonctions NAND ET NOR sont dites **universelles** : chacune d'entre elles pe
 
 
 
-!!! abstract "Exercice 4"
-    === "Énoncé"
-        Effectuer les opérations suivantes.
-        ```python
-           1011011
-        &  1010101
-        ----------
+!!! abstract "{{ exercice() }}"
+    
+    Effectuer les opérations suivantes.
+    ```python
+        1011011
+    &  1010101
+    ----------
 
 
-           1011011
-        |  1010101
-        ----------
+        1011011
+    |  1010101
+    ----------
 
 
-           1011011
-        ^  1010101
-        ----------
+        1011011
+    ^  1010101
+    ----------
 
-        ```
-        
-    === "Correction"
+    ```
+    
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python
          1011011
         &1010101
@@ -360,7 +363,12 @@ Les fonctions NAND ET NOR sont dites **universelles** : chacune d'entre elles pe
         ^1010101
         ----------
          0001110
-        ```
+        ```        
+    """
+    )
+    }}
+
+
          
 
 ### 3.5 Calculs en Python
@@ -413,7 +421,7 @@ Pour comprendre ces résultats, il faut travailler en binaire. Voici les mêmes 
 
 ### Exercice 5 : Cryptographie
 
-!!! abstract "Exercice 5"
+!!! abstract "{{ exercice() }}"
     On souhaite chiffrer (*chiffrer* est le mot utilisé en cryptographie pour *crypter*) le mot `"BONJOUR"` avec la clé `"MAURIAC"`. Le chiffrement retenu est un chiffrement par XOR, ce qui signifie qu'on va effectuer un XOR entre les deux nombres associés aux lettres.
 
     Exemple :
@@ -431,7 +439,7 @@ Pour comprendre ces résultats, il faut travailler en binaire. Voici les mêmes 
     **Q1.** Écrire une fonction ```chiffre``` qui prendra en paramètre un mot ```mot_clair``` et un mot de passe ```cle``` **de même taille** que ```mot_clair``` et qui renvoie la chaîne de caractères obtenue en XORant ```mot_clair``` avec ```cle```.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -451,7 +459,7 @@ Pour comprendre ces résultats, il faut travailler en binaire. Voici les mêmes 
     **Q2.** Chiffrer le mot `"BONJOUR"` avec la clé `"MAURIAC"`.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -466,7 +474,7 @@ Pour comprendre ces résultats, il faut travailler en binaire. Voici les mêmes 
     **Q3.** Reprendre la chaîne de caractères précédemment obtenue et la rechiffrer à nouveau avec la clé `"MAURIAC"`. Que constate-t-on ? Etait-ce prévisible ?
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -482,7 +490,7 @@ Pour comprendre ces résultats, il faut travailler en binaire. Voici les mêmes 
     **Q4.** :skull: Résoudre le Pydéfi [La clé endommagée](https://pydefis.callicode.fr/defis/MasqueJetable/txt){. target="_blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
