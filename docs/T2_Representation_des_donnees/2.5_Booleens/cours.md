@@ -329,17 +329,17 @@ Les fonctions NAND ET NOR sont dites **universelles** : chacune d'entre elles pe
     Effectuer les opérations suivantes.
     ```python
         1011011
-    &  1010101
+    &   1010101
     ----------
 
 
         1011011
-    |  1010101
+    |   1010101
     ----------
 
 
         1011011
-    ^  1010101
+    ^   1010101
     ----------
 
     ```
