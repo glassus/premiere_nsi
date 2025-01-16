@@ -4694,6 +4694,21 @@ Mais en refaisant un XOR du message chiffré avec la clé <span class="arithmate
 </ul>
 <p>Le premier caractère du mot chiffré sera donc <code>'\x0f'</code></p>
 <p><strong>Q1.</strong> Écrire une fonction <code>chiffre</code> qui prendra en paramètre un mot <code>mot_clair</code> et un mot de passe <code>cle</code> <strong>de même taille</strong> que <code>mot_clair</code> et qui renvoie la chaîne de caractères obtenue en XORant <code>mot_clair</code> avec <code>cle</code>.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">chiffre</span><span class="p">(</span><span class="n">mot_clair</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
+    <span class="n">mot_chiffre</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mot_clair</span><span class="p">)):</span>
+        <span class="n">code</span> <span class="o">=</span> <span class="nb">ord</span><span class="p">(</span><span class="n">mot_clair</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">^</span> <span class="nb">ord</span><span class="p">(</span><span class="n">cle</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">mot_chiffre</span> <span class="o">+=</span> <span class="nb">chr</span><span class="p">(</span><span class="n">code</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">mot_chiffre</span>
+</code></pre></div></td></tr></table></div>
+</details>
 <p><strong>Q2.</strong> Chiffrer le mot <code>"BONJOUR"</code> avec la clé <code>"MAURIAC"</code>.</p>
 <p><strong>Q3.</strong> Reprendre la chaîne de caractères précédemment obtenue et la rechiffrer à nouveau avec la clé <code>"MAURIAC"</code>. Que constate-t-on ? Etait-ce prévisible ?</p>
 <p><strong>Q4.</strong> <img alt="💀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f480.svg" title=":skull:" /> Résoudre le Pydéfi <a class="" href="https://pydefis.callicode.fr/defis/MasqueJetable/txt" target="_blank">La clé endommagée</a></p>
