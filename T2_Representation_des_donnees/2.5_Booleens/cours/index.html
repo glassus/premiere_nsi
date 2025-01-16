@@ -4634,6 +4634,24 @@ Mais en refaisant un XOR du message chiffré avec la clé <span class="arithmate
 <span class="o">^</span>   <span class="mi">1010101</span>
 <span class="o">----------</span>
 </code></pre></div></p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code> <span class="mi">1011011</span>
+<span class="o">&amp;</span><span class="mi">1010101</span>
+<span class="o">----------</span>
+ <span class="mi">1010001</span>
+
+ <span class="mi">1011011</span>
+<span class="o">|</span><span class="mi">1010101</span>
+<span class="o">----------</span>
+ <span class="mi">1011111</span>
+
+ <span class="mi">1011011</span>
+<span class="o">^</span><span class="mi">1010101</span>
+<span class="o">----------</span>
+ <span class="mi">0001110</span>
+</code></pre></div>
+</details>
 </div>
 <h3 id="35-calculs-en-python">3.5 Calculs en Python<a class="headerlink" href="#35-calculs-en-python" title="Permanent link">⚓︎</a></h3>
 <p>les opérateurs <code>&amp;</code>, <code>|</code> et <code>^</code> sont utilisables directement en Python</p>
