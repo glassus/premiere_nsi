@@ -345,7 +345,7 @@ Les fonctions NAND ET NOR sont dites **universelles** : chacune d'entre elles pe
     ```
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
