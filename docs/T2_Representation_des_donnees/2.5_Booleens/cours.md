@@ -439,7 +439,7 @@ Pour comprendre ces résultats, il faut travailler en binaire. Voici les mêmes 
     **Q1.** Écrire une fonction ```chiffre``` qui prendra en paramètre un mot ```mot_clair``` et un mot de passe ```cle``` **de même taille** que ```mot_clair``` et qui renvoie la chaîne de caractères obtenue en XORant ```mot_clair``` avec ```cle```.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
