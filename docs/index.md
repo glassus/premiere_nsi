@@ -30,16 +30,19 @@
 
 
 ## Thèmes en cours d'étude :
+- [Extremums et moyennes](./T4_Algorithmique/4.1_Extremums_et_moyennes/cours/)
+- [Enigme XOR](./T2_Representation_des_donnees/2.5_Booleens/enigme/)
 - [Booléens](./T2_Representation_des_donnees/2.5_Booleens/cours/)
-- [Protocoles de communication](./T3_Architecture_materielle/3.4_Protocoles_de_communication/cours/)
-- [Architecture réseau](./T3_Architecture_materielle/3.3_Architecture_reseau/cours/)
-- [Requêtes GET et POST ](./T6_IHM_Web/6.3_Get_Post_Formulaires/cours/)
-- [Mise en place du serveur de pages personnelles](./T6_IHM_Web/pagesperso/)
-- [Protocole ```http``` ](./T6_IHM_Web/6.2_Protocole_HTTP/cours/)
-- [Interactions sur une page web](./T6_IHM_Web/6.1_Interactions_page_web/cours/)
+
 
 
 !!! info "*Anciens thèmes traités*"
+    - [Protocoles de communication](./T3_Architecture_materielle/3.4_Protocoles_de_communication/cours/)
+    - [Architecture réseau](./T3_Architecture_materielle/3.3_Architecture_reseau/cours/)
+    - [Requêtes GET et POST ](./T6_IHM_Web/6.3_Get_Post_Formulaires/cours/)
+    - [Mise en place du serveur de pages personnelles](./T6_IHM_Web/pagesperso/)
+    - [Protocole ```http``` ](./T6_IHM_Web/6.2_Protocole_HTTP/cours/)
+    - [Interactions sur une page web](./T6_IHM_Web/6.1_Interactions_page_web/cours/)
     - [Listes](./T2_Representation_des_donnees/2.1_Listes/cours/) 
     - [Exercices sur les Listes](./T2_Representation_des_donnees/2.1_Listes/exercices/) 
     - [Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/cours)

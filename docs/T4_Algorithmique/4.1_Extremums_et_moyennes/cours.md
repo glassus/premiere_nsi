@@ -7,6 +7,7 @@
 
 ## 1. Algorithme de recherche de maximum
 
+{#
 !!! note "Recherche de maximum :heart:"
     ```python
     def recherche_max(tab):
@@ -17,7 +18,7 @@
                 maxi = elt
         return maxi
     ```
-
+#}
     1. On initialise le maximum avec la première valeur du tableau (surtout pas avec 0 ou «moins l'infini» !)
 
 **Utilisation :**
@@ -30,6 +31,7 @@
 
 ## 2. Algorithme de calcul de moyenne
 
+{#
 !!! note "Calcul de moyenne :heart:"
     ```python
     def moyenne(tab):
@@ -39,7 +41,7 @@
             somme += elt
         return somme / len(tab)
     ```
-
+#}
    
 **Utilisation :**
 ```python
@@ -50,6 +52,7 @@
 
 ## 3. Algorithme de recherche d'occurrence
 
+{#
 !!! note "Recherche d'occurrence :heart:"
     ```python
     def recherche_occurrence(elt, tab):
@@ -61,7 +64,7 @@
                 liste_indices.append(i)
         return liste_indices
     ```
-
+#}
    
 **Utilisation :**
 ```python
