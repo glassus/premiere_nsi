@@ -18,9 +18,9 @@
                 maxi = elt
         return maxi
     ```
-#}
-    1. On initialise le maximum avec la première valeur du tableau (surtout pas avec 0 ou «moins l'infini» !)
 
+    1. On initialise le maximum avec la première valeur du tableau (surtout pas avec 0 ou «moins l'infini» !)
+#}
 **Utilisation :**
 ```python
 >>> recherche_max([4, 3, 8, 1])
