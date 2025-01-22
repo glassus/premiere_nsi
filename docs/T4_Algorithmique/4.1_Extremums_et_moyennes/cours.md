@@ -6,7 +6,7 @@
 :arrow_right: [Activité d'introduction](../intro_cours/){. target="_blank"}
 
 ## 1. Algorithme de recherche de maximum
-
+La fonction ```recherche_max``` prend un tableau ```tab```  en entrée et renvoie la valeur maximale de ce tableau.
 
 !!! note "Recherche de maximum :heart:"
     ```python
@@ -30,6 +30,7 @@
 
 
 ## 2. Algorithme de calcul de moyenne
+La fonction ```recherche_max``` prend un tableau ```tab``` en entrée et renvoie la valeur moyenne de ce tableau.
 
 {#
 !!! note "Calcul de moyenne :heart:"
@@ -51,6 +52,9 @@
 
 
 ## 3. Algorithme de recherche d'occurrence
+
+La fonction ```recherche_occurrence``` prend un élément ```elt``` et un tableau ```tab``` en entrées et renvoie un tableau (éventuellement vide) contenant les indices d'apparition de l'élément ```elt``` dans ```tab``` .
+
 
 {#
 !!! note "Recherche d'occurrence :heart:"
