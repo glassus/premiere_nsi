@@ -30,6 +30,7 @@
 
 
 ## Thèmes en cours d'étude :
+- [Complexité](./T4_Algorithmique/4.2_Complexite/cours/)
 - [Extremums et moyennes](./T4_Algorithmique/4.1_Extremums_et_moyennes/cours/)
 - [Enigme XOR](./T2_Representation_des_donnees/2.5_Booleens/enigme/)
 - [Booléens](./T2_Representation_des_donnees/2.5_Booleens/cours/)

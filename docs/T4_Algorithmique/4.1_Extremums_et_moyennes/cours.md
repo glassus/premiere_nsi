@@ -30,7 +30,7 @@ La fonction ```recherche_max``` prend un tableau ```tab```  en entrée et renvoi
 
 
 ## 2. Algorithme de calcul de moyenne
-La fonction ```recherche_max``` prend un tableau ```tab``` en entrée et renvoie la valeur moyenne de ce tableau.
+La fonction ```moyenne``` prend un tableau ```tab``` en entrée et renvoie la valeur moyenne de ce tableau.
 
 {#
 !!! note "Calcul de moyenne :heart:"
