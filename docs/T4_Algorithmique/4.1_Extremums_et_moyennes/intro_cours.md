@@ -70,14 +70,14 @@ Utilisation :
 ```
 
 ??? note "Code à trous :star: :star: :star: :star:" 
-    !!! note "Recherche de maximum "
+    !!! note "Calcul de moyenne "
         ```python
         def moyenne(tab):
             ''' renvoie la moyenne de tab'''
         ```
 
 ??? note "Code à trous :star: :star: :star: :octicons-star-24: " 
-    !!! note "Recherche de maximum "
+    !!! note "Calcul de moyenne "
         ```python
         def moyenne(tab):
             ''' renvoie la moyenne de tab'''
@@ -88,7 +88,7 @@ Utilisation :
         ```
 
 ??? note "Code à trous :star: :star: :octicons-star-24: :octicons-star-24:"
-    !!! note "Recherche de maximum "
+    !!! note "Calcul de moyenne "
         ```python
         def moyenne(tab):
             ''' renvoie la moyenne de tab'''
@@ -100,7 +100,7 @@ Utilisation :
 
 
 ??? note "Code à trous :star: :octicons-star-24: :octicons-star-24: :octicons-star-24:"
-    !!! note "Recherche de maximum "
+    !!! note "Calcul de moyenne "
         ```python
         def moyenne(tab):
             ''' renvoie la moyenne de tab'''
