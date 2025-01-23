@@ -4154,12 +4154,34 @@
 </code></pre></div></p>
 <h2 id="2-algorithme-de-calcul-de-moyenne">2. Algorithme de calcul de moyenne<a class="headerlink" href="#2-algorithme-de-calcul-de-moyenne" title="Permanent link">⚓︎</a></h2>
 <p>La fonction <code>moyenne</code> prend un tableau <code>tab</code> en entrée et renvoie la valeur moyenne de ce tableau.</p>
+<div class="admonition note">
+<p class="admonition-title">Calcul de moyenne <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">moyenne</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; renvoie la moyenne de tab&#39;&#39;&#39;</span>
+    <span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">tab</span><span class="p">:</span>
+        <span class="n">somme</span> <span class="o">+=</span> <span class="n">elt</span>
+    <span class="k">return</span> <span class="n">somme</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+</code></pre></div>
+</div>
 <p><strong>Utilisation :</strong>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">moyenne</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
   <span class="mf">4.0</span>
 </code></pre></div></p>
 <h2 id="3-algorithme-de-recherche-doccurrence">3. Algorithme de recherche d'occurrence<a class="headerlink" href="#3-algorithme-de-recherche-doccurrence" title="Permanent link">⚓︎</a></h2>
 <p>La fonction <code>recherche_occurrence</code> prend un élément <code>elt</code> et un tableau <code>tab</code> en entrées et renvoie un tableau (éventuellement vide) contenant les indices d'apparition de l'élément <code>elt</code> dans <code>tab</code> .</p>
+<div class="admonition note">
+<p class="admonition-title">Recherche d'occurrence <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche_occurrence</span><span class="p">(</span><span class="n">elt</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; renvoie la liste (éventuellement vide)</span>
+<span class="sd">    des indices de elt dans tab&#39;&#39;&#39;</span>
+    <span class="n">liste_indices</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">elt</span><span class="p">:</span>
+            <span class="n">liste_indices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">liste_indices</span>
+</code></pre></div>
+</div>
 <p><strong>Utilisation :</strong>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_occurrence</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
 <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
