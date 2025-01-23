@@ -32,7 +32,7 @@ La fonction ```recherche_max``` prend un tableau ```tab```  en entrée et renvoi
 ## 2. Algorithme de calcul de moyenne
 La fonction ```moyenne``` prend un tableau ```tab``` en entrée et renvoie la valeur moyenne de ce tableau.
 
-{#
+
 !!! note "Calcul de moyenne :heart:"
     ```python
     def moyenne(tab):
@@ -42,7 +42,7 @@ La fonction ```moyenne``` prend un tableau ```tab``` en entrée et renvoie la va
             somme += elt
         return somme / len(tab)
     ```
-#}
+
    
 **Utilisation :**
 ```python
@@ -56,7 +56,7 @@ La fonction ```moyenne``` prend un tableau ```tab``` en entrée et renvoie la va
 La fonction ```recherche_occurrence``` prend un élément ```elt``` et un tableau ```tab``` en entrées et renvoie un tableau (éventuellement vide) contenant les indices d'apparition de l'élément ```elt``` dans ```tab``` .
 
 
-{#
+
 !!! note "Recherche d'occurrence :heart:"
     ```python
     def recherche_occurrence(elt, tab):
@@ -68,7 +68,7 @@ La fonction ```recherche_occurrence``` prend un élément ```elt``` et un tablea
                 liste_indices.append(i)
         return liste_indices
     ```
-#}
+
    
 **Utilisation :**
 ```python
