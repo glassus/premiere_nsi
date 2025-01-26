@@ -31,7 +31,7 @@ Pour toutes les valeurs, en commençant par la deuxième :
 
 - Tant qu'on trouve à gauche une valeur supérieure et qu'on n'est pas revenu à la première valeur, on échange ces deux valeurs.
 
-
+{#
 !!! note "Tri par insertion (version simple) :heart:"
     
     ```python linenums='1'
@@ -49,10 +49,9 @@ Pour toutes les valeurs, en commençant par la deuxième :
     On se positionne sur l'élément d'indice ```k```. On va faire «reculer» cet élément tant que c'est possible. On ne touche pas à ```i```. 
     3. Tant qu'on n'est pas revenu au début de la liste et qu'il y a une valeur plus grande à gauche.
     4. On échange de place avec l'élément précédent.
-    5. Notre élément est maintenant à l'indice ```k - 1```.  
-    La boucle peut continuer.
+    5. On recule.
     
-
+#}
 
 *Application :*
 
@@ -78,6 +77,7 @@ Observez l'animation ci-dessous et comparer avec la version initiale.
 
 ### 2.2 Codage de l'algorithme
 
+{#
 !!! note "Tri par insertion (version optimisée)"
     ```python linenums='1'
     def tri_insertion_v2(lst) :
@@ -99,7 +99,7 @@ Observez l'animation ci-dessous et comparer avec la version initiale.
     6. On se repositionne sur la valeur à gauche de notre valeur actuelle.
     7. On s'est arrêté quand la valeur n'était pas supérieure : on **insère** notre valeur de travail juste à droite de notre position d'arrêt.
 
-
+#}
 *Application :*
 
 
