@@ -4277,32 +4277,6 @@ Voici le fonctionnement de l'algorithme :  </p>
 <ul>
 <li>Tant qu'on trouve à gauche une valeur supérieure et qu'on n'est pas revenu à la première valeur, on échange ces deux valeurs.</li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Tri par insertion (version simple) <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">tri_insertion</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;trie en place la liste lst donnée en paramètre&#39;&#39;&#39;</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)):</span>                 <span class="c1">#(1)</span>
-        <span class="n">k</span> <span class="o">=</span> <span class="n">i</span>                                    <span class="c1">#(2)</span>
-        <span class="k">while</span> <span class="n">k</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="p">:</span>      <span class="c1">#(3)</span>
-            <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>  <span class="c1">#(4)    </span>
-            <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">-</span> <span class="mi">1</span>                            <span class="c1">#(5)   </span>
-</code></pre></div></td></tr></table></div>
-<ol>
-<li>On commence à 1 et non pas à 0.</li>
-<li>On «duplique» la variable <code>i</code> en une variable <code>k</code>.<br />
-On se positionne sur l'élément d'indice <code>k</code>. On va faire «reculer» cet élément tant que c'est possible. On ne touche pas à <code>i</code>. </li>
-<li>Tant qu'on n'est pas revenu au début de la liste et qu'il y a une valeur plus grande à gauche.</li>
-<li>On échange de place avec l'élément précédent.</li>
-<li>Notre élément est maintenant à l'indice <code>k - 1</code>.<br />
-La boucle peut continuer.</li>
-</ol>
-</div>
 <p><em>Application :</em></p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">maliste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">tri_insertion</span><span class="p">(</span><span class="n">maliste</span><span class="p">)</span>
@@ -4320,36 +4294,6 @@ La boucle peut continuer.</li>
 <li>On <strong>insère</strong> ensuite directement à sa position «la plus à gauche possible» notre valeur de travail. </li>
 </ul>
 <h3 id="22-codage-de-lalgorithme">2.2 Codage de l'algorithme<a class="headerlink" href="#22-codage-de-lalgorithme" title="Permanent link">⚓︎</a></h3>
-<div class="admonition note">
-<p class="admonition-title">Tri par insertion (version optimisée)</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">tri_insertion_v2</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="p">:</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;trie en place la liste lst donnée en paramètre&#39;&#39;&#39;</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)):</span>         <span class="c1"># (1)</span>
-        <span class="n">cle</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>                     <span class="c1"># (2)</span>
-        <span class="n">k</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span>                        <span class="c1"># (3)</span>
-        <span class="k">while</span> <span class="n">k</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">cle</span> <span class="p">:</span>  <span class="c1"># (4)</span>
-            <span class="n">lst</span><span class="p">[</span><span class="n">k</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>          <span class="c1"># (5)</span>
-            <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">-</span><span class="mi">1</span>                     <span class="c1"># (6)</span>
-        <span class="n">lst</span><span class="p">[</span><span class="n">k</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">cle</span>                 <span class="c1"># (7)</span>
-</code></pre></div></td></tr></table></div>
-<ol>
-<li>On démarre à la deuxième valeur.</li>
-<li>On stocke dans une variable <code>cle</code> notre valeur de travail</li>
-<li>On démarre l'étude des valeurs à gauche de notre valeur de travail</li>
-<li>Tant qu'on trouve une valeur supérieure à notre valeur de travail, et qu'on n'est pas revenus au début de la liste.</li>
-<li>On décale cette valeur de un rang vers la droite.</li>
-<li>On se repositionne sur la valeur à gauche de notre valeur actuelle.</li>
-<li>On s'est arrêté quand la valeur n'était pas supérieure : on <strong>insère</strong> notre valeur de travail juste à droite de notre position d'arrêt.</li>
-</ol>
-</div>
 <p><em>Application :</em></p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">maliste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">tri_insertion_v2</span><span class="p">(</span><span class="n">maliste</span><span class="p">)</span>
@@ -4437,7 +4381,7 @@ une propriété <span class="arithmatex">\(P(n)\)</span> est vraie si :</p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">30 janvier 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">26 janvier 2025</span>
   </span>
 
     
