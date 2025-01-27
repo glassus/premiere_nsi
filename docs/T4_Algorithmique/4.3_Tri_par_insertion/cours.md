@@ -61,7 +61,7 @@ Pour toutes les valeurs, en commençant par la deuxième :
 
 - Tant qu'on trouve à gauche une valeur supérieure et qu'on n'est pas revenu à la première valeur, on échange ces deux valeurs.
 
-{#
+
 !!! note "Tri par insertion (version simple) :heart:"
     
     ```python linenums='1'
@@ -81,7 +81,7 @@ Pour toutes les valeurs, en commençant par la deuxième :
     4. On échange de place avec l'élément précédent.
     5. On recule.
     
-#}
+
 
 *Application :*
 
