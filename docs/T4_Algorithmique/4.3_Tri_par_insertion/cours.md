@@ -2,6 +2,36 @@
 
 ![image](data/BO.png){: .center}
 
+![image](data/color_bars.svg){: .center width=30%}
+
+
+## Préambule
+Pourquoi étudier des algorithmes de tri ?  
+Autant ne pas le cacher, ces algorithmes sont déjà implémentés (quelque soit le langage) dans des fonctions très performantes.  
+
+En Python, on utilise la fonction `sort()` :
+
+
+
+```python
+>>> tab = [4, 8, 1, 2, 6]
+>>> tab.sort()
+>>> tab
+[1, 2, 4, 6, 8]
+
+```
+
+![image](data/meme.png){: .center width=30%}
+
+
+Le meilleur de nos futurs algorithmes de tri sera moins efficace que celui de cette fonction `sort()`...  
+Malgré cela, il est essentiel de se confronter à l'élaboration manuelle d'un algorithme de tri.  
+Le tri par sélection est le premier des deux algorithmes de tri que nous allons étudier (nous étudierons aussi le tri par insertion).  
+Ces deux algorithmes ont pour particularité de :
+
+- ne pas nécessiter la création d'une nouvelle liste. Ils modifient la liste à trier **en place**.
+- ne pas faire intervenir de fonctions complexes (comme la recherche d'un minimum par exemple)
+
 ## 0. Introduction
 :arrow_right: [Activité d'introduction](../intro_cours/){. target="_blank"}
 
