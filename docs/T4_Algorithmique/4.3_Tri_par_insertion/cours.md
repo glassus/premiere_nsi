@@ -102,12 +102,12 @@ Observez l'animation ci-dessous et comparer avec la version initiale.
 <gif-player src="https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.3_Tri_par_insertion/data/insertion2.gif" speed="1" play></gif-player>
 </center>
 
-- Au lieu d'effetuer un échange avec la valeur précédente à chaque fois qu'elle est supérieure, on va décaler vers la droite toutes les valeurs situées à gauche et supérieures à notre valeur de travail.
+- Au lieu d'effectuer un échange avec la valeur précédente à chaque fois qu'elle est supérieure, on va décaler vers la droite toutes les valeurs situées à gauche et supérieures à notre valeur de travail.
 - On **insère** ensuite directement à sa position «la plus à gauche possible» notre valeur de travail. 
 
 ### 2.2 Codage de l'algorithme
 
-{#
+
 !!! note "Tri par insertion (version optimisée)"
     ```python linenums='1'
     def tri_insertion_v2(lst) :
@@ -117,7 +117,7 @@ Observez l'animation ci-dessous et comparer avec la version initiale.
             k = i - 1                        # (3)
             while k >= 0 and lst[k] > cle :  # (4)
                 lst[k + 1] = lst[k]          # (5)
-                k = k -1                     # (6)
+                k = k - 1                     # (6)
             lst[k + 1] = cle                 # (7)
     ```
 
@@ -129,7 +129,7 @@ Observez l'animation ci-dessous et comparer avec la version initiale.
     6. On se repositionne sur la valeur à gauche de notre valeur actuelle.
     7. On s'est arrêté quand la valeur n'était pas supérieure : on **insère** notre valeur de travail juste à droite de notre position d'arrêt.
 
-#}
+
 *Application :*
 
 

@@ -30,6 +30,7 @@
 
 
 ## Thèmes en cours d'étude :
+- [Tri par sélection](./T4_Algorithmique/4.4_Tri_par_selection/cours/)
 - [Tri par insertion](./T4_Algorithmique/4.3_Tri_par_insertion/cours/) 
 - [Complexité](./T4_Algorithmique/4.2_Complexite/cours/)
 - [Extremums et moyennes](./T4_Algorithmique/4.1_Extremums_et_moyennes/cours/)

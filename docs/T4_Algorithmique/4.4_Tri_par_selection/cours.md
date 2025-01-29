@@ -45,6 +45,7 @@ Pour réaliser ceci, le travail va se faire en manipulant les indices des élém
 
 ## 3. Implémentation de l'algorithme
 
+{#
 !!! abstract "Tri par sélection :heart: :heart: :heart:"
     
     ```python linenums='1'
@@ -56,7 +57,7 @@ Pour réaliser ceci, le travail va se faire en manipulant les indices des élém
                     indice_min = k
             lst[i], lst[indice_min] = lst[indice_min], lst[i]
     ```
-    
+#}  
 
 *Vérification :*
 
@@ -121,43 +122,44 @@ Voici donc un ordre de grandeur de ce que *devraient* être les temps nécessair
 ## 4.3 Vérification expérimentale
 
 !!! example "Exercice"
-    === "Énoncé"
-        Analyser le code suivant :
-        ```python linenums='1'
-        import time
 
-        def tri_selection(lst):
-            for i in range(len(lst)-1):
-                i_min = i
-                for k in range(i+1, len(lst)):
-                    if lst[k] < lst[i_min]:
-                        i_min = k
-                lst[i_min], lst[i] = lst[i], lst[i_min]
-            
+    Analyser le code suivant :
+    ```python linenums='1'
+    import time
 
-        def mesures(n):
-            total_temps = 0
-            for _ in range(5):
-                lst = list(range(n, 0, -1)) # (1)
-                t0 = time.time()
-                tri_selection(lst)
-                delta_t = time.time() - t0
-                total_temps += delta_t
-                tps_moy = total_temps / 5
-            print(f"temps moyen pour trier une liste de taille {n} : {tps_moy}")
+    def tri_selection(lst):
+        for i in range(len(lst)-1):
+            i_min = i
+            for k in range(i+1, len(lst)):
+                if lst[k] < lst[i_min]:
+                    i_min = k
+            lst[i_min], lst[i] = lst[i], lst[i_min]
+        
 
-        ```
+    def mesures(n):
+        total_temps = 0
+        for _ in range(5):
+            lst = list(range(n, 0, -1)) # (1)
+            t0 = time.time()
+            tri_selection(lst)
+            delta_t = time.time() - t0
+            total_temps += delta_t
+            tps_moy = total_temps / 5
+        print(f"temps moyen pour trier une liste de taille {n} : {tps_moy}")
 
-        1. on se place ici dans le pire des cas : une liste initialement triée dans l'ordre décroissant. Attention, pour le tri par sélection, ces conditions initiales n'ont AUCUNE influence sur le nombre d'opérations : le temps mis sera toujours le même, quelque soit l'état initial de la liste.
+    ```
 
-        **Q1.** Essayer de confirmer les résultats théoriques du tableau précédent. On pourra travailler par exemple avec une liste initiale de taille 1000.
+    1. on se place ici dans le pire des cas : une liste initialement triée dans l'ordre décroissant. Attention, pour le tri par sélection, ces conditions initiales n'ont AUCUNE influence sur le nombre d'opérations : le temps mis sera toujours le même, quelque soit l'état initial de la liste.
 
-        **Q2.** Recommencer avec une liste déjà triée. Que constate-t-on ?
+    **Q1.** Essayer de confirmer les résultats théoriques du tableau précédent. On pourra travailler par exemple avec une liste initiale de taille 1000.
 
 
-    === "Correction"
 
-        **Q1.**
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
         ```python
         >>> mesures(10**3)
         temps moyen pour trier une liste de taille 1000 : 0.03579235076904297
@@ -169,8 +171,17 @@ Voici donc un ordre de grandeur de ce que *devraient* être les temps nécessair
 
         On retrouve (à peu près, mais plutôt bien) le facteur 4 quand la taille de la liste double, et le facteur 100 quand la taille de la liste est multipliée par 10.
 
-        **Q2.** Changeons la ligne `lst = list(range(n, 0, -1))` en `lst = list(range(n))` :
+      
+    """
+    )
+    }}
 
+    **Q2.** Recommencer avec une liste déjà triée. Que constate-t-on ?
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
         ```python
         >>> mesures(10**3)
         temps moyen pour trier une liste de taille 1000 : 0.038380765914916994
@@ -180,7 +191,11 @@ Voici donc un ordre de grandeur de ce que *devraient* être les temps nécessair
         temps moyen pour trier une liste de taille 10000 : 3.213682508468628
         ```
 
-        Les mesures sont identiques : l'état initial de la liste n'a pas d'influence.
+        Les mesures sont identiques : l'état initial de la liste n'a pas d'influence.          
+    """
+    )
+    }}
+
 
 
 
