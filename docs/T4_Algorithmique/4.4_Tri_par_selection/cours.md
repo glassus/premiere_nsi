@@ -45,7 +45,7 @@ Pour réaliser ceci, le travail va se faire en manipulant les indices des élém
 
 ## 3. Implémentation de l'algorithme
 
-{#
+
 !!! abstract "Tri par sélection :heart: :heart: :heart:"
     
     ```python linenums='1'
@@ -57,7 +57,7 @@ Pour réaliser ceci, le travail va se faire en manipulant les indices des élém
                     indice_min = k
             lst[i], lst[indice_min] = lst[indice_min], lst[i]
     ```
-#}  
+ 
 
 *Vérification :*
 
