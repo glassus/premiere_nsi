@@ -4369,7 +4369,29 @@ Le temps d'exécution dépendant du nombre d'opérations à traiter, il va évol
 <li>on se place ici dans le pire des cas : une liste initialement triée dans l'ordre décroissant. Attention, pour le tri par sélection, ces conditions initiales n'ont AUCUNE influence sur le nombre d'opérations : le temps mis sera toujours le même, quelque soit l'état initial de la liste.</li>
 </ol>
 <p><strong>Q1.</strong> Essayer de confirmer les résultats théoriques du tableau précédent. On pourra travailler par exemple avec une liste initiale de taille 1000.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">mesures</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">temps</span> <span class="n">moyen</span> <span class="n">pour</span> <span class="n">trier</span> <span class="n">une</span> <span class="n">liste</span> <span class="n">de</span> <span class="n">taille</span> <span class="mi">1000</span> <span class="p">:</span> <span class="mf">0.03579235076904297</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">mesures</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">temps</span> <span class="n">moyen</span> <span class="n">pour</span> <span class="n">trier</span> <span class="n">une</span> <span class="n">liste</span> <span class="n">de</span> <span class="n">taille</span> <span class="mi">2000</span> <span class="p">:</span> <span class="mf">0.13821134567260743</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">mesures</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">temps</span> <span class="n">moyen</span> <span class="n">pour</span> <span class="n">trier</span> <span class="n">une</span> <span class="n">liste</span> <span class="n">de</span> <span class="n">taille</span> <span class="mi">10000</span> <span class="p">:</span> <span class="mf">3.3528685569763184</span>
+</code></pre></div>
+<p>On retrouve (à peu près, mais plutôt bien) le facteur 4 quand la taille de la liste double, et le facteur 100 quand la taille de la liste est multipliée par 10.</p>
+</details>
 <p><strong>Q2.</strong> Recommencer avec une liste déjà triée. Que constate-t-on ?</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">mesures</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">temps</span> <span class="n">moyen</span> <span class="n">pour</span> <span class="n">trier</span> <span class="n">une</span> <span class="n">liste</span> <span class="n">de</span> <span class="n">taille</span> <span class="mi">1000</span> <span class="p">:</span> <span class="mf">0.038380765914916994</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">mesures</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">temps</span> <span class="n">moyen</span> <span class="n">pour</span> <span class="n">trier</span> <span class="n">une</span> <span class="n">liste</span> <span class="n">de</span> <span class="n">taille</span> <span class="mi">2000</span> <span class="p">:</span> <span class="mf">0.13413033485412598</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">mesures</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">temps</span> <span class="n">moyen</span> <span class="n">pour</span> <span class="n">trier</span> <span class="n">une</span> <span class="n">liste</span> <span class="n">de</span> <span class="n">taille</span> <span class="mi">10000</span> <span class="p">:</span> <span class="mf">3.213682508468628</span>
+</code></pre></div>
+<p>Les mesures sont identiques : l'état initial de la liste n'a pas d'influence.          </p>
+</details>
 </div>
 <h2 id="5-preuve-de-la-terminaison-de-lalgorithme">5. Preuve de la terminaison de l'algorithme<a class="headerlink" href="#5-preuve-de-la-terminaison-de-lalgorithme" title="Permanent link">⚓︎</a></h2>
 <p><strong>Est-on sûr que notre algorithme va s'arrêter ?</strong></p>
