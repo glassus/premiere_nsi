@@ -157,7 +157,7 @@ Voici donc un ordre de grandeur de ce que *devraient* être les temps nécessair
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
@@ -179,7 +179,7 @@ Voici donc un ordre de grandeur de ce que *devraient* être les temps nécessair
     **Q2.** Recommencer avec une liste déjà triée. Que constate-t-on ?
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
