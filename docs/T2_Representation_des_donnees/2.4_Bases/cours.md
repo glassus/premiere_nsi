@@ -70,7 +70,7 @@ Donc $243_{10}=11110011_2$
     Quelle est la valeur maximale d'un octet (un octet = 8 chiffres binaires) ?
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         $11111111_2=255$. On retrouve ce nombre comme étant la valeur maximale d'une composante de couleur dans le codage RGB, ce qui signifie que chaque composante est codée sur un octet. 
@@ -146,7 +146,7 @@ On a donc la correspondance :
     3. Quelle est la couleur `html` du blanc ?
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         1. FF = 255 ; 3A = 58 ; B2 = 178

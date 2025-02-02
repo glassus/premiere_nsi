@@ -41,7 +41,7 @@ En ASCII, 127 *«points de code»* (nombres associés aux caractères) sont disp
         ```          
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -116,7 +116,7 @@ Mais parfois, il n'y a pas d'autre choix pour le logiciel d'essayer de deviner l
     ![](data/exo2.png){: .center}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         C'est du Latin-9, et c'est le mot \"vélo\"        
@@ -165,7 +165,7 @@ Le principe fondateur de l'UTF-8 est qu'il est **adaptatif** : les caracères le
     **Q1.** Grâce à la fonction ```ord``` puis à la fonction ```bin```, écrire en binaire le nombre associé au caractère ```é``` en UTF-8.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -185,7 +185,7 @@ Le principe fondateur de l'UTF-8 est qu'il est **adaptatif** : les caracères le
     **Q2.** D'après l'explication de fonctionnement de l'encodage adaptatif de l'UTF-8 (voir ci-dessus), les 8 bits nécessaires à l'encodage de ```é``` en UTF-8 vont être «encapsulés» dans 2 octets de la forme ```110XXXXX 10XXXXXX```, où les 11 ```X``` représentent les 11 bits d'information disponibles. Écrire ces 2 octets en complétant si nécessaire avec des ```0``` à gauche.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Sur 11 bits, le nombre ```11101001``` va s'écrire ```00011101001```. En séparant ces 11 bits en deux groupes de 5 bits et 6 bits (```00011```et ```101001```), et en les encapsulant, on obtient les deux octets ```11000011 10101001```. 
@@ -197,7 +197,7 @@ Le principe fondateur de l'UTF-8 est qu'il est **adaptatif** : les caracères le
     **Q3.** Convertir les deux octets obtenus en notation décimale (grâce à ```int```) puis en hexadécimal (grâce à ```hex```).
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -219,7 +219,7 @@ Le principe fondateur de l'UTF-8 est qu'il est **adaptatif** : les caracères le
     **Q4.** Si un logiciel considère **à tort** que les deux octets servant à encoder le ```é``` en UTF-8 servent à encoder deux caractères en ISO 8859-15, quels seront ces deux caractères ?
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Le premier octet, ```c3``` en hexadécimal, sera perçu en ISO 8859-15 comme le caractère ```Ã```.  
