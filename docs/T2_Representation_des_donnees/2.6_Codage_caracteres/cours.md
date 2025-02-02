@@ -12,18 +12,36 @@ pour *American Standard Code for Information Interchange*, créé en 1960 aux É
 
 En ASCII, 127 *«points de code»* (nombres associés aux caractères) sont disponibles. Les caractères sont donc codés sur **7 bits**.
 
-!!! abstract "Exercice"
-    === "Énoncé"
-        Décoder l'expression suivante, écrite en ASCII :
+{{initexo(0)}}
 
-        `1101100 1100101 1110011 100000 1001110 1010011 1001001 100000 1100011 100111 1100101 1110011 1110100 100000 1101100 1100101 1110011 100000 1101101 1100101 1101001 1101100 1101100 1100101 1110101 1110010 1110011`
+!!! example "{{ exercice() }}"
+    
 
-    === "Aide"
+    Décoder l'expression suivante, écrite en ASCII :
+
+    `1101100 1100101 1110011 100000 1001110 1010011 1001001 100000 1100011 100111 1100101 1110011 1110100 100000 1101100 1100101 1110011 100000 1101101 1100101 1101001 1101100 1101100 1100101 1110101 1110010 1110011`
+
+    ??? aide "Aide"
         - la fonction `split(" ")` permet de décomposer une chaine de caractères en une liste, en se servant de l'espace `" "` comme caractère séparateur.
-        - `int("1101100",2)` permet de récupérer facilement la valeur en base 10 du nombre binaire `1101100`.
+        ```python
+        >>> msg = '1101100 1100101 1110011'
+        >>> msg = msg.split(' ')
+        >>> msg
+        ['1101100', '1100101', '1110011']
+        ```
+        - `int("1101100", 2)` permet de récupérer facilement la valeur en base 10 du nombre binaire `1101100`.
+        ```python
+        >>> int("1101100", 2)
+        108
+        ```
+        - ```chr``` permet de récupérer le caractère associé à un codes ASCII :
+        ```python
+        >>> chr(108)
+        'l'
+        ```          
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
@@ -31,7 +49,7 @@ En ASCII, 127 *«points de code»* (nombres associés aux caractères) sont disp
         msg = msg.split(' ')
         s = ''
         for k in msg :
-            s += chr(int(k,2))
+            s += chr(int(k ,2))
         print(s)
         ``` 
     """
@@ -92,12 +110,21 @@ Normalement, pour un navigateur, une page web correctement codée doit contenir 
 Mais parfois, il n'y a pas d'autre choix pour le logiciel d'essayer de deviner l'encodage qui semble être utilisé.
 
 
-!!! abstract "Exercice"
-    === "Énoncé"
-        Le mot représenté par les octets ci-dessous est-il encodé en ASCII ou en Latin-9 ?
-        ![](data/exo2.png){: .center}
-    === "Correction"
-        C'est du Latin-9, et c'est le mot "vélo"
+!!! example "{{ exercice() }}"
+    
+    Le mot représenté par les octets ci-dessous est-il encodé en ASCII ou en Latin-9 ?
+    ![](data/exo2.png){: .center}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
+        C'est du Latin-9, et c'est le mot \"vélo\"        
+    """
+    )
+    }}
+
+
 
 
 
@@ -130,7 +157,8 @@ Le principe fondateur de l'UTF-8 est qu'il est **adaptatif** : les caracères le
 
 ## 5. La réponse à une question existentielle
 
-!!! abstract "Pourquoi le caractère `é` en UTF-8 devient-il `Ã©` en ISO 8859-15 ? "
+!!! example "{{ exercice() }} : Pourquoi le caractère `é` en UTF-8 devient-il `Ã©` en ISO 8859-15 ?"
+    
     ![image](data/zefede.png){: .center width=30%}
     
         

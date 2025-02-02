@@ -64,16 +64,25 @@ Donc $243_{10}=11110011_2$
     >>> bin(243)
     '0b11110011'
     ```
+{{initexo(0)}}
 
-!!! example "Exercice 1"
-    === "Énoncé"
-        Quelle est la valeur maximale d'un octet (un octet = 8 chiffres binaires) ?
-    === "Correction"
-        $11111111_2=255$. On retrouve ce nombre comme étant la valeur maximale d'une composante de couleur dans le codage RGB, ce qui signifie que chaque composante est codée sur un octet.
+!!! example "{{ exercice() }}"
+    Quelle est la valeur maximale d'un octet (un octet = 8 chiffres binaires) ?
 
-!!! example "Exercice 2"
-    === "Énoncé"
-        Créer une fonction `binaire(n)` qui renvoie l'écriture binaire de `n`, en utilisant les divisions successives.
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
+        $11111111_2=255$. On retrouve ce nombre comme étant la valeur maximale d'une composante de couleur dans le codage RGB, ce qui signifie que chaque composante est codée sur un octet. 
+    """
+    )
+    }}
+
+
+{#
+!!! example "{{ exercice() }}"
+    
+    Créer une fonction `binaire` qui prend en paramètre un entier ```n``` et qui renvoie l'écriture binaire de `n`, en utilisant les divisions successives.
     === "Correction"
         ```python linenums='1'
         def restes_successifs(n):
@@ -93,7 +102,7 @@ Donc $243_{10}=11110011_2$
                 mot += str(k)
             return mot
         ```
-
+#}
 
 ## 2. Le système hexadécimal 
 L'inconvénient essentiel du système binaire est la longueur de l'écriture des nombres qu'il génère. Pour cette raison, le **système hexadécimal**, ou système de **base 16** est très souvent employé.
@@ -131,16 +140,22 @@ On a donc la correspondance :
  
  En pratique, l'hexadécimal est surtout utilisé pour sa capacité à représenter la valeur de n'importe quel octet sur 2 chiffres ("chiffres" étant à prendre au sens large = chiffres ou lettres !).
  
+!!! example "{{ exercice() }}"
+    1. Donner la valeur des octets `FF`, `3A`, `B2`.
+    2. Expliquer pourquoi la couleur RGB (138,255,51) a pour code html `#8AFF33`.
+    3. Quelle est la couleur `html` du blanc ?
 
-!!! example "Exercice 3"
-    === "Énoncé"
-        1. Donner la valeur des octets `FF`, `3A`, `B2`.
-        2. Expliquer pourquoi la couleur RGB (138,255,51) a pour code html `#8AFF33`.
-        3. Quelle est la couleur `html` du blanc ?
-    === "Correction"
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
         1. FF = 255 ; 3A = 58 ; B2 = 178
         2. 138 a pour code hexa 8A, 255 a pour code hexa 255, 51 a pour code hexa 33.
-        3. \#FFFFFF
+        3. \#FFFFFF    
+    """
+    )
+    }}
+
 
 ###  2.2 En python :
  

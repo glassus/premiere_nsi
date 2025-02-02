@@ -30,16 +30,19 @@
 
 
 ## Thèmes en cours d'étude :
+- [Codage des entiers](./T2_Representation_des_donnees/2.7_Codage_entiers/cours/)
+- [Bases](./T2_Representation_des_donnees/2.4_Bases/cours/)
 - [Tri par sélection](./T4_Algorithmique/4.4_Tri_par_selection/cours/)
 - [Tri par insertion](./T4_Algorithmique/4.3_Tri_par_insertion/cours/) 
 - [Complexité](./T4_Algorithmique/4.2_Complexite/cours/)
-- [Extremums et moyennes](./T4_Algorithmique/4.1_Extremums_et_moyennes/cours/)
-- [Enigme XOR](./T2_Representation_des_donnees/2.5_Booleens/enigme/)
-- [Booléens](./T2_Representation_des_donnees/2.5_Booleens/cours/)
+
 
 
 
 !!! info "*Anciens thèmes traités*"
+    - [Extremums et moyennes](./T4_Algorithmique/4.1_Extremums_et_moyennes/cours/)
+    - [Enigme XOR](./T2_Representation_des_donnees/2.5_Booleens/enigme/)
+    - [Booléens](./T2_Representation_des_donnees/2.5_Booleens/cours/)
     - [Protocoles de communication](./T3_Architecture_materielle/3.4_Protocoles_de_communication/cours/)
     - [Architecture réseau](./T3_Architecture_materielle/3.3_Architecture_reseau/cours/)
     - [Requêtes GET et POST ](./T6_IHM_Web/6.3_Get_Post_Formulaires/cours/)
