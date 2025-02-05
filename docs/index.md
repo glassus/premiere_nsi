@@ -30,6 +30,7 @@
 
 
 ## Thèmes en cours d'étude :
+- [Codage des entiers](./T2_Representation_des_donnees/2.7_Codage_entiers/cours/)
 - [Codage des caractères](./T2_Representation_des_donnees/2.6_Codage_caracteres/cours/)  
 - [Bases](./T2_Representation_des_donnees/2.4_Bases/cours/)
 - [Tri par sélection](./T4_Algorithmique/4.4_Tri_par_selection/cours/)

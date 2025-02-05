@@ -26,7 +26,7 @@ Le nombre maximal qu'on puisse coder est `11111111`. C'est l'entier naturel 255.
 
         
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         1. $N=1+2+2^2+2^3+\dots+2^{15}= 65535$
@@ -49,7 +49,7 @@ Le nombre maximal qu'on puisse coder est `11111111`. C'est l'entier naturel 255.
     1. Effectuer la somme des deux nombres binaires `00001101` et `00001011`.
     2. Vérifier que le résultat est cohérent en base 10.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         1. ![](data/add1.png)
@@ -86,7 +86,7 @@ Dans ce cas, `00000011` serait le nombre $+3$ et `10000011` serait le nombre $-3
     Avec cette convention, effectuer l'addition $(+3)+(-3)$ en binaire.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![](data/add2.png){: .center}
@@ -180,7 +180,7 @@ Considérons que ce nombre positif s'écrit sur 7 bits, donc qu'il est de la for
     Donner l'écriture binaire sur un octet du nombre $-13$.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Commençons par écrire le nombre 13 en binaire. Il s'écrit  `00001101`.
@@ -214,7 +214,7 @@ Considérons le nombre `11101101`, codé en binaire signé. À quel nombre relat
 
     **Q1.** En binaire signé, à quel nombre correspond `11110001`?
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         `11110001` - `1` = `11110000`. En prenant le complément à 2, on trouve `00001111`, qui vaut 15. Le nombre `11110001` représente donc $-15$.
@@ -224,7 +224,7 @@ Considérons le nombre `11101101`, codé en binaire signé. À quel nombre relat
 
     **Q2.** En binaire signé, quel est le plus grand nombre que l'on puisse écrire sur un octet ? 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Le plus grand nombre est `01111111`, soit $+127$.
@@ -234,7 +234,7 @@ Considérons le nombre `11101101`, codé en binaire signé. À quel nombre relat
 
     **Q3.** Quel est le plus petit nombre ?
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Le plus petit nombre est `10000000`. `10000000` - `1` = `01111111`. Le complément est `10000000`, qui est égal à 128. Donc le nombre minimal est $-128$.
@@ -243,7 +243,7 @@ Considérons le nombre `11101101`, codé en binaire signé. À quel nombre relat
     }}
     **Q4.** Au total, combien de nombres différents peuvent être écrits en binaire signé ?
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Il y a 128 nombres négatifs (de $-128$ à $-1$), le nombre 0, puis 127 nombres positifs (de 1 à 127). Il y a donc 256 nombres au total, comme en binaire non signé.  
