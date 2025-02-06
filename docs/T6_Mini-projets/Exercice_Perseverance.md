@@ -27,13 +27,13 @@ Les zones blanches et rouge se décomposent comme ceci :
 ### À vous !
 
 
+??? tip "Solution"
 
-
-Un grand bravo aux brillants _redditors_ ```u/rdtwt1``` et ```u/tend0g```.
-
-
-### Update : faites votre propre parachute !
-[https://sjwarner.github.io/perseverance-parachute-generator/?](https://sjwarner.github.io/perseverance-parachute-generator/?)
+    - Un grand bravo aux brillants _redditors_ ```u/rdtwt1``` et ```u/tend0g```.
+    - [https://sjwarner.github.io/perseverance-parachute-generator/?](https://sjwarner.github.io/perseverance-parachute-generator/?)
+    - Emplacement donné par les coordonnées GPS :
+    ![image](data/JPL.png){: .center}
+    
 
 
 ??? quote "Sources"
