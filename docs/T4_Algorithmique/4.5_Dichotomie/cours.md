@@ -85,7 +85,7 @@ Considérons donc la liste ```lst```  suivante :
 lst = [2, 3, 6, 7, 11, 14, 18, 19, 24]
 ```
 
-L'objectif est de définir un algorithme de recherche efficace d'une valeur arbitraire présente dans cette liste.
+L'objectif est de définir un algorithme de recherche efficace d'une valeur arbitraire présente (ou pas) dans cette liste.
 
 ### 1.3 Méthode naïve : recherche par balayage
 C'est la méthode la plus intuitive : on essaie toutes les valeurs (par exemple, dans l'ordre croissant) jusqu'à trouver la bonne.
@@ -104,7 +104,7 @@ C'est la méthode la plus intuitive : on essaie toutes les valeurs (par exemple,
         lst = [2, 3, 6, 7, 11, 14, 18, 19, 24]
         for k in range(len(lst)):
             if lst[k] ==  14 :
-                print(k)
+                return k
         ```        
     """
     )
@@ -151,12 +151,12 @@ La méthode naïve n'utilise pas le fait que la liste est triée, on aurait pu a
 
 !!! abstract "Règles du jeu"
     Si je choisis un nombre entre 1 et 100, quelle est la stratégie optimale pour deviner ce nombre le plus vite possible ?  
-    (à chaque étape, une indication (trop grand, trop petit) permet d'affiner la proposition suivante)
+    À chaque étape, une indication (*«trop grand»*, *«trop petit»*) permet d'affiner la proposition suivante.
 
 **Réponse attendue :** la meilleure stratégie est de *couper en deux* à chaque fois l'intervalle d'étude. On démarre de 50, puis 75 ou 25, etc.
 
 
-:star: :star: Il convient toute fois de remettre en question cette méthode qui paraît *naturellement* optimale : si je propose 90 comme nombre de départ, j'ai certes moins de chance que le nombre soit entre 90 et 100, mais s'il l'est, j'ai gagné un gros avantage car mon nouvel intervalle est très réduit.
+:star: :star: On peut toutefois s'interroger sur cette méthode qui paraît *naturellement* optimale : si je propose 90 comme nombre de départ, j'ai certes moins de chance que le nombre soit entre 90 et 100, mais s'il l'est, j'ai gagné un gros avantage car mon nouvel intervalle est très réduit.
 
 ??? tip "Notion d'espérance probabiliste"
     Déterminer si un risque vaut la peine d'être pris passe par la compréhension de la notion d'**espérance probabiliste**.
@@ -178,7 +178,7 @@ Le graphique ci-dessous représente le nombre de coups moyens (sur 10 000 partie
 - l'asymétrie de la courbe (qui devrait être symétrique) est due aux arrondis par défaut dans le cas de nombres non entiers.
 
 #### Conclusion générale de l'activité d'introduction
-La stratégie optimale est de diviser en deux à chaque étape l'intervalle d'étude. On appelle cela une méthode par **dichotomie**, du grec ancien διχοτομία, dikhotomia (« division en deux parties »).
+La stratégie optimale est de diviser en deux à chaque étape l'intervalle d'étude. On appelle cela une méthode par **dichotomie**, du grec ancien *διχοτομία*, dikhotomia (« division en deux parties »).
 
 
 

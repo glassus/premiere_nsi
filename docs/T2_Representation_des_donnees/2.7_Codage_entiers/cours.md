@@ -210,7 +210,8 @@ Considérons le nombre `11101101`, codé en binaire signé. À quel nombre relat
 4. On convertit en base 10 le nombre obtenu, qui était donc 19.
 5. Le nombre initial était donc $-19$.
 
-!!! abstract "Exercice"
+!!! example "{{ exercice() }}"
+    
 
     **Q1.** En binaire signé, à quel nombre correspond `11110001`?
     {{
@@ -269,7 +270,7 @@ Ariane 5 a alors brusquement pivoté avant d'exploser.
 
 Cette catastrophe (150 millions d'euros et des années de travail perdus) a fait prendre conscience à la communauté scientifique de l'importance de faire des tests logiciels toujours plus poussés : ce n'est pas parce qu'un code marche dans un environnement donné qu'il marchera de la même manière dans d'autres conditions...
 
-### 4.2 Le bug de l'année 2038
+### 4.2 Le bug du 19 janvier 2038
 
 <center>
 <gif-player src="https://glassus.github.io/premiere_nsi/T2_Representation_des_donnees/2.7_Codage_entiers/data/2038.gif" speed="1" play></gif-player>
@@ -284,11 +285,11 @@ Lorsqu'on demande à Python l'heure qu'il est, par la fonction ```time()``` du m
 ```python
 >>> import time
 >>> time.time()
-1653855138.398177
+1739134094.0753722
 ```
 
 Il nous renvoie le nombre de secondes écoulées depuis le 1er janvier 1970 à 00h00. On appelle cela l'heure POSIX ou l'heure UNIX [l'heure UNIX](https://fr.wikipedia.org/wiki/Heure_Unix){. target="_blank"}.
-Au 29 mai 2022, il s'en donc écoulé environ 1,6 milliards.
+Au 09 Février 2025 à 21h48, il s'en donc écoulé environ 1,7 milliards.
 
 Dans beaucoup de systèmes informatiques, ce nombre de secondes est codé par **un entier signé sur 32 bits**.
 Le nombre maximum de secondes qui peut être représenté est donc ```01111111 11111111 11111111 11111111``` 
