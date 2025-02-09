@@ -4408,7 +4408,7 @@ Extrait de [Wikipedia](https://fr.wikipedia.org/wiki/Diviser_pour_r%C3%A9gner_(i
 <p><img alt="image" class="center" src="../data/fig0.png" /></p>
 <div class="highlight"><pre><span></span><code><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">24</span><span class="p">]</span>
 </code></pre></div>
-<p>L'objectif est de définir un algorithme de recherche efficace d'une valeur arbitraire présente dans cette liste.</p>
+<p>L'objectif est de définir un algorithme de recherche efficace d'une valeur arbitraire présente (ou pas) dans cette liste.</p>
 <h3 id="13-methode-naive-recherche-par-balayage">1.3 Méthode naïve : recherche par balayage<a class="headerlink" href="#13-methode-naive-recherche-par-balayage" title="Permanent link">⚓︎</a></h3>
 <p>C'est la méthode la plus intuitive : on essaie toutes les valeurs (par exemple, dans l'ordre croissant) jusqu'à trouver la bonne.</p>
 <div class="admonition example">
@@ -4431,10 +4431,10 @@ La méthode naïve n'utilise pas le fait que la liste est triée, on aurait pu a
 <div class="admonition abstract">
 <p class="admonition-title">Règles du jeu</p>
 <p>Si je choisis un nombre entre 1 et 100, quelle est la stratégie optimale pour deviner ce nombre le plus vite possible ?<br />
-(à chaque étape, une indication (trop grand, trop petit) permet d'affiner la proposition suivante)</p>
+À chaque étape, une indication (<em>«trop grand»</em>, <em>«trop petit»</em>) permet d'affiner la proposition suivante.</p>
 </div>
 <p><strong>Réponse attendue :</strong> la meilleure stratégie est de <em>couper en deux</em> à chaque fois l'intervalle d'étude. On démarre de 50, puis 75 ou 25, etc.</p>
-<p><img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> Il convient toute fois de remettre en question cette méthode qui paraît <em>naturellement</em> optimale : si je propose 90 comme nombre de départ, j'ai certes moins de chance que le nombre soit entre 90 et 100, mais s'il l'est, j'ai gagné un gros avantage car mon nouvel intervalle est très réduit.</p>
+<p><img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> On peut toutefois s'interroger sur cette méthode qui paraît <em>naturellement</em> optimale : si je propose 90 comme nombre de départ, j'ai certes moins de chance que le nombre soit entre 90 et 100, mais s'il l'est, j'ai gagné un gros avantage car mon nouvel intervalle est très réduit.</p>
 <details class="tip">
 <summary>Notion d'espérance probabiliste</summary>
 <p>Déterminer si un risque vaut la peine d'être pris passe par la compréhension de la notion d'<strong>espérance probabiliste</strong>.
@@ -4451,7 +4451,7 @@ Exemple : "On lance un dé, s'il tombe sur le 6 vous recevez 8 euros, sinon vous
 <li>l'asymétrie de la courbe (qui devrait être symétrique) est due aux arrondis par défaut dans le cas de nombres non entiers.</li>
 </ul>
 <h4 id="conclusion-generale-de-lactivite-dintroduction">Conclusion générale de l'activité d'introduction<a class="headerlink" href="#conclusion-generale-de-lactivite-dintroduction" title="Permanent link">⚓︎</a></h4>
-<p>La stratégie optimale est de diviser en deux à chaque étape l'intervalle d'étude. On appelle cela une méthode par <strong>dichotomie</strong>, du grec ancien διχοτομία, dikhotomia (« division en deux parties »).</p>
+<p>La stratégie optimale est de diviser en deux à chaque étape l'intervalle d'étude. On appelle cela une méthode par <strong>dichotomie</strong>, du grec ancien <em>διχοτομία</em>, dikhotomia (« division en deux parties »).</p>
 <h3 id="22-algorithme-de-recherche-dichotomique">2.2 Algorithme de recherche dichotomique<a class="headerlink" href="#22-algorithme-de-recherche-dichotomique" title="Permanent link">⚓︎</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Dichotomie, déroulement intuitif</p>
