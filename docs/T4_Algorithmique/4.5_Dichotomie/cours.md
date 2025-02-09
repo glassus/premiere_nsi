@@ -1,6 +1,5 @@
 # 4.5 Dichotomie
 
-{{initexo(0)}}
 
 *ou comment rechercher efficacement dans une liste triée ?*
 
@@ -91,13 +90,14 @@ L'objectif est de définir un algorithme de recherche efficace d'une valeur arbi
 ### 1.3 Méthode naïve : recherche par balayage
 C'est la méthode la plus intuitive : on essaie toutes les valeurs (par exemple, dans l'ordre croissant) jusqu'à trouver la bonne.
 
-
-!!! abstract "{{ exercice() }}"
+{{initexo(0)}}
+!!! example "{{ exercice() }}"
+    
 
     Écrire un code permettant d'afficher l'indice de la valeur `14` dans la liste `lst = [2, 3, 6, 7, 11, 14, 18, 19, 24]`.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -113,12 +113,13 @@ C'est la méthode la plus intuitive : on essaie toutes les valeurs (par exemple,
 
 
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
+    
 
     Écrire une fonction `recherche_naive` qui reçoit pour paramètres une liste `lst` et un nombre `val` et qui renvoie l'indice de `val` dans la liste `lst `. Si la valeur `val` n'est pas trouvée, on renverra `None`.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -228,7 +229,7 @@ Nous allons faire *se rapprocher* les indices `indice_debut` et `indice_fin` **t
 :arrow_right: [Codes à trous](../intro_cours/){. target="_blank"}
 
 
-
+{#
 !!! note "Recherche dichotomique dans une liste triée :heart: :heart: :heart:"
     
     ```python
@@ -247,7 +248,7 @@ Nous allons faire *se rapprocher* les indices `indice_debut` et `indice_fin` **t
         return None
             
     ```
-    
+#}    
 
 **Utilisation**
 
@@ -314,7 +315,8 @@ Puis 2 valeurs.
 Puis une seule valeur.  
 Il y a donc 3 étapes avant de trouver la valeur cherchée.
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
+    
     
     Q1. Remplissez le tableau ci-dessous :
 
@@ -364,11 +366,12 @@ Par exemple, si on faisait une recherche dichotomomique sur les 8 milliards d'ê
 
 ## 3. Expériences et comparaison des vitesses d'exécution
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
+    
     Mesurer le temps d'exécution de deux fonctions ```recherche_naive``` et ```recherche_dichotomique```. On se placera dans le pire des cas (recherche d'une valeur introuvable), avec des listes de taille 100 000 puis 1 000 000.  
          
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
