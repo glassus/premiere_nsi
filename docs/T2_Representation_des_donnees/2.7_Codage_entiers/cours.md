@@ -49,7 +49,7 @@ Le nombre maximal qu'on puisse coder est `11111111`. C'est l'entier naturel 255.
     1. Effectuer la somme des deux nombres binaires `00001101` et `00001011`.
     2. Vérifier que le résultat est cohérent en base 10.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         1. ![](data/add1.png)
