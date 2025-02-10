@@ -180,7 +180,7 @@ Considérons que ce nombre positif s'écrit sur 7 bits, donc qu'il est de la for
     Donner l'écriture binaire sur un octet du nombre $-25$.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Commençons par écrire le nombre 13 en binaire. Il s'écrit  `00011001`.
@@ -215,7 +215,7 @@ Considérons le nombre `11101101`, codé en binaire signé. À quel nombre relat
 
     **Q1.** En binaire signé, à quel nombre correspond `11110001`?
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         `11110001` - `1` = `11110000`. En prenant le complément à 2, on trouve `00001111`, qui vaut 15. Le nombre `11110001` représente donc $-15$.
@@ -225,7 +225,7 @@ Considérons le nombre `11101101`, codé en binaire signé. À quel nombre relat
 
     **Q2.** En binaire signé, quel est le plus grand nombre que l'on puisse écrire sur un octet ? 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Le plus grand nombre est `01111111`, soit $+127$.
@@ -235,7 +235,7 @@ Considérons le nombre `11101101`, codé en binaire signé. À quel nombre relat
 
     **Q3.** Quel est le plus petit nombre ?
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Le plus petit nombre est `10000000`. `10000000` - `1` = `01111111`. Le complément est `10000000`, qui est égal à 128. Donc le nombre minimal est $-128$.
@@ -244,7 +244,7 @@ Considérons le nombre `11101101`, codé en binaire signé. À quel nombre relat
     }}
     **Q4.** Au total, combien de nombres différents peuvent être écrits en binaire signé ?
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Il y a 128 nombres négatifs (de $-128$ à $-1$), le nombre 0, puis 127 nombres positifs (de 1 à 127). Il y a donc 256 nombres au total, comme en binaire non signé.  
