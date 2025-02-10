@@ -177,18 +177,18 @@ Considérons que ce nombre positif s'écrit sur 7 bits, donc qu'il est de la for
 
 !!! example "{{ exercice() }}"
     
-    Donner l'écriture binaire sur un octet du nombre $-13$.
+    Donner l'écriture binaire sur un octet du nombre $-25$.
 
     {{
     correction(False,
     """
     ??? success \"Correction\" 
-        Commençons par écrire le nombre 13 en binaire. Il s'écrit  `00001101`.
+        Commençons par écrire le nombre 13 en binaire. Il s'écrit  `00011001`.
 
-        - en prenant le complément à 2 de chaque bit, on obtient `11110010`.
-        - en ajoutant 1 à ce dernier nombre, on obtient `11110011`. 
+        - en prenant le complément à 2 de chaque bit, on obtient `11100110`.
+        - en ajoutant 1 à ce dernier nombre, on obtient `11100111`. 
 
-        Le nombre $-13$ s'écrit donc `11110011`.       
+        Le nombre $-13$ s'écrit donc `11100111`.       
     """
     )
     }}
