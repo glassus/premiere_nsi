@@ -4515,6 +4515,15 @@ L'addition <span class="arithmatex">\((+3)+(-3)\)</span> serait égale à <span 
 <div class="admonition example">
 <p class="admonition-title">Exercice  4</p>
 <p>Donner l'écriture binaire sur un octet du nombre <span class="arithmatex">\(-25\)</span>.</p>
+<details class="success">
+<summary>Correction</summary>
+<p>Commençons par écrire le nombre 13 en binaire. Il s'écrit  <code>00011001</code>.</p>
+<ul>
+<li>en prenant le complément à 2 de chaque bit, on obtient <code>11100110</code>.</li>
+<li>en ajoutant 1 à ce dernier nombre, on obtient <code>11100111</code>. </li>
+</ul>
+<p>Le nombre <span class="arithmatex">\(-13\)</span> s'écrit donc <code>11100111</code>.       </p>
+</details>
 </div>
 <p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/27a1.svg" title=":arrow_right:" /> <strong>Remarque</strong><br />
 Les nombres négatifs commenceront donc toujours par le bit 1, et les nombres positifs par le bit 0. Cela revient à suivre partiellement notre fausse bonne idée du 2.1.<br />
@@ -4531,9 +4540,25 @@ Et cela donne surtout une méthode très pratique pour savoir qui est positif et
 <div class="admonition example">
 <p class="admonition-title">Exercice  5</p>
 <p><strong>Q1.</strong> En binaire signé, à quel nombre correspond <code>11110001</code>?</p>
+<details class="success">
+<summary>Correction</summary>
+<p><code>11110001</code> - <code>1</code> = <code>11110000</code>. En prenant le complément à 2, on trouve <code>00001111</code>, qui vaut 15. Le nombre <code>11110001</code> représente donc <span class="arithmatex">\(-15\)</span>.</p>
+</details>
 <p><strong>Q2.</strong> En binaire signé, quel est le plus grand nombre que l'on puisse écrire sur un octet ? </p>
+<details class="success">
+<summary>Correction</summary>
+<p>Le plus grand nombre est <code>01111111</code>, soit <span class="arithmatex">\(+127\)</span>.</p>
+</details>
 <p><strong>Q3.</strong> Quel est le plus petit nombre ?</p>
+<details class="success">
+<summary>Correction</summary>
+<p>Le plus petit nombre est <code>10000000</code>. <code>10000000</code> - <code>1</code> = <code>01111111</code>. Le complément est <code>10000000</code>, qui est égal à 128. Donc le nombre minimal est <span class="arithmatex">\(-128\)</span>.</p>
+</details>
 <p><strong>Q4.</strong> Au total, combien de nombres différents peuvent être écrits en binaire signé ?</p>
+<details class="success">
+<summary>Correction</summary>
+<p>Il y a 128 nombres négatifs (de <span class="arithmatex">\(-128\)</span> à <span class="arithmatex">\(-1\)</span>), le nombre 0, puis 127 nombres positifs (de 1 à 127). Il y a donc 256 nombres au total, comme en binaire non signé.  </p>
+</details>
 </div>
 <h2 id="4-le-codage-des-entiers-une-source-intarissable-derreurs">4. Le codage des entiers, une source intarissable d'erreurs...<a class="headerlink" href="#4-le-codage-des-entiers-une-source-intarissable-derreurs" title="Permanent link">⚓︎</a></h2>
 <h3 id="41-le-vol-501-dariane-5">4.1 Le vol 501 d'Ariane 5<a class="headerlink" href="#41-le-vol-501-dariane-5" title="Permanent link">⚓︎</a></h3>
