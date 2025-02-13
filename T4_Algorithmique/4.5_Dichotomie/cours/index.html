@@ -4517,6 +4517,23 @@ Recherchons la valeur 14 dans notre liste `lst`.
 </ul>
 <p>Nous allons faire <em>se rapprocher</em> les indices <code>indice_debut</code> et <code>indice_fin</code> <strong>tant que</strong> <code>indice_debut &lt;= indice_fin</code></p>
 <p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/27a1.svg" title=":arrow_right:" /> <a class="" href="../intro_cours/" target="_blank">Codes à trous</a></p>
+<div class="admonition note">
+<p class="admonition-title">Recherche dichotomique dans une liste triée <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche_dichotomique</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span> <span class="p">:</span>
+    <span class="n">indice_debut</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">indice_fin</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">indice_debut</span> <span class="o">&lt;=</span> <span class="n">indice_fin</span> <span class="p">:</span>
+        <span class="n">indice_centre</span> <span class="o">=</span> <span class="p">(</span><span class="n">indice_debut</span> <span class="o">+</span> <span class="n">indice_fin</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>     
+        <span class="n">valeur_centrale</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">indice_centre</span><span class="p">]</span>            
+        <span class="k">if</span> <span class="n">valeur_centrale</span> <span class="o">==</span> <span class="n">val</span> <span class="p">:</span>          
+            <span class="k">return</span> <span class="n">indice_centre</span>
+        <span class="k">if</span> <span class="n">valeur_centrale</span> <span class="o">&lt;</span> <span class="n">val</span> <span class="p">:</span>             
+            <span class="n">indice_debut</span> <span class="o">=</span> <span class="n">indice_centre</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="n">indice_fin</span> <span class="o">=</span> <span class="n">indice_centre</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="kc">None</span>
+</code></pre></div>
+</div>
 <p><strong>Utilisation</strong></p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">mylist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">24</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_dichotomique</span><span class="p">(</span><span class="n">mylist</span><span class="p">,</span> <span class="mi">14</span><span class="p">)</span>
