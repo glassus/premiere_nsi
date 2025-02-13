@@ -229,7 +229,7 @@ Nous allons faire *se rapprocher* les indices `indice_debut` et `indice_fin` **t
 :arrow_right: [Codes à trous](../intro_cours/){. target="_blank"}
 
 
-{#
+
 !!! note "Recherche dichotomique dans une liste triée :heart: :heart: :heart:"
     
     ```python
@@ -248,7 +248,7 @@ Nous allons faire *se rapprocher* les indices `indice_debut` et `indice_fin` **t
         return None
             
     ```
-#}    
+ 
 
 **Utilisation**
 
