@@ -119,7 +119,7 @@ C'est la méthode la plus intuitive : on essaie toutes les valeurs (par exemple,
     Écrire une fonction `recherche_naive` qui reçoit pour paramètres une liste `lst` et un nombre `val` et qui renvoie l'indice de `val` dans la liste `lst `. Si la valeur `val` n'est pas trouvée, on renverra `None`.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
