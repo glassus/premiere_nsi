@@ -4618,6 +4618,42 @@ Il y a donc 3 étapes avant de trouver la valeur cherchée.</p>
 </table>
 <p>Q2. Pouvez-vous deviner le nombre d'étapes nécessaires pour une liste de 4096 termes ?</p>
 <p>Q3. Pour une liste de <span class="arithmatex">\(2^n\)</span> termes, quel est le nombre d'étapes ?</p>
+<details class="success">
+<summary>Correction</summary>
+<p>Q1. </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">taille de la liste</th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">8</th>
+<th style="text-align: center;">16</th>
+<th style="text-align: center;">32</th>
+<th style="text-align: center;">64</th>
+<th style="text-align: center;">128</th>
+<th style="text-align: center;">256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">nombre d'étapes</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">8</td>
+</tr>
+</tbody>
+</table>
+<p>Q2. <span class="arithmatex">\(2^{12}=4096\)</span> donc il faut 12 étapes.</p>
+<p>Q3. Il faut <span class="arithmatex">\(n\)</span> étapes.</p>
+</details>
 </div>
 <p><strong>Conclusion :</strong> </p>
 <p>C'est le nombre de puissances de 2 que contient le nombre <span class="arithmatex">\(N\)</span> de termes de la liste qui est déterminant dans la complexité de l'algorithme. </p>
@@ -4634,6 +4670,102 @@ Il y a donc 3 étapes avant de trouver la valeur cherchée.</p>
 <div class="admonition example">
 <p class="admonition-title">Exercice  4</p>
 <p>Mesurer le temps d'exécution de deux fonctions <code>recherche_naive</code> et <code>recherche_dichotomique</code>. On se placera dans le pire des cas (recherche d'une valeur introuvable), avec des listes de taille 100 000 puis 1 000 000.  </p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">recherche_dichotomique</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span> <span class="p">:</span>
+    <span class="n">indice_debut</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">indice_fin</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">indice_debut</span> <span class="o">&lt;=</span> <span class="n">indice_fin</span> <span class="p">:</span>
+        <span class="n">indice_centre</span> <span class="o">=</span> <span class="p">(</span><span class="n">indice_debut</span> <span class="o">+</span> <span class="n">indice_fin</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>     
+        <span class="n">valeur_centrale</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">indice_centre</span><span class="p">]</span>            
+        <span class="k">if</span> <span class="n">valeur_centrale</span> <span class="o">==</span> <span class="n">val</span> <span class="p">:</span>          
+            <span class="k">return</span> <span class="n">indice_centre</span>
+        <span class="k">if</span> <span class="n">valeur_centrale</span> <span class="o">&lt;</span> <span class="n">val</span> <span class="p">:</span>             
+            <span class="n">indice_debut</span> <span class="o">=</span> <span class="n">indice_centre</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="n">indice_fin</span> <span class="o">=</span> <span class="n">indice_centre</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="kc">None</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">recherche_naive</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span> <span class="p">:</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">))</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">k</span>
+    <span class="k">return</span> <span class="kc">None</span>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">mesures</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+    <span class="n">val</span> <span class="o">=</span> <span class="n">n</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+        <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">recherche_naive</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;naive pour </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s1"> valeurs : </span><span class="si">{</span><span class="n">total</span><span class="o">/</span><span class="mi">10</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+        <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">recherche_dichotomique</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;dicho pour </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s1"> valeurs : </span><span class="si">{</span><span class="n">total</span><span class="o">/</span><span class="mi">10</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Tests avec une liste de taille 100 000, 1 000 000 puis 10 000 000:
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">mesures</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">naive</span> <span class="n">pour</span> <span class="mi">100000</span> <span class="n">valeurs</span> <span class="p">:</span> <span class="mf">0.004096603393554688</span>
+<span class="n">dicho</span> <span class="n">pour</span> <span class="mi">100000</span> <span class="n">valeurs</span> <span class="p">:</span> <span class="mf">2.574920654296875e-06</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">mesures</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">naive</span> <span class="n">pour</span> <span class="mi">1000000</span> <span class="n">valeurs</span> <span class="p">:</span> <span class="mf">0.03997344970703125</span>
+<span class="n">dicho</span> <span class="n">pour</span> <span class="mi">1000000</span> <span class="n">valeurs</span> <span class="p">:</span> <span class="mf">3.0517578125e-06</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">mesures</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">naive</span> <span class="n">pour</span> <span class="mi">10000000</span> <span class="n">valeurs</span> <span class="p">:</span> <span class="mf">0.4003706216812134</span>
+<span class="n">dicho</span> <span class="n">pour</span> <span class="mi">10000000</span> <span class="n">valeurs</span> <span class="p">:</span> <span class="mf">3.886222839355469e-06</span>
+</code></pre></div></p>
+<ul>
+<li><strong>Recherche naïve :</strong> la recherche dans une liste 10 fois plus grand prend environ 10 fois plus de temps : la vitesse de l'algorithme est bien proportionnelle à la taille <span class="arithmatex">\(n\)</span> de la liste. <span class="arithmatex">\(\frac{10^6}{10^5} = 10\)</span></li>
+<li><strong>Recherche dichotomique :</strong> la recherche dans une liste 10 fois plus grand prend environ 1,2 fois plus de temps : la vitesse de l'algorithme est bien proportionnelle au <strong>logarithme</strong> de la taille <span class="arithmatex">\(n\)</span> de la liste.  <span class="arithmatex">\(\frac{\log(1000000)}{\log(100000)} \approx 1,2\)</span></li>
+</ul>
+</details>
 </div>
 
 
