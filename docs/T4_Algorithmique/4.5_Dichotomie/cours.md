@@ -97,14 +97,14 @@ C'est la méthode la plus intuitive : on essaie toutes les valeurs (par exemple,
     Écrire un code permettant d'afficher l'indice de la valeur `14` dans la liste `lst = [2, 3, 6, 7, 11, 14, 18, 19, 24]`.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
         lst = [2, 3, 6, 7, 11, 14, 18, 19, 24]
         for k in range(len(lst)):
             if lst[k] ==  14 :
-                return k
+                print(k)
         ```        
     """
     )
