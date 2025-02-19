@@ -30,18 +30,20 @@
 
 
 ## Thèmes en cours d'étude :
+- [Micro:bit](./T3_Architecture_materielle/3.1_Microbit/cours/)
 - [Dichotomie](./T4_Algorithmique/4.5_Dichotomie/cours/)
 - [Codage des entiers](./T2_Representation_des_donnees/2.7_Codage_entiers/cours/)
 - [Codage des caractères](./T2_Representation_des_donnees/2.6_Codage_caracteres/cours/)  
 - [Bases](./T2_Representation_des_donnees/2.4_Bases/cours/)
 - [Tri par sélection](./T4_Algorithmique/4.4_Tri_par_selection/cours/)
 - [Tri par insertion](./T4_Algorithmique/4.3_Tri_par_insertion/cours/) 
-- [Complexité](./T4_Algorithmique/4.2_Complexite/cours/)
+
 
 
 
 
 !!! info "*Anciens thèmes traités*"
+    - [Complexité](./T4_Algorithmique/4.2_Complexite/cours/)
     - [Extremums et moyennes](./T4_Algorithmique/4.1_Extremums_et_moyennes/cours/)
     - [Enigme XOR](./T2_Representation_des_donnees/2.5_Booleens/enigme/)
     - [Booléens](./T2_Representation_des_donnees/2.5_Booleens/cours/)

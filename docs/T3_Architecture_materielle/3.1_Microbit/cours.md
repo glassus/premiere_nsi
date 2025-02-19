@@ -159,7 +159,7 @@ display.show(Image.SAD)
     Image.SNAKE
     ``` 
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
     Créer un code qui permet d'afficher la totalité des images, pendant une demi-seconde chacune (grâce à l'instruction ```sleep(500)``` ).
     On utilisera la liste
     ```python
@@ -178,7 +178,7 @@ display.show(Image.SAD)
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -236,12 +236,12 @@ from microbit import *
 display.set_pixel(1, 4, 9)
 ```
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
     
     Faire clignoter le pixel central.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -258,7 +258,7 @@ display.set_pixel(1, 4, 9)
     }}
 
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
     Faire afficher en boucle un pixel aléatoire pendant 200 ms.
 
     Pour obtenir un entier pseudo-aléatoire, on utilisera la fonction `randint` du module `random`.
@@ -267,7 +267,7 @@ display.set_pixel(1, 4, 9)
     On pourra aussi utiliser l'instruction `display.clear()` pour éteindre tout l'affichage.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -314,14 +314,14 @@ display.clear()
 display.show(Image.SAD)
 ```
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
     Créer le code permettant de basculer d'un visage triste à un visage heureux suivant qu'on appuie sur A ou sur B. 
 
     ![](data/exo1.webp){: .center}   
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -338,7 +338,7 @@ display.show(Image.SAD)
 
        
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
     
     Créer le code permettant de déplacer un point vers la gauche ou vers la droite en appuyant sur A ou sur B.
 
@@ -365,7 +365,7 @@ display.show(Image.SAD)
 
 
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
     
     Même énoncé que l'exercice précédent, mais en faisant parcourir tout l'écran au pixel :
 
@@ -406,7 +406,7 @@ display.show(Image.SAD)
     )
     }}
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
     
     On veut créer le jeu suivant :
     
@@ -469,7 +469,7 @@ display.show(Image.SAD)
 
     
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
     **Rajout d'un temps limité**
 
     La fonction ```tick_ms``` du module ```utime``` renvoie le nombre de millisecondes écoulées depuis le démarrage de la carte. Pour mesurer le temps écoulé dans un programme, on fixe le temps du début du programme dans une variable ```t0```. Il suffit d'observer ensuite la valeur de ```tick_ms() - t0``` pour savoir combien de temps (en millisecondes) s'est écoulé depuis le début du programme.
@@ -546,7 +546,7 @@ display.show(Image.SAD)
     
 
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
     Créer un jeu de Pierre-Feuille-Ciseaux qui se déclenchera lorsqu'on secoue la Microbit. (Vous pouvez créer vos propres images de pierre, de feuille et de ciseaux)
 
     ![](data/PFC.gif){: .center}
@@ -558,7 +558,7 @@ display.show(Image.SAD)
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -599,7 +599,7 @@ display.show(Image.SAD)
     }}
 
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
     En utilisant les fonctions ```accelerometer.get_x()``` et ```accelerometer.get_y()``` de l'[accéléromètre](https://microbit-micropython.readthedocs.io/fr/latest/accelerometer.html){. target="_blank"}, créer un code qui allumera la LED du centre lorsque la carte est à l'horizontale, puis qui fera bouger cette LED en fonction de l'inclinaison de la carte.
 
 
@@ -668,7 +668,7 @@ display.show(Image.SAD)
     )
     }}
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
     **Communication radio**
 
     Voici un code proposant une communication radio entre deux cartes. Inspirez-vous de ce code pour (par exemple) faire un «vrai» Pierre-Feuille-Ciseaux entre deux cartes.
@@ -709,7 +709,7 @@ display.show(Image.SAD)
 
 
 
-!!! abstract "{{ exercice() }}"
+!!! example "{{ exercice() }}"
     En utilisant l'exercice 10 et la communication radio, faire «passer» une led d'une carte à l'autre en inclinant la carte.
 
     ??? tip "video"
