@@ -267,7 +267,7 @@ display.set_pixel(1, 4, 9)
     On pourra aussi utiliser l'instruction `display.clear()` pour éteindre tout l'affichage.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
