@@ -4482,6 +4482,27 @@ On utilisera la liste
 <p>Pour obtenir un entier pseudo-aléatoire, on utilisera la fonction <code>randint</code> du module <code>random</code>.
 Par exemple, l'instruction <code>randint(2, 8)</code> va renvoyer un nombre (pseudo-)aléatoire entre 2 et 8 inclus.</p>
 <p>On pourra aussi utiliser l'instruction <code>display.clear()</code> pour éteindre tout l'affichage.</p>
+<details class="success">
+<summary>Correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">randint</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">display</span><span class="o">.</span><span class="n">set_pixel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+    <span class="n">display</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <h3 id="24-les-entrees-boutons-a-b-et-ab-programmation-evenementielle-video-explicative">2.4 Les entrées boutons A, B et A+B - programmation événementielle <a class="" href="https://youtu.be/t_Qujjd_38o" target="_blank">(vidéo explicative)</a><a class="headerlink" href="#24-les-entrees-boutons-a-b-et-ab-programmation-evenementielle-video-explicative" title="Permanent link">⚓︎</a></h3>
 <p><img alt="image" class="center" src="../data/mb_AB.png" width="30%" /></p>
@@ -4712,7 +4733,7 @@ Par exemple, l'instruction <code>randint(2, 8)</code> va renvoyer un nombre (pse
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="10 mars 2025 07:38:29">10 mars 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="10 mars 2025 08:08:47">10 mars 2025</span>
   </span>
 
     
