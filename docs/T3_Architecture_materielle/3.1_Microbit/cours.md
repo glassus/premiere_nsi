@@ -241,7 +241,7 @@ display.set_pixel(1, 4, 9)
     Faire clignoter le pixel central.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
