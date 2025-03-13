@@ -345,7 +345,7 @@ display.show(Image.SAD)
     ![](data/exo2.webp){: .center}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
