@@ -375,7 +375,7 @@ display.show(Image.SAD)
 
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
