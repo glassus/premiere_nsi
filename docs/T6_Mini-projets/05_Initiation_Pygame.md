@@ -525,7 +525,7 @@ o√π ```position_perso``` est l'objet de type ```rect```  contenant les coordonn√
     - ```position_perso.right``` : abscisse de la droite du personnage
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
