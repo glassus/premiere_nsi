@@ -459,7 +459,7 @@ o√π ```position_perso``` est l'objet de type ```rect```  contenant les coordonn√
     ![image](data/exo2.gif){: .center}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
