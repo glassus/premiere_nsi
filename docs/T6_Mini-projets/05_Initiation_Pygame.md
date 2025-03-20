@@ -403,7 +403,7 @@ Au prochain ```fenetre.blit(perso, position_perso)```, le personnage sera positi
     - ```randint(a,b)``` du package ```random```, qui renvoie un entier pseudo-aléatoire entre ```a```  et ```b```.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
