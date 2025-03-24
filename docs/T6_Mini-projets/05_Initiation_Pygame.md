@@ -5,6 +5,12 @@
 
 
 {#
+------------------------------------------
+IMPORTANT
+-------------------------------------
+modifier le nom de la variable position_perso, c'est moche
+
+
 ## 0. Preambule
 
 - [Pygame](https://www.pygame.org/news){. target="_blank"} est un package de Python facilitant la création de jeux basés une interface graphique.
