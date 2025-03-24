@@ -594,7 +594,7 @@ où ```position_perso``` est l'objet de type ```rect```  contenant les coordonn�
     Reprendre l'exercice précédent mais faire en sorte que le personnage réapparaisse à l'opposé de là où il est sorti.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
