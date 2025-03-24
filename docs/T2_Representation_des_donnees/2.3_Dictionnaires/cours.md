@@ -102,7 +102,7 @@ Ces méthodes sont importantes (elles figurent explicitement au programme de NSI
     ```    
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -177,7 +177,7 @@ Ces méthodes sont importantes (elles figurent explicitement au programme de NSI
     ```
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -245,7 +245,7 @@ Nous allons résoudre ce problème grâce à :
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -272,7 +272,7 @@ Nous allons résoudre ce problème grâce à :
     Créer un dictionnaire qui associera à chaque prénom son nombre d'occurrences dans la liste.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -300,7 +300,7 @@ Nous allons résoudre ce problème grâce à :
 
      
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'

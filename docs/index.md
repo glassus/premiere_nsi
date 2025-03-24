@@ -30,6 +30,7 @@
 
 
 ## Thèmes en cours d'étude :
+- [Dictionnaires](./T2_Representation_des_donnees/2.3_Dictionnaires/cours/)
 - [Projet Pygame - Micro:bit](./T6_Mini-projets/05_Initiation_Pygame/)
 - [Micro:bit](./T3_Architecture_materielle/3.1_Microbit/cours/)
 
