@@ -12,6 +12,14 @@
     -  [Présentation de l'algorithme de Gale-Shapley](https://glassus.github.io/terminale_nsi/T7_Divers/11_parcoursup/cours/){. target="_blank"}
 #}
 
+
+!!! abstract ":star: Actualités :star:"
+    - Vous êtes le roi / la reine de la tablette graphique ? Participez au [concours d'affiches NSI](https://aeif.fr/index.php/2025/03/25/participez-au-concours-daffiches-nsi/){. target="_blank"}
+
+
+
+
+
 {#
 !!! abstract "Actualités"
     Décembre est le mois d'[Advent of Code](https://adventofcode.com/2024){. target="_blank"} !
@@ -31,8 +39,7 @@
 
 ## Thèmes en cours d'étude :
 - [Dictionnaires](./T2_Representation_des_donnees/2.3_Dictionnaires/cours/)
-- [Projet Pygame - Micro:bit](./T6_Mini-projets/05_Initiation_Pygame/)
-- [Micro:bit](./T3_Architecture_materielle/3.1_Microbit/cours/)
+
 
 
 
@@ -40,6 +47,8 @@
 
 
 !!! info "*Anciens thèmes traités*"
+    - [Projet Pygame - Micro:bit](./T6_Mini-projets/05_Initiation_Pygame/)
+    - [Micro:bit](./T3_Architecture_materielle/3.1_Microbit/cours/)
     - [Dichotomie](./T4_Algorithmique/4.5_Dichotomie/cours/)
     - [Codage des entiers](./T2_Representation_des_donnees/2.7_Codage_entiers/cours/)
     - [Codage des caractères](./T2_Representation_des_donnees/2.6_Codage_caracteres/cours/)  
