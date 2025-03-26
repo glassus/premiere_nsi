@@ -35,7 +35,7 @@ Imaginons que je fasse l'inventaire de mon dressing :
     - Un dictionnaire est un ensemble clés / valeurs.  
 
 
-**Attention** :warning:  : une clé peut aussi être un nombre :
+:warning: **Attention** :warning:  : la clé peut aussi être un nombre :
 ```python
 >>> myst = {9:4, 1:2, 6:3, 7:4} 
 >>> myst[1]
@@ -79,7 +79,7 @@ _Rappel :_
 
 Ces méthodes sont importantes (elles figurent explicitement au programme de NSI) mais sont en pratique peu utilisées. On leur préfèrera très largement la méthode de parcours suivante :
 
-### 2.3 Parcours d'un dictionnaire :star: :star: :star:
+### 2.3 :star: :star: :star: Parcours d'un dictionnaire :star: :star: :star:
 !!! note "Exemple fondateur n°3 :heart:"
     ```python
     >>> for habit in dressing:
@@ -141,14 +141,14 @@ Ces méthodes sont importantes (elles figurent explicitement au programme de NSI
 ### 2.5 Ajout / Modification d'un élément dans un dictionnaire
 
 !!! note "Exemple fondateur n°5 :heart:"
-    Pas besoin d'une méthode `append()`, il suffit de rajouter une paire `clé : valeur`
+    Pas besoin d'une méthode `append()` comme pour les listes, il suffit de rajouter une paire `clé : valeur` :
     ```python
     >>> dressing["chaussettes"] = 12
     ```
 
     On peut aussi modifier un dictionnaire existant.
     ```python
-    dressing["chaussettes"] = 11
+    >>> dressing["chaussettes"] = 11
     ```
 
 
@@ -158,6 +158,7 @@ Ces méthodes sont importantes (elles figurent explicitement au programme de NSI
     ```python
     del dressing["chaussettes"]
     ```
+    Cette instruction est en pratique peu utilisée.
 
 
 !!! example "{{ exercice() }}"
@@ -165,7 +166,7 @@ Ces méthodes sont importantes (elles figurent explicitement au programme de NSI
     ```python
     dressing = {"pantalons":3, "pulls":4, "tee-shirts":8}
     ```
-    Créer une fonction `achat(habit)` qui augmente de 1 le nombre d'habits (pantalon, pull ou tee-shirt) de mon dressing.
+    Créer une fonction `achat` qui prend en paramètre une chaine de caractères ```habit```  augmente de 1 la quantité de l'habit concerné (pantalon, pull ou tee-shirt) de mon dressing.
 
     Exemple d'utilisation :
     ```python
@@ -231,7 +232,7 @@ Nous allons résoudre ce problème grâce à :
 ## 3. Exercices
  
 !!! example "{{ exercice() }}"
-    Améliorer la fonction `achat(habit)` en y incluant un test pour prendre en compte les nouveaux habits.
+    Améliorer la fonction `achat` de l'exercice 2 en y incluant un test pour prendre en compte les nouveaux habits.
     
     Exemple d'utilisation :
 
@@ -265,7 +266,7 @@ Nous allons résoudre ce problème grâce à :
 !!! example "{{ exercice() }}"
     On considère la liste suivante :
     ```python
-    lst = ['Samuel', 'Pauline', 'Lina', 'Lina', 'Louis', 'Waëll', 'Clément', 'Khaled', 'Alexandre', 'Elie', 'Khaled', 'Khaled', 'Armand', 'Lina', 'Louis', 'Lina', 'Lina', 'Elie', 'Jules', 'Louis', 'Clément', 'Khaled', 'Jules-Evan', 'Lina', 'Jules', 'Hadzo', 'Zoran', 'Clément', 'Armand', 'Louis', 'Elie', 'Lina', 'Alexandre', 'Khaled', 'Iris', 'Gianni', 'Gianni', 'Pauline', 'Gianni', 'Elie', 'Iris', 'Armand', 'Louis', 'Clément', 'Pauline', 'Zoran', 'Khaled', 'Zoran', 'Elie', 'Waëll', 'Pauline', 'Lina', 'Alexandre', 'Khaled', 'Mehmet', 'Khaled', 'Hadzo', 'Zoran', 'Gianni', 'Jules', 'Paul', 'Pauline', 'Clément', 'Alexandre', 'Iris', 'Khaled', 'Gianni', 'Elie', 'Jules', 'Khaled', 'Louis', 'Jules-Evan', 'Jules-Evan', 'Louis', 'Gianni', 'Elie', 'Clément', 'Khaled', 'Louis', 'Louis', 'Emrys', 'Jules', 'Pauline', 'Armand', 'Elie', 'Jules', 'Elie', 'Khaled', 'Clément', 'Louis', 'Khaled', 'Emrys', 'Samuel', 'Hadzo', 'Elie', 'Clément', 'Alexandre', 'Hadzo', 'Lina', 'Iris', 'Alexandre', 'Mehmet', 'Elie', 'Jules', 'Khaled', 'Pauline', 'Samuel', 'Armand', 'Mehmet', 'Clément', 'Jules', 'Armand', 'Mehmet', 'Lina', 'Armand', 'Clément', 'Hadzo', 'Clément', 'Emrys', 'Samuel', 'Zoran', 'Zoran', 'Zoran', 'Mehmet', 'Jules', 'Khaled', 'Khaled', 'Elie', 'Armand', 'Jules', 'Alexandre', 'Alexandre', 'Louis', 'Armand', 'Zoran', 'Iris', 'Clément', 'Mehmet', 'Armand', 'Armand', 'Khaled', 'Lina', 'Lina', 'Jules', 'Louis', 'Paul', 'Pauline', 'Pauline', 'Pauline', 'Khaled', 'Lina', 'Waëll', 'Zoran', 'Hadzo', 'Emrys', 'Gianni', 'Jules', 'Samuel', 'Gianni', 'Pauline', 'Waëll', 'Clément', 'Khaled', 'Jules', 'Jules', 'Louis', 'Zoran', 'Alexandre', 'Iris', 'Paul', 'Emrys', 'Armand', 'Waëll', 'Zoran', 'Jules', 'Lina', 'Elie', 'Paul', 'Elie', 'Armand', 'Jules-Evan', 'Zoran', 'Alexandre', 'Zoran', 'Elie', 'Elie', 'Elie', 'Lina', 'Armand', 'Louis', 'Zoran', 'Lina', 'Armand', 'Alexandre', 'Samuel', 'Iris', 'Zoran', 'Paul', 'Pauline', 'Jules', 'Armand', 'Jules', 'Iris', 'Iris', 'Jules', 'Alexandre', 'Jules-Evan', 'Jules', 'Iris', 'Iris', 'Armand', 'Lina', 'Pauline', 'Zoran', 'Zoran', 'Pauline', 'Mehmet']
+    lst = ['Yanis', 'Fortuné', 'Fortuné', 'Andgel', 'Morgan', 'Lenny', 'Raphaël', 'Aya', 'Eliott', 'Aya', 'Sohel', 'Elma', 'Normann', 'Cyril', 'Lana', 'Fortuné', 'Lenny', 'Tom', 'Nina', 'Andgel', 'Lenny', 'Raphaël', 'Eliott', 'Gift', 'Cyril', 'Nina', 'Tom', 'Aya', 'Cyril', 'Raphaël', 'Justine', 'Nina', 'Lana', 'Elma', 'Mariam', 'Elma', 'Normann', 'Gift', 'Eliott', 'Aya', 'Robin', 'Fortuné', 'Nina', 'Saule', 'Aya', 'Elma', 'Andgel', 'Aya', 'Lenny', 'Misha', 'Fortuné', 'Yanis', 'Fortuné', 'Justine', 'Andgel', 'Sohel', 'Andgel', 'Gift', 'Morgan', 'Elma', 'Saule', 'Nina', 'Morgan', 'Andgel', 'Cyril', 'Raphaël', 'Misha', 'Fortuné', 'Saule', 'Justine', 'Saule', 'Nina', 'Eliott', 'Normann', 'Robin', 'Cyril', 'Misha', 'Misha', 'Cyril', 'Normann', 'Vitor', 'Yanis', 'Andgel', 'Normann', 'Vitor', 'Cyril', 'Normann', 'Sohel', 'Vitor', 'Andgel', 'Saule', 'Justine', 'Morgan', 'Lana', 'Raphaël', 'Sohel', 'Justine', 'Fortuné', 'Normann', 'Cyril', 'Nina', 'Lenny', 'Mariam', 'Tom', 'Morgan', 'Cyril', 'Cyril', 'Andgel', 'Lenny', 'Andgel', 'Sohel', 'Aya', 'Fortuné', 'Fortuné', 'Misha', 'Aya', 'Nina', 'Lenny', 'Raphaël', 'Aya', 'Lana', 'Raphaël', 'Cyril', 'Elma', 'Vitor', 'Andgel', 'Aya', 'Eliott', 'Tom', 'Vitor', 'Cyril', 'Normann', 'Fortuné', 'Mariam', 'Morgan', 'Sohel', 'Aya', 'Vitor', 'Robin', 'Fortuné', 'Sohel', 'Lenny', 'Mariam', 'Tom', 'Normann', 'Misha', 'Andgel', 'Eliott', 'Cyril', 'Mariam', 'Normann', 'Justine', 'Saule', 'Saule', 'Gift', 'Tom', 'Eliott', 'Fortuné', 'Normann', 'Eliott', 'Saule', 'Sohel', 'Justine', 'Nina', 'Eliott', 'Robin', 'Gift', 'Andgel', 'Andgel', 'Nina', 'Morgan', 'Robin', 'Morgan', 'Yanis', 'Justine', 'Raphaël', 'Aya', 'Normann', 'Saule', 'Yanis', 'Robin', 'Tom', 'Fortuné', 'Mariam', 'Sohel', 'Aya', 'Tom', 'Lenny', 'Eliott', 'Morgan', 'Morgan', 'Normann', 'Saule', 'Aya', 'Cyril', 'Saule', 'Lenny', 'Raphaël', 'Justine', 'Andgel']
     ```
     
 
@@ -327,9 +328,98 @@ Nous allons résoudre ce problème grâce à :
     }}
 
     
-{#
+
 
 !!! example "{{ exercice() }}"
-    [Exercice de bac](https://glassus.github.io/terminale_nsi/T1_Structures_de_donnees/1.2_Dictionnaires/exercices/#exercice-2){. target="_blank"}
+    Exercice 2 du sujet [Centres Etrangers J1 2021](https://glassus.github.io/terminale_nsi/T6_Annales/data/2021/21_Centres_Etrangers_1.pdf){. target="_blank"}
 
-#}
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.a. \" 
+        ```flotte[26]``` renvoie  ```{'type' : 'classique', 'etat' : 1, 'station' : 'Coliseum'}```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.b. \" 
+        ```flotte[80]['etat']``` renvoie la valeur ```0```. 
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1.c. \" 
+        ```flotte[99]['etat']``` renverra une erreur car la clé 99 n'existe pas. 
+    """
+    )
+    }}
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2.a. \" 
+        Les valeurs possibles pour ```choix``` sont ```electrique``` ou ```classique```. 
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2.b. \" 
+        En fonction du choix (```electrique``` ou ```classique```), cette fonction va renvoyer le nom de la première station où un vélo est disponible (à l'```etat``` 1).  
+        Seule la première station sera renvoyée, à cause du ```return```. Si aucun vélo n'est disponible, la fonction ne renverra rien. 
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3.a. \" 
+        ```python linenums='1'
+        for id_velo in flotte:
+            if flotte[id_velo]['station'] == 'Citadelle' and flotte[id_velo]['etat'] == 1:
+                print(id_velo)
+        ``` 
+    """
+    )
+    }}
+
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3.b. \" 
+        ```python linenums='1'
+        for id_velo in flotte:
+            if flotte[id_velo]['type'] == 'electrique' and flotte[id_velo]['etat'] != -1:
+                print(id_velo, flotte[id_velo]['station'])
+        ``` 
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4. \" 
+        ```python linenums='1'
+        def velo_finder(coordonnees):
+            velo_dispo = []
+            for id_velo in flotte:
+                d = distance(coordonnees, stations[flotte[id_velo]['station']])
+                if d < 800 and flotte[id_velo]['etat'] == 1:
+                    velo_dispo.append((flotte[id_velo]['station'], d, id_velo))
+            return velo_dispo
+        ```        
+    """
+    )
+    }}
