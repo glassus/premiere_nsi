@@ -178,7 +178,7 @@ Ces méthodes sont importantes (elles figurent explicitement au programme de NSI
     ```
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -246,7 +246,7 @@ Nous allons résoudre ce problème grâce à :
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
