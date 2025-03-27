@@ -102,7 +102,7 @@ Ces méthodes sont importantes (elles figurent explicitement au programme de NSI
     ```    
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
