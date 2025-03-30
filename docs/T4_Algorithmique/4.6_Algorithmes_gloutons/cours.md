@@ -101,6 +101,7 @@ La résolution de ce problème peut se faire de manière gloutonne : à chaque �
 
 ### 2.1 Solution du problème
 
+{#
 !!! note "Rendu de monnaie :heart: :heart: :heart:"
     
     ```python linenums='1'
@@ -123,7 +124,7 @@ La résolution de ce problème peut se faire de manière gloutonne : à chaque �
     4. On met à jour la somme à rendre.
     5. La pièce était trop grosse, on avance dans la liste.
 
-    
+#}    
 
 Utilisation : `rendu(13)` doit renvoyer `[10, 2, 1]`
 
@@ -211,7 +212,7 @@ Nous allons procéder en 2 temps.
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -248,7 +249,7 @@ Nous allons utiliser la fonction ```sorted```, qui prend en paramètre une liste
     Quel est l'élève qui a obtenu la meilleure note ?
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -309,7 +310,7 @@ objets = [["A", 13, 700], ["B", 12, 500], ["C", 8, 200], ["D", 10, 300], ["E", 1
     ``` 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -381,7 +382,7 @@ Cela signifie qu'il va suffir de parcourir la liste des objets (préalablement c
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
