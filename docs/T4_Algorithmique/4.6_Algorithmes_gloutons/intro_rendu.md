@@ -14,6 +14,8 @@ Les pieces disponibles (en quantité illimitée) sont stockées dans une variabl
     [10, 2, 1]
 >>> rendu(58)
     [50, 5, 2, 1]
+>>> rendu(59)
+    [50, 5, 2, 2]
 ```
 
 
