@@ -394,7 +394,7 @@ Nous allons résoudre ce problème grâce à :
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -416,7 +416,7 @@ Nous allons résoudre ce problème grâce à :
     Exercice 2 du sujet [Centres Etrangers J1 2021](https://glassus.github.io/terminale_nsi/T6_Annales/data/2021/21_Centres_Etrangers_1.pdf){. target="_blank"}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.a. \" 
         ```flotte[26]``` renvoie  ```{'type' : 'classique', 'etat' : 1, 'station' : 'Coliseum'}```
@@ -425,7 +425,7 @@ Nous allons résoudre ce problème grâce à :
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.b. \" 
         ```flotte[80]['etat']``` renvoie la valeur ```0```. 
@@ -434,7 +434,7 @@ Nous allons résoudre ce problème grâce à :
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.c. \" 
         ```flotte[99]['etat']``` renverra une erreur car la clé 99 n'existe pas. 
@@ -444,7 +444,7 @@ Nous allons résoudre ce problème grâce à :
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.a. \" 
         Les valeurs possibles pour ```choix``` sont ```electrique``` ou ```classique```. 
@@ -453,7 +453,7 @@ Nous allons résoudre ce problème grâce à :
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.b. \" 
         En fonction du choix (```electrique``` ou ```classique```), cette fonction va renvoyer le nom de la première station où un vélo est disponible (à l'```etat``` 1).  
@@ -463,7 +463,7 @@ Nous allons résoudre ce problème grâce à :
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.a. \" 
         ```python linenums='1'
@@ -477,7 +477,7 @@ Nous allons résoudre ce problème grâce à :
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.b. \" 
         ```python linenums='1'
@@ -490,7 +490,7 @@ Nous allons résoudre ce problème grâce à :
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4. \" 
         ```python linenums='1'
