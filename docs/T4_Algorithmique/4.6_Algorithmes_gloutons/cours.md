@@ -169,7 +169,7 @@ def rendu(somme_a_rendre):
 Damned ! Mais ce n'est pas une solution optimale !  
 `[20, 20, 20, 2, 1]` serait bien mieux.
 
-**Moralité** : Lors d'un rendu de monnaie, l'algorithme glouton n'est optimal que _sous certaines conditions_, ce qui est un peu décevant. Un système de monnaie qui rend l'algorithme glouton est dit **canonique**. Il est difficile de caractériser mathématiquement si un système de monnaie est canonique ou pas.
+**Moralité** : Lors d'un rendu de monnaie, l'algorithme glouton n'est optimal que _sous certaines conditions_, ce qui est un peu décevant. Un système de monnaie qui rend l'algorithme glouton est dit **canonique** (tous les systèmes monétaires actuels le sont, mais le [système monétaire brittanique avant 1971](https://ressources.sesamath.net/matoumatheux/www/num/entier/anglaise.htm){. target="_blank"} ne l'était pas !). Il est (très) difficile de caractériser mathématiquement si un système de monnaie est canonique ou pas.
 
 ## 3. Le problème du sac à dos _(Knapsack Problem)_
 
