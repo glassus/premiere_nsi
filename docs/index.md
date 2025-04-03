@@ -38,6 +38,7 @@
 
 
 ## Thèmes en cours d'étude :
+- [Codage des non-entiers](./T2_Representation_des_donnees/2.8_Codage_non-entiers/cours/)
 - [Algorithmes gloutons](./T4_Algorithmique/4.6_Algorithmes_gloutons/cours/)
 - [Dictionnaires](./T2_Representation_des_donnees/2.3_Dictionnaires/cours/)
 

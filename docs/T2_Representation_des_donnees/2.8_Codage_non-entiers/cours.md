@@ -47,7 +47,7 @@ Donc $3,6875=11,1011_2$
     Donner l'écriture binaire de 20,875.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         - partie entière : $20 = 10100_2$
@@ -69,7 +69,7 @@ Donc $3,6875=11,1011_2$
     Donner l'écriture binaire de 0,2.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         - partie entière : $0 = 0_2$
@@ -191,7 +191,7 @@ car notre code les aura considérés comme «suffisamment proches».
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
