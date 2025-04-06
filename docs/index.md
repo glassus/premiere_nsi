@@ -38,9 +38,10 @@
 
 
 ## Thèmes en cours d'étude :
+- [Architecture Von Neumann](./T3_Architecture_materielle/3.2_Architecture_Von_Neumann/cours/)
 - [Codage des non-entiers](./T2_Representation_des_donnees/2.8_Codage_non-entiers/cours/)
 - [Algorithmes gloutons](./T4_Algorithmique/4.6_Algorithmes_gloutons/cours/)
-- [Dictionnaires](./T2_Representation_des_donnees/2.3_Dictionnaires/cours/)
+
 
 
 
@@ -49,6 +50,7 @@
 
 
 !!! info "*Anciens thèmes traités*"
+    - [Dictionnaires](./T2_Representation_des_donnees/2.3_Dictionnaires/cours/)
     - [Projet Pygame - Micro:bit](./T6_Mini-projets/05_Initiation_Pygame/)
     - [Micro:bit](./T3_Architecture_materielle/3.1_Microbit/cours/)
     - [Dichotomie](./T4_Algorithmique/4.5_Dichotomie/cours/)

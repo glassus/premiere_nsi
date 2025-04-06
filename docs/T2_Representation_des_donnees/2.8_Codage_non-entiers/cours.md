@@ -40,6 +40,8 @@ $0,5 \times 2 = \textbf{1}$
 
 On prend ensuite le chiffre des unités de tous les nombres obtenus : 1011
 
+Ces chiffres signifient que $0,6875 = 0,5 + 0,125 + 0,0625$
+
 Donc $3,6875=11,1011_2$
 
 !!! example "{{ exercice() }}"
