@@ -563,6 +563,7 @@ La liste `combinaisons` contient bien les 64 mots possibles ($2^6=64$) :
     Compléter le code ci-dessous.
 
     ```python linenums='1'
+    poids_max = 40
     valeurs = [] 
     poids = []
     for comb in combinaisons :
@@ -580,7 +581,7 @@ La liste `combinaisons` contient bien les 64 mots possibles ($2^6=64$) :
     for k in range(len(meilleure_comb)) :
         if meilleure_comb[k] == '1' :
             mot_sol += objets[k][0]
-        
+    print(mot_sol, valeur_max)
     ```
 
     {{
@@ -588,6 +589,7 @@ La liste `combinaisons` contient bien les 64 mots possibles ($2^6=64$) :
     """
     ??? success \"Correction\" 
         ```python linenums='1'
+        poids_max = 40
         valeurs = [] 
         poids = []
         for comb in combinaisons :
@@ -605,7 +607,7 @@ La liste `combinaisons` contient bien les 64 mots possibles ($2^6=64$) :
         for k in range(len(meilleure_comb)) :
             if meilleure_comb[k] == '1' :
                 mot_sol += objets[k][0]
-            
+        print(mot_sol, valeur_max)
         ```        
     """
     )
