@@ -525,33 +525,92 @@ La liste `combinaisons` contient bien les 64 mots possibles ($2^6=64$) :
      '111111']
 
 ```
+#### 3.3.2 Calculer le poids et la valeur de chaque combinaison
 
+!!! example "{{ exercice() }}"
+    Créer une fonction ```poids_valeur_comb``` qui prend en paramètre une combinaison ```comb```  et qui renvoie son poids et sa valeur.
 
-```python linenums='1'
-valeurs = [] 
-poids = []
-for comb in combinaisons :
-    poids_comb = 0
-    valeur = 0
-    for i in range(len(objets)): 
-        if comb[i] == '1':
-            poids_comb += objets[i][1]
-            valeur += objets[i][2]
-    if poids_comb > poids_max :
-        valeur = 0
-    valeurs.append(valeur)
-    poids.append(poids_comb)
+    Exemple :
 
-valeur_max = max(valeurs)
-meilleure_comb = combinaisons[valeurs.index(valeur_max)]
-poids_comb = poids[valeurs.index(valeur_max)]
+    ```python
+    >>> poids_valeur_comb('10010100')
+    (41, 1800)
+    ```
 
-mot_sol = ""
-for k in range(len(meilleure_comb)) :
-    if meilleure_comb[k] == '1' :
-        mot_sol += objets[k][0]
-    
-```
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ```python linenums='1'
+        objets  = [['A', 13, 700], ['B', 12, 500], ['C', 8, 200], ['D', 10, 300], ['E', 14, 600], ['F', 18, 800]]
+
+        def poids_valeur_comb(comb):
+            poids_comb = 0
+            valeur = 0
+            for i in range(len(objets)): 
+                if comb[i] == '1':
+                    poids_comb += objets[i][1]
+                    valeur += objets[i][2]
+            return poids_comb, valeur
+        ```    
+    """
+    )
+    }}
+
+#### 3.3.2 Force brute
+
+!!! example "{{ exercice() }}"
+    Compléter le code ci-dessous.
+
+    ```python linenums='1'
+    valeurs = [] 
+    poids = []
+    for comb in combinaisons :
+        poids_comb, valeur = ...
+        if poids_comb > poids_max :
+            valeur = 0
+        valeurs.append(valeur)
+        poids.append(poids_comb)
+
+    valeur_max = max(valeurs)
+    meilleure_comb = combinaisons[valeurs.index(valeur_max)]
+    poids_comb = poids[valeurs.index(valeur_max)]
+
+    mot_sol = ""
+    for k in range(len(meilleure_comb)) :
+        if meilleure_comb[k] == '1' :
+            mot_sol += objets[k][0]
+        
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ```python linenums='1'
+        valeurs = [] 
+        poids = []
+        for comb in combinaisons :
+            poids_comb, valeur = poids_valeur_comb(comb)
+            if poids_comb > poids_max :
+                valeur = 0
+            valeurs.append(valeur)
+            poids.append(poids_comb)
+
+        valeur_max = max(valeurs)
+        meilleure_comb = combinaisons[valeurs.index(valeur_max)]
+        poids_comb = poids[valeurs.index(valeur_max)]
+
+        mot_sol = ""
+        for k in range(len(meilleure_comb)) :
+            if meilleure_comb[k] == '1' :
+                mot_sol += objets[k][0]
+            
+        ```        
+    """
+    )
+    }}
+
 ```python
 >>> mot_sol
   'ABE'
