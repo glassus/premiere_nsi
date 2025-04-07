@@ -533,7 +533,7 @@ La liste `combinaisons` contient bien les 64 mots possibles ($2^6=64$) :
     Exemple :
 
     ```python
-    >>> poids_valeur_comb('10010100')
+    >>> poids_valeur_comb('100101')
     (41, 1800)
     ```
 
