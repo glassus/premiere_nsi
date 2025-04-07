@@ -538,7 +538,7 @@ La liste `combinaisons` contient bien les 64 mots possibles ($2^6=64$) :
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
