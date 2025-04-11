@@ -38,6 +38,7 @@
 
 
 ## Thèmes en cours d'étude :
+- [Manipulation de fichiers csv](./T5_Traitement_de_donnees/5.1_Manipulation_csv/cours/)
 - [Architecture Von Neumann](./T3_Architecture_materielle/3.2_Architecture_Von_Neumann/cours/)
 - [Codage des non-entiers](./T2_Representation_des_donnees/2.8_Codage_non-entiers/cours/)
 - [Algorithmes gloutons](./T4_Algorithmique/4.6_Algorithmes_gloutons/cours/)

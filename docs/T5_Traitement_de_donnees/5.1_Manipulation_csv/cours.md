@@ -154,7 +154,7 @@ _Ce fichier a été généré par Rémi Deniaud, de l'académie de Bordeaux._
     Stocker dans  une variable `joueurs`  les renseignements de tous les joueurs présents dans ce fichier csv.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -180,7 +180,7 @@ _Ce fichier a été généré par Rémi Deniaud, de l'académie de Bordeaux._
     Combien de joueurs sont présents dans ce fichier ?
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -195,7 +195,7 @@ _Ce fichier a été généré par Rémi Deniaud, de l'académie de Bordeaux._
 !!! example "{{ question() }}"
     Quel est le nom du joueur n°486 ?
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -221,7 +221,7 @@ _Ce fichier a été généré par Rémi Deniaud, de l'académie de Bordeaux._
     En 2019, où jouait Baptiste SERIN ?  
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         La méthode la plus naturelle est de parcourir toute la liste jusqu'à trouver le bon joueur, puis d'afficher son équipe.
@@ -252,7 +252,7 @@ _Ce fichier a été généré par Rémi Deniaud, de l'académie de Bordeaux._
     *Attention à bien convertir en entier la chaine de caractère renvoyée par la clé ```Poids```, à l'aide de la fonction ```int()```.*
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -303,7 +303,7 @@ Dans l'instruction ```plt.plot(X, Y, 'ro') ``` :
     Afficher sur un graphique tous les joueurs de rugby du Top14, en mettant le poids en abscisse et la taille en ordonnée.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -323,7 +323,7 @@ Dans l'instruction ```plt.plot(X, Y, 'ro') ``` :
     Faire apparaître ensuite les joueurs évoluant au poste de Centre en bleu, et les 2ème lignes en vert.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'

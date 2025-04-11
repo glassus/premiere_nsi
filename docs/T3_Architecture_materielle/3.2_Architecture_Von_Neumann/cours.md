@@ -163,7 +163,7 @@ Le simulateur Y86 nous a permis d'observer comment un processeur réalise des op
 
 ## 3. Activité 2 : modification d'un programme par désassemblage
 
-On considère ci-dessous le programme `crackme.c`, rédigé en langage en C. Vous pouvez télécharger ce programme [ici](data/desassemblage/crackme.c).
+On considère ci-dessous le programme `crackme.c`, rédigé en langage en C. Vous pouvez télécharger ce programme [ici](data/desassemblage/crackme.c){. target="_blank"}.
 
 
 ```c
@@ -179,7 +179,7 @@ printf("Accès restreint : saisissez votre mot de passe \n");
 while (strcmp(saisie,"NSIMAURIAC")!=0)
 {
 printf("Mot de passe ? \n");
-scanf("%s",&saisie);
+scanf("%s", saisie);
 }
 
 printf("Accès autorisé \n");
