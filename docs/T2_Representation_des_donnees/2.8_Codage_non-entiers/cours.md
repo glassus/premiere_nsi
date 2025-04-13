@@ -189,7 +189,7 @@ car notre code les aura considérés comme «suffisamment proches».
 !!! example "{{ exercice() }}"
     On considère la fonction $f(x)=x^3-6x+2$.   
     L'équation $f(x)=1$ admet une solution unique dans l'intervalle $[0;1]$.  
-    Trouver une valeur approchée de cette solution à $10^{-5}$ près. On prendra `e`$=0,001$.
+    Trouver une valeur approchée de cette solution à $10^{-5}$ près. On prendra `e = 0.001`.
 
 
     {{
