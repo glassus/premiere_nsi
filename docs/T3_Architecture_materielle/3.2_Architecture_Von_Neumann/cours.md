@@ -13,15 +13,15 @@
 
 On distingue 4 zones essentielles :
 
-- le **CPU** (Central Processing Unit) qui contient lui-même :  
-    - l'**Unité Arithmétique et Logique** (UAL) dans laquelle sont effectuées les opérations de base (addition, multiplication...) Cette zone comporte notamment les **registres** (peu nombreux, de l'ordre de la dizaine) qui sont les espaces de travail ultra-rapides dans lesquels l'UAL va effectuer ses calculs. Une fois ceux-ci effectués, les valeurs des registres repartent dans la mémoire.  
-    - l'**Unité de contrôle**, qui va séquencer les opérations. Lorsqu'on parle d'un processeur à 3 GHz, cela signifie (approximativement) que Unité de Contrôle va envoyer l'ordre d'une nouvelle opération à l'UAL 3 milliards de fois par seconde.
-- la **mémoire**, qui contient **à la fois** les données à traiter **et** les instructions du programme. Cette idée de stocker **au même endroit données et programme** est l'idée centrale de l'architecture von Neumann.
-- les **bus** de communication (des fils électriques permettant de transporter les données entre les différents composants).
+
+- l'**Unité Arithmétique et Logique** (UAL) dans laquelle sont effectuées les opérations de base (addition, multiplication...) Cette zone comporte notamment les **registres** (peu nombreux, de l'ordre de la dizaine) qui sont les espaces de travail ultra-rapides dans lesquels l'UAL va effectuer ses calculs. Une fois ceux-ci effectués, les valeurs des registres repartent dans la mémoire.  
+- l'**Unité de contrôle** (UC), qui va séquencer les opérations. Lorsqu'on parle d'un processeur à 3 GHz, cela signifie (approximativement) que Unité de Contrôle va envoyer l'ordre d'une nouvelle opération à l'UAL 3 milliards de fois par seconde.
+- la **mémoire**, qui contient **à la fois** les données à traiter **ET** les instructions du programme. Cette idée de stocker **au même endroit données et programme** est l'idée centrale de l'architecture von Neumann.
 - les **Entrées/Sorties**, permettant de gérer les informations avec l'extérieur.
 
+Les **bus** de communication (des fils électriques) assurent le transport des données entre les différents composants.
 
-
+Le **CPU** (Central Processing Unit) regroupe l'UAL et l'UC.  
 ## 2. Activité 1 : simulation d'un programme en assembleur
 
 ![image](data/meme.png){: .center width=40%}
