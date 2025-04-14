@@ -193,7 +193,7 @@ car notre code les aura considérés comme «suffisamment proches».
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
