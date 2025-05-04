@@ -34,7 +34,7 @@ f.close()
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -55,7 +55,7 @@ f.close()
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -171,7 +171,7 @@ On peut aussi inverser l'ordre de tri :
 !!! example "{{ question() }}"
     Trier les joueurs du Top14 par taille.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -190,7 +190,7 @@ On peut aussi inverser l'ordre de tri :
     Trier les joueurs du Top14 par poids.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -209,7 +209,7 @@ On peut aussi inverser l'ordre de tri :
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -256,7 +256,7 @@ On peut aussi inverser l'ordre de tri :
     $(102-90)^2+(190-180)^2=244$
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -315,7 +315,7 @@ Baptiste SERIN est donc le joueur numéro 530.
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python

@@ -309,7 +309,7 @@ Le principe du filtrage va être de créer une nouvelle *dataframe* ne contenant
     Créer une dataframe ```grands``` qui contient tous les joueurs mesurant plus de 2 mètres (inclus).
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\"
         ```python
@@ -328,7 +328,7 @@ Pour effectuer des opérations sur les booléens, on utilisera le symbole ```&``
      Créer une dataframe ```grands_et_gros``` qui contient tous les joueurs mesurant plus de 2 mètres (inclus) et pesant plus de 120 kg (inclus).
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\"
         ```python
@@ -349,7 +349,7 @@ Pour effectuer des opérations sur les booléens, on utilisera le symbole ```&``
     Trouver en une seule ligne le joueur le plus léger du Top14.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\"
         ```python
@@ -372,7 +372,7 @@ Pour effectuer des opérations sur les booléens, on utilisera le symbole ```&``
     Tracer le nuage de points poids-taille comme précédemment, mais en marquant d'un point bleu les 2èmes ligne et d'un point rouge les piliers.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\"
         ```python linenums='1'
@@ -439,7 +439,7 @@ del df['Poids après les vacances']
     **Q1.** Créer une colonne contenant l'IMC de chaque joueur.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -454,7 +454,7 @@ del df['Poids après les vacances']
     **Q2.** Créer une nouvelle dataframe contenant tous les joueurs du Top14 classés par ordre d'IMC croissant.
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -501,7 +501,7 @@ Il va nous suffir de :
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
