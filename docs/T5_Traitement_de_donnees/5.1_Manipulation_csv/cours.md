@@ -252,7 +252,7 @@ _Ce fichier a été généré par Rémi Deniaud, de l'académie de Bordeaux._
     *Attention à bien convertir en entier la chaine de caractère renvoyée par la clé ```Poids```, à l'aide de la fonction ```int()```.*
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
