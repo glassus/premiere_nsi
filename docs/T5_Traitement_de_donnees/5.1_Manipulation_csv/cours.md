@@ -131,10 +131,10 @@ permet de faire ceci :
       'Email': 'howard@example.com',
       'SMS': '33777888898'}]
 
->>> print(amis[0]['Email'])
+>>> amis[0]['Email']
     john@example.com
 
->>> print(amis[2]['Nom'])
+>>> amis[2]['Nom']
   Paige
 ```
 
@@ -151,10 +151,10 @@ Le fichier [`top14.csv `](../data/top14.csv)  contient tous les joueurs du Top1
 _Ce fichier a été généré par Rémi Deniaud, de l'académie de Bordeaux._
 
 !!! example "{{ question() }}"
-    Stocker dans  une variable `joueurs`  les renseignements de tous les joueurs présents dans ce fichier csv.
+    Stocker dans  une variable `joueurs`  les renseignements de tous les joueurs présents dans ce fichier `csv`.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
