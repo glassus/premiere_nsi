@@ -180,7 +180,7 @@ _Ce fichier a été généré par Rémi Deniaud, de l'académie de Bordeaux._
     Combien de joueurs sont présents dans ce fichier ?
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
@@ -195,7 +195,7 @@ _Ce fichier a été généré par Rémi Deniaud, de l'académie de Bordeaux._
 !!! example "{{ question() }}"
     Quel est le nom du joueur n°486 ?
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
@@ -221,7 +221,7 @@ _Ce fichier a été généré par Rémi Deniaud, de l'académie de Bordeaux._
     En 2019, où jouait Baptiste SERIN ?  
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         La méthode la plus naturelle est de parcourir toute la liste jusqu'à trouver le bon joueur, puis d'afficher son équipe.
