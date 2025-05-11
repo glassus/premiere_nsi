@@ -38,6 +38,7 @@
 
 
 ## Thèmes en cours d'étude :
+- [Trier des données](./T5_Traitement_de_donnees/5.2_Trier_des_donnees/cours/)
 - [Manipulation de fichiers csv](./T5_Traitement_de_donnees/5.1_Manipulation_csv/cours/)
 
 
