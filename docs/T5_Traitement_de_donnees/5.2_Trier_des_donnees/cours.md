@@ -34,7 +34,7 @@ f.close()
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
@@ -55,7 +55,7 @@ f.close()
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
@@ -171,7 +171,7 @@ On peut aussi inverser l'ordre de tri :
 !!! example "{{ question() }}"
     Trier les joueurs du Top14 par taille.
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
