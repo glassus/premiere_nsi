@@ -159,7 +159,7 @@ _Ce fichier a été généré par Rémi Deniaud, de l'académie de Bordeaux._
     ??? success \"Correction\" 
         ```python linenums='1'
         import csv
-        f = open('data/top14.csv', 'r', encoding = 'utf-8')
+        f = open('top14.csv', 'r', encoding = 'utf-8')
         donnees = csv.DictReader(f)
         joueurs = []
         for ligne in donnees:
@@ -307,6 +307,7 @@ Dans l'instruction ```plt.plot(X, Y, 'ro') ``` :
     """
     ??? success \"Correction\" 
         ```python linenums='1'
+        import matplotlib.pyplot as plt
         X = [int(joueur['Poids']) for joueur in joueurs]
         Y = [int(joueur['Taille']) for joueur in joueurs]
         plt.plot(X, Y, 'ro') 
@@ -327,6 +328,7 @@ Dans l'instruction ```plt.plot(X, Y, 'ro') ``` :
     """
     ??? success \"Correction\" 
         ```python linenums='1'
+        import matplotlib.pyplot as plt
         #tous les joueurs
         X = [int(joueur['Poids']) for joueur in joueurs]
         Y = [int(joueur['Taille']) for joueur in joueurs]
