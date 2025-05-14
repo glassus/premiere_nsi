@@ -321,7 +321,7 @@ Le principe du filtrage va être de créer une nouvelle *dataframe* ne contenant
 
     
 
-Pour effectuer des opérations sur les booléens, on utilisera le symbole ```&``` pour le ET et ```|``` pour le OU.
+Pour effectuer des opérations sur les booléens, on utilisera le symbole ```&``` pour le ET et ```|``` pour le OU. Attention, dans ce cas-là, il faut mettre des parenthèses pour délimiter chaque booléen.
 
 
 !!! example "{{ exercice() }}"
