@@ -330,7 +330,7 @@ Pour effectuer des opérations sur les booléens, on utilisera le symbole ```&``
      Créer une dataframe ```grands_et_gros``` qui contient tous les joueurs mesurant plus de 2 mètres (inclus) et pesant plus de 120 kg (inclus).
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\"
         ```python
