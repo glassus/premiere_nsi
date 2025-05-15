@@ -311,7 +311,7 @@ Le principe du filtrage va être de créer une nouvelle *dataframe* ne contenant
     Créer une dataframe ```grands``` qui contient tous les joueurs mesurant plus de 2 mètres (inclus).
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\"
         ```python
