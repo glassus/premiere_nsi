@@ -351,7 +351,7 @@ Pour effectuer des opérations sur les booléens, on utilisera le symbole ```&``
     Trouver en une seule ligne le joueur le plus léger du Top14.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\"
         ```python
@@ -374,7 +374,7 @@ Pour effectuer des opérations sur les booléens, on utilisera le symbole ```&``
     Tracer le nuage de points poids-taille comme précédemment, mais en marquant d'un point bleu les 2èmes ligne et d'un point rouge les piliers.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\"
         ```python linenums='1'
