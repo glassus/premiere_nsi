@@ -315,7 +315,7 @@ Baptiste SERIN est donc le joueur numéro 530.
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
@@ -332,7 +332,7 @@ Baptiste SERIN est donc le joueur numéro 530.
     Afficher le nom des 10 premiers joueurs.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
