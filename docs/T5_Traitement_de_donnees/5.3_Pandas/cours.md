@@ -185,6 +185,7 @@ Pour tracer notre nuage de points poids-taille, le code sera donc simplement :
 
 ```python
 import matplotlib.pyplot as plt
+plt.clf()
 X = df['Poids']
 Y = df['Taille']
 plt.plot(X, Y, 'ro')
@@ -222,6 +223,7 @@ D'ailleurs, on peut très facilement tracer des boites à moustaches avec la fon
 
 
 ```python
+plt.clf()
 graph_taille = df.boxplot("Taille")
 graph_taille.plot()
 plt.show()
