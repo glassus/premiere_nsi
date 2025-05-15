@@ -185,14 +185,14 @@ Pour tracer notre nuage de points poids-taille, le code sera donc simplement :
 
 ```python
 import matplotlib.pyplot as plt
-plt.clf()
+plt.figure()
 X = df['Poids']
 Y = df['Taille']
 plt.plot(X, Y, 'ro')
 plt.show()
 ```
 
-
+:warning: Il faut spécifier ```plt.figure()``` au début de chaque nouveau graphique pour éviter qu'ils se superposent. 
     
 ![png](data/01_Manipulation_csv_37_0.png){: .center}
     
