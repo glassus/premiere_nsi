@@ -8,17 +8,20 @@
 
 
 
-!!! abstract "Actualités"
-    -  [Présentation de l'algorithme de Gale-Shapley](https://glassus.github.io/terminale_nsi/T7_Divers/11_parcoursup/cours/){. target="_blank"}
+!!! abstract "Évaluation en groupe du 19 mai"
+    -  Connectez vous 
 #}
 
+{#
+!!! abstract ":star: Évaluation en groupe du 19 mai :star:"
+    - Connectez vous à [LycéeConnecté](https://lyceeconnecte.fr/){. target="_blank"}
+    - Laissez l'onglet LycéeConnecté ouvert, puis cliquez sur l'activité Capytale [https://capytale2.ac-paris.fr/web/c/1548-3575893](https://capytale2.ac-paris.fr/web/c/1548-3575893){. target="_blank"}
+#}
 
-!!! abstract ":star: Actualités :star:"
-    - Vous êtes le roi / la reine de la tablette graphique ? Participez au [concours d'affiches NSI](https://aeif.fr/index.php/2025/03/25/participez-au-concours-daffiches-nsi/){. target="_blank"}
-
-
-
-
+{#
+!!! abstract ":star: Évaluation en groupe du 19 mai :star:"
+    - Cliquez sur l'activité Capytale [https://capytale2.ac-paris.fr/web/c/1548-3575893](https://capytale2.ac-paris.fr/web/c/1548-3575893){. target="_blank"}
+#}
 
 {#
 !!! abstract "Actualités"
@@ -35,6 +38,9 @@
 - [DS06](data/DS06_listes2_1NSI_2024.pdf){. target="_blank"}
 - [DS06 correction](data/DS06_listes2_1NSI_2024_corr.pdf){.target="_blank"}
 #}
+
+
+
 
 
 ## Thèmes en cours d'étude :
