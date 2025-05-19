@@ -12,11 +12,11 @@
     -  Connectez vous 
 #}
 
-{#
+
 !!! abstract ":star: Évaluation en groupe du 19 mai :star:"
     - Connectez vous à [LycéeConnecté](https://lyceeconnecte.fr/){. target="_blank"}
     - Laissez l'onglet LycéeConnecté ouvert, puis cliquez sur l'activité Capytale [https://capytale2.ac-paris.fr/web/c/1548-3575893](https://capytale2.ac-paris.fr/web/c/1548-3575893){. target="_blank"}
-#}
+
 
 {#
 !!! abstract ":star: Évaluation en groupe du 19 mai :star:"
