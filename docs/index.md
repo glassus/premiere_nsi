@@ -11,11 +11,12 @@
 !!! abstract "Évaluation en groupe du 19 mai"
     -  Connectez vous 
 #}
-
+  
 
 !!! abstract ":star: Évaluation en groupe du 19 mai :star:"
     - Connectez vous à [LycéeConnecté](https://lyceeconnecte.fr/){. target="_blank"}
     - Laissez l'onglet LycéeConnecté ouvert, puis cliquez sur l'activité Capytale [https://capytale2.ac-paris.fr/web/c/1548-3575893](https://capytale2.ac-paris.fr/web/c/1548-3575893){. target="_blank"}
+    - Proposition de correction : [https://capytale2.ac-paris.fr/web/c/b83a-1707007](https://capytale2.ac-paris.fr/web/c/b83a-1707007){. target="_blank"}
 
 
 {#
@@ -44,6 +45,7 @@
 
 
 ## Thèmes en cours d'étude :
+- [Algorithme KNN](./T4_Algorithmique/4.7_Algorithme_KNN/cours/)
 - [Utilisation du module Pandas](./T5_Traitement_de_donnees/5.3_Pandas/cours/)
 - [Trier des données](./T5_Traitement_de_donnees/5.2_Trier_des_donnees/cours/)
 - [Manipulation de fichiers csv](./T5_Traitement_de_donnees/5.1_Manipulation_csv/cours/)
