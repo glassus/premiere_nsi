@@ -93,7 +93,7 @@ De la même manière qu'on avait [classé les joueurs suivant leur IMC](https://
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
