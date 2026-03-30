@@ -15,7 +15,18 @@
     ![](data/picKNN.png){: .center}
 
 ## 1. Objectif 
-Nous allons reprendre le jeu de données sur les joueurs du Top14 utilisé dans le cours «Trier des données» :  [```top14.csv``` ](https://glassus.github.io/premiere_nsi/T5_Traitement_de_donnees/data/top14.csv){. target="_blank"}
+Nous allons reprendre le jeu de données sur les joueurs du Top14 utilisé dans le cours «Trier des données» :  [```top14.csv``` ](https://glassus.github.io/premiere_nsi/T5_Traitement_de_donnees/data/top14.csv){. target="_blank"}, qu'on importera dans une liste de dictionnaires avec ce code :
+
+```python
+import csv
+f = open('top14.csv', "r", encoding = 'utf-8')
+donnees = csv.DictReader(f)
+joueurs = []
+for ligne in donnees:
+    joueurs.append(dict(ligne))
+
+f.close()
+```
 
 Nous souhaitons pouvoir répondre à cette question :
 
