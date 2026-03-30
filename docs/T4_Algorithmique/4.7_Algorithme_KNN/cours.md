@@ -66,7 +66,7 @@ Comment mesurer la différence physique entre deux joueurs de rugby ?
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
