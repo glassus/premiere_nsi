@@ -66,7 +66,7 @@ Comment mesurer la différence physique entre deux joueurs de rugby ?
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -104,7 +104,7 @@ De la même manière qu'on avait [classé les joueurs suivant leur IMC](https://
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -137,7 +137,7 @@ De la même manière qu'on avait [classé les joueurs suivant leur IMC](https://
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -174,7 +174,7 @@ De la même manière qu'on avait [classé les joueurs suivant leur IMC](https://
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -211,7 +211,7 @@ De la même manière qu'on avait [classé les joueurs suivant leur IMC](https://
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
