@@ -12,12 +12,12 @@
     -  Connectez vous 
 #}
   
-
+{#
 !!! abstract ":star: Évaluation en groupe du 19 mai :star:"
     - Connectez vous à [LycéeConnecté](https://lyceeconnecte.fr/){. target="_blank"}
     - Laissez l'onglet LycéeConnecté ouvert, puis cliquez sur l'activité Capytale [https://capytale2.ac-paris.fr/web/c/1548-3575893](https://capytale2.ac-paris.fr/web/c/1548-3575893){. target="_blank"}
     - Proposition de correction : [https://capytale2.ac-paris.fr/web/c/b83a-1707007](https://capytale2.ac-paris.fr/web/c/b83a-1707007){. target="_blank"}
-
+#}
 
 {#
 !!! abstract ":star: Évaluation en groupe du 19 mai :star:"
@@ -41,14 +41,12 @@
 #}
 
 
-
-
+!!! tip "Utilisation des VM"
+    Voir [cette page](./T7_Divers/2_VM/cours.md){. target="_blank"} 
 
 ## Thèmes en cours d'étude :
-- [Algorithme KNN](./T4_Algorithmique/4.7_Algorithme_KNN/cours/)
-- [Utilisation du module Pandas](./T5_Traitement_de_donnees/5.3_Pandas/cours/)
-- [Trier des données](./T5_Traitement_de_donnees/5.2_Trier_des_donnees/cours/)
-- [Manipulation de fichiers csv](./T5_Traitement_de_donnees/5.1_Manipulation_csv/cours/)
+
+- [Variables](./T1_Demarrer_en_Python/1.1_Variables/cours/) 
 
 
 
@@ -56,8 +54,7 @@
 
 
 
-
-
+{#
 !!! info "*Anciens thèmes traités*"
     - [Architecture Von Neumann](./T3_Architecture_materielle/3.2_Architecture_Von_Neumann/cours/)
     - [Codage des non-entiers](./T2_Representation_des_donnees/2.8_Codage_non-entiers/cours/)
@@ -92,7 +89,7 @@
     - [Boucle ```#!python for ... in ...``` ](T1_Demarrer_en_Python/1.2_Boucle_for/cours/)
     - [Exercices ```#!python for ... in ...``` ](T1_Demarrer_en_Python/1.2_Boucle_for/exercices/)
     - [Variables](T1_Demarrer_en_Python/1.1_Variables/cours/) 
-
+#}
 
 {#
 !!! info "*Anciens thèmes traités*"
