@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5388,22 +5388,22 @@ z:  .long 0
 <p>Le simulateur Y86 nous a permis d'observer comment un processeur réalise des opérations élémentaires. Nous avons découvert le langage assembleur, qui est un langage beaucoup moins agréable qu'un langage de haut-niveau, mais qui reste néanmoins compréhensible par un être humain. Certains informaticiens codent (encore de nos jours) directement en langage assembleur, pour "coller" au mieux au processeur et optimiser les ressources.</p>
 <h2 id="3-activite-2-modification-dun-programme-par-desassemblage">3. Activité 2 : modification d'un programme par désassemblage<a class="headerlink" href="#3-activite-2-modification-dun-programme-par-desassemblage" title="Permanent link">⚓︎</a></h2>
 <p>On considère ci-dessous le programme <code>crackme.c</code>, rédigé en langage en C. Vous pouvez télécharger ce programme <a class="" href="../data/desassemblage/crackme.c" target="_blank">ici</a>.</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;stdio.h&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;stdlib.h&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;string.h&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">"stdio.h"</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"stdlib.h"</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"string.h"</span>
 
 <span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
 
-<span class="kt">char</span><span class="w"> </span><span class="n">saisie</span><span class="p">[</span><span class="mi">50</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
-<span class="n">printf</span><span class="p">(</span><span class="s">&quot;Accès restreint : saisissez votre mot de passe </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">saisie</span><span class="p">,</span><span class="s">&quot;NSIMAURIAC&quot;</span><span class="p">)</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">saisie</span><span class="p">[</span><span class="mi">50</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">""</span><span class="p">;</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">"Accès restreint : saisissez votre mot de passe </span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">saisie</span><span class="p">,</span><span class="s">"NSIMAURIAC"</span><span class="p">)</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span>
 <span class="p">{</span>
-<span class="n">printf</span><span class="p">(</span><span class="s">&quot;Mot de passe ? </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-<span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">saisie</span><span class="p">);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">"Mot de passe ? </span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="n">scanf</span><span class="p">(</span><span class="s">"%s"</span><span class="p">,</span><span class="w"> </span><span class="n">saisie</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="n">printf</span><span class="p">(</span><span class="s">&quot;Accès autorisé </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">"Accès autorisé </span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
 
 <span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span><span class="w"> </span>
@@ -5549,7 +5549,7 @@ Néanmoins, il est parfois possible d'agir au niveau le plus bas (le langage-mac
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       

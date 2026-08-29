@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5291,11 +5291,11 @@ La bibliothèque <a class="" href="https://pandas.pydata.org/" target="_blank">p
 <div class="admonition note">
 <p class="admonition-title">Première dataframe <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2764.svg" title=":heart:" /></p>
 <p>Nos données seront ensuite importées dans la dataframe <code>df</code> par l'instruction :
-<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;top14.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> 
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'top14.csv'</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">'utf-8'</span><span class="p">)</span> 
 </code></pre></div></p>
 </div>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
-<span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="err">&#39;</span><span class="nc">pandas</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">DataFrame</span><span class="s1">&#39;&gt;</span>
+<span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="err">'</span><span class="nc">pandas</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">DataFrame</span><span class="s1">'&gt;</span>
 </code></pre></div>
 <h2 id="2-observation-des-donnees">2. Observation des données<a class="headerlink" href="#2-observation-des-donnees" title="Permanent link">⚓︎</a></h2>
 <p>Que contient la variable <code>df</code> ?</p>
@@ -5320,7 +5320,7 @@ La bibliothèque <a class="" href="https://pandas.pydata.org/" target="_blank">p
 <div class="admonition abstract">
 <p class="admonition-title">La structure des données : <code>info</code> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2764.svg" title=":heart:" /></p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
-<span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="err">&#39;</span><span class="nc">pandas</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">DataFrame</span><span class="s1">&#39;&gt;</span>
+<span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="err">'</span><span class="nc">pandas</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">DataFrame</span><span class="s1">'&gt;</span>
 <span class="n">RangeIndex</span><span class="p">:</span> <span class="mi">595</span> <span class="n">entries</span><span class="p">,</span> <span class="mi">0</span> <span class="n">to</span> <span class="mi">594</span>
 <span class="n">Data</span> <span class="n">columns</span> <span class="p">(</span><span class="n">total</span> <span class="mi">6</span> <span class="n">columns</span><span class="p">):</span>
  <span class="c1">#   Column             Non-Null Count  Dtype </span>
@@ -5391,7 +5391,7 @@ La bibliothèque <a class="" href="https://pandas.pydata.org/" target="_blank">p
 <div class="admonition abstract">
 <p class="admonition-title">Extraction d'une colonne : <code>df[colonne]</code>  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2764.svg" title=":heart:" /></p>
 <p>Pour créer une liste contenant uniquement les données numériques de la colonne <code>poids</code>, il suffit d'écrire :
-<div class="highlight"><pre><span></span><code><span class="n">poids</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="n">poids</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Poids'</span><span class="p">]</span>
 </code></pre></div></p>
 </div>
 <p>La variable <code>poids</code> est un objet de type <code>Series</code> (assimilable à une liste)  qui va pouvoir être exploitée très facilement.</p>
@@ -5407,9 +5407,9 @@ La bibliothèque <a class="" href="https://pandas.pydata.org/" target="_blank">p
 <p>Pour tracer notre nuage de points poids-taille, le code sera donc simplement :</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span>
-<span class="n">Y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Poids'</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Taille'</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="s1">'ro'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 <p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> Il faut spécifier <code>plt.figure()</code> au début de chaque nouveau graphique pour éviter qu'ils se superposent. </p>
@@ -5418,7 +5418,7 @@ La bibliothèque <a class="" href="https://pandas.pydata.org/" target="_blank">p
 <p>L'interprétation numérique permet à <code>pandas</code> d'analyser automatiquement les données, avec notamment la fonction <code>describe()</code>.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Résumé des données numériques : <code>describe</code>  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2764.svg" title=":heart:" /> </p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Taille'</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 <span class="n">count</span>    <span class="mf">595.000000</span>
 <span class="n">mean</span>     <span class="mf">186.559664</span>
 <span class="n">std</span>        <span class="mf">7.572615</span>
@@ -5433,7 +5433,7 @@ La bibliothèque <a class="" href="https://pandas.pydata.org/" target="_blank">p
 <p>On voit donc que les principaux indicateurs statistiques sont proposés. </p>
 <p>D'ailleurs, on peut très facilement tracer des boites à moustaches avec la fonction <code>boxplot()</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
-<span class="n">graph_taille</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="s2">&quot;Taille&quot;</span><span class="p">)</span>
+<span class="n">graph_taille</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="s2">"Taille"</span><span class="p">)</span>
 <span class="n">graph_taille</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
@@ -5441,15 +5441,15 @@ La bibliothèque <a class="" href="https://pandas.pydata.org/" target="_blank">p
 <p>Pour les données non-numériques, la commande <code>describe()</code> n'est que peu d'utilité. Elle renseigne toutefois la valeur la plus fréquente (en statistiques, le <em>mode</em> ou <em>valeur modale</em>) grâce à <code>describe().top</code>.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Valeur modale de données non-numériques : <code>describe().top</code>  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2764.svg" title=":heart:" /> </p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">top</span>
-<span class="s1">&#39;3ème ligne&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Poste'</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">top</span>
+<span class="s1">'3ème ligne'</span>
 </code></pre></div>
 </div>
 <p><img alt="image" class="center" src="../data/mickey.jpg" width="40%" /></p>
 <p>Pour avoir un détail plus précis de la répartition des données, on peut utiliser <code>value_counts</code> :</p>
 <div class="admonition abstract">
 <p class="admonition-title">Répartition des valeurs : <code>value_counts</code>  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2764.svg" title=":heart:" /> </p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Poste'</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 <span class="mi">3</span><span class="n">ème</span> <span class="n">ligne</span>    <span class="mi">111</span>
 <span class="n">Pilier</span>        <span class="mi">110</span>
 <span class="mi">2</span><span class="n">ème</span> <span class="n">ligne</span>     <span class="mi">74</span>
@@ -5465,7 +5465,7 @@ La bibliothèque <a class="" href="https://pandas.pydata.org/" target="_blank">p
 <p>Il est possible aussi de trier la dataframe en lui indiquant la colonne de tri :</p>
 <div class="admonition abstract">
 <p class="admonition-title">Trier les données : <code>sort_values</code>  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2764.svg" title=":heart:" /> </p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">classement_par_taille</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Taille&#39;</span><span class="p">,</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">classement_par_taille</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">'Taille'</span><span class="p">,</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
 </div>
 <h2 id="4-filtres-et-recherches">4. Filtres et recherches<a class="headerlink" href="#4-filtres-et-recherches" title="Permanent link">⚓︎</a></h2>
@@ -5474,7 +5474,7 @@ La bibliothèque <a class="" href="https://pandas.pydata.org/" target="_blank">p
 <p class="admonition-title">Filtrage des lignes : <code>df[booléen]</code>  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2764.svg" title=":heart:" /> </p>
 <p>Comment créer une <em>dataframe</em> ne contenant que les joueurs de l'UBB ?<br />
 L'idée syntaxique est d'écrire à l'intérieur de <code>df[]</code> le <strong>test</strong> qui permettra le filtrage.
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">UBB</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Equipe&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Bordeaux&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">UBB</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">'Equipe'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'Bordeaux'</span><span class="p">]</span>
 </code></pre></div>
 Le booléen <code>df['Equipe'] == 'Bordeaux'</code> doit se comprendre ainsi : on ne veut garder que les joueurs dont le champ <code>Equipe</code> est égal à <code>'Bordeaux'</code>.</p>
 </div>
@@ -5492,7 +5492,7 @@ Le booléen <code>df['Equipe'] == 'Bordeaux'</code> doit se comprendre ainsi : o
 <p>Créer une dataframe <code>grands</code> qui contient tous les joueurs mesurant plus de 2 mètres (inclus).</p>
 <details class="success">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">grands</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">200</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">grands</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">'Taille'</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">200</span><span class="p">]</span>
 </code></pre></div>
 </details>
 </div>
@@ -5502,10 +5502,10 @@ Le booléen <code>df['Equipe'] == 'Bordeaux'</code> doit se comprendre ainsi : o
 <p>Créer une dataframe <code>grands_et_gros</code> qui contient tous les joueurs mesurant plus de 2 mètres (inclus) et pesant plus de 120 kg (inclus).</p>
 <details class="success">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">grands_gros</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">200</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">120</span><span class="p">)]</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">grands_gros</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">'Taille'</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">200</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'Poids'</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">120</span><span class="p">)]</span>
 </code></pre></div>
 <p>Autre solution, en utilisant la datadframe <code>grands</code> de l'exercice 1 :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">grands_gros</span> <span class="o">=</span> <span class="n">grands</span><span class="p">[</span><span class="n">grands</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">120</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">grands_gros</span> <span class="o">=</span> <span class="n">grands</span><span class="p">[</span><span class="n">grands</span><span class="p">[</span><span class="s1">'Poids'</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">120</span><span class="p">]</span>
 </code></pre></div></p>
 </details>
 </div>
@@ -5514,12 +5514,12 @@ Le booléen <code>df['Equipe'] == 'Bordeaux'</code> doit se comprendre ainsi : o
 <p>Trouver en une seule ligne le joueur le plus léger du Top14.</p>
 <details class="success">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="nb">min</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])]</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">'Poids'</span><span class="p">]</span> <span class="o">==</span> <span class="nb">min</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'Poids'</span><span class="p">])]</span>
        <span class="n">Equipe</span>             <span class="n">Nom</span>  <span class="n">Poste</span> <span class="n">Date</span> <span class="n">de</span> <span class="n">naissance</span>  <span class="n">Taille</span>  <span class="n">Poids</span>
 <span class="mi">491</span>  <span class="n">Racing92</span>  <span class="n">Teddy</span> <span class="n">IRIBAREN</span>  <span class="n">Mêlée</span>        <span class="mi">25</span><span class="o">/</span><span class="mi">09</span><span class="o">/</span><span class="mi">1990</span>     <span class="mi">170</span>     <span class="mi">70</span>
 </code></pre></div>
 <p>ou bien
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Poids&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">'Poids'</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </code></pre></div></p>
 </details>
 </div>
@@ -5548,21 +5548,21 @@ Le booléen <code>df['Equipe'] == 'Bordeaux'</code> doit se comprendre ainsi : o
 <span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;top14.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> 
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'top14.csv'</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">'utf-8'</span><span class="p">)</span> 
 
-<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span>
-<span class="n">Y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">)</span>
-
-
-<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;2ème ligne&#39;</span><span class="p">][</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span>
-<span class="n">Y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;2ème ligne&#39;</span><span class="p">][</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="s1">&#39;bo&#39;</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Poids'</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Taille'</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="s1">'ro'</span><span class="p">)</span>
 
 
-<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Pilier&#39;</span><span class="p">][</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span>
-<span class="n">Y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Pilier&#39;</span><span class="p">][</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="s1">&#39;go&#39;</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">'Poste'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'2ème ligne'</span><span class="p">][</span><span class="s1">'Poids'</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">'Poste'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'2ème ligne'</span><span class="p">][</span><span class="s1">'Taille'</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="s1">'bo'</span><span class="p">)</span>
+
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">'Poste'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'Pilier'</span><span class="p">][</span><span class="s1">'Poids'</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">'Poste'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'Pilier'</span><span class="p">][</span><span class="s1">'Taille'</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="s1">'go'</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p><img alt="image" class="center" src="../data/ex4.png" />  </p>
 </details>
@@ -5573,7 +5573,7 @@ Prenons un exemple stupide : fabriquons un nouveau champ <code>'Poids après les
 Ceci se fera simplement par :</p>
 <div class="admonition abstract">
 <p class="admonition-title">Rajout d'une colonne  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2764.svg" title=":heart:" /> </p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids après les vacances&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">8</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Poids après les vacances'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Poids'</span><span class="p">]</span> <span class="o">+</span> <span class="mi">8</span>
 </code></pre></div>
 </div>
 <p>On voit apparaitre dans la dataframe <code>df</code> une nouvelle colonne
@@ -5588,7 +5588,7 @@ Ceci se fera simplement par :</p>
 <span class="p">[</span><span class="mi">5</span> <span class="n">rows</span> <span class="n">x</span> <span class="mi">7</span> <span class="n">columns</span><span class="p">]</span>
 </code></pre></div></p>
 <p>Pour supprimer cette colonne sans intérêt, il suffit de faire :
-<div class="highlight"><pre><span></span><code><span class="k">del</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids après les vacances&#39;</span><span class="p">]</span> 
+<div class="highlight"><pre><span></span><code><span class="k">del</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Poids après les vacances'</span><span class="p">]</span> 
 </code></pre></div></p>
 <div class="admonition example">
 <p class="admonition-title">Exercice  5</p>
@@ -5624,7 +5624,7 @@ Ceci se fera simplement par :</p>
 <span class="normal">8</span>
 <span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;top14.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> 
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'top14.csv'</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">'utf-8'</span><span class="p">)</span> 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">conseil_poste</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">poids</span><span class="p">,</span> <span class="n">taille</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
     <span class="o">...</span>
@@ -5644,20 +5644,20 @@ Ceci se fera simplement par :</p>
 <span class="normal">8</span>
 <span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;top14.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> 
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'top14.csv'</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">'utf-8'</span><span class="p">)</span> 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">conseil_poste</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">poids</span><span class="p">,</span> <span class="n">taille</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
-    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;distance&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">poids</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">taille</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="s1">&#39;distance&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">'distance'</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'Poids'</span><span class="p">]</span><span class="o">-</span><span class="n">poids</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'Taille'</span><span class="p">]</span><span class="o">-</span><span class="n">taille</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="s1">'distance'</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">top</span> 
+    <span class="k">return</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Poste'</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">top</span> 
 </code></pre></div></td></tr></table></div>
 </details>
 </div>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">conseil_poste</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">160</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-<span class="s1">&#39;Mêlée&#39;</span>
+<span class="s1">'Mêlée'</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">conseil_poste</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="mi">130</span><span class="p">,</span> <span class="mi">160</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-<span class="s1">&#39;Pilier&#39;</span>
+<span class="s1">'Pilier'</span>
 </code></pre></div>
 
 
@@ -5767,7 +5767,7 @@ Ceci se fera simplement par :</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       

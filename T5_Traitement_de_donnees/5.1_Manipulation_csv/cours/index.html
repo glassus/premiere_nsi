@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5299,7 +5299,7 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>                          
-<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;exemple.csv&#39;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="c1"># le &quot;r&quot; signifie &quot;read&quot;, le fichier est ouvert en lecture seule</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'exemple.csv'</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">'utf-8'</span><span class="p">)</span> <span class="c1"># le "r" signifie "read", le fichier est ouvert en lecture seule</span>
 <span class="n">donnees</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>  <span class="c1"># donnees est un objet (spécifique au module csv) qui contient des lignes</span>
 
 <span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="n">donnees</span><span class="p">:</span>               
@@ -5308,10 +5308,10 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>    <span class="c1"># toujours fermer le fichier !</span>
 </code></pre></div></td></tr></table></div></p>
 <p>donne :</p>
-<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="s1">&#39;Prénom&#39;</span><span class="p">,</span> <span class="s1">&#39;Nom&#39;</span><span class="p">,</span> <span class="s1">&#39;Email&#39;</span><span class="p">,</span> <span class="s1">&#39;SMS&#39;</span><span class="p">]</span>
-<span class="p">[</span><span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;Smith&#39;</span><span class="p">,</span> <span class="s1">&#39;john@example.com&#39;</span><span class="p">,</span> <span class="s1">&#39;33123456789&#39;</span><span class="p">]</span>
-<span class="p">[</span><span class="s1">&#39;Harry&#39;</span><span class="p">,</span> <span class="s1">&#39;Pierce&#39;</span><span class="p">,</span> <span class="s1">&#39;harry@example.com&#39;</span><span class="p">,</span> <span class="s1">&#39;33111222222&#39;</span><span class="p">]</span>
-<span class="p">[</span><span class="s1">&#39;Howard&#39;</span><span class="p">,</span> <span class="s1">&#39;Paige&#39;</span><span class="p">,</span> <span class="s1">&#39;howard@example.com&#39;</span><span class="p">,</span> <span class="s1">&#39;33777888898&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="s1">'Prénom'</span><span class="p">,</span> <span class="s1">'Nom'</span><span class="p">,</span> <span class="s1">'Email'</span><span class="p">,</span> <span class="s1">'SMS'</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">'John'</span><span class="p">,</span> <span class="s1">'Smith'</span><span class="p">,</span> <span class="s1">'john@example.com'</span><span class="p">,</span> <span class="s1">'33123456789'</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">'Harry'</span><span class="p">,</span> <span class="s1">'Pierce'</span><span class="p">,</span> <span class="s1">'harry@example.com'</span><span class="p">,</span> <span class="s1">'33111222222'</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">'Howard'</span><span class="p">,</span> <span class="s1">'Paige'</span><span class="p">,</span> <span class="s1">'howard@example.com'</span><span class="p">,</span> <span class="s1">'33777888898'</span><span class="p">]</span>
 </code></pre></div>
 <p><strong>Problèmes</strong></p>
 <ol>
@@ -5329,7 +5329,7 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
-<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;exemple.csv&#39;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'exemple.csv'</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">'utf-8'</span><span class="p">)</span>
 <span class="n">donnees</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="n">donnees</span><span class="p">:</span>
@@ -5338,9 +5338,9 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div></p>
 <p>donne
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="s1">&#39;Prénom&#39;</span><span class="p">:</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Smith&#39;</span><span class="p">,</span> <span class="s1">&#39;Email&#39;</span><span class="p">:</span> <span class="s1">&#39;john@example.com&#39;</span><span class="p">,</span> <span class="s1">&#39;SMS&#39;</span><span class="p">:</span> <span class="s1">&#39;33123456789&#39;</span><span class="p">}</span>
-<span class="p">{</span><span class="s1">&#39;Prénom&#39;</span><span class="p">:</span> <span class="s1">&#39;Harry&#39;</span><span class="p">,</span> <span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Pierce&#39;</span><span class="p">,</span> <span class="s1">&#39;Email&#39;</span><span class="p">:</span> <span class="s1">&#39;harry@example.com&#39;</span><span class="p">,</span> <span class="s1">&#39;SMS&#39;</span><span class="p">:</span> <span class="s1">&#39;33111222222&#39;</span><span class="p">}</span>
-<span class="p">{</span><span class="s1">&#39;Prénom&#39;</span><span class="p">:</span> <span class="s1">&#39;Howard&#39;</span><span class="p">,</span> <span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Paige&#39;</span><span class="p">,</span> <span class="s1">&#39;Email&#39;</span><span class="p">:</span> <span class="s1">&#39;howard@example.com&#39;</span><span class="p">,</span> <span class="s1">&#39;SMS&#39;</span><span class="p">:</span> <span class="s1">&#39;33777888898&#39;</span><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="s1">'Prénom'</span><span class="p">:</span> <span class="s1">'John'</span><span class="p">,</span> <span class="s1">'Nom'</span><span class="p">:</span> <span class="s1">'Smith'</span><span class="p">,</span> <span class="s1">'Email'</span><span class="p">:</span> <span class="s1">'john@example.com'</span><span class="p">,</span> <span class="s1">'SMS'</span><span class="p">:</span> <span class="s1">'33123456789'</span><span class="p">}</span>
+<span class="p">{</span><span class="s1">'Prénom'</span><span class="p">:</span> <span class="s1">'Harry'</span><span class="p">,</span> <span class="s1">'Nom'</span><span class="p">:</span> <span class="s1">'Pierce'</span><span class="p">,</span> <span class="s1">'Email'</span><span class="p">:</span> <span class="s1">'harry@example.com'</span><span class="p">,</span> <span class="s1">'SMS'</span><span class="p">:</span> <span class="s1">'33111222222'</span><span class="p">}</span>
+<span class="p">{</span><span class="s1">'Prénom'</span><span class="p">:</span> <span class="s1">'Howard'</span><span class="p">,</span> <span class="s1">'Nom'</span><span class="p">:</span> <span class="s1">'Paige'</span><span class="p">,</span> <span class="s1">'Email'</span><span class="p">:</span> <span class="s1">'howard@example.com'</span><span class="p">,</span> <span class="s1">'SMS'</span><span class="p">:</span> <span class="s1">'33777888898'</span><span class="p">}</span>
 </code></pre></div></p>
 <p>C'est mieux ! Les données sont maintenant des dictionnaires. Mais nous avons juste énuméré 3 dictionnaires. Comment ré-accéder au premier d'entre eux, celui de John Smith ? Essayons :</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">donnees</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -5353,7 +5353,7 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
     <span class="o">----&gt;</span> <span class="mi">1</span> <span class="n">donnees</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
 
-    <span class="ne">TypeError</span><span class="p">:</span> <span class="s1">&#39;DictReader&#39;</span> <span class="nb">object</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">support</span> <span class="n">indexing</span>
+    <span class="ne">TypeError</span><span class="p">:</span> <span class="s1">'DictReader'</span> <span class="nb">object</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">support</span> <span class="n">indexing</span>
 </code></pre></div>
 <h3 id="23-une-liste-de-dictionnaires">2.3 Une liste de dictionnaires<a class="headerlink" href="#23-une-liste-de-dictionnaires" title="Permanent link">⚓︎</a></h3>
 <p>Nous allons donc créer une liste de dictionnaires.</p>
@@ -5366,7 +5366,7 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
-<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;exemple.csv&#39;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'exemple.csv'</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">'utf-8'</span><span class="p">)</span>
 <span class="n">donnees</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 <span class="n">amis</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="n">donnees</span><span class="p">:</span>
@@ -5377,23 +5377,23 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 <p>permet de faire ceci :</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">amis</span>
 
-    <span class="p">[{</span><span class="s1">&#39;Prénom&#39;</span><span class="p">:</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span>
-      <span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Smith&#39;</span><span class="p">,</span>
-      <span class="s1">&#39;Email&#39;</span><span class="p">:</span> <span class="s1">&#39;john@example.com&#39;</span><span class="p">,</span>
-      <span class="s1">&#39;SMS&#39;</span><span class="p">:</span> <span class="s1">&#39;33123456789&#39;</span><span class="p">},</span>
-     <span class="p">{</span><span class="s1">&#39;Prénom&#39;</span><span class="p">:</span> <span class="s1">&#39;Harry&#39;</span><span class="p">,</span>
-      <span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Pierce&#39;</span><span class="p">,</span>
-      <span class="s1">&#39;Email&#39;</span><span class="p">:</span> <span class="s1">&#39;harry@example.com&#39;</span><span class="p">,</span>
-      <span class="s1">&#39;SMS&#39;</span><span class="p">:</span> <span class="s1">&#39;33111222222&#39;</span><span class="p">},</span>
-     <span class="p">{</span><span class="s1">&#39;Prénom&#39;</span><span class="p">:</span> <span class="s1">&#39;Howard&#39;</span><span class="p">,</span>
-      <span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Paige&#39;</span><span class="p">,</span>
-      <span class="s1">&#39;Email&#39;</span><span class="p">:</span> <span class="s1">&#39;howard@example.com&#39;</span><span class="p">,</span>
-      <span class="s1">&#39;SMS&#39;</span><span class="p">:</span> <span class="s1">&#39;33777888898&#39;</span><span class="p">}]</span>
+    <span class="p">[{</span><span class="s1">'Prénom'</span><span class="p">:</span> <span class="s1">'John'</span><span class="p">,</span>
+      <span class="s1">'Nom'</span><span class="p">:</span> <span class="s1">'Smith'</span><span class="p">,</span>
+      <span class="s1">'Email'</span><span class="p">:</span> <span class="s1">'john@example.com'</span><span class="p">,</span>
+      <span class="s1">'SMS'</span><span class="p">:</span> <span class="s1">'33123456789'</span><span class="p">},</span>
+     <span class="p">{</span><span class="s1">'Prénom'</span><span class="p">:</span> <span class="s1">'Harry'</span><span class="p">,</span>
+      <span class="s1">'Nom'</span><span class="p">:</span> <span class="s1">'Pierce'</span><span class="p">,</span>
+      <span class="s1">'Email'</span><span class="p">:</span> <span class="s1">'harry@example.com'</span><span class="p">,</span>
+      <span class="s1">'SMS'</span><span class="p">:</span> <span class="s1">'33111222222'</span><span class="p">},</span>
+     <span class="p">{</span><span class="s1">'Prénom'</span><span class="p">:</span> <span class="s1">'Howard'</span><span class="p">,</span>
+      <span class="s1">'Nom'</span><span class="p">:</span> <span class="s1">'Paige'</span><span class="p">,</span>
+      <span class="s1">'Email'</span><span class="p">:</span> <span class="s1">'howard@example.com'</span><span class="p">,</span>
+      <span class="s1">'SMS'</span><span class="p">:</span> <span class="s1">'33777888898'</span><span class="p">}]</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="n">amis</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;Email&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">amis</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">'Email'</span><span class="p">]</span>
     <span class="n">john</span><span class="nd">@example</span><span class="o">.</span><span class="n">com</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="n">amis</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="s1">&#39;Nom&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">amis</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="s1">'Nom'</span><span class="p">]</span>
   <span class="n">Paige</span>
 </code></pre></div>
 <h2 id="3-un-fichier-un-peu-plus-interessant-les-joueurs-de-rugby-du-top14">3. Un fichier un peu plus intéressant : les joueurs de rugby du TOP14<a class="headerlink" href="#3-un-fichier-un-peu-plus-interessant-les-joueurs-de-rugby-du-top14" title="Permanent link">⚓︎</a></h2>
@@ -5412,7 +5412,7 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
-<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;top14.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'top14.csv'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">'utf-8'</span><span class="p">)</span>
 <span class="n">donnees</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 <span class="n">joueurs</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="n">donnees</span><span class="p">:</span>
@@ -5438,8 +5438,8 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 <p>Quel est le nom du joueur n°486 ?</p>
 <details class="success">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">joueurs</span><span class="p">[</span><span class="mi">486</span><span class="p">][</span><span class="s1">&#39;Nom&#39;</span><span class="p">]</span>
-<span class="s1">&#39;Wenceslas LAURET&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">joueurs</span><span class="p">[</span><span class="mi">486</span><span class="p">][</span><span class="s1">'Nom'</span><span class="p">]</span>
+<span class="s1">'Wenceslas LAURET'</span>
 </code></pre></div>
 </details>
 </div>
@@ -5451,11 +5451,11 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 <summary>Correction</summary>
 <p>La méthode la plus naturelle est de parcourir toute la liste jusqu'à trouver le bon joueur, puis d'afficher son équipe.
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="p">:</span>
-        <span class="k">if</span> <span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Nom&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Baptiste SERIN&#39;</span> <span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Equipe&#39;</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">joueur</span><span class="p">[</span><span class="s1">'Nom'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'Baptiste SERIN'</span> <span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">'Equipe'</span><span class="p">])</span>
 </code></pre></div></p>
 <p>Une méthode plus efficace est d'utiliser une liste par compréhension incluant un test. </p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">clubSerin</span> <span class="o">=</span> <span class="p">[</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Equipe&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="k">if</span> <span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Nom&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Baptiste SERIN&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">clubSerin</span> <span class="o">=</span> <span class="p">[</span><span class="n">joueur</span><span class="p">[</span><span class="s1">'Equipe'</span><span class="p">]</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="k">if</span> <span class="n">joueur</span><span class="p">[</span><span class="s1">'Nom'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'Baptiste SERIN'</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">clubSerin</span>
 </code></pre></div>
 </details>
@@ -5466,7 +5466,7 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 <p><em>Attention à bien convertir en entier la chaine de caractère renvoyée par la clé <code>Poids</code>, à l'aide de la fonction <code>int()</code>.</em></p>
 <details class="success">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">lourds</span> <span class="o">=</span> <span class="p">[(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Nom&#39;</span><span class="p">],</span> <span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">140</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">lourds</span> <span class="o">=</span> <span class="p">[(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">'Nom'</span><span class="p">],</span> <span class="n">joueur</span><span class="p">[</span><span class="s1">'Poids'</span><span class="p">])</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">'Poids'</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">140</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">lourds</span>
 </code></pre></div>
 </details>
@@ -5486,7 +5486,7 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 <span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="n">X</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
 <span class="n">Y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="s1">'ro'</span><span class="p">)</span> 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
 Dans l'instruction <code>plt.plot(X, Y, 'ro')</code> :</p>
@@ -5511,9 +5511,9 @@ Dans l'instruction <code>plt.plot(X, Y, 'ro')</code> :</p>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="n">X</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span><span class="p">]</span>
-<span class="n">Y</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">)</span> 
+<span class="n">X</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">'Poids'</span><span class="p">])</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">'Taille'</span><span class="p">])</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="s1">'ro'</span><span class="p">)</span> 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
 <p><img alt="png" class="center" src="../data/01_Manipulation_csv_37_0.png" />        </p>
@@ -5543,19 +5543,19 @@ Dans l'instruction <code>plt.plot(X, Y, 'ro')</code> :</p>
 <span class="normal">17</span>
 <span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="c1">#tous les joueurs</span>
-<span class="n">X</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span><span class="p">]</span>
-<span class="n">Y</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">)</span> 
+<span class="n">X</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">'Poids'</span><span class="p">])</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">'Taille'</span><span class="p">])</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="s1">'ro'</span><span class="p">)</span> 
 
 <span class="c1">#on recolorie les Centres en bleu</span>
-<span class="n">X</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="k">if</span> <span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Centre&#39;</span><span class="p">]</span>
-<span class="n">Y</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="k">if</span> <span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Centre&#39;</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="s1">&#39;bo&#39;</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">'Poids'</span><span class="p">])</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="k">if</span> <span class="n">joueur</span><span class="p">[</span><span class="s1">'Poste'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'Centre'</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">'Taille'</span><span class="p">])</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="k">if</span> <span class="n">joueur</span><span class="p">[</span><span class="s1">'Poste'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'Centre'</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="s1">'bo'</span><span class="p">)</span>
 
 <span class="c1">#on recolorie les 2ème ligne en vert</span>
-<span class="n">X</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="k">if</span> <span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;2ème ligne&#39;</span><span class="p">]</span>
-<span class="n">Y</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="k">if</span> <span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;2ème ligne&#39;</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="s1">&#39;go&#39;</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">'Poids'</span><span class="p">])</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="k">if</span> <span class="n">joueur</span><span class="p">[</span><span class="s1">'Poste'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'2ème ligne'</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">'Taille'</span><span class="p">])</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="k">if</span> <span class="n">joueur</span><span class="p">[</span><span class="s1">'Poste'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'2ème ligne'</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="s1">'go'</span><span class="p">)</span>
 
 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -5671,7 +5671,7 @@ Dans l'instruction <code>plt.plot(X, Y, 'ro')</code> :</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       

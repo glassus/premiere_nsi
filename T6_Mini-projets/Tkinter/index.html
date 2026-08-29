@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5277,19 +5277,19 @@
     <span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">largeur</span><span class="p">)</span>
     <span class="n">y</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">)</span>
     <span class="n">r</span> <span class="o">=</span> <span class="mi">30</span>
-    <span class="n">zone_dessin</span><span class="o">.</span><span class="n">create_oval</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">r</span><span class="p">,</span> <span class="n">y</span><span class="o">-</span><span class="n">r</span><span class="p">,</span> <span class="n">x</span><span class="o">+</span><span class="n">r</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="n">r</span><span class="p">,</span> <span class="n">outline</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+    <span class="n">zone_dessin</span><span class="o">.</span><span class="n">create_oval</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">r</span><span class="p">,</span> <span class="n">y</span><span class="o">-</span><span class="n">r</span><span class="p">,</span> <span class="n">x</span><span class="o">+</span><span class="n">r</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="n">r</span><span class="p">,</span> <span class="n">outline</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="s1">'blue'</span><span class="p">)</span>
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">effacer</span><span class="p">():</span>
     <span class="n">zone_dessin</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">ALL</span><span class="p">)</span>
 
 <span class="n">ma_fenetre</span> <span class="o">=</span> <span class="n">Tk</span><span class="p">()</span>
-<span class="n">ma_fenetre</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Traceur de cercles&#39;</span><span class="p">)</span>
+<span class="n">ma_fenetre</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Traceur de cercles'</span><span class="p">)</span>
 
 
 <span class="n">largeur</span> <span class="o">=</span> <span class="mi">480</span>
 <span class="n">hauteur</span> <span class="o">=</span> <span class="mi">320</span>
-<span class="n">zone_dessin</span> <span class="o">=</span> <span class="n">Canvas</span><span class="p">(</span><span class="n">ma_fenetre</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">largeur</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">hauteur</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+<span class="n">zone_dessin</span> <span class="o">=</span> <span class="n">Canvas</span><span class="p">(</span><span class="n">ma_fenetre</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">largeur</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">hauteur</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="s1">'white'</span><span class="p">)</span>
 <span class="n">zone_dessin</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">padx</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 
 <span class="n">frame1</span> <span class="o">=</span> <span class="n">Frame</span><span class="p">(</span><span class="n">ma_fenetre</span><span class="p">,</span> <span class="n">borderwidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">relief</span><span class="o">=</span><span class="n">GROOVE</span><span class="p">)</span>
@@ -5298,13 +5298,13 @@
 <span class="n">frame2</span> <span class="o">=</span> <span class="n">Frame</span><span class="p">(</span><span class="n">ma_fenetre</span><span class="p">,</span> <span class="n">relief</span><span class="o">=</span><span class="n">GROOVE</span><span class="p">)</span>
 <span class="n">frame2</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">padx</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 
-<span class="n">bouton_Tracer</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">frame1</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Tracer&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">cercle</span><span class="p">)</span>
+<span class="n">bouton_Tracer</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">frame1</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">'Tracer'</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">cercle</span><span class="p">)</span>
 <span class="n">bouton_Tracer</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">padx</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 
-<span class="n">bouton_Effacer</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">frame1</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Effacer&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">effacer</span><span class="p">)</span>
+<span class="n">bouton_Effacer</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">frame1</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">'Effacer'</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">effacer</span><span class="p">)</span>
 <span class="n">bouton_Effacer</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">padx</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 
-<span class="n">bouton_Quitter</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">frame2</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Quitter&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">ma_fenetre</span><span class="o">.</span><span class="n">destroy</span><span class="p">)</span>
+<span class="n">bouton_Quitter</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">frame2</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">'Quitter'</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">ma_fenetre</span><span class="o">.</span><span class="n">destroy</span><span class="p">)</span>
 <span class="n">bouton_Quitter</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">padx</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 
 <span class="n">ma_fenetre</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
@@ -5319,7 +5319,7 @@
 <h4 id="1-variable-couleur">1. Variable <code>couleur</code><a class="headerlink" href="#1-variable-couleur" title="Permanent link">⚓︎</a></h4>
 <p>Pour commencer, il faut créer une variable dynamique <code>couleur</code> qui sera plus tard modifiée par la boite de dialogue :</p>
 <div class="highlight"><pre><span></span><code><span class="n">couleur</span> <span class="o">=</span> <span class="n">StringVar</span><span class="p">()</span>  <span class="c1"># on crée la variable</span>
-<span class="n">couleur</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>    <span class="c1"># on l&#39;initialise à &#39;blue&#39; </span>
+<span class="n">couleur</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">'blue'</span><span class="p">)</span>    <span class="c1"># on l'initialise à 'blue' </span>
 </code></pre></div>
 <p>Pour accéder au contenu de la variable <code>couleur</code>, on utilise l'instruction <code>couleur.get()</code>.</p>
 <p><img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/27a1.svg" title=":arrow_right:" /> Modifier la fonction <code>cercle</code> pour que la couleur de remplissage soit <code>couleur</code>. </p>
@@ -5332,7 +5332,7 @@
 </code></pre></div>
 <p>La fonction <code>change_color</code> s'écrira comme ceci :</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">change_color</span><span class="p">():</span>
-    <span class="n">colors</span> <span class="o">=</span> <span class="n">askcolor</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Tkinter Color Chooser&quot;</span><span class="p">)</span>
+    <span class="n">colors</span> <span class="o">=</span> <span class="n">askcolor</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"Tkinter Color Chooser"</span><span class="p">)</span>
     <span class="n">couleur</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 </code></pre></div>
 <p>Pour savoir ce qu'il faut écrire à la place des pointillés, faites des tests (avec un <code>print</code>, par exemple) pour savoir à quoi ressemble la variable <code>colors</code> qui est renvoyée par la fonction <code>askcolor</code>. </p>
@@ -5403,7 +5403,7 @@
     <span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">largeur</span><span class="p">)</span>
     <span class="n">y</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">)</span>
     <span class="n">r</span> <span class="o">=</span> <span class="mi">30</span>
-    <span class="n">zone_dessin</span><span class="o">.</span><span class="n">create_oval</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">r</span><span class="p">,</span> <span class="n">y</span><span class="o">-</span><span class="n">r</span><span class="p">,</span> <span class="n">x</span><span class="o">+</span><span class="n">r</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="n">r</span><span class="p">,</span> <span class="n">outline</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">couleur</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
+    <span class="n">zone_dessin</span><span class="o">.</span><span class="n">create_oval</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">r</span><span class="p">,</span> <span class="n">y</span><span class="o">-</span><span class="n">r</span><span class="p">,</span> <span class="n">x</span><span class="o">+</span><span class="n">r</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="n">r</span><span class="p">,</span> <span class="n">outline</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">couleur</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">effacer</span><span class="p">():</span>
@@ -5411,20 +5411,20 @@
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">change_color</span><span class="p">():</span>
-    <span class="n">colors</span> <span class="o">=</span> <span class="n">askcolor</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Tkinter Color Chooser&#39;</span><span class="p">)</span>
+    <span class="n">colors</span> <span class="o">=</span> <span class="n">askcolor</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">'Tkinter Color Chooser'</span><span class="p">)</span>
     <span class="n">couleur</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">colors</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 
 
 <span class="n">ma_fenetre</span> <span class="o">=</span> <span class="n">Tk</span><span class="p">()</span>
-<span class="n">ma_fenetre</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Traceur de cercles&#39;</span><span class="p">)</span>
+<span class="n">ma_fenetre</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Traceur de cercles'</span><span class="p">)</span>
 
 <span class="n">couleur</span> <span class="o">=</span> <span class="n">StringVar</span><span class="p">()</span>
-<span class="n">couleur</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+<span class="n">couleur</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">'blue'</span><span class="p">)</span>
 
 
 <span class="n">largeur</span> <span class="o">=</span> <span class="mi">480</span>
 <span class="n">hauteur</span> <span class="o">=</span> <span class="mi">320</span>
-<span class="n">zone_dessin</span> <span class="o">=</span> <span class="n">Canvas</span><span class="p">(</span><span class="n">ma_fenetre</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">largeur</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">hauteur</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+<span class="n">zone_dessin</span> <span class="o">=</span> <span class="n">Canvas</span><span class="p">(</span><span class="n">ma_fenetre</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">largeur</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">hauteur</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="s1">'white'</span><span class="p">)</span>
 <span class="n">zone_dessin</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">padx</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 
 <span class="n">frame1</span> <span class="o">=</span> <span class="n">Frame</span><span class="p">(</span><span class="n">ma_fenetre</span><span class="p">,</span> <span class="n">borderwidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">relief</span><span class="o">=</span><span class="n">GROOVE</span><span class="p">)</span>
@@ -5433,18 +5433,18 @@
 <span class="n">frame2</span> <span class="o">=</span> <span class="n">Frame</span><span class="p">(</span><span class="n">ma_fenetre</span><span class="p">,</span> <span class="n">relief</span><span class="o">=</span><span class="n">GROOVE</span><span class="p">)</span>
 <span class="n">frame2</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">padx</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 
-<span class="n">bouton_Tracer</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">frame1</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Tracer&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">cercle</span><span class="p">)</span>
+<span class="n">bouton_Tracer</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">frame1</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">'Tracer'</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">cercle</span><span class="p">)</span>
 <span class="n">bouton_Tracer</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">padx</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 
 
-<span class="n">bouton_Effacer</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">frame1</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Effacer&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">effacer</span><span class="p">)</span>
+<span class="n">bouton_Effacer</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">frame1</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">'Effacer'</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">effacer</span><span class="p">)</span>
 <span class="n">bouton_Effacer</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">padx</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 
-<span class="n">bouton_Couleur</span> <span class="o">=</span> <span class="n">ttk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">frame1</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Couleur&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">change_color</span><span class="p">)</span>
+<span class="n">bouton_Couleur</span> <span class="o">=</span> <span class="n">ttk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">frame1</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">'Couleur'</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">change_color</span><span class="p">)</span>
 <span class="n">bouton_Couleur</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">padx</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 
 
-<span class="n">bouton_Quitter</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">frame2</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Quitter&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">ma_fenetre</span><span class="o">.</span><span class="n">destroy</span><span class="p">)</span>
+<span class="n">bouton_Quitter</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">frame2</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">'Quitter'</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">ma_fenetre</span><span class="o">.</span><span class="n">destroy</span><span class="p">)</span>
 <span class="n">bouton_Quitter</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">padx</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 
 <span class="n">ma_fenetre</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
@@ -5570,7 +5570,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../scripts/mathjax.js"></script>
       

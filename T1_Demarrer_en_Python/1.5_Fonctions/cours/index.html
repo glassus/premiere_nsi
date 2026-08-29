@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5354,8 +5354,8 @@ En Python, une fonction se crée avec le mot-clé <code>def</code>.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">accueil</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;bonjour&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;comment allez-vous ?&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"bonjour"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"comment allez-vous ?"</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <p>Lorsque l'interpréteur Python parcourt cette fonction, <strong>rien</strong> ne s'affiche : la fonction est maintenant prête à être appelée, mais n'est pas exécutée tant que l'utilisateur ne le demande pas explicitement.</p>
@@ -5374,7 +5374,7 @@ En Python, une fonction se crée avec le mot-clé <code>def</code>.</p>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">chat_penible</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;meoww&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"meoww"</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">chat_penible</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -5406,19 +5406,19 @@ En Python, une fonction se crée avec le mot-clé <code>def</code>.</p>
         <span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 </div>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">repete</span><span class="p">(</span><span class="s2">&quot;NSI&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">repete</span><span class="p">(</span><span class="s2">"NSI"</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="n">NSI</span>
 <span class="n">NSI</span>
 <span class="n">NSI</span>
 </code></pre></div>
 <p>L'ordre des paramètres passés est alors important ! Le code ci-dessous est incorrect.</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">repete</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;test&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">repete</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">"test"</span><span class="p">)</span>
 <span class="o">---------------------------------------------------------------------------</span>
 
 <span class="ne">TypeError</span>                                 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
 
 <span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span><span class="n">a84914f8a6c6</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">()</span>
-<span class="o">----&gt;</span> <span class="mi">1</span> <span class="n">repete</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;test&quot;</span><span class="p">)</span>
+<span class="o">----&gt;</span> <span class="mi">1</span> <span class="n">repete</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">"test"</span><span class="p">)</span>
 
 
 <span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="mi">7</span><span class="n">dc8032e3f17</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="n">repete</span><span class="p">(</span><span class="n">mot</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
@@ -5426,10 +5426,10 @@ En Python, une fonction se crée avec le mot-clé <code>def</code>.</p>
 <span class="o">----&gt;</span> <span class="mi">2</span>     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
         <span class="mi">3</span>         <span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span>
         <span class="mi">4</span> 
-        <span class="mi">5</span> <span class="n">repete</span><span class="p">(</span><span class="s2">&quot;NSI&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+        <span class="mi">5</span> <span class="n">repete</span><span class="p">(</span><span class="s2">"NSI"</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 
 
-<span class="ne">TypeError</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span> <span class="nb">object</span> <span class="n">cannot</span> <span class="n">be</span> <span class="n">interpreted</span> <span class="k">as</span> <span class="n">an</span> <span class="n">integer</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="s1">'str'</span> <span class="nb">object</span> <span class="n">cannot</span> <span class="n">be</span> <span class="n">interpreted</span> <span class="k">as</span> <span class="n">an</span> <span class="n">integer</span>
 </code></pre></div>
 <h2 id="3-fonction-avec-parametres-et-avec-valeur-renvoyee">3. Fonction avec paramètre(s) et avec valeur renvoyée<a class="headerlink" href="#3-fonction-avec-parametres-et-avec-valeur-renvoyee" title="Permanent link">⚓︎</a></h2>
 <p><img alt="image" class="center" src="../data/f3.png" /></p>
@@ -5468,8 +5468,8 @@ Mais <code>g</code> se contente <strong>d'afficher</strong> sa valeur calculée,
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">+</span> <span class="mi">5</span>
 <span class="mi">23</span>
 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-<span class="n">File</span> <span class="s2">&quot;&lt;pyshell&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">TypeError</span><span class="p">:</span> <span class="n">unsupported</span> <span class="n">operand</span> <span class="nb">type</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="o">+</span><span class="p">:</span> <span class="s1">&#39;NoneType&#39;</span> <span class="ow">and</span> <span class="s1">&#39;int&#39;</span>
+<span class="n">File</span> <span class="s2">"&lt;pyshell&gt;"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="n">unsupported</span> <span class="n">operand</span> <span class="nb">type</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="o">+</span><span class="p">:</span> <span class="s1">'NoneType'</span> <span class="ow">and</span> <span class="s1">'int'</span>
 </code></pre></div>
 En résumé :
 <img alt="image" class="center" src="../data/yoda.png" width="40%" /></p>
@@ -5480,7 +5480,7 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ce texte sera bien affiché&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"ce texte sera bien affiché"</span><span class="p">)</span>
     <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">3</span>
 </code></pre></div></td></tr></table></div>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
@@ -5491,7 +5491,7 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">h</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">3</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ceci ne sera jamais affiché&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"ceci ne sera jamais affiché"</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">h</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="mi">11</span>
@@ -5508,7 +5508,7 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">chat_penible</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;meoww&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"meoww"</span><span class="p">)</span>
     <span class="k">return</span> <span class="kc">None</span>
 </code></pre></div></td></tr></table></div></p>
 </li>
@@ -5584,7 +5584,7 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
 <span class="normal">10</span>
 <span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_bac</span><span class="p">(</span><span class="n">moyenne</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">moyenne</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;admis !&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"admis !"</span><span class="p">)</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">coup_de_pouce</span><span class="p">(</span><span class="n">note</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">note</span> <span class="o">+</span> <span class="n">bonus</span>
@@ -5622,12 +5622,12 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
 <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">ramasse_objet</span><span class="p">(</span><span class="n">objet</span><span class="p">):</span>
     <span class="k">global</span> <span class="n">score</span>
-    <span class="k">if</span> <span class="n">objet</span> <span class="o">==</span> <span class="s2">&quot;champignon&quot;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">objet</span> <span class="o">==</span> <span class="s2">"champignon"</span><span class="p">:</span>
         <span class="n">score</span> <span class="o">+=</span> <span class="mi">20</span>
-    <span class="k">if</span> <span class="n">objet</span> <span class="o">==</span> <span class="s2">&quot;banane&quot;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">objet</span> <span class="o">==</span> <span class="s2">"banane"</span><span class="p">:</span>
         <span class="n">score</span> <span class="o">-=</span> <span class="mi">300</span>
 </code></pre></div></td></tr></table></div>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">ramasse_objet</span><span class="p">(</span><span class="s2">&quot;champignon&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">ramasse_objet</span><span class="p">(</span><span class="s2">"champignon"</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">score</span>
 <span class="mi">20</span>
 </code></pre></div></p>
@@ -5642,13 +5642,13 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
 <span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># BIEN</span>
 <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">ramasse_objet</span><span class="p">(</span><span class="n">objet</span><span class="p">,</span> <span class="n">score</span><span class="p">):</span>  <span class="c1"># ma fonction veut modifier score ? </span>
-    <span class="k">if</span> <span class="n">objet</span> <span class="o">==</span> <span class="s2">&quot;champignon&quot;</span><span class="p">:</span>     <span class="c1"># -&gt; ok, je mets score dans ses paramètres</span>
+    <span class="k">if</span> <span class="n">objet</span> <span class="o">==</span> <span class="s2">"champignon"</span><span class="p">:</span>     <span class="c1"># -&gt; ok, je mets score dans ses paramètres</span>
         <span class="n">score</span> <span class="o">+=</span> <span class="mi">20</span>
-    <span class="k">if</span> <span class="n">objet</span> <span class="o">==</span> <span class="s2">&quot;banane&quot;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">objet</span> <span class="o">==</span> <span class="s2">"banane"</span><span class="p">:</span>
         <span class="n">score</span> <span class="o">-=</span> <span class="mi">300</span>
     <span class="k">return</span> <span class="n">score</span> <span class="c1"># je renvoie le nouveau score</span>
 </code></pre></div></td></tr></table></div>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">score</span> <span class="o">=</span> <span class="n">ramasse_objet</span><span class="p">(</span><span class="s2">&quot;champignon&quot;</span><span class="p">,</span> <span class="n">score</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">score</span> <span class="o">=</span> <span class="n">ramasse_objet</span><span class="p">(</span><span class="s2">"champignon"</span><span class="p">,</span> <span class="n">score</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">score</span>
 <span class="mi">20</span>
 </code></pre></div></p>
@@ -5662,7 +5662,7 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
 <span class="n">Help</span> <span class="n">on</span> <span class="n">built</span><span class="o">-</span><span class="ow">in</span> <span class="n">function</span> <span class="nb">print</span> <span class="ow">in</span> <span class="n">module</span> <span class="n">builtins</span><span class="p">:</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">' '</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
     <span class="n">Prints</span> <span class="n">the</span> <span class="n">values</span> <span class="n">to</span> <span class="n">a</span> <span class="n">stream</span><span class="p">,</span> <span class="ow">or</span> <span class="n">to</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="n">by</span> <span class="n">default</span><span class="o">.</span>
     <span class="n">Optional</span> <span class="n">keyword</span> <span class="n">arguments</span><span class="p">:</span>
@@ -5683,18 +5683,18 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">chat_penible</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Affiche n fois la chaine de caractères &quot;meoww&quot;</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Affiche n fois la chaine de caractères "meoww"</span>
+<span class="sd">    """</span>
     <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;meoww&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"meoww"</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>On peut donc maintenant demander de l'aide pour cette fonction :</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">help</span><span class="p">(</span><span class="n">chat_penible</span><span class="p">)</span>
 <span class="n">Help</span> <span class="n">on</span> <span class="n">function</span> <span class="n">chat_penible</span> <span class="ow">in</span> <span class="n">module</span> <span class="n">__main__</span><span class="p">:</span>
 
 <span class="n">chat_penible</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-    <span class="n">Affiche</span> <span class="n">n</span> <span class="n">fois</span> <span class="n">la</span> <span class="n">chaine</span> <span class="n">de</span> <span class="n">caractères</span> <span class="s2">&quot;meoww&quot;</span>
+    <span class="n">Affiche</span> <span class="n">n</span> <span class="n">fois</span> <span class="n">la</span> <span class="n">chaine</span> <span class="n">de</span> <span class="n">caractères</span> <span class="s2">"meoww"</span>
 </code></pre></div>
 </div>
 <p>Plus de renseignements sur les docstrings <a href="https://glassus.github.io/terminale_nsi/T2_Programmation/2.4_Pratiques_de_programmation/cours/#22-le-cas-particulier-des-docstrings">ici</a></p>
@@ -5705,12 +5705,12 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">assert</span> <span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">2</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="k">assert</span> <span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">5</span>
 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-  <span class="n">File</span> <span class="s2">&quot;&lt;pyshell&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s2">"&lt;pyshell&gt;"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">AssertionError</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="k">assert</span> <span class="kc">True</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="k">assert</span> <span class="kc">False</span>
 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-  <span class="n">File</span> <span class="s2">&quot;&lt;pyshell&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s2">"&lt;pyshell&gt;"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">AssertionError</span>
 </code></pre></div>
 <div class="admonition note">
@@ -5735,7 +5735,7 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
     <span class="k">assert</span> <span class="n">maxi</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span>
     <span class="k">assert</span> <span class="n">maxi</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span>
     <span class="k">assert</span> <span class="n">maxi</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="mi">7</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;tests ok&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"tests ok"</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <p>Il faut vérifier que les tests couvrent toutes les situations possibles, mais ce n'est pas toujours facile !</p>
@@ -5759,10 +5759,10 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
 <span class="normal">5</span>
 <span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_fizzbuzz</span><span class="p">():</span>
     <span class="k">assert</span> <span class="n">fizzbuzz</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span>
-    <span class="k">assert</span> <span class="n">fizzbuzz</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;fizz&#39;</span>
-    <span class="k">assert</span> <span class="n">fizzbuzz</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;buzz&#39;</span>
-    <span class="k">assert</span> <span class="n">fizzbuzz</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;fizzbuzz&#39;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tests ok !&#39;</span><span class="p">)</span>        
+    <span class="k">assert</span> <span class="n">fizzbuzz</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'fizz'</span>
+    <span class="k">assert</span> <span class="n">fizzbuzz</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'buzz'</span>
+    <span class="k">assert</span> <span class="n">fizzbuzz</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'fizzbuzz'</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'tests ok !'</span><span class="p">)</span>        
 </code></pre></div></td></tr></table></div>
 </details>
 <p><strong>Q2.</strong> Écrire la fonction <code>fizzbuzz</code>. (Vous pouvez vous inspirer fortement du code de <a class="" href="../../1.4_Instruction_conditionnelle_if/exercices/" target="_blank">l'exercice 2 du chapitre précédent</a> )</p>
@@ -5888,7 +5888,7 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       

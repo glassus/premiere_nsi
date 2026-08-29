@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5121,7 +5121,7 @@
     <span class="k">assert</span> <span class="n">maxi</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span>
     <span class="k">assert</span> <span class="n">maxi</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span>
     <span class="k">assert</span> <span class="n">maxi</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="mi">7</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;tests ok&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"tests ok"</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div></p>
 </div>
 </div>
@@ -5184,7 +5184,7 @@
 <div class="tabbed-block">
 <p>Écrire une fonction <code>nb_voyelles</code> qui prend en paramètre la chaine de caractères <code>mot</code>   renvoie le nombre de voyelles de <code>mot</code>.</p>
 <p><em>Exemple d'utilisation</em></p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">nb_voyelles</span><span class="p">(</span><span class="s2">&quot;bonjour&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">nb_voyelles</span><span class="p">(</span><span class="s2">"bonjour"</span><span class="p">)</span>
 <span class="mi">3</span>
 </code></pre></div>
 </div>
@@ -5195,10 +5195,10 @@
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_nb_voyelles</span><span class="p">():</span>
-    <span class="k">assert</span> <span class="n">nb_voyelles</span><span class="p">(</span><span class="s2">&quot;bonjour&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span>
-    <span class="k">assert</span> <span class="n">nb_voyelles</span><span class="p">(</span><span class="s2">&quot;fdjgdhk&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
-    <span class="k">assert</span> <span class="n">nb_voyelles</span><span class="p">(</span><span class="s2">&quot;au&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;tests ok&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">nb_voyelles</span><span class="p">(</span><span class="s2">"bonjour"</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span>
+    <span class="k">assert</span> <span class="n">nb_voyelles</span><span class="p">(</span><span class="s2">"fdjgdhk"</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="k">assert</span> <span class="n">nb_voyelles</span><span class="p">(</span><span class="s2">"au"</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"tests ok"</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div></p>
 </div>
 </div>
@@ -5212,7 +5212,7 @@
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">nb_voyelles</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
-    <span class="n">voyelles</span> <span class="o">=</span> <span class="s1">&#39;aeiouy&#39;</span>
+    <span class="n">voyelles</span> <span class="o">=</span> <span class="s1">'aeiouy'</span>
     <span class="n">nb</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">mot</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">voyelles</span><span class="p">:</span>
@@ -5228,14 +5228,14 @@
 <div class="tabbed-block">
 <p>Définissez une <strong>fonction</strong> <code>decale</code> qui décale de 3 rangs dans l'alphabet la lettre majuscule <code>lettre</code> passée en paramètre (après Z, on recommencera à A..)</p>
 <p><em>Aide</em> 
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">'A'</span><span class="p">)</span>
 <span class="mi">65</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">chr</span><span class="p">(</span><span class="mi">65</span><span class="p">)</span>
-<span class="s1">&#39;A&#39;</span>
+<span class="s1">'A'</span>
 </code></pre></div></p>
 <p><em>Exemple d'utilisation</em></p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">decale</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">)</span>
-<span class="s1">&#39;I&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">decale</span><span class="p">(</span><span class="s1">'F'</span><span class="p">)</span>
+<span class="s1">'I'</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -5244,9 +5244,9 @@
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_decale</span><span class="p">():</span>
-    <span class="k">assert</span> <span class="n">decale</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;D&#39;</span>
-    <span class="k">assert</span> <span class="n">decale</span><span class="p">(</span><span class="s1">&#39;Z&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;C&#39;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tests ok !&#39;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">decale</span><span class="p">(</span><span class="s1">'A'</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'D'</span>
+    <span class="k">assert</span> <span class="n">decale</span><span class="p">(</span><span class="s1">'Z'</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'C'</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'tests ok !'</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div></p>
 </div>
 </div>
@@ -5263,7 +5263,7 @@
 <span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">decale</span><span class="p">(</span><span class="n">lettre</span><span class="p">):</span>
     <span class="n">rang_lettre</span> <span class="o">=</span> <span class="nb">ord</span><span class="p">(</span><span class="n">lettre</span><span class="p">)</span>
     <span class="n">rang_nouvelle_lettre</span> <span class="o">=</span> <span class="n">rang_lettre</span> <span class="o">+</span> <span class="mi">3</span>
-    <span class="k">if</span> <span class="n">rang_nouvelle_lettre</span> <span class="o">&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;Z&#39;</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">rang_nouvelle_lettre</span> <span class="o">&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">'Z'</span><span class="p">):</span>
         <span class="n">rang_nouvelle_lettre</span> <span class="o">-=</span> <span class="mi">26</span>
     <span class="n">nouvelle_lettre</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="n">rang_nouvelle_lettre</span><span class="p">)</span>  
 
@@ -5291,8 +5291,8 @@ ou mieux, en utilisant le modulo <code>%</code> :</p>
 <div class="tabbed-block">
 <p>Rajoutez un paramètre <code>n</code> à la fonction précédente pour pouvoir décaler la lettre de <code>n</code> rangs.</p>
 <p><em>Exemple d'utilisation</em></p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">decale</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<span class="s1">&#39;G&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">decale</span><span class="p">(</span><span class="s1">'B'</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="s1">'G'</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -5302,10 +5302,10 @@ ou mieux, en utilisant le modulo <code>%</code> :</p>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_decale</span><span class="p">():</span>
-    <span class="k">assert</span> <span class="n">decale</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;D&#39;</span>
-    <span class="k">assert</span> <span class="n">decale</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span>
-    <span class="k">assert</span> <span class="n">decale</span><span class="p">(</span><span class="s1">&#39;Z&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;A&#39;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tests ok !&#39;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">decale</span><span class="p">(</span><span class="s1">'A'</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'D'</span>
+    <span class="k">assert</span> <span class="n">decale</span><span class="p">(</span><span class="s1">'A'</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'F'</span>
+    <span class="k">assert</span> <span class="n">decale</span><span class="p">(</span><span class="s1">'Z'</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'A'</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'tests ok !'</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div></p>
 </div>
 </div>
@@ -5322,7 +5322,7 @@ ou mieux, en utilisant le modulo <code>%</code> :</p>
 <span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">decale</span><span class="p">(</span><span class="n">lettre</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="n">rang_lettre</span> <span class="o">=</span> <span class="nb">ord</span><span class="p">(</span><span class="n">lettre</span><span class="p">)</span>
     <span class="n">rang_nouvelle_lettre</span> <span class="o">=</span> <span class="n">rang_lettre</span> <span class="o">+</span> <span class="n">n</span>
-    <span class="k">if</span> <span class="n">rang_nouvelle_lettre</span> <span class="o">&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;Z&#39;</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">rang_nouvelle_lettre</span> <span class="o">&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">'Z'</span><span class="p">):</span>
         <span class="n">rang_nouvelle_lettre</span> <span class="o">-=</span> <span class="mi">26</span>
     <span class="n">nouvelle_lettre</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="n">rang_nouvelle_lettre</span><span class="p">)</span>  
 
@@ -5334,8 +5334,8 @@ ou mieux, en utilisant le modulo <code>%</code> :</p>
 <p class="admonition-title">Exercice  7</p>
 <p>Utilisez la fonction précédente pour créer la fonction <code>decale_phrase</code> qui prend en paramètres une phrase <code>p</code> et un nombre <code>n</code> et qui décale toutes les lettres de <code>p</code> de <code>n</code> rangs. On laissera les espaces intacts.</p>
 <p><em>Exemple d'utilisation</em></p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">decale_phrase</span><span class="p">(</span><span class="s2">&quot;PAS MAL DU TOUT&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-<span class="s1">&#39;TEW QEP HY XSYX&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">decale_phrase</span><span class="p">(</span><span class="s2">"PAS MAL DU TOUT"</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="s1">'TEW QEP HY XSYX'</span>
 </code></pre></div>
 <details class="success">
 <summary>Correction</summary>
@@ -5348,10 +5348,10 @@ ou mieux, en utilisant le modulo <code>%</code> :</p>
 <span class="normal">7</span>
 <span class="normal">8</span>
 <span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">decale_phrase</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-    <span class="n">phrase_decalee</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">phrase_decalee</span> <span class="o">=</span> <span class="s1">''</span>
     <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">p</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">lettre</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
-            <span class="n">phrase_decalee</span> <span class="o">+=</span> <span class="s1">&#39; &#39;</span>
+        <span class="k">if</span> <span class="n">lettre</span> <span class="o">==</span> <span class="s1">' '</span><span class="p">:</span>
+            <span class="n">phrase_decalee</span> <span class="o">+=</span> <span class="s1">' '</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">nouvelle_lettre</span> <span class="o">=</span> <span class="n">decale</span><span class="p">(</span><span class="n">lettre</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
             <span class="n">phrase_decalee</span> <span class="o">+=</span> <span class="n">nouvelle_lettre</span>
@@ -5484,7 +5484,7 @@ ou mieux, en utilisant le modulo <code>%</code> :</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       

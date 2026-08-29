@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5743,15 +5743,15 @@ Mais en refaisant un XOR du message chiffré avec la clé <span class="arithmate
 <p>Pour comprendre ces résultats, il faut travailler en binaire. Voici les mêmes calculs :</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># calcul A</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="mb">0b1100</span> <span class="o">&amp;</span> <span class="mb">0b111</span><span class="p">)</span>
-    <span class="s1">&#39;0b100&#39;</span>
+    <span class="s1">'0b100'</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="c1"># calcul B</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="mb">0b1100</span> <span class="o">|</span> <span class="mb">0b111</span><span class="p">)</span>
-   <span class="s1">&#39;0b1111&#39;</span>
+   <span class="s1">'0b1111'</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="c1"># calcul C</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="mb">0b1100</span> <span class="o">^</span> <span class="mb">0b111</span><span class="p">)</span>
-    <span class="s1">&#39;0b1011&#39;</span>
+    <span class="s1">'0b1011'</span>
 </code></pre></div>
 <h3 id="exercice-5-cryptographie">Exercice 5 : Cryptographie<a class="headerlink" href="#exercice-5-cryptographie" title="Permanent link">⚓︎</a></h3>
 <div class="admonition abstract">
@@ -5775,7 +5775,7 @@ Mais en refaisant un XOR du message chiffré avec la clé <span class="arithmate
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">chiffre</span><span class="p">(</span><span class="n">mot_clair</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
-    <span class="n">mot_chiffre</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">mot_chiffre</span> <span class="o">=</span> <span class="s1">''</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mot_clair</span><span class="p">)):</span>
         <span class="n">code</span> <span class="o">=</span> <span class="nb">ord</span><span class="p">(</span><span class="n">mot_clair</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">^</span> <span class="nb">ord</span><span class="p">(</span><span class="n">cle</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
         <span class="n">mot_chiffre</span> <span class="o">+=</span> <span class="nb">chr</span><span class="p">(</span><span class="n">code</span><span class="p">)</span>
@@ -5903,7 +5903,7 @@ Mais en refaisant un XOR du message chiffré avec la clé <span class="arithmate
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       

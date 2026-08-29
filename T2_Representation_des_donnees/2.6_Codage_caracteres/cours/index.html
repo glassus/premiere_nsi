@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5240,26 +5240,26 @@
 <summary>Aide</summary>
 <ul>
 <li>la fonction <code>split(" ")</code> permet de décomposer une chaine de caractères en une liste, en se servant de l'espace <code>" "</code> comme caractère séparateur.
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;1101100 1100101 1110011&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">msg</span> <span class="o">=</span> <span class="s1">'1101100 1100101 1110011'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">' '</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">msg</span>
-<span class="p">[</span><span class="s1">&#39;1101100&#39;</span><span class="p">,</span> <span class="s1">&#39;1100101&#39;</span><span class="p">,</span> <span class="s1">&#39;1110011&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">'1101100'</span><span class="p">,</span> <span class="s1">'1100101'</span><span class="p">,</span> <span class="s1">'1110011'</span><span class="p">]</span>
 </code></pre></div></li>
 <li><code>int("1101100", 2)</code> permet de récupérer facilement la valeur en base 10 du nombre binaire <code>1101100</code>.
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="s2">&quot;1101100&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="s2">"1101100"</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="mi">108</span>
 </code></pre></div></li>
 <li><code>chr</code> permet de récupérer le caractère associé à un codes ASCII :
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">chr</span><span class="p">(</span><span class="mi">108</span><span class="p">)</span>
-<span class="s1">&#39;l&#39;</span>
+<span class="s1">'l'</span>
 </code></pre></div></li>
 </ul>
 </details>
 <details class="success">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;1101100 1100101 1110011 100000 1001110 1010011 1001001 100000 1100011 100111 1100101 1110011 1110100 100000 1101100 1100101 1110011 100000 1101101 1100101 1101001 1101100 1101100 1100101 1110101 1110010 1110011&#39;</span>
-<span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">msg</span> <span class="o">=</span> <span class="s1">'1101100 1100101 1110011 100000 1001110 1010011 1001001 100000 1100011 100111 1100101 1110011 1110100 100000 1101100 1100101 1110011 100000 1101101 1100101 1101001 1101100 1101100 1100101 1110101 1110010 1110011'</span>
+<span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">' '</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">''</span>
 <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">msg</span> <span class="p">:</span>
     <span class="n">s</span> <span class="o">+=</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">k</span> <span class="p">,</span><span class="mi">2</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
@@ -5323,10 +5323,10 @@ D'autres encodages plus légers, mais plus complexes, sont donc proposés :</p>
 <p><strong>Q1.</strong> Grâce à la fonction <code>ord</code> puis à la fonction <code>bin</code>, écrire en binaire le nombre associé au caractère <code>é</code> en UTF-8.</p>
 <details class="success">
 <summary>Correction</summary>
-<p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;é&#39;</span><span class="p">)</span>
+<p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">'é'</span><span class="p">)</span>
 <span class="mi">233</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="mi">233</span><span class="p">)</span>
-<span class="s1">&#39;0b11101001&#39;</span>
+<span class="s1">'0b11101001'</span>
 </code></pre></div>
 Donc en UTF-8, <code>é</code> est associé au nombre <code>11101001</code>. </p>
 </details>
@@ -5338,14 +5338,14 @@ Donc en UTF-8, <code>é</code> est associé au nombre <code>11101001</code>. </p
 <p><strong>Q3.</strong> Convertir les deux octets obtenus en notation décimale (grâce à <code>int</code>) puis en hexadécimal (grâce à <code>hex</code>).</p>
 <details class="success">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;11000011&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="s1">'11000011'</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="mi">195</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">hex</span><span class="p">(</span><span class="mi">195</span><span class="p">)</span>
-<span class="s1">&#39;0xc3&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;10101001&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="s1">'0xc3'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="s1">'10101001'</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="mi">169</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">hex</span><span class="p">(</span><span class="mi">169</span><span class="p">)</span>
-<span class="s1">&#39;0xa9&#39;</span>
+<span class="s1">'0xa9'</span>
 </code></pre></div>
 </details>
 <p><strong>Q4.</strong> Si un logiciel considère <strong>à tort</strong> que les deux octets servant à encoder le <code>é</code> en UTF-8 servent à encoder deux caractères en ISO 8859-15, quels seront ces deux caractères ?</p>
@@ -5468,7 +5468,7 @@ Le deuxième octet, <code>a9</code> en hexadécimal, sera perçu en ISO 8859-15 
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       

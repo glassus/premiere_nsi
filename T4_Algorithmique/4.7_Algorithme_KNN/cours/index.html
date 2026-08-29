@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5269,7 +5269,7 @@
 <h2 id="1-objectif">1. Objectif<a class="headerlink" href="#1-objectif" title="Permanent link">⚓︎</a></h2>
 <p>Nous allons reprendre le jeu de données sur les joueurs du Top14 utilisé dans le cours «Trier des données» :  <a class="" href="https://glassus.github.io/premiere_nsi/T5_Traitement_de_donnees/data/top14.csv" target="_blank"><code>top14.csv</code> </a>, qu'on importera dans une liste de dictionnaires avec ce code :</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
-<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;top14.csv&#39;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'top14.csv'</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">'utf-8'</span><span class="p">)</span>
 <span class="n">donnees</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 <span class="n">joueurs</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="n">donnees</span><span class="p">:</span>
@@ -5308,8 +5308,8 @@
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">distance</span><span class="p">(</span><span class="n">poids</span><span class="p">,</span> <span class="n">taille</span><span class="p">,</span> <span class="n">player</span><span class="p">):</span>
-    <span class="n">p</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">player</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span>
-    <span class="n">t</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">player</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">])</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">player</span><span class="p">[</span><span class="s1">'Poids'</span><span class="p">])</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">player</span><span class="p">[</span><span class="s1">'Taille'</span><span class="p">])</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">poids</span><span class="o">-</span><span class="n">p</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">taille</span><span class="o">-</span><span class="n">t</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
 </code></pre></div></td></tr></table></div>
 </details>
@@ -5325,7 +5325,7 @@
 </ul>
 <p>et qui renvoie le deuxième élément du couple.</p>
 <p><strong>Exemple d'utilisation :</strong>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">cpl</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;vendredi&quot;</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">cpl</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"vendredi"</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">second</span><span class="p">(</span><span class="n">cpl</span><span class="p">)</span>
 <span class="mi">13</span>
 </code></pre></div></p>
@@ -5349,7 +5349,7 @@
 <p>et qui renvoie une liste contenant les <code>k</code> joueurs classés suivant leur proximité morphologique avec le joueur X.</p>
 <p><strong>Exemple d'utilisation :</strong>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">classement_k_joueurs</span><span class="p">(</span><span class="mi">85</span><span class="p">,</span> <span class="mi">186</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="p">[{</span><span class="s1">&#39;Equipe&#39;</span><span class="p">:</span> <span class="s1">&#39;Bordeaux&#39;</span><span class="p">,</span> <span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Geoffrey CROS&#39;</span><span class="p">,</span> <span class="s1">&#39;Poste&#39;</span><span class="p">:</span> <span class="s1">&#39;Arrière&#39;</span><span class="p">,</span> <span class="s1">&#39;Date de naissance&#39;</span><span class="p">:</span> <span class="s1">&#39;08/03/1997&#39;</span><span class="p">,</span> <span class="s1">&#39;Taille&#39;</span><span class="p">:</span> <span class="s1">&#39;185&#39;</span><span class="p">,</span> <span class="s1">&#39;Poids&#39;</span><span class="p">:</span> <span class="s1">&#39;85&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;Equipe&#39;</span><span class="p">:</span> <span class="s1">&#39;Toulouse&#39;</span><span class="p">,</span> <span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Romain NTAMACK&#39;</span><span class="p">,</span> <span class="s1">&#39;Poste&#39;</span><span class="p">:</span> <span class="s1">&#39;Ouverture&#39;</span><span class="p">,</span> <span class="s1">&#39;Date de naissance&#39;</span><span class="p">:</span> <span class="s1">&#39;01/05/1999&#39;</span><span class="p">,</span> <span class="s1">&#39;Taille&#39;</span><span class="p">:</span> <span class="s1">&#39;186&#39;</span><span class="p">,</span> <span class="s1">&#39;Poids&#39;</span><span class="p">:</span> <span class="s1">&#39;84&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;Equipe&#39;</span><span class="p">:</span> <span class="s1">&#39;Bayonne&#39;</span><span class="p">,</span> <span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Manuel ORDAS&#39;</span><span class="p">,</span> <span class="s1">&#39;Poste&#39;</span><span class="p">:</span> <span class="s1">&#39;Ouverture&#39;</span><span class="p">,</span> <span class="s1">&#39;Date de naissance&#39;</span><span class="p">:</span> <span class="s1">&#39;21/02/1998&#39;</span><span class="p">,</span> <span class="s1">&#39;Taille&#39;</span><span class="p">:</span> <span class="s1">&#39;186&#39;</span><span class="p">,</span> <span class="s1">&#39;Poids&#39;</span><span class="p">:</span> <span class="s1">&#39;83&#39;</span><span class="p">}]</span>
+<span class="p">[{</span><span class="s1">'Equipe'</span><span class="p">:</span> <span class="s1">'Bordeaux'</span><span class="p">,</span> <span class="s1">'Nom'</span><span class="p">:</span> <span class="s1">'Geoffrey CROS'</span><span class="p">,</span> <span class="s1">'Poste'</span><span class="p">:</span> <span class="s1">'Arrière'</span><span class="p">,</span> <span class="s1">'Date de naissance'</span><span class="p">:</span> <span class="s1">'08/03/1997'</span><span class="p">,</span> <span class="s1">'Taille'</span><span class="p">:</span> <span class="s1">'185'</span><span class="p">,</span> <span class="s1">'Poids'</span><span class="p">:</span> <span class="s1">'85'</span><span class="p">},</span> <span class="p">{</span><span class="s1">'Equipe'</span><span class="p">:</span> <span class="s1">'Toulouse'</span><span class="p">,</span> <span class="s1">'Nom'</span><span class="p">:</span> <span class="s1">'Romain NTAMACK'</span><span class="p">,</span> <span class="s1">'Poste'</span><span class="p">:</span> <span class="s1">'Ouverture'</span><span class="p">,</span> <span class="s1">'Date de naissance'</span><span class="p">:</span> <span class="s1">'01/05/1999'</span><span class="p">,</span> <span class="s1">'Taille'</span><span class="p">:</span> <span class="s1">'186'</span><span class="p">,</span> <span class="s1">'Poids'</span><span class="p">:</span> <span class="s1">'84'</span><span class="p">},</span> <span class="p">{</span><span class="s1">'Equipe'</span><span class="p">:</span> <span class="s1">'Bayonne'</span><span class="p">,</span> <span class="s1">'Nom'</span><span class="p">:</span> <span class="s1">'Manuel ORDAS'</span><span class="p">,</span> <span class="s1">'Poste'</span><span class="p">:</span> <span class="s1">'Ouverture'</span><span class="p">,</span> <span class="s1">'Date de naissance'</span><span class="p">:</span> <span class="s1">'21/02/1998'</span><span class="p">,</span> <span class="s1">'Taille'</span><span class="p">:</span> <span class="s1">'186'</span><span class="p">,</span> <span class="s1">'Poids'</span><span class="p">:</span> <span class="s1">'83'</span><span class="p">}]</span>
 </code></pre></div></p>
 <details class="success">
 <summary>Correction</summary>
@@ -5380,7 +5380,7 @@
 <p>et qui renvoie le dictionnaire composé différents postes de ces joueurs, et du nombre de fois où ils apparaissent dans la liste <code>joueurs</code>.</p>
 <p><strong>Exemple d'utilisation :</strong>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">occurence</span><span class="p">(</span><span class="n">joueurs</span><span class="p">)</span>
-<span class="p">{</span><span class="s1">&#39;Pilier&#39;</span><span class="p">:</span> <span class="mi">110</span><span class="p">,</span> <span class="s1">&#39;Talonneur&#39;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="s1">&#39;2ème ligne&#39;</span><span class="p">:</span> <span class="mi">74</span><span class="p">,</span> <span class="s1">&#39;3ème ligne&#39;</span><span class="p">:</span> <span class="mi">111</span><span class="p">,</span> <span class="s1">&#39;Mêlée&#39;</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span> <span class="s1">&#39;Ouverture&#39;</span><span class="p">:</span> <span class="mi">38</span><span class="p">,</span> <span class="s1">&#39;Centre&#39;</span><span class="p">:</span> <span class="mi">71</span><span class="p">,</span> <span class="s1">&#39;Ailier&#39;</span><span class="p">:</span> <span class="mi">64</span><span class="p">,</span> <span class="s1">&#39;Arrière&#39;</span><span class="p">:</span> <span class="mi">35</span><span class="p">}</span>
+<span class="p">{</span><span class="s1">'Pilier'</span><span class="p">:</span> <span class="mi">110</span><span class="p">,</span> <span class="s1">'Talonneur'</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="s1">'2ème ligne'</span><span class="p">:</span> <span class="mi">74</span><span class="p">,</span> <span class="s1">'3ème ligne'</span><span class="p">:</span> <span class="mi">111</span><span class="p">,</span> <span class="s1">'Mêlée'</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span> <span class="s1">'Ouverture'</span><span class="p">:</span> <span class="mi">38</span><span class="p">,</span> <span class="s1">'Centre'</span><span class="p">:</span> <span class="mi">71</span><span class="p">,</span> <span class="s1">'Ailier'</span><span class="p">:</span> <span class="mi">64</span><span class="p">,</span> <span class="s1">'Arrière'</span><span class="p">:</span> <span class="mi">35</span><span class="p">}</span>
 </code></pre></div></p>
 <details class="success">
 <summary>Correction</summary>
@@ -5394,10 +5394,10 @@
 <span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">occurence</span><span class="p">(</span><span class="n">joueurs</span><span class="p">):</span>
     <span class="n">occ</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="k">for</span> <span class="n">player</span> <span class="ow">in</span> <span class="n">joueurs</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">player</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="n">occ</span><span class="p">:</span>
-            <span class="n">occ</span><span class="p">[</span><span class="n">player</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">player</span><span class="p">[</span><span class="s1">'Poste'</span><span class="p">]</span> <span class="ow">in</span> <span class="n">occ</span><span class="p">:</span>
+            <span class="n">occ</span><span class="p">[</span><span class="n">player</span><span class="p">[</span><span class="s1">'Poste'</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">occ</span><span class="p">[</span><span class="n">player</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="n">occ</span><span class="p">[</span><span class="n">player</span><span class="p">[</span><span class="s1">'Poste'</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="n">occ</span>
 </code></pre></div></td></tr></table></div>
 </details>
@@ -5411,9 +5411,9 @@
 </ul>
 <p>et qui renvoie la clé associée à la valeur maximale.</p>
 <p><strong>Exemple d'utilisation :</strong>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;lundi&quot;</span><span class="p">:</span><span class="mi">13</span><span class="p">,</span> <span class="s2">&quot;mardi&quot;</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;mercredi&quot;</span><span class="p">:</span><span class="mi">18</span><span class="p">,</span> <span class="s2">&quot;jeudi&quot;</span><span class="p">:</span><span class="mi">4</span><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"lundi"</span><span class="p">:</span><span class="mi">13</span><span class="p">,</span> <span class="s2">"mardi"</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span> <span class="s2">"mercredi"</span><span class="p">:</span><span class="mi">18</span><span class="p">,</span> <span class="s2">"jeudi"</span><span class="p">:</span><span class="mi">4</span><span class="p">}</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">cle_max</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
-<span class="s1">&#39;mercredi&#39;</span>
+<span class="s1">'mercredi'</span>
 </code></pre></div></p>
 <details class="success">
 <summary>Correction</summary>
@@ -5445,9 +5445,9 @@
 <p>et qui renvoie le poste le plus compatible avec la morphologie de X.</p>
 <p><strong>Exemple d'utilisation :</strong>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">conseil_poste</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="mi">170</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
-<span class="s1">&#39;Mêlée&#39;</span>
+<span class="s1">'Mêlée'</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">conseil_poste</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">210</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
-<span class="s1">&#39;2ème ligne&#39;</span>
+<span class="s1">'2ème ligne'</span>
 </code></pre></div></p>
 <details class="success">
 <summary>Correction</summary>
@@ -5572,7 +5572,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       

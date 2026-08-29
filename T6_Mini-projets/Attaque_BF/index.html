@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5290,10 +5290,10 @@ Attention, ce fichier doit être impérativement situé dans le même répertoir
 <h3 id="12-recuperer-les-elements-du-fichier">1.2 Récupérer les éléments du fichier<a class="headerlink" href="#12-recuperer-les-elements-du-fichier" title="Permanent link">⚓︎</a></h3>
 <p>Ouvrir un nouveau code dans Thonny et enregistrez-le <strong>à côté du fichier <code>extraitrockyou.txt</code></strong>.  </p>
 <p>La ligne suivante va stocker dans une liste <code>liste_mdp</code> les 1000 mots de passe présents dans le fichier <code>extraitrockyou.txt</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="n">liste_mdp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;extraitrockyou.txt&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="n">liste_mdp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"extraitrockyou.txt"</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
 </code></pre></div>
 <p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> Si vous avez l'erreur : 
-<div class="highlight"><pre><span></span><code><span class="ne">FileNotFoundError</span><span class="p">:</span> <span class="p">[</span><span class="n">Errno</span> <span class="mi">2</span><span class="p">]</span> <span class="n">No</span> <span class="n">such</span> <span class="n">file</span> <span class="ow">or</span> <span class="n">directory</span><span class="p">:</span> <span class="s1">&#39;extraitrockyou.txt&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="ne">FileNotFoundError</span><span class="p">:</span> <span class="p">[</span><span class="n">Errno</span> <span class="mi">2</span><span class="p">]</span> <span class="n">No</span> <span class="n">such</span> <span class="n">file</span> <span class="ow">or</span> <span class="n">directory</span><span class="p">:</span> <span class="s1">'extraitrockyou.txt'</span>
 </code></pre></div></p>
 <p>c'est que votre code et le fichier <code>extraitrockyou.txt</code> ne sont pas dans le même répertoire.</p>
 <div class="admonition abstract">
@@ -5308,7 +5308,7 @@ Attention, ce fichier doit être impérativement situé dans le même répertoir
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;http://glassus1.free.fr/interesting.html&quot;</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"http://glassus1.free.fr/interesting.html"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <div class="admonition abstract">
@@ -5317,12 +5317,12 @@ Attention, ce fichier doit être impérativement situé dans le même répertoir
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;http://glassus1.free.fr/interesting.html&quot;</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"http://glassus1.free.fr/interesting.html"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div></p>
 </div>
 <p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:" /> Si vous avez l'erreur : 
-<div class="highlight"><pre><span></span><code><span class="ne">ModuleNotFoundError</span><span class="p">:</span> <span class="n">No</span> <span class="n">module</span> <span class="n">named</span> <span class="s1">&#39;requests&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="ne">ModuleNotFoundError</span><span class="p">:</span> <span class="n">No</span> <span class="n">module</span> <span class="n">named</span> <span class="s1">'requests'</span>
 </code></pre></div></p>
 <p>c'est que le module <code>requests</code> n'est pas installé. Dans Thonny, aller dans Outils / Gérer les paquets et installer <code>requests</code>.</p>
 <h2 id="3-proposer-un-mot-de-passe">3. Proposer un mot de passe<a class="headerlink" href="#3-proposer-un-mot-de-passe" title="Permanent link">⚓︎</a></h2>
@@ -5341,8 +5341,8 @@ Quelle url s'affiche alors dans la barre d'adresse ?</p>
 <h2 id="4-resolution-du-probleme">4. Résolution du problème<a class="headerlink" href="#4-resolution-du-probleme" title="Permanent link">⚓︎</a></h2>
 <h3 id="41-petite-aide-sur-les-chaines-de-caracteres">4.1 Petite aide sur les chaines de caractères<a class="headerlink" href="#41-petite-aide-sur-les-chaines-de-caracteres" title="Permanent link">⚓︎</a></h3>
 <p>Pour rappel la concaténation des chaines de caractères permet de faire ceci :</p>
-<div class="highlight"><pre><span></span><code><span class="n">base</span> <span class="o">=</span> <span class="s2">&quot;je vous souhaite de bonnes&quot;</span>
-<span class="n">suite</span> <span class="o">=</span> <span class="s2">&quot;vacances&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="n">base</span> <span class="o">=</span> <span class="s2">"je vous souhaite de bonnes"</span>
+<span class="n">suite</span> <span class="o">=</span> <span class="s2">"vacances"</span>
 <span class="n">phrase</span> <span class="o">=</span> <span class="n">base</span> <span class="o">+</span> <span class="n">suite</span>
 </code></pre></div>
 <div class="admonition abstract">
@@ -5462,7 +5462,7 @@ Quelle url s'affiche alors dans la barre d'adresse ?</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../scripts/mathjax.js"></script>
       

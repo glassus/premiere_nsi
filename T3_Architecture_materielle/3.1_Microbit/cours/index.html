@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5263,7 +5263,7 @@
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s1">&#39;Hello, World!&#39;</span><span class="p">)</span>
+    <span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s1">'Hello, World!'</span><span class="p">)</span>
     <span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">HEART</span><span class="p">)</span>
     <span class="n">sleep</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
 </code></pre></div>
@@ -5285,12 +5285,12 @@
 <p>LED signifie Light Emitting Diode, Diode électroluminescente. La carte micro:bit en dispose de 25, toutes programmables individuellement, ce qui permet d'afficher du texte, des nombres et des images.</p>
 <h4 id="211-afficher-un-texte-defilant-displayscrollstring-delay400">2.1.1 Afficher un texte "défilant" <code>display.scroll(string, delay=400)</code><a class="headerlink" href="#211-afficher-un-texte-defilant-displayscrollstring-delay400" title="Permanent link">⚓︎</a></h4>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;NSI&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">"NSI"</span><span class="p">)</span>
 </code></pre></div>
 <p>La première ligne de ce programme importe la bibliothèque de fonctions micro:bit. La deuxième ligne fait défiler un message à l’écran. Cela n'arrive qu'une seule fois.</p>
 <p>La vitesse de défilement peut être ralentie ou accélérée à l'aide du paramètre <code>delay</code>. L'unité est la milliseconde.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;mauriac&quot;</span><span class="p">,</span> <span class="n">delay</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">"mauriac"</span><span class="p">,</span> <span class="n">delay</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
 </code></pre></div>
 <h4 id="212-afficher-une-image-displayshowimage">2.1.2 Afficher une "image" <code>display.show(image)</code><a class="headerlink" href="#212-afficher-une-image-displayshowimage" title="Permanent link">⚓︎</a></h4>
 <p>Exécuter le programme suivant:</p>
@@ -5386,11 +5386,11 @@ On utilisera la liste
 <p>Chaque pixel LED sur l’affichage physique peut prendre une parmi dix valeurs. Si un pixel prend la valeur 0 c’est qu’il est éteint. Littéralement, il a une luminosité de zéro. En revanche, s’il prend la valeur 9 il est à la luminosité maximale. Les valeurs de 1 à 8 représentent des niveaux de luminosité entre éteint (0) et « au maximum » (9).</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
-<span class="n">bateau</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="s2">&quot;05050:&quot;</span>
-               <span class="s2">&quot;05050:&quot;</span>
-               <span class="s2">&quot;05050:&quot;</span>
-               <span class="s2">&quot;99999:&quot;</span>
-               <span class="s2">&quot;09990&quot;</span><span class="p">)</span>
+<span class="n">bateau</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="s2">"05050:"</span>
+               <span class="s2">"05050:"</span>
+               <span class="s2">"05050:"</span>
+               <span class="s2">"99999:"</span>
+               <span class="s2">"09990"</span><span class="p">)</span>
 
 <span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">bateau</span><span class="p">)</span>
 </code></pre></div>
@@ -5460,7 +5460,7 @@ Par exemple, l'instruction <code>randint(2, 8)</code> va renvoyer un nombre (pse
 <p><strong>Exemple :</strong> Essayer le programme suivant qui fait défiler le texte "NSI" indéfiniment. Dès qu'un bouton est pressé, on sort de la boucle <code>break</code> et le programme s'achève.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;NSI&quot;</span><span class="p">)</span>
+    <span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">"NSI"</span><span class="p">)</span>
     <span class="n">sleep</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">button_a</span><span class="o">.</span><span class="n">was_pressed</span><span class="p">():</span>
         <span class="k">break</span>
@@ -5606,7 +5606,7 @@ Par exemple, l'instruction <code>randint(2, 8)</code> va renvoyer un nombre (pse
 <p>Créer un jeu de Pierre-Feuille-Ciseaux qui se déclenchera lorsqu'on secoue la Microbit. (Vous pouvez créer vos propres images de pierre, de feuille et de ciseaux)</p>
 <p><img alt="" class="center" src="../data/PFC.gif" /></p>
 <p>La détection du "secouage" de la carte se fera avec l'instruction suivante :
-<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">accelerometer</span><span class="o">.</span><span class="n">was_gesture</span><span class="p">(</span><span class="s1">&#39;shake&#39;</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">accelerometer</span><span class="o">.</span><span class="n">was_gesture</span><span class="p">(</span><span class="s1">'shake'</span><span class="p">):</span>
     <span class="o">...</span>
 </code></pre></div></p>
 </div>
@@ -5707,21 +5707,21 @@ Par exemple, l'instruction <code>randint(2, 8)</code> va renvoyer un nombre (pse
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">message</span> <span class="o">=</span> <span class="n">radio</span><span class="o">.</span><span class="n">receive</span><span class="p">()</span>
     <span class="k">if</span> <span class="n">message</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">message</span> <span class="o">==</span> <span class="s1">&#39;yes&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">message</span> <span class="o">==</span> <span class="s1">'yes'</span><span class="p">:</span>
             <span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">YES</span><span class="p">)</span>
             <span class="n">sleep</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
             <span class="n">display</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-        <span class="k">elif</span> <span class="n">message</span> <span class="o">==</span> <span class="s1">&#39;no&#39;</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">message</span> <span class="o">==</span> <span class="s1">'no'</span><span class="p">:</span>
             <span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">NO</span><span class="p">)</span>
             <span class="n">sleep</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
             <span class="n">display</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
     <span class="k">if</span> <span class="n">button_a</span><span class="o">.</span><span class="n">was_pressed</span><span class="p">():</span>
-        <span class="n">radio</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s1">&#39;yes&#39;</span><span class="p">)</span>
+        <span class="n">radio</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s1">'yes'</span><span class="p">)</span>
         <span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">YES</span><span class="p">)</span>
         <span class="n">sleep</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
         <span class="n">display</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
     <span class="k">if</span> <span class="n">button_b</span><span class="o">.</span><span class="n">was_pressed</span><span class="p">():</span>
-        <span class="n">radio</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s1">&#39;no&#39;</span><span class="p">)</span>
+        <span class="n">radio</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s1">'no'</span><span class="p">)</span>
         <span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">NO</span><span class="p">)</span>
         <span class="n">sleep</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
         <span class="n">display</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
@@ -5844,7 +5844,7 @@ Par exemple, l'instruction <code>randint(2, 8)</code> va renvoyer un nombre (pse
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       

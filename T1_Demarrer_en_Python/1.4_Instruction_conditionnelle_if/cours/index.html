@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5210,7 +5210,7 @@ Cette condition sera une expression booléenne, comme pour la boucle <code>while
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tu as le droit de vote&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Tu as le droit de vote"</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div></p>
 </div>
 <div class="admonition note">
@@ -5222,17 +5222,17 @@ Cette condition sera une expression booléenne, comme pour la boucle <code>while
 <span class="normal">4</span>
 <span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tu as le droit de vote&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Tu as le droit de vote"</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Désolé, il faudra attendre&quot;</span><span class="p">,</span> <span class="mi">18</span> <span class="o">-</span> <span class="n">age</span><span class="p">,</span> <span class="s2">&quot;ans avant de pouvoir voter&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Désolé, il faudra attendre"</span><span class="p">,</span> <span class="mi">18</span> <span class="o">-</span> <span class="n">age</span><span class="p">,</span> <span class="s2">"ans avant de pouvoir voter"</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title"><strong>Syntaxe générale</strong></p>
 <div class="highlight"><pre><span></span><code>if expression booléenne:
-    *instructions à effectuer si l&#39;expression est vraie*
+    *instructions à effectuer si l'expression est vraie*
 else:
-    *instructions à effectuer si l&#39;expression est fausse*
+    *instructions à effectuer si l'expression est fausse*
 </code></pre></div>
 </div>
 <h2 id="2-levaluation-de-la-condition">2. L'évaluation de la condition<a class="headerlink" href="#2-levaluation-de-la-condition" title="Permanent link">⚓︎</a></h2>
@@ -5309,13 +5309,13 @@ else:
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">&lt;=</span> <span class="mi">5</span>
 <span class="kc">True</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;e&#39;</span> <span class="ow">in</span> <span class="s1">&#39;abracadabra&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">'e'</span> <span class="ow">in</span> <span class="s1">'abracadabra'</span>
 <span class="kc">False</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;b&#39;</span> <span class="ow">in</span> <span class="s1">&#39;abracadabra&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">'b'</span> <span class="ow">in</span> <span class="s1">'abracadabra'</span>
 <span class="kc">True</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;A&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="s1">&#39;abracadabra&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">'A'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="s1">'abracadabra'</span>
 <span class="kc">True</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="ow">not</span> <span class="kc">True</span>
@@ -5333,8 +5333,8 @@ else:
 <p class="admonition-title">Exercice  1</p>
 <p>Compter le nombre de voyelles de la phrase <code>'cet exercice est prodigieusement ennuyeux'</code> </p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">phrase</span> <span class="o">=</span> <span class="s1">&#39;cet exercice est prodigieusement ennuyeux&#39;</span>
-<span class="n">voyelles</span> <span class="o">=</span> <span class="s1">&#39;aeiouy&#39;</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">phrase</span> <span class="o">=</span> <span class="s1">'cet exercice est prodigieusement ennuyeux'</span>
+<span class="n">voyelles</span> <span class="o">=</span> <span class="s1">'aeiouy'</span>
 </code></pre></div></td></tr></table></div>
 <details class="success">
 <summary>Correction</summary>
@@ -5347,8 +5347,8 @@ else:
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">phrase</span> <span class="o">=</span> <span class="s1">&#39;cet exercice est prodigieusement ennuyeux&#39;</span>
-<span class="n">voyelles</span> <span class="o">=</span> <span class="s1">&#39;aeiouy&#39;</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">phrase</span> <span class="o">=</span> <span class="s1">'cet exercice est prodigieusement ennuyeux'</span>
+<span class="n">voyelles</span> <span class="o">=</span> <span class="s1">'aeiouy'</span>
 
 <span class="n">compteur</span> <span class="o">=</span> <span class="mi">0</span>
 
@@ -5366,9 +5366,9 @@ else:
 <p>Pour tester si un nombre <code>n</code> est divisible par un nombre <code>d</code>, on teste si le reste de la division euclidienne de <code>n</code> par <code>d</code> est égal à 0 :</p>
 <div class="highlight"><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="mi">17</span>
 <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="s2">&quot;est un nombre pair&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="s2">"est un nombre pair"</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="s2">&quot;est un nombre impair&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="s2">"est un nombre impair"</span><span class="p">)</span>
 </code></pre></div>
 </div>
 <div class="admonition example">
@@ -5408,21 +5408,21 @@ else:
 <span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">moyenne</span> <span class="o">=</span> <span class="mi">13</span>
 
 <span class="k">if</span> <span class="n">moyenne</span> <span class="o">&lt;</span> <span class="mi">8</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;raté&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"raté"</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">moyenne</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;repêchage&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"repêchage"</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">moyenne</span> <span class="o">&lt;</span> <span class="mi">12</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;admis&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"admis"</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">moyenne</span> <span class="o">&lt;</span> <span class="mi">14</span><span class="p">:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mention AB&quot;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"mention AB"</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="k">if</span> <span class="n">moyenne</span> <span class="o">&lt;</span> <span class="mi">16</span><span class="p">:</span>
-                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mention B&quot;</span><span class="p">)</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">"mention B"</span><span class="p">)</span>
                 <span class="k">else</span><span class="p">:</span>
-                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mention TB&quot;</span><span class="p">)</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">"mention TB"</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>Mais cela est vite long et peu lisible, et les différents niveaux d'indentation peuvent devenir piégeux.</p>
 <p>Il existe alors une instruction qui contracte <code>else</code> et <code>if</code> : <code>elif</code> (sinon si).</p>
@@ -5443,17 +5443,17 @@ else:
 <span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">moyenne</span> <span class="o">=</span> <span class="mi">7</span>
 
 <span class="k">if</span> <span class="n">moyenne</span> <span class="o">&lt;</span> <span class="mi">8</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;raté&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"raté"</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">moyenne</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;repêchage&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"repêchage"</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">moyenne</span> <span class="o">&lt;</span> <span class="mi">12</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;admis&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"admis"</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">moyenne</span> <span class="o">&lt;</span> <span class="mi">14</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mention AB&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"mention AB"</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">moyenne</span> <span class="o">&lt;</span> <span class="mi">16</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mention B&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"mention B"</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mention TB&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"mention TB"</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="4-recreation-a-vous-dobeir">4. Récréation : à vous d'obéir !<a class="headerlink" href="#4-recreation-a-vous-dobeir" title="Permanent link">⚓︎</a></h2>
 <p><img alt="image" class="center" src="../data/compute.png" width="30%" /></p>
@@ -5566,7 +5566,7 @@ else:
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       

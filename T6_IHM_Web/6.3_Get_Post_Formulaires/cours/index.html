@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5198,10 +5198,10 @@
 <h3 id="11-la-methode-get">1.1. La méthode GET<a class="headerlink" href="#11-la-methode-get" title="Permanent link">⚓︎</a></h3>
 <p>Considérons le formulaire suivant, inclus dans une page html ouverte dans le navigateur du client :</p>
 <div class="highlight"><pre><span></span><code>Le mot de passe est :
-<span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;cible2.php&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;get&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">"cible2.php"</span> <span class="na">method</span><span class="o">=</span><span class="s">"get"</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;pass&quot;</span> <span class="p">/&gt;</span> 
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Valider&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"password"</span> <span class="na">name</span><span class="o">=</span><span class="s">"pass"</span> <span class="p">/&gt;</span> 
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"submit"</span> <span class="na">value</span><span class="o">=</span><span class="s">"Valider"</span> <span class="p">/&gt;</span>
 <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </code></pre></div>
@@ -5231,10 +5231,10 @@ On aurait pu aussi avoir un type :<ul>
 <h3 id="12-la-methode-post">1.2. La méthode POST<a class="headerlink" href="#12-la-methode-post" title="Permanent link">⚓︎</a></h3>
 <p>Dans notre code de formulaire du 1.1, modifions l'attribut <code>method</code>, auparavant égal à <code>"get"</code>. Passons-le égal à <code>"post"</code>  :</p>
 <div class="highlight"><pre><span></span><code>Le mot de passe est :
-<span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;cible2.php&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">"cible2.php"</span> <span class="na">method</span><span class="o">=</span><span class="s">"post"</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;pass&quot;</span> <span class="p">/&gt;</span> 
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Valider&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"password"</span> <span class="na">name</span><span class="o">=</span><span class="s">"pass"</span> <span class="p">/&gt;</span> 
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"submit"</span> <span class="na">value</span><span class="o">=</span><span class="s">"Valider"</span> <span class="p">/&gt;</span>
 <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </code></pre></div>
@@ -5287,19 +5287,19 @@ Si vous vous demandez à quoi peuvent servir des url si longues, songez à ce ty
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>exemple<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
  Votre OS actuel est un : 
-<span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">page2.php</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;get&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">page2.php</span> <span class="na">method</span><span class="o">=</span><span class="s">"get"</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;OS&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Windows&quot;</span><span class="p">&gt;</span> Windows <span class="p">&lt;/</span><span class="nt">input</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;OS&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;MacOS&quot;</span><span class="p">&gt;</span> MacOS <span class="p">&lt;/</span><span class="nt">input</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;OS&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;GNU/Linux&quot;</span><span class="p">&gt;</span> GNU/Linux <span class="p">&lt;/</span><span class="nt">input</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"radio"</span> <span class="na">name</span><span class="o">=</span><span class="s">"OS"</span> <span class="na">value</span><span class="o">=</span><span class="s">"Windows"</span><span class="p">&gt;</span> Windows <span class="p">&lt;/</span><span class="nt">input</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"radio"</span> <span class="na">name</span><span class="o">=</span><span class="s">"OS"</span> <span class="na">value</span><span class="o">=</span><span class="s">"MacOS"</span><span class="p">&gt;</span> MacOS <span class="p">&lt;/</span><span class="nt">input</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"radio"</span> <span class="na">name</span><span class="o">=</span><span class="s">"OS"</span> <span class="na">value</span><span class="o">=</span><span class="s">"GNU/Linux"</span><span class="p">&gt;</span> GNU/Linux <span class="p">&lt;/</span><span class="nt">input</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> 
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Valider&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"submit"</span> <span class="na">value</span><span class="o">=</span><span class="s">"Valider"</span> <span class="p">/&gt;</span>
 <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
@@ -5309,17 +5309,17 @@ Si vous vous demandez à quoi peuvent servir des url si longues, songez à ce ty
 <div class="highlight"><pre><span></span><code><span class="x"> &lt;!DOCTYPE html&gt;</span>
 <span class="x">&lt;html&gt;</span>
 <span class="x">    &lt;head&gt;</span>
-<span class="x">        &lt;meta charset=&quot;utf-8&quot; /&gt;</span>
+<span class="x">        &lt;meta charset="utf-8" /&gt;</span>
 <span class="x">        &lt;title&gt;Le meilleur OS&lt;/title&gt;</span>
 <span class="x">    &lt;/head&gt;</span>
 <span class="x">    &lt;body&gt;</span>
 <span class="x"> &lt;p&gt;</span>
 <span class="x">    </span><span class="cp">&lt;?php</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;OS&#39;</span><span class="p">]))</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">'OS'</span><span class="p">]))</span>
   <span class="p">{</span>
-    <span class="k">Print</span><span class="p">(</span><span class="s2">&quot;Vous avez raison, &quot;</span><span class="p">);</span>
-  <span class="k">echo</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;OS&#39;</span><span class="p">];</span>
-  <span class="k">Print</span><span class="p">(</span><span class="s2">&quot; est le meilleur des OS.&quot;</span><span class="p">);</span>
+    <span class="k">Print</span><span class="p">(</span><span class="s2">"Vous avez raison, "</span><span class="p">);</span>
+  <span class="k">echo</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">'OS'</span><span class="p">];</span>
+  <span class="k">Print</span><span class="p">(</span><span class="s2">" est le meilleur des OS."</span><span class="p">);</span>
   <span class="p">}</span>
     <span class="cp">?&gt;</span>
 <span class="x">    &lt;/p&gt;</span>
@@ -5351,22 +5351,22 @@ Si vous vous demandez à quoi peuvent servir des url si longues, songez à ce ty
 <p class="admonition-title">Exercice  1</p>
 <p>Créez une page <code>page2</code>  dont l'apparence est conditionné à un mot de passe rentré en <code>page1</code>.</p>
 <p>La page <code>page1.html</code> contiendra un formulaire comme :</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;page2.php&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;get&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">"page2.php"</span> <span class="na">method</span><span class="o">=</span><span class="s">"get"</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;mdp&quot;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Valider&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"password"</span> <span class="na">name</span><span class="o">=</span><span class="s">"mdp"</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"submit"</span> <span class="na">value</span><span class="o">=</span><span class="s">"Valider"</span> <span class="p">/&gt;</span>
 <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>La page <code>page2.php</code> contiendra un code PHP comme :</p>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
-<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;mdp&#39;</span><span class="p">])</span> <span class="k">AND</span> <span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;mdp&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;votremotdepasse&#39;</span><span class="p">))</span>
-<span class="p">{</span><span class="k">echo</span> <span class="s2">&quot;Good job.&quot;</span><span class="p">;</span>
-<span class="k">echo</span> <span class="s1">&#39;&lt;br&gt;&#39;</span><span class="p">;</span>
-<span class="k">echo</span> <span class="s1">&#39;&lt;img src=&quot;https://media.giphy.com/media/u4CY9BW4umAfu/giphy.gif&quot;&gt;&#39;</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">'mdp'</span><span class="p">])</span> <span class="k">AND</span> <span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">'mdp'</span><span class="p">]</span><span class="o">==</span><span class="s1">'votremotdepasse'</span><span class="p">))</span>
+<span class="p">{</span><span class="k">echo</span> <span class="s2">"Good job."</span><span class="p">;</span>
+<span class="k">echo</span> <span class="s1">'&lt;br&gt;'</span><span class="p">;</span>
+<span class="k">echo</span> <span class="s1">'&lt;img src="https://media.giphy.com/media/u4CY9BW4umAfu/giphy.gif"&gt;'</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="k">else</span> <span class="p">{</span>
-<span class="k">echo</span> <span class="s1">&#39;raté&#39;</span><span class="p">;}</span>
+<span class="k">echo</span> <span class="s1">'raté'</span><span class="p">;}</span>
 <span class="cp">?&gt;</span>
 </code></pre></div>
 <p>Dans le code PHP, on peut insérer le code <code>html</code> qui sera fabriqué avec la commande <code>echo</code>. </p>
@@ -5380,7 +5380,7 @@ Testez le code ci-dessous :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;http://glassus1.free.fr/interesting.html&quot;</span><span class="p">,</span> <span class="n">verify</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"http://glassus1.free.fr/interesting.html"</span><span class="p">,</span> <span class="n">verify</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>La sortie en console est :</p>
@@ -5401,7 +5401,7 @@ Ceci est vraiment une jolie page web.
 <p>Notre programme Python se comporte donc «comme un navigateur» : il se rend sur une page, effectue une requête et récupère la page renvoyée.</p>
 <h4 id="pre-requis-2-lextraction-dun-fichier-texte-sous-forme-de-liste">Pré-requis 2 : l'extraction d'un fichier texte sous forme de liste<a class="headerlink" href="#pre-requis-2-lextraction-dun-fichier-texte-sous-forme-de-liste" title="Permanent link">⚓︎</a></h4>
 <p>Le code ci-dessous permet de collecter dans une liste <code>mots</code> l'ensemble des mots compris dans le fichier <code>monfichiertexte.txt</code> (si celui-ci comprend un mot par ligne) </p>
-<div class="highlight"><pre><span></span><code><span class="n">mots</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;monfichiertexte.txt&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="n">mots</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"monfichiertexte.txt"</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
 </code></pre></div>
 <h4 id="exercice">Exercice :<a class="headerlink" href="#exercice" title="Permanent link">⚓︎</a></h4>
 <p>Votre objectif est de trouver le mot de passe demandé sur la page <a href="http://glassus1.free.fr/exoBF.html" target="_blank">http://glassus1.free.fr/exoBF.html</a></p>
@@ -5429,18 +5429,18 @@ Ce fichier est téléchargeable <a href="https://www.kaggle.com/wjburns/common-p
 <span class="normal">14</span>
 <span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
 
-<span class="n">page_error</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;http://glassus1.free.fr/repBF.php?pass=&#39;</span><span class="p">)</span>
+<span class="n">page_error</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'http://glassus1.free.fr/repBF.php?pass='</span><span class="p">)</span>
 
-<span class="n">liste_mdp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;extraitrockyou.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+<span class="n">liste_mdp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'extraitrockyou.txt'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://glassus1.free.fr/repBF.php?pass=&#39;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">'http://glassus1.free.fr/repBF.php?pass='</span>
 
 <span class="k">for</span> <span class="n">mdp</span> <span class="ow">in</span> <span class="n">liste_mdp</span><span class="p">:</span>
     <span class="n">new_url</span> <span class="o">=</span> <span class="n">url</span> <span class="o">+</span> <span class="n">mdp</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">new_url</span><span class="p">)</span>
     <span class="n">page_tentative</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">new_url</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">page_tentative</span><span class="o">.</span><span class="n">text</span> <span class="o">!=</span> <span class="n">page_error</span><span class="o">.</span><span class="n">text</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Le mot de passe est le suivant :&#39;</span><span class="p">,</span> <span class="n">mdp</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'Le mot de passe est le suivant :'</span><span class="p">,</span> <span class="n">mdp</span><span class="p">)</span>
         <span class="k">break</span>
 </code></pre></div></td></tr></table></div>
 </details>
@@ -5553,7 +5553,7 @@ Ce fichier est téléchargeable <a href="https://www.kaggle.com/wjburns/common-p
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../scripts/mathjax.js"></script>
       
