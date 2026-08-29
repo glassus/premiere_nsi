@@ -44,9 +44,8 @@
 !!! tip "Utilisation des VM"
     Voir [cette page](./T7_Divers/2_VM/cours.md){. target="_blank"} 
 
-## Thèmes en cours d'étude :
-
-- [Variables](./T1_Demarrer_en_Python/1.1_Variables/cours/) 
+!!! note ":star: Thème en cours d'étude :star: "
+    - [Variables](./T1_Demarrer_en_Python/1.1_Variables/cours/) 
 
 
 
