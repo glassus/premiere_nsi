@@ -320,7 +320,7 @@ Cette procédure d'**incrémentation** est très très classique, il faut la ma�
     On initialise une variable ```capital``` à 1000 et on lui enlève 5%.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
