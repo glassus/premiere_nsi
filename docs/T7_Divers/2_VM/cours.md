@@ -20,7 +20,7 @@ Afin de pouvoir travailler sous le système d'exploitation libre Linux sur les m
 3. Un navigateur s'ouvre, mais une alerte de sécurité apparaît. Cliquer sur ```Paramètres avancés```  puis sur ```Continuer vers le site 172.17.191.244``` 
 4. Sur la fenêtre de connexion ```Proxmox VE Login```, renseigner ses identifiants et sélectionner ```Realm Proxmox VE authentication server```.
 ![image](data/2.png){: .center}
-5. Un messade d'avertissement apparaît. Cliquer ```ok``` pour l'ignorer.
+5. Un message d'avertissement apparaît. Cliquer ```ok``` pour l'ignorer.
 6. Sélectionner sa machine virtuelle (VM) dans la colonne de gauche.
 7. Cliquer sur ```Start``` pour démarrer la VM.
 8. Cliquer sur le bouton ```Console``` et choisir ```Spice```.
