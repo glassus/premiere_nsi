@@ -423,7 +423,7 @@ Vous pouvez vérifier maintenant que les valeurs de ```a``` et de ```b``` ont bi
     Corriger cette erreur, de deux manières différentes.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
