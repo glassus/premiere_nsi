@@ -268,7 +268,7 @@ Cette procédure d'**incrémentation** est très très classique, il faut la ma�
     On initialise une variable ```score``` à 100 et on l'augmente de 15.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
