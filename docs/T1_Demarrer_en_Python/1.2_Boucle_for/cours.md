@@ -28,7 +28,7 @@ En informatique, il existe un concept similaire qui va désigner les objets que 
 
 La principale caractéristique d'un ordinateur est d'exceller dans les opérations répétitives.
 
-(je vous laisse retrouver la citation de Gérard Berry, professeur au Collège de France, commençant par *«l'ordinateur est...»*)
+(je vous laisse retrouver la citation de Gérard Berry, professeur au Collège de France, commençant par *«un ordinateur est...»*)
 
 Il existe donc une instruction permettant de faire une (ou plusieurs) action(s) à chaque itération sur un élément énumérable.
 
