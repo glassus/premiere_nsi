@@ -47,6 +47,8 @@
 
 !!! note ":star: Thème en cours d'étude :star: "
     - [Variables](./T1_Demarrer_en_Python/1.1_Variables/cours/) 
+    - [Boucle ```#!python for ... in ...``` ](T1_Demarrer_en_Python/1.2_Boucle_for/cours/)
+    - [Exercices ```#!python for ... in ...``` ](T1_Demarrer_en_Python/1.2_Boucle_for/exercices/)
 
 
 
