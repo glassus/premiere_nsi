@@ -5119,17 +5119,6 @@
 <span class="n">Alex</span> <span class="n">a</span> <span class="n">eu</span> <span class="n">le</span> <span class="n">César</span> <span class="n">du</span> <span class="n">meilleur</span> <span class="n">acteur</span>
 <span class="n">Roschdy</span> <span class="n">a</span> <span class="n">eu</span> <span class="n">le</span> <span class="n">César</span> <span class="n">du</span> <span class="n">meilleur</span> <span class="n">acteur</span>
 </code></pre></div></p>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">liste_acteurs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Tahar'</span><span class="p">,</span> <span class="s1">'Omar'</span><span class="p">,</span> <span class="s1">'Guillaume'</span><span class="p">,</span> <span class="s1">'Swann'</span><span class="p">,</span> <span class="s1">'Alex'</span><span class="p">,</span> <span class="s1">'Roschdy'</span><span class="p">]</span>
-
-<span class="k">for</span> <span class="n">acteur</span> <span class="ow">in</span> <span class="n">liste_acteurs</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">acteur</span><span class="p">,</span> <span class="s1">'a eu le César du meilleur acteur'</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
 </div>
 <div class="admonition info">
 <p class="admonition-title"><img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2764.svg" title=":heart:" /> Concaténation de caractères <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2764.svg" title=":heart:" /></p>
@@ -5157,22 +5146,6 @@
 <span class="nb">print</span><span class="p">(</span><span class="n">chaine</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>Cette variable <code>chaine</code> est appelée un <strong>accumulateur</strong>.</p>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">chaine</span> <span class="o">=</span> <span class="s1">''</span>
-<span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'b'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">,</span> <span class="s1">'a'</span><span class="p">,</span> <span class="s1">'v'</span><span class="p">,</span> <span class="s1">'o'</span><span class="p">]:</span>
-    <span class="n">chaine</span> <span class="o">=</span> <span class="n">chaine</span> <span class="o">+</span> <span class="n">lettre</span> <span class="c1">#(1)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">chaine</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-<ol>
-<li>Ou bien <code>chaine += lettre</code> </li>
-</ol>
-</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  3</p>
@@ -5193,57 +5166,16 @@
 
 <span class="c1"># à vous !</span>
 </code></pre></div></td></tr></table></div>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">mystere</span> <span class="o">=</span> <span class="p">[</span><span class="mi">111</span><span class="p">,</span> <span class="mi">107</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">106</span><span class="p">,</span> <span class="mi">111</span><span class="p">,</span> <span class="mi">117</span><span class="p">,</span> <span class="mi">233</span><span class="p">]</span>
-<span class="n">mot_secret</span> <span class="o">=</span> <span class="s2">""</span>
-
-<span class="k">for</span> <span class="n">nombre</span> <span class="ow">in</span> <span class="n">mystere</span><span class="p">:</span>
-    <span class="n">lettre</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>
-    <span class="n">mot_secret</span> <span class="o">=</span> <span class="n">mot_secret</span> <span class="o">+</span> <span class="n">lettre</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">mot_secret</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  4</p>
 <p>On souhaite calculer la somme des 1000 premiers nombres entiers naturels, c'est-à-dire:</p>
 <p><span class="arithmatex">\(1+2+3+4+5+ \dots +999+1000\)</span></p>
 <p>Écrire un programme avec une variable <code>somme</code> <strong>accumulateur</strong> (comme à l'exercice 3) qui contiendra la valeur souhaitée en fin de programme.</p>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1001</span><span class="p">):</span>
-    <span class="n">somme</span> <span class="o">+=</span> <span class="n">k</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">somme</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  5</p>
 <p>Calculer <span class="arithmatex">\(1\times 2 \times 3 \times \dots 99 \times 100\)</span>.</p>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">produit</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">101</span><span class="p">):</span>
-    <span class="n">produit</span> <span class="o">=</span> <span class="n">produit</span> <span class="o">*</span> <span class="n">k</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">produit</span><span class="p">)</span>  
-</code></pre></div></td></tr></table></div>
-</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  6</p>
@@ -5258,134 +5190,18 @@
 
 9*9 = 81    
 </code></pre></div></p>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s1">'*'</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s1">'='</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  7</p>
 <p>Sur un jeu d'échecs, les cases sont repérées par une lettre (de A jusqu'à H) et par un chiffre (de 1 jusqu'à 8).</p>
 <p>Les cases sont donc A1, A2, A3, ..., H7, H8.</p>
 <p>Proposer un code qui écrit <strong>toutes</strong> les cases possibles.</p>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="s1">'ABCDEFGH'</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">chiffre</span> <span class="ow">in</span> <span class="s1">'12345678'</span><span class="p">:</span>
-        <span class="n">case</span> <span class="o">=</span> <span class="n">lettre</span> <span class="o">+</span> <span class="n">chiffre</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">case</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-<p>Autre solution utilisant la conversion d'un entier en chaine de caractères, grâce à la fonction <code>str</code> : </p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="s1">'ABCDEFGH'</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">chiffre</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">):</span>
-        <span class="n">case</span> <span class="o">=</span> <span class="n">lettre</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">chiffre</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">case</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  8</p>
 <p>Travail sur <code>ipythonblocks</code> :
 <img alt="image" class="center" src="../data/blocks.png" /></p>
 <p>Exercice à faire sur Capytale : <a class="" href="https://capytale2.ac-paris.fr/web/c/8869-1863952" target="_blank">https://capytale2.ac-paris.fr/web/c/8869-1863952</a></p>
-<details class="success">
-<summary>Correction Ex. 1</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">grid</span> <span class="o">=</span> <span class="n">BlockGrid</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="p">(</span><span class="mi">125</span><span class="p">,</span><span class="mi">234</span><span class="p">,</span><span class="mi">231</span><span class="p">))</span>
-
-<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="n">grid</span><span class="p">[</span><span class="n">k</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_colors</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">grid</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<details class="success">
-<summary>Correction Ex. 2</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">grid</span> <span class="o">=</span> <span class="n">BlockGrid</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="p">(</span><span class="mi">125</span><span class="p">,</span> <span class="mi">234</span><span class="p">,</span> <span class="mi">231</span><span class="p">))</span>
-
-<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">lig</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-        <span class="n">grid</span><span class="p">[</span><span class="n">lig</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">set_colors</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-
-<span class="n">grid</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<details class="success">
-<summary>Correction Ex. 3</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">grid</span> <span class="o">=</span> <span class="n">BlockGrid</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="p">(</span><span class="mi">125</span><span class="p">,</span><span class="mi">234</span><span class="p">,</span><span class="mi">231</span><span class="p">))</span>
-
-<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">lig</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
-        <span class="n">grid</span><span class="p">[</span><span class="n">lig</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">set_colors</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">lig</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
-        <span class="n">grid</span><span class="p">[</span><span class="n">lig</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">set_colors</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>        
-
-<span class="n">grid</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</code></pre></div></td></tr></table></div>
-<p>ou bien (plus difficile):</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">grid</span> <span class="o">=</span> <span class="n">BlockGrid</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="p">(</span><span class="mi">125</span><span class="p">,</span><span class="mi">234</span><span class="p">,</span><span class="mi">231</span><span class="p">))</span>
-
-<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="c1">#on teste si la somme abscisse + ordonnée est impaire</span>
-            <span class="n">grid</span><span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">]</span><span class="o">.</span><span class="n">set_colors</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>     
-
-<span class="n">grid</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<details class="success">
-<summary>Correction Ex. 4</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">grid</span> <span class="o">=</span> <span class="n">BlockGrid</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="p">(</span><span class="mi">125</span><span class="p">,</span><span class="mi">234</span><span class="p">,</span><span class="mi">231</span><span class="p">))</span>
-
-<span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
-        <span class="n">grid</span><span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">]</span><span class="o">.</span><span class="n">set_colors</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>     
-<span class="n">grid</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</code></pre></div></td></tr></table></div>
-</details>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice  9</p>
@@ -5399,19 +5215,6 @@
 </ul>
 <p>Pour un exercice, je dois colorier 3 pastilles en choissant sans aucune contrainte des couleurs parmi les 5 disponibles. Je peux tout colorier en jaune (<code>JJJ</code>) ou bien colorier la 1ère en orange, la 2ème en bleu, la 3ème en vert (<code>OBV</code> )</p>
 <p>Faire afficher la totalité des combinaisons possibles.</p>
-<details class="success">
-<summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">couleurs</span> <span class="o">=</span> <span class="s1">'JVNBO'</span>
-<span class="k">for</span> <span class="n">c1</span> <span class="ow">in</span> <span class="n">couleurs</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">c2</span> <span class="ow">in</span> <span class="n">couleurs</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">c3</span> <span class="ow">in</span> <span class="n">couleurs</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">c1</span> <span class="o">+</span> <span class="n">c2</span> <span class="o">+</span> <span class="n">c3</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</details>
 </div>
 
 
@@ -5433,7 +5236,7 @@
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="23 septembre 2024 06:47:03 UTC">23 septembre 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="5 septembre 2026 13:35:44 UTC">5 septembre 2026</span>
   </span>
 
     
