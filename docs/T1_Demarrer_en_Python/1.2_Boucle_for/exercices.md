@@ -20,7 +20,7 @@
     ```
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -70,7 +70,7 @@
     Cette variable `chaine` est appelée un **accumulateur**.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -150,7 +150,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -176,7 +176,7 @@
     Écrire un programme avec une variable `somme` **accumulateur** (comme à l'exercice 3) qui contiendra la valeur souhaitée en fin de programme.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -197,7 +197,7 @@
     Calculer $1\times 2 \times 3 \times \dots 99 \times 100$.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -233,7 +233,7 @@
     ```
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -257,7 +257,7 @@
     Proposer un code qui écrit **toutes** les cases possibles.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -293,7 +293,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Ex. 1\" 
         ```python linenums='1'
@@ -309,7 +309,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Ex. 2\" 
         ```python linenums='1'
@@ -326,7 +326,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Ex. 3\" 
         ```python linenums='1'
@@ -360,7 +360,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Ex. 4\" 
         ```python linenums='1'
@@ -393,7 +393,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'

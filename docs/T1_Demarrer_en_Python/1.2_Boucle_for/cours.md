@@ -67,7 +67,7 @@ Ici, il y a simplement un ```print(k)```, donc chaque lettre de ```"NSI"``` s'af
     ``` 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -297,7 +297,7 @@ Il faut donc garder en tête que l'objet renvoyé par ```range()``` est un **it�
     A. ```0 1 2 3 4 5``` 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -312,7 +312,7 @@ Il faut donc garder en tête que l'objet renvoyé par ```range()``` est un **it�
     B. ```10 11 12 13 14 15 ``` 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -326,7 +326,7 @@ Il faut donc garder en tête que l'objet renvoyé par ```range()``` est un **it�
     C. ```3 6 9 12 ``` 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -342,7 +342,7 @@ Il faut donc garder en tête que l'objet renvoyé par ```range()``` est un **it�
     D. ```10 9 8 7 6 5 4 3 2 1 0  ``` 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -406,7 +406,7 @@ Prenons pour l'instant un exemple numérique.
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -441,7 +441,7 @@ Prenons pour l'instant un exemple numérique.
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
