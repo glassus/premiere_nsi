@@ -31,9 +31,10 @@
     
     - [Conseils pour bien démarrer](https://glassus.github.io/terminale_nsi/T7_Divers/9_AOC/cours/){. target="_blank"}
     - Vous pouvez retrouver mes solutions (quand elles existent...) à [cette adresse](https://github.com/glassus/aoc2024){. target="_blank"}
+    fdfkml
 
 #}
-
+  
 
 {#
 - [DS06](data/DS06_listes2_1NSI_2024.pdf){. target="_blank"}
