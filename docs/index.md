@@ -35,7 +35,6 @@
 
 #}
   
-
 {#
 - [DS06](data/DS06_listes2_1NSI_2024.pdf){. target="_blank"}
 - [DS06 correction](data/DS06_listes2_1NSI_2024_corr.pdf){.target="_blank"}
