@@ -200,7 +200,7 @@ Il y a mieux !
 Là encore, le ```i``` est une variable muette.
 
 !!! tip "Le ```_``` comme variable muette"
-    Lorsque la variable de boucle est muette et ne sert qu'à effectuer $n$ fois la même action, on utilise souvent le caractère ```_``` (appelé _underscore_)comme variable de boucle.
+    Lorsque la variable de boucle est muette et ne sert qu'à effectuer $n$ fois la même action, on utilise souvent le caractère ```_``` (appelé _underscore_) comme variable de boucle.
 
     Il faut le comprendre comme un avertissement au lecteur du code : «cette boucle ne sert qu'à faire $n$ fois la même chose»
 
