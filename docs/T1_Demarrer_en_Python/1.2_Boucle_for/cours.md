@@ -297,7 +297,7 @@ Il faut donc garder en tête que l'objet renvoyé par ```range()``` est un **it�
     A. ```0 1 2 3 4 5``` 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
