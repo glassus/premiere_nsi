@@ -406,7 +406,7 @@ Prenons pour l'instant un exemple numérique.
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
