@@ -70,7 +70,7 @@
     Cette variable `chaine` est appelée un **accumulateur**.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
