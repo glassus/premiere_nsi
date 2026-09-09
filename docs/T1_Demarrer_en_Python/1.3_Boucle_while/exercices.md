@@ -14,7 +14,7 @@
         c += 1
     ```
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```
@@ -37,7 +37,7 @@
 
     ```
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```
@@ -55,7 +55,7 @@
         n += 2
     ```
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```
@@ -81,7 +81,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Il va afficher 4.
@@ -98,7 +98,7 @@
     On rappelle qu'une augmentation de 4 % correspond à une multiplication par 1,04.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'

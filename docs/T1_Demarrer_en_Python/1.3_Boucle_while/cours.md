@@ -141,7 +141,7 @@ Voir le piège n°1 ...
     Trouver le plus petit nombre entier $n$ tel que $2^n$ soit supérieur à 1 milliard.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -179,7 +179,7 @@ Mais nous pourrions nous en passer : toutes les boucles ```for``` peuvent en fai
     Ré-écrire ce code en utilisant une boucle ```while```. 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -226,7 +226,7 @@ print("merci, j'étais bloqué dans une boucle infinie")
     Reprendre l'exemple précédent en faisant deviner un mot de passe (préalablement stocké dans une variable).
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
