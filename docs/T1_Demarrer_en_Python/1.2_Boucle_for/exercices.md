@@ -257,7 +257,7 @@
     Proposer un code qui écrit **toutes** les cases possibles.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
