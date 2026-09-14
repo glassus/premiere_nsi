@@ -179,7 +179,7 @@ Mais nous pourrions nous en passer : toutes les boucles ```for``` peuvent en fai
     Ré-écrire ce code en utilisant une boucle ```while```. 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
