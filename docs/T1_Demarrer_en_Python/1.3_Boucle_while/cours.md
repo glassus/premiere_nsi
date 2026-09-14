@@ -141,7 +141,7 @@ Voir le piège n°1 ...
     Trouver le plus petit nombre entier $n$ tel que $2^n$ soit supérieur à 1 milliard.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
