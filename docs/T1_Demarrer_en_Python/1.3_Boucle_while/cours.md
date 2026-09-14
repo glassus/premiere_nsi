@@ -226,7 +226,7 @@ print("merci, j'étais bloqué dans une boucle infinie")
     Reprendre l'exemple précédent en faisant deviner un mot de passe (préalablement stocké dans une variable).
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
