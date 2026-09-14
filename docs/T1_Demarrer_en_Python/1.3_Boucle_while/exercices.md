@@ -84,7 +84,7 @@
     correction(True,
     """
     ??? success \"Correction\" 
-        Il va afficher 4.
+        Il va afficher 3.
     """
     )
     }}
