@@ -253,7 +253,7 @@ Quelles sont les règles régissant ces espaces de noms ? Les frontières entre 
     ```    
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Ce code n'est pas valide, car il contrevient à la règle 3.
@@ -275,7 +275,7 @@ Quelles sont les règles régissant ces espaces de noms ? Les frontières entre 
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Ce code n'est pas valide, car il contrevient à la règle 1.
@@ -301,7 +301,7 @@ Quelles sont les règles régissant ces espaces de noms ? Les frontières entre 
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Ce code est valide.
@@ -477,7 +477,7 @@ Il faut vérifier que les tests couvrent toutes les situations possibles, mais c
     **Q1.** Écrire la fonction ```test_fizzbuzz``` qui testera la fonction ```fizzbuzz```.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -495,7 +495,7 @@ Il faut vérifier que les tests couvrent toutes les situations possibles, mais c
     **Q2.** Écrire la fonction ```fizzbuzz```. (Vous pouvez vous inspirer fortement du code de [l'exercice 2 du chapitre précédent](../../1.4_Instruction_conditionnelle_if/exercices/){. target="_blank"} )
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
