@@ -253,7 +253,7 @@ Quelles sont les règles régissant ces espaces de noms ? Les frontières entre 
     ```    
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Ce code n'est pas valide, car il contrevient à la règle 3.
