@@ -78,13 +78,13 @@
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
         def somme(n):
             s = 0
-            for k in range(1, n+1):
+            for k in range(n+1):
                 s += k
             return s
         ```        
