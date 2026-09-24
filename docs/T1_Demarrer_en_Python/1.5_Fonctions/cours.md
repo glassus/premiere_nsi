@@ -498,9 +498,7 @@ Il faut vérifier que les tests couvrent toutes les situations possibles, mais c
     correction(True,
     """
     ??? success \"Correction\" 
-        ```python linenums='1'
-
-            
+        ```python linenums='1'        
         def fizzbuzz(n):
             if n % 3 == 0 and n % 5 == 0:
                 return 'fizzbuzz'
