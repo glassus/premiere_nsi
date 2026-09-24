@@ -477,7 +477,7 @@ Il faut vérifier que les tests couvrent toutes les situations possibles, mais c
     **Q1.** Écrire la fonction ```test_fizzbuzz``` qui testera la fonction ```fizzbuzz```.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
