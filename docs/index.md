@@ -45,12 +45,12 @@
     Voir [cette page](./T7_Divers/2_VM/cours.md){. target="_blank"} 
 
 !!! note ":star: Thème en cours d'étude :star: "
-    - [Instruction conditionnelle ```#!python if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/cours/)
-    - [Exercices sur les ```#!python if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/exercices/)
     - [Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/cours)
     - [Exercices sur les Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/exercices)
 
 !!! info "*Anciens thèmes traités*"
+    - [Instruction conditionnelle ```#!python if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/cours/)
+    - [Exercices sur les ```#!python if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/exercices/)
     - [Variables](./T1_Demarrer_en_Python/1.1_Variables/cours/) 
     - [Boucle ```#!python for ... in ...``` ](T1_Demarrer_en_Python/1.2_Boucle_for/cours/)
     - [Exercices ```#!python for ... in ...``` ](T1_Demarrer_en_Python/1.2_Boucle_for/exercices/)
