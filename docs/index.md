@@ -45,6 +45,8 @@
     Voir [cette page](./T7_Divers/2_VM/cours.md){. target="_blank"} 
 
 !!! note ":star: Thème en cours d'étude :star: "
+    - [Listes](./T2_Representation_des_donnees/2.1_Listes/cours/) 
+    - [Exercices sur les Listes](./T2_Representation_des_donnees/2.1_Listes/exercices/) 
     - [Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/cours)
     - [Exercices sur les Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/exercices)
 
