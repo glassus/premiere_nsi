@@ -139,7 +139,7 @@ En effet le nom de variable ```k``` est habituellement utilisé pour les nombres
     ``` 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -255,7 +255,7 @@ Chaque élément étant accessible par son indice (de ```0``` à   ```len(liste)
     
     **Q1.** Afficher un à un les éléments de cette liste.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -269,7 +269,7 @@ Chaque élément étant accessible par son indice (de ```0``` à   ```len(liste)
     **Q2.** Afficher un à un les éléments de cette liste **dans l'ordre inverse** (en commençant par 9)
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -298,7 +298,7 @@ Chaque élément étant accessible par son indice (de ```0``` à   ```len(liste)
     **Q1.** En utilisant une boucle ```for``` (une seule !). 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -314,7 +314,7 @@ Chaque élément étant accessible par son indice (de ```0``` à   ```len(liste)
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -345,7 +345,7 @@ Chaque élément étant accessible par son indice (de ```0``` à   ```len(liste)
     se cachent deux nombres consécutifs (comme les nombres 4 et 5 dans la liste ```[6, 2, 4, 5, 3]``` ). Pouvez-vous les trouver ?
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -412,7 +412,7 @@ Il suffit d'écraser la valeur actuelle avec une nouvelle valeur
     Construire une liste contenant tous les nombres inférieurs à 100 qui sont divisibles par 7.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -432,7 +432,7 @@ Il suffit d'écraser la valeur actuelle avec une nouvelle valeur
     Construire la liste ```temp_pos``` qui ne contient que les éléments positifs de  ```temp```. 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -530,7 +530,7 @@ qui produira la liste ```[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         À l'issue de ce code la variable ```compt``` contient ```[0, 0, 1, 1, 9, 0, 1, 0, 2, 0, 0, 0, 1, 3, 1, 1, 0, 1, 2, 5, 3, 0, 0, 2, 1, 0]```, qui correspond au nombre d'occurences de chaque lettre : 0 fois la lettre 'a', 0 fois la lettre 'b', 1 fois la lettre 'c', etc.
@@ -599,7 +599,7 @@ EXO PAS TOP
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -657,7 +657,7 @@ Les listes en compréhension deviennent encore plus intéressantes lorsqu'on com
 
     **Q1.** On considère la fonction mathématique $f : x \mapsto 2x+3$. Coder la fonction ```f```.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -671,7 +671,7 @@ Les listes en compréhension deviennent encore plus intéressantes lorsqu'on com
 
     **Q2.** Créer (en compréhension) une liste contenant l'image des entiers de 1 à 10 par la fonction $f$.
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -690,7 +690,7 @@ Les listes en compréhension deviennent encore plus intéressantes lorsqu'on com
     Créer (en compréhension) une liste ```sol``` qui contient les lettres correspondants aux nombres ayant une signification.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -828,7 +828,7 @@ La liste `a` est composée de 3 éléments qui sont eux-même des listes de 3 é
     Quel coup doit maintenant jouer le joueur  `'X'` pour s'assurer la victoire ?
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -869,7 +869,7 @@ La liste `a` est composée de 3 éléments qui sont eux-même des listes de 3 é
     Quelle est la somme de tous les nombres de la matrice ```m``` ?
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
