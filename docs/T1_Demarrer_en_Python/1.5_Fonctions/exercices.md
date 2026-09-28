@@ -339,7 +339,7 @@
     **Q1.** Écrire une fonction ```suivant``` qui prend en paramètre un nombre ```n```  renvoie le successeur de```n```, suivant les règles énoncées ci-dessus.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -357,7 +357,7 @@
     **Q2.** Écrire une fonction ```syracuse``` qui affiche tous les termes de la suite de Syracuse depuis un nombre ```n``` passé en paramètre jusqu'à (on l'espère !) 1.  
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -377,7 +377,7 @@
     **Q1.** Écrire une fonction ```temps_de_vol``` qui prend un nombre ```n``` en paramètre et qui renvoie le nombre d'étapes pour arriver à 1, en partant de ```n```.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -394,7 +394,7 @@
     **Q2.** Écrire une fonction ```temps_max(nmax)``` qui affiche le plus grand temps de vol pour un nombre entre 1 et ```nmax```.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -413,7 +413,7 @@
     **Q3.** Modifier cette fonction pour afficher aussi le nombre de départ donnant ce plus grand temps de vol.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
