@@ -274,7 +274,7 @@
     Décodez la phrase `RT BTHHPVT CT RDCIXTCI GXTC S XCITGTHHPCI`.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -299,7 +299,7 @@
 
 
         def decrypt(msg_secret):
-            for decalage in range(25):
+            for decalage in range(26):
                     print(decale_phrase(msg_secret, decalage))
 
         msg = 'RT BTHHPVT CT RDCIXTCI GXTC S XCITGTHHPCI'
@@ -313,7 +313,7 @@
 
 
         def decrypt2(msg_secret):
-            for decalage in range(25):
+            for decalage in range(26):
                 phrase_clair = decale_phrase(msg_secret, decalage)
                 if 'MESSAGE' in phrase_clair:
                     print(phrase_clair)
