@@ -41,9 +41,10 @@
 - [DS06 correction](data/DS06_listes2_1NSI_2024_corr.pdf){.target="_blank"}
 #}
 
-
+{#
 !!! tip "Utilisation des VM"
     Voir [cette page](./T7_Divers/2_VM/cours.md){. target="_blank"} 
+#}
 
 !!! note ":star: Thème en cours d'étude :star: "
     - [Listes](./T2_Representation_des_donnees/2.1_Listes/cours/) 
