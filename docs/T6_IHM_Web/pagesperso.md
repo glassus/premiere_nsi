@@ -47,6 +47,7 @@ Si on veut tout copier :
 
 ### 3. Liens vers la page de chaque élève
 
+{#
 - [page de M. Lassus](http://192.168.1.119){. target="_blank"}
 - [page de Nina](http://192.168.1.164){. target="_blank"}
 - [page de Vitor](http://192.168.1.146){. target="_blank"}
@@ -71,3 +72,4 @@ Si on veut tout copier :
 - [page de Yanis](http://192.168.1.199){. target="_blank"}
 
 
+#}
