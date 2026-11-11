@@ -47,6 +47,7 @@
 #}
 
 !!! note ":star: Thème en cours d'étude :star: "
+    - [Interactions sur une page web](./T6_IHM_Web/6.1_Interactions_page_web/cours/)
     - [Listes](./T2_Representation_des_donnees/2.1_Listes/cours/) 
     - [Exercices sur les Listes](./T2_Representation_des_donnees/2.1_Listes/exercices/) 
     - [Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/cours)
