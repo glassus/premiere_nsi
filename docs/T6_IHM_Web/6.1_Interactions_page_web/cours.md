@@ -58,7 +58,7 @@ Vous pouvez contempler [ici](http://glassus1.free.fr/page_test.html){:target="_b
 !!! example "{{ exercice() }}"
 
     - Créez un dossier ```PageWeb```  contenant un fichier ```mapage.html```.
-    - Créez une page contenant une image et un lien vers le site du lycée.
+    - Créez une page contenant une image et un lien vers le site du lycée. Vous pouvez vous aider de [cette page](https://developer.mozilla.org/fr/docs/Learn_web_development/Core/Structuring_content/HTML_images){:target="_blank"} et de [celle-ci](https://developer.mozilla.org/fr/docs/Learn_web_development/Core/Structuring_content/Creating_links){:target="_blank"}
     - Vous pouvez utiliser le logiciel Geany, installé sur notre Debian.
     - Vous pouvez aussi utiliser un éditeur en ligne avec rendu instantané, du type [https://www.w3schools.com/tryit/](https://www.w3schools.com/tryit/){:target="_blank"}
        
