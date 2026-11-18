@@ -47,6 +47,7 @@
 #}
 
 !!! note ":star: Thème en cours d'étude :star: "
+    - [Mise en place du serveur de pages personnelles](./T6_IHM_Web/pagesperso/)
     - [Protocole ```http``` ](./T6_IHM_Web/6.2_Protocole_HTTP/cours/)
     - [Interactions sur une page web](./T6_IHM_Web/6.1_Interactions_page_web/cours/)
 
