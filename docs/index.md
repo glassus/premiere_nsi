@@ -47,13 +47,15 @@
 #}
 
 !!! note ":star: Thème en cours d'étude :star: "
+    - [Protocole ```http``` ](./T6_IHM_Web/6.2_Protocole_HTTP/cours/)
     - [Interactions sur une page web](./T6_IHM_Web/6.1_Interactions_page_web/cours/)
+
+
+!!! info "*Anciens thèmes traités*"
     - [Listes](./T2_Representation_des_donnees/2.1_Listes/cours/) 
     - [Exercices sur les Listes](./T2_Representation_des_donnees/2.1_Listes/exercices/) 
     - [Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/cours)
     - [Exercices sur les Fonctions](./T1_Demarrer_en_Python/1.5_Fonctions/exercices)
-
-!!! info "*Anciens thèmes traités*"
     - [Instruction conditionnelle ```#!python if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/cours/)
     - [Exercices sur les ```#!python if```](T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/exercices/)
     - [Variables](./T1_Demarrer_en_Python/1.1_Variables/cours/) 
