@@ -2,6 +2,8 @@
 
 ![image](data/BO.png){: .center}
 
+Le protocole ```http```, tout comme le langage ```html```, a été inventé par l'immense [Tim Berners-Lee](https://fr.wikipedia.org/wiki/Tim_Berners-Lee){. target="_blank"}, lorsqu'il était chercheur au CERN à Genève.
+
 ## Le protocole HTTP : des requêtes et des réponses
 HTTP (HyperText Transfer Protocol) est le protocole qui régit la communication entre :  
 
